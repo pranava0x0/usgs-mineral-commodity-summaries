@@ -1,0 +1,748 @@
+{
+  "slug": "platinum-group-metals",
+  "name": "Platinum-group metals (grouped)",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-platinum-group.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "e28369fb9be476bb46e1d7eee3d9d6ef184985db4c7b05b0c145e383b88fd35d",
+  "pdf_page_count": 2,
+  "units_note": "(Palladium, platinum, iridium, osmium, rhodium, and ruthenium)",
+  "price_unit_note": "Price, dollars per troy ounce",
+  "price_footnote_text": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+  "domestic_use_summary": "One company in Montana mined and processed PGMs with an estimated value of $290 million in 2025, a decrease of 31% compared with $420 million in 2024. Estimated total palladium and platinum production decreased by 40% compared with 2024 production owing to one operation remaining on care-and- maintenance status. Small quantities of PGMs also were recovered as byproducts of copper-nickel mining in Michigan; however, this material was exported for refining. The leading domestic use for PGMs was in catalytic converters to decrease harmful emissions from automobiles. PGMs are also used in catalysts for bulk-chemical production and petroleum refining; dental and medical devices; electronic applications, such as in computer hard disks, hybridized integrated circuits, and multilayer ceramic capacitors; glass manufacturing; investment; jewelry; and laboratory equipment.",
+  "events_trends_summary": "In 2025, production of PGMs in South Africa, the world’s leading producer of PGM- containing mined material, decreased by an estimated 9% compared with that in 2024 owing to declining palladium prices, higher costs associated with deep-level mining, and ongoing disruptions to the supply of electricity. Estimated production in Russia, the world’s leading producer of mined palladium, decreased by 6% owing to lower metal grades and ore recovery, geopolitical and investor uncertainty related to the Russia-Ukraine conflict, and the introduction of new mining equipment at one operation. The estimated annual average price in 2025 increased by 53% for ruthenium, by 25% for platinum, by 24% for rhodium, and by 11% for palladium compared with the average prices in 2024. The estimated annual price of iridium decreased by 9% compared with annual average price in 2024. Price increases were attributed to decreased production and increased demand, particularly for rhodium in the hard disk and chemical catalyst industries and owing to the substitution of platinum in automobile catalysts. Investment uncertainty and volatility may have also contributed to price increases. The price decrease for iridium may have been affected by increased production and the waning of investor enthusiasm in the hydrogen power market.",
+  "world_resources_summary": "World resources of PGMs are estimated to total more than 100 million kilograms. The largest resources and reserves are in the Bushveld Complex in South Africa.",
+  "substitutes_summary": "Palladium has been used as a substitute for platinum in most gasoline-engine catalytic converters because of the historically lower price for palladium relative to that of platinum. About 25% of palladium can routinely be substituted for platinum in diesel catalytic converters; the proportion can be as much as 50% in some applications. For some industrial end uses, one PGM can substitute for another, but with losses in efficiency.",
+  "recycling_summary": "About 140,000 kilograms of palladium and platinum were recovered globally from new and old scrap in 2025, including about 50,000 kilograms of palladium and 8,600 kilograms of platinum recovered from automobile catalytic converters in the United States.",
+  "salient_stats": [
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": null,
+      "subsection": "Mine production",
+      "values": {
+        "2021": 13700.0,
+        "2022": 10100.0,
+        "2023": 10300.0,
+        "2024": 10200.0,
+        "2025e": 6200.0
+      },
+      "raw_values": {
+        "2021": "13700",
+        "2022": "10100",
+        "2023": "10300",
+        "2024": "10200",
+        "2025e": "6200"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": null,
+      "subsection": "Mine production",
+      "values": {
+        "2021": 4020.0,
+        "2022": 3000.0,
+        "2023": 3040.0,
+        "2024": 3010.0,
+        "2025e": 1800.0
+      },
+      "raw_values": {
+        "2021": "4020",
+        "2022": "3000",
+        "2023": "3040",
+        "2024": "3010",
+        "2025e": "1800"
+      }
+    },
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 72600.0,
+        "2022": 65200.0,
+        "2023": 66900.0,
+        "2024": 68300.0,
+        "2025e": 92000.0
+      },
+      "raw_values": {
+        "2021": "72600",
+        "2022": "65200",
+        "2023": "66900",
+        "2024": "68300",
+        "2025e": "92000"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 67900.0,
+        "2022": 64200.0,
+        "2023": 66800.0,
+        "2024": 70500.0,
+        "2025e": 99000.0
+      },
+      "raw_values": {
+        "2021": "67900",
+        "2022": "64200",
+        "2023": "66800",
+        "2024": "70500",
+        "2025e": "99000"
+      }
+    },
+    {
+      "label": "PGM waste and scrap",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 160000.0,
+        "2022": 41500.0,
+        "2023": 32100.0,
+        "2024": 52800.0,
+        "2025e": 150000.0
+      },
+      "raw_values": {
+        "2021": "160000",
+        "2022": "41500",
+        "2023": "32100",
+        "2024": "52800",
+        "2025e": "150000"
+      }
+    },
+    {
+      "label": "Iridium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 2310.0,
+        "2022": 1610.0,
+        "2023": 2040.0,
+        "2024": 1360.0,
+        "2025e": 2200.0
+      },
+      "raw_values": {
+        "2021": "2310",
+        "2022": "1610",
+        "2023": "2040",
+        "2024": "1360",
+        "2025e": "2200"
+      }
+    },
+    {
+      "label": "Osmium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1.0,
+        "2022": 1.0,
+        "2023": 0.0,
+        "2024": 1.0,
+        "2025e": 57.0
+      },
+      "raw_values": {
+        "2021": "1",
+        "2022": "1",
+        "2023": "—",
+        "2024": "1",
+        "2025e": "57"
+      }
+    },
+    {
+      "label": "Rhodium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 16500.0,
+        "2022": 13200.0,
+        "2023": 12100.0,
+        "2024": 14500.0,
+        "2025e": 14000.0
+      },
+      "raw_values": {
+        "2021": "16500",
+        "2022": "13200",
+        "2023": "12100",
+        "2024": "14500",
+        "2025e": "14000"
+      }
+    },
+    {
+      "label": "Ruthenium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 18000.0,
+        "2022": 13300.0,
+        "2023": 10800.0,
+        "2024": 9780.0,
+        "2025e": 14000.0
+      },
+      "raw_values": {
+        "2021": "18000",
+        "2022": "13300",
+        "2023": "10800",
+        "2024": "9780",
+        "2025e": "14000"
+      }
+    },
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 43900.0,
+        "2022": 42200.0,
+        "2023": 33600.0,
+        "2024": 39900.0,
+        "2025e": 18000.0
+      },
+      "raw_values": {
+        "2021": "43900",
+        "2022": "42200",
+        "2023": "33600",
+        "2024": "39900",
+        "2025e": "18000"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 29400.0,
+        "2022": 23100.0,
+        "2023": 11300.0,
+        "2024": 11700.0,
+        "2025e": 17000.0
+      },
+      "raw_values": {
+        "2021": "29400",
+        "2022": "23100",
+        "2023": "11300",
+        "2024": "11700",
+        "2025e": "17000"
+      }
+    },
+    {
+      "label": "PGM waste and scrap",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 37800.0,
+        "2022": 35200.0,
+        "2023": 13900.0,
+        "2024": 13600.0,
+        "2025e": 24000.0
+      },
+      "raw_values": {
+        "2021": "37800",
+        "2022": "35200",
+        "2023": "13900",
+        "2024": "13600",
+        "2025e": "24000"
+      }
+    },
+    {
+      "label": "Rhodium",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 1350.0,
+        "2022": 717.0,
+        "2023": 453.0,
+        "2024": 766.0,
+        "2025e": 340.0
+      },
+      "raw_values": {
+        "2021": "1350",
+        "2022": "717",
+        "2023": "453",
+        "2024": "766",
+        "2025e": "340"
+      }
+    },
+    {
+      "label": "Other PGMs",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 2180.0,
+        "2022": 1010.0,
+        "2023": 845.0,
+        "2024": 2050.0,
+        "2025e": 2700.0
+      },
+      "raw_values": {
+        "2021": "2180",
+        "2022": "1010",
+        "2023": "845",
+        "2024": "2050",
+        "2025e": "2700"
+      }
+    },
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 81400.0,
+        "2022": 74100.0,
+        "2023": 88500.0,
+        "2024": 83600.0,
+        "2025e": 130000.0
+      },
+      "raw_values": {
+        "2021": "81400",
+        "2022": "74100",
+        "2023": "88500",
+        "2024": "83600",
+        "2025e": "130000"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 51100.0,
+        "2022": 52900.0,
+        "2023": 67100.0,
+        "2024": 68900.0,
+        "2025e": 92000.0
+      },
+      "raw_values": {
+        "2021": "51100",
+        "2022": "52900",
+        "2023": "67100",
+        "2024": "68900",
+        "2025e": "92000"
+      }
+    },
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": "Price, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 2419.18,
+        "2022": 2133.81,
+        "2023": 1351.66,
+        "2024": 994.9,
+        "2025e": 1100.0
+      },
+      "raw_values": {
+        "2021": "2419.18",
+        "2022": "2133.81",
+        "2023": "1351.66",
+        "2024": "994.90",
+        "2025e": "1100"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": "Price, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 1094.31,
+        "2022": 966.54,
+        "2023": 973.0,
+        "2024": 960.7,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1094.31",
+        "2022": "966.54",
+        "2023": "973.00",
+        "2024": "960.70",
+        "2025e": "1200"
+      }
+    },
+    {
+      "label": "Iridium",
+      "footnote": null,
+      "section": "Price, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 5158.4,
+        "2022": 4581.93,
+        "2023": 4672.78,
+        "2024": 4810.4,
+        "2025e": 4400.0
+      },
+      "raw_values": {
+        "2021": "5158.40",
+        "2022": "4581.93",
+        "2023": "4672.78",
+        "2024": "4810.40",
+        "2025e": "4400"
+      }
+    },
+    {
+      "label": "Rhodium",
+      "footnote": null,
+      "section": "Price, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 20254.1,
+        "2022": 15585.0,
+        "2023": 6660.58,
+        "2024": 4660.44,
+        "2025e": 5800.0
+      },
+      "raw_values": {
+        "2021": "20254.10",
+        "2022": "15585.00",
+        "2023": "6660.58",
+        "2024": "4660.44",
+        "2025e": "5800"
+      }
+    },
+    {
+      "label": "Ruthenium",
+      "footnote": null,
+      "section": "Price, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 576.12,
+        "2022": 577.02,
+        "2023": 466.49,
+        "2024": 451.02,
+        "2025e": 690.0
+      },
+      "raw_values": {
+        "2021": "576.12",
+        "2022": "577.02",
+        "2023": "466.49",
+        "2024": "451.02",
+        "2025e": "690"
+      }
+    },
+    {
+      "label": "Employment, mine, number",
+      "footnote": null,
+      "section": "Employment, mine, number",
+      "subsection": null,
+      "values": {
+        "2021": 1600.0,
+        "2022": 1560.0,
+        "2023": 1450.0,
+        "2024": 901.0,
+        "2025e": 810.0
+      },
+      "raw_values": {
+        "2021": "1600",
+        "2022": "1560",
+        "2023": "1450",
+        "2024": "901",
+        "2025e": "810"
+      }
+    },
+    {
+      "label": "Palladium",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of",
+      "subsection": "apparent consumption",
+      "values": {
+        "2021": 35.0,
+        "2022": 31.0,
+        "2023": 38.0,
+        "2024": 34.0,
+        "2025e": 57.0
+      },
+      "raw_values": {
+        "2021": "35",
+        "2022": "31",
+        "2023": "38",
+        "2024": "34",
+        "2025e": "57"
+      }
+    },
+    {
+      "label": "Platinum",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of",
+      "subsection": "apparent consumption",
+      "values": {
+        "2021": 75.0,
+        "2022": 78.0,
+        "2023": 83.0,
+        "2024": 85.0,
+        "2025e": 89.0
+      },
+      "raw_values": {
+        "2021": "75",
+        "2022": "78",
+        "2023": "83",
+        "2024": "85",
+        "2025e": "89"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Palladium",
+      "unit_note": "Price, dollars per troy ounce",
+      "values": {
+        "2021": 2419.18,
+        "2022": 2133.81,
+        "2023": 1351.66,
+        "2024": 994.9,
+        "2025e": 1100.0
+      },
+      "raw_values": {
+        "2021": "2419.18",
+        "2022": "2133.81",
+        "2023": "1351.66",
+        "2024": "994.90",
+        "2025e": "1100"
+      }
+    },
+    {
+      "form": "Platinum",
+      "unit_note": "Price, dollars per troy ounce",
+      "values": {
+        "2021": 1094.31,
+        "2022": 966.54,
+        "2023": 973.0,
+        "2024": 960.7,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1094.31",
+        "2022": "966.54",
+        "2023": "973.00",
+        "2024": "960.70",
+        "2025e": "1200"
+      }
+    },
+    {
+      "form": "Iridium",
+      "unit_note": "Price, dollars per troy ounce",
+      "values": {
+        "2021": 5158.4,
+        "2022": 4581.93,
+        "2023": 4672.78,
+        "2024": 4810.4,
+        "2025e": 4400.0
+      },
+      "raw_values": {
+        "2021": "5158.40",
+        "2022": "4581.93",
+        "2023": "4672.78",
+        "2024": "4810.40",
+        "2025e": "4400"
+      }
+    },
+    {
+      "form": "Rhodium",
+      "unit_note": "Price, dollars per troy ounce",
+      "values": {
+        "2021": 20254.1,
+        "2022": 15585.0,
+        "2023": 6660.58,
+        "2024": 4660.44,
+        "2025e": 5800.0
+      },
+      "raw_values": {
+        "2021": "20254.10",
+        "2022": "15585.00",
+        "2023": "6660.58",
+        "2024": "4660.44",
+        "2025e": "5800"
+      }
+    },
+    {
+      "form": "Ruthenium",
+      "unit_note": "Price, dollars per troy ounce",
+      "values": {
+        "2021": 576.12,
+        "2022": 577.02,
+        "2023": 466.49,
+        "2024": 451.02,
+        "2025e": 690.0
+      },
+      "raw_values": {
+        "2021": "576.12",
+        "2022": "577.02",
+        "2023": "466.49",
+        "2024": "451.02",
+        "2025e": "690"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 371257.0,
+  "exports_total_latest": 62040.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 1100.0,
+  "net_import_reliance_pct_latest": 57.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Palladium",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 37.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 36.0
+        },
+        {
+          "country": "Belgium",
+          "share_pct": 6.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 6.0
+        }
+      ]
+    },
+    {
+      "category": "Platinum",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 49.0
+        },
+        {
+          "country": "Belgium",
+          "share_pct": 10.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 10.0
+        },
+        {
+          "country": "Italy",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 23.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 10200.0,
+      "production_latest_year": 6200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "10200",
+      "production_latest_raw": "6200",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 17000.0,
+      "production_latest_year": 16000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "17000",
+      "production_latest_raw": "16000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 89000.0,
+      "production_latest_year": 84000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "89000",
+      "production_latest_raw": "84000",
+      "reserves_raw": null,
+      "note": "footnote 10"
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 82600.0,
+      "production_latest_year": 70000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "82600",
+      "production_latest_raw": "70000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Zimbabwe",
+      "production_prev_year": 15200.0,
+      "production_latest_year": 15000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "15200",
+      "production_latest_raw": "15000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 2870.0,
+      "production_latest_year": 2900.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2870",
+      "production_latest_raw": "2900",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 217000.0,
+      "production_latest_year": 190000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "217000",
+      "production_latest_raw": "190000",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Estimated from published sources.",
+    "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 7110.11.0010, 7110.11.0020, 7110.11.0050, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0010, 7110.41.0020, 7110.41.0030, 7110.49.0010, and 7118.90.0020; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+    "3": "Includes data for the following Schedule B numbers: 7110.11.0000, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0000, and 7110.49.0000; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+    "4": "Defined as primary production + secondary production + imports – exports.",
+    "5": "Excludes imports and (or) exports of waste and scrap.",
+    "6": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+    "7": "Defined as imports – exports.",
+    "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "10": "Reserves for Russia are based on the State Committee of Reserves of the Russian Federation (GKZ) classification system A+B+C1+C2, where C2 are reserves in deposits that are indicated but not being developed or prepared for development. C2 reserves were excluded here."
+  }
+}

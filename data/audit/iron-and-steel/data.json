@@ -1,0 +1,560 @@
+{
+  "slug": "iron-and-steel",
+  "name": "Iron and Steel",
+  "symbol": "Fe",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-iron-steel.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "99875e4897c8f39150fdd46961277be6806b22bef9e8facef78296c0e005657e",
+  "pdf_page_count": 2,
+  "units_note": "(Data in million metric tons, metal, unless otherwise specified)",
+  "price_unit_note": null,
+  "price_footnote_text": null,
+  "domestic_use_summary": "The U.S. iron and steel industry produced 82 million tons of raw steel in 2025 with an estimated sales value of about $149 billion, a slight decrease from $150 billion in 2024. At the beginning of 2025, pig iron and raw steel were produced by two companies operating integrated steel mills in eight active locations. Multiple integrated steel mills were fully or partially idled over the last 3 years, and prior reporting of locations previously differentiated multiple facilities at the same location. Raw steel from electric arc furnaces was produced by 47 companies at 102 minimills. Combined raw steel production capacity was about 105 million tons per year, a slight decrease from 107 million tons in 2024. Indiana accounted for an estimated 19% of total raw steel production, followed by Ohio, 8%; Texas, 5%; and Pennsylvania, 4%; no other individual State accounted for more than 4% of total domestic raw steel production. Construction accounted for an estimated 31% of net shipments by market classification, followed by steel service centers and distributors, 26%; automotive, 15%; and steel for converting and processing, 11%; all other applications accounted for 17% of net shipments.",
+  "events_trends_summary": "Under section 232 of the Trade Expansion Act, tariffs increased to a rate of 25% for all countries in March 2025, removing prior exceptions granted since the tariffs were implemented in 2018. In June, tariffs on steel products imported to the United States were increased to 50% for all countries. Various extensions, exclusions, and reciprocal clauses were introduced throughout 2025. In November, Proclamation 10993 granted a 2-year regulatory relief period from Clean Air Act standards set in 2024 affecting coke oven facilities, which manufacture metallurgical coke used in the production of steel in integrated steel mills that account for approximately 28% of domestic steel production. In March, one company began construction on a new minimill in southern California with a production capacity of 450,000 tons per year of rebar steel. In June, a domestic steel manufacturer completed a deal to be acquired by a Japan-based steel company. The deal was approved by the U.S. Government with stipulations and was expected to generate $11 billion in domestic steelmaking investments through 2028. In September, that company also halted production at one mill in Illinois with a production capacity of 2.7 million tons per year of raw steel but was expected to keep the mill in an operational state with the possibility of resuming production. Citing strategic capacity adjustments to account for product-specific market conditions, another company indefinitely idled multiple facilities, including an Illinois basic oxygen furnace and mill with a production capacity of 700,000 tons per year of hot-rolled coil products; a Michigan basic oxygen furnace and continuous casting facilities with a production capacity of 1.99 million tons per year of pig iron and 2.40 million tons per year of carbon slabs, advanced high-strength steels, and other products; and a Pennsylvania minimill with a production capacity of 300,000 tons per year of rail and other products. That company also restarted a blast furnace in Ohio with a production capacity of 1.37 million tons per year of pig iron. The World Steel Association estimated global finished steel demand to remain unchanged in 2025 owing to declining steel demand in China offset by growth in developing economies including Egypt, India, Saudi Arabia, and Vietnam. Globally, the manufacturing sector was expected to be affected by affordability pressures on consumers and elevated production costs. Countries with economies reliant on the export of steel-intensive goods were negatively affected by trade tensions.",
+  "world_resources_summary": "Not applicable. See the Iron Ore chapter for steelmaking raw-material resources.",
+  "substitutes_summary": "Iron is the least expensive and most widely used metal. In most applications, iron and steel compete either with less expensive nonmetallic materials or with more expensive materials that have a performance advantage. Iron and steel compete with lighter materials, such as aluminum and plastics in the automotive industry; aluminum, concrete, and wood in construction; and aluminum, glass, paper, and plastics in containers.",
+  "recycling_summary": "See the Iron and Steel Scrap and the Iron and Steel Slag chapters.",
+  "salient_stats": [
+    {
+      "label": "Pig iron production",
+      "footnote": null,
+      "section": null,
+      "subsection": null,
+      "values": {
+        "2021": 22.2,
+        "2022": 20.0,
+        "2023": 22.5,
+        "2024": 20.6,
+        "2025e": 21.0
+      },
+      "raw_values": {
+        "2021": "22.2",
+        "2022": "20.0",
+        "2023": "22.5",
+        "2024": "20.6",
+        "2025e": "21"
+      }
+    },
+    {
+      "label": "Raw steel production",
+      "footnote": null,
+      "section": null,
+      "subsection": null,
+      "values": {
+        "2021": 85.8,
+        "2022": 80.5,
+        "2023": 81.4,
+        "2024": 79.5,
+        "2025e": 82.0
+      },
+      "raw_values": {
+        "2021": "85.8",
+        "2022": "80.5",
+        "2023": "81.4",
+        "2024": "79.5",
+        "2025e": "82"
+      }
+    },
+    {
+      "label": "Continuously cast steel, percent",
+      "footnote": null,
+      "section": null,
+      "subsection": null,
+      "values": {
+        "2021": 99.8,
+        "2022": 99.7,
+        "2023": 99.7,
+        "2024": 99.7,
+        "2025e": 99.7
+      },
+      "raw_values": {
+        "2021": "99.8",
+        "2022": "99.7",
+        "2023": "99.7",
+        "2024": "99.7",
+        "2025e": "99.7"
+      }
+    },
+    {
+      "label": "Shipments, steel mill products",
+      "footnote": null,
+      "section": null,
+      "subsection": null,
+      "values": {
+        "2021": 85.9,
+        "2022": 81.2,
+        "2023": 81.0,
+        "2024": 78.7,
+        "2025e": 82.0
+      },
+      "raw_values": {
+        "2021": "85.9",
+        "2022": "81.2",
+        "2023": "81.0",
+        "2024": "78.7",
+        "2025e": "82"
+      }
+    },
+    {
+      "label": "Finished",
+      "footnote": null,
+      "section": "Imports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 20.6,
+        "2022": 22.9,
+        "2023": 19.7,
+        "2024": 20.4,
+        "2025e": 19.0
+      },
+      "raw_values": {
+        "2021": "20.6",
+        "2022": "22.9",
+        "2023": "19.7",
+        "2024": "20.4",
+        "2025e": "19"
+      }
+    },
+    {
+      "label": "Semifinished",
+      "footnote": null,
+      "section": "Imports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 7.9,
+        "2022": 5.1,
+        "2023": 5.9,
+        "2024": 5.8,
+        "2025e": 5.0
+      },
+      "raw_values": {
+        "2021": "7.9",
+        "2022": "5.1",
+        "2023": "5.9",
+        "2024": "5.8",
+        "2025e": "5"
+      }
+    },
+    {
+      "label": "Total",
+      "footnote": null,
+      "section": "Imports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 28.5,
+        "2022": 28.0,
+        "2023": 25.6,
+        "2024": 26.2,
+        "2025e": 24.0
+      },
+      "raw_values": {
+        "2021": "28.5",
+        "2022": "28.0",
+        "2023": "25.6",
+        "2024": "26.2",
+        "2025e": "24"
+      }
+    },
+    {
+      "label": "Finished",
+      "footnote": null,
+      "section": "Exports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 7.4,
+        "2022": 7.5,
+        "2023": 7.9,
+        "2024": 7.9,
+        "2025e": 6.0
+      },
+      "raw_values": {
+        "2021": "7.4",
+        "2022": "7.5",
+        "2023": "7.9",
+        "2024": "7.9",
+        "2025e": "6"
+      }
+    },
+    {
+      "label": "Semifinished",
+      "footnote": null,
+      "section": "Exports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 0.1,
+        "2022": 0.1,
+        "2023": 0.3,
+        "2024": 0.1,
+        "2025e": 0.1
+      },
+      "raw_values": {
+        "2021": "0.1",
+        "2022": "0.1",
+        "2023": "0.3",
+        "2024": "0.1",
+        "2025e": "0.1"
+      }
+    },
+    {
+      "label": "Total",
+      "footnote": null,
+      "section": "Exports, steel mill products",
+      "subsection": null,
+      "values": {
+        "2021": 7.5,
+        "2022": 7.6,
+        "2023": 8.2,
+        "2024": 8.0,
+        "2025e": 7.0
+      },
+      "raw_values": {
+        "2021": "7.5",
+        "2022": "7.6",
+        "2023": "8.2",
+        "2024": "8.0",
+        "2025e": "7"
+      }
+    },
+    {
+      "label": "Stocks, service centers, yearend",
+      "footnote": "2",
+      "section": "Stocks, service centers, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 7.0,
+        "2022": 6.7,
+        "2023": 6.5,
+        "2024": 6.5,
+        "2025e": 6.7
+      },
+      "raw_values": {
+        "2021": "7.0",
+        "2022": "6.7",
+        "2023": "6.5",
+        "2024": "6.5",
+        "2025e": "6.7"
+      }
+    },
+    {
+      "label": "Consumption, apparent (steel mill products)",
+      "footnote": "3",
+      "section": "Consumption, apparent (steel mill products)",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 96.2,
+        "2023": 92.4,
+        "2024": 91.1,
+        "2025e": 95.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "96.2",
+        "2023": "92.4",
+        "2024": "91.1",
+        "2025e": "95"
+      }
+    },
+    {
+      "label": "Producer price index, steel mill products (1982=100)",
+      "footnote": "4",
+      "section": "Consumption, apparent (steel mill products)",
+      "subsection": null,
+      "values": {
+        "2021": 351.0,
+        "2022": 382.0,
+        "2023": 320.0,
+        "2024": 291.0,
+        "2025e": 290.0
+      },
+      "raw_values": {
+        "2021": "351",
+        "2022": "382",
+        "2023": "320",
+        "2024": "291",
+        "2025e": "290"
+      }
+    },
+    {
+      "label": "Iron and steel mills",
+      "footnote": "4",
+      "section": "Employment, average, number",
+      "subsection": null,
+      "values": {
+        "2021": 78300.0,
+        "2022": 80800.0,
+        "2023": 84000.0,
+        "2024": 84900.0,
+        "2025e": 86000.0
+      },
+      "raw_values": {
+        "2021": "78300",
+        "2022": "80800",
+        "2023": "84000",
+        "2024": "84900",
+        "2025e": "86000"
+      }
+    },
+    {
+      "label": "Steel product manufacturing",
+      "footnote": "4",
+      "section": "Employment, average, number",
+      "subsection": null,
+      "values": {
+        "2021": 52700.0,
+        "2022": 55400.0,
+        "2023": 58500.0,
+        "2024": 59600.0,
+        "2025e": 61000.0
+      },
+      "raw_values": {
+        "2021": "52700",
+        "2022": "55400",
+        "2023": "58500",
+        "2024": "59600",
+        "2025e": "61000"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 14.0,
+        "2022": 16.0,
+        "2023": 12.0,
+        "2024": 14.0,
+        "2025e": 13.0
+      },
+      "raw_values": {
+        "2021": "14",
+        "2022": "16",
+        "2023": "12",
+        "2024": "14",
+        "2025e": "13"
+      }
+    }
+  ],
+  "price_quotes": [],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 24.0,
+  "exports_total_latest": 7.0,
+  "apparent_consumption_latest": 95.0,
+  "price_usd_per_pound_latest": null,
+  "net_import_reliance_pct_latest": 13.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "Canada",
+      "share_pct": 23.0
+    },
+    {
+      "country": "Mexico",
+      "share_pct": 15.0
+    },
+    {
+      "country": "Brazil",
+      "share_pct": 13.0
+    },
+    {
+      "country": "Republic of Korea",
+      "share_pct": 9.0
+    },
+    {
+      "country": "other",
+      "share_pct": 40.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 23.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Brazil",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 40.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Production",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 20.6,
+      "production_latest_year": 21.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "20.6",
+      "production_latest_raw": "21",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 27.0,
+      "production_latest_year": 28.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "27",
+      "production_latest_raw": "28",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 852.0,
+      "production_latest_year": 830.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "852",
+      "production_latest_raw": "830",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 24.0,
+      "production_latest_year": 25.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "24",
+      "production_latest_raw": "25",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 90.0,
+      "production_latest_year": 98.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "90",
+      "production_latest_raw": "98",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Iran",
+      "production_prev_year": 4.0,
+      "production_latest_year": 4.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "4",
+      "production_latest_raw": "4",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 61.0,
+      "production_latest_year": 59.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "61",
+      "production_latest_raw": "59",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 44.0,
+      "production_latest_year": 41.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "44",
+      "production_latest_raw": "41",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 51.0,
+      "production_latest_year": 47.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "51",
+      "production_latest_raw": "47",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 10.0,
+      "production_latest_year": 10.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "10",
+      "production_latest_raw": "10",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 14.0,
+      "production_latest_year": 14.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "14",
+      "production_latest_raw": "14",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 78.0,
+      "production_latest_year": 93.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "78",
+      "production_latest_raw": "93",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 1280.0,
+      "production_latest_year": 1300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1280",
+      "production_latest_raw": "1300",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "U.S. production and shipments data source is the American Iron and Steel Institute; see also the Iron and Steel Scrap and the Iron Ore chapters.",
+    "2": "Steel mill products. Source: Metals Service Center Institute, September 2025.",
+    "3": "Defined as steel mill product shipments + imports of finished steel mill products – exports of steel mill products ± adjustments for stock changes.",
+    "4": "Source: U.S. Department of Labor, Bureau of Labor Statistics, North American Industry Classification System Code 331100 and 332100.",
+    "5": "Defined as imports of finished steel mill products – total exports ± adjustments for industry stock changes.",
+    "6": "See Appendix B for definitions. Reported in metric tons. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "7": "Source: World Steel Association, 2025, worldsteel Short Range Outlook October 2025: Brussels, Belgium, World Steel Association press release, October 13, 3 p. (Accessed November 18, 2025, at https://worldsteel.org/media/press-releases/2025/worldsteel-short-range-outlook-october-2025/.)"
+  }
+}

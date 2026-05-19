@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-19T00:07:51",
+  "generated_at": "2026-05-19T12:02:38",
   "elements": [
     {
       "slug": "abrasives",
@@ -6483,6 +6483,566 @@
       }
     },
     {
+      "slug": "iron-and-steel",
+      "name": "Iron and Steel",
+      "symbol": "Fe",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-iron-steel.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "99875e4897c8f39150fdd46961277be6806b22bef9e8facef78296c0e005657e",
+      "pdf_page_count": 2,
+      "units_note": "(Data in million metric tons, metal, unless otherwise specified)",
+      "price_unit_note": null,
+      "price_footnote_text": null,
+      "domestic_use_summary": "The U.S. iron and steel industry produced 82 million tons of raw steel in 2025 with an estimated sales value of about $149 billion, a slight decrease from $150 billion in 2024. At the beginning of 2025, pig iron and raw steel were produced by two companies operating integrated steel mills in eight active locations. Multiple integrated steel mills were fully or partially idled over the last 3 years, and prior reporting of locations previously differentiated multiple facilities at the same location. Raw steel from electric arc furnaces was produced by 47 companies at 102 minimills. Combined raw steel production capacity was about 105 million tons per year, a slight decrease from 107 million tons in 2024. Indiana accounted for an estimated 19% of total raw steel production, followed by Ohio, 8%; Texas, 5%; and Pennsylvania, 4%; no other individual State accounted for more than 4% of total domestic raw steel production. Construction accounted for an estimated 31% of net shipments by market classification, followed by steel service centers and distributors, 26%; automotive, 15%; and steel for converting and processing, 11%; all other applications accounted for 17% of net shipments.",
+      "events_trends_summary": "Under section 232 of the Trade Expansion Act, tariffs increased to a rate of 25% for all countries in March 2025, removing prior exceptions granted since the tariffs were implemented in 2018. In June, tariffs on steel products imported to the United States were increased to 50% for all countries. Various extensions, exclusions, and reciprocal clauses were introduced throughout 2025. In November, Proclamation 10993 granted a 2-year regulatory relief period from Clean Air Act standards set in 2024 affecting coke oven facilities, which manufacture metallurgical coke used in the production of steel in integrated steel mills that account for approximately 28% of domestic steel production. In March, one company began construction on a new minimill in southern California with a production capacity of 450,000 tons per year of rebar steel. In June, a domestic steel manufacturer completed a deal to be acquired by a Japan-based steel company. The deal was approved by the U.S. Government with stipulations and was expected to generate $11 billion in domestic steelmaking investments through 2028. In September, that company also halted production at one mill in Illinois with a production capacity of 2.7 million tons per year of raw steel but was expected to keep the mill in an operational state with the possibility of resuming production. Citing strategic capacity adjustments to account for product-specific market conditions, another company indefinitely idled multiple facilities, including an Illinois basic oxygen furnace and mill with a production capacity of 700,000 tons per year of hot-rolled coil products; a Michigan basic oxygen furnace and continuous casting facilities with a production capacity of 1.99 million tons per year of pig iron and 2.40 million tons per year of carbon slabs, advanced high-strength steels, and other products; and a Pennsylvania minimill with a production capacity of 300,000 tons per year of rail and other products. That company also restarted a blast furnace in Ohio with a production capacity of 1.37 million tons per year of pig iron. The World Steel Association estimated global finished steel demand to remain unchanged in 2025 owing to declining steel demand in China offset by growth in developing economies including Egypt, India, Saudi Arabia, and Vietnam. Globally, the manufacturing sector was expected to be affected by affordability pressures on consumers and elevated production costs. Countries with economies reliant on the export of steel-intensive goods were negatively affected by trade tensions.",
+      "world_resources_summary": "Not applicable. See the Iron Ore chapter for steelmaking raw-material resources.",
+      "substitutes_summary": "Iron is the least expensive and most widely used metal. In most applications, iron and steel compete either with less expensive nonmetallic materials or with more expensive materials that have a performance advantage. Iron and steel compete with lighter materials, such as aluminum and plastics in the automotive industry; aluminum, concrete, and wood in construction; and aluminum, glass, paper, and plastics in containers.",
+      "recycling_summary": "See the Iron and Steel Scrap and the Iron and Steel Slag chapters.",
+      "salient_stats": [
+        {
+          "label": "Pig iron production",
+          "footnote": null,
+          "section": null,
+          "subsection": null,
+          "values": {
+            "2021": 22.2,
+            "2022": 20.0,
+            "2023": 22.5,
+            "2024": 20.6,
+            "2025e": 21.0
+          },
+          "raw_values": {
+            "2021": "22.2",
+            "2022": "20.0",
+            "2023": "22.5",
+            "2024": "20.6",
+            "2025e": "21"
+          }
+        },
+        {
+          "label": "Raw steel production",
+          "footnote": null,
+          "section": null,
+          "subsection": null,
+          "values": {
+            "2021": 85.8,
+            "2022": 80.5,
+            "2023": 81.4,
+            "2024": 79.5,
+            "2025e": 82.0
+          },
+          "raw_values": {
+            "2021": "85.8",
+            "2022": "80.5",
+            "2023": "81.4",
+            "2024": "79.5",
+            "2025e": "82"
+          }
+        },
+        {
+          "label": "Continuously cast steel, percent",
+          "footnote": null,
+          "section": null,
+          "subsection": null,
+          "values": {
+            "2021": 99.8,
+            "2022": 99.7,
+            "2023": 99.7,
+            "2024": 99.7,
+            "2025e": 99.7
+          },
+          "raw_values": {
+            "2021": "99.8",
+            "2022": "99.7",
+            "2023": "99.7",
+            "2024": "99.7",
+            "2025e": "99.7"
+          }
+        },
+        {
+          "label": "Shipments, steel mill products",
+          "footnote": null,
+          "section": null,
+          "subsection": null,
+          "values": {
+            "2021": 85.9,
+            "2022": 81.2,
+            "2023": 81.0,
+            "2024": 78.7,
+            "2025e": 82.0
+          },
+          "raw_values": {
+            "2021": "85.9",
+            "2022": "81.2",
+            "2023": "81.0",
+            "2024": "78.7",
+            "2025e": "82"
+          }
+        },
+        {
+          "label": "Finished",
+          "footnote": null,
+          "section": "Imports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 20.6,
+            "2022": 22.9,
+            "2023": 19.7,
+            "2024": 20.4,
+            "2025e": 19.0
+          },
+          "raw_values": {
+            "2021": "20.6",
+            "2022": "22.9",
+            "2023": "19.7",
+            "2024": "20.4",
+            "2025e": "19"
+          }
+        },
+        {
+          "label": "Semifinished",
+          "footnote": null,
+          "section": "Imports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 7.9,
+            "2022": 5.1,
+            "2023": 5.9,
+            "2024": 5.8,
+            "2025e": 5.0
+          },
+          "raw_values": {
+            "2021": "7.9",
+            "2022": "5.1",
+            "2023": "5.9",
+            "2024": "5.8",
+            "2025e": "5"
+          }
+        },
+        {
+          "label": "Total",
+          "footnote": null,
+          "section": "Imports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 28.5,
+            "2022": 28.0,
+            "2023": 25.6,
+            "2024": 26.2,
+            "2025e": 24.0
+          },
+          "raw_values": {
+            "2021": "28.5",
+            "2022": "28.0",
+            "2023": "25.6",
+            "2024": "26.2",
+            "2025e": "24"
+          }
+        },
+        {
+          "label": "Finished",
+          "footnote": null,
+          "section": "Exports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 7.4,
+            "2022": 7.5,
+            "2023": 7.9,
+            "2024": 7.9,
+            "2025e": 6.0
+          },
+          "raw_values": {
+            "2021": "7.4",
+            "2022": "7.5",
+            "2023": "7.9",
+            "2024": "7.9",
+            "2025e": "6"
+          }
+        },
+        {
+          "label": "Semifinished",
+          "footnote": null,
+          "section": "Exports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 0.1,
+            "2022": 0.1,
+            "2023": 0.3,
+            "2024": 0.1,
+            "2025e": 0.1
+          },
+          "raw_values": {
+            "2021": "0.1",
+            "2022": "0.1",
+            "2023": "0.3",
+            "2024": "0.1",
+            "2025e": "0.1"
+          }
+        },
+        {
+          "label": "Total",
+          "footnote": null,
+          "section": "Exports, steel mill products",
+          "subsection": null,
+          "values": {
+            "2021": 7.5,
+            "2022": 7.6,
+            "2023": 8.2,
+            "2024": 8.0,
+            "2025e": 7.0
+          },
+          "raw_values": {
+            "2021": "7.5",
+            "2022": "7.6",
+            "2023": "8.2",
+            "2024": "8.0",
+            "2025e": "7"
+          }
+        },
+        {
+          "label": "Stocks, service centers, yearend",
+          "footnote": "2",
+          "section": "Stocks, service centers, yearend",
+          "subsection": null,
+          "values": {
+            "2021": 7.0,
+            "2022": 6.7,
+            "2023": 6.5,
+            "2024": 6.5,
+            "2025e": 6.7
+          },
+          "raw_values": {
+            "2021": "7.0",
+            "2022": "6.7",
+            "2023": "6.5",
+            "2024": "6.5",
+            "2025e": "6.7"
+          }
+        },
+        {
+          "label": "Consumption, apparent (steel mill products)",
+          "footnote": "3",
+          "section": "Consumption, apparent (steel mill products)",
+          "subsection": null,
+          "values": {
+            "2021": 100.0,
+            "2022": 96.2,
+            "2023": 92.4,
+            "2024": 91.1,
+            "2025e": 95.0
+          },
+          "raw_values": {
+            "2021": "100",
+            "2022": "96.2",
+            "2023": "92.4",
+            "2024": "91.1",
+            "2025e": "95"
+          }
+        },
+        {
+          "label": "Producer price index, steel mill products (1982=100)",
+          "footnote": "4",
+          "section": "Consumption, apparent (steel mill products)",
+          "subsection": null,
+          "values": {
+            "2021": 351.0,
+            "2022": 382.0,
+            "2023": 320.0,
+            "2024": 291.0,
+            "2025e": 290.0
+          },
+          "raw_values": {
+            "2021": "351",
+            "2022": "382",
+            "2023": "320",
+            "2024": "291",
+            "2025e": "290"
+          }
+        },
+        {
+          "label": "Iron and steel mills",
+          "footnote": "4",
+          "section": "Employment, average, number",
+          "subsection": null,
+          "values": {
+            "2021": 78300.0,
+            "2022": 80800.0,
+            "2023": 84000.0,
+            "2024": 84900.0,
+            "2025e": 86000.0
+          },
+          "raw_values": {
+            "2021": "78300",
+            "2022": "80800",
+            "2023": "84000",
+            "2024": "84900",
+            "2025e": "86000"
+          }
+        },
+        {
+          "label": "Steel product manufacturing",
+          "footnote": "4",
+          "section": "Employment, average, number",
+          "subsection": null,
+          "values": {
+            "2021": 52700.0,
+            "2022": 55400.0,
+            "2023": 58500.0,
+            "2024": 59600.0,
+            "2025e": 61000.0
+          },
+          "raw_values": {
+            "2021": "52700",
+            "2022": "55400",
+            "2023": "58500",
+            "2024": "59600",
+            "2025e": "61000"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 14.0,
+            "2022": 16.0,
+            "2023": 12.0,
+            "2024": 14.0,
+            "2025e": 13.0
+          },
+          "raw_values": {
+            "2021": "14",
+            "2022": "16",
+            "2023": "12",
+            "2024": "14",
+            "2025e": "13"
+          }
+        }
+      ],
+      "price_quotes": [],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 24.0,
+      "exports_total_latest": 7.0,
+      "apparent_consumption_latest": 95.0,
+      "price_usd_per_pound_latest": null,
+      "net_import_reliance_pct_latest": 13.0,
+      "latest_year_sentinels": {},
+      "import_sources_flat": [
+        {
+          "country": "Canada",
+          "share_pct": 23.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Brazil",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 40.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 23.0
+            },
+            {
+              "country": "Mexico",
+              "share_pct": 15.0
+            },
+            {
+              "country": "Brazil",
+              "share_pct": 13.0
+            },
+            {
+              "country": "Republic of Korea",
+              "share_pct": 9.0
+            },
+            {
+              "country": "other",
+              "share_pct": 40.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Production",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 20.6,
+          "production_latest_year": 21.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "20.6",
+          "production_latest_raw": "21",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Brazil",
+          "production_prev_year": 27.0,
+          "production_latest_year": 28.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "27",
+          "production_latest_raw": "28",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "China",
+          "production_prev_year": 852.0,
+          "production_latest_year": 830.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "852",
+          "production_latest_raw": "830",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Germany",
+          "production_prev_year": 24.0,
+          "production_latest_year": 25.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "24",
+          "production_latest_raw": "25",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "India",
+          "production_prev_year": 90.0,
+          "production_latest_year": 98.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "90",
+          "production_latest_raw": "98",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Iran",
+          "production_prev_year": 4.0,
+          "production_latest_year": 4.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "4",
+          "production_latest_raw": "4",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Japan",
+          "production_prev_year": 61.0,
+          "production_latest_year": 59.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "61",
+          "production_latest_raw": "59",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Korea, Republic of",
+          "production_prev_year": 44.0,
+          "production_latest_year": 41.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "44",
+          "production_latest_raw": "41",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 51.0,
+          "production_latest_year": 47.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "51",
+          "production_latest_raw": "47",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Turkey",
+          "production_prev_year": 10.0,
+          "production_latest_year": 10.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "10",
+          "production_latest_raw": "10",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Vietnam",
+          "production_prev_year": 14.0,
+          "production_latest_year": 14.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "14",
+          "production_latest_raw": "14",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 78.0,
+          "production_latest_year": 93.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "78",
+          "production_latest_raw": "93",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 1280.0,
+          "production_latest_year": 1300.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1280",
+          "production_latest_raw": "1300",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. — Zero.",
+        "1": "U.S. production and shipments data source is the American Iron and Steel Institute; see also the Iron and Steel Scrap and the Iron Ore chapters.",
+        "2": "Steel mill products. Source: Metals Service Center Institute, September 2025.",
+        "3": "Defined as steel mill product shipments + imports of finished steel mill products – exports of steel mill products ± adjustments for stock changes.",
+        "4": "Source: U.S. Department of Labor, Bureau of Labor Statistics, North American Industry Classification System Code 331100 and 332100.",
+        "5": "Defined as imports of finished steel mill products – total exports ± adjustments for industry stock changes.",
+        "6": "See Appendix B for definitions. Reported in metric tons. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "7": "Source: World Steel Association, 2025, worldsteel Short Range Outlook October 2025: Brussels, Belgium, World Steel Association press release, October 13, 3 p. (Accessed November 18, 2025, at https://worldsteel.org/media/press-releases/2025/worldsteel-short-range-outlook-october-2025/.)"
+      }
+    },
+    {
       "slug": "lithium",
       "name": "Lithium",
       "symbol": "Li",
@@ -9519,6 +10079,754 @@
         "6": "This category includes niobium-containing material and other material.",
         "7": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
         "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
+      "slug": "platinum-group-metals",
+      "name": "Platinum-group metals (grouped)",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-platinum-group.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "e28369fb9be476bb46e1d7eee3d9d6ef184985db4c7b05b0c145e383b88fd35d",
+      "pdf_page_count": 2,
+      "units_note": "(Palladium, platinum, iridium, osmium, rhodium, and ruthenium)",
+      "price_unit_note": "Price, dollars per troy ounce",
+      "price_footnote_text": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+      "domestic_use_summary": "One company in Montana mined and processed PGMs with an estimated value of $290 million in 2025, a decrease of 31% compared with $420 million in 2024. Estimated total palladium and platinum production decreased by 40% compared with 2024 production owing to one operation remaining on care-and- maintenance status. Small quantities of PGMs also were recovered as byproducts of copper-nickel mining in Michigan; however, this material was exported for refining. The leading domestic use for PGMs was in catalytic converters to decrease harmful emissions from automobiles. PGMs are also used in catalysts for bulk-chemical production and petroleum refining; dental and medical devices; electronic applications, such as in computer hard disks, hybridized integrated circuits, and multilayer ceramic capacitors; glass manufacturing; investment; jewelry; and laboratory equipment.",
+      "events_trends_summary": "In 2025, production of PGMs in South Africa, the world’s leading producer of PGM- containing mined material, decreased by an estimated 9% compared with that in 2024 owing to declining palladium prices, higher costs associated with deep-level mining, and ongoing disruptions to the supply of electricity. Estimated production in Russia, the world’s leading producer of mined palladium, decreased by 6% owing to lower metal grades and ore recovery, geopolitical and investor uncertainty related to the Russia-Ukraine conflict, and the introduction of new mining equipment at one operation. The estimated annual average price in 2025 increased by 53% for ruthenium, by 25% for platinum, by 24% for rhodium, and by 11% for palladium compared with the average prices in 2024. The estimated annual price of iridium decreased by 9% compared with annual average price in 2024. Price increases were attributed to decreased production and increased demand, particularly for rhodium in the hard disk and chemical catalyst industries and owing to the substitution of platinum in automobile catalysts. Investment uncertainty and volatility may have also contributed to price increases. The price decrease for iridium may have been affected by increased production and the waning of investor enthusiasm in the hydrogen power market.",
+      "world_resources_summary": "World resources of PGMs are estimated to total more than 100 million kilograms. The largest resources and reserves are in the Bushveld Complex in South Africa.",
+      "substitutes_summary": "Palladium has been used as a substitute for platinum in most gasoline-engine catalytic converters because of the historically lower price for palladium relative to that of platinum. About 25% of palladium can routinely be substituted for platinum in diesel catalytic converters; the proportion can be as much as 50% in some applications. For some industrial end uses, one PGM can substitute for another, but with losses in efficiency.",
+      "recycling_summary": "About 140,000 kilograms of palladium and platinum were recovered globally from new and old scrap in 2025, including about 50,000 kilograms of palladium and 8,600 kilograms of platinum recovered from automobile catalytic converters in the United States.",
+      "salient_stats": [
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 13700.0,
+            "2022": 10100.0,
+            "2023": 10300.0,
+            "2024": 10200.0,
+            "2025e": 6200.0
+          },
+          "raw_values": {
+            "2021": "13700",
+            "2022": "10100",
+            "2023": "10300",
+            "2024": "10200",
+            "2025e": "6200"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 4020.0,
+            "2022": 3000.0,
+            "2023": 3040.0,
+            "2024": 3010.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "4020",
+            "2022": "3000",
+            "2023": "3040",
+            "2024": "3010",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 72600.0,
+            "2022": 65200.0,
+            "2023": 66900.0,
+            "2024": 68300.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "72600",
+            "2022": "65200",
+            "2023": "66900",
+            "2024": "68300",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 67900.0,
+            "2022": 64200.0,
+            "2023": 66800.0,
+            "2024": 70500.0,
+            "2025e": 99000.0
+          },
+          "raw_values": {
+            "2021": "67900",
+            "2022": "64200",
+            "2023": "66800",
+            "2024": "70500",
+            "2025e": "99000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 160000.0,
+            "2022": 41500.0,
+            "2023": 32100.0,
+            "2024": 52800.0,
+            "2025e": 150000.0
+          },
+          "raw_values": {
+            "2021": "160000",
+            "2022": "41500",
+            "2023": "32100",
+            "2024": "52800",
+            "2025e": "150000"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 2310.0,
+            "2022": 1610.0,
+            "2023": 2040.0,
+            "2024": 1360.0,
+            "2025e": 2200.0
+          },
+          "raw_values": {
+            "2021": "2310",
+            "2022": "1610",
+            "2023": "2040",
+            "2024": "1360",
+            "2025e": "2200"
+          }
+        },
+        {
+          "label": "Osmium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 1.0,
+            "2022": 1.0,
+            "2023": 0.0,
+            "2024": 1.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "1",
+            "2022": "1",
+            "2023": "—",
+            "2024": "1",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 16500.0,
+            "2022": 13200.0,
+            "2023": 12100.0,
+            "2024": 14500.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "16500",
+            "2022": "13200",
+            "2023": "12100",
+            "2024": "14500",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 18000.0,
+            "2022": 13300.0,
+            "2023": 10800.0,
+            "2024": 9780.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "18000",
+            "2022": "13300",
+            "2023": "10800",
+            "2024": "9780",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 43900.0,
+            "2022": 42200.0,
+            "2023": 33600.0,
+            "2024": 39900.0,
+            "2025e": 18000.0
+          },
+          "raw_values": {
+            "2021": "43900",
+            "2022": "42200",
+            "2023": "33600",
+            "2024": "39900",
+            "2025e": "18000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 29400.0,
+            "2022": 23100.0,
+            "2023": 11300.0,
+            "2024": 11700.0,
+            "2025e": 17000.0
+          },
+          "raw_values": {
+            "2021": "29400",
+            "2022": "23100",
+            "2023": "11300",
+            "2024": "11700",
+            "2025e": "17000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 37800.0,
+            "2022": 35200.0,
+            "2023": 13900.0,
+            "2024": 13600.0,
+            "2025e": 24000.0
+          },
+          "raw_values": {
+            "2021": "37800",
+            "2022": "35200",
+            "2023": "13900",
+            "2024": "13600",
+            "2025e": "24000"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 1350.0,
+            "2022": 717.0,
+            "2023": 453.0,
+            "2024": 766.0,
+            "2025e": 340.0
+          },
+          "raw_values": {
+            "2021": "1350",
+            "2022": "717",
+            "2023": "453",
+            "2024": "766",
+            "2025e": "340"
+          }
+        },
+        {
+          "label": "Other PGMs",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 2180.0,
+            "2022": 1010.0,
+            "2023": 845.0,
+            "2024": 2050.0,
+            "2025e": 2700.0
+          },
+          "raw_values": {
+            "2021": "2180",
+            "2022": "1010",
+            "2023": "845",
+            "2024": "2050",
+            "2025e": "2700"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 81400.0,
+            "2022": 74100.0,
+            "2023": 88500.0,
+            "2024": 83600.0,
+            "2025e": 130000.0
+          },
+          "raw_values": {
+            "2021": "81400",
+            "2022": "74100",
+            "2023": "88500",
+            "2024": "83600",
+            "2025e": "130000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 51100.0,
+            "2022": 52900.0,
+            "2023": 67100.0,
+            "2024": 68900.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "51100",
+            "2022": "52900",
+            "2023": "67100",
+            "2024": "68900",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        },
+        {
+          "label": "Employment, mine, number",
+          "footnote": null,
+          "section": "Employment, mine, number",
+          "subsection": null,
+          "values": {
+            "2021": 1600.0,
+            "2022": 1560.0,
+            "2023": 1450.0,
+            "2024": 901.0,
+            "2025e": 810.0
+          },
+          "raw_values": {
+            "2021": "1600",
+            "2022": "1560",
+            "2023": "1450",
+            "2024": "901",
+            "2025e": "810"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 35.0,
+            "2022": 31.0,
+            "2023": 38.0,
+            "2024": 34.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "35",
+            "2022": "31",
+            "2023": "38",
+            "2024": "34",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 75.0,
+            "2022": 78.0,
+            "2023": 83.0,
+            "2024": 85.0,
+            "2025e": 89.0
+          },
+          "raw_values": {
+            "2021": "75",
+            "2022": "78",
+            "2023": "83",
+            "2024": "85",
+            "2025e": "89"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Palladium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "form": "Platinum",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "form": "Iridium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "form": "Rhodium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "form": "Ruthenium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 371257.0,
+      "exports_total_latest": 62040.0,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": 1100.0,
+      "net_import_reliance_pct_latest": 57.0,
+      "latest_year_sentinels": {},
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Palladium",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 37.0
+            },
+            {
+              "country": "Russia",
+              "share_pct": 36.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 6.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 6.0
+            }
+          ]
+        },
+        {
+          "category": "Platinum",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 49.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 23.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 10200.0,
+          "production_latest_year": 6200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "10200",
+          "production_latest_raw": "6200",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Canada",
+          "production_prev_year": 17000.0,
+          "production_latest_year": 16000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "17000",
+          "production_latest_raw": "16000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 89000.0,
+          "production_latest_year": 84000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "89000",
+          "production_latest_raw": "84000",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 82600.0,
+          "production_latest_year": 70000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "82600",
+          "production_latest_raw": "70000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Zimbabwe",
+          "production_prev_year": 15200.0,
+          "production_latest_year": 15000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "15200",
+          "production_latest_raw": "15000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 2870.0,
+          "production_latest_year": 2900.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2870",
+          "production_latest_raw": "2900",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 217000.0,
+          "production_latest_year": 190000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "217000",
+          "production_latest_raw": "190000",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. — Zero.",
+        "1": "Estimated from published sources.",
+        "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 7110.11.0010, 7110.11.0020, 7110.11.0050, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0010, 7110.41.0020, 7110.41.0030, 7110.49.0010, and 7118.90.0020; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "3": "Includes data for the following Schedule B numbers: 7110.11.0000, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0000, and 7110.49.0000; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "4": "Defined as primary production + secondary production + imports – exports.",
+        "5": "Excludes imports and (or) exports of waste and scrap.",
+        "6": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "10": "Reserves for Russia are based on the State Committee of Reserves of the Russian Federation (GKZ) classification system A+B+C1+C2, where C2 are reserves in deposits that are indicated but not being developed or prepared for development. C2 reserves were excluded here."
       }
     },
     {
@@ -13697,6 +15005,461 @@
       }
     },
     {
+      "slug": "titanium",
+      "name": "Titanium",
+      "symbol": "Ti",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-titanium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "c93f5a562e3b32706c4c77312b9fd32bbdb17237feae70228eaeb8fe2c7f1e94",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price, dollars per kilogram",
+      "price_footnote_text": null,
+      "domestic_use_summary": "The United States did not produce titanium sponge metal in 2025. The last domestic sponge plant closed in 2024. The facility was in Utah and had an estimated capacity of 500 tons per year of sponge that was further refined for use in electronics. A second sponge facility in Henderson, NV, with an estimated capacity of 12,600 tons per year has been idled since 2020 owing to market conditions. A third facility in Rowley, UT, with an estimated capacity of 10,900 tons per year has remained idle since 2016. Although detailed 2025 consumption data were withheld to avoid disclosing proprietary data, the majority of titanium metal was used in aerospace applications, and the remainder was used in armor, chemical processing, marine hardware, medical implants, power generation, and other applications. The customs value of imported sponge was about $460 million, a 3% increase compared with $447 million in 2024. In 2025, titanium dioxide (TiO) pigment production, by four companies operating five facilities in four States, was valued at an estimated $3 billion. The leading uses of TiO pigment were, in descending order, paints (including lacquers and varnishes), plastics, and paper. Other uses of TiO pigment included catalysts, ceramics, coated fabrics and textiles, floor coverings, printing ink, and roofing granules.",
+      "events_trends_summary": "U.S. producers of titanium ingot and downstream products were reliant on imports of titanium sponge and scrap. U.S. imports of titanium sponge were an estimated 44,000 tons in 2025, exceeding the historical high of 40,300 tons imported in 2023. Japan (73%), Kazakhstan (13%), and Saudi Arabia (13%) were the leading import sources for titanium sponge in 2025 through July. With funding support from the U.S. Government, a company in Virginia began commercial production of titanium powder from titanium scrap metal in late 2024. In 2025, the company was scaling up production capacity and aimed to achieve 1,400 tons per year in 2027 with potential for future expansion. U.S. imports of titanium scrap were estimated to be 32,000 tons in 2025. The United Kingdom (19%), France and Japan (10% each), and Germany, the Republic of Korea, and Singapore (9% each), were the leading import sources for titanium waste and scrap in 2025 through July. Through July 2025, the average duty-paid unit value of scrap imports was about $7.70 per kilogram compared with the annual average price of $8.50 per kilogram in 2024. Domestic production of TiO pigment in 2025 was an estimated 1,000,000 tons. Although heavily reliant on imports of titanium mineral concentrates, the United States was a net exporter of TiO pigments.",
+      "world_resources_summary": "Resources of titanium minerals are discussed in the Titanium Mineral Concentrates chapter.",
+      "substitutes_summary": "Few materials possess titanium metal’s strength-to-weight ratio and corrosion resistance. In high-strength applications, titanium competes with aluminum, composites, intermetallics, steel, and superalloys. Aluminum, nickel, specialty steels, and zirconium alloys may be substituted for titanium for applications that require corrosion resistance. Ground calcium carbonate, precipitated calcium carbonate, kaolin, and talc compete with TiO as a white pigment.",
+      "recycling_summary": "Owing to limited responses from voluntary surveys, consumption data for titanium scrap metal for the titanium metal industry were withheld. Consumption data for titanium scrap for the steel, superalloy, and other industries were not available.",
+      "salient_stats": [
+        {
+          "label": "Production",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": 0.0
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "—"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 16000.0,
+            "2022": 30900.0,
+            "2023": 40300.0,
+            "2024": 39800.0,
+            "2025e": 44000.0
+          },
+          "raw_values": {
+            "2021": "16000",
+            "2022": "30900",
+            "2023": "40300",
+            "2024": "39800",
+            "2025e": "44000"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 117.0,
+            "2022": 105.0,
+            "2023": 247.0,
+            "2024": 70.0,
+            "2025e": 63.0
+          },
+          "raw_values": {
+            "2021": "117",
+            "2022": "105",
+            "2023": "247",
+            "2024": "70",
+            "2025e": "63"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 15900.0,
+            "2022": 30800.0,
+            "2023": 40100.0,
+            "2024": 39800.0,
+            "2025e": 44000.0
+          },
+          "raw_values": {
+            "2021": "15900",
+            "2022": "30800",
+            "2023": "40100",
+            "2024": "39800",
+            "2025e": "44000"
+          }
+        },
+        {
+          "label": "Consumption, reported",
+          "footnote": null,
+          "section": "Consumption, reported",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Price, dollars per kilogram",
+          "footnote": "4",
+          "section": "Price, dollars per kilogram",
+          "subsection": null,
+          "values": {
+            "2021": 11.1,
+            "2022": 11.1,
+            "2023": 12.3,
+            "2024": 13.3,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "11.10",
+            "2022": "11.10",
+            "2023": "12.30",
+            "2024": "13.30",
+            "2025e": "12"
+          }
+        },
+        {
+          "label": "Stocks, industry, yearend",
+          "footnote": null,
+          "section": "Stocks, industry, yearend",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Employment, number",
+          "footnote": null,
+          "section": "Employment, number",
+          "subsection": null,
+          "values": {
+            "2021": 20.0,
+            "2022": 20.0,
+            "2023": 20.0,
+            "2024": 10.0,
+            "2025e": 0.0
+          },
+          "raw_values": {
+            "2021": "20",
+            "2022": "20",
+            "2023": "20",
+            "2024": "10",
+            "2025e": "—"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 95.0,
+            "2022": 95.0,
+            "2023": 95.0,
+            "2024": 95.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": ">95",
+            "2022": ">95",
+            "2023": ">95",
+            "2024": ">95",
+            "2025e": "100"
+          }
+        },
+        {
+          "label": "Production",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 1150000.0,
+            "2022": 1150000.0,
+            "2023": 910000.0,
+            "2024": 940000.0,
+            "2025e": 1000000.0
+          },
+          "raw_values": {
+            "2021": "1150000",
+            "2022": "1150000",
+            "2023": "910000",
+            "2024": "940000",
+            "2025e": "1000000"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 251000.0,
+            "2022": 265000.0,
+            "2023": 228000.0,
+            "2024": 236000.0,
+            "2025e": 230000.0
+          },
+          "raw_values": {
+            "2021": "251000",
+            "2022": "265000",
+            "2023": "228000",
+            "2024": "236000",
+            "2025e": "230000"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 494000.0,
+            "2022": 378000.0,
+            "2023": 288000.0,
+            "2024": 358000.0,
+            "2025e": 330000.0
+          },
+          "raw_values": {
+            "2021": "494000",
+            "2022": "378000",
+            "2023": "288000",
+            "2024": "358000",
+            "2025e": "330000"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 907000.0,
+            "2022": 1040000.0,
+            "2023": 850000.0,
+            "2024": 818000.0,
+            "2025e": 900000.0
+          },
+          "raw_values": {
+            "2021": "907000",
+            "2022": "1040000",
+            "2023": "850000",
+            "2024": "818000",
+            "2025e": "900000"
+          }
+        },
+        {
+          "label": "Price, dollars per metric ton",
+          "footnote": "4",
+          "section": "Price, dollars per metric ton",
+          "subsection": null,
+          "values": {
+            "2021": 2920.0,
+            "2022": 3450.0,
+            "2023": 3240.0,
+            "2024": 3170.0,
+            "2025e": 3200.0
+          },
+          "raw_values": {
+            "2021": "2920",
+            "2022": "3450",
+            "2023": "3240",
+            "2024": "3170",
+            "2025e": "3200"
+          }
+        },
+        {
+          "label": "Employment, number",
+          "footnote": null,
+          "section": "Employment, number",
+          "subsection": null,
+          "values": {
+            "2021": 3200.0,
+            "2022": 3200.0,
+            "2023": 3200.0,
+            "2024": 3200.0,
+            "2025e": 3000.0
+          },
+          "raw_values": {
+            "2021": "3200",
+            "2022": "3200",
+            "2023": "3200",
+            "2024": "3200",
+            "2025e": "3000"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "E",
+            "2022": "E",
+            "2023": "E",
+            "2024": "E",
+            "2025e": "E"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, dollars per kilogram",
+          "unit_note": "Price, dollars per kilogram",
+          "values": {
+            "2021": 11.1,
+            "2022": 11.1,
+            "2023": 12.3,
+            "2024": 13.3,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "11.10",
+            "2022": "11.10",
+            "2023": "12.30",
+            "2024": "13.30",
+            "2025e": "12"
+          }
+        },
+        {
+          "form": "Price, dollars per metric ton",
+          "unit_note": "Price, dollars per metric ton",
+          "values": {
+            "2021": 2920.0,
+            "2022": 3450.0,
+            "2023": 3240.0,
+            "2024": 3170.0,
+            "2025e": 3200.0
+          },
+          "raw_values": {
+            "2021": "2920",
+            "2022": "3450",
+            "2023": "3240",
+            "2024": "3170",
+            "2025e": "3200"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 274000.0,
+      "exports_total_latest": 330063.0,
+      "apparent_consumption_latest": 44000.0,
+      "price_usd_per_pound_latest": 12.0,
+      "net_import_reliance_pct_latest": 100.0,
+      "latest_year_sentinels": {},
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Sponge metal",
+          "countries": [
+            {
+              "country": "Japan",
+              "share_pct": 77.0
+            },
+            {
+              "country": "Saudi Arabia",
+              "share_pct": 13.0
+            },
+            {
+              "country": "Kazakhstan",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        },
+        {
+          "category": "TiO pigment",
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 45.0
+            },
+            {
+              "country": "China",
+              "share_pct": 11.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 7.0
+            },
+            {
+              "country": "Mexico",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 30.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Sponge Metal Production and Sponge and Pigment Capacity",
+      "world_production": [],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+        "1": "See also the Titanium Mineral Concentrates chapter.",
+        "2": "Defined as production + imports – exports.",
+        "3": "Excludes domestic production of sponge in Utah.",
+        "4": "Landed duty-paid value based on U.S. imports for consumption.",
+        "5": "Defined as imports – exports.",
+        "6": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "7": "Yearend operating capacity.",
+        "8": "Excludes U.S. production.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
       "slug": "tungsten",
       "name": "Tungsten",
       "symbol": "W",
@@ -15502,6 +17265,779 @@
         "9": "Zinc content of concentrates and direct shipping ores.",
         "10": "See Appendix C for resource and reserve definitions and information concerning data sources.",
         "11": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 19 million tons."
+      }
+    },
+    {
+      "slug": "zirconium-and-hafnium",
+      "name": "Zirconium and hafnium (grouped)",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zirconium-hafnium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "6a1196f46b40d676871990f1e4165230f099c7a250b64c0893699ec9943ea1e5",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price",
+      "price_footnote_text": "Source: Fastmarkets IM.",
+      "domestic_use_summary": "In 2025, one company recovered zircon (zirconium silicate) from surface-mining operations in Florida and Georgia as a coproduct from the mining of heavy-mineral sands, and a second company processed existing mineral sands tailings in California. Zirconium metal and hafnium metal were produced from zirconium chemical intermediates by one producer in Oregon and one in Utah. Zirconium chemicals were produced from domestic and imported materials by the metal producer in Oregon and by at least five other companies. The leading end use for zircon was ceramics. Other primary uses of zircon included foundry sand, refractories, and zirconium chemicals. The leading use of hafnium metal was in superalloys.",
+      "events_trends_summary": "Global mine production of zirconium mineral concentrates decreased by 12% to an estimated 1 million tons gross weight in 2025. Several companies continued exploration and development projects with planned production of zirconium mineral concentrates in Australia, Mozambique, South Africa, Sri Lanka, Tanzania, and elsewhere. The leading global exporters of zirconium mineral concentrates were Australia and South Africa. China was the leading importer of zirconium mineral concentrates. U.S. imports and exports of zirconium mineral concentrates decreased in 2025. Australia, Senegal, and South Africa were still the leading import sources of zirconium mineral concentrates. The United States was a net exporter of zirconium metal. U.S. exports of unwrought hafnium decreased whereas imports increased. The leading global exporters of unwrought hafnium were China and Germany.",
+      "world_resources_summary": "Resources of zircon in the United States included about 14 million tons associated with titanium resources in heavy-mineral-sand deposits. Phosphate rock and sand and gravel deposits could potentially yield substantial amounts of zircon as a byproduct. World resources of hafnium are associated with those of zircon and baddeleyite. Quantitative estimates of hafnium resources were not available.",
+      "substitutes_summary": "Chromite and olivine can substitute for zircon for some foundry applications. Dolomite and spinel refractories can also substitute for zircon in certain high-temperature applications. Niobium (columbium), stainless steel, and tantalum provide some substitution in nuclear applications, and titanium and synthetic materials may substitute in some chemical processing plant applications. Boron or cadmium-silver-indium alloys can substitute for hafnium metal in nuclear control rods. Zirconium can be used interchangeably with hafnium in certain superalloys.",
+      "recycling_summary": "Companies in Oregon and Utah recycled zirconium from new scrap generated during metal production and fabrication and (or) from post-commercial old scrap. Zircon foundry mold cores and spent or rejected zirconia refractories are often recycled but could not be quantified. Hafnium metal recycling was minimal.",
+      "salient_stats": [
+        {
+          "label": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "footnote": null,
+          "section": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 18500.0,
+            "2022": 31900.0,
+            "2023": 20400.0,
+            "2024": 18900.0,
+            "2025e": 16000.0
+          },
+          "raw_values": {
+            "2021": "18500",
+            "2022": "31900",
+            "2023": "20400",
+            "2024": "18900",
+            "2025e": "16000"
+          }
+        },
+        {
+          "label": "Zirconium, compounds",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 0.0,
+            "2023": 0.0,
+            "2024": 0.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "—",
+            "2023": "—",
+            "2024": "—",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 746.0,
+            "2022": 346.0,
+            "2023": 451.0,
+            "2024": 493.0,
+            "2025e": 530.0
+          },
+          "raw_values": {
+            "2021": "746",
+            "2022": "346",
+            "2023": "451",
+            "2024": "493",
+            "2025e": "530"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 264.0,
+            "2022": 288.0,
+            "2023": 312.0,
+            "2024": 372.0,
+            "2025e": 380.0
+          },
+          "raw_values": {
+            "2021": "264",
+            "2022": "288",
+            "2023": "312",
+            "2024": "372",
+            "2025e": "380"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 23.0,
+            "2022": 43.0,
+            "2023": 72.0,
+            "2024": 64.0,
+            "2025e": 72.0
+          },
+          "raw_values": {
+            "2021": "23",
+            "2022": "43",
+            "2023": "72",
+            "2024": "64",
+            "2025e": "72"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 2.0,
+            "2023": 6.0,
+            "2024": 13.0,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "2",
+            "2023": "6",
+            "2024": "13",
+            "2025e": "12"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 10000.0,
+            "2022": 11200.0,
+            "2023": 13200.0,
+            "2024": 15400.0,
+            "2025e": 10000.0
+          },
+          "raw_values": {
+            "2021": "10000",
+            "2022": "11200",
+            "2023": "13200",
+            "2024": "15400",
+            "2025e": "10000"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 589.0,
+            "2022": 1090.0,
+            "2023": 1080.0,
+            "2024": 1180.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "589",
+            "2022": "1090",
+            "2023": "1080",
+            "2024": "1180",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 966.0,
+            "2022": 821.0,
+            "2023": 706.0,
+            "2024": 808.0,
+            "2025e": 1000.0
+          },
+          "raw_values": {
+            "2021": "966",
+            "2022": "821",
+            "2023": "706",
+            "2024": "808",
+            "2025e": "1000"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 15.0,
+            "2023": 58.0,
+            "2024": 12.0,
+            "2025e": 15.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "15",
+            "2023": "58",
+            "2024": "12",
+            "2025e": "15"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 3.0,
+            "2023": 3.0,
+            "2024": 5.0,
+            "2025e": 7.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "3",
+            "2023": "3",
+            "2024": "5",
+            "2025e": "7"
+          }
+        },
+        {
+          "label": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Premium grade, cost, insurance, and freight, China",
+          "footnote": "4",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Imported",
+          "footnote": "5",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "label": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": 25.0,
+            "2022": 50.0,
+            "2023": 25.0,
+            "2024": 25.0,
+            "2025e": 25.0
+          },
+          "raw_values": {
+            "2021": "<25",
+            "2022": "<50",
+            "2023": "<25",
+            "2024": "<25",
+            "2025e": "<25"
+          }
+        },
+        {
+          "label": "Hafnium",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "NA",
+            "2023": "NA",
+            "2024": "NA",
+            "2025e": "NA"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Premium grade, cost, insurance, and freight, China",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "form": "Imported",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "form": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "form": "Hafnium, unwrought, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 18294.0,
+      "exports_total_latest": 12322.0,
+      "apparent_consumption_latest": 100000.0,
+      "price_usd_per_pound_latest": 1800.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "apparent_consumption": "<100,000"
+      },
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Zirconium ores and concentrates",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 48.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 35.0
+            },
+            {
+              "country": "Senegal",
+              "share_pct": 15.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, compounds",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 41.0
+            },
+            {
+              "country": "South Africa",
+              "share_pct": 31.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 10.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, unwrought",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 55.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 15.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 12.0
+            },
+            {
+              "country": "France",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 11.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, wrought",
+          "countries": [
+            {
+              "country": "France",
+              "share_pct": 72.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 7.0
+            },
+            {
+              "country": "China",
+              "share_pct": 4.0
+            },
+            {
+              "country": "other",
+              "share_pct": 7.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, unwrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 54.0
+            },
+            {
+              "country": "China",
+              "share_pct": 21.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "United Kingdom",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 5.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, wrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 68.0
+            },
+            {
+              "country": "China",
+              "share_pct": 14.0
+            },
+            {
+              "country": "France",
+              "share_pct": 9.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": "footnote 9"
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 400.0,
+          "production_latest_year": 400.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "400",
+          "production_latest_raw": "400",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "China",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Indonesia",
+          "production_prev_year": 81.0,
+          "production_latest_year": 52.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "81",
+          "production_latest_raw": "52",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Madagascar",
+          "production_prev_year": 31.0,
+          "production_latest_year": 26.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "31",
+          "production_latest_raw": "26",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Mozambique",
+          "production_prev_year": 124.0,
+          "production_latest_year": 160.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "124",
+          "production_latest_raw": "160",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Senegal",
+          "production_prev_year": 68.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "68",
+          "production_latest_raw": "70",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Sierra Leone",
+          "production_prev_year": 25.0,
+          "production_latest_year": 25.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "25",
+          "production_latest_raw": "25",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 290.0,
+          "production_latest_year": 270.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "290",
+          "production_latest_raw": "270",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 71.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "71",
+          "production_latest_raw": "40",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 1300.0,
+          "production_latest_year": 1200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1300",
+          "production_latest_raw": "1200",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+        "1": "Calculated ZrO content as 65% of gross weight.",
+        "2": "Excludes zircon in mixed mineral concentrates.",
+        "3": "Defined as production + imports – exports.",
+        "4": "Source: Fastmarkets IM.",
+        "5": "Unit value based on landed-duty-paid United States imports for consumption from Australia, Senegal, and South Africa.",
+        "6": "Source: Argus Media group, Argus Non-Ferrous Markets, annual average.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "9": "Data are rounded to the nearest hundred thousand tons to avoid disclosing company proprietary data.",
+        "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 21 million tons, ZrO content.",
+        "11": "Reported."
       }
     },
     {
@@ -23393,6 +25929,3048 @@
         "12": "Estimated based on reported import data for China. Source: Trade Data Monitor Inc.",
         "13": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 3.3 million tons.",
         "14": "A 2015 report from OSCOM indicated that monazite reserves from their operations were 256,000 tons; rare-earth reserves were not reported."
+      }
+    },
+    {
+      "slug": "iridium",
+      "name": "Iridium",
+      "symbol": "Ir",
+      "kind": "grouped",
+      "parent_slug": "platinum-group-metals",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-platinum-group.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "e28369fb9be476bb46e1d7eee3d9d6ef184985db4c7b05b0c145e383b88fd35d",
+      "pdf_page_count": 2,
+      "units_note": "(Palladium, platinum, iridium, osmium, rhodium, and ruthenium)",
+      "price_unit_note": "Price, dollars per troy ounce",
+      "price_footnote_text": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+      "domestic_use_summary": "One company in Montana mined and processed PGMs with an estimated value of $290 million in 2025, a decrease of 31% compared with $420 million in 2024. Estimated total palladium and platinum production decreased by 40% compared with 2024 production owing to one operation remaining on care-and- maintenance status. Small quantities of PGMs also were recovered as byproducts of copper-nickel mining in Michigan; however, this material was exported for refining. The leading domestic use for PGMs was in catalytic converters to decrease harmful emissions from automobiles. PGMs are also used in catalysts for bulk-chemical production and petroleum refining; dental and medical devices; electronic applications, such as in computer hard disks, hybridized integrated circuits, and multilayer ceramic capacitors; glass manufacturing; investment; jewelry; and laboratory equipment.",
+      "events_trends_summary": "In 2025, production of PGMs in South Africa, the world’s leading producer of PGM- containing mined material, decreased by an estimated 9% compared with that in 2024 owing to declining palladium prices, higher costs associated with deep-level mining, and ongoing disruptions to the supply of electricity. Estimated production in Russia, the world’s leading producer of mined palladium, decreased by 6% owing to lower metal grades and ore recovery, geopolitical and investor uncertainty related to the Russia-Ukraine conflict, and the introduction of new mining equipment at one operation. The estimated annual average price in 2025 increased by 53% for ruthenium, by 25% for platinum, by 24% for rhodium, and by 11% for palladium compared with the average prices in 2024. The estimated annual price of iridium decreased by 9% compared with annual average price in 2024. Price increases were attributed to decreased production and increased demand, particularly for rhodium in the hard disk and chemical catalyst industries and owing to the substitution of platinum in automobile catalysts. Investment uncertainty and volatility may have also contributed to price increases. The price decrease for iridium may have been affected by increased production and the waning of investor enthusiasm in the hydrogen power market.",
+      "world_resources_summary": "World resources of PGMs are estimated to total more than 100 million kilograms. The largest resources and reserves are in the Bushveld Complex in South Africa.",
+      "substitutes_summary": "Palladium has been used as a substitute for platinum in most gasoline-engine catalytic converters because of the historically lower price for palladium relative to that of platinum. About 25% of palladium can routinely be substituted for platinum in diesel catalytic converters; the proportion can be as much as 50% in some applications. For some industrial end uses, one PGM can substitute for another, but with losses in efficiency.",
+      "recycling_summary": "About 140,000 kilograms of palladium and platinum were recovered globally from new and old scrap in 2025, including about 50,000 kilograms of palladium and 8,600 kilograms of platinum recovered from automobile catalytic converters in the United States.",
+      "salient_stats": [
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 13700.0,
+            "2022": 10100.0,
+            "2023": 10300.0,
+            "2024": 10200.0,
+            "2025e": 6200.0
+          },
+          "raw_values": {
+            "2021": "13700",
+            "2022": "10100",
+            "2023": "10300",
+            "2024": "10200",
+            "2025e": "6200"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 4020.0,
+            "2022": 3000.0,
+            "2023": 3040.0,
+            "2024": 3010.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "4020",
+            "2022": "3000",
+            "2023": "3040",
+            "2024": "3010",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 72600.0,
+            "2022": 65200.0,
+            "2023": 66900.0,
+            "2024": 68300.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "72600",
+            "2022": "65200",
+            "2023": "66900",
+            "2024": "68300",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 67900.0,
+            "2022": 64200.0,
+            "2023": 66800.0,
+            "2024": 70500.0,
+            "2025e": 99000.0
+          },
+          "raw_values": {
+            "2021": "67900",
+            "2022": "64200",
+            "2023": "66800",
+            "2024": "70500",
+            "2025e": "99000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 160000.0,
+            "2022": 41500.0,
+            "2023": 32100.0,
+            "2024": 52800.0,
+            "2025e": 150000.0
+          },
+          "raw_values": {
+            "2021": "160000",
+            "2022": "41500",
+            "2023": "32100",
+            "2024": "52800",
+            "2025e": "150000"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 2310.0,
+            "2022": 1610.0,
+            "2023": 2040.0,
+            "2024": 1360.0,
+            "2025e": 2200.0
+          },
+          "raw_values": {
+            "2021": "2310",
+            "2022": "1610",
+            "2023": "2040",
+            "2024": "1360",
+            "2025e": "2200"
+          }
+        },
+        {
+          "label": "Osmium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 1.0,
+            "2022": 1.0,
+            "2023": 0.0,
+            "2024": 1.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "1",
+            "2022": "1",
+            "2023": "—",
+            "2024": "1",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 16500.0,
+            "2022": 13200.0,
+            "2023": 12100.0,
+            "2024": 14500.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "16500",
+            "2022": "13200",
+            "2023": "12100",
+            "2024": "14500",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 18000.0,
+            "2022": 13300.0,
+            "2023": 10800.0,
+            "2024": 9780.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "18000",
+            "2022": "13300",
+            "2023": "10800",
+            "2024": "9780",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 43900.0,
+            "2022": 42200.0,
+            "2023": 33600.0,
+            "2024": 39900.0,
+            "2025e": 18000.0
+          },
+          "raw_values": {
+            "2021": "43900",
+            "2022": "42200",
+            "2023": "33600",
+            "2024": "39900",
+            "2025e": "18000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 29400.0,
+            "2022": 23100.0,
+            "2023": 11300.0,
+            "2024": 11700.0,
+            "2025e": 17000.0
+          },
+          "raw_values": {
+            "2021": "29400",
+            "2022": "23100",
+            "2023": "11300",
+            "2024": "11700",
+            "2025e": "17000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 37800.0,
+            "2022": 35200.0,
+            "2023": 13900.0,
+            "2024": 13600.0,
+            "2025e": 24000.0
+          },
+          "raw_values": {
+            "2021": "37800",
+            "2022": "35200",
+            "2023": "13900",
+            "2024": "13600",
+            "2025e": "24000"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 1350.0,
+            "2022": 717.0,
+            "2023": 453.0,
+            "2024": 766.0,
+            "2025e": 340.0
+          },
+          "raw_values": {
+            "2021": "1350",
+            "2022": "717",
+            "2023": "453",
+            "2024": "766",
+            "2025e": "340"
+          }
+        },
+        {
+          "label": "Other PGMs",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 2180.0,
+            "2022": 1010.0,
+            "2023": 845.0,
+            "2024": 2050.0,
+            "2025e": 2700.0
+          },
+          "raw_values": {
+            "2021": "2180",
+            "2022": "1010",
+            "2023": "845",
+            "2024": "2050",
+            "2025e": "2700"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 81400.0,
+            "2022": 74100.0,
+            "2023": 88500.0,
+            "2024": 83600.0,
+            "2025e": 130000.0
+          },
+          "raw_values": {
+            "2021": "81400",
+            "2022": "74100",
+            "2023": "88500",
+            "2024": "83600",
+            "2025e": "130000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 51100.0,
+            "2022": 52900.0,
+            "2023": 67100.0,
+            "2024": 68900.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "51100",
+            "2022": "52900",
+            "2023": "67100",
+            "2024": "68900",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        },
+        {
+          "label": "Employment, mine, number",
+          "footnote": null,
+          "section": "Employment, mine, number",
+          "subsection": null,
+          "values": {
+            "2021": 1600.0,
+            "2022": 1560.0,
+            "2023": 1450.0,
+            "2024": 901.0,
+            "2025e": 810.0
+          },
+          "raw_values": {
+            "2021": "1600",
+            "2022": "1560",
+            "2023": "1450",
+            "2024": "901",
+            "2025e": "810"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 35.0,
+            "2022": 31.0,
+            "2023": 38.0,
+            "2024": 34.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "35",
+            "2022": "31",
+            "2023": "38",
+            "2024": "34",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 75.0,
+            "2022": 78.0,
+            "2023": 83.0,
+            "2024": 85.0,
+            "2025e": 89.0
+          },
+          "raw_values": {
+            "2021": "75",
+            "2022": "78",
+            "2023": "83",
+            "2024": "85",
+            "2025e": "89"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Palladium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "form": "Platinum",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "form": "Iridium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "form": "Rhodium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "form": "Ruthenium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 371257.0,
+      "exports_total_latest": 62040.0,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": 1100.0,
+      "net_import_reliance_pct_latest": 57.0,
+      "latest_year_sentinels": {},
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Palladium",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 37.0
+            },
+            {
+              "country": "Russia",
+              "share_pct": 36.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 6.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 6.0
+            }
+          ]
+        },
+        {
+          "category": "Platinum",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 49.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 23.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 10200.0,
+          "production_latest_year": 6200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "10200",
+          "production_latest_raw": "6200",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Canada",
+          "production_prev_year": 17000.0,
+          "production_latest_year": 16000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "17000",
+          "production_latest_raw": "16000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 89000.0,
+          "production_latest_year": 84000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "89000",
+          "production_latest_raw": "84000",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 82600.0,
+          "production_latest_year": 70000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "82600",
+          "production_latest_raw": "70000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Zimbabwe",
+          "production_prev_year": 15200.0,
+          "production_latest_year": 15000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "15200",
+          "production_latest_raw": "15000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 2870.0,
+          "production_latest_year": 2900.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2870",
+          "production_latest_raw": "2900",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 217000.0,
+          "production_latest_year": 190000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "217000",
+          "production_latest_raw": "190000",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. — Zero.",
+        "1": "Estimated from published sources.",
+        "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 7110.11.0010, 7110.11.0020, 7110.11.0050, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0010, 7110.41.0020, 7110.41.0030, 7110.49.0010, and 7118.90.0020; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "3": "Includes data for the following Schedule B numbers: 7110.11.0000, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0000, and 7110.49.0000; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "4": "Defined as primary production + secondary production + imports – exports.",
+        "5": "Excludes imports and (or) exports of waste and scrap.",
+        "6": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "10": "Reserves for Russia are based on the State Committee of Reserves of the Russian Federation (GKZ) classification system A+B+C1+C2, where C2 are reserves in deposits that are indicated but not being developed or prepared for development. C2 reserves were excluded here."
+      }
+    },
+    {
+      "slug": "platinum",
+      "name": "Platinum",
+      "symbol": "Pt",
+      "kind": "grouped",
+      "parent_slug": "platinum-group-metals",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-platinum-group.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "e28369fb9be476bb46e1d7eee3d9d6ef184985db4c7b05b0c145e383b88fd35d",
+      "pdf_page_count": 2,
+      "units_note": "(Palladium, platinum, iridium, osmium, rhodium, and ruthenium)",
+      "price_unit_note": "Price, dollars per troy ounce",
+      "price_footnote_text": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+      "domestic_use_summary": "One company in Montana mined and processed PGMs with an estimated value of $290 million in 2025, a decrease of 31% compared with $420 million in 2024. Estimated total palladium and platinum production decreased by 40% compared with 2024 production owing to one operation remaining on care-and- maintenance status. Small quantities of PGMs also were recovered as byproducts of copper-nickel mining in Michigan; however, this material was exported for refining. The leading domestic use for PGMs was in catalytic converters to decrease harmful emissions from automobiles. PGMs are also used in catalysts for bulk-chemical production and petroleum refining; dental and medical devices; electronic applications, such as in computer hard disks, hybridized integrated circuits, and multilayer ceramic capacitors; glass manufacturing; investment; jewelry; and laboratory equipment.",
+      "events_trends_summary": "In 2025, production of PGMs in South Africa, the world’s leading producer of PGM- containing mined material, decreased by an estimated 9% compared with that in 2024 owing to declining palladium prices, higher costs associated with deep-level mining, and ongoing disruptions to the supply of electricity. Estimated production in Russia, the world’s leading producer of mined palladium, decreased by 6% owing to lower metal grades and ore recovery, geopolitical and investor uncertainty related to the Russia-Ukraine conflict, and the introduction of new mining equipment at one operation. The estimated annual average price in 2025 increased by 53% for ruthenium, by 25% for platinum, by 24% for rhodium, and by 11% for palladium compared with the average prices in 2024. The estimated annual price of iridium decreased by 9% compared with annual average price in 2024. Price increases were attributed to decreased production and increased demand, particularly for rhodium in the hard disk and chemical catalyst industries and owing to the substitution of platinum in automobile catalysts. Investment uncertainty and volatility may have also contributed to price increases. The price decrease for iridium may have been affected by increased production and the waning of investor enthusiasm in the hydrogen power market.",
+      "world_resources_summary": "World resources of PGMs are estimated to total more than 100 million kilograms. The largest resources and reserves are in the Bushveld Complex in South Africa.",
+      "substitutes_summary": "Palladium has been used as a substitute for platinum in most gasoline-engine catalytic converters because of the historically lower price for palladium relative to that of platinum. About 25% of palladium can routinely be substituted for platinum in diesel catalytic converters; the proportion can be as much as 50% in some applications. For some industrial end uses, one PGM can substitute for another, but with losses in efficiency.",
+      "recycling_summary": "About 140,000 kilograms of palladium and platinum were recovered globally from new and old scrap in 2025, including about 50,000 kilograms of palladium and 8,600 kilograms of platinum recovered from automobile catalytic converters in the United States.",
+      "salient_stats": [
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 13700.0,
+            "2022": 10100.0,
+            "2023": 10300.0,
+            "2024": 10200.0,
+            "2025e": 6200.0
+          },
+          "raw_values": {
+            "2021": "13700",
+            "2022": "10100",
+            "2023": "10300",
+            "2024": "10200",
+            "2025e": "6200"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": null,
+          "subsection": "Mine production",
+          "values": {
+            "2021": 4020.0,
+            "2022": 3000.0,
+            "2023": 3040.0,
+            "2024": 3010.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "4020",
+            "2022": "3000",
+            "2023": "3040",
+            "2024": "3010",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 72600.0,
+            "2022": 65200.0,
+            "2023": 66900.0,
+            "2024": 68300.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "72600",
+            "2022": "65200",
+            "2023": "66900",
+            "2024": "68300",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 67900.0,
+            "2022": 64200.0,
+            "2023": 66800.0,
+            "2024": 70500.0,
+            "2025e": 99000.0
+          },
+          "raw_values": {
+            "2021": "67900",
+            "2022": "64200",
+            "2023": "66800",
+            "2024": "70500",
+            "2025e": "99000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 160000.0,
+            "2022": 41500.0,
+            "2023": 32100.0,
+            "2024": 52800.0,
+            "2025e": 150000.0
+          },
+          "raw_values": {
+            "2021": "160000",
+            "2022": "41500",
+            "2023": "32100",
+            "2024": "52800",
+            "2025e": "150000"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 2310.0,
+            "2022": 1610.0,
+            "2023": 2040.0,
+            "2024": 1360.0,
+            "2025e": 2200.0
+          },
+          "raw_values": {
+            "2021": "2310",
+            "2022": "1610",
+            "2023": "2040",
+            "2024": "1360",
+            "2025e": "2200"
+          }
+        },
+        {
+          "label": "Osmium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 1.0,
+            "2022": 1.0,
+            "2023": 0.0,
+            "2024": 1.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "1",
+            "2022": "1",
+            "2023": "—",
+            "2024": "1",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 16500.0,
+            "2022": 13200.0,
+            "2023": 12100.0,
+            "2024": 14500.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "16500",
+            "2022": "13200",
+            "2023": "12100",
+            "2024": "14500",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 18000.0,
+            "2022": 13300.0,
+            "2023": 10800.0,
+            "2024": 9780.0,
+            "2025e": 14000.0
+          },
+          "raw_values": {
+            "2021": "18000",
+            "2022": "13300",
+            "2023": "10800",
+            "2024": "9780",
+            "2025e": "14000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 43900.0,
+            "2022": 42200.0,
+            "2023": 33600.0,
+            "2024": 39900.0,
+            "2025e": 18000.0
+          },
+          "raw_values": {
+            "2021": "43900",
+            "2022": "42200",
+            "2023": "33600",
+            "2024": "39900",
+            "2025e": "18000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 29400.0,
+            "2022": 23100.0,
+            "2023": 11300.0,
+            "2024": 11700.0,
+            "2025e": 17000.0
+          },
+          "raw_values": {
+            "2021": "29400",
+            "2022": "23100",
+            "2023": "11300",
+            "2024": "11700",
+            "2025e": "17000"
+          }
+        },
+        {
+          "label": "PGM waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 37800.0,
+            "2022": 35200.0,
+            "2023": 13900.0,
+            "2024": 13600.0,
+            "2025e": 24000.0
+          },
+          "raw_values": {
+            "2021": "37800",
+            "2022": "35200",
+            "2023": "13900",
+            "2024": "13600",
+            "2025e": "24000"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 1350.0,
+            "2022": 717.0,
+            "2023": 453.0,
+            "2024": 766.0,
+            "2025e": 340.0
+          },
+          "raw_values": {
+            "2021": "1350",
+            "2022": "717",
+            "2023": "453",
+            "2024": "766",
+            "2025e": "340"
+          }
+        },
+        {
+          "label": "Other PGMs",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 2180.0,
+            "2022": 1010.0,
+            "2023": 845.0,
+            "2024": 2050.0,
+            "2025e": 2700.0
+          },
+          "raw_values": {
+            "2021": "2180",
+            "2022": "1010",
+            "2023": "845",
+            "2024": "2050",
+            "2025e": "2700"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 81400.0,
+            "2022": 74100.0,
+            "2023": 88500.0,
+            "2024": 83600.0,
+            "2025e": 130000.0
+          },
+          "raw_values": {
+            "2021": "81400",
+            "2022": "74100",
+            "2023": "88500",
+            "2024": "83600",
+            "2025e": "130000"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 51100.0,
+            "2022": 52900.0,
+            "2023": 67100.0,
+            "2024": 68900.0,
+            "2025e": 92000.0
+          },
+          "raw_values": {
+            "2021": "51100",
+            "2022": "52900",
+            "2023": "67100",
+            "2024": "68900",
+            "2025e": "92000"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "label": "Iridium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "label": "Rhodium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "label": "Ruthenium",
+          "footnote": null,
+          "section": "Price, dollars per troy ounce",
+          "subsection": null,
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        },
+        {
+          "label": "Employment, mine, number",
+          "footnote": null,
+          "section": "Employment, mine, number",
+          "subsection": null,
+          "values": {
+            "2021": 1600.0,
+            "2022": 1560.0,
+            "2023": 1450.0,
+            "2024": 901.0,
+            "2025e": 810.0
+          },
+          "raw_values": {
+            "2021": "1600",
+            "2022": "1560",
+            "2023": "1450",
+            "2024": "901",
+            "2025e": "810"
+          }
+        },
+        {
+          "label": "Palladium",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 35.0,
+            "2022": 31.0,
+            "2023": 38.0,
+            "2024": 34.0,
+            "2025e": 57.0
+          },
+          "raw_values": {
+            "2021": "35",
+            "2022": "31",
+            "2023": "38",
+            "2024": "34",
+            "2025e": "57"
+          }
+        },
+        {
+          "label": "Platinum",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of",
+          "subsection": "apparent consumption",
+          "values": {
+            "2021": 75.0,
+            "2022": 78.0,
+            "2023": 83.0,
+            "2024": 85.0,
+            "2025e": 89.0
+          },
+          "raw_values": {
+            "2021": "75",
+            "2022": "78",
+            "2023": "83",
+            "2024": "85",
+            "2025e": "89"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Palladium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 2419.18,
+            "2022": 2133.81,
+            "2023": 1351.66,
+            "2024": 994.9,
+            "2025e": 1100.0
+          },
+          "raw_values": {
+            "2021": "2419.18",
+            "2022": "2133.81",
+            "2023": "1351.66",
+            "2024": "994.90",
+            "2025e": "1100"
+          }
+        },
+        {
+          "form": "Platinum",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 1094.31,
+            "2022": 966.54,
+            "2023": 973.0,
+            "2024": 960.7,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1094.31",
+            "2022": "966.54",
+            "2023": "973.00",
+            "2024": "960.70",
+            "2025e": "1200"
+          }
+        },
+        {
+          "form": "Iridium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 5158.4,
+            "2022": 4581.93,
+            "2023": 4672.78,
+            "2024": 4810.4,
+            "2025e": 4400.0
+          },
+          "raw_values": {
+            "2021": "5158.40",
+            "2022": "4581.93",
+            "2023": "4672.78",
+            "2024": "4810.40",
+            "2025e": "4400"
+          }
+        },
+        {
+          "form": "Rhodium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 20254.1,
+            "2022": 15585.0,
+            "2023": 6660.58,
+            "2024": 4660.44,
+            "2025e": 5800.0
+          },
+          "raw_values": {
+            "2021": "20254.10",
+            "2022": "15585.00",
+            "2023": "6660.58",
+            "2024": "4660.44",
+            "2025e": "5800"
+          }
+        },
+        {
+          "form": "Ruthenium",
+          "unit_note": "Price, dollars per troy ounce",
+          "values": {
+            "2021": 576.12,
+            "2022": 577.02,
+            "2023": 466.49,
+            "2024": 451.02,
+            "2025e": 690.0
+          },
+          "raw_values": {
+            "2021": "576.12",
+            "2022": "577.02",
+            "2023": "466.49",
+            "2024": "451.02",
+            "2025e": "690"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 371257.0,
+      "exports_total_latest": 62040.0,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": 1100.0,
+      "net_import_reliance_pct_latest": 57.0,
+      "latest_year_sentinels": {},
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Palladium",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 37.0
+            },
+            {
+              "country": "Russia",
+              "share_pct": 36.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 6.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 6.0
+            }
+          ]
+        },
+        {
+          "category": "Platinum",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 49.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 23.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 10200.0,
+          "production_latest_year": 6200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "10200",
+          "production_latest_raw": "6200",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Canada",
+          "production_prev_year": 17000.0,
+          "production_latest_year": 16000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "17000",
+          "production_latest_raw": "16000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 89000.0,
+          "production_latest_year": 84000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "89000",
+          "production_latest_raw": "84000",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 82600.0,
+          "production_latest_year": 70000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "82600",
+          "production_latest_raw": "70000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Zimbabwe",
+          "production_prev_year": 15200.0,
+          "production_latest_year": 15000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "15200",
+          "production_latest_raw": "15000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 2870.0,
+          "production_latest_year": 2900.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2870",
+          "production_latest_raw": "2900",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 217000.0,
+          "production_latest_year": 190000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "217000",
+          "production_latest_raw": "190000",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. — Zero.",
+        "1": "Estimated from published sources.",
+        "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 7110.11.0010, 7110.11.0020, 7110.11.0050, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0010, 7110.41.0020, 7110.41.0030, 7110.49.0010, and 7118.90.0020; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "3": "Includes data for the following Schedule B numbers: 7110.11.0000, 7110.19.0000, 7110.21.0000, 7110.29.0000, 7110.31.0000, 7110.39.0000, 7110.41.0000, and 7110.49.0000; 7112.92.0000 (2021); and 7112.92.0100 (2022–25).",
+        "4": "Defined as primary production + secondary production + imports – exports.",
+        "5": "Excludes imports and (or) exports of waste and scrap.",
+        "6": "Engelhard unfabricated metal average annual prices. Source: S&P Global Platts Metals Week.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "10": "Reserves for Russia are based on the State Committee of Reserves of the Russian Federation (GKZ) classification system A+B+C1+C2, where C2 are reserves in deposits that are indicated but not being developed or prepared for development. C2 reserves were excluded here."
+      }
+    },
+    {
+      "slug": "hafnium",
+      "name": "Hafnium",
+      "symbol": "Hf",
+      "kind": "grouped",
+      "parent_slug": "zirconium-and-hafnium",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zirconium-hafnium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "6a1196f46b40d676871990f1e4165230f099c7a250b64c0893699ec9943ea1e5",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price",
+      "price_footnote_text": "Source: Fastmarkets IM.",
+      "domestic_use_summary": "In 2025, one company recovered zircon (zirconium silicate) from surface-mining operations in Florida and Georgia as a coproduct from the mining of heavy-mineral sands, and a second company processed existing mineral sands tailings in California. Zirconium metal and hafnium metal were produced from zirconium chemical intermediates by one producer in Oregon and one in Utah. Zirconium chemicals were produced from domestic and imported materials by the metal producer in Oregon and by at least five other companies. The leading end use for zircon was ceramics. Other primary uses of zircon included foundry sand, refractories, and zirconium chemicals. The leading use of hafnium metal was in superalloys.",
+      "events_trends_summary": "Global mine production of zirconium mineral concentrates decreased by 12% to an estimated 1 million tons gross weight in 2025. Several companies continued exploration and development projects with planned production of zirconium mineral concentrates in Australia, Mozambique, South Africa, Sri Lanka, Tanzania, and elsewhere. The leading global exporters of zirconium mineral concentrates were Australia and South Africa. China was the leading importer of zirconium mineral concentrates. U.S. imports and exports of zirconium mineral concentrates decreased in 2025. Australia, Senegal, and South Africa were still the leading import sources of zirconium mineral concentrates. The United States was a net exporter of zirconium metal. U.S. exports of unwrought hafnium decreased whereas imports increased. The leading global exporters of unwrought hafnium were China and Germany.",
+      "world_resources_summary": "Resources of zircon in the United States included about 14 million tons associated with titanium resources in heavy-mineral-sand deposits. Phosphate rock and sand and gravel deposits could potentially yield substantial amounts of zircon as a byproduct. World resources of hafnium are associated with those of zircon and baddeleyite. Quantitative estimates of hafnium resources were not available.",
+      "substitutes_summary": "Chromite and olivine can substitute for zircon for some foundry applications. Dolomite and spinel refractories can also substitute for zircon in certain high-temperature applications. Niobium (columbium), stainless steel, and tantalum provide some substitution in nuclear applications, and titanium and synthetic materials may substitute in some chemical processing plant applications. Boron or cadmium-silver-indium alloys can substitute for hafnium metal in nuclear control rods. Zirconium can be used interchangeably with hafnium in certain superalloys.",
+      "recycling_summary": "Companies in Oregon and Utah recycled zirconium from new scrap generated during metal production and fabrication and (or) from post-commercial old scrap. Zircon foundry mold cores and spent or rejected zirconia refractories are often recycled but could not be quantified. Hafnium metal recycling was minimal.",
+      "salient_stats": [
+        {
+          "label": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "footnote": null,
+          "section": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 18500.0,
+            "2022": 31900.0,
+            "2023": 20400.0,
+            "2024": 18900.0,
+            "2025e": 16000.0
+          },
+          "raw_values": {
+            "2021": "18500",
+            "2022": "31900",
+            "2023": "20400",
+            "2024": "18900",
+            "2025e": "16000"
+          }
+        },
+        {
+          "label": "Zirconium, compounds",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 0.0,
+            "2023": 0.0,
+            "2024": 0.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "—",
+            "2023": "—",
+            "2024": "—",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 746.0,
+            "2022": 346.0,
+            "2023": 451.0,
+            "2024": 493.0,
+            "2025e": 530.0
+          },
+          "raw_values": {
+            "2021": "746",
+            "2022": "346",
+            "2023": "451",
+            "2024": "493",
+            "2025e": "530"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 264.0,
+            "2022": 288.0,
+            "2023": 312.0,
+            "2024": 372.0,
+            "2025e": 380.0
+          },
+          "raw_values": {
+            "2021": "264",
+            "2022": "288",
+            "2023": "312",
+            "2024": "372",
+            "2025e": "380"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 23.0,
+            "2022": 43.0,
+            "2023": 72.0,
+            "2024": 64.0,
+            "2025e": 72.0
+          },
+          "raw_values": {
+            "2021": "23",
+            "2022": "43",
+            "2023": "72",
+            "2024": "64",
+            "2025e": "72"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 2.0,
+            "2023": 6.0,
+            "2024": 13.0,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "2",
+            "2023": "6",
+            "2024": "13",
+            "2025e": "12"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 10000.0,
+            "2022": 11200.0,
+            "2023": 13200.0,
+            "2024": 15400.0,
+            "2025e": 10000.0
+          },
+          "raw_values": {
+            "2021": "10000",
+            "2022": "11200",
+            "2023": "13200",
+            "2024": "15400",
+            "2025e": "10000"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 589.0,
+            "2022": 1090.0,
+            "2023": 1080.0,
+            "2024": 1180.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "589",
+            "2022": "1090",
+            "2023": "1080",
+            "2024": "1180",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 966.0,
+            "2022": 821.0,
+            "2023": 706.0,
+            "2024": 808.0,
+            "2025e": 1000.0
+          },
+          "raw_values": {
+            "2021": "966",
+            "2022": "821",
+            "2023": "706",
+            "2024": "808",
+            "2025e": "1000"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 15.0,
+            "2023": 58.0,
+            "2024": 12.0,
+            "2025e": 15.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "15",
+            "2023": "58",
+            "2024": "12",
+            "2025e": "15"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 3.0,
+            "2023": 3.0,
+            "2024": 5.0,
+            "2025e": 7.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "3",
+            "2023": "3",
+            "2024": "5",
+            "2025e": "7"
+          }
+        },
+        {
+          "label": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Premium grade, cost, insurance, and freight, China",
+          "footnote": "4",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Imported",
+          "footnote": "5",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "label": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": 25.0,
+            "2022": 50.0,
+            "2023": 25.0,
+            "2024": 25.0,
+            "2025e": 25.0
+          },
+          "raw_values": {
+            "2021": "<25",
+            "2022": "<50",
+            "2023": "<25",
+            "2024": "<25",
+            "2025e": "<25"
+          }
+        },
+        {
+          "label": "Hafnium",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "NA",
+            "2023": "NA",
+            "2024": "NA",
+            "2025e": "NA"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Premium grade, cost, insurance, and freight, China",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "form": "Imported",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "form": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "form": "Hafnium, unwrought, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 18294.0,
+      "exports_total_latest": 12322.0,
+      "apparent_consumption_latest": 100000.0,
+      "price_usd_per_pound_latest": 1800.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "apparent_consumption": "<100,000"
+      },
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Zirconium ores and concentrates",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 48.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 35.0
+            },
+            {
+              "country": "Senegal",
+              "share_pct": 15.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, compounds",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 41.0
+            },
+            {
+              "country": "South Africa",
+              "share_pct": 31.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 10.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, unwrought",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 55.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 15.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 12.0
+            },
+            {
+              "country": "France",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 11.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, wrought",
+          "countries": [
+            {
+              "country": "France",
+              "share_pct": 72.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 7.0
+            },
+            {
+              "country": "China",
+              "share_pct": 4.0
+            },
+            {
+              "country": "other",
+              "share_pct": 7.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, unwrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 54.0
+            },
+            {
+              "country": "China",
+              "share_pct": 21.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "United Kingdom",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 5.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, wrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 68.0
+            },
+            {
+              "country": "China",
+              "share_pct": 14.0
+            },
+            {
+              "country": "France",
+              "share_pct": 9.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": "footnote 9"
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 400.0,
+          "production_latest_year": 400.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "400",
+          "production_latest_raw": "400",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "China",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Indonesia",
+          "production_prev_year": 81.0,
+          "production_latest_year": 52.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "81",
+          "production_latest_raw": "52",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Madagascar",
+          "production_prev_year": 31.0,
+          "production_latest_year": 26.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "31",
+          "production_latest_raw": "26",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Mozambique",
+          "production_prev_year": 124.0,
+          "production_latest_year": 160.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "124",
+          "production_latest_raw": "160",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Senegal",
+          "production_prev_year": 68.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "68",
+          "production_latest_raw": "70",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Sierra Leone",
+          "production_prev_year": 25.0,
+          "production_latest_year": 25.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "25",
+          "production_latest_raw": "25",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 290.0,
+          "production_latest_year": 270.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "290",
+          "production_latest_raw": "270",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 71.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "71",
+          "production_latest_raw": "40",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 1300.0,
+          "production_latest_year": 1200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1300",
+          "production_latest_raw": "1200",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+        "1": "Calculated ZrO content as 65% of gross weight.",
+        "2": "Excludes zircon in mixed mineral concentrates.",
+        "3": "Defined as production + imports – exports.",
+        "4": "Source: Fastmarkets IM.",
+        "5": "Unit value based on landed-duty-paid United States imports for consumption from Australia, Senegal, and South Africa.",
+        "6": "Source: Argus Media group, Argus Non-Ferrous Markets, annual average.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "9": "Data are rounded to the nearest hundred thousand tons to avoid disclosing company proprietary data.",
+        "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 21 million tons, ZrO content.",
+        "11": "Reported."
+      }
+    },
+    {
+      "slug": "zirconium",
+      "name": "Zirconium",
+      "symbol": "Zr",
+      "kind": "grouped",
+      "parent_slug": "zirconium-and-hafnium",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zirconium-hafnium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "6a1196f46b40d676871990f1e4165230f099c7a250b64c0893699ec9943ea1e5",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price",
+      "price_footnote_text": "Source: Fastmarkets IM.",
+      "domestic_use_summary": "In 2025, one company recovered zircon (zirconium silicate) from surface-mining operations in Florida and Georgia as a coproduct from the mining of heavy-mineral sands, and a second company processed existing mineral sands tailings in California. Zirconium metal and hafnium metal were produced from zirconium chemical intermediates by one producer in Oregon and one in Utah. Zirconium chemicals were produced from domestic and imported materials by the metal producer in Oregon and by at least five other companies. The leading end use for zircon was ceramics. Other primary uses of zircon included foundry sand, refractories, and zirconium chemicals. The leading use of hafnium metal was in superalloys.",
+      "events_trends_summary": "Global mine production of zirconium mineral concentrates decreased by 12% to an estimated 1 million tons gross weight in 2025. Several companies continued exploration and development projects with planned production of zirconium mineral concentrates in Australia, Mozambique, South Africa, Sri Lanka, Tanzania, and elsewhere. The leading global exporters of zirconium mineral concentrates were Australia and South Africa. China was the leading importer of zirconium mineral concentrates. U.S. imports and exports of zirconium mineral concentrates decreased in 2025. Australia, Senegal, and South Africa were still the leading import sources of zirconium mineral concentrates. The United States was a net exporter of zirconium metal. U.S. exports of unwrought hafnium decreased whereas imports increased. The leading global exporters of unwrought hafnium were China and Germany.",
+      "world_resources_summary": "Resources of zircon in the United States included about 14 million tons associated with titanium resources in heavy-mineral-sand deposits. Phosphate rock and sand and gravel deposits could potentially yield substantial amounts of zircon as a byproduct. World resources of hafnium are associated with those of zircon and baddeleyite. Quantitative estimates of hafnium resources were not available.",
+      "substitutes_summary": "Chromite and olivine can substitute for zircon for some foundry applications. Dolomite and spinel refractories can also substitute for zircon in certain high-temperature applications. Niobium (columbium), stainless steel, and tantalum provide some substitution in nuclear applications, and titanium and synthetic materials may substitute in some chemical processing plant applications. Boron or cadmium-silver-indium alloys can substitute for hafnium metal in nuclear control rods. Zirconium can be used interchangeably with hafnium in certain superalloys.",
+      "recycling_summary": "Companies in Oregon and Utah recycled zirconium from new scrap generated during metal production and fabrication and (or) from post-commercial old scrap. Zircon foundry mold cores and spent or rejected zirconia refractories are often recycled but could not be quantified. Hafnium metal recycling was minimal.",
+      "salient_stats": [
+        {
+          "label": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "footnote": null,
+          "section": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 18500.0,
+            "2022": 31900.0,
+            "2023": 20400.0,
+            "2024": 18900.0,
+            "2025e": 16000.0
+          },
+          "raw_values": {
+            "2021": "18500",
+            "2022": "31900",
+            "2023": "20400",
+            "2024": "18900",
+            "2025e": "16000"
+          }
+        },
+        {
+          "label": "Zirconium, compounds",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 0.0,
+            "2023": 0.0,
+            "2024": 0.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "—",
+            "2023": "—",
+            "2024": "—",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 746.0,
+            "2022": 346.0,
+            "2023": 451.0,
+            "2024": 493.0,
+            "2025e": 530.0
+          },
+          "raw_values": {
+            "2021": "746",
+            "2022": "346",
+            "2023": "451",
+            "2024": "493",
+            "2025e": "530"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 264.0,
+            "2022": 288.0,
+            "2023": 312.0,
+            "2024": 372.0,
+            "2025e": 380.0
+          },
+          "raw_values": {
+            "2021": "264",
+            "2022": "288",
+            "2023": "312",
+            "2024": "372",
+            "2025e": "380"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 23.0,
+            "2022": 43.0,
+            "2023": 72.0,
+            "2024": 64.0,
+            "2025e": 72.0
+          },
+          "raw_values": {
+            "2021": "23",
+            "2022": "43",
+            "2023": "72",
+            "2024": "64",
+            "2025e": "72"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 2.0,
+            "2023": 6.0,
+            "2024": 13.0,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "2",
+            "2023": "6",
+            "2024": "13",
+            "2025e": "12"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates (ZrO content)",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 10000.0,
+            "2022": 11200.0,
+            "2023": 13200.0,
+            "2024": 15400.0,
+            "2025e": 10000.0
+          },
+          "raw_values": {
+            "2021": "10000",
+            "2022": "11200",
+            "2023": "13200",
+            "2024": "15400",
+            "2025e": "10000"
+          }
+        },
+        {
+          "label": "Zirconium, unwrought, powder, and waste and scrap",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 589.0,
+            "2022": 1090.0,
+            "2023": 1080.0,
+            "2024": 1180.0,
+            "2025e": 1300.0
+          },
+          "raw_values": {
+            "2021": "589",
+            "2022": "1090",
+            "2023": "1080",
+            "2024": "1180",
+            "2025e": "1300"
+          }
+        },
+        {
+          "label": "Zirconium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 966.0,
+            "2022": 821.0,
+            "2023": 706.0,
+            "2024": 808.0,
+            "2025e": 1000.0
+          },
+          "raw_values": {
+            "2021": "966",
+            "2022": "821",
+            "2023": "706",
+            "2024": "808",
+            "2025e": "1000"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 15.0,
+            "2023": 58.0,
+            "2024": 12.0,
+            "2025e": 15.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "15",
+            "2023": "58",
+            "2024": "12",
+            "2025e": "15"
+          }
+        },
+        {
+          "label": "Hafnium, wrought",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": 3.0,
+            "2023": 3.0,
+            "2024": 5.0,
+            "2025e": 7.0
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "3",
+            "2023": "3",
+            "2024": "5",
+            "2025e": "7"
+          }
+        },
+        {
+          "label": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "footnote": "1",
+          "section": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+          "subsection": null,
+          "values": {
+            "2021": 100000.0,
+            "2022": 100000.0,
+            "2023": 100000.0,
+            "2024": 100000.0,
+            "2025e": 100000.0
+          },
+          "raw_values": {
+            "2021": "<100,000",
+            "2022": "<100,000",
+            "2023": "<100,000",
+            "2024": "<100,000",
+            "2025e": "<100,000"
+          }
+        },
+        {
+          "label": "Premium grade, cost, insurance, and freight, China",
+          "footnote": "4",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "label": "Imported",
+          "footnote": "5",
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "label": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "label": "Hafnium, unwrought, dollars per kilogram",
+          "footnote": null,
+          "section": "Price",
+          "subsection": "Zircon, dollars per metric ton (gross weight)",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        },
+        {
+          "label": "Zirconium ores and concentrates",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": 25.0,
+            "2022": 50.0,
+            "2023": 25.0,
+            "2024": 25.0,
+            "2025e": 25.0
+          },
+          "raw_values": {
+            "2021": "<25",
+            "2022": "<50",
+            "2023": "<25",
+            "2024": "<25",
+            "2025e": "<25"
+          }
+        },
+        {
+          "label": "Hafnium",
+          "footnote": null,
+          "section": "consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "NA",
+            "2023": "NA",
+            "2024": "NA",
+            "2025e": "NA"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Premium grade, cost, insurance, and freight, China",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1530.0,
+            "2022": 2300.0,
+            "2023": 2160.0,
+            "2024": 2000.0,
+            "2025e": 1800.0
+          },
+          "raw_values": {
+            "2021": "1530",
+            "2022": "2300",
+            "2023": "2160",
+            "2024": "2000",
+            "2025e": "1800"
+          }
+        },
+        {
+          "form": "Imported",
+          "unit_note": "Price",
+          "values": {
+            "2021": 1450.0,
+            "2022": 2130.0,
+            "2023": 1980.0,
+            "2024": 2080.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "1450",
+            "2022": "2130",
+            "2023": "1980",
+            "2024": "2080",
+            "2025e": "1900"
+          }
+        },
+        {
+          "form": "Zirconium, sponge, ex-works China, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 25.0,
+            "2022": 30.0,
+            "2023": 28.0,
+            "2024": 24.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "25",
+            "2022": "30",
+            "2023": "28",
+            "2024": "24",
+            "2025e": "22"
+          }
+        },
+        {
+          "form": "Hafnium, unwrought, dollars per kilogram",
+          "unit_note": "Price",
+          "values": {
+            "2021": 781.0,
+            "2022": 1590.0,
+            "2023": 6130.0,
+            "2024": 4560.0,
+            "2025e": 3800.0
+          },
+          "raw_values": {
+            "2021": "781",
+            "2022": "1590",
+            "2023": "6130",
+            "2024": "4560",
+            "2025e": "3800"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 18294.0,
+      "exports_total_latest": 12322.0,
+      "apparent_consumption_latest": 100000.0,
+      "price_usd_per_pound_latest": 1800.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "apparent_consumption": "<100,000"
+      },
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Zirconium ores and concentrates",
+          "countries": [
+            {
+              "country": "South Africa",
+              "share_pct": 48.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 35.0
+            },
+            {
+              "country": "Senegal",
+              "share_pct": 15.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, compounds",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 41.0
+            },
+            {
+              "country": "South Africa",
+              "share_pct": 31.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 10.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, unwrought",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 55.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 15.0
+            },
+            {
+              "country": "Canada",
+              "share_pct": 12.0
+            },
+            {
+              "country": "France",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 11.0
+            }
+          ]
+        },
+        {
+          "category": "Zirconium, wrought",
+          "countries": [
+            {
+              "country": "France",
+              "share_pct": 72.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 10.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 7.0
+            },
+            {
+              "country": "China",
+              "share_pct": 4.0
+            },
+            {
+              "country": "other",
+              "share_pct": 7.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, unwrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 54.0
+            },
+            {
+              "country": "China",
+              "share_pct": 21.0
+            },
+            {
+              "country": "France",
+              "share_pct": 12.0
+            },
+            {
+              "country": "United Kingdom",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 5.0
+            }
+          ]
+        },
+        {
+          "category": "Hafnium, wrought",
+          "countries": [
+            {
+              "country": "Germany",
+              "share_pct": 68.0
+            },
+            {
+              "country": "China",
+              "share_pct": 14.0
+            },
+            {
+              "country": "France",
+              "share_pct": 9.0
+            },
+            {
+              "country": "Italy",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": "footnote 9"
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 400.0,
+          "production_latest_year": 400.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "400",
+          "production_latest_raw": "400",
+          "reserves_raw": null,
+          "note": "footnote 10"
+        },
+        {
+          "country": "China",
+          "production_prev_year": 100.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "100",
+          "production_latest_raw": "100",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Indonesia",
+          "production_prev_year": 81.0,
+          "production_latest_year": 52.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "81",
+          "production_latest_raw": "52",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Madagascar",
+          "production_prev_year": 31.0,
+          "production_latest_year": 26.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "31",
+          "production_latest_raw": "26",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Mozambique",
+          "production_prev_year": 124.0,
+          "production_latest_year": 160.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "124",
+          "production_latest_raw": "160",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Senegal",
+          "production_prev_year": 68.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "68",
+          "production_latest_raw": "70",
+          "reserves_raw": null,
+          "note": "footnote 11"
+        },
+        {
+          "country": "Sierra Leone",
+          "production_prev_year": 25.0,
+          "production_latest_year": 25.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "25",
+          "production_latest_raw": "25",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 290.0,
+          "production_latest_year": 270.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "290",
+          "production_latest_raw": "270",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 71.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "71",
+          "production_latest_raw": "40",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 1300.0,
+          "production_latest_year": 1200.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1300",
+          "production_latest_raw": "1200",
+          "reserves_raw": null,
+          "note": null
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+        "1": "Calculated ZrO content as 65% of gross weight.",
+        "2": "Excludes zircon in mixed mineral concentrates.",
+        "3": "Defined as production + imports – exports.",
+        "4": "Source: Fastmarkets IM.",
+        "5": "Unit value based on landed-duty-paid United States imports for consumption from Australia, Senegal, and South Africa.",
+        "6": "Source: Argus Media group, Argus Non-Ferrous Markets, annual average.",
+        "7": "Defined as imports – exports.",
+        "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "9": "Data are rounded to the nearest hundred thousand tons to avoid disclosing company proprietary data.",
+        "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 21 million tons, ZrO content.",
+        "11": "Reported."
       }
     }
   ]

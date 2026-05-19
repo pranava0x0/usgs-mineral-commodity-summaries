@@ -1,0 +1,773 @@
+{
+  "slug": "zirconium-and-hafnium",
+  "name": "Zirconium and hafnium (grouped)",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zirconium-hafnium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "6a1196f46b40d676871990f1e4165230f099c7a250b64c0893699ec9943ea1e5",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons unless otherwise specified)",
+  "price_unit_note": "Price",
+  "price_footnote_text": "Source: Fastmarkets IM.",
+  "domestic_use_summary": "In 2025, one company recovered zircon (zirconium silicate) from surface-mining operations in Florida and Georgia as a coproduct from the mining of heavy-mineral sands, and a second company processed existing mineral sands tailings in California. Zirconium metal and hafnium metal were produced from zirconium chemical intermediates by one producer in Oregon and one in Utah. Zirconium chemicals were produced from domestic and imported materials by the metal producer in Oregon and by at least five other companies. The leading end use for zircon was ceramics. Other primary uses of zircon included foundry sand, refractories, and zirconium chemicals. The leading use of hafnium metal was in superalloys.",
+  "events_trends_summary": "Global mine production of zirconium mineral concentrates decreased by 12% to an estimated 1 million tons gross weight in 2025. Several companies continued exploration and development projects with planned production of zirconium mineral concentrates in Australia, Mozambique, South Africa, Sri Lanka, Tanzania, and elsewhere. The leading global exporters of zirconium mineral concentrates were Australia and South Africa. China was the leading importer of zirconium mineral concentrates. U.S. imports and exports of zirconium mineral concentrates decreased in 2025. Australia, Senegal, and South Africa were still the leading import sources of zirconium mineral concentrates. The United States was a net exporter of zirconium metal. U.S. exports of unwrought hafnium decreased whereas imports increased. The leading global exporters of unwrought hafnium were China and Germany.",
+  "world_resources_summary": "Resources of zircon in the United States included about 14 million tons associated with titanium resources in heavy-mineral-sand deposits. Phosphate rock and sand and gravel deposits could potentially yield substantial amounts of zircon as a byproduct. World resources of hafnium are associated with those of zircon and baddeleyite. Quantitative estimates of hafnium resources were not available.",
+  "substitutes_summary": "Chromite and olivine can substitute for zircon for some foundry applications. Dolomite and spinel refractories can also substitute for zircon in certain high-temperature applications. Niobium (columbium), stainless steel, and tantalum provide some substitution in nuclear applications, and titanium and synthetic materials may substitute in some chemical processing plant applications. Boron or cadmium-silver-indium alloys can substitute for hafnium metal in nuclear control rods. Zirconium can be used interchangeably with hafnium in certain superalloys.",
+  "recycling_summary": "Companies in Oregon and Utah recycled zirconium from new scrap generated during metal production and fabrication and (or) from post-commercial old scrap. Zircon foundry mold cores and spent or rejected zirconia refractories are often recycled but could not be quantified. Hafnium metal recycling was minimal.",
+  "salient_stats": [
+    {
+      "label": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+      "footnote": null,
+      "section": "Production, zirconium ores and concentrates [zirconium oxide (ZrO) content]",
+      "subsection": null,
+      "values": {
+        "2021": 100000.0,
+        "2022": 100000.0,
+        "2023": 100000.0,
+        "2024": 100000.0,
+        "2025e": 100000.0
+      },
+      "raw_values": {
+        "2021": "<100,000",
+        "2022": "<100,000",
+        "2023": "<100,000",
+        "2024": "<100,000",
+        "2025e": "<100,000"
+      }
+    },
+    {
+      "label": "Zirconium ores and concentrates (ZrO content)",
+      "footnote": "1",
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 18500.0,
+        "2022": 31900.0,
+        "2023": 20400.0,
+        "2024": 18900.0,
+        "2025e": 16000.0
+      },
+      "raw_values": {
+        "2021": "18500",
+        "2022": "31900",
+        "2023": "20400",
+        "2024": "18900",
+        "2025e": "16000"
+      }
+    },
+    {
+      "label": "Zirconium, compounds",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 1300.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "1300"
+      }
+    },
+    {
+      "label": "Zirconium, unwrought, powder, and waste and scrap",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 746.0,
+        "2022": 346.0,
+        "2023": 451.0,
+        "2024": 493.0,
+        "2025e": 530.0
+      },
+      "raw_values": {
+        "2021": "746",
+        "2022": "346",
+        "2023": "451",
+        "2024": "493",
+        "2025e": "530"
+      }
+    },
+    {
+      "label": "Zirconium, wrought",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 264.0,
+        "2022": 288.0,
+        "2023": 312.0,
+        "2024": 372.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "264",
+        "2022": "288",
+        "2023": "312",
+        "2024": "372",
+        "2025e": "380"
+      }
+    },
+    {
+      "label": "Hafnium, unwrought",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 23.0,
+        "2022": 43.0,
+        "2023": 72.0,
+        "2024": 64.0,
+        "2025e": 72.0
+      },
+      "raw_values": {
+        "2021": "23",
+        "2022": "43",
+        "2023": "72",
+        "2024": "64",
+        "2025e": "72"
+      }
+    },
+    {
+      "label": "Hafnium, wrought",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 2.0,
+        "2023": 6.0,
+        "2024": 13.0,
+        "2025e": 12.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "2",
+        "2023": "6",
+        "2024": "13",
+        "2025e": "12"
+      }
+    },
+    {
+      "label": "Zirconium ores and concentrates (ZrO content)",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 10000.0,
+        "2022": 11200.0,
+        "2023": 13200.0,
+        "2024": 15400.0,
+        "2025e": 10000.0
+      },
+      "raw_values": {
+        "2021": "10000",
+        "2022": "11200",
+        "2023": "13200",
+        "2024": "15400",
+        "2025e": "10000"
+      }
+    },
+    {
+      "label": "Zirconium, unwrought, powder, and waste and scrap",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 589.0,
+        "2022": 1090.0,
+        "2023": 1080.0,
+        "2024": 1180.0,
+        "2025e": 1300.0
+      },
+      "raw_values": {
+        "2021": "589",
+        "2022": "1090",
+        "2023": "1080",
+        "2024": "1180",
+        "2025e": "1300"
+      }
+    },
+    {
+      "label": "Zirconium, wrought",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 966.0,
+        "2022": 821.0,
+        "2023": 706.0,
+        "2024": 808.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "966",
+        "2022": "821",
+        "2023": "706",
+        "2024": "808",
+        "2025e": "1000"
+      }
+    },
+    {
+      "label": "Hafnium, unwrought",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 15.0,
+        "2023": 58.0,
+        "2024": 12.0,
+        "2025e": 15.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "15",
+        "2023": "58",
+        "2024": "12",
+        "2025e": "15"
+      }
+    },
+    {
+      "label": "Hafnium, wrought",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 3.0,
+        "2023": 3.0,
+        "2024": 5.0,
+        "2025e": 7.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "3",
+        "2023": "3",
+        "2024": "5",
+        "2025e": "7"
+      }
+    },
+    {
+      "label": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+      "footnote": "1",
+      "section": "Consumption, apparent, zirconium ores and concentrates (ZrO content)",
+      "subsection": null,
+      "values": {
+        "2021": 100000.0,
+        "2022": 100000.0,
+        "2023": 100000.0,
+        "2024": 100000.0,
+        "2025e": 100000.0
+      },
+      "raw_values": {
+        "2021": "<100,000",
+        "2022": "<100,000",
+        "2023": "<100,000",
+        "2024": "<100,000",
+        "2025e": "<100,000"
+      }
+    },
+    {
+      "label": "Premium grade, cost, insurance, and freight, China",
+      "footnote": "4",
+      "section": "Price",
+      "subsection": "Zircon, dollars per metric ton (gross weight)",
+      "values": {
+        "2021": 1530.0,
+        "2022": 2300.0,
+        "2023": 2160.0,
+        "2024": 2000.0,
+        "2025e": 1800.0
+      },
+      "raw_values": {
+        "2021": "1530",
+        "2022": "2300",
+        "2023": "2160",
+        "2024": "2000",
+        "2025e": "1800"
+      }
+    },
+    {
+      "label": "Imported",
+      "footnote": "5",
+      "section": "Price",
+      "subsection": "Zircon, dollars per metric ton (gross weight)",
+      "values": {
+        "2021": 1450.0,
+        "2022": 2130.0,
+        "2023": 1980.0,
+        "2024": 2080.0,
+        "2025e": 1900.0
+      },
+      "raw_values": {
+        "2021": "1450",
+        "2022": "2130",
+        "2023": "1980",
+        "2024": "2080",
+        "2025e": "1900"
+      }
+    },
+    {
+      "label": "Zirconium, sponge, ex-works China, dollars per kilogram",
+      "footnote": null,
+      "section": "Price",
+      "subsection": "Zircon, dollars per metric ton (gross weight)",
+      "values": {
+        "2021": 25.0,
+        "2022": 30.0,
+        "2023": 28.0,
+        "2024": 24.0,
+        "2025e": 22.0
+      },
+      "raw_values": {
+        "2021": "25",
+        "2022": "30",
+        "2023": "28",
+        "2024": "24",
+        "2025e": "22"
+      }
+    },
+    {
+      "label": "Hafnium, unwrought, dollars per kilogram",
+      "footnote": null,
+      "section": "Price",
+      "subsection": "Zircon, dollars per metric ton (gross weight)",
+      "values": {
+        "2021": 781.0,
+        "2022": 1590.0,
+        "2023": 6130.0,
+        "2024": 4560.0,
+        "2025e": 3800.0
+      },
+      "raw_values": {
+        "2021": "781",
+        "2022": "1590",
+        "2023": "6130",
+        "2024": "4560",
+        "2025e": "3800"
+      }
+    },
+    {
+      "label": "Zirconium ores and concentrates",
+      "footnote": null,
+      "section": "consumption",
+      "subsection": null,
+      "values": {
+        "2021": 25.0,
+        "2022": 50.0,
+        "2023": 25.0,
+        "2024": 25.0,
+        "2025e": 25.0
+      },
+      "raw_values": {
+        "2021": "<25",
+        "2022": "<50",
+        "2023": "<25",
+        "2024": "<25",
+        "2025e": "<25"
+      }
+    },
+    {
+      "label": "Hafnium",
+      "footnote": null,
+      "section": "consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Premium grade, cost, insurance, and freight, China",
+      "unit_note": "Price",
+      "values": {
+        "2021": 1530.0,
+        "2022": 2300.0,
+        "2023": 2160.0,
+        "2024": 2000.0,
+        "2025e": 1800.0
+      },
+      "raw_values": {
+        "2021": "1530",
+        "2022": "2300",
+        "2023": "2160",
+        "2024": "2000",
+        "2025e": "1800"
+      }
+    },
+    {
+      "form": "Imported",
+      "unit_note": "Price",
+      "values": {
+        "2021": 1450.0,
+        "2022": 2130.0,
+        "2023": 1980.0,
+        "2024": 2080.0,
+        "2025e": 1900.0
+      },
+      "raw_values": {
+        "2021": "1450",
+        "2022": "2130",
+        "2023": "1980",
+        "2024": "2080",
+        "2025e": "1900"
+      }
+    },
+    {
+      "form": "Zirconium, sponge, ex-works China, dollars per kilogram",
+      "unit_note": "Price",
+      "values": {
+        "2021": 25.0,
+        "2022": 30.0,
+        "2023": 28.0,
+        "2024": 24.0,
+        "2025e": 22.0
+      },
+      "raw_values": {
+        "2021": "25",
+        "2022": "30",
+        "2023": "28",
+        "2024": "24",
+        "2025e": "22"
+      }
+    },
+    {
+      "form": "Hafnium, unwrought, dollars per kilogram",
+      "unit_note": "Price",
+      "values": {
+        "2021": 781.0,
+        "2022": 1590.0,
+        "2023": 6130.0,
+        "2024": 4560.0,
+        "2025e": 3800.0
+      },
+      "raw_values": {
+        "2021": "781",
+        "2022": "1590",
+        "2023": "6130",
+        "2024": "4560",
+        "2025e": "3800"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 18294.0,
+  "exports_total_latest": 12322.0,
+  "apparent_consumption_latest": 100000.0,
+  "price_usd_per_pound_latest": 1800.0,
+  "net_import_reliance_pct_latest": null,
+  "latest_year_sentinels": {
+    "apparent_consumption": "<100,000"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Zirconium ores and concentrates",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 48.0
+        },
+        {
+          "country": "Australia",
+          "share_pct": 35.0
+        },
+        {
+          "country": "Senegal",
+          "share_pct": 15.0
+        },
+        {
+          "country": "other",
+          "share_pct": 2.0
+        }
+      ]
+    },
+    {
+      "category": "Zirconium, compounds",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 41.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 31.0
+        },
+        {
+          "country": "France",
+          "share_pct": 12.0
+        },
+        {
+          "country": "Australia",
+          "share_pct": 10.0
+        }
+      ]
+    },
+    {
+      "category": "Zirconium, unwrought",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 55.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 12.0
+        },
+        {
+          "country": "France",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 11.0
+        }
+      ]
+    },
+    {
+      "category": "Zirconium, wrought",
+      "countries": [
+        {
+          "country": "France",
+          "share_pct": 72.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 10.0
+        },
+        {
+          "country": "Belgium",
+          "share_pct": 7.0
+        },
+        {
+          "country": "China",
+          "share_pct": 4.0
+        },
+        {
+          "country": "other",
+          "share_pct": 7.0
+        }
+      ]
+    },
+    {
+      "category": "Hafnium, unwrought",
+      "countries": [
+        {
+          "country": "Germany",
+          "share_pct": 54.0
+        },
+        {
+          "country": "China",
+          "share_pct": 21.0
+        },
+        {
+          "country": "France",
+          "share_pct": 12.0
+        },
+        {
+          "country": "United Kingdom",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    },
+    {
+      "category": "Hafnium, wrought",
+      "countries": [
+        {
+          "country": "Germany",
+          "share_pct": 68.0
+        },
+        {
+          "country": "China",
+          "share_pct": 14.0
+        },
+        {
+          "country": "France",
+          "share_pct": 9.0
+        },
+        {
+          "country": "Italy",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 2.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 100.0,
+      "production_latest_year": 100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "100",
+      "production_latest_raw": "100",
+      "reserves_raw": null,
+      "note": "footnote 9"
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 400.0,
+      "production_latest_year": 400.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "400",
+      "production_latest_raw": "400",
+      "reserves_raw": null,
+      "note": "footnote 10"
+    },
+    {
+      "country": "China",
+      "production_prev_year": 100.0,
+      "production_latest_year": 100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "100",
+      "production_latest_raw": "100",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Indonesia",
+      "production_prev_year": 81.0,
+      "production_latest_year": 52.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "81",
+      "production_latest_raw": "52",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Madagascar",
+      "production_prev_year": 31.0,
+      "production_latest_year": 26.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "31",
+      "production_latest_raw": "26",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Mozambique",
+      "production_prev_year": 124.0,
+      "production_latest_year": 160.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "124",
+      "production_latest_raw": "160",
+      "reserves_raw": null,
+      "note": "footnote 11"
+    },
+    {
+      "country": "Senegal",
+      "production_prev_year": 68.0,
+      "production_latest_year": 70.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "68",
+      "production_latest_raw": "70",
+      "reserves_raw": null,
+      "note": "footnote 11"
+    },
+    {
+      "country": "Sierra Leone",
+      "production_prev_year": 25.0,
+      "production_latest_year": 25.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "25",
+      "production_latest_raw": "25",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 290.0,
+      "production_latest_year": 270.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "290",
+      "production_latest_raw": "270",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 71.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "71",
+      "production_latest_raw": "40",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 1300.0,
+      "production_latest_year": 1200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1300",
+      "production_latest_raw": "1200",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+    "1": "Calculated ZrO content as 65% of gross weight.",
+    "2": "Excludes zircon in mixed mineral concentrates.",
+    "3": "Defined as production + imports – exports.",
+    "4": "Source: Fastmarkets IM.",
+    "5": "Unit value based on landed-duty-paid United States imports for consumption from Australia, Senegal, and South Africa.",
+    "6": "Source: Argus Media group, Argus Non-Ferrous Markets, annual average.",
+    "7": "Defined as imports – exports.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "9": "Data are rounded to the nearest hundred thousand tons to avoid disclosing company proprietary data.",
+    "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 21 million tons, ZrO content.",
+    "11": "Reported."
+  }
+}
