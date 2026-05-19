@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-19T12:02:38",
+  "generated_at": "2026-05-19T12:14:10",
   "elements": [
     {
       "slug": "abrasives",
@@ -658,6 +658,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -1209,6 +1211,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Smelter Production and Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -1851,6 +1855,8 @@
       ],
       "import_sources_range": "2021-2024",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -2419,6 +2425,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Refinery Production and Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -3008,18 +3016,9 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
-        {
-          "country": "2024",
-          "production_prev_year": 2025.0,
-          "production_latest_year": null,
-          "capacity": null,
-          "reserves": null,
-          "production_prev_raw": "2025",
-          "production_latest_raw": "Ore",
-          "reserves_raw": "Cr O",
-          "note": "footnote 2,3"
-        },
         {
           "country": "United States",
           "production_prev_year": 0.0,
@@ -3469,6 +3468,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -4121,6 +4122,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine and Refinery Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -4725,6 +4728,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Natural Industrial Diamond Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -5078,6 +5083,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Low-Purity Production and Production Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -5565,6 +5572,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Refinery Production and Reserves",
+      "world_production_year_prev": null,
+      "world_production_year_latest": null,
       "world_production": [],
       "footnotes": {
         "e": "Estimated. NA Not available. — Zero.",
@@ -5876,6 +5885,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -6359,6 +6370,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Refinery Production and Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -6886,6 +6899,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -7272,6 +7287,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -7807,6 +7824,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Primary Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -8440,6 +8459,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production (manganese content) and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -8904,18 +8925,9 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
-        {
-          "country": "2024",
-          "production_prev_year": 2025.0,
-          "production_latest_year": null,
-          "capacity": null,
-          "reserves": null,
-          "production_prev_raw": "2025",
-          "production_latest_raw": "(thousand metric tons)",
-          "reserves_raw": null,
-          "note": null
-        },
         {
           "country": "United States",
           "production_prev_year": 34000.0,
@@ -9554,6 +9566,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -9968,6 +9982,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -10736,6 +10752,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -11478,6 +11496,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -12006,6 +12026,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -12346,6 +12368,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": null,
+      "world_production_year_latest": null,
       "world_production": [],
       "footnotes": {
         "e": "Estimated. NA Not available.",
@@ -12790,6 +12814,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -13337,6 +13363,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -13826,6 +13854,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -14270,6 +14300,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Refinery Production and Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States (copper telluride)",
@@ -14804,6 +14836,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -15445,7 +15479,175 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Sponge Metal Production and Sponge and Pigment Capacity",
-      "world_production": [],
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": null,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "W",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Canada",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "China",
+          "production_prev_year": 256000.0,
+          "production_latest_year": 260000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "256000",
+          "production_latest_raw": "260000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Germany",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "India",
+          "production_prev_year": 300.0,
+          "production_latest_year": 300.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "300",
+          "production_latest_raw": "300",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Japan",
+          "production_prev_year": 57000.0,
+          "production_latest_year": 53000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "57000",
+          "production_latest_raw": "53000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Kazakhstan",
+          "production_prev_year": 19000.0,
+          "production_latest_year": 16000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "19000",
+          "production_latest_raw": "16000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Mexico",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 33000.0,
+          "production_latest_year": 25000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "33000",
+          "production_latest_raw": "25000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Saudi Arabia",
+          "production_prev_year": 14000.0,
+          "production_latest_year": 12000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "14000",
+          "production_latest_raw": "12000",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Ukraine",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "United Kingdom",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 380000.0,
+          "production_latest_year": 370000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "380000",
+          "production_latest_raw": "370000",
+          "reserves_raw": null,
+          "note": "footnote 8"
+        }
+      ],
       "footnotes": {
         "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
         "1": "See also the Titanium Mineral Concentrates chapter.",
@@ -15805,6 +16007,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -16544,18 +16748,9 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
-        {
-          "country": "2024",
-          "production_prev_year": 2025.0,
-          "production_latest_year": null,
-          "capacity": null,
-          "reserves": null,
-          "production_prev_raw": "2025",
-          "production_latest_raw": "(thousand metric tons)",
-          "reserves_raw": null,
-          "note": null
-        },
         {
           "country": "United States",
           "production_prev_year": 0.0,
@@ -17118,6 +17313,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -17902,6 +18099,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -18421,6 +18620,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Natural Industrial Diamond Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -18774,6 +18975,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Low-Purity Production and Production Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -19152,6 +19355,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -19612,6 +19817,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -20414,6 +20621,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -21238,6 +21447,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -21511,6 +21722,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -21794,6 +22007,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -22077,6 +22292,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -22400,6 +22617,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -22723,6 +22942,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -23006,6 +23227,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -23329,6 +23552,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -23612,6 +23837,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -23935,6 +24162,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -24258,6 +24487,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -24581,6 +24812,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -24864,6 +25097,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -25147,6 +25382,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -25430,6 +25667,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -25713,6 +25952,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -26586,6 +26827,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -27334,6 +27577,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -28062,6 +28307,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
@@ -28835,6 +29082,8 @@
       ],
       "import_sources_range": "2021-24",
       "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
       "world_production": [
         {
           "country": "United States",
