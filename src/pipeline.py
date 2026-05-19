@@ -24,6 +24,7 @@ import logging
 import re
 import sys
 from pathlib import Path
+from typing import Optional
 
 from . import audit, config, csv_export, parser
 from .models import (
@@ -78,6 +79,88 @@ def _postprocess_record(rec: ElementRecord) -> None:
         rec.latest_year_sentinels.setdefault(
             "net_import_reliance_basis", "compounds and metals"
         )
+
+
+def _pgm_fill_per_metal_summary(
+    rec: ElementRecord, parent: ElementRecord, metal_name: str
+) -> None:
+    """Fill alias summary fields from per-metal rows in the parent's salient stats.
+
+    USGS lists each PGM metal as its own row under the Production / Imports /
+    Exports / Apparent consumption / NIR sections of the parent's salient
+    table. We pull the row whose label *equals* `metal_name` (case-insensitive)
+    within each section's keyword space, then assign its latest-year value
+    to the matching `*_latest` field on the alias.
+
+    Fields explicitly *not* assigned:
+      - `price_usd_per_pound_latest` — PGM prices are quoted in $/troy oz
+        which doesn't match the column header's $/lb basis. Leaving at None
+        is more honest than copying a unit-mismatched number.
+      - `stockpile_fy2025_potential_acquisitions` — the parent's value is
+        a group-level total; not attributable to a single metal. Null it.
+      - `primary_smelting_latest`, `secondary_smelting_latest` — USGS
+        doesn't break the smelter stages out per metal.
+
+    Rows USGS doesn't publish for a given metal (e.g. Osmium has no
+    consumption row) leave the corresponding field at None.
+    """
+    def _find_metal_row(predicate) -> Optional[YearSeries]:
+        m = metal_name.lower()
+        for row in parent.salient_stats:
+            if not predicate(row):
+                continue
+            if row.label.strip().lower() == m:
+                return row
+        return None
+
+    def _latest_v(row: Optional[YearSeries]) -> Optional[float]:
+        return row.values.get(parent.latest_year) if row else None
+
+    def _latest_raw(row: Optional[YearSeries]) -> Optional[str]:
+        return (row.raw_values or {}).get(parent.latest_year) if row else None
+
+    # Section predicates. PGM's Production section is tagged on the parser
+    # side as subsection="Mine production" rather than section="Production"
+    # (the parent PDF has "Mine production" as a column-style sub-header
+    # under no explicit "Production:" line), so we accept either match.
+    def _is_production(r) -> bool:
+        return (
+            (r.section or "").lower().startswith("production")
+            or "production" in (r.subsection or "").lower()
+        )
+
+    prod_row = _find_metal_row(_is_production)
+    imp_row = _find_metal_row(lambda r: (r.section or "").lower().startswith("imports"))
+    exp_row = _find_metal_row(lambda r: (r.section or "").lower().startswith("exports"))
+    cons_row = _find_metal_row(lambda r: (r.section or "").lower().startswith("consumption"))
+    nir_row = _find_metal_row(lambda r: (r.section or "").lower().startswith("net import reliance"))
+
+    rec.mined_production_latest = _latest_v(prod_row)
+    rec.primary_smelting_latest = None
+    rec.secondary_smelting_latest = None
+    rec.imports_total_latest = _latest_v(imp_row)
+    rec.exports_total_latest = _latest_v(exp_row)
+    rec.apparent_consumption_latest = _latest_v(cons_row)
+    rec.net_import_reliance_pct_latest = _latest_v(nir_row)
+    rec.price_usd_per_pound_latest = None
+    rec.price_unit_note = None
+
+    # Drop the parent's group-level stockpile from the alias — it doesn't
+    # break down per metal.
+    rec.stockpile_fy2025_potential_acquisitions = None
+
+    # Preserve any non-numeric markers (W / E / >N) on the alias for
+    # the fields we re-populated.
+    sentinels: dict[str, str] = {}
+    for key, row in (
+        ("mined_production", prod_row),
+        ("net_import_reliance", nir_row),
+        ("apparent_consumption", cons_row),
+    ):
+        raw = _latest_raw(row)
+        if raw and (raw in {"W", "E"} or raw.startswith((">", "<"))):
+            sentinels[key] = raw
+    rec.latest_year_sentinels = sentinels
 
 
 def _blank_aggregates(rec: ElementRecord) -> None:
@@ -167,27 +250,34 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
             rec.salient_stats = []
 
     elif alias.kind == "grouped" and alias.parent_slug == "platinum-group-metals":
-        # PGM alias. When `parent_filter` matches a sub-metal name captured
-        # by the parser (Palladium / Platinum), rewrite world_production so
-        # `production_latest_year` carries that metal's per-country value
-        # AND filter import_sources_by_category to just that metal's row.
-        # The other PGM aliases (Ir, Os, Rh, Ru) blank world_production and
-        # import sources entirely because USGS doesn't break those out —
-        # leaving the parent's data would falsely attribute Pd / Pt
-        # numbers to other PGMs.
+        # PGM alias. The parent's salient_stats has per-metal rows under
+        # each section (Production: Palladium / Platinum; Imports for
+        # consumption: Palladium / Platinum / PGM waste / Iridium / Osmium
+        # / Rhodium / Ruthenium; Exports: …; etc.). Pull this metal's row
+        # into the alias's summary fields so per-metal CSV rows carry
+        # per-metal values instead of the parent's group totals.
+        #
+        # `alias.name` is the metal display name (e.g. "Palladium",
+        # "Iridium") — we match against the salient row label, restricted
+        # by section keyword. Missing rows leave the field at the value
+        # inherited from the parent (mostly the group total, which we
+        # then explicitly null).
+        metal_name = alias.name        # "Palladium" / "Iridium" / etc.
+        _pgm_fill_per_metal_summary(rec, parent, metal_name)
+
+        # World production + import sources: same per-metal filtering as
+        # before. Pd / Pt have sub-column data; the others get blank rows.
         if alias.parent_filter:
             metal = alias.parent_filter
             new_rows: list[WorldProductionRow] = []
             for wp in parent.world_production:
                 v = wp.sub_metal_production_latest.get(metal)
-                # Construct a fresh row; preserve country, swap latest-year
-                # production to the chosen metal.
                 new_rows.append(WorldProductionRow(
                     country=wp.country,
                     production_prev_year=None,
                     production_latest_year=v,
                     capacity=None,
-                    reserves=None,            # PGM reserves are group-level
+                    reserves=None,            # PGM reserves stay on the parent
                     production_prev_raw=None,
                     production_latest_raw=None,
                     reserves_raw=None,
@@ -195,16 +285,12 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
                     sub_metal_production_latest={},
                 ))
             rec.world_production = new_rows
-            # Filter import sources to this metal's category. If there's
-            # no matching category (e.g. heavy PGM that USGS doesn't list
-            # imports for), blank the list.
             rec.import_sources_by_category = [
                 c for c in parent.import_sources_by_category
                 if c.category and c.category.strip().lower() == metal.lower()
             ]
             rec.import_sources_flat = []
         else:
-            # Iridium / Osmium / Rhodium / Ruthenium — no per-metal data.
             rec.world_production = []
             rec.import_sources_by_category = []
             rec.import_sources_flat = []
