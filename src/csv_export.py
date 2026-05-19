@@ -9,11 +9,11 @@ per element).
 
 Columns are grouped into sections:
 
-  identity              name, kind, source_url, edition, captured_at,
+  identity              name, kind, source_url, captured_at,
                         units_note, price_unit_note, latest_year,
                         import_sources_range, world_production_label,
                         import_category
-                        (slug, symbol, parent_slug, edition_date,
+                        (slug, symbol, parent_slug, edition, edition_date,
                         pdf_sha256, and pdf_page_count are intentionally
                         omitted from the CSV — they're still in elements.json
                         for anyone who needs the traceback metadata.)
@@ -213,7 +213,7 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     # tuned for human/Sheets consumers who already get the same identity
     # from `name` + `kind` + `edition`.
     for name in (
-        "name", "kind", "source_url", "edition",
+        "name", "kind", "source_url",
         "captured_at", "units_note", "price_unit_note",
         "latest_year", "import_sources_range", "world_production_label",
         "import_category",
@@ -238,7 +238,6 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             row["name"] = rec.name
             row["kind"] = rec.kind
             row["source_url"] = rec.source_url
-            row["edition"] = rec.edition
             row["captured_at"] = rec.captured_at
             row["units_note"] = _text(rec.units_note)
             row["price_unit_note"] = _text(rec.price_unit_note)
