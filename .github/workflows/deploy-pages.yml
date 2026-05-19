@@ -1,7 +1,19 @@
 name: Deploy viewer to GitHub Pages
 
-# Builds the static viewer from the latest USGS MCS PDF extractions
-# and publishes it via GitHub Pages.
+# Publishes the static viewer + the already-committed data artifacts.
+#
+# Design note: this workflow no longer re-runs the extraction pipeline.
+# Everything it ships (viewer/, data/audit/, data/processed/) is already
+# committed to the repo, so the deploy is a pure "package and upload"
+# step — no network calls to USGS, no risk of a 404 breaking a deploy
+# because USGS renamed a file. To refresh data from USGS, use the
+# `refresh-data.yml` workflow (manual trigger).
+#
+# Author workflow:
+#   1. edit src/, viewer/, or whatever
+#   2. python -m src.pipeline --audit   (regenerate locally, fast — PDFs are cached)
+#   3. commit src/ + data/ + viewer/data.* together
+#   4. push → this workflow ships the committed artifacts verbatim
 
 on:
   push:
@@ -36,10 +48,32 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Run unit tests
+        # Cheap (~1s) and catches schema / parser regressions before they ship.
+        # The tests don't fetch PDFs — they use the committed JSON + tiny fixtures.
         run: python -m unittest discover tests
 
-      - name: Run extraction pipeline (uses cached PDFs in data/raw/)
-        run: python -m src.pipeline --audit
+      - name: Sanity-check committed data artifacts
+        # Fail loud if someone pushed code without regenerating data. Cheap —
+        # just reads the on-disk JSON and confirms it's not empty / not stale-shaped.
+        run: |
+          python - <<'PY'
+          import json, sys
+          from pathlib import Path
+          paths = [
+              Path("viewer/data.json"),
+              Path("viewer/data.csv"),
+              Path("data/processed/elements.json"),
+              Path("data/processed/elements.csv"),
+          ]
+          for p in paths:
+              if not p.exists() or p.stat().st_size == 0:
+                  sys.exit(f"missing or empty: {p}")
+          data = json.loads(Path("viewer/data.json").read_text())
+          n = len(data.get("elements", []))
+          if n < 20:
+              sys.exit(f"viewer/data.json has only {n} elements — looks stale.")
+          print(f"ok — {n} elements, generated_at={data.get('generated_at')}")
+          PY
 
       - name: Assemble _site/
         run: |
