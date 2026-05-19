@@ -83,7 +83,8 @@ def write_audit_report(record: ElementRecord, out_path: Path) -> None:
     lines.append(header)
     lines.append(sep)
     for row in record.salient_stats:
-        cells = [_fmt(row.values.get(y)) for y in ("2021", "2022", "2023", "2024", "2025e")]
+        cells = [_fmt_cell(row.values.get(y), (row.raw_values or {}).get(y))
+                 for y in ("2021", "2022", "2023", "2024", "2025e")]
         fn = row.footnote or ""
         lines.append(f"| {row.label} | {fn} | " + " | ".join(cells) + " |")
     lines.append("")
@@ -108,9 +109,10 @@ def write_audit_report(record: ElementRecord, out_path: Path) -> None:
         lines.append("| --- | ---: | ---: | ---: | ---: | --- |")
         for r in record.world_production:
             lines.append(
-                f"| {r.country} | {_fmt(r.production_prev_year)} | "
-                f"{_fmt(r.production_latest_year)} | {_fmt(r.capacity)} | "
-                f"{_fmt(r.reserves)} | {r.note or ''} |"
+                f"| {r.country} | {_fmt_cell(r.production_prev_year, r.production_prev_raw)} | "
+                f"{_fmt_cell(r.production_latest_year, r.production_latest_raw)} | "
+                f"{_fmt(r.capacity)} | "
+                f"{_fmt_cell(r.reserves, r.reserves_raw)} | {r.note or ''} |"
             )
     else:
         lines.append("_Not reported._")
@@ -150,6 +152,19 @@ def _fmt(value) -> str:
             return f"{int(value):,}"
         return f"{value:,.2f}"
     return str(value)
+
+
+def _fmt_cell(value, raw) -> str:
+    """Format a cell, preferring the verbatim raw token when it carries a sentinel.
+
+    USGS sheets use a few sentinels — `W` (withheld), `E` (net exporter), `>N`
+    / `<N` (approximate bounds) — that lose meaning if we render only the
+    coerced float. When `raw` carries one of these, show the raw form;
+    otherwise fall back to the formatted numeric value.
+    """
+    if raw and (raw in {"W", "E", "NA"} or raw.startswith((">", "<"))):
+        return raw
+    return _fmt(value)
 
 
 def audit_element(record: ElementRecord) -> Path:

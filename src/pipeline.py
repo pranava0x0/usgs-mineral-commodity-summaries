@@ -46,9 +46,31 @@ def _process_primary(slug: str, *, refresh: bool, do_audit: bool) -> ElementReco
             cached.unlink()
             log.info("removed cache: %s", cached.name)
     record = parser.parse_element_pdf(slug)
+    _postprocess_record(record)
     if do_audit:
         audit.audit_element(record)
     return record
+
+
+def _postprocess_record(rec: ElementRecord) -> None:
+    """Apply per-element corrections that the generic parser can't infer.
+
+    Keep this list short — every entry is a vote of no-confidence in the
+    generic parser. Prefer fixing the parser when the pattern recurs.
+    """
+    if rec.slug == "rare-earths":
+        # The rare-earths sheet quotes 9 separate REE-oxide prices in $/kg.
+        # There is no single representative "rare earths price" — picking the
+        # first row (Lanthanum oxide) misled the latest-year column. Surface
+        # the full per-commodity quote table in the detail panel only.
+        rec.price_usd_per_pound_latest = None
+        rec.latest_year_sentinels.setdefault("price", "see Price section")
+        # The "Net import reliance" figure (67%) is for *compounds and metals*;
+        # the mineral-concentrates NIR is "E" (net exporter). Flag this so the
+        # viewer can show context rather than a bare number.
+        rec.latest_year_sentinels.setdefault(
+            "net_import_reliance_basis", "compounds and metals"
+        )
 
 
 def _blank_aggregates(rec: ElementRecord) -> None:
@@ -109,7 +131,13 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
 
             if matching_quote:
                 rec.price_usd_per_pound_latest = matching_quote.values.get(parent.latest_year)
-                rec.price_unit_note = matching_quote.form
+                # Keep both the commodity form AND the parent's per-unit basis
+                # (e.g. "$/kg"), otherwise the viewer loses the unit when it
+                # shows the price-basis line on a per-element page.
+                unit = matching_quote.unit_note or parent.price_unit_note
+                rec.price_unit_note = (
+                    f"{matching_quote.form} ({unit})" if unit else matching_quote.form
+                )
                 row = YearSeries(
                     label=matching_quote.form,
                     section="Price",

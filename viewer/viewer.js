@@ -52,7 +52,6 @@ function setupTheme() {
 }
 
 function renderOverview(bundle) {
-  $('#edition-pill').textContent = bundle.edition;
   $('#generated-at').textContent = bundle.generated_at;
   if (bundle.elements[0]) {
     $('#primary-source').href = 'https://pubs.usgs.gov/periodicals/mcs2026/';

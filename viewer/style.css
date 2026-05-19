@@ -1,4 +1,5 @@
-/* Critical Minerals viewer — light, editorial, system fonts only.
+/* Critical Minerals viewer — light/dark, editorial, system fonts only.
+ * USGS-inspired color theme: navy banner with green accent.
  * Follows DESIGN.md: serif display, tabular numerals, content-first chrome.
  */
 
@@ -10,30 +11,63 @@
                 "Times New Roman", serif;
   --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, Consolas, monospace;
 
+  /* USGS official identity (light mode):
+   *   Primary navy:  #014478 (USGS Blue)
+   *   Secondary:     #097945 (USGS Green)
+   *   Page bg:       warm off-white for long-form readability
+   */
+  --usgs-navy: #014478;
+  --usgs-navy-deep: #002a4d;
+  --usgs-green: #097945;
+  --usgs-gold: #b89000;
+
   --bg: #fbfaf7;
   --surface: #ffffff;
   --surface-2: #f3f1eb;
   --border: #e3dfd5;
   --text: #1c1a16;
   --text-muted: #6b6557;
-  --accent: #1f5fae;          /* government-data blue */
-  --accent-soft: #e7eef9;
+  --accent: var(--usgs-navy);
+  --accent-soft: #e3edf6;
   --warn: #8f5a05;
-  --hover: rgba(31, 95, 174, 0.07);
+  --hover: rgba(1, 68, 120, 0.07);
+
+  --banner-bg: var(--usgs-navy);
+  --banner-bg-2: var(--usgs-navy-deep);
+  --banner-text: #ffffff;
+  --banner-text-muted: #c9d9e8;
+  --banner-accent: var(--usgs-green);
+  --banner-border: rgba(255, 255, 255, 0.15);
+
+  --download-bar-bg: var(--usgs-green);
+  --download-bar-text: #ffffff;
+  --download-bar-hover: rgba(255, 255, 255, 0.18);
 
   font-feature-settings: "tnum" 1, "lnum" 1;
 }
 
 [data-theme="dark"] {
-  --bg: #14130f;
-  --surface: #1d1c18;
-  --surface-2: #28261f;
-  --border: #36332a;
-  --text: #f2efe6;
-  --text-muted: #a39d8c;
-  --accent: #75a8e7;
-  --accent-soft: #1f2e44;
-  --hover: rgba(117, 168, 231, 0.10);
+  --bg: #0f1419;
+  --surface: #181d24;
+  --surface-2: #232932;
+  --border: #2e3540;
+  --text: #f0eee6;
+  --text-muted: #a2a8b3;
+  --accent: #6fa8de;            /* lighter USGS-blue derivative for dark mode contrast */
+  --accent-soft: #1a2e44;
+  --warn: #d9a437;
+  --hover: rgba(111, 168, 222, 0.10);
+
+  --banner-bg: #02233f;
+  --banner-bg-2: #011a30;
+  --banner-text: #f0eee6;
+  --banner-text-muted: #aac0d6;
+  --banner-accent: #4faa7b;
+  --banner-border: rgba(255, 255, 255, 0.10);
+
+  --download-bar-bg: #0b5a36;
+  --download-bar-text: #f0eee6;
+  --download-bar-hover: rgba(255, 255, 255, 0.10);
 }
 
 * { box-sizing: border-box; }
@@ -70,32 +104,77 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   z-index: 100;
 }
 
-/* ---------- Header ---------- */
-.page-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  padding: 24px 32px 16px;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
+/* ---------- Download bar (top of page) ---------- */
+.download-bar {
+  width: 100%;
+  background: var(--download-bar-bg);
+  color: var(--download-bar-text);
+  border-bottom: 1px solid var(--banner-border);
 }
-.brand h1 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  font-size: 28px;
-  letter-spacing: -0.01em;
-  margin: 0 0 4px;
-}
-.subtitle {
-  margin: 0;
-  color: var(--text-muted);
-  font-size: 13px;
-}
-.header-meta {
+.download-bar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 10px 32px;
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: flex-end;
+  gap: 14px;
+}
+.download-bar-label {
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--download-bar-text);
+  opacity: 0.92;
+}
+
+/* ---------- USGS banner (page header) ---------- */
+.page-header.usgs-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 32px;
+  background:
+    linear-gradient(180deg, var(--banner-bg) 0%, var(--banner-bg-2) 100%);
+  color: var(--banner-text);
+  border-bottom: 4px solid var(--banner-accent);
+  position: relative;
+}
+.usgs-banner-mark {
+  flex: 0 0 auto;
+  width: 80px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  color: var(--banner-accent);
+}
+.usgs-banner-mark svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.usgs-banner .brand {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.usgs-banner .brand h1 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  margin: 0 0 4px;
+  color: var(--banner-text);
+}
+.usgs-banner .subtitle {
+  margin: 0;
+  color: var(--banner-text-muted);
+  font-size: 13px;
+}
+.usgs-banner .header-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .pill {
@@ -122,45 +201,48 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   align-items: center;
   justify-content: center;
   border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--banner-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--banner-text);
   font-size: 16px;
   cursor: pointer;
   transition: background 120ms ease;
 }
-.icon-btn:hover { background: var(--surface-2); }
+.icon-btn:hover { background: rgba(255, 255, 255, 0.18); }
 
 /* ---------- Export button group ---------- */
 .export-group {
   display: inline-flex;
-  border: 1px solid var(--border);
+  border: 1px solid var(--banner-border);
   border-radius: 8px;
   overflow: hidden;
-  background: var(--surface);
+  background: rgba(255, 255, 255, 0.08);
 }
 .export-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 36px;
-  padding: 0 12px;
+  padding: 0 14px;
   font-family: var(--font-sans);
   font-size: 12px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--text);
+  color: var(--download-bar-text);
   background: transparent;
   border: 0;
-  border-right: 1px solid var(--border);
+  border-right: 1px solid var(--banner-border);
   cursor: pointer;
   text-decoration: none;
   transition: background 120ms ease;
 }
 .export-btn:last-child { border-right: 0; }
-.export-btn:hover { background: var(--surface-2); }
-.export-btn:active { background: var(--accent-soft); color: var(--accent); }
+.export-btn:hover { background: var(--download-bar-hover); }
+.export-btn:active { background: rgba(255, 255, 255, 0.30); }
+.export-btn--primary {
+  background: rgba(255, 255, 255, 0.16);
+}
 
 /* ---------- Main ---------- */
 main {
@@ -293,9 +375,13 @@ main {
 .detail-card {
   background: var(--surface);
   border: 1px solid var(--border);
+  border-left: 4px solid var(--usgs-green);
   border-radius: 12px;
   padding: 20px 24px;
   margin-top: 16px;
+}
+[data-theme="dark"] .detail-card {
+  border-left-color: #4faa7b;
 }
 .detail-card h3 {
   font-family: var(--font-serif);
@@ -414,14 +500,23 @@ main {
   font-size: 12.5px;
   color: var(--text-muted);
   border-top: 1px solid var(--border);
+  background: var(--surface);
 }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 640px) {
-  .page-header { padding: 16px; flex-direction: column; align-items: flex-start; }
+@media (max-width: 720px) {
+  .download-bar-inner { padding: 10px 16px; }
+  .page-header.usgs-banner {
+    padding: 16px;
+    flex-wrap: wrap;
+  }
+  .usgs-banner .brand { flex-basis: 100%; order: 2; }
+  .usgs-banner-mark { order: 1; }
+  .usgs-banner .header-meta { order: 1; margin-left: auto; }
   main { padding: 20px 16px 32px; }
-  .brand h1 { font-size: 22px; }
+  .usgs-banner .brand h1 { font-size: 20px; }
   .kv { grid-template-columns: 110px 1fr; }
+  .download-bar-label { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -431,13 +526,18 @@ main {
 /* ---------- Print (Export PDF) ---------- */
 @media print {
   :root { --bg: #fff; --surface: #fff; --surface-2: #f5f5f5; --border: #bbb;
-          --text: #000; --text-muted: #444; --accent: #1f5fae; --hover: transparent; }
+          --text: #000; --text-muted: #444; --accent: #014478; --hover: transparent;
+          --banner-bg: #014478; --banner-bg-2: #014478; --banner-text: #fff;
+          --banner-text-muted: #c9d9e8; --banner-accent: #097945;
+          --banner-border: rgba(255,255,255,0.4);
+          --download-bar-bg: #fff; --download-bar-text: #000; }
   body { font-size: 11px; }
-  .page-header, .page-footer { background: #fff; border-color: #bbb; }
+  .page-footer { background: #fff; border-color: #bbb; }
   /* Chrome we don't want in a printed report */
-  .export-group, #theme-toggle, .skip-link, #overview-footnote { display: none !important; }
+  .download-bar, #theme-toggle, .skip-link, #overview-footnote { display: none !important; }
+  .page-header.usgs-banner { border-bottom-width: 2px; }
   /* Make the detail card flow naturally onto subsequent pages */
-  .detail-card { border: 0; padding: 0; box-shadow: none; page-break-inside: auto; }
+  .detail-card { border: 0; border-left: 2px solid #097945; padding: 0 0 0 8px; box-shadow: none; page-break-inside: auto; }
   .screenshots { page-break-before: auto; }
   .screenshots figure { break-inside: avoid; flex: 0 0 100%; max-width: 100%; }
   .data-table, .mini-table { font-size: 10px; }

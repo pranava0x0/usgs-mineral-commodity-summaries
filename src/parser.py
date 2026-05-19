@@ -508,14 +508,20 @@ def _parse_import_sources(
 
 
 def _parse_country_share_list(segment: str) -> list[CountryShare]:
-    """Parse 'Mexico, 86%; Italy, 9%; and other, 5%' -> list of CountryShare."""
+    """Parse 'Mexico, 86%; Italy, 9%; and other, 5%' -> list of CountryShare.
+
+    The last chunk frequently has trailing prose after the period (e.g. the
+    rare-earths sheet runs "...other, 6%. Compounds and metals imported from
+    Estonia, Japan, and Malaysia were derived from..."), so we anchor on
+    "country, NN%" without requiring end-of-chunk to follow.
+    """
     shares: list[CountryShare] = []
     for chunk in segment.split(";"):
         chunk = chunk.strip()
         if not chunk:
             continue
         chunk = re.sub(r"^and\s+", "", chunk)
-        m2 = re.match(r"(.+?),\s*(\d+(?:\.\d+)?)\s*%\s*\.?$", chunk)
+        m2 = re.match(r"(.+?),\s*(\d+(?:\.\d+)?)\s*%", chunk)
         if not m2:
             continue
         country = m2.group(1).strip().rstrip(",")
@@ -903,8 +909,18 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         price_label = price_quotes[0].unit_note or price_quotes[0].form
 
     # Latest-year aggregations
-    mine_row = _find_row(salient, "Production", "mine") or _find_row(salient, None, "mine production") or _find_row(salient, None, "production, mine")
-    refinery_row = _find_row(salient, "Production", "refinery") or _find_row(salient, "Production", "primary")
+    mine_row = (
+        _find_row(salient, "Production", "mine")
+        or _find_row(salient, None, "mine production")
+        or _find_row(salient, None, "production, mine")
+        or _find_row(salient, "Production", "mineral concentrates")  # rare-earths: REO mineral concentrates
+    )
+    refinery_row = (
+        _find_row(salient, "Production", "refinery")
+        or _find_row(salient, "Production", "primary")
+        or _find_row(salient, "Production", "compounds and metals")  # rare-earths: refined REO product
+        or _find_row(salient, "Production", "refined")
+    )
     secondary_row = _find_row(salient, "Production", "secondary") or _find_row(salient, None, "secondary")
 
     imports_total = _explicit_total(salient, "imports", latest_year)
@@ -935,6 +951,11 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         sentinels_acc["net_import_reliance"] = nir_raw
 
     # Price: prefer the first price row that actually has the latest-year value.
+    # On sheets where the Price section breaks out *separate commodities* rather
+    # than alternative quotes for the same commodity (rare earths quotes 9 REE
+    # oxides; abrasives quotes 4 abrasive types), picking the first row is
+    # arbitrary — but it is at least faithful to the parsed PDF and lets the
+    # detail panel show the full per-commodity price table.
     price_row = None
     for row in salient:
         if row.label.lower().startswith("price") and row.values.get(latest_year) is not None:
