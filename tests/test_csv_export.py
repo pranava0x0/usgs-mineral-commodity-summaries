@@ -1,9 +1,10 @@
-"""Regression test for the CSV exporter's long-format shape.
+"""Regression tests for the long-format CSV exporter.
 
-The CSV emits one row per (element, import-source category) so multi-category
-sheets like antimony round-trip as 4 rows whose only differing data is the
-country-share block. The viewer's JSON still keeps one record per element —
-this test guards the CSV side.
+Each row of `elements.csv` is one (element, salient-stats form) pair. The
+exporter doesn't try to round-trip per-country imports or per-element
+latest-year summary — those live in `elements.json`. The CSV's job is
+to make the salient-stats matrix pandas-friendly without 800 sparse
+form-specific columns.
 """
 
 from __future__ import annotations
@@ -18,14 +19,12 @@ from src.models import (
     ElementRecord,
     ImportSourceCategory,
     WorldProductionRow,
+    YearSeries,
 )
 
 
 def _antimony_fixture() -> ElementRecord:
-    """A tiny ElementRecord that mirrors antimony's import-source shape.
-
-    Uses just enough fields for the exporter to run; not a full parse.
-    """
+    """A tiny ElementRecord with a representative salient_stats set."""
     return ElementRecord(
         slug="antimony",
         name="Antimony",
@@ -38,73 +37,58 @@ def _antimony_fixture() -> ElementRecord:
         pdf_sha256="deadbeef",
         pdf_page_count=2,
         units_note="(Data in metric tons, antimony content, unless otherwise specified)",
-        primary_smelting_latest=700.0,
-        import_sources_by_category=[
-            ImportSourceCategory(
-                category="Ore and concentrates",
-                countries=[
-                    CountryShare(country="Mexico", share_pct=86.0),
-                    CountryShare(country="Italy", share_pct=9.0),
-                    CountryShare(country="other", share_pct=5.0),
-                ],
+        price_unit_note="Price, metal, average, dollars per pound",
+        salient_stats=[
+            YearSeries(
+                label="Mine (recoverable antimony)",
+                section="Production",
+                values={"2021": 0.0, "2022": 0.0, "2023": 0.0, "2024": 0.0, "2025e": None},
+                raw_values={"2021": "—", "2022": "—", "2023": "—", "2024": "—", "2025e": "W"},
             ),
-            ImportSourceCategory(
-                category="Oxide",
-                countries=[
-                    CountryShare(country="China", share_pct=66.0),
-                    CountryShare(country="Belgium", share_pct=16.0),
-                ],
+            YearSeries(
+                label="Oxide",
+                section="Imports for consumption",
+                values={"2021": 19100.0, "2022": 17000.0, "2023": 14000.0, "2024": 24000.0, "2025e": 39000.0},
+                raw_values={"2021": "19100", "2022": "17000", "2023": "14000", "2024": "24000", "2025e": "39000"},
             ),
-            ImportSourceCategory(
-                category="Unwrought metal and powder",
-                countries=[
-                    CountryShare(country="China", share_pct=22.0),
-                    CountryShare(country="India", share_pct=22.0),
-                ],
-            ),
-            ImportSourceCategory(
-                category="Total metal and oxide",
-                countries=[
-                    CountryShare(country="China", share_pct=55.0),
-                    CountryShare(country="Belgium", share_pct=12.0),
-                ],
+            YearSeries(
+                label="Antimony articles",
+                section="Imports for consumption",
+                footnote="1",
+                values={"2021": 514.0, "2022": 1790.0, "2023": 1620.0, "2024": 323.0, "2025e": 350.0},
             ),
         ],
-        world_production_year_prev="2024",
-        world_production_year_latest="2025e",
-        world_production=[
-            WorldProductionRow(
-                country="China",
-                production_prev_year=40000.0,
-                production_latest_year=40000.0,
+        # Imports / world-production deliberately set but NOT exposed by the
+        # exporter — they live in elements.json. The fixture proves the
+        # exporter ignores them rather than crashing.
+        import_sources_by_category=[
+            ImportSourceCategory(
+                category="Oxide",
+                countries=[CountryShare(country="China", share_pct=66.0)],
             ),
+        ],
+        world_production=[
+            WorldProductionRow(country="China", production_latest_year=40000.0),
         ],
     )
 
 
-def _bismuth_fixture() -> ElementRecord:
-    """Single-flat-list element: one CSV row, import_category=''."""
+def _dysprosium_fixture() -> ElementRecord:
+    """Heavy REE alias with no salient_stats — should still emit one placeholder row."""
     return ElementRecord(
-        slug="bismuth",
-        name="Bismuth",
-        symbol="Bi",
-        kind="primary",
-        source_url="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-bismuth.pdf",
+        slug="dysprosium",
+        name="Dysprosium",
+        symbol="Dy",
+        kind="rare_earth",
+        parent_slug="rare-earths",
+        source_url="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
         edition="MCS 2026",
         edition_date="2026-02",
         captured_at="2026-05-18",
         pdf_sha256="cafef00d",
         pdf_page_count=2,
-        units_note="(Data in metric tons unless otherwise specified)",
-        import_sources_by_category=[
-            ImportSourceCategory(
-                category=None,
-                countries=[
-                    CountryShare(country="China", share_pct=56.0),
-                    CountryShare(country="Germany", share_pct=13.0),
-                ],
-            ),
-        ],
+        units_note="[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
+        salient_stats=[],  # heavy REE — no per-element rows
     )
 
 
@@ -118,147 +102,75 @@ def _read(columns: list[str], rows: list[dict[str, str]]) -> list[dict[str, str]
     return list(csv.DictReader(buf))
 
 
-class CsvLongFormatTests(unittest.TestCase):
+class LongFormatCsvTests(unittest.TestCase):
     def setUp(self) -> None:
-        self.records = [_antimony_fixture(), _bismuth_fixture()]
-        cols, rows = csv_export.build_rows(self.records)
+        records = [_antimony_fixture(), _dysprosium_fixture()]
+        cols, rows = csv_export.build_rows(records)
         self.cols = cols
         self.rows = _read(cols, rows)
 
-    def test_antimony_has_four_rows(self) -> None:
-        antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
-        self.assertEqual(len(antimony), 4)
-        cats = [r["import_category"] for r in antimony]
-        self.assertEqual(
-            cats,
-            ["Ore and concentrates", "Oxide", "Unwrought metal and powder", "Total metal and oxide"],
-        )
+    def test_one_row_per_salient_form(self) -> None:
+        """Antimony has 3 salient rows → 3 CSV rows."""
+        antimony = [r for r in self.rows if r["name"] == "Antimony"]
+        self.assertEqual(len(antimony), 3)
+        labels = [r["label"] for r in antimony]
+        self.assertEqual(labels, ["Mine (recoverable antimony)", "Oxide", "Antimony articles"])
 
-    def test_multi_row_name_annotated_with_category(self) -> None:
-        """When an element is split across multiple CSV rows (one per import
-        category), each row's `name` cell carries the disambiguating category
-        in parentheses so a viewer / Sheets user can tell rows apart without
-        having to read the separate `import_category` column. Single-row
-        elements (bismuth) keep the bare name.
+    def test_year_columns_are_generic(self) -> None:
+        """Year columns are bare 2021..2025e — no form prefix.
+
+        This is the whole point of the long format: a "2021" column with
+        a Silicon Carbide row, instead of a `production__silicon_carbide__2021`
+        column with one populated row out of 50.
         """
-        antimony_names = [r["name"] for r in self.rows if r["name"].startswith("Antimony")]
-        self.assertEqual(
-            antimony_names,
-            [
-                "Antimony (Ore and concentrates)",
-                "Antimony (Oxide)",
-                "Antimony (Unwrought metal and powder)",
-                "Antimony (Total metal and oxide)",
-            ],
-        )
-        # Bismuth has one row → no parenthesised tail.
-        bismuth_names = [r["name"] for r in self.rows if r["name"].startswith("Bismuth")]
-        self.assertEqual(bismuth_names, ["Bismuth"])
+        for yr in ("2021", "2022", "2023", "2024", "2025e"):
+            self.assertIn(yr, self.cols, f"missing year column {yr}")
 
-    def test_country_share_isolated_per_category(self) -> None:
-        antimony = {r["import_category"]: r for r in self.rows if r["name"].startswith("Antimony")}
-        # Ore-and-concentrates row has Mexico=86 but China=N/A
-        self.assertEqual(antimony["Ore and concentrates"]["mexico_imports_share_pct"], "86")
-        self.assertEqual(antimony["Ore and concentrates"]["china_imports_share_pct"], "N/A")
-        # Oxide row has China=66 but Mexico=N/A
-        self.assertEqual(antimony["Oxide"]["china_imports_share_pct"], "66")
-        self.assertEqual(antimony["Oxide"]["mexico_imports_share_pct"], "N/A")
+    def test_sentinel_preserved_in_year_cell(self) -> None:
+        """USGS sentinel tokens (W, em-dash → 0) appear in the year columns."""
+        mine = next(r for r in self.rows if r["label"] == "Mine (recoverable antimony)")
+        self.assertEqual(mine["2025e"], "W")    # withheld → sentinel verbatim
+        self.assertEqual(mine["2024"], "0")     # em-dash → 0 (USGS "produced zero")
 
-    def test_non_country_columns_identical_across_category_rows(self) -> None:
-        antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
-        # World production is duplicated across all category rows for an
-        # element (USGS doesn't categorise it), so the year-tagged column
-        # must read the same on every row.
-        for col in ("primary_smelting_latest", "units_note", "china_production_2025e"):
-            values = {r[col] for r in antimony}
-            self.assertEqual(len(values), 1, f"{col} differs across antimony category rows: {values}")
+    def test_footnote_column_carries_label_footnote(self) -> None:
+        """Row labels that USGS marked with a numbered footnote round-trip."""
+        articles = next(r for r in self.rows if r["label"] == "Antimony articles")
+        self.assertEqual(articles["footnote"], "1")
+        mine = next(r for r in self.rows if r["label"] == "Mine (recoverable antimony)")
+        self.assertEqual(mine["footnote"], "")  # no footnote → empty
 
-    def test_sentinel_merged_into_value_column(self) -> None:
-        """Mixed-type cells: USGS sentinels (W/E/>N/<N/NA) appear verbatim in
-        the value column. No companion *_sentinel or *_raw columns exist.
-
-        The exporter previously emitted `mined_production_latest=N/A` PLUS
-        `mined_production_latest_sentinel=W` for a withheld antimony cell;
-        consumers had to read both. The single mixed-type column simplifies
-        that — the value column carries the sentinel verbatim and pandas users
-        coerce to numeric via `pd.to_numeric(col, errors="coerce")` when they
-        want NaN-on-sentinel semantics.
+    def test_no_salient_stats_emits_placeholder_row(self) -> None:
+        """Heavy REE aliases (Dysprosium, Erbium, …) have empty salient_stats.
+        We still emit one row per element so they're discoverable by name in
+        the CSV — section/label/years are blank to signal 'see parent record'.
         """
-        # Synthesize a fresh fixture so the assertion is hermetic. Antimony
-        # in MCS 2026 has `mined_production_latest=None` with the W sentinel.
-        from src.csv_export import build_rows  # local — keep top-level imports tidy
-        rec = _antimony_fixture()
-        rec.mined_production_latest = None
-        rec.latest_year_sentinels = {"mined_production": "W"}
-        rec.net_import_reliance_pct_latest = 50.0
-        rec.latest_year_sentinels["net_import_reliance"] = ">50"
-        # Replace records and rebuild
-        cols, rows = build_rows([rec])
-        rows = _read(cols, rows)
-        antimony = next(r for r in rows if r["name"].startswith("Antimony"))
+        dysprosium = [r for r in self.rows if r["name"] == "Dysprosium"]
+        self.assertEqual(len(dysprosium), 1)
+        self.assertEqual(dysprosium[0]["section"], "")
+        self.assertEqual(dysprosium[0]["label"], "")
+        self.assertEqual(dysprosium[0]["2025e"], "")
 
-        # Sentinel surfaces in the value column
-        self.assertEqual(antimony["mined_production_latest"], "W")
-        self.assertEqual(antimony["net_import_reliance_pct_latest"], ">50")
-
-        # Companion columns are gone
-        leaked = [c for c in cols if c.endswith(("_sentinel", "_raw"))]
-        self.assertEqual(leaked, [], f"sentinel/raw companion columns leaked: {leaked[:5]}")
-
-    def test_world_production_columns_use_pdf_years(self) -> None:
-        """User instruction: country world-prod columns are named after the
-        actual year tokens captured from the PDF's table sub-header.
-
-        The antimony fixture sets year_prev='2024' and year_latest='2025e'.
-        The exporter must emit china_production_2024 and china_production_2025e
-        — never the placeholders 'prev'/'latest' or a bare 'world_prod__*'
-        legacy column.
+    def test_no_per_country_columns(self) -> None:
+        """The long-format CSV deliberately doesn't expose per-country
+        imports or world-production data. Those live in elements.json. A
+        column like 'china_imports_share_pct' or 'australia_production_2025'
+        showing up would be a regression.
         """
-        self.assertIn("china_production_2024", self.cols)
-        self.assertIn("china_production_2025e", self.cols)
-        # Legacy column names are gone
-        legacy = [c for c in self.cols if c.startswith(("world_prod__", "world_reserves__", "imports__"))]
-        self.assertEqual(legacy, [], f"legacy columns leaked: {legacy[:5]}")
-        # Values populate
-        antimony = next(r for r in self.rows if r["name"].startswith("Antimony"))
-        self.assertEqual(antimony["china_production_2024"], "40000")
-        self.assertEqual(antimony["china_production_2025e"], "40000")
+        leaked = [c for c in self.cols if c.endswith(("_imports_share_pct", "_capacity", "_reserves"))
+                                       or "_production_" in c]
+        self.assertEqual(leaked, [], f"per-country columns leaked: {leaked[:5]}")
 
-    def test_bismuth_single_row_with_blank_category(self) -> None:
-        bism = [r for r in self.rows if r["name"] == "Bismuth"]
-        self.assertEqual(len(bism), 1)
-        self.assertEqual(bism[0]["import_category"], "")
-        self.assertEqual(bism[0]["china_imports_share_pct"], "56")
-        self.assertEqual(bism[0]["germany_imports_share_pct"], "13")
+    def test_no_latest_summary_columns(self) -> None:
+        """Latest-year summary fields don't appear in the long-format CSV —
+        they're per-element facts, and duplicating them across every form
+        row would be waste. They remain in elements.json."""
+        leaked = [c for c in self.cols if c.endswith("_latest")]
+        self.assertEqual(leaked, [], f"latest-year columns leaked: {leaked[:5]}")
 
-    def test_missing_values_render_as_na(self) -> None:
-        """User instruction: every missing cell must read 'N/A' — never blank.
-
-        The antimony fixture leaves most fields None (apparent_consumption,
-        net_import_reliance, etc.); those must surface as 'N/A' so a CSV
-        consumer can never confuse a missing reading with a present zero.
-        """
-        antimony = next(r for r in self.rows if r["name"].startswith("Antimony"))
-        # Numeric latest-year fields the fixture didn't set
-        self.assertEqual(antimony["mined_production_latest"], "N/A")
-        self.assertEqual(antimony["apparent_consumption_latest"], "N/A")
-        self.assertEqual(antimony["net_import_reliance_pct_latest"], "N/A")
-        # Text identity fields the fixture didn't set
-        self.assertEqual(antimony["price_unit_note"], "N/A")
-        # The country that's not in this row's category renders "N/A"
-        self.assertEqual(antimony["china_imports_share_pct"], "N/A")  # Ore-and-concentrates row
-        # No bare empty values in per-country slots. Match per-country column
-        # families specifically and skip *_raw (genuinely empty if no sentinel)
-        # and *_sentinel (a different "withheld marker" column-family entirely).
-        import re as _re
-        country_col = _re.compile(
-            r"_(imports_share_pct|production_\d{4}e?|capacity|reserves)$"
-        )
-        suspect_cols = [c for c in self.cols
-                        if country_col.search(c) and not c.endswith("_raw")]
-        for c in suspect_cols:
-            self.assertNotEqual(antimony[c], "",
-                                f"{c!r} is blank for antimony — should be a value or 'N/A'")
+    def test_compact_column_count(self) -> None:
+        """The whole point of the rewrite: tight, fixed-shape header.
+        13 columns, not 2,300+."""
+        self.assertEqual(len(self.cols), 13)
 
 
 if __name__ == "__main__":
