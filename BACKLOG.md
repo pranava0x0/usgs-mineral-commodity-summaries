@@ -440,7 +440,8 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
       labelled "mine"/"refinery" row. Could be addressed by treating
       "Pig iron production" + "Raw steel production" as fallback mine rows
       for iron-and-steel (sum). Sub-aliases already have correct values.
-- [ ] **Kyrgyzstan missing from spec** — real country (USGS reports on it,
-      e.g. for Antimony imports) but absent from the 203-country
-      canonical list. Currently dropped silently. Optional: extend the
-      spec to 204 entries, or surface the dropped rows somewhere.
+- [x] **Kyrgyzstan missing from spec** — fixed by extending the canonical
+      list to 204 entries (Kyrgyzstan inserted alphabetically between
+      Kosovo and Liechtenstein in the Europe block). Captures 700 t
+      antimony mine production + 260,000 t reserves that were previously
+      dropped. CSV column count grew 1,032 → 1,037.

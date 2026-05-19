@@ -132,8 +132,12 @@ class CsvLongFormatTests(unittest.TestCase):
         self.rows = _read(cols, rows)
 
     def test_total_column_count(self) -> None:
-        """8 identity + 9 summary + 5 × 203 country = 1,032 columns."""
-        self.assertEqual(len(self.cols), 1032)
+        """8 identity + 9 summary + 5 × 204 country = 1,037 columns.
+
+        (Spec was 203 countries; Kyrgyzstan added back — absent from the
+        xlsx but USGS reports antimony production + reserves for it.)
+        """
+        self.assertEqual(len(self.cols), 1037)
 
     def test_first_columns_are_identity_then_summary(self) -> None:
         # Identity (8)
@@ -143,11 +147,12 @@ class CsvLongFormatTests(unittest.TestCase):
 
     def test_country_blocks_appear_in_expected_order(self) -> None:
         slugs = canonical_slugs()
+        n = len(slugs)                # 204 after Kyrgyzstan add-back
         # Block 1 — Import Sources
         self.assertEqual(self.cols[17], f"{slugs[0]}__imports_share_pct")
-        self.assertEqual(self.cols[17 + 202], f"{slugs[202]}__imports_share_pct")
+        self.assertEqual(self.cols[17 + n - 1], f"{slugs[-1]}__imports_share_pct")
         # Block 2 — Mine Production
-        self.assertEqual(self.cols[220], f"{slugs[0]}__mine_production")
+        self.assertEqual(self.cols[17 + n], f"{slugs[0]}__mine_production")
         # Block 5 — Reserves (last)
         self.assertEqual(self.cols[-1], f"{slugs[-1]}__reserves")
 
@@ -194,6 +199,14 @@ class CsvLongFormatTests(unittest.TestCase):
         # Bismuth's Germany (13%) rolls up
         bism = next(r for r in self.rows if r["name"] == "Bismuth")
         self.assertEqual(bism["european_union__imports_share_pct"], "13")
+
+    def test_kyrgyzstan_present(self) -> None:
+        """Kyrgyzstan was absent from the user-provided spec xlsx but USGS
+        reports it as a material antimony producer (700 t mine + 260,000 t
+        reserves). We added it back after-the-fact; the columns must exist."""
+        self.assertIn("kyrgyzstan__mine_production", self.cols)
+        self.assertIn("kyrgyzstan__reserves", self.cols)
+        self.assertIn("kyrgyzstan__imports_share_pct", self.cols)
 
     def test_non_country_labels_dropped(self) -> None:
         """`other`/`Other countries`/`World total (rounded)` USGS rows are

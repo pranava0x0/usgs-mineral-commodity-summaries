@@ -4,7 +4,11 @@ Source: `public column information.xlsx` (user-provided spec, May 2026).
 The CSV exporter writes one country column per entry in
 `CANONICAL_COUNTRIES` for each of the 5 country blocks (Import Sources,
 Mine Production, Refinery Production, Capacity, Reserves), totalling
-5 × 203 = 1,015 country columns.
+5 × 204 = 1,020 country columns. (Spec was 203; Kyrgyzstan added back
+after-the-fact — it was absent from the spec but USGS reports it as a
+material antimony producer with 700 t mine production + 260,000 t
+reserves. Inserted alphabetically between Kosovo and Liechtenstein in
+the Europe block.)
 
 Two countries — China and Syria — appear twice in the spec (once at
 their "priority" position, once in their regional alphabetical block).
@@ -220,6 +224,7 @@ CANONICAL_COUNTRIES: list[str] = [
     "Iceland",
     "Kazakhstan",
     "Kosovo",
+    "Kyrgyzstan",
     "Liechtenstein",
     "Macedonia",
     "Moldova",
@@ -239,7 +244,7 @@ CANONICAL_COUNTRIES: list[str] = [
     "Vatican City",
 ]
 
-assert len(CANONICAL_COUNTRIES) == 203, f"Expected 203 entries, got {len(CANONICAL_COUNTRIES)}"
+assert len(CANONICAL_COUNTRIES) == 204, f"Expected 204 entries, got {len(CANONICAL_COUNTRIES)}"
 
 
 # Slug rules:
