@@ -107,6 +107,35 @@ function showDetail(el) {
     tr.setAttribute('aria-selected', tr.dataset.slug === el.slug ? 'true' : 'false');
   });
 
+  // The detail panel used to be one tall scroll: salient stats + imports +
+  // world production + 5 prose blocks + footnotes + 2 huge PNG screenshots,
+  // roughly five viewport heights per element. Now it's a tab strip — the
+  // header / units / price-basis stay always-visible at the top, then a
+  // single tab's content renders below. Tabs are buttons (not anchors) so
+  // they don't pollute the browser history with one entry per click.
+  const tabs = [
+    { id: 'stats',   label: 'Stats',           render: () => salientBlock(el) },
+    { id: 'imports', label: 'Import sources',  render: () => importSourcesBlock(el) },
+    { id: 'world',   label: 'World production', render: () => worldProductionBlock(el) },
+    { id: 'notes',   label: 'Notes',           render: () => proseBlock(el) + footnotesBlock(el) },
+    { id: 'source',  label: 'Source PDF',      render: () => screenshotsBlock(el) },
+  ];
+
+  const tabNav = tabs.map((t, i) => `
+    <button type="button" class="tab-btn" role="tab" id="tab-${t.id}"
+            aria-controls="panel-${t.id}" aria-selected="${i === 0}"
+            tabindex="${i === 0 ? '0' : '-1'}" data-tab="${t.id}">
+      ${escapeHtml(t.label)}
+    </button>
+  `).join('');
+
+  const tabPanels = tabs.map((t, i) => `
+    <div class="tab-panel" role="tabpanel" id="panel-${t.id}"
+         aria-labelledby="tab-${t.id}" ${i === 0 ? '' : 'hidden'}>
+      ${t.render()}
+    </div>
+  `).join('');
+
   const card = document.createElement('div');
   card.className = 'detail-card';
   card.innerHTML = `
@@ -123,15 +152,34 @@ function showDetail(el) {
           el.price_footnote_text ? ` — <em>${escapeHtml(el.price_footnote_text)}</em>` : ''
         }</p>`
       : ''}
-    <div class="detail-grid">
-      ${salientBlock(el)}
-      ${importSourcesBlock(el)}
-      ${worldProductionBlock(el)}
-    </div>
-    ${proseBlock(el)}
-    ${footnotesBlock(el)}
-    ${screenshotsBlock(el)}
+    <nav class="tab-strip" role="tablist" aria-label="Detail sections">${tabNav}</nav>
+    <div class="tab-panels">${tabPanels}</div>
   `;
+
+  // Tab switching: click + keyboard (Arrow keys + Home/End per ARIA APG).
+  const tabBtns = card.querySelectorAll('[role="tab"]');
+  const panels = card.querySelectorAll('[role="tabpanel"]');
+  const activate = (id) => {
+    tabBtns.forEach(btn => {
+      const on = btn.dataset.tab === id;
+      btn.setAttribute('aria-selected', on ? 'true' : 'false');
+      btn.tabIndex = on ? 0 : -1;
+    });
+    panels.forEach(p => { p.hidden = p.id !== `panel-${id}`; });
+  };
+  tabBtns.forEach((btn, idx) => {
+    btn.addEventListener('click', () => activate(btn.dataset.tab));
+    btn.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const next = tabBtns[(idx + dir + tabBtns.length) % tabBtns.length];
+        next.focus();
+        activate(next.dataset.tab);
+      } else if (e.key === 'Home') { e.preventDefault(); tabBtns[0].focus(); activate(tabBtns[0].dataset.tab); }
+      else if (e.key === 'End') { e.preventDefault(); const last = tabBtns[tabBtns.length - 1]; last.focus(); activate(last.dataset.tab); }
+    });
+  });
 
   const host = $('#detail-body');
   host.innerHTML = '';
@@ -300,10 +348,16 @@ function screenshotsBlock(el) {
   const figs = [];
   for (let p = 1; p <= el.pdf_page_count; p++) {
     const src = `${AUDIT_BASE}/${el.slug}/page-${String(p).padStart(2, '0')}.png`;
+    // Wrap the screenshot in an anchor that opens the PNG full-size in a
+    // new tab. The CSS caps the inline render at 640px tall to keep the
+    // Source-PDF tab compact; click-through is for "I want to read this
+    // footnote".
     figs.push(`
       <figure>
         <figcaption>${el.name} — MCS page ${p} (rendered from source PDF)</figcaption>
-        <img loading="lazy" src="${src}" alt="${el.name} MCS sheet page ${p} (verbatim from USGS source PDF)" />
+        <a href="${src}" target="_blank" rel="noopener" title="Open full-size PNG in a new tab">
+          <img loading="lazy" src="${src}" alt="${el.name} MCS sheet page ${p} (verbatim from USGS source PDF)" />
+        </a>
       </figure>
     `);
   }
