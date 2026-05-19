@@ -1,62 +1,48 @@
-"""Wide-table CSV export.
+"""Wide-table CSV export — public spec, May 2026.
 
-One row per (element/alias, import-source category). Multi-category sheets
-like antimony emit one row per category (Ore and concentrates / Oxide /
-Unwrought metal and powder / Total metal and oxide); single-category sheets
-like bismuth emit one row with `import_category=""`. The UX viewer still
-shows one detail panel per element (it reads the JSON, which keeps one record
-per element).
+Shape: ~140 rows × ~1,032 cols. One row per (element/alias, import-source
+category). Multi-category sheets like antimony emit one row per category;
+single-category sheets like bismuth emit one row with `import_category=""`.
 
-Columns are grouped into sections:
+Column layout (left to right):
 
-  identity              name, kind, source_url, units_note,
-                        price_unit_note, import_sources_range,
-                        world_production_label, import_category
-                        (slug, symbol, parent_slug, edition, edition_date,
-                        captured_at, latest_year, pdf_sha256, and
-                        pdf_page_count are intentionally omitted from the
-                        CSV — they're still in elements.json for anyone
-                        who needs the traceback metadata.)
-  latest-year summary   mined_production_latest, primary_smelting_latest,
-                        secondary_smelting_latest, imports_total_latest,
-                        exports_total_latest, apparent_consumption_latest,
-                        price_usd_per_pound_latest, net_import_reliance_pct_latest
-  per-form salient      <section>__<label>__<year>  (when section ≠ label)
-                        <label>__<year>             (when section == label)
-                        — e.g. antimony's "Imports - Oxide - 2025e" round-trips
-                        as `imports_for_consumption__oxide__2025e`. The earlier
-                        `salient__` namespace prefix was dropped as noise.
-  per-form price        price__<form>__<year>
+  IDENTITY (8)
+    name, kind, source_url, units_note, price_unit_note,
+    import_sources_range, world_production_label, import_category
 
-  --- per-country columns (filled across all elements with N/A for missing) ---
-  imports share         <country>_imports_share_pct
-                        Each row's share reflects the row's `import_category`
-                        only. Countries not in that category render as "N/A".
-                        The country axis is the alphabetical union across
-                        every category of every element.
-  production            <country>_production_<year>
-                        Years come straight from the PDF's world-production
-                        table sub-header (e.g. "2024" / "2025" for MCS 2026).
-                        Elements with different year pairs get their own
-                        column set; the other rows fall to N/A. Duplicated
-                        across an element's category rows because USGS does
-                        not categorise world production.
-  capacity              <country>_capacity
-  reserves              <country>_reserves
+  SUMMARY (9)
+    usgs_2025_total_mined_production
+    usgs_2025_total_primary_smelting
+    usgs_2025_total_secondary_smelting
+    imports_for_consumption_total
+    exports_total
+    consumption_apparent
+    price_metal_average_dollars_per_pound
+    net_import_reliance_pct
+    government_stockpile_fy2025_potential_acquisitions
 
-Mixed-type cells. Every numeric column is ONE column that holds either a
-number or one of USGS's five non-numeric markers — W (withheld), E (net
-exporter), >N / <N (approximation), or NA — verbatim. There are no
-companion *_sentinel or *_raw columns. Pandas users who want pure numerics
-call `pd.to_numeric(col, errors="coerce")` to turn the sentinels into NaN.
+  IMPORT SOURCES (203)   — per-country % share for this row's category
+  MINE PRODUCTION (203)  — latest-year production value where the element
+                           belongs to the Mine Production block
+  REFINERY PRODUCTION (203) — same, for Refinery-block elements
+  CAPACITY (203)         — refinery / production capacity where reported
+  RESERVES (203)         — per-country reserves
 
-The country axis sorts "World *" aggregate rows to the end of each section.
-Cells where the country isn't tabulated for a given element are filled with
-"N/A" so the CSV is rectangular and pandas-friendly. Em-dash (zero) keeps
-"0"; USGS-reported "NA" also renders as "N/A".
+Block placement per element is hardcoded in `ELEMENT_PRODUCTION_BLOCK`
+(see comment there for the why). Elements with no world-production table
+(scandium, abrasives, titanium) leave all country blocks at N/A but still
+have a row so identity + summary columns are visible.
 
-That's many columns — explicitly OK'd. Expect 1000+ when run on the full
-registry.
+Country mapping: USGS names → canonical 203-country list via
+`src.countries.map_country`. EU member states roll up into "European
+Union". The 4 priority entries (Canada, China, Mexico, European Union)
+sit at the head of every block, then regional alphabetical to Vatican City.
+
+Mixed-type cells. Each numeric cell carries either a number or one of
+USGS's non-numeric markers (W/E/>N/<N/NA) verbatim. Pandas users coerce
+with `pd.to_numeric(col, errors="coerce")` to turn sentinels into NaN.
+Cells where the country is missing from the element's table render as
+"N/A" so the CSV stays rectangular.
 """
 
 from __future__ import annotations
@@ -67,9 +53,55 @@ import logging
 import re
 from typing import Iterable, Optional
 
-from .models import ElementRecord, ImportSourceCategory, YEAR_COLUMNS
+from .countries import CANONICAL_COUNTRIES, canonical_slugs, map_country
+from .models import ElementRecord, ImportSourceCategory
 
 log = logging.getLogger(__name__)
+
+
+# --- Block placement --------------------------------------------------------
+#
+# Which country block this element's world_production fills. Hardcoded
+# per element because USGS uses varying section titles ("World Production",
+# "Mine Production and Reserves", "Refinery Production and Capacity") that
+# don't carry a clean machine-readable mine-vs-refinery signal.
+#
+#   "mine"        Mine Production block; world_production[*].production_latest_year
+#                 fills the country cell. Reserves block fills from `.reserves`.
+#   "refinery"    Refinery Production block; same field, different block.
+#                 Capacity block fills from `.capacity`.
+#   None          Element has no per-country world table (titanium, scandium,
+#                 abrasives). All country blocks fall to N/A for these.
+#
+# Per user (2026-05-19):
+#   - Iron and Steel pig iron & raw steel both → Refinery Production (PDF
+#     label is just "World Production"; user override placed both in Refinery).
+#   - Gallium → Refinery (USGS calls it "Primary Low-Purity Production",
+#     a smelter-stage byproduct).
+#   - Bismuth → Refinery + Capacity (capacity all-NA in the source).
+#   - Indium / Tellurium → Refinery + Capacity.
+#   - Germanium → Refinery (prose-only — no world table).
+ELEMENT_PRODUCTION_BLOCK: dict[str, str | None] = {
+    # Mine + Reserves
+    "antimony": "mine", "aluminum": "mine", "chromium": "mine", "cobalt": "mine",
+    "copper": "mine", "diamond": "mine", "graphite": "mine", "lithium": "mine",
+    "magnesium": "mine", "manganese": "mine", "molybdenum": "mine", "nickel": "mine",
+    "niobium": "mine", "rare-earths": "mine", "silver": "mine", "tantalum": "mine",
+    "tin": "mine", "tungsten": "mine", "vanadium": "mine", "zinc": "mine",
+    "zirconium-and-hafnium": "mine",
+    # Refinery + Capacity
+    "bismuth": "refinery", "indium": "refinery", "tellurium": "refinery",
+    "germanium": "refinery", "gallium": "refinery",
+    "iron-and-steel": "refinery",
+    # Grouped parent — reserves only (per BACKLOG); PGM aliases handled by alias inheritance.
+    "platinum-group-metals": "mine",
+    # No per-country world table
+    "rhenium": None,
+    "silicon": None,
+    "titanium": None,
+    "abrasives": None,
+    "scandium": None,
+}
 
 
 _NON_ALNUM = re.compile(r"[^a-z0-9]+")
@@ -80,12 +112,6 @@ def _slugify(s: str) -> str:
 
 
 def _val(v: Optional[float]) -> str:
-    """Numeric formatter — 'N/A' for None.
-
-    Per user instruction: never leave a missing value blank. USGS-reported
-    em-dash "—" is converted to 0.0 upstream (USGS convention for "produced
-    zero") and renders as "0" here. Only genuinely missing values become N/A.
-    """
     if v is None:
         return "N/A"
     if isinstance(v, float) and v.is_integer():
@@ -94,112 +120,54 @@ def _val(v: Optional[float]) -> str:
 
 
 def _text(v: Optional[str]) -> str:
-    """Text formatter — 'N/A' for None or empty.
-
-    Used for identity/text fields (symbol, parent_slug, price_unit_note, etc.).
-    Empty source values are treated as missing.
-    """
     if v is None or v == "":
         return "N/A"
     return str(v)
 
 
-def _country_val(v: Optional[float]) -> str:
-    """Numeric formatter for country cells — 'N/A' for None.
-
-    Every country column is filled for every element so the CSV is rectangular;
-    'N/A' covers both 'USGS reported NA' and 'country not tabulated for this
-    element'. Em-dash (zero) is preserved as '0' because USGS uses em-dash to
-    mean "produced zero", not "unknown".
-    """
-    if v is None:
-        return "N/A"
-    if isinstance(v, float) and v.is_integer():
-        return str(int(v))
-    return f"{v}"
-
-
 def _cell(v: Optional[float], raw: Optional[str]) -> str:
-    """Mixed-type cell formatter — merges numeric and sentinel into one column.
-
-    USGS uses five non-numeric markers that lose meaning if we drop them in
-    favour of a clean float:
-
-        W    Withheld (company-confidential)
-        E    Net exporter (only seen in NIR cells)
-        >N   Greater than N (approximation)
-        <N   Less than N
-        NA   Not available
-
-    When the raw token is one of those, we surface it verbatim — that's the
-    most faithful representation. Otherwise we use the numeric value (with
-    em-dash → 0 as USGS convention). Genuinely missing data is 'N/A'.
-
-    Single-column-per-cell schema: a CSV consumer that wants pure numerics
-    runs `pd.to_numeric(col, errors="coerce")` to turn sentinels into NaN.
-    """
+    """Mixed-type formatter — verbatim USGS sentinel if present, else numeric."""
     if raw and (raw in ("W", "E", "NA") or raw.startswith((">", "<"))):
         return raw
     return _val(v)
 
 
-def _sorted_countries(countries: Iterable[str]) -> list[str]:
-    """Alphabetical ordering; 'World *' aggregates pushed to the end.
+# --- Identity / summary column lists ---------------------------------------
 
-    USGS rows like 'World total (rounded)' aren't real countries but DO carry
-    useful summary numbers. Keeping them at the tail of the country axis means
-    the alphabetical block reads naturally and totals are easy to find.
-    """
-    primary = sorted(c for c in countries if not c.lower().startswith("world"))
-    aggregates = sorted(c for c in countries if c.lower().startswith("world"))
-    return primary + aggregates
+IDENTITY_COLUMNS: tuple[str, ...] = (
+    "name", "kind", "source_url",
+    "units_note", "price_unit_note",
+    "import_sources_range", "world_production_label",
+    "import_category",
+)
+
+SUMMARY_COLUMNS: tuple[str, ...] = (
+    "usgs_2025_total_mined_production",
+    "usgs_2025_total_primary_smelting",
+    "usgs_2025_total_secondary_smelting",
+    "imports_for_consumption_total",
+    "exports_total",
+    "consumption_apparent",
+    "price_metal_average_dollars_per_pound",
+    "net_import_reliance_pct",
+    "government_stockpile_fy2025_potential_acquisitions",
+)
 
 
-def _collect_country_axes(records: list[ElementRecord]) -> dict:
-    """Pre-pass: build the union of countries for each section.
+def _country_column_slugs() -> list[str]:
+    """One slug per CANONICAL_COUNTRIES entry. Duplicates (China, Syria)
+    get a `__2` suffix on the second occurrence so dict keys stay unique."""
+    return canonical_slugs()
 
-    Run before column registration so per-country columns are stable: every
-    element gets the same imports / world-prod / reserves columns in the same
-    order, regardless of which element appears first in the input.
 
-    Imports country axis is flat (no category dimension) — the long-format
-    rows carry the category in their own `import_category` column.
-    """
-    imports_countries: set[str] = set()
-    world_countries: set[str] = set()
-    reserves_countries: set[str] = set()
-
-    for rec in records:
-        for cat in rec.import_sources_by_category:
-            for cs in cat.countries:
-                imports_countries.add(cs.country)
-        # bismuth-style flat list is normally also in by_category as category=None,
-        # but include it as a backup in case the parser populated only the flat list.
-        for cs in rec.import_sources_flat:
-            imports_countries.add(cs.country)
-        for wp in rec.world_production:
-            world_countries.add(wp.country)
-            if wp.reserves is not None or wp.reserves_raw not in (None, ""):
-                reserves_countries.add(wp.country)
-
-    return {
-        "imports_countries": _sorted_countries(imports_countries),
-        "world_countries": _sorted_countries(world_countries),
-        "reserves_countries": _sorted_countries(reserves_countries),
-    }
+def _block_columns(block_suffix: str) -> list[str]:
+    return [f"{c}__{block_suffix}" for c in _country_column_slugs()]
 
 
 def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory]]:
-    """Return the list of import-source categories that should each become a CSV row.
-
-    - Multi-category sheets (antimony, molybdenum, abrasives, …) → one entry
-      per `ImportSourceCategory`.
-    - Single-category sheets (bismuth) → one entry with `category=None`.
-    - Sheets with only a flat list and no `by_category` → wrap the flat list
-      into a synthetic category entry.
-    - Sheets with no import sources at all → one `None` entry so the element
-      still appears in the CSV.
-    """
+    """One CSV row per import-source category — bismuth-style single-list
+    sheets emit one row with `category=None`; sheets with no import data
+    emit one bare row so identity/summary cells are still visible."""
     if rec.import_sources_by_category:
         return list(rec.import_sources_by_category)
     if rec.import_sources_flat:
@@ -207,62 +175,115 @@ def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory
     return [None]
 
 
-def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, str]]]:
-    """Build (header columns in order, list of row dicts).
+def _aggregate_country_values(
+    items: Iterable[tuple[str, Optional[float], Optional[str]]],
+) -> dict[str, tuple[Optional[float], Optional[str]]]:
+    """Map USGS country rows to canonical names, summing values where the
+    canonical entry collapses multiple USGS rows (e.g. EU rollup combines
+    Germany + France + Belgium).
 
-    Emits one row per (element, import-source category). All identity / salient /
-    price / world-production columns are duplicated across an element's rows;
-    only the `imports__<country>` columns vary, reflecting the row's category.
+    Sentinel handling: when EVERY contributing USGS row carries the same
+    sentinel (W / E / NA), surface that sentinel verbatim — summing
+    sentinels is meaningless. If contributors mix numeric + sentinels, the
+    numeric portion wins (sentinel is dropped); this errs toward "show
+    some number" rather than "hide the only data we have".
     """
-    columns: list[str] = []
-    seen: set[str] = set()
+    out: dict[str, tuple[Optional[float], Optional[str]]] = {}
+    seen_sentinels: dict[str, set[str]] = {}
+    seen_numeric: dict[str, bool] = {}
+
+    for usgs_name, value, raw in items:
+        canonical = map_country(usgs_name)
+        if canonical is None:
+            continue
+        is_sentinel = raw and (
+            raw in ("W", "E", "NA") or raw.startswith((">", "<"))
+        )
+        if is_sentinel:
+            seen_sentinels.setdefault(canonical, set()).add(raw)
+            if canonical not in seen_numeric:
+                seen_numeric[canonical] = False
+                out.setdefault(canonical, (None, raw))
+        else:
+            # numeric
+            prev_v, prev_raw = out.get(canonical, (None, None))
+            new_v = (prev_v or 0.0) + (value or 0.0) if value is not None else prev_v
+            out[canonical] = (new_v, None)
+            seen_numeric[canonical] = True
+
+    # If a canonical entry saw ONLY sentinels (no numeric), keep the sentinel
+    # token in the raw slot. The caller's formatter renders it verbatim.
+    for canonical in list(out.keys()):
+        if not seen_numeric.get(canonical) and seen_sentinels.get(canonical):
+            tokens = seen_sentinels[canonical]
+            # One sentinel: surface it; multiple distinct: leave a generic NA.
+            tok = next(iter(tokens)) if len(tokens) == 1 else "NA"
+            out[canonical] = (None, tok)
+
+    return out
+
+
+def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, str]]]:
+    """Build (header columns in order, list of row dicts)."""
+    # Pre-compute the country axis once — it's fixed by the spec.
+    country_slugs = _country_column_slugs()
+    imports_cols = _block_columns("imports_share_pct")
+    mine_cols = _block_columns("mine_production")
+    refinery_cols = _block_columns("refinery_production")
+    capacity_cols = _block_columns("capacity")
+    reserves_cols = _block_columns("reserves")
+
+    columns: list[str] = (
+        list(IDENTITY_COLUMNS)
+        + list(SUMMARY_COLUMNS)
+        + imports_cols
+        + mine_cols
+        + refinery_cols
+        + capacity_cols
+        + reserves_cols
+    )
+
     rows: list[dict[str, str]] = []
-    # Parallel to `rows`: (record, category) for the country-fill pass.
-    row_meta: list[tuple[ElementRecord, Optional[ImportSourceCategory]]] = []
 
-    def col(name: str) -> str:
-        """Register a column on first sight; preserves discovery order."""
-        if name not in seen:
-            columns.append(name)
-            seen.add(name)
-        return name
-
-    # Stable identity columns first so the CSV is readable at a glance.
-    # `slug`, `symbol`, `parent_slug`, `edition_date`, `pdf_sha256`, and
-    # `pdf_page_count` were removed in favour of a leaner header — they
-    # remain in `elements.json` for anyone who needs them, but the CSV is
-    # tuned for human/Sheets consumers who already get the same identity
-    # from `name` + `kind` + `edition`.
-    for name in (
-        "name", "kind", "source_url",
-        "units_note", "price_unit_note",
-        "import_sources_range", "world_production_label",
-        "import_category",
-    ):
-        col(name)
-    # User-requested top-level columns. Each is a mixed-type column: if USGS
-    # printed a sentinel (W / E / >N / <N / NA) for the latest-year value,
-    # that token appears here verbatim; otherwise it's the float. No companion
-    # _sentinel columns — pandas users can `pd.to_numeric(..., errors='coerce')`
-    # to coerce sentinels to NaN.
-    for name in (
-        "mined_production_latest", "primary_smelting_latest", "secondary_smelting_latest",
-        "imports_total_latest", "exports_total_latest", "apparent_consumption_latest",
-        "price_usd_per_pound_latest", "net_import_reliance_pct_latest",
-    ):
-        col(name)
-
-    # Salient-stats + price columns are still discovered lazily during the row
-    # loop (their column space is shaped by per-element schemas, not unioned).
     for rec in records:
+        block = ELEMENT_PRODUCTION_BLOCK.get(rec.slug)
+        # Aliases inherit their parent slug's placement. The parent_slug is
+        # the registry parent (rare-earths / platinum-group-metals /
+        # iron-and-steel / etc.). REEs map to "mine" (REO content); PGM
+        # aliases inherit "mine" too. Sub-products take the parent's block.
+        if block is None and rec.parent_slug:
+            block = ELEMENT_PRODUCTION_BLOCK.get(rec.parent_slug)
+
+        # Pre-aggregate world production once per record (same across an
+        # element's category rows).
+        prod_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
+        capacity_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
+        reserves_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
+
+        if block is not None and rec.world_production:
+            prod_items = [
+                (wp.country, wp.production_latest_year, wp.production_latest_raw)
+                for wp in rec.world_production
+            ]
+            cap_items = [
+                (wp.country, wp.capacity, None)
+                for wp in rec.world_production
+            ]
+            res_items = [
+                (wp.country, wp.reserves, wp.reserves_raw)
+                for wp in rec.world_production
+            ]
+            prod_by_canonical = _aggregate_country_values(prod_items)
+            capacity_by_canonical = _aggregate_country_values(cap_items)
+            reserves_by_canonical = _aggregate_country_values(res_items)
+
         cat_rows = _category_rows_for(rec)
-        # When a record emits >1 row, disambiguate the `name` column with
-        # the import category so a single Antimony entry becomes
-        #   "Antimony (Ore and concentrates)" / "Antimony (Oxide)" / …
-        # Single-row records keep the bare name.
         annotate_name = len(cat_rows) > 1
+
         for cat in cat_rows:
             row: dict[str, str] = {}
+
+            # Identity
             if annotate_name and cat and cat.category:
                 row["name"] = f"{rec.name} ({cat.category})"
             else:
@@ -273,162 +294,96 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             row["price_unit_note"] = _text(rec.price_unit_note)
             row["import_sources_range"] = _text(rec.import_sources_range)
             row["world_production_label"] = _text(rec.world_production_label)
-            # import_category is structural — "" means "this row covers the
-            # element's only (uncategorized) import line"; not missing data.
             row["import_category"] = (cat.category if cat and cat.category else "")
 
-            # Latest-year user columns — merged value+sentinel cells.
-            # `_cell(v, raw)` returns the verbatim USGS sentinel (W / E / >N
-            # / <N / NA) when one is present, else the formatted numeric.
-            row["mined_production_latest"] = _cell(
-                rec.mined_production_latest, rec.latest_year_sentinels.get("mined_production"))
-            row["primary_smelting_latest"] = _cell(
-                rec.primary_smelting_latest, rec.latest_year_sentinels.get("primary_smelting"))
-            row["secondary_smelting_latest"] = _cell(
-                rec.secondary_smelting_latest, rec.latest_year_sentinels.get("secondary_smelting"))
-            row["imports_total_latest"] = _val(rec.imports_total_latest)
-            row["exports_total_latest"] = _val(rec.exports_total_latest)
-            row["apparent_consumption_latest"] = _cell(
-                rec.apparent_consumption_latest, rec.latest_year_sentinels.get("apparent_consumption"))
-            row["price_usd_per_pound_latest"] = _val(rec.price_usd_per_pound_latest)
-            row["net_import_reliance_pct_latest"] = _cell(
-                rec.net_import_reliance_pct_latest, rec.latest_year_sentinels.get("net_import_reliance"))
+            # Summary
+            row["usgs_2025_total_mined_production"] = _cell(
+                rec.mined_production_latest,
+                rec.latest_year_sentinels.get("mined_production"),
+            )
+            row["usgs_2025_total_primary_smelting"] = _cell(
+                rec.primary_smelting_latest,
+                rec.latest_year_sentinels.get("primary_smelting"),
+            )
+            row["usgs_2025_total_secondary_smelting"] = _cell(
+                rec.secondary_smelting_latest,
+                rec.latest_year_sentinels.get("secondary_smelting"),
+            )
+            row["imports_for_consumption_total"] = _val(rec.imports_total_latest)
+            row["exports_total"] = _val(rec.exports_total_latest)
+            row["consumption_apparent"] = _cell(
+                rec.apparent_consumption_latest,
+                rec.latest_year_sentinels.get("apparent_consumption"),
+            )
+            row["price_metal_average_dollars_per_pound"] = _val(rec.price_usd_per_pound_latest)
+            row["net_import_reliance_pct"] = _cell(
+                rec.net_import_reliance_pct_latest,
+                rec.latest_year_sentinels.get("net_import_reliance"),
+            )
+            row["government_stockpile_fy2025_potential_acquisitions"] = _val(
+                rec.stockpile_fy2025_potential_acquisitions
+            )
 
-            # Per-year, per-row salient stats. Column name format:
-            #   <section>__<label>__<year>   (when section and label differ)
-            #   <label>__<year>              (when section == label, e.g.
-            #                                 "Consumption, apparent" rows)
-            # USGS sentinel tokens (W / E / >N / <N / NA) come through verbatim;
-            # everything else is numeric. The earlier `salient__` namespace
-            # prefix was stripped — it added noise without disambiguation
-            # (price columns keep `price__` because they shadow plain commodity
-            # rows when forms collide with section labels).
-            for yr in YEAR_COLUMNS:
-                for rec_row in rec.salient_stats:
-                    sec = _slugify(rec_row.section or "")
-                    lbl = _slugify(rec_row.label)
-                    if sec and sec != lbl:
-                        col_name = col(f"{sec}__{lbl}__{yr}")
-                    else:
-                        col_name = col(f"{lbl}__{yr}")
-                    row[col_name] = _cell(
-                        rec_row.values.get(yr), (rec_row.raw_values or {}).get(yr))
+            # Default every country cell to N/A across all 5 blocks.
+            for cname in imports_cols:
+                row[cname] = "N/A"
+            for cname in mine_cols:
+                row[cname] = "N/A"
+            for cname in refinery_cols:
+                row[cname] = "N/A"
+            for cname in capacity_cols:
+                row[cname] = "N/A"
+            for cname in reserves_cols:
+                row[cname] = "N/A"
 
-            # Price quotes — same merged-cell shape.
-            for yr in YEAR_COLUMNS:
-                for pq in rec.price_quotes:
-                    form = _slugify(pq.form)
-                    col_name = col(f"price__{form}__{yr}")
-                    row[col_name] = _cell(
-                        pq.values.get(yr), (pq.raw_values or {}).get(yr))
+            # Import Sources — varies per row (one category each).
+            if cat is not None:
+                imports_agg = _aggregate_country_values(
+                    (cs.country, cs.share_pct, None) for cs in cat.countries
+                )
+                for canonical, (v, raw) in imports_agg.items():
+                    # Multiple canonical entries can share a single name (China
+                    # at priority position + China in Asia block). Write the
+                    # value to every column whose canonical name matches.
+                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                        if name == canonical:
+                            row[f"{slug}__imports_share_pct"] = _cell(v, raw)
+
+            # Production / Capacity / Reserves — same across an element's rows.
+            if block == "mine":
+                for canonical, (v, raw) in prod_by_canonical.items():
+                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                        if name == canonical:
+                            row[f"{slug}__mine_production"] = _cell(v, raw)
+            elif block == "refinery":
+                for canonical, (v, raw) in prod_by_canonical.items():
+                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                        if name == canonical:
+                            row[f"{slug}__refinery_production"] = _cell(v, raw)
+                for canonical, (v, raw) in capacity_by_canonical.items():
+                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                        if name == canonical:
+                            row[f"{slug}__capacity"] = _cell(v, raw)
+
+            # Reserves are populated for any element whose USGS table has
+            # them — independent of the mine/refinery placement decision.
+            for canonical, (v, raw) in reserves_by_canonical.items():
+                for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                    if name == canonical:
+                        row[f"{slug}__reserves"] = _cell(v, raw)
 
             rows.append(row)
-            row_meta.append((rec, cat))
-
-    # ---- Country sections — registered after a pre-pass so columns are stable
-    # across the full record set, and every cell is filled (N/A if absent) so
-    # the CSV is rectangular for pandas / sheets consumers.
-    axes = _collect_country_axes(records)
-
-    imports_col_names: dict[str, str] = {}
-    for country in axes["imports_countries"]:
-        imports_col_names[country] = col(f"{_slugify(country)}_imports_share_pct")
-
-    # Production columns are keyed by (country, year), so two elements with
-    # different year pairs (e.g. "2024"/"2025" vs "2023"/"2024") get separate
-    # column sets and neither stomps on the other. Years come from each
-    # element's `world_production_year_{prev,latest}` (captured verbatim from
-    # the PDF's year-sub-header band). Elements missing the headers (rare —
-    # currently only germanium and scandium, neither of which has world rows)
-    # fall back to "prev"/"latest" so the data still lands somewhere.
-    # Maps: (country, year_label) -> column name
-    world_prev_cols: dict[tuple[str, str], str] = {}
-    world_latest_cols: dict[tuple[str, str], str] = {}
-    world_capacity_cols: dict[str, str] = {}
-
-    def _years_for(rec: ElementRecord) -> tuple[str, str]:
-        yp = rec.world_production_year_prev or "prev"
-        yl = rec.world_production_year_latest or "latest"
-        return yp, yl
-
-    for rec in records:
-        yp, yl = _years_for(rec)
-        for wp in rec.world_production:
-            c = wp.country
-            c_slug = _slugify(c)
-            if (c, yp) not in world_prev_cols:
-                world_prev_cols[(c, yp)] = col(f"{c_slug}_production_{yp}")
-            if (c, yl) not in world_latest_cols:
-                world_latest_cols[(c, yl)] = col(f"{c_slug}_production_{yl}")
-            if c not in world_capacity_cols:
-                world_capacity_cols[c] = col(f"{c_slug}_capacity")
-
-    reserves_cols: dict[str, str] = {}
-    for country in axes["reserves_countries"]:
-        c_slug = _slugify(country)
-        reserves_cols[country] = col(f"{c_slug}_reserves")
-
-    # Second pass to fill the country cells. Imports vary per row (one category
-    # each); world production and reserves are duplicated across an element's
-    # category rows because they aren't categorized by USGS.
-    for (rec, cat), row in zip(row_meta, rows):
-        # Default every country cell to N/A; values overwrite as we find them.
-        for cname in imports_col_names.values():
-            row[cname] = "N/A"
-        for cname in world_prev_cols.values():
-            row[cname] = "N/A"
-        for cname in world_latest_cols.values():
-            row[cname] = "N/A"
-        for cname in world_capacity_cols.values():
-            row[cname] = "N/A"
-        for cname in reserves_cols.values():
-            row[cname] = "N/A"
-
-        # Imports — only the row's own category fills cells.
-        if cat is not None:
-            for cs in cat.countries:
-                cname = imports_col_names.get(cs.country)
-                if cname is not None:
-                    row[cname] = _country_val(cs.share_pct)
-
-        # World production — full table on every row of an element. Each cell
-        # is mixed-type: USGS sentinel (W / E / >N etc.) if present, else
-        # the formatted numeric.
-        yp, yl = _years_for(rec)
-        for wp in rec.world_production:
-            country = wp.country
-            prev_key = (country, yp)
-            latest_key = (country, yl)
-            if prev_key in world_prev_cols:
-                row[world_prev_cols[prev_key]] = _cell(
-                    wp.production_prev_year, wp.production_prev_raw)
-            if latest_key in world_latest_cols:
-                row[world_latest_cols[latest_key]] = _cell(
-                    wp.production_latest_year, wp.production_latest_raw)
-            if country in world_capacity_cols:
-                row[world_capacity_cols[country]] = _country_val(wp.capacity)
-            if country in reserves_cols:
-                row[reserves_cols[country]] = _cell(wp.reserves, wp.reserves_raw)
 
     return columns, rows
 
 
 def write_csv(records: list[ElementRecord], out_path) -> None:
-    """Write CSV with grouped columns; country cells are filled with N/A
-    when the country isn't in this element's USGS table.
-    """
     columns, rows = build_rows(records)
     out_path.write_text(_render(columns, rows), encoding="utf-8")
     log.info("wrote csv -> %s (%d rows × %d cols)", out_path, len(rows), len(columns))
 
 
 def _render(columns: list[str], rows: list[dict[str, str]]) -> str:
-    """Render with 'N/A' as the default for any column we didn't explicitly fill.
-
-    Salient-stats and price columns are discovered lazily during the row loop —
-    any element whose schema lacks that column falls to this default. Per the
-    user's instruction (never blank, never fake), missing data renders as N/A.
-    """
     buf = io.StringIO()
     writer = csv.DictWriter(buf, fieldnames=columns, extrasaction="ignore")
     writer.writeheader()

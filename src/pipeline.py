@@ -26,7 +26,14 @@ import sys
 from pathlib import Path
 
 from . import audit, config, csv_export, parser
-from .models import ElementBundle, ElementRecord, PriceQuote, YearSeries, YEAR_COLUMNS
+from .models import (
+    ElementBundle,
+    ElementRecord,
+    PriceQuote,
+    WorldProductionRow,
+    YearSeries,
+    YEAR_COLUMNS,
+)
 
 log = logging.getLogger(__name__)
 
@@ -158,7 +165,66 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
             rec.price_unit_note = None
             rec.price_quotes = []
             rec.salient_stats = []
-    # grouped + sub_product: inherit parent verbatim (no extra work).
+
+    elif alias.kind == "grouped" and alias.parent_slug == "platinum-group-metals":
+        # PGM alias. When `parent_filter` matches a sub-metal name captured
+        # by the parser (Palladium / Platinum), rewrite world_production so
+        # `production_latest_year` carries that metal's per-country value
+        # AND filter import_sources_by_category to just that metal's row.
+        # The other PGM aliases (Ir, Os, Rh, Ru) blank world_production and
+        # import sources entirely because USGS doesn't break those out —
+        # leaving the parent's data would falsely attribute Pd / Pt
+        # numbers to other PGMs.
+        if alias.parent_filter:
+            metal = alias.parent_filter
+            new_rows: list[WorldProductionRow] = []
+            for wp in parent.world_production:
+                v = wp.sub_metal_production_latest.get(metal)
+                # Construct a fresh row; preserve country, swap latest-year
+                # production to the chosen metal.
+                new_rows.append(WorldProductionRow(
+                    country=wp.country,
+                    production_prev_year=None,
+                    production_latest_year=v,
+                    capacity=None,
+                    reserves=None,            # PGM reserves are group-level
+                    production_prev_raw=None,
+                    production_latest_raw=None,
+                    reserves_raw=None,
+                    note=wp.note,
+                    sub_metal_production_latest={},
+                ))
+            rec.world_production = new_rows
+            # Filter import sources to this metal's category. If there's
+            # no matching category (e.g. heavy PGM that USGS doesn't list
+            # imports for), blank the list.
+            rec.import_sources_by_category = [
+                c for c in parent.import_sources_by_category
+                if c.category and c.category.strip().lower() == metal.lower()
+            ]
+            rec.import_sources_flat = []
+        else:
+            # Iridium / Osmium / Rhodium / Ruthenium — no per-metal data.
+            rec.world_production = []
+            rec.import_sources_by_category = []
+            rec.import_sources_flat = []
+
+    elif alias.kind == "sub_product" and alias.parent_filter:
+        # Iron-and-steel sub-products (Pig iron / Raw steel). The parent
+        # salient_stats list has separate "<form> production" rows. Replace
+        # the alias's summary `mined_production_latest` with the chosen
+        # row's value. World production stays inherited verbatim (the PDF
+        # doesn't split it by sub-product).
+        pat = re.compile(alias.parent_filter, re.IGNORECASE)
+        for row in parent.salient_stats:
+            if pat.search(row.label):
+                v = row.values.get(parent.latest_year)
+                rec.mined_production_latest = v
+                rec.primary_smelting_latest = v
+                break
+
+    # grouped (without parent_filter) + sub_product (without parent_filter):
+    # inherit parent verbatim (no extra work).
     return rec
 
 

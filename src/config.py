@@ -283,16 +283,57 @@ ALIASES: dict[str, Element] = {
     "yttrium": Element(slug="yttrium", name="Yttrium", symbol="Y",
                        mcs_url=_mcs("rare-earths"), kind="rare_earth", parent_slug="rare-earths",
                        notes="Listed separately from heavy REEs in the rare-earths chapter."),
-    # Platinum-group metals — inherit the grouped PGM sheet verbatim.
-    # USGS reports PGM totals at the group level; per-PGM data isn't separately tabulated.
+    # Platinum-group metals — inherit the grouped PGM sheet.
+    # USGS reports total PGM production at the group level, but the 2026 World
+    # Mine Production table breaks it into Palladium + Platinum sub-columns.
+    # Per-metal aliases that match a sub-column (palladium, platinum) use
+    # `parent_filter` to pick which sub-metal to surface; the rest (iridium,
+    # osmium, rhodium, ruthenium) inherit the parent record with their
+    # production columns blanked (no per-metal data).
     "iridium": Element(slug="iridium", name="Iridium", symbol="Ir",
                        mcs_url=_mcs("platinum-group"), kind="grouped",
                        parent_slug="platinum-group-metals",
-                       notes="PGM — not a rare earth. Data inherited from platinum-group-metals sheet."),
+                       notes="PGM — not a rare earth. USGS does not break out Ir mine production; inherits parent."),
+    "osmium": Element(slug="osmium", name="Osmium", symbol="Os",
+                      mcs_url=_mcs("platinum-group"), kind="grouped",
+                      parent_slug="platinum-group-metals",
+                      notes="PGM. USGS does not break out Os mine production; inherits parent."),
+    "palladium": Element(slug="palladium", name="Palladium", symbol="Pd",
+                         mcs_url=_mcs("platinum-group"), kind="grouped",
+                         parent_slug="platinum-group-metals",
+                         parent_filter="Palladium",
+                         notes="PGM. Mine production from the Palladium sub-column of the PGM World Production table."),
     "platinum": Element(slug="platinum", name="Platinum", symbol="Pt",
                         mcs_url=_mcs("platinum-group"), kind="grouped",
                         parent_slug="platinum-group-metals",
-                        notes="PGM. Data inherited from platinum-group-metals sheet."),
+                        parent_filter="Platinum",
+                        notes="PGM. Mine production from the Platinum sub-column of the PGM World Production table."),
+    "rhodium": Element(slug="rhodium", name="Rhodium", symbol="Rh",
+                       mcs_url=_mcs("platinum-group"), kind="grouped",
+                       parent_slug="platinum-group-metals",
+                       notes="PGM. USGS does not break out Rh mine production; inherits parent."),
+    "ruthenium": Element(slug="ruthenium", name="Ruthenium", symbol="Ru",
+                         mcs_url=_mcs("platinum-group"), kind="grouped",
+                         parent_slug="platinum-group-metals",
+                         notes="PGM. USGS does not break out Ru mine production; inherits parent."),
+    # Iron and Steel sub-products. The USGS sheet's Salient Statistics lists
+    # "Pig iron production" and "Raw steel production" as separate US rows;
+    # the World Production table is a single combined column (no split).
+    # We fan out into two CSV rows so each sub-product gets its own salient
+    # value in the summary block. The shared World Production data is
+    # inherited verbatim (both rows show the same per-country production).
+    "iron-and-steel-pig-iron": Element(
+        slug="iron-and-steel-pig-iron", name="Iron and Steel (Pig iron)", symbol="Fe",
+        mcs_url=_mcs("iron-steel"), kind="sub_product", parent_slug="iron-and-steel",
+        parent_filter="Pig iron",
+        notes="US pig iron production row from the iron-and-steel sheet.",
+    ),
+    "iron-and-steel-raw-steel": Element(
+        slug="iron-and-steel-raw-steel", name="Iron and Steel (Raw steel)", symbol="Fe",
+        mcs_url=_mcs("iron-steel"), kind="sub_product", parent_slug="iron-and-steel",
+        parent_filter="Raw steel",
+        notes="US raw steel production row from the iron-and-steel sheet.",
+    ),
     # Zirconium + hafnium — share a single combined USGS sheet.
     # Same workflow as PGMs: parent holds the data, members inherit verbatim.
     "hafnium": Element(slug="hafnium", name="Hafnium", symbol="Hf",

@@ -323,12 +323,21 @@ open it, slow `pd.read_csv`).
 - [ ] **GitHub Pages deploy** (medium) — once a stable set of elements is in, publish `viewer/` + a baked `data.json` snapshot.
 - [ ] **CI** (low) — run `python -m unittest tests` on push; cache the bismuth PDF as a test fixture.
 
-## CSV restructure — public-column spec (planned 2026-05-19)
+## CSV restructure — public-column spec (shipped 2026-05-19)
 
-Per user-provided `public column information.xlsx`, restructure
+Per user-provided `public column information.xlsx`, restructured
 `elements.csv` to a fixed shape derived from a 203-country canonical
 list (Canada, China, Mexico, EU, then alphabetical world, ending at
-Vatican City).
+Vatican City). Final shape: **139 rows × 1,032 cols** (was 135 × 2,305).
+
+User-confirmed answers (2026-05-19):
+- A. PGM multi-column parser bundled in.
+- B. Iron and Steel Pig iron + Raw steel → Refinery Production block.
+- C. Bismuth → Capacity (all NA in source).
+- D. Indium / Tellurium / Germanium / Gallium → Refinery Production.
+- E. USGS country names mapped to spec list; EU members roll up into
+     `European Union`; non-country labels (`other`, `World total`,
+     parser bug labels) dropped.
 
 ### Final shape
 
@@ -408,8 +417,30 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
 | Update `tests/test_csv_export.py` for new columns + new row counts | 30 min |
 | Regenerate `elements.{csv,json}` + verify | 15 min |
 
-### Open questions (need user confirmation before executing)
+### Open questions (resolved 2026-05-19)
 
-- [ ] **Q1. Iron and Steel block placement** — Mine Production block (my pick) or Refinery Production block? PDF table is labeled just "World Production" with no Mine/Refinery qualifier; pig iron and raw steel are both post-mine smelting stages, so either is defensible.
-- [ ] **Q2. Gallium placement** — confirm OK to put under Refinery Production block, since USGS calls it "Low-Purity Production" (recovered as byproduct of bauxite/zinc processing — closer to refinery than mining).
-- [ ] **Q3. Parser bundling** — bundle the Government Stockpile parser and the PGM multi-column parser into this restructure commit, or ship the restructure with those columns blank first and add parsers later? Recommended: bundle, otherwise the new column 9 and PGM split are half-done.
+- [x] **Q1. Iron and Steel block placement** — Refinery Production (user override; pig iron + raw steel both post-mine smelting).
+- [x] **Q2. Gallium placement** — Refinery Production (Low-Purity Production is a smelter-stage byproduct).
+- [x] **Q3. Parser bundling** — bundled: Government Stockpile parser + PGM multi-column parser both shipped with the restructure.
+
+### Follow-up items (deferred)
+
+- [ ] **Rare-earths Government Stockpile is under-counted** — parser captures
+      the 1,100 t Lanthanum table row but misses the prose mention of
+      300 t NdPr oxide + 450 t NdFeB block + 60 t SmCo alloy. Would need
+      Stockpile-section prose parsing (estimated +30 min).
+- [ ] **PGM aggregates (mined_production_latest etc.) are N/A** — the
+      generic parser's `_find_row(salient, "Production", "mine")` doesn't
+      match PGM's per-metal "Palladium" / "Platinum" production rows. The
+      per-metal aliases (palladium, platinum) get Mine block data via
+      world_production sub-metal extraction; only the grouped parent's
+      summary fields are N/A. Could be addressed by a PGM-specific
+      `_postprocess_record` branch that sums Pd + Pt into mined_production.
+- [ ] **Iron-and-Steel parent has all-N/A summary** — same root cause: no
+      labelled "mine"/"refinery" row. Could be addressed by treating
+      "Pig iron production" + "Raw steel production" as fallback mine rows
+      for iron-and-steel (sum). Sub-aliases already have correct values.
+- [ ] **Kyrgyzstan missing from spec** — real country (USGS reports on it,
+      e.g. for Antimony imports) but absent from the 203-country
+      canonical list. Currently dropped silently. Optional: extend the
+      spec to 204 entries, or surface the dropped rows somewhere.
