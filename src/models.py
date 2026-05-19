@@ -152,6 +152,8 @@ class ElementRecord(BaseModel):
     import_sources_range: Optional[str] = None            # e.g. "2021-24"
 
     world_production_label: Optional[str] = None          # exact section header from the PDF
+    world_production_year_prev: Optional[str] = None      # verbatim prev-year header from the PDF (e.g. "2024")
+    world_production_year_latest: Optional[str] = None    # verbatim latest-year header from the PDF (e.g. "2025" or "2025e")
     world_production: list[WorldProductionRow] = Field(default_factory=list)
 
     # Footnotes referenced anywhere in the sheet (raw text by index/letter)

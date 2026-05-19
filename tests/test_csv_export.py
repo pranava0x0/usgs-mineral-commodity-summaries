@@ -70,8 +70,14 @@ def _antimony_fixture() -> ElementRecord:
                 ],
             ),
         ],
+        world_production_year_prev="2024",
+        world_production_year_latest="2025e",
         world_production=[
-            WorldProductionRow(country="China", production_latest_year=40000.0),
+            WorldProductionRow(
+                country="China",
+                production_prev_year=40000.0,
+                production_latest_year=40000.0,
+            ),
         ],
     )
 
@@ -131,29 +137,46 @@ class CsvLongFormatTests(unittest.TestCase):
     def test_country_share_isolated_per_category(self) -> None:
         antimony = {r["import_category"]: r for r in self.rows if r["slug"] == "antimony"}
         # Ore-and-concentrates row has Mexico=86 but China=N/A
-        self.assertEqual(antimony["Ore and concentrates"]["imports__mexico"], "86")
-        self.assertEqual(antimony["Ore and concentrates"]["imports__china"], "N/A")
+        self.assertEqual(antimony["Ore and concentrates"]["mexico_imports_share_pct"], "86")
+        self.assertEqual(antimony["Ore and concentrates"]["china_imports_share_pct"], "N/A")
         # Oxide row has China=66 but Mexico=N/A
-        self.assertEqual(antimony["Oxide"]["imports__china"], "66")
-        self.assertEqual(antimony["Oxide"]["imports__mexico"], "N/A")
+        self.assertEqual(antimony["Oxide"]["china_imports_share_pct"], "66")
+        self.assertEqual(antimony["Oxide"]["mexico_imports_share_pct"], "N/A")
 
     def test_non_country_columns_identical_across_category_rows(self) -> None:
         antimony = [r for r in self.rows if r["slug"] == "antimony"]
-        for col in ("primary_smelting_latest", "units_note", "world_prod__china__latest"):
+        # World production is duplicated across all category rows for an
+        # element (USGS doesn't categorise it), so the year-tagged column
+        # must read the same on every row.
+        for col in ("primary_smelting_latest", "units_note", "china_production_2025e"):
             values = {r[col] for r in antimony}
             self.assertEqual(len(values), 1, f"{col} differs across antimony category rows: {values}")
+
+    def test_world_production_columns_use_pdf_years(self) -> None:
+        """User instruction: country world-prod columns are named after the
+        actual year tokens captured from the PDF's table sub-header.
+
+        The antimony fixture sets year_prev='2024' and year_latest='2025e'.
+        The exporter must emit china_production_2024 and china_production_2025e
+        — never the placeholders 'prev'/'latest' or a bare 'world_prod__*'
+        legacy column.
+        """
+        self.assertIn("china_production_2024", self.cols)
+        self.assertIn("china_production_2025e", self.cols)
+        # Legacy column names are gone
+        legacy = [c for c in self.cols if c.startswith(("world_prod__", "world_reserves__", "imports__"))]
+        self.assertEqual(legacy, [], f"legacy columns leaked: {legacy[:5]}")
+        # Values populate
+        antimony = next(r for r in self.rows if r["slug"] == "antimony")
+        self.assertEqual(antimony["china_production_2024"], "40000")
+        self.assertEqual(antimony["china_production_2025e"], "40000")
 
     def test_bismuth_single_row_with_blank_category(self) -> None:
         bism = [r for r in self.rows if r["slug"] == "bismuth"]
         self.assertEqual(len(bism), 1)
         self.assertEqual(bism[0]["import_category"], "")
-        self.assertEqual(bism[0]["imports__china"], "56")
-        self.assertEqual(bism[0]["imports__germany"], "13")
-
-    def test_flat_imports_column_axis(self) -> None:
-        # No legacy imports__<cat>__<country> columns (those had >1 "__" segment).
-        multi = [c for c in self.cols if c.startswith("imports__") and c.count("__") > 1]
-        self.assertEqual(multi, [])
+        self.assertEqual(bism[0]["china_imports_share_pct"], "56")
+        self.assertEqual(bism[0]["germany_imports_share_pct"], "13")
 
     def test_missing_values_render_as_na(self) -> None:
         """User instruction: every missing cell must read 'N/A' — never blank.
@@ -171,12 +194,16 @@ class CsvLongFormatTests(unittest.TestCase):
         self.assertEqual(antimony["parent_slug"], "N/A")
         self.assertEqual(antimony["price_unit_note"], "N/A")
         # The country that's not in this row's category renders "N/A"
-        self.assertEqual(antimony["imports__china"], "N/A")  # Ore-and-concentrates row
-        # No bare empty values in numeric/country slots
+        self.assertEqual(antimony["china_imports_share_pct"], "N/A")  # Ore-and-concentrates row
+        # No bare empty values in per-country slots. Match per-country column
+        # families specifically and skip *_raw (genuinely empty if no sentinel)
+        # and *_sentinel (a different "withheld marker" column-family entirely).
+        import re as _re
+        country_col = _re.compile(
+            r"_(imports_share_pct|production_\d{4}e?|capacity|reserves)$"
+        )
         suspect_cols = [c for c in self.cols
-                        if c.startswith(("imports__", "world_prod__", "world_reserves__",
-                                         "salient__", "price__"))
-                        and not c.endswith("_raw")]
+                        if country_col.search(c) and not c.endswith("_raw")]
         for c in suspect_cols:
             self.assertNotEqual(antimony[c], "",
                                 f"{c!r} is blank for antimony — should be a value or 'N/A'")

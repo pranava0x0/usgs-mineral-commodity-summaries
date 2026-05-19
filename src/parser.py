@@ -543,7 +543,7 @@ def _parse_world_production(
     section_lines: list[extractor.TextLine],
     words: list[extractor.Word],
     all_lines: list[extractor.TextLine],
-) -> tuple[str, list[WorldProductionRow]]:
+) -> tuple[str, list[WorldProductionRow], Optional[str], Optional[str]]:
     """Parse the World Production table using per-word bboxes.
 
     PyMuPDF's line-level extraction sometimes merges two column values that
@@ -564,7 +564,7 @@ def _parse_world_production(
 
     in_range = [w for w in words if w.page in pages and y_min <= w.bbox[1] <= y_max + 2]
     if not in_range:
-        return section_label, []
+        return section_label, [], None, None
 
     rows_by_y: list[tuple[float, list[extractor.Word]]] = []
     for w in in_range:
@@ -607,6 +607,7 @@ def _parse_world_production(
     column_titles: list[str] = []
     data_bands: list[list[tuple[str, tuple[float, float, float, float]]]] = []
     saw_year_header = False
+    year_header_tokens: list[str] = []  # verbatim year tokens captured from the year-sub-header band
 
     def _is_header_token(t: str) -> bool:
         s = t.strip().lower()
@@ -615,6 +616,10 @@ def _parse_world_production(
             or s.startswith("production capacity")
             or s in {"reserves", "reserve base", "capacity"}
         )
+
+    # USGS year tokens are "2024" or "2025" plain — sometimes "2025e" or "2025ᵉ"
+    # when the estimated marker is rendered inline (rare in the world-prod band).
+    _YEAR_RE = re.compile(r"^20\d\d[eᵉ]?$")
 
     for _, band in rows_by_y:
         cells = _cluster_to_cells(band)
@@ -630,9 +635,20 @@ def _parse_world_production(
         if len(cells) == 1 and _is_header_token(texts[0]):
             column_titles.append(texts[0])
             continue
-        # Year sub-header row
-        if all(re.fullmatch(r"20\d\d", t.strip()) for t in texts):
+        # Year sub-header row — capture the verbatim tokens so downstream
+        # consumers (CSV exporter, viewer) can use the PDF's actual column
+        # labels in column names instead of "prev"/"latest".
+        # A band counts as the year-sub-header if it contains at least two
+        # year tokens; some sheets place reserves-unit annotations on the
+        # same y as the year tokens (chromium: "Ore / Cr O / content";
+        # molybdenum: "(thousand metric tons)"), so we don't require the
+        # *whole* band to be year tokens — just that two or more years are
+        # present and that no cell looks like a data row (a country name).
+        year_matches = [t.strip() for t in texts if _YEAR_RE.match(t.strip())]
+        if len(year_matches) >= 2:
             saw_year_header = True
+            for t in year_matches:
+                year_header_tokens.append(t)
             continue
         if not saw_year_header and not column_titles:
             continue
@@ -680,7 +696,12 @@ def _parse_world_production(
         if country.lower().startswith("world total"):
             break
 
-    return section_label, rows
+    # Pull the two year labels in left-to-right order if both were captured.
+    # Most MCS 2026 sheets carry exactly two (prev / latest); a sheet with only
+    # one or none falls back to None.
+    year_prev: Optional[str] = year_header_tokens[0] if len(year_header_tokens) >= 1 else None
+    year_latest: Optional[str] = year_header_tokens[1] if len(year_header_tokens) >= 2 else None
+    return section_label, rows, year_prev, year_latest
 
 
 def _row_footnotes_at(lines: list[extractor.TextLine], page: int, y: float) -> Optional[str]:
@@ -875,8 +896,10 @@ def parse_element_pdf(slug: str) -> ElementRecord:
 
     world_label = None
     world_rows: list[WorldProductionRow] = []
+    world_year_prev: Optional[str] = None
+    world_year_latest: Optional[str] = None
     if "WORLD_PROD" in sections:
-        world_label, world_rows = _parse_world_production(
+        world_label, world_rows, world_year_prev, world_year_latest = _parse_world_production(
             section_header_lines["WORLD_PROD"], sections["WORLD_PROD"], words, lines,
         )
 
@@ -1022,6 +1045,8 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         import_sources_by_category=by_category,
         import_sources_range=import_range,
         world_production_label=world_label,
+        world_production_year_prev=world_year_prev,
+        world_production_year_latest=world_year_latest,
         world_production=world_rows,
         footnotes=footnotes,
     )

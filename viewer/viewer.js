@@ -239,6 +239,11 @@ function worldProductionBlock(el) {
       <td class="num">${cellFor(r.reserves, r.reserves_raw)}</td>
     </tr>
   `).join('');
+  // Year labels come straight from the PDF's world-production sub-header band
+  // (captured into `world_production_year_{prev,latest}` by the parser). Fall
+  // back to generic labels for the rare sheet where they couldn't be parsed.
+  const prevLabel = el.world_production_year_prev || 'Prev year';
+  const latestLabel = el.world_production_year_latest || 'Latest year';
   return `
     <div style="grid-column: 1 / -1">
       <h4 class="eyebrow">${escapeHtml(headerLabel)}</h4>
@@ -246,8 +251,8 @@ function worldProductionBlock(el) {
         <thead>
           <tr>
             <th>Country</th>
-            <th class="num">Prev year</th>
-            <th class="num">Latest year</th>
+            <th class="num">${escapeHtml(prevLabel)}</th>
+            <th class="num">${escapeHtml(latestLabel)}</th>
             <th class="num">Capacity</th>
             <th class="num">Reserves</th>
           </tr>

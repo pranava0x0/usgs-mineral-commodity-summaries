@@ -23,19 +23,21 @@ Columns are grouped into sections:
                         — e.g. antimony's "Imports - Oxide - 2025e" round-trips
   per-form price        price__<form>__<year>  (+ _raw)
 
-  --- country sections (filled across all elements with N/A for missing) ---
-  imports               imports__<country>
+  --- per-country columns (filled across all elements with N/A for missing) ---
+  imports share         <country>_imports_share_pct
                         Each row's share reflects the row's `import_category`
                         only. Countries not in that category render as "N/A".
                         The country axis is the alphabetical union across
                         every category of every element.
-  world production      world_prod__<country>__prev
-                        world_prod__<country>__latest   (+ _raw)
-                        world_prod__<country>__capacity
-                        (duplicated across all category rows for an element —
-                        production is not categorized.)
-  world reserves        world_reserves__<country>  (+ _raw)
-                        (also duplicated across an element's category rows.)
+  production            <country>_production_<year>     (+ <country>_production_<year>_raw)
+                        Years come straight from the PDF's world-production
+                        table sub-header (e.g. "2024" / "2025" for MCS 2026).
+                        Elements with different year pairs get their own
+                        column set; the other rows fall to N/A. Duplicated
+                        across an element's category rows because USGS does
+                        not categorise world production.
+  capacity              <country>_capacity
+  reserves              <country>_reserves              (+ <country>_reserves_raw)
 
 The country axis sorts "World *" aggregate rows to the end of each section.
 Cells where the country isn't tabulated for a given element are filled with
@@ -294,27 +296,49 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
 
     imports_col_names: dict[str, str] = {}
     for country in axes["imports_countries"]:
-        imports_col_names[country] = col(f"imports__{_slugify(country)}")
+        imports_col_names[country] = col(f"{_slugify(country)}_imports_share_pct")
 
-    world_prev_cols: dict[str, str] = {}
-    world_latest_cols: dict[str, str] = {}
-    world_latest_raw_cols: dict[str, str] = {}
+    # Production columns are keyed by (country, year), so two elements with
+    # different year pairs (e.g. "2024"/"2025" vs "2023"/"2024") get separate
+    # column sets and neither stomps on the other. Years come from each
+    # element's `world_production_year_{prev,latest}` (captured verbatim from
+    # the PDF's year-sub-header band). Elements missing the headers (rare —
+    # currently only germanium and scandium, neither of which has world rows)
+    # fall back to "prev"/"latest" so the data still lands somewhere.
+    # Maps: (country, year_label) -> column name
+    world_prev_cols: dict[tuple[str, str], str] = {}
+    world_latest_cols: dict[tuple[str, str], str] = {}
+    world_latest_raw_cols: dict[tuple[str, str], str] = {}
     world_capacity_cols: dict[str, str] = {}
-    for country in axes["world_countries"]:
-        c_slug = _slugify(country)
-        world_prev_cols[country] = col(f"world_prod__{c_slug}__prev")
-        world_latest_cols[country] = col(f"world_prod__{c_slug}__latest")
-        if country in axes["world_latest_raw_countries"]:
-            world_latest_raw_cols[country] = col(f"world_prod__{c_slug}__latest_raw")
-        world_capacity_cols[country] = col(f"world_prod__{c_slug}__capacity")
+
+    def _years_for(rec: ElementRecord) -> tuple[str, str]:
+        yp = rec.world_production_year_prev or "prev"
+        yl = rec.world_production_year_latest or "latest"
+        return yp, yl
+
+    for rec in records:
+        yp, yl = _years_for(rec)
+        for wp in rec.world_production:
+            c = wp.country
+            c_slug = _slugify(c)
+            if (c, yp) not in world_prev_cols:
+                world_prev_cols[(c, yp)] = col(f"{c_slug}_production_{yp}")
+            if (c, yl) not in world_latest_cols:
+                world_latest_cols[(c, yl)] = col(f"{c_slug}_production_{yl}")
+            # Only register a _raw column where some element actually carries
+            # a non-redundant raw token (W / E / >N / etc.) for that cell.
+            if c in axes["world_latest_raw_countries"] and (c, yl) not in world_latest_raw_cols:
+                world_latest_raw_cols[(c, yl)] = col(f"{c_slug}_production_{yl}_raw")
+            if c not in world_capacity_cols:
+                world_capacity_cols[c] = col(f"{c_slug}_capacity")
 
     reserves_cols: dict[str, str] = {}
     reserves_raw_cols: dict[str, str] = {}
     for country in axes["reserves_countries"]:
         c_slug = _slugify(country)
-        reserves_cols[country] = col(f"world_reserves__{c_slug}")
+        reserves_cols[country] = col(f"{c_slug}_reserves")
         if country in axes["reserves_raw_countries"]:
-            reserves_raw_cols[country] = col(f"world_reserves__{c_slug}_raw")
+            reserves_raw_cols[country] = col(f"{c_slug}_reserves_raw")
 
     # Second pass to fill the country cells. Imports vary per row (one category
     # each); world production and reserves are duplicated across an element's
@@ -344,15 +368,20 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                     row[cname] = _country_val(cs.share_pct)
 
         # World production — full table on every row of an element.
+        yp, yl = _years_for(rec)
         for wp in rec.world_production:
             country = wp.country
-            if country in world_prev_cols:
-                row[world_prev_cols[country]] = _country_val(wp.production_prev_year)
-                row[world_latest_cols[country]] = _country_val(wp.production_latest_year)
-                row[world_capacity_cols[country]] = _country_val(wp.capacity)
-                raw_col = world_latest_raw_cols.get(country)
+            prev_key = (country, yp)
+            latest_key = (country, yl)
+            if prev_key in world_prev_cols:
+                row[world_prev_cols[prev_key]] = _country_val(wp.production_prev_year)
+            if latest_key in world_latest_cols:
+                row[world_latest_cols[latest_key]] = _country_val(wp.production_latest_year)
+                raw_col = world_latest_raw_cols.get(latest_key)
                 if raw_col and wp.production_latest_raw and wp.production_latest_raw != _val(wp.production_latest_year):
                     row[raw_col] = wp.production_latest_raw
+            if country in world_capacity_cols:
+                row[world_capacity_cols[country]] = _country_val(wp.capacity)
             if country in reserves_cols:
                 row[reserves_cols[country]] = _country_val(wp.reserves)
                 raw_col = reserves_raw_cols.get(country)
