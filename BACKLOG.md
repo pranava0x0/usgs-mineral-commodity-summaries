@@ -182,11 +182,68 @@ table.
 - [x] **Per-rare-earth alias lost the $/kg unit** — fixed by composing
       `<form> (<unit>)` in the alias's `price_unit_note`.
 
+## CSV pruning — 2026-05-19 inventory
+
+`elements.csv` currently sits at **135 rows × 2,305 cols**. Most of the
+width comes from per-year × per-form salient stats and per-country
+production tables. The decision matrix below is what we'd cut next when
+column count becomes the bottleneck (Excel choking, Sheets refusing to
+open it, slow `pd.read_csv`).
+
+### Family inventory (current, MCS 2026 bundle)
+
+| # | Family                             | Cols  | Schema                                              |
+| - | ---------------------------------- | ----: | --------------------------------------------------- |
+| 1 | IDENTITY                           |     8 | `name, kind, source_url, units_note, price_unit_note, import_sources_range, world_production_label, import_category` |
+| 2 | LATEST-YEAR SUMMARY                |     8 | `mined_production_latest`, `primary_smelting_latest`, … `net_import_reliance_pct_latest` |
+| 3 | SALIENT STATS per year             |   800 | `<section>__<label>__<year>` (5 yrs × ~160 forms) |
+| 4 | PRICE QUOTES per year              |   340 | `price__<form>__<year>` (5 yrs × ~68 priced forms) |
+| 5 | PER-COUNTRY imports share %        |    50 | `<country>_imports_share_pct` |
+| 6 | PER-COUNTRY production (year-tag)  |   162 | `<country>_production_<year>` (81 countries × 2 yrs) |
+| 7 | PER-COUNTRY capacity               |    81 | `<country>_capacity` (mostly N/A — USGS rarely reports capacity) |
+| 8 | PER-COUNTRY reserves               |    66 | `<country>_reserves` |
+| 9 | OTHER (long-slug variants of #3/4) |   790 | same shape as #3/#4 but with verbose USGS section labels (e.g. `price_average_unit_value_of_imports_dollars_per_metric_ton__…__2025e`) |
+
+### Cut options ranked by reward / regret
+
+- [ ] **Drop #7 capacity** (low effort, low regret) — 2305 → 2224.
+      Almost every cell is `N/A` because USGS only reports capacity on a
+      handful of sheets (indium, germanium, niobium, …). Five mins of work.
+- [ ] **Drop #9 "OTHER" long-slug family** — 2305 → 1515. Same data
+      content as #3/#4 but at column names so long they hurt to read.
+      Better fix would be to *shorten* the section slug in `_slugify`
+      (clip to N chars + hash) rather than drop.
+- [ ] **Drop pre-2024 history in #3 / #4** — 2305 → ~1380. Keep only
+      `_2024` and `_2025e` columns; the 2021–2023 history lives in
+      `elements.json` for the rare consumer who needs five-year series.
+      Big win, but irreversible without re-running the pipeline.
+- [ ] **Drop #4 price quotes per year entirely** — 2305 → 1965. Detail
+      panel already shows the full price table; CSV consumers usually
+      only need one price (already in #2 latest-year summary).
+- [ ] **Minimum-viable "country dependency table" CSV** (most
+      aggressive) — keep only #1 + #2 + #5 + #6 → ~286 cols. Loses
+      everything per-year except the latest-year summary. Best for the
+      "open-in-Sheets-and-skim" use case.
+- [ ] **Long-slug-shortening pass** (~30 min) — rewrite `_slugify` to
+      clip section slugs over ~32 chars and append a short hash. Doesn't
+      lose columns, just makes them readable: e.g.
+      `price_average_unit_value_of_imports_dollars_per_metric_ton__fused_aluminum_oxide_crude__2025e`
+      → `price_aviu_dpmt__fused_aluminum_oxide_crude__2025e`. Acts as a
+      cheaper substitute for "drop #9".
+
+### Notes
+- `elements.json` schema is unchanged by every option above — these
+  cuts only affect the rectangular CSV view. JSON consumers (the viewer,
+  audit reports) keep full fidelity regardless.
+- Pairs well with **CSV-shape filters** in the viewer: a "download CSV"
+  button per *use-case* (full / country-dependency-only / latest-year-only)
+  would let consumers choose without committing to a single global
+  pruning decision.
+
 ## Viewer enhancements
 
 - [ ] **Sort / filter** the overview table (medium) — click a column header to sort; chip filters for "REE only", "PGM only", "Critical 2022 list".
 - [ ] **Sparkline cells** (low) — add a tiny inline 5-year line for each numeric column.
-- [ ] **CSV export** (medium) — "Download as CSV" for the overview table.
 - [ ] **Bookmarkable detail URLs** (low) — `?element=bismuth` opens straight to that element's detail card.
 - [ ] **Mobile bottom sheet for detail** (low) — per DESIGN.md §7, swap the inline detail card for a bottom sheet at <640px.
 
