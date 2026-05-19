@@ -322,3 +322,94 @@ open it, slow `pd.read_csv`).
 
 - [ ] **GitHub Pages deploy** (medium) — once a stable set of elements is in, publish `viewer/` + a baked `data.json` snapshot.
 - [ ] **CI** (low) — run `python -m unittest tests` on push; cache the bismuth PDF as a test fixture.
+
+## CSV restructure — public-column spec (planned 2026-05-19)
+
+Per user-provided `public column information.xlsx`, restructure
+`elements.csv` to a fixed shape derived from a 203-country canonical
+list (Canada, China, Mexico, EU, then alphabetical world, ending at
+Vatican City).
+
+### Final shape
+
+- **8 identity columns** (A–H, unchanged): `name, kind, source_url,
+  units_note, price_unit_note, import_sources_range,
+  world_production_label, import_category`
+- **9 summary columns** (I–Q):
+  1. USGS 2025 total mined production
+  2. USGS 2025 total primary smelting
+  3. USGS 2025 total secondary smelting
+  4. Imports for consumption (total)
+  5. Exports (total)
+  6. Consumption, apparent (primary + secondary + imports − exports)
+  7. Price, metal, average, dollars per pound
+  8. Net import reliance as a percentage of apparent consumption
+  9. **Government Stockpile (FY2025 Potential Acquisitions)** ← new field
+- **5 country blocks × 203 countries = 1,015 country columns**:
+  1. Import Sources (2021–2024)
+  2. Mine Production
+  3. Refinery Production
+  4. Capacity (refinery or production)
+  5. Reserves
+
+Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
+
+### Per-element block placement (which block USGS data populates)
+
+| Element                                                                          | Mine | Refinery | Capacity | Reserves |
+| -------------------------------------------------------------------------------- | :--: | :------: | :------: | :------: |
+| Antimony, Aluminum, Chromium, Cobalt, Copper, Diamond, Graphite, Lithium, Magnesium, Manganese, Molybdenum, Nickel, Niobium, Rare Earths, Silver, Tantalum, Tin, Tungsten, Vanadium, Zinc, Zirconium-and-hafnium | ✅ | — | — | ✅ |
+| **Bismuth**                                                                      | —    | ✅       | ✅ (all NA) | — |
+| **Indium**                                                                       | —    | ✅       | ✅        | — |
+| **Tellurium**                                                                    | —    | ✅       | ✅        | — |
+| **Germanium**                                                                    | —    | (prose only) | — | — |
+| **Gallium**                                                                      | —    | ✅ (USGS calls it "Primary Low-Purity Production") | ✅ | — |
+| **Iron and Steel (Pig iron)** ← new row                                          | ✅¹  | — | — | — |
+| **Iron and Steel (Raw steel)** ← new row                                         | ✅¹  | — | — | — |
+| **PGM: Palladium** ← new alias                                                   | ✅ (palladium sub-column) | — | — | — |
+| **PGM: Platinum** (existing alias, reshape)                                      | ✅ (platinum sub-column) | — | — | — |
+| **PGM: Iridium / Osmium / Rhodium / Ruthenium** (Pd/Rh/Ru/Os are new aliases)    | —    | — | — | — |
+| **PGM (grouped parent)**                                                         | —    | — | — | ✅ (PGM-aggregate) |
+| **Titanium** (skipped per user)                                                  | —    | — | — | — |
+| Abrasives, Scandium (no world table)                                             | —    | — | — | — |
+
+¹ Iron and Steel placement: open question. PDF table is just "World
+   Production" (neither mine nor refinery). My pick: Mine Production
+   for human readability; alternative is Refinery Production for
+   technical accuracy.
+
+### Row-count changes from current
+
+- Iron and Steel: 1 → **2** rows (Pig iron, Raw steel)
+- Platinum-group metals: 2 → **7** rows (Ir, Os, Rh, Ru, Pd, Pt, group)
+- All other elements: unchanged
+- Net: 135 → ~140 rows
+
+### Country-name reconciliation
+
+- USGS variants get mapped to the spec list (e.g.
+  `Korea, Republic of` → `Korea, South`)
+- USGS-side row labels that aren't real countries — `other`, `others`,
+  `World total (rounded)`, and the scandium prose-as-country parser
+  bug — are **dropped** from CSV. They remain in `elements.json` for
+  anyone who needs them. Row sums won't always equal 100% / world total
+  as a result (the residual is invisible). Acceptable per spec.
+
+### Code work required (~5 hours)
+
+| Change | Effort |
+| --- | --- |
+| Parse Government Stockpile section → new `stockpile_fy2025_potential_acquisitions: Optional[float]` field on ElementRecord (resolves BACKLOG R4) | ~30 min |
+| Parse PGM multi-column world production (capture both Pd + Pt sub-columns) | ~60 min |
+| Add `palladium`, `rhodium`, `ruthenium`, `osmium` aliases in config | 5 min |
+| Add `iron-and-steel-pig-iron` and `iron-and-steel-raw-steel` sub-aliases (or generalise the row-fanout logic) | 10 min |
+| Rewrite `_make_alias` to filter PGM data per-metal | 30 min |
+| Rewrite `csv_export.py` with the 5-block, 203-country layout + country-name mapping | ~2 hours |
+| Update `tests/test_csv_export.py` for new columns + new row counts | 30 min |
+| Regenerate `elements.{csv,json}` + verify | 15 min |
+
+### Open questions (need user confirmation before executing)
+
+- [ ] **Q1. Iron and Steel block placement** — Mine Production block (my pick) or Refinery Production block? PDF table is labeled just "World Production" with no Mine/Refinery qualifier; pig iron and raw steel are both post-mine smelting stages, so either is defensible.
+- [ ] **Q2. Gallium placement** — confirm OK to put under Refinery Production block, since USGS calls it "Low-Purity Production" (recovered as byproduct of bauxite/zinc processing — closer to refinery than mining).
+- [ ] **Q3. Parser bundling** — bundle the Government Stockpile parser and the PGM multi-column parser into this restructure commit, or ship the restructure with those columns blank first and add parsers later? Recommended: bundle, otherwise the new column 9 and PGM split are half-done.
