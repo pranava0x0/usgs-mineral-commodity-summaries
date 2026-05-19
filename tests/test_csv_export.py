@@ -126,7 +126,7 @@ class CsvLongFormatTests(unittest.TestCase):
         self.rows = _read(cols, rows)
 
     def test_antimony_has_four_rows(self) -> None:
-        antimony = [r for r in self.rows if r["slug"] == "antimony"]
+        antimony = [r for r in self.rows if r["name"] == "Antimony"]
         self.assertEqual(len(antimony), 4)
         cats = [r["import_category"] for r in antimony]
         self.assertEqual(
@@ -135,7 +135,7 @@ class CsvLongFormatTests(unittest.TestCase):
         )
 
     def test_country_share_isolated_per_category(self) -> None:
-        antimony = {r["import_category"]: r for r in self.rows if r["slug"] == "antimony"}
+        antimony = {r["import_category"]: r for r in self.rows if r["name"] == "Antimony"}
         # Ore-and-concentrates row has Mexico=86 but China=N/A
         self.assertEqual(antimony["Ore and concentrates"]["mexico_imports_share_pct"], "86")
         self.assertEqual(antimony["Ore and concentrates"]["china_imports_share_pct"], "N/A")
@@ -144,7 +144,7 @@ class CsvLongFormatTests(unittest.TestCase):
         self.assertEqual(antimony["Oxide"]["mexico_imports_share_pct"], "N/A")
 
     def test_non_country_columns_identical_across_category_rows(self) -> None:
-        antimony = [r for r in self.rows if r["slug"] == "antimony"]
+        antimony = [r for r in self.rows if r["name"] == "Antimony"]
         # World production is duplicated across all category rows for an
         # element (USGS doesn't categorise it), so the year-tagged column
         # must read the same on every row.
@@ -167,12 +167,12 @@ class CsvLongFormatTests(unittest.TestCase):
         legacy = [c for c in self.cols if c.startswith(("world_prod__", "world_reserves__", "imports__"))]
         self.assertEqual(legacy, [], f"legacy columns leaked: {legacy[:5]}")
         # Values populate
-        antimony = next(r for r in self.rows if r["slug"] == "antimony")
+        antimony = next(r for r in self.rows if r["name"] == "Antimony")
         self.assertEqual(antimony["china_production_2024"], "40000")
         self.assertEqual(antimony["china_production_2025e"], "40000")
 
     def test_bismuth_single_row_with_blank_category(self) -> None:
-        bism = [r for r in self.rows if r["slug"] == "bismuth"]
+        bism = [r for r in self.rows if r["name"] == "Bismuth"]
         self.assertEqual(len(bism), 1)
         self.assertEqual(bism[0]["import_category"], "")
         self.assertEqual(bism[0]["china_imports_share_pct"], "56")
@@ -185,13 +185,12 @@ class CsvLongFormatTests(unittest.TestCase):
         net_import_reliance, etc.); those must surface as 'N/A' so a CSV
         consumer can never confuse a missing reading with a present zero.
         """
-        antimony = next(r for r in self.rows if r["slug"] == "antimony")
+        antimony = next(r for r in self.rows if r["name"] == "Antimony")
         # Numeric latest-year fields the fixture didn't set
         self.assertEqual(antimony["mined_production_latest"], "N/A")
         self.assertEqual(antimony["apparent_consumption_latest"], "N/A")
         self.assertEqual(antimony["net_import_reliance_pct_latest"], "N/A")
         # Text identity fields the fixture didn't set
-        self.assertEqual(antimony["parent_slug"], "N/A")
         self.assertEqual(antimony["price_unit_note"], "N/A")
         # The country that's not in this row's category renders "N/A"
         self.assertEqual(antimony["china_imports_share_pct"], "N/A")  # Ore-and-concentrates row

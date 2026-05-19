@@ -9,11 +9,14 @@ per element).
 
 Columns are grouped into sections:
 
-  identity              slug, name, symbol, kind, parent_slug, source_url,
-                        edition, edition_date, captured_at, pdf_sha256,
-                        pdf_page_count, units_note, price_unit_note,
-                        latest_year, import_sources_range, world_production_label,
+  identity              name, kind, source_url, edition, captured_at,
+                        units_note, price_unit_note, latest_year,
+                        import_sources_range, world_production_label,
                         import_category
+                        (slug, symbol, parent_slug, edition_date,
+                        pdf_sha256, and pdf_page_count are intentionally
+                        omitted from the CSV — they're still in elements.json
+                        for anyone who needs the traceback metadata.)
   latest-year summary   mined_production_latest, primary_smelting_latest,
                         secondary_smelting_latest, imports_total_latest,
                         exports_total_latest, apparent_consumption_latest,
@@ -204,9 +207,14 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         return name
 
     # Stable identity columns first so the CSV is readable at a glance.
+    # `slug`, `symbol`, `parent_slug`, `edition_date`, `pdf_sha256`, and
+    # `pdf_page_count` were removed in favour of a leaner header — they
+    # remain in `elements.json` for anyone who needs them, but the CSV is
+    # tuned for human/Sheets consumers who already get the same identity
+    # from `name` + `kind` + `edition`.
     for name in (
-        "slug", "name", "symbol", "kind", "parent_slug", "source_url", "edition", "edition_date",
-        "captured_at", "pdf_sha256", "pdf_page_count", "units_note", "price_unit_note",
+        "name", "kind", "source_url", "edition",
+        "captured_at", "units_note", "price_unit_note",
         "latest_year", "import_sources_range", "world_production_label",
         "import_category",
     ):
@@ -227,19 +235,11 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     for rec in records:
         for cat in _category_rows_for(rec):
             row: dict[str, str] = {}
-            row["slug"] = rec.slug
             row["name"] = rec.name
-            # Text identity fields: missing -> "N/A" (per user instruction:
-            # never blank, never fake; if it's not present, surface that).
-            row["symbol"] = _text(rec.symbol)
             row["kind"] = rec.kind
-            row["parent_slug"] = _text(rec.parent_slug)
             row["source_url"] = rec.source_url
             row["edition"] = rec.edition
-            row["edition_date"] = rec.edition_date
             row["captured_at"] = rec.captured_at
-            row["pdf_sha256"] = rec.pdf_sha256
-            row["pdf_page_count"] = str(rec.pdf_page_count)
             row["units_note"] = _text(rec.units_note)
             row["price_unit_note"] = _text(rec.price_unit_note)
             row["latest_year"] = rec.latest_year
