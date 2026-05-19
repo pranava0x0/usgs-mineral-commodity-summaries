@@ -429,17 +429,31 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
       the 1,100 t Lanthanum table row but misses the prose mention of
       300 t NdPr oxide + 450 t NdFeB block + 60 t SmCo alloy. Would need
       Stockpile-section prose parsing (estimated +30 min).
-- [ ] **PGM aggregates (mined_production_latest etc.) are N/A** — the
-      generic parser's `_find_row(salient, "Production", "mine")` doesn't
-      match PGM's per-metal "Palladium" / "Platinum" production rows. The
-      per-metal aliases (palladium, platinum) get Mine block data via
-      world_production sub-metal extraction; only the grouped parent's
-      summary fields are N/A. Could be addressed by a PGM-specific
-      `_postprocess_record` branch that sums Pd + Pt into mined_production.
-- [ ] **Iron-and-Steel parent has all-N/A summary** — same root cause: no
-      labelled "mine"/"refinery" row. Could be addressed by treating
-      "Pig iron production" + "Raw steel production" as fallback mine rows
-      for iron-and-steel (sum). Sub-aliases already have correct values.
+- [ ] **PGM grouped parent's mined / primary / secondary summary cells are N/A**
+      — generic `_find_row(salient, "Production", "mine")` doesn't match
+      PGM's per-metal "Palladium" / "Platinum" salient rows. After the
+      May-2026 PGM-alias refactor, individual aliases (palladium,
+      platinum, iridium, …) now carry correct per-metal summary values
+      via `_make_alias`, but the *grouped parent row* still has N/A in
+      mined / primary / secondary. Fix: a PGM-specific
+      `_postprocess_record` branch that sums Pd + Pt into
+      `mined_production_latest` for the parent. ~10 min.
+- [ ] **Iron-and-Steel parent has all-N/A summary cells** — same root
+      cause: no labelled "mine" / "refinery" row. Sub-aliases
+      (iron-and-steel-pig-iron, iron-and-steel-raw-steel) already have
+      correct values via `parent_filter`; only the parent row is empty.
+      Fix: a `_postprocess_record` branch that surfaces "Raw steel
+      production" as the parent's mined_production_latest (or sum Pig
+      iron + Raw steel — open design choice).
+- [ ] **Canonical country list audit** — the user-provided spec missed
+      Kyrgyzstan (a material antimony producer — 700 t mine + 260 kt
+      reserves). Added back in PR #3. We should systematically walk
+      every USGS country name we currently `map_country()` to `None` and
+      double-check none of the others have material data being dropped.
+      `src/countries.py:NON_COUNTRY_LABELS` and the silent-fall-through
+      branch are the two places to audit. Low priority — Kyrgyzstan was
+      flagged because the spot-check at PR-1 review surfaced it, but a
+      systematic pass would catch any sibling gaps.
 - [x] **Kyrgyzstan missing from spec** — fixed by extending the canonical
       list to 204 entries (Kyrgyzstan inserted alphabetically between
       Kosovo and Liechtenstein in the Europe block). Captures 700 t

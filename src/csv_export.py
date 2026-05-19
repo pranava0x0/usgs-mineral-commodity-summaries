@@ -167,7 +167,17 @@ def _block_columns(block_suffix: str) -> list[str]:
 def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory]]:
     """One CSV row per import-source category — bismuth-style single-list
     sheets emit one row with `category=None`; sheets with no import data
-    emit one bare row so identity/summary cells are still visible."""
+    emit one bare row so identity/summary cells are still visible.
+
+    Special case: the PGM grouped parent (`platinum-group-metals`) collapses
+    to a single bare row even though the source PDF lists Pd and Pt as
+    separate import categories. Per-metal data lives on the individual
+    PGM aliases (palladium, platinum, …); the grouped parent represents
+    the aggregate, so splitting it twice was double-counting visual
+    information.
+    """
+    if rec.slug == "platinum-group-metals":
+        return [None]
     if rec.import_sources_by_category:
         return list(rec.import_sources_by_category)
     if rec.import_sources_flat:
@@ -254,11 +264,29 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         if block is None and rec.parent_slug:
             block = ELEMENT_PRODUCTION_BLOCK.get(rec.parent_slug)
 
+        # PGM grouped parent: per-country mine/refinery/capacity is
+        # metal-specific (Pd ≠ Pt), so it's meaningless at the group level.
+        # Reserves are group-level in the PDF and stay populated.
+        if rec.slug == "platinum-group-metals":
+            block = None  # blanks mine + refinery + capacity blocks
+            # (reserves are filled from world_production[*].reserves regardless of block)
+
         # Pre-aggregate world production once per record (same across an
-        # element's category rows).
+        # element's category rows). Reserves get aggregated independent of
+        # the mine/refinery block decision so the PGM grouped parent (which
+        # has block=None) still shows per-country reserves — USGS reports
+        # PGM reserves at the group level and they're the only meaningful
+        # per-country figure for the parent row.
         prod_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
         capacity_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
         reserves_by_canonical: dict[str, tuple[Optional[float], Optional[str]]] = {}
+
+        if rec.world_production:
+            res_items = [
+                (wp.country, wp.reserves, wp.reserves_raw)
+                for wp in rec.world_production
+            ]
+            reserves_by_canonical = _aggregate_country_values(res_items)
 
         if block is not None and rec.world_production:
             prod_items = [
@@ -269,13 +297,8 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                 (wp.country, wp.capacity, None)
                 for wp in rec.world_production
             ]
-            res_items = [
-                (wp.country, wp.reserves, wp.reserves_raw)
-                for wp in rec.world_production
-            ]
             prod_by_canonical = _aggregate_country_values(prod_items)
             capacity_by_canonical = _aggregate_country_values(cap_items)
-            reserves_by_canonical = _aggregate_country_values(res_items)
 
         cat_rows = _category_rows_for(rec)
         annotate_name = len(cat_rows) > 1
