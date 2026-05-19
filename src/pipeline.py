@@ -66,6 +66,19 @@ def _postprocess_record(rec: ElementRecord) -> None:
     Keep this list short — every entry is a vote of no-confidence in the
     generic parser. Prefer fixing the parser when the pattern recurs.
     """
+    if rec.slug == "iron-and-steel":
+        # Generic `_find_row(salient, "Production", "mine")` doesn't match
+        # the iron-and-steel salient's "Pig iron production" / "Raw steel
+        # production" rows. Sum them into primary_smelting (per user spec
+        # both rows are post-mine smelting; mined stays N/A).
+        pig = _first_value(rec, "Pig iron production")
+        raw = _first_value(rec, "Raw steel production")
+        total = None
+        if pig is not None or raw is not None:
+            total = (pig or 0.0) + (raw or 0.0)
+        rec.primary_smelting_latest = total
+        rec.mined_production_latest = None
+
     if rec.slug == "rare-earths":
         # The rare-earths sheet quotes 9 separate REE-oxide prices in $/kg.
         # There is no single representative "rare earths price" — picking the
@@ -79,6 +92,15 @@ def _postprocess_record(rec: ElementRecord) -> None:
         rec.latest_year_sentinels.setdefault(
             "net_import_reliance_basis", "compounds and metals"
         )
+
+
+def _first_value(rec: ElementRecord, label_prefix: str) -> Optional[float]:
+    """Latest-year value of the first salient row whose label starts with `label_prefix`."""
+    pfx = label_prefix.lower()
+    for row in rec.salient_stats:
+        if row.label.lower().startswith(pfx):
+            return row.values.get(rec.latest_year)
+    return None
 
 
 def _pgm_fill_per_metal_summary(
@@ -296,18 +318,39 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
             rec.import_sources_flat = []
 
     elif alias.kind == "sub_product" and alias.parent_filter:
-        # Iron-and-steel sub-products (Pig iron / Raw steel). The parent
-        # salient_stats list has separate "<form> production" rows. Replace
-        # the alias's summary `mined_production_latest` with the chosen
-        # row's value. World production stays inherited verbatim (the PDF
-        # doesn't split it by sub-product).
+        # Iron-and-steel sub-products (Pig iron / Raw steel). Per user spec
+        # (2026-05-19), these rows should carry ONLY the production total
+        # for the latest year + per-country production (refinery block).
+        # All other summary + per-country fields blank out.
+        #
+        # The parent salient_stats list has separate "<form> production"
+        # rows; pick the one matching this alias's filter and route it to
+        # primary_smelting (not mined — both rows are post-mine smelting).
         pat = re.compile(alias.parent_filter, re.IGNORECASE)
+        v: Optional[float] = None
         for row in parent.salient_stats:
             if pat.search(row.label):
                 v = row.values.get(parent.latest_year)
-                rec.mined_production_latest = v
-                rec.primary_smelting_latest = v
                 break
+
+        # Reset every summary field except primary_smelting; reset every
+        # per-country field except the refinery_production block (which is
+        # already inherited from the parent's world_production list).
+        rec.mined_production_latest = None
+        rec.primary_smelting_latest = v
+        rec.secondary_smelting_latest = None
+        rec.imports_total_latest = None
+        rec.exports_total_latest = None
+        rec.apparent_consumption_latest = None
+        rec.price_usd_per_pound_latest = None
+        rec.price_unit_note = None
+        rec.net_import_reliance_pct_latest = None
+        rec.stockpile_fy2025_potential_acquisitions = None
+        rec.latest_year_sentinels = {}
+        # Blank import sources so the per-country imports_share_pct block
+        # falls through to N/A.
+        rec.import_sources_flat = []
+        rec.import_sources_by_category = []
 
     # grouped (without parent_filter) + sub_product (without parent_filter):
     # inherit parent verbatim (no extra work).

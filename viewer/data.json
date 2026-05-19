@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-19T16:49:12",
+  "generated_at": "2026-05-19T17:03:18",
   "elements": [
     {
       "slug": "abrasives",
@@ -6995,7 +6995,7 @@
       "price_quotes": [],
       "latest_year": "2025e",
       "mined_production_latest": null,
-      "primary_smelting_latest": null,
+      "primary_smelting_latest": 103.0,
       "secondary_smelting_latest": null,
       "imports_total_latest": 24.0,
       "exports_total_latest": 7.0,
@@ -31305,65 +31305,18 @@
       ],
       "price_quotes": [],
       "latest_year": "2025e",
-      "mined_production_latest": 21.0,
+      "mined_production_latest": null,
       "primary_smelting_latest": 21.0,
       "secondary_smelting_latest": null,
-      "imports_total_latest": 24.0,
-      "exports_total_latest": 7.0,
-      "apparent_consumption_latest": 95.0,
+      "imports_total_latest": null,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
-      "net_import_reliance_pct_latest": 13.0,
+      "net_import_reliance_pct_latest": null,
       "latest_year_sentinels": {},
-      "stockpile_fy2025_potential_acquisitions": 5570.0,
-      "import_sources_flat": [
-        {
-          "country": "Canada",
-          "share_pct": 23.0
-        },
-        {
-          "country": "Mexico",
-          "share_pct": 15.0
-        },
-        {
-          "country": "Brazil",
-          "share_pct": 13.0
-        },
-        {
-          "country": "Republic of Korea",
-          "share_pct": 9.0
-        },
-        {
-          "country": "other",
-          "share_pct": 40.0
-        }
-      ],
-      "import_sources_by_category": [
-        {
-          "category": null,
-          "countries": [
-            {
-              "country": "Canada",
-              "share_pct": 23.0
-            },
-            {
-              "country": "Mexico",
-              "share_pct": 15.0
-            },
-            {
-              "country": "Brazil",
-              "share_pct": 13.0
-            },
-            {
-              "country": "Republic of Korea",
-              "share_pct": 9.0
-            },
-            {
-              "country": "other",
-              "share_pct": 40.0
-            }
-          ]
-        }
-      ],
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production",
       "world_production_year_prev": "2024",
@@ -31881,65 +31834,18 @@
       ],
       "price_quotes": [],
       "latest_year": "2025e",
-      "mined_production_latest": 82.0,
+      "mined_production_latest": null,
       "primary_smelting_latest": 82.0,
       "secondary_smelting_latest": null,
-      "imports_total_latest": 24.0,
-      "exports_total_latest": 7.0,
-      "apparent_consumption_latest": 95.0,
+      "imports_total_latest": null,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
-      "net_import_reliance_pct_latest": 13.0,
+      "net_import_reliance_pct_latest": null,
       "latest_year_sentinels": {},
-      "stockpile_fy2025_potential_acquisitions": 5570.0,
-      "import_sources_flat": [
-        {
-          "country": "Canada",
-          "share_pct": 23.0
-        },
-        {
-          "country": "Mexico",
-          "share_pct": 15.0
-        },
-        {
-          "country": "Brazil",
-          "share_pct": 13.0
-        },
-        {
-          "country": "Republic of Korea",
-          "share_pct": 9.0
-        },
-        {
-          "country": "other",
-          "share_pct": 40.0
-        }
-      ],
-      "import_sources_by_category": [
-        {
-          "category": null,
-          "countries": [
-            {
-              "country": "Canada",
-              "share_pct": 23.0
-            },
-            {
-              "country": "Mexico",
-              "share_pct": 15.0
-            },
-            {
-              "country": "Brazil",
-              "share_pct": 13.0
-            },
-            {
-              "country": "Republic of Korea",
-              "share_pct": 9.0
-            },
-            {
-              "country": "other",
-              "share_pct": 40.0
-            }
-          ]
-        }
-      ],
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [],
       "import_sources_range": "2021-24",
       "world_production_label": "World Production",
       "world_production_year_prev": "2024",

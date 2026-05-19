@@ -438,22 +438,21 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
       mined / primary / secondary. Fix: a PGM-specific
       `_postprocess_record` branch that sums Pd + Pt into
       `mined_production_latest` for the parent. ~10 min.
-- [ ] **Iron-and-Steel parent has all-N/A summary cells** — same root
-      cause: no labelled "mine" / "refinery" row. Sub-aliases
-      (iron-and-steel-pig-iron, iron-and-steel-raw-steel) already have
-      correct values via `parent_filter`; only the parent row is empty.
-      Fix: a `_postprocess_record` branch that surfaces "Raw steel
-      production" as the parent's mined_production_latest (or sum Pig
-      iron + Raw steel — open design choice).
-- [ ] **Canonical country list audit** — the user-provided spec missed
-      Kyrgyzstan (a material antimony producer — 700 t mine + 260 kt
-      reserves). Added back in PR #3. We should systematically walk
-      every USGS country name we currently `map_country()` to `None` and
-      double-check none of the others have material data being dropped.
-      `src/countries.py:NON_COUNTRY_LABELS` and the silent-fall-through
-      branch are the two places to audit. Low priority — Kyrgyzstan was
-      flagged because the spot-check at PR-1 review surfaced it, but a
-      systematic pass would catch any sibling gaps.
+- [x] **Iron-and-Steel parent has all-N/A summary cells** — fixed in PR
+      that landed alongside the country-list revision. `_postprocess_record`
+      sums Pig iron + Raw steel into `primary_smelting_latest`; mined stays
+      N/A (per user — both rows are post-mine smelting). Sub-product rows
+      (Pig iron / Raw steel) now strip to only primary_smelting +
+      refinery_production country block; all other fields N/A.
+- [ ] **Canonical country list audit (post-revision)** — the user revised
+      the canonical list to 94 entries on 2026-05-19. The shorter list
+      means more USGS countries fall to `map_country() → None` than
+      before (Algeria, Albania, EU non-member microstates, most small
+      islands, etc.). We should systematically walk every USGS country
+      name we drop and surface any with material world-production or
+      reserves data so the user can decide whether to add them back
+      Kyrgyzstan-style. Low priority — most dropped entries are small
+      islands with no USGS mineral data.
 - [x] **Kyrgyzstan missing from spec** — fixed by extending the canonical
       list to 204 entries (Kyrgyzstan inserted alphabetically between
       Kosovo and Liechtenstein in the Europe block). Captures 700 t
