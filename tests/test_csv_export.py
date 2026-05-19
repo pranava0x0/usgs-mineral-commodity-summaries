@@ -132,12 +132,14 @@ class CsvLongFormatTests(unittest.TestCase):
         self.rows = _read(cols, rows)
 
     def test_total_column_count(self) -> None:
-        """8 identity + 9 summary + 5 × 204 country = 1,037 columns.
+        """8 identity + 9 summary + 5 × 94 country = 487 columns.
 
-        (Spec was 203 countries; Kyrgyzstan added back — absent from the
-        xlsx but USGS reports antimony production + reserves for it.)
+        (User-revised spec 2026-05-19: replaces earlier 204-entry list with
+        a focused 94-country alphabetical list — EU members listed
+        individually, US is a regular country column, smaller territories
+        dropped.)
         """
-        self.assertEqual(len(self.cols), 1037)
+        self.assertEqual(len(self.cols), 487)
 
     def test_first_columns_are_identity_then_summary(self) -> None:
         # Identity (8)
@@ -188,17 +190,27 @@ class CsvLongFormatTests(unittest.TestCase):
         self.assertEqual(antimony["Oxide"]["china__imports_share_pct"], "66")
         self.assertEqual(antimony["Ore and concentrates"]["china__imports_share_pct"], "N/A")
 
-    def test_eu_rollup_for_member_states(self) -> None:
-        """USGS country rows for EU members (Belgium, Germany, Italy) aggregate
-        into the canonical 'European Union' column."""
+    def test_eu_members_are_individual_columns(self) -> None:
+        """User-revised spec (2026-05-19) drops the European-Union rollup —
+        Belgium, Germany, Italy etc. each get their own column."""
         antimony = {r["import_category"]: r for r in self.rows if r["name"].startswith("Antimony")}
-        # Italy (9%) in Ore-and-concentrates
-        self.assertEqual(antimony["Ore and concentrates"]["european_union__imports_share_pct"], "9")
-        # Belgium (16%) in Oxide
-        self.assertEqual(antimony["Oxide"]["european_union__imports_share_pct"], "16")
-        # Bismuth's Germany (13%) rolls up
+        # Italy 9% lands in italy__imports_share_pct, not a rollup
+        self.assertEqual(antimony["Ore and concentrates"]["italy__imports_share_pct"], "9")
+        # Belgium 16% similarly individual
+        self.assertEqual(antimony["Oxide"]["belgium__imports_share_pct"], "16")
+        # Bismuth's Germany 13% lands in germany column
         bism = next(r for r in self.rows if r["name"] == "Bismuth")
-        self.assertEqual(bism["european_union__imports_share_pct"], "13")
+        self.assertEqual(bism["germany__imports_share_pct"], "13")
+        # And there's no european_union column anywhere
+        self.assertFalse(any(c.startswith("european_union") for c in self.cols))
+
+    def test_united_states_is_an_individual_country_column(self) -> None:
+        """User-revised spec promotes United States from "drop, summary-only"
+        to a regular country column. The slug `united_states__*` must exist
+        in every block."""
+        for suffix in ("imports_share_pct", "mine_production",
+                       "refinery_production", "capacity", "reserves"):
+            self.assertIn(f"united_states__{suffix}", self.cols)
 
     def test_kyrgyzstan_present(self) -> None:
         """Kyrgyzstan was absent from the user-provided spec xlsx but USGS
@@ -274,6 +286,62 @@ class CsvLongFormatTests(unittest.TestCase):
         for c in suspect_cols:
             self.assertNotEqual(antimony[c], "",
                                 f"{c!r} is blank for antimony — should be a value or 'N/A'")
+
+
+class IronAndSteelSpecialCasingTests(unittest.TestCase):
+    """End-to-end coverage for the iron-and-steel parent + sub-product
+    special casing (user spec 2026-05-19). Pulls the live CSV produced
+    by `python -m src.pipeline` rather than synthesizing a fixture —
+    the special casing is in `_postprocess_record` + `_make_alias`,
+    which sit upstream of `csv_export.build_rows`, so a fixture-only
+    test would skip the code we care about.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        import csv
+        from src import config
+        path = config.PROCESSED_DIR / "elements.csv"
+        if not path.exists():
+            raise unittest.SkipTest("elements.csv not present — run `python -m src.pipeline` first")
+        with path.open() as f:
+            reader = csv.DictReader(f)
+            cls.rows = list(reader)
+
+    def _row(self, name: str) -> dict[str, str]:
+        return next(r for r in self.rows if r["name"] == name)
+
+    def test_parent_row_primary_smelting_is_sum(self) -> None:
+        """Iron and Steel parent's `usgs_2025_total_primary_smelting` equals
+        Pig iron (21) + Raw steel (82) = 103. `mined_production` stays N/A
+        (both rows are post-mine smelting per user spec)."""
+        parent = self._row("Iron and Steel")
+        self.assertEqual(parent["usgs_2025_total_primary_smelting"], "103")
+        self.assertEqual(parent["usgs_2025_total_mined_production"], "N/A")
+
+    def test_sub_product_rows_only_have_primary_and_country(self) -> None:
+        """Pig iron / Raw steel rows: only `primary_smelting` summary and
+        the refinery_production per-country block. Everything else N/A."""
+        for name, expected in (("Iron and Steel (Pig iron)", "21"),
+                               ("Iron and Steel (Raw steel)", "82")):
+            row = self._row(name)
+            self.assertEqual(row["usgs_2025_total_primary_smelting"], expected)
+            # mined → N/A (was previously echoing the primary value)
+            self.assertEqual(row["usgs_2025_total_mined_production"], "N/A")
+            # All other summary fields blanked
+            for c in ("usgs_2025_total_secondary_smelting",
+                      "imports_for_consumption_total", "exports_total",
+                      "consumption_apparent", "price_metal_average_dollars_per_pound",
+                      "net_import_reliance_pct",
+                      "government_stockpile_fy2025_potential_acquisitions"):
+                self.assertEqual(row[c], "N/A", f"{name}: {c} should be N/A but is {row[c]!r}")
+            # Per-country imports_share_pct block fully N/A
+            import_cols = [c for c in row.keys() if c.endswith("__imports_share_pct")]
+            self.assertTrue(import_cols)
+            for c in import_cols:
+                self.assertEqual(row[c], "N/A", f"{name}: {c} should be N/A")
+            # Refinery block IS populated — China is a known iron-and-steel producer
+            self.assertEqual(row["china__refinery_production"], "830")
 
 
 if __name__ == "__main__":
