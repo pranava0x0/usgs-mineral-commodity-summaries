@@ -1,0 +1,218 @@
+{
+  "slug": "scandium",
+  "name": "Scandium",
+  "symbol": "Sc",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-scandium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "b68e156704a9f38a5f52cd30890901c3cdfe585bbcb7720b5e24238f0824d558",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, scandium oxide equivalent, unless otherwise specified)",
+  "price_unit_note": "Price, global, dollars per kilogram, range of average values",
+  "price_footnote_text": "Source: Asian Metal Ltd.",
+  "domestic_use_summary": "Domestically, scandium was not commercially mined or recovered in 2025. The United States had small-scale scandium-metal refining capacity in Ames, IA, and Tolleson, AZ; additional capacity was under development in Urbana, IL, and at the Elk Creek project in Nebraska. The principal uses for scandium in 2025 were in aerospace alloys and solid oxide fuel cells used in large-scale power generation and backup power systems for critical infrastructure. Other minor uses for scandium included electronics and alloys for military equipment and sporting goods.",
+  "events_trends_summary": "The U.S. Geological Survey estimated that global consumption of scandium oxide in 2025 was 60 tons, and that the primary global uses were aerospace alloys, other alloys, and solid oxide fuel cells. In April, China tightened its export controls on rare earth elements, adding specific controls on scandium metal, alloys, oxides, and compounds. In November, the United States stated that China will issue general licenses for rare- earth exports, effectively eliminating the controls introduced in April. As of December 2025, the April export controls remained in effect, although China began to issue general export licenses to selected exporters. In August, a company was awarded $10 million from the U.S. Department of War (DOW) to develop a U.S. mine-to- master alloy supply chain near Elk Creek, NE. In November, another company was awarded $29.9 million from the DOW to develop a U.S. supply of scandium and gallium; part of this award was for the development of a demonstration facility to separate and purify scandium from existing industrial waste. In September, the Defense Logistics Agency announced plans to procure more than 6,000 kilograms of scandium oxide for the National Defense Stockpile from a source in Sorel-Tracy, Quebec, Canada; this procurement would take place over a 5-year period with a minimum commitment of $2 million and a potential total value of as much as $40 million. In October, the Canada Growth Fund committed $18 million to the Sorel-Tracey operation to expand scandium oxide production capacity to 9 tons per year; this commitment was accompanied by an offtake agreement with the Government of Canada. In October, the Australian Government granted a mining license to a company for its Nyngan scandium project in New South Wales, Australia.",
+  "world_resources_summary": "Resources of scandium are abundant but rarely occur in high concentrations; as a result, economically recoverable scandium was produced mainly as a byproduct. Scandium resources have been identified in Australia, Canada, China, Finland, Guinea, Kazakhstan, Madagascar, Norway, the Philippines, Russia, South Africa, Ukraine, and the United States.",
+  "substitutes_summary": "Titanium and aluminum high-strength alloys as well as carbon-fiber materials may substitute in high- performance scandium-alloy applications. In some applications that rely on scandium’s unique properties, substitution is not possible.",
+  "recycling_summary": "None.",
+  "salient_stats": [
+    {
+      "label": "Imports, scandium oxide",
+      "footnote": null,
+      "section": "Imports, scandium oxide",
+      "subsection": null,
+      "values": {
+        "2021": 1.0,
+        "2022": 6.0,
+        "2023": 6.0,
+        "2024": 7.0,
+        "2025e": 4.0
+      },
+      "raw_values": {
+        "2021": "1",
+        "2022": "6",
+        "2023": "6",
+        "2024": "7",
+        "2025e": "4"
+      }
+    },
+    {
+      "label": "Scandium oxide, powder, 99.99% purity, 5- to 100- kilogram lot size",
+      "footnote": "3",
+      "section": "Price, global, dollars per kilogram, range of average values",
+      "subsection": null,
+      "values": {
+        "2021": 945.0,
+        "2022": 850.0,
+        "2023": 720.0,
+        "2024": 665.0,
+        "2025e": 640.0
+      },
+      "raw_values": {
+        "2021": "890–1,000",
+        "2022": "820–880",
+        "2023": "700–740",
+        "2024": "660–670",
+        "2025e": "640"
+      }
+    },
+    {
+      "label": "Scandium metal, ingot, 99.999% purity, 1- to 10-kilogram lot size",
+      "footnote": null,
+      "section": "Price, global, dollars per kilogram, range of average values",
+      "subsection": null,
+      "values": {
+        "2021": 5300.0,
+        "2022": 5400.0,
+        "2023": 5500.0,
+        "2024": 5200.0,
+        "2025e": 5200.0
+      },
+      "raw_values": {
+        "2021": "5300",
+        "2022": "5400",
+        "2023": "5500",
+        "2024": "5200",
+        "2025e": "5200"
+      }
+    },
+    {
+      "label": "Scandium-aluminum alloy, ingot, scandium 2%, 1- to 30- kilogram lot size",
+      "footnote": null,
+      "section": "Price, global, dollars per kilogram, range of average values",
+      "subsection": null,
+      "values": {
+        "2021": 42.0,
+        "2022": 40.0,
+        "2023": 37.0,
+        "2024": 34.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "42",
+        "2022": "40",
+        "2023": "37",
+        "2024": "34",
+        "2025e": "30"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Scandium oxide, powder, 99.99% purity, 5- to 100- kilogram lot size",
+      "unit_note": "Price, global, dollars per kilogram, range of average values",
+      "values": {
+        "2021": 945.0,
+        "2022": 850.0,
+        "2023": 720.0,
+        "2024": 665.0,
+        "2025e": 640.0
+      },
+      "raw_values": {
+        "2021": "890–1,000",
+        "2022": "820–880",
+        "2023": "700–740",
+        "2024": "660–670",
+        "2025e": "640"
+      }
+    },
+    {
+      "form": "Scandium metal, ingot, 99.999% purity, 1- to 10-kilogram lot size",
+      "unit_note": "Price, global, dollars per kilogram, range of average values",
+      "values": {
+        "2021": 5300.0,
+        "2022": 5400.0,
+        "2023": 5500.0,
+        "2024": 5200.0,
+        "2025e": 5200.0
+      },
+      "raw_values": {
+        "2021": "5300",
+        "2022": "5400",
+        "2023": "5500",
+        "2024": "5200",
+        "2025e": "5200"
+      }
+    },
+    {
+      "form": "Scandium-aluminum alloy, ingot, scandium 2%, 1- to 30- kilogram lot size",
+      "unit_note": "Price, global, dollars per kilogram, range of average values",
+      "values": {
+        "2021": 42.0,
+        "2022": 40.0,
+        "2023": 37.0,
+        "2024": 34.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "42",
+        "2022": "40",
+        "2023": "37",
+        "2024": "34",
+        "2025e": "30"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 4.0,
+  "exports_total_latest": null,
+  "apparent_consumption_latest": 100.0,
+  "price_usd_per_pound_latest": 640.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+      "share_pct": 89.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+          "share_pct": 89.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [],
+  "footnotes": {
+    "e": "Estimated. NA Not available.",
+    "1": "See also the Rare Earths chapter. Scandium is one of the 17 rare-earth elements.",
+    "2": "Estimated from Trade Mining LLC shipping records.",
+    "3": "Ex-works China.",
+    "4": "Source: Asian Metal Ltd.",
+    "5": "Defined as imports – exports. Quantitative export data were not available.",
+    "6": "Imports reported as Philippine in origin were reassigned to Japan because the finished scandium oxide was refined in Japan from Philippine scandium-oxalate feedstocks. The Philippines did not export finished scandium oxide.",
+    "7": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "8": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 12,000 tons."
+  }
+}

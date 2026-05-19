@@ -1,0 +1,2 @@
+pymupdf==1.26.5
+pydantic==2.9.2

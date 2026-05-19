@@ -1,0 +1,419 @@
+{
+  "slug": "tellurium",
+  "name": "Tellurium",
+  "symbol": "Te",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tellurium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "9207db697705244bfdac9812aa81cfefa0e7fe61a9936431136f05dff4f4ee74",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, tellurium content, unless otherwise specified)",
+  "price_unit_note": "Price, annual average, dollars per kilogram",
+  "price_footnote_text": "Minimum purity of 99.95%, free on board, U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "Tellurium is recovered principally as a byproduct of the electrolytic refining of primary copper, where it accumulates in the residues of copper anodes. In 2025, two primary electrolytic copper refineries operated in the United States, one in Texas and one in Utah, and produced copper telluride from tellurium- bearing anode slimes. Tellurium was not refined in the United States; copper telluride from both U.S. facilities was exported for further processing. Downstream companies processed imported tellurium to manufacture high-purity tellurium products, tellurium compounds for specialty applications, and tellurium dioxide. Domestic tellurium production, consumption, and stocks were withheld to avoid disclosing company proprietary data. Tellurium was used predominantly in the production of cadmium telluride (CdTe) for thin-film solar cells. Another significant application was for the production of bismuth telluride (BiTe), which is used in thermoelectric devices for cooling and energy generation. Metallurgical uses were as an alloying additive in steel to improve machining characteristics, in cast iron to control the depth of chill, in lead alloys to improve resistance to vibration and fatigue, in malleable iron as a carbide stabilizer, and as a minor additive in copper alloys to improve machinability without reducing conductivity. Tellurium also was used in blasting caps, in the chemical industry as an accelerator and vulcanizing agent in the processing of rubber, as a component of catalysts for synthetic fiber production, in photodetectors, as pigments to produce various colors in glass and ceramics, and in thermal-imaging devices. In 2025, estimated end uses for tellurium in global consumption were solar power cells, 70%; thermoelectric devices, 15%; metallurgy, 10%; and other applications, 5%.",
+  "events_trends_summary": "The supply of tellurium is directly affected by the supply of materials from which it is a byproduct, primarily copper. Recovery of copper telluride from domestic copper anode slimes was estimated to have decreased in 2025 from that in 2024, reflecting lower output of copper cathodes from primary electrolytic refineries in the United States. In August 2025, the leading U.S. producer of solar modules opened its fifth domestic manufacturing plant. Production at the new facility was expected to begin by yearend 2026 and to ramp up in the first half of 2027. The company, which predominantly manufactured CdTe modules, projected that it would produce as much as 14 gigawatts per year of solar panels in the United States at full capacity. As of February 2025, exporters in China were required to submit documents to the Government that verified the end users and end uses of tellurium shipments to foreign markets. The typical issuance time of an export license was 45 days, and a new license was required for any change in the recipient or intended use. In Europe, these export controls significantly limited the availability of tellurium; consequently, the annual average price for tellurium increased by 84% to an estimated $150 per kilogram in 2025 from $81.54 per kilogram in 2024. Supply restrictions in Europe resulted in increased spot buying in the United States, and the annual average price for tellurium in U.S. warehouses increased by 60% to an estimated $120 per kilogram in 2025 from $74.77 per kilogram in 2024. TELLURIUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026 China was the leading producer of refined tellurium in 2025 and accounted for 80% of estimated global production (excluding production in multiple countries for which available information was inadequate to make reliable estimates of output). Tellurium production in China increased significantly over the past 10 years, corresponding with an increase of nearly 75% in the production capacity of electrolytically refined copper. The production capacity of copper anodes, the feedstock material for electrolytic copper refineries, more than doubled over the same time period.",
+  "world_resources_summary": "Reserves and resources of tellurium are generally not reported at the mine or country level and cannot be reliably quantified. More than 90% of tellurium has been produced from anode slimes as a byproduct of primary electrolytic copper refining, and the remainder was derived from skimmings at lead refineries and from flue dusts and gases generated during the smelting of bismuth, copper, and lead-zinc ores. Other potential sources of tellurium include bismuth telluride and gold telluride ores.",
+  "substitutes_summary": "Several materials can replace tellurium in most of its uses, but usually with losses in efficiency or product characteristics. Amorphous silicon and copper indium gallium diselenide are the two principal competitors with CdTe in thin-film photovoltaic cells. Bismuth selenide and organic polymers can substitute for BiTe in some thermoelectric devices. Bismuth, calcium, lead, phosphorus, selenium, and sulfur can replace tellurium in many free- machining steels. Several of the chemical process reactions catalyzed by tellurium can be carried out with other catalysts or by means of noncatalyzed processes. In rubber compounding, selenium and (or) sulfur can substitute as vulcanization agents. The selenides and sulfides of niobium and tantalum can serve as electrical-conducting solid lubricants in place of tellurides of those metals.",
+  "recycling_summary": "Tellurium was recycled from CdTe solar cells in the United States, but the quantity recycled was limited because most of these cells were relatively new and had not reached the end of their useful life.",
+  "salient_stats": [
+    {
+      "label": "Production, copper telluride",
+      "footnote": null,
+      "section": "Production, copper telluride",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 42.0,
+        "2022": 37.0,
+        "2023": 8.0,
+        "2024": 6.0,
+        "2025e": 14.0
+      },
+      "raw_values": {
+        "2021": "42",
+        "2022": "37",
+        "2023": "8",
+        "2024": "6",
+        "2025e": "14"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "1",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 2.0,
+        "2022": 1.0,
+        "2023": 15.0,
+        "2024": 3.0,
+        "2025e": 3.0
+      },
+      "raw_values": {
+        "2021": "2",
+        "2022": "1",
+        "2023": "15",
+        "2024": "3",
+        "2025e": "3"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "2",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "United States",
+      "footnote": "3",
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 69.72,
+        "2022": 70.34,
+        "2023": 79.09,
+        "2024": 74.77,
+        "2025e": 120.0
+      },
+      "raw_values": {
+        "2021": "69.72",
+        "2022": "70.34",
+        "2023": "79.09",
+        "2024": "74.77",
+        "2025e": "120"
+      }
+    },
+    {
+      "label": "Europe",
+      "footnote": "4",
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 67.26,
+        "2022": 68.1,
+        "2023": 76.74,
+        "2024": 81.54,
+        "2025e": 150.0
+      },
+      "raw_values": {
+        "2021": "67.26",
+        "2022": "68.10",
+        "2023": "76.74",
+        "2024": "81.54",
+        "2025e": "150"
+      }
+    },
+    {
+      "label": "Stocks, producer, yearend",
+      "footnote": null,
+      "section": "Stocks, producer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 95.0,
+        "2022": 75.0,
+        "2023": null,
+        "2024": 25.0,
+        "2025e": 25.0
+      },
+      "raw_values": {
+        "2021": ">95",
+        "2022": ">75",
+        "2023": "E",
+        "2024": "<25",
+        "2025e": ">25"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "United States",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 69.72,
+        "2022": 70.34,
+        "2023": 79.09,
+        "2024": 74.77,
+        "2025e": 120.0
+      },
+      "raw_values": {
+        "2021": "69.72",
+        "2022": "70.34",
+        "2023": "79.09",
+        "2024": "74.77",
+        "2025e": "120"
+      }
+    },
+    {
+      "form": "Europe",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 67.26,
+        "2022": 68.1,
+        "2023": 76.74,
+        "2024": 81.54,
+        "2025e": 150.0
+      },
+      "raw_values": {
+        "2021": "67.26",
+        "2022": "68.10",
+        "2023": "76.74",
+        "2024": "81.54",
+        "2025e": "150"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 14.0,
+  "exports_total_latest": 3.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 120.0,
+  "net_import_reliance_pct_latest": 25.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": ">25",
+    "apparent_consumption": "W"
+  },
+  "import_sources_flat": [
+    {
+      "country": "Canada",
+      "share_pct": 64.0
+    },
+    {
+      "country": "Philippines",
+      "share_pct": 14.0
+    },
+    {
+      "country": "Japan",
+      "share_pct": 8.0
+    },
+    {
+      "country": "Germany",
+      "share_pct": 5.0
+    },
+    {
+      "country": "other",
+      "share_pct": 9.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 64.0
+        },
+        {
+          "country": "Philippines",
+          "share_pct": 14.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 9.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Refinery Production and Capacity",
+  "world_production": [
+    {
+      "country": "United States (copper telluride)",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "W",
+      "production_latest_raw": "W",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Bulgaria",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 27.0,
+      "production_latest_year": 28.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "27",
+      "production_latest_raw": "28",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 750.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "750",
+      "production_latest_raw": "800",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 70.0,
+      "production_latest_year": 61.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "70",
+      "production_latest_raw": "61",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 64.0,
+      "production_latest_year": 67.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "64",
+      "production_latest_raw": "67",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 5.0,
+      "production_latest_year": 5.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "5",
+      "production_latest_raw": "5",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Sweden (concentrate)",
+      "production_prev_year": 46.0,
+      "production_latest_year": 48.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "46",
+      "production_latest_raw": "48",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "Uzbekistan",
+      "production_prev_year": 18.0,
+      "production_latest_year": 18.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "18",
+      "production_latest_raw": "18",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "NA",
+      "production_latest_raw": "NA",
+      "reserves_raw": null,
+      "note": "footnote 8"
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 981.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "981",
+      "production_latest_raw": "1000",
+      "reserves_raw": null,
+      "note": "footnote 9"
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data.",
+    "1": "May include exports of copper telluride.",
+    "2": "Defined as production (tellurium content of copper telluride) + imports – exports ± adjustments for industry stock changes.",
+    "3": "Minimum purity of 99.95%, free on board, U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "4": "Minimum purity of 99.99%, in warehouse, Rotterdam. Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "5": "Defined as imports – exports ± adjustments for industry stock changes.",
+    "6": "Unless otherwise noted, data are for refined tellurium only to the extent possible. Countries that produced tellurium contained in copper ore and concentrate, copper smelter products (such as blister and anodes), copper refinery residues (such as anode slimes), and (or) other tellurium- containing materials but did not recover refined tellurium are excluded.",
+    "7": "Reported.",
+    "8": "In addition to the countries listed, Australia, Belgium, Chile, Germany, India, Indonesia, the Republic of Korea, and the Philippines may have produced refined tellurium, but available information was inadequate to make reliable estimates of output.",
+    "9": "Excludes U.S. production.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

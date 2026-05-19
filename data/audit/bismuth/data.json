@@ -1,0 +1,466 @@
+{
+  "slug": "bismuth",
+  "name": "Bismuth",
+  "symbol": "Bi",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-bismuth.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "9f2f3d99adeee708d55bb17b1329b18f6ac1dafe98debbb4ef716c175eff70a7",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons unless otherwise specified)",
+  "price_unit_note": "Price, average, dollars per pound",
+  "price_footnote_text": "Prices are based on data available through October 2025 of 99.99%-purity metal at warehouse (Rotterdam) in minimum lots of 1 ton. Source: Fastmarkets.",
+  "domestic_use_summary": "The United States ceased production of primary refined bismuth in 1997 and is highly import reliant. Bismuth is contained in some lead ores mined domestically. However, the last domestic primary lead smelter closed at yearend 2013; since then, all lead concentrates have been exported for smelting. Most domestic bismuth consumption was for chemicals used in cosmetic, industrial, laboratory, and pharmaceutical applications. Bismuth use in pharmaceuticals included bismuth subsalicylate (the active ingredient in over-the-counter stomach remedies) and other compounds used to treat burns, intestinal disorders, and stomach ulcers. Bismuth compounds such as bismuth nitrate, bismuth oxychloride, and bismuth vanadate are also used in industrial applications for the manufacture of ceramic glazes, crystalware, high-performance pigments, and pearlescent pigments. Bismuth has a wide variety of metallurgical applications, including use as an additive to improve metal integrity of malleable cast iron in the foundry industry and as a nontoxic replacement for lead in brass, free-machining aluminum alloys and steels, and solders. The use of bismuth in brass for pipe fittings, fixtures, and water meters increased after 2014, when the definition of “lead-free” under the Safe Drinking Water Act was modified to reduce the maximum lead content of “lead-free” pipes and plumbing fixtures to 0.25% from 8%. The melting point of bismuth is relatively low at 271 degrees Celsius. Bismuth is an important component of various fusible alloys that can be used in holding devices for grinding optical lenses, as plugs for abandoned oil wells, as a temporary filler to prevent damage to tubes in bending operations, as a triggering mechanism for fire sprinklers, and in other applications in which a low melting point is ideal. Bismuth-tellurium-oxide alloy film paste is used in the manufacture of semiconductor devices.",
+  "events_trends_summary": "In 2025, average monthly prices for bismuth (in-warehouse, Rotterdam) increased from $5.96 per pound in January to $17.50 per pound in October. The highest monthly average price was $34.22 per pound in March, owing to China issuing export controls on bismuth in response to the United States imposing 10% import tariffs on Chinese goods in February. The estimated annual average price in 2025 was $20 per pound, almost four times the price in 2024 and the highest annual average price on record. United States bismuth metal imports (under Harmonized System code 8106) from China decreased by 40% to an estimated 460 tons for the full year of 2025 from 760 tons in 2024. Estimated world production of bismuth was 16,000 tons in 2025. China accounted for 88% of the bismuth world production in 2025. Reported bismuth production capacities were unavailable.",
+  "world_resources_summary": "Bismuth reserves and resources data were generally not reported at a mine or country level and thus difficult to quantify. Bismuth minerals rarely occur in sufficient quantities to be mined as principal products; bismuth is produced most often as a byproduct during the processing of lead ores. In China and Vietnam, bismuth is also produced as a byproduct or coproduct of tungsten and other metal ore processing. In Japan and the Republic of Korea, bismuth is produced as a byproduct or coproduct of zinc ore processing. The Tasna Mine in Bolivia, which has been inactive since 1996, and a mine in China are the only mines where bismuth has been the primary product.",
+  "substitutes_summary": "Bismuth compounds can be replaced in pharmaceutical applications by alumina, antibiotics, calcium carbonate, and magnesia. Titanium-dioxide-coated mica flakes and fish-scale extracts are substitutes in certain pigment uses. Cadmium, indium, lead, and tin can partially replace bismuth in low-temperature solders. Resins can replace bismuth alloys for holding metal shapes during machining, and glycerin-filled glass bulbs can replace bismuth alloys in triggering devices for fire sprinklers. Free-machining alloys can contain lead, selenium, or tellurium as a replacement for bismuth. Bismuth is a nontoxic substitute for lead in plumbing and many other applications, including fishing weights, hunting ammunition, lubricating greases, and soldering alloys.",
+  "recycling_summary": "Recycled bismuth-containing alloy scrap was estimated to compose up to 10% of U.S. bismuth apparent consumption for the years 2021–25.",
+  "salient_stats": [
+    {
+      "label": "Refinery",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary (scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 80.0,
+        "2022": 80.0,
+        "2023": 80.0,
+        "2024": 80.0,
+        "2025e": 80.0
+      },
+      "raw_values": {
+        "2021": "80",
+        "2022": "80",
+        "2023": "80",
+        "2024": "80",
+        "2025e": "80"
+      }
+    },
+    {
+      "label": "Containing more than 99.99% bismuth, by weight",
+      "footnote": null,
+      "section": "Imports for consumption, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 740.0,
+        "2023": 731.0,
+        "2024": 626.0,
+        "2025e": 650.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "740",
+        "2023": "731",
+        "2024": "626",
+        "2025e": "650"
+      }
+    },
+    {
+      "label": "Other",
+      "footnote": null,
+      "section": "Imports for consumption, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 2340.0,
+        "2023": 1110.0,
+        "2024": 1180.0,
+        "2025e": 820.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "2340",
+        "2023": "1110",
+        "2024": "1180",
+        "2025e": "820"
+      }
+    },
+    {
+      "label": "Total",
+      "footnote": "1",
+      "section": "Imports for consumption, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": 1980.0,
+        "2022": 3080.0,
+        "2023": 1840.0,
+        "2024": 1800.0,
+        "2025e": 1500.0
+      },
+      "raw_values": {
+        "2021": "1980",
+        "2022": "3080",
+        "2023": "1840",
+        "2024": "1800",
+        "2025e": "1500"
+      }
+    },
+    {
+      "label": "Containing more than 99.99% bismuth, by weight",
+      "footnote": null,
+      "section": "Exports, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 144.0,
+        "2023": 131.0,
+        "2024": 430.0,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "144",
+        "2023": "131",
+        "2024": "430",
+        "2025e": "180"
+      }
+    },
+    {
+      "label": "Other",
+      "footnote": null,
+      "section": "Exports, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": 360.0,
+        "2023": 329.0,
+        "2024": 620.0,
+        "2025e": 360.0
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "360",
+        "2023": "329",
+        "2024": "620",
+        "2025e": "360"
+      }
+    },
+    {
+      "label": "Total",
+      "footnote": "2",
+      "section": "Exports, metal, alloys, and scrap",
+      "subsection": null,
+      "values": {
+        "2021": 1010.0,
+        "2022": 503.0,
+        "2023": 460.0,
+        "2024": 1050.0,
+        "2025e": 540.0
+      },
+      "raw_values": {
+        "2021": "1010",
+        "2022": "503",
+        "2023": "460",
+        "2024": "1050",
+        "2025e": "540"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "3",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1030.0,
+        "2022": 2600.0,
+        "2023": 1450.0,
+        "2024": 830.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "1030",
+        "2022": "2600",
+        "2023": "1450",
+        "2024": "830",
+        "2025e": "1000"
+      }
+    },
+    {
+      "label": "Reported",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 597.0,
+        "2022": 724.0,
+        "2023": 691.0,
+        "2024": 700.0,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "597",
+        "2022": "724",
+        "2023": "691",
+        "2024": "700",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Price, average, dollars per pound",
+      "footnote": null,
+      "section": "Price, average, dollars per pound",
+      "subsection": null,
+      "values": {
+        "2021": 3.74,
+        "2022": 3.9,
+        "2023": 4.08,
+        "2024": 5.4,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "3.74",
+        "2022": "3.90",
+        "2023": "4.08",
+        "2024": "5.40",
+        "2025e": "20"
+      }
+    },
+    {
+      "label": "Stocks, yearend, consumer, bismuth metal",
+      "footnote": null,
+      "section": "Stocks, yearend, consumer, bismuth metal",
+      "subsection": null,
+      "values": {
+        "2021": 297.0,
+        "2022": 356.0,
+        "2023": 365.0,
+        "2024": 365.0,
+        "2025e": 360.0
+      },
+      "raw_values": {
+        "2021": "297",
+        "2022": "356",
+        "2023": "365",
+        "2024": "365",
+        "2025e": "360"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 92.0,
+        "2022": 97.0,
+        "2023": 94.0,
+        "2024": 90.0,
+        "2025e": 92.0
+      },
+      "raw_values": {
+        "2021": "92",
+        "2022": "97",
+        "2023": "94",
+        "2024": "90",
+        "2025e": "92"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average, dollars per pound",
+      "unit_note": "Price, average, dollars per pound",
+      "values": {
+        "2021": 3.74,
+        "2022": 3.9,
+        "2023": 4.08,
+        "2024": 5.4,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "3.74",
+        "2022": "3.90",
+        "2023": "4.08",
+        "2024": "5.40",
+        "2025e": "20"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": 80.0,
+  "imports_total_latest": 1500.0,
+  "exports_total_latest": 540.0,
+  "apparent_consumption_latest": 1000.0,
+  "price_usd_per_pound_latest": 20.0,
+  "net_import_reliance_pct_latest": 92.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "China",
+      "share_pct": 56.0
+    },
+    {
+      "country": "Republic of Korea",
+      "share_pct": 22.0
+    },
+    {
+      "country": "Germany",
+      "share_pct": 13.0
+    },
+    {
+      "country": "other",
+      "share_pct": 9.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 56.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 22.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 13.0
+        },
+        {
+          "country": "other",
+          "share_pct": 9.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Refinery Production and Capacity",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 50.0,
+      "production_latest_year": 50.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "50",
+      "production_latest_raw": "50",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Bulgaria",
+      "production_prev_year": 48.0,
+      "production_latest_year": 50.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "48",
+      "production_latest_raw": "50",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 14000.0,
+      "production_latest_year": 14000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "14000",
+      "production_latest_raw": "14000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 500.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "500",
+      "production_latest_raw": "500",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 180.0,
+      "production_latest_year": 180.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "180",
+      "production_latest_raw": "180",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 1000.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1000",
+      "production_latest_raw": "1000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Laos",
+      "production_prev_year": 492.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "492",
+      "production_latest_raw": "500",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 16300.0,
+      "production_latest_year": 16000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "16300",
+      "production_latest_raw": "16000",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 8106.00.0000 (for the year 2021), and 8106.10.0000 and 8106.90.0000 (for the years 2022–25).",
+    "2": "Includes data for the following Schedule B numbers: 8106.00.0000 (for the year 2021), and 8106.10.0000 and 8106.90.0000 (for the years 2022–25).",
+    "3": "Defined as secondary production + imports – exports ± adjustments for industry stock changes.",
+    "4": "Prices are based on data available through October 2025 of 99.99%-purity metal at warehouse (Rotterdam) in minimum lots of 1 ton. Source: Fastmarkets.",
+    "5": "Defined as imports – exports ± adjustments for industry stock changes.",
+    "6": "Includes Hong Kong.",
+    "7": "Reported.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

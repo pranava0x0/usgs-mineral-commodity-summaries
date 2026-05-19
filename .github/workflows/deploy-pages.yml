@@ -1,0 +1,90 @@
+name: Deploy viewer to GitHub Pages
+
+# Builds the static viewer from the latest USGS MCS PDF extractions
+# and publishes it via GitHub Pages.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow one in-flight Pages deploy at a time; don't cancel a running deploy.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: python -m unittest discover tests
+
+      - name: Run extraction pipeline (uses cached PDFs in data/raw/)
+        run: python -m src.pipeline --audit
+
+      - name: Assemble _site/
+        run: |
+          set -euo pipefail
+          mkdir -p _site/viewer
+          cp viewer/index.html viewer/style.css viewer/viewer.js _site/viewer/
+          cp viewer/data.json viewer/data.csv _site/viewer/
+          mkdir -p _site/data
+          cp -r data/audit _site/data/audit
+          # Optional: ship the raw processed JSON/CSV for direct download too.
+          mkdir -p _site/data/processed
+          cp data/processed/elements.json data/processed/elements.csv _site/data/processed/
+          # Top-level redirect so the bare site URL opens the viewer.
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=viewer/">
+            <title>USGS Mineral Commodity Summaries — viewer</title>
+            <link rel="canonical" href="viewer/">
+          </head>
+          <body>
+            <p>Redirecting to <a href="viewer/">the viewer</a>.</p>
+          </body>
+          </html>
+          HTML
+          echo "Site layout:" && find _site -maxdepth 3 -type f | head -50
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

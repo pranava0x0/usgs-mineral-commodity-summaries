@@ -1,0 +1,515 @@
+{
+  "slug": "tungsten",
+  "name": "Tungsten",
+  "symbol": "W",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "c33271f3529cc546707c05c7d02c34c9cd321772dbcbb3e787c7715dcb889847",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, tungsten content, unless otherwise specified)",
+  "price_unit_note": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide",
+  "price_footnote_text": "Source: Argus Media group, Argus Tungsten Analytics.",
+  "domestic_use_summary": "Tungsten has not been mined commercially in the United States since 2015. There were seven U.S. companies that have the capability to convert tungsten concentrates, ammonium paratungstate (APT), tungsten oxide, and (or) scrap to tungsten metal powder, tungsten carbide powder, and (or) tungsten chemicals. An estimated 60% of the tungsten consumed in the United States was used in cemented carbide parts for cutting and wear-resistant applications, primarily in the construction, metalworking, mining, and oil- and gas-drilling industries. The remainder was used to make various alloys and specialty steels; electrodes, filaments, wires, and other components for electrical, electronic, heating, lighting, and welding applications; and chemicals for various applications.",
+  "events_trends_summary": "China continued to be the world’s leading producer, importer, and consumer of tungsten concentrates. China’s consumption and imports increased significantly in 2025. At the end of 2024, the United States, under section 301(b) of the Trade Act of 1974, increased tariffs to 50% on several tungsten products from China, and in February 2025 China implemented new export controls on selected tungsten items. As a result, prices rose sharply throughout 2025. Rotterdam prices increased from $266 to $551 per metric ton unit for 65% concentrate and from $331 to $675 per metric ton unit for APT. World mine production increased, especially from the start of production at the Boguty deposit in Kazakhstan. In Canada and the United States, multiple projects received awards under the Defense Production Act, Title III, including projects in Nevada, New Brunswick, and Yukon. In October, a joint venture between Kazakhstan and the United States to develop tungsten resources was announced.",
+  "world_resources_summary": "World tungsten resources are geographically widespread. China ranked first in the world in tungsten resources and reserves. Significant tungsten resources have been identified on every continent except Antarctica.",
+  "substitutes_summary": "Potential substitutes for cemented tungsten carbides include cemented carbides based on molybdenum carbide, niobium carbide, or titanium carbide; ceramics; ceramic-metallic composites (cermets); and tool steels. Most of these options reduce rather than replace the amount of tungsten used. Potential substitutes for other applications are as follows: molybdenum for certain tungsten mill products; molybdenum steels for tungsten steels, although most molybdenum steels still contain tungsten; lighting based on carbon nanotube filaments, induction technology, and light-emitting diodes for lighting based on tungsten electrodes or filaments; depleted uranium or lead for tungsten or tungsten alloys in applications requiring high density or the ability to shield radiation; and depleted uranium alloys or hardened steel for cemented tungsten carbides or tungsten alloys in armor-piercing projectiles. In some applications, substitution would result in increased cost or a loss in product performance.",
+  "recycling_summary": "The estimated quantity of secondary tungsten produced and the amount consumed from secondary sources by processors and end users in 2025 were withheld to avoid disclosing company proprietary data.",
+  "salient_stats": [
+    {
+      "label": "Mine",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Ores and concentrates",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1600.0,
+        "2022": 2130.0,
+        "2023": 1640.0,
+        "2024": 1550.0,
+        "2025e": 1700.0
+      },
+      "raw_values": {
+        "2021": "1600",
+        "2022": "2130",
+        "2023": "1640",
+        "2024": "1550",
+        "2025e": "1700"
+      }
+    },
+    {
+      "label": "Other forms",
+      "footnote": "1",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 10500.0,
+        "2022": 12200.0,
+        "2023": 10000.0,
+        "2024": 8730.0,
+        "2025e": 10000.0
+      },
+      "raw_values": {
+        "2021": "10500",
+        "2022": "12200",
+        "2023": "10000",
+        "2024": "8730",
+        "2025e": "10000"
+      }
+    },
+    {
+      "label": "Ores and concentrates",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 441.0,
+        "2022": 614.0,
+        "2023": 1510.0,
+        "2024": 1410.0,
+        "2025e": 1400.0
+      },
+      "raw_values": {
+        "2021": "441",
+        "2022": "614",
+        "2023": "1510",
+        "2024": "1410",
+        "2025e": "1400"
+      }
+    },
+    {
+      "label": "Other forms",
+      "footnote": "2",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 2970.0,
+        "2022": 3680.0,
+        "2023": 3180.0,
+        "2024": 3480.0,
+        "2025e": 3300.0
+      },
+      "raw_values": {
+        "2021": "2970",
+        "2022": "3680",
+        "2023": "3180",
+        "2024": "3480",
+        "2025e": "3300"
+      }
+    },
+    {
+      "label": "Concentrate",
+      "footnote": null,
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 1030.0,
+        "2022": 689.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "1030",
+        "2022": "689",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Other forms",
+      "footnote": null,
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 93.0,
+        "2022": 0.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "93",
+        "2022": "—",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Reported, concentrate",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Apparent, all forms",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide",
+      "footnote": "6",
+      "section": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide",
+      "subsection": null,
+      "values": {
+        "2021": 225.0,
+        "2022": 275.0,
+        "2023": 258.0,
+        "2024": 252.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "225",
+        "2022": "275",
+        "2023": "258",
+        "2024": "252",
+        "2025e": "380"
+      }
+    },
+    {
+      "label": "Stocks, industry, concentrate and other forms, yearend",
+      "footnote": null,
+      "section": "Stocks, industry, concentrate and other forms, yearend",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 50.0,
+        "2022": 50.0,
+        "2023": 50.0,
+        "2024": 50.0,
+        "2025e": 50.0
+      },
+      "raw_values": {
+        "2021": ">50",
+        "2022": ">50",
+        "2023": ">50",
+        "2024": ">50",
+        "2025e": ">50"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide",
+      "unit_note": "Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide",
+      "values": {
+        "2021": 225.0,
+        "2022": 275.0,
+        "2023": 258.0,
+        "2024": 252.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "225",
+        "2022": "275",
+        "2023": "258",
+        "2024": "252",
+        "2025e": "380"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 0.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 11700.0,
+  "exports_total_latest": 4700.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 380.0,
+  "net_import_reliance_pct_latest": 50.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": ">50",
+    "secondary_smelting": "W",
+    "apparent_consumption": "W"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Ores, concentrates, and other forms",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 26.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 14.0
+        },
+        {
+          "country": "Bolivia",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Vietnam",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 44.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 920.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": 570000.0,
+      "production_prev_raw": "920",
+      "production_latest_raw": "1000",
+      "reserves_raw": "570000",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Austria",
+      "production_prev_year": 840.0,
+      "production_latest_year": 840.0,
+      "capacity": null,
+      "reserves": 10000.0,
+      "production_prev_raw": "840",
+      "production_latest_raw": "840",
+      "reserves_raw": "10000",
+      "note": null
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 1700.0,
+      "production_latest_year": 1700.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1700",
+      "production_latest_raw": "1700",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 67000.0,
+      "production_latest_year": 67000.0,
+      "capacity": null,
+      "reserves": 2500000.0,
+      "production_prev_raw": "67000",
+      "production_latest_raw": "67000",
+      "reserves_raw": "2500000",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 0.0,
+      "production_latest_year": 2400.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "2400",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Korea, North",
+      "production_prev_year": 1900.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 29000.0,
+      "production_prev_raw": "1900",
+      "production_latest_raw": "2000",
+      "reserves_raw": "29000",
+      "note": null
+    },
+    {
+      "country": "Portugal",
+      "production_prev_year": 650.0,
+      "production_latest_year": 700.0,
+      "capacity": null,
+      "reserves": 3400.0,
+      "production_prev_raw": "650",
+      "production_latest_raw": "700",
+      "reserves_raw": "3400",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 1500.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 400000.0,
+      "production_prev_raw": "1500",
+      "production_latest_raw": "2000",
+      "reserves_raw": "400000",
+      "note": null
+    },
+    {
+      "country": "Rwanda",
+      "production_prev_year": 1300.0,
+      "production_latest_year": 1300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1300",
+      "production_latest_raw": "1300",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Spain",
+      "production_prev_year": 700.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": 66000.0,
+      "production_prev_raw": "700",
+      "production_latest_raw": "800",
+      "reserves_raw": "66000",
+      "note": null
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 3400.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": 170000.0,
+      "production_prev_raw": "3400",
+      "production_latest_raw": "3000",
+      "reserves_raw": "170000",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 1700.0,
+      "production_latest_year": 2400.0,
+      "capacity": null,
+      "reserves": 950000.0,
+      "production_prev_raw": "1700",
+      "production_latest_raw": "2400",
+      "reserves_raw": "950000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 82000.0,
+      "production_latest_year": 85000.0,
+      "capacity": null,
+      "reserves": 4700000.0,
+      "production_prev_raw": "82000",
+      "production_latest_raw": "85000",
+      "reserves_raw": ">4,700,000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+    "1": "Includes ammonium and other tungstates; ferrotungsten; tungsten carbide powders; tungsten metal powders; tungsten oxides, chlorides, and other tungsten compounds; unwrought tungsten; wrought tungsten forms; and tungsten waste and scrap.",
+    "2": "Includes ammonium and other tungstates, ferrotungsten, tungsten carbide powders, tungsten metal powders, unwrought tungsten, wrought tungsten forms, and tungsten waste and scrap.",
+    "3": "Defined as change in total inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer available.",
+    "4": "Defined for 2021–22 as mine production + secondary production + imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "5": "Source: Argus Media group, Argus Tungsten Analytics.",
+    "6": "A metric ton unit of tungsten trioxide contains 7.93 kilograms of tungsten.",
+    "7": "Defined for 2021–22 as imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "8": "Includes Hong Kong.",
+    "9": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "11": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 220,000 tons."
+  }
+}

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>USGS Critical Minerals — Imports / Exports</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header role="banner" class="page-header">
+    <div class="brand">
+      <h1>Critical Minerals — Imports &amp; Exports</h1>
+      <p class="subtitle">USGS Mineral Commodity Summaries · primary-source extraction</p>
+    </div>
+    <div class="header-meta">
+      <span class="pill outline" id="edition-pill">MCS edition</span>
+      <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☼</button>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <section id="overview" aria-labelledby="overview-h">
+      <h2 id="overview-h" class="eyebrow">Latest-year summary</h2>
+      <p id="units-note" class="units-note"></p>
+      <div class="table-wrap">
+        <table id="overview-table" class="data-table">
+          <thead>
+            <tr>
+              <th scope="col">Element</th>
+              <th scope="col" class="num">Mined production</th>
+              <th scope="col" class="num">Primary smelting</th>
+              <th scope="col" class="num">Secondary smelting</th>
+              <th scope="col" class="num">Imports for consumption (total)</th>
+              <th scope="col" class="num">Exports (total)</th>
+              <th scope="col" class="num">Apparent consumption</th>
+              <th scope="col" class="num">Price ($/lb)</th>
+              <th scope="col" class="num">Net import reliance %</th>
+              <th scope="col">Source</th>
+            </tr>
+          </thead>
+          <tbody id="overview-body"></tbody>
+        </table>
+      </div>
+      <p class="footnote-note" id="overview-footnote"></p>
+    </section>
+
+    <section id="detail" aria-labelledby="detail-h" hidden>
+      <h2 id="detail-h" class="eyebrow">Detail</h2>
+      <div id="detail-body"></div>
+    </section>
+  </main>
+
+  <footer role="contentinfo" class="page-footer">
+    <p>Data extracted from <a id="primary-source" href="#" rel="noopener">USGS MCS</a> ·
+       generated <span id="generated-at"></span> ·
+       null values render as <em class="muted-cell">Not available</em> per
+       <a href="../DESIGN.md">DESIGN.md §11</a>.
+    </p>
+  </footer>
+
+  <script src="viewer.js"></script>
+</body>
+</html>

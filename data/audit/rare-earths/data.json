@@ -1,0 +1,858 @@
+{
+  "slug": "rare-earths",
+  "name": "Rare Earths (grouped)",
+  "symbol": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
+  "pdf_page_count": 2,
+  "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
+  "price_unit_note": "Price, average, dollars per kilogram",
+  "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
+  "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
+  "world_resources_summary": "Rare earths are relatively abundant in the Earth’s crust, but minable concentrations are less common than for most other mineral commodities. In North America, measured and indicated resources of rare earths were estimated to include 3.6 million tons in the United States and more than 14 million tons in Canada.",
+  "substitutes_summary": "Substitutes are available for many applications but generally are less effective.",
+  "recycling_summary": "Limited quantities of rare earths were recovered from batteries, permanent magnets, and fluorescent lamps.",
+  "salient_stats": [
+    {
+      "label": "Mineral concentrates",
+      "footnote": "2",
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 42400.0,
+        "2022": 42500.0,
+        "2023": 41600.0,
+        "2024": 45500.0,
+        "2025e": 51000.0
+      },
+      "raw_values": {
+        "2021": "42400",
+        "2022": "42500",
+        "2023": "41600",
+        "2024": "45500",
+        "2025e": "51000"
+      }
+    },
+    {
+      "label": "Compounds and metals",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 120.0,
+        "2022": 95.0,
+        "2023": 800.0,
+        "2024": 4300.0,
+        "2025e": 8900.0
+      },
+      "raw_values": {
+        "2021": "120",
+        "2022": "95",
+        "2023": "800",
+        "2024": "4300",
+        "2025e": "8900"
+      }
+    },
+    {
+      "label": "Compounds",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 7730.0,
+        "2022": 10800.0,
+        "2023": 8970.0,
+        "2024": 8120.0,
+        "2025e": 21000.0
+      },
+      "raw_values": {
+        "2021": "7730",
+        "2022": "10800",
+        "2023": "8970",
+        "2024": "8120",
+        "2025e": "21000"
+      }
+    },
+    {
+      "label": "Ferrocerium, alloys",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": "Metals",
+      "values": {
+        "2021": 330.0,
+        "2022": 395.0,
+        "2023": 259.0,
+        "2024": 238.0,
+        "2025e": 1100.0
+      },
+      "raw_values": {
+        "2021": "330",
+        "2022": "395",
+        "2023": "259",
+        "2024": "238",
+        "2025e": "1100"
+      }
+    },
+    {
+      "label": "Rare-earth metals and alloys",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": "Metals",
+      "values": {
+        "2021": 579.0,
+        "2022": 487.0,
+        "2023": 476.0,
+        "2024": 96.0,
+        "2025e": 350.0
+      },
+      "raw_values": {
+        "2021": "579",
+        "2022": "487",
+        "2023": "476",
+        "2024": "96",
+        "2025e": "350"
+      }
+    },
+    {
+      "label": "Ores and compounds",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 45700.0,
+        "2022": 45900.0,
+        "2023": 20700.0,
+        "2024": 37500.0,
+        "2025e": 14000.0
+      },
+      "raw_values": {
+        "2021": "45700",
+        "2022": "45900",
+        "2023": "20700",
+        "2024": "37500",
+        "2025e": "14000"
+      }
+    },
+    {
+      "label": "Ferrocerium, alloys",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": "Metals",
+      "values": {
+        "2021": 825.0,
+        "2022": 1520.0,
+        "2023": 817.0,
+        "2024": 902.0,
+        "2025e": 890.0
+      },
+      "raw_values": {
+        "2021": "825",
+        "2022": "1520",
+        "2023": "817",
+        "2024": "902",
+        "2025e": "890"
+      }
+    },
+    {
+      "label": "Rare-earth metals and alloys",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": "Metals",
+      "values": {
+        "2021": 20.0,
+        "2022": 24.0,
+        "2023": 63.0,
+        "2024": 347.0,
+        "2025e": 430.0
+      },
+      "raw_values": {
+        "2021": "20",
+        "2022": "24",
+        "2023": "63",
+        "2024": "347",
+        "2025e": "430"
+      }
+    },
+    {
+      "label": "Consumption, apparent, compounds and metals",
+      "footnote": "5",
+      "section": "Consumption, apparent, compounds and metals",
+      "subsection": null,
+      "values": {
+        "2021": 7900.0,
+        "2022": 10200.0,
+        "2023": 8600.0,
+        "2024": 9010.0,
+        "2025e": 27000.0
+      },
+      "raw_values": {
+        "2021": "7900",
+        "2022": "10200",
+        "2023": "8600",
+        "2024": "9010",
+        "2025e": "27000"
+      }
+    },
+    {
+      "label": "Lanthanum oxide, 99.5% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 1.51,
+        "2022": 1.39,
+        "2023": 0.96,
+        "2024": 0.97,
+        "2025e": 1.0
+      },
+      "raw_values": {
+        "2021": "1.51",
+        "2022": "1.39",
+        "2023": "0.96",
+        "2024": "0.97",
+        "2025e": "1.00"
+      }
+    },
+    {
+      "label": "Cerium oxide, 99.5% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 1.54,
+        "2022": 1.45,
+        "2023": 1.03,
+        "2024": 1.21,
+        "2025e": 1.71
+      },
+      "raw_values": {
+        "2021": "1.54",
+        "2022": "1.45",
+        "2023": "1.03",
+        "2024": "1.21",
+        "2025e": "1.71"
+      }
+    },
+    {
+      "label": "Mischmetal, 65% cerium, 35% lanthanum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 5.66,
+        "2022": 6.52,
+        "2023": 5.47,
+        "2024": 5.45,
+        "2025e": 5.62
+      },
+      "raw_values": {
+        "2021": "5.66",
+        "2022": "6.52",
+        "2023": "5.47",
+        "2024": "5.45",
+        "2025e": "5.62"
+      }
+    },
+    {
+      "label": "Praseodymium oxide, 99.99% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 93.0,
+        "2022": 128.0,
+        "2023": 76.0,
+        "2024": 56.0,
+        "2025e": 74.0
+      },
+      "raw_values": {
+        "2021": "93",
+        "2022": "128",
+        "2023": "76",
+        "2024": "56",
+        "2025e": "74"
+      }
+    },
+    {
+      "label": "Neodymium oxide, 99.5% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 98.0,
+        "2022": 134.0,
+        "2023": 78.0,
+        "2024": 56.0,
+        "2025e": 73.0
+      },
+      "raw_values": {
+        "2021": "98",
+        "2022": "134",
+        "2023": "78",
+        "2024": "56",
+        "2025e": "73"
+      }
+    },
+    {
+      "label": "Neodymium-praseodymium (NdPr) oxide, 99% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 92.0,
+        "2022": 124.0,
+        "2023": 75.0,
+        "2024": 55.0,
+        "2025e": 69.0
+      },
+      "raw_values": {
+        "2021": "92",
+        "2022": "124",
+        "2023": "75",
+        "2024": "55",
+        "2025e": "69"
+      }
+    },
+    {
+      "label": "Samarium oxide, 99.5% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 2.03,
+        "2022": 3.34,
+        "2023": 2.17,
+        "2024": 2.01,
+        "2025e": 2.82
+      },
+      "raw_values": {
+        "2021": "2.03",
+        "2022": "3.34",
+        "2023": "2.17",
+        "2024": "2.01",
+        "2025e": "2.82"
+      }
+    },
+    {
+      "label": "Europium oxide, 99.99% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 31.0,
+        "2022": 30.0,
+        "2023": 27.0,
+        "2024": 27.0,
+        "2025e": 27.0
+      },
+      "raw_values": {
+        "2021": "31",
+        "2022": "30",
+        "2023": "27",
+        "2024": "27",
+        "2025e": "27"
+      }
+    },
+    {
+      "label": "Gadolinium oxide, 99.99% minimum",
+      "footnote": null,
+      "section": "Price, average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 47.0,
+        "2022": 75.0,
+        "2023": 47.0,
+        "2024": 28.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "47",
+        "2022": "75",
+        "2023": "47",
+        "2024": "28",
+        "2025e": "30"
+      }
+    },
+    {
+      "label": "Employment, mine and mill, annual average, number",
+      "footnote": null,
+      "section": "Employment, mine and mill, annual average, number",
+      "subsection": null,
+      "values": {
+        "2021": 293.0,
+        "2022": 350.0,
+        "2023": 450.0,
+        "2024": 570.0,
+        "2025e": 670.0
+      },
+      "raw_values": {
+        "2021": "293",
+        "2022": "350",
+        "2023": "450",
+        "2024": "570",
+        "2025e": "670"
+      }
+    },
+    {
+      "label": "Compounds and metals",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 95.0,
+        "2022": 95.0,
+        "2023": 90.0,
+        "2024": 53.0,
+        "2025e": 67.0
+      },
+      "raw_values": {
+        "2021": ">95",
+        "2022": ">95",
+        "2023": ">90",
+        "2024": "53",
+        "2025e": "67"
+      }
+    },
+    {
+      "label": "Mineral concentrates",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "E",
+        "2022": "E",
+        "2023": "E",
+        "2024": "E",
+        "2025e": "E"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Lanthanum oxide, 99.5% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 1.51,
+        "2022": 1.39,
+        "2023": 0.96,
+        "2024": 0.97,
+        "2025e": 1.0
+      },
+      "raw_values": {
+        "2021": "1.51",
+        "2022": "1.39",
+        "2023": "0.96",
+        "2024": "0.97",
+        "2025e": "1.00"
+      }
+    },
+    {
+      "form": "Cerium oxide, 99.5% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 1.54,
+        "2022": 1.45,
+        "2023": 1.03,
+        "2024": 1.21,
+        "2025e": 1.71
+      },
+      "raw_values": {
+        "2021": "1.54",
+        "2022": "1.45",
+        "2023": "1.03",
+        "2024": "1.21",
+        "2025e": "1.71"
+      }
+    },
+    {
+      "form": "Mischmetal, 65% cerium, 35% lanthanum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 5.66,
+        "2022": 6.52,
+        "2023": 5.47,
+        "2024": 5.45,
+        "2025e": 5.62
+      },
+      "raw_values": {
+        "2021": "5.66",
+        "2022": "6.52",
+        "2023": "5.47",
+        "2024": "5.45",
+        "2025e": "5.62"
+      }
+    },
+    {
+      "form": "Praseodymium oxide, 99.99% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 93.0,
+        "2022": 128.0,
+        "2023": 76.0,
+        "2024": 56.0,
+        "2025e": 74.0
+      },
+      "raw_values": {
+        "2021": "93",
+        "2022": "128",
+        "2023": "76",
+        "2024": "56",
+        "2025e": "74"
+      }
+    },
+    {
+      "form": "Neodymium oxide, 99.5% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 98.0,
+        "2022": 134.0,
+        "2023": 78.0,
+        "2024": 56.0,
+        "2025e": 73.0
+      },
+      "raw_values": {
+        "2021": "98",
+        "2022": "134",
+        "2023": "78",
+        "2024": "56",
+        "2025e": "73"
+      }
+    },
+    {
+      "form": "Neodymium-praseodymium (NdPr) oxide, 99% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 92.0,
+        "2022": 124.0,
+        "2023": 75.0,
+        "2024": 55.0,
+        "2025e": 69.0
+      },
+      "raw_values": {
+        "2021": "92",
+        "2022": "124",
+        "2023": "75",
+        "2024": "55",
+        "2025e": "69"
+      }
+    },
+    {
+      "form": "Samarium oxide, 99.5% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 2.03,
+        "2022": 3.34,
+        "2023": 2.17,
+        "2024": 2.01,
+        "2025e": 2.82
+      },
+      "raw_values": {
+        "2021": "2.03",
+        "2022": "3.34",
+        "2023": "2.17",
+        "2024": "2.01",
+        "2025e": "2.82"
+      }
+    },
+    {
+      "form": "Europium oxide, 99.99% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 31.0,
+        "2022": 30.0,
+        "2023": 27.0,
+        "2024": 27.0,
+        "2025e": 27.0
+      },
+      "raw_values": {
+        "2021": "31",
+        "2022": "30",
+        "2023": "27",
+        "2024": "27",
+        "2025e": "27"
+      }
+    },
+    {
+      "form": "Gadolinium oxide, 99.99% minimum",
+      "unit_note": "Price, average, dollars per kilogram",
+      "values": {
+        "2021": 47.0,
+        "2022": 75.0,
+        "2023": 47.0,
+        "2024": 28.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "47",
+        "2022": "75",
+        "2023": "47",
+        "2024": "28",
+        "2025e": "30"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 51000.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 22450.0,
+  "exports_total_latest": 15320.0,
+  "apparent_consumption_latest": 27000.0,
+  "price_usd_per_pound_latest": 1.0,
+  "net_import_reliance_pct_latest": 67.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Rare-earth compounds and metals",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 71.0
+        },
+        {
+          "country": "Malaysia",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 5.0
+        },
+        {
+          "country": "Estonia",
+          "share_pct": 5.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 45500.0,
+      "production_latest_year": 51000.0,
+      "capacity": null,
+      "reserves": 1900000.0,
+      "production_prev_raw": "45500",
+      "production_latest_raw": "51000",
+      "reserves_raw": "1900000",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 29000.0,
+      "production_latest_year": 29000.0,
+      "capacity": null,
+      "reserves": 6300000.0,
+      "production_prev_raw": "29000",
+      "production_latest_raw": "29000",
+      "reserves_raw": "6300000",
+      "note": "footnote 13"
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 560.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 21000000.0,
+      "production_prev_raw": "560",
+      "production_latest_raw": "2000",
+      "reserves_raw": "21000000",
+      "note": null
+    },
+    {
+      "country": "Burma",
+      "production_prev_year": 27000.0,
+      "production_latest_year": 22000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "27000",
+      "production_latest_raw": "22000",
+      "reserves_raw": "NA",
+      "note": "footnote 12"
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 830000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "830000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 270000.0,
+      "production_latest_year": 270000.0,
+      "capacity": null,
+      "reserves": 44000000.0,
+      "production_prev_raw": "270000",
+      "production_latest_raw": "270000",
+      "reserves_raw": "44000000",
+      "note": null
+    },
+    {
+      "country": "Greenland",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 1500000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "1500000",
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 2900.0,
+      "production_latest_year": 2900.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2900",
+      "production_latest_raw": "2900",
+      "reserves_raw": "NA",
+      "note": "footnote 14"
+    },
+    {
+      "country": "Madagascar",
+      "production_prev_year": 1400.0,
+      "production_latest_year": 2700.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1400",
+      "production_latest_raw": "2700",
+      "reserves_raw": "NA",
+      "note": "footnote 12"
+    },
+    {
+      "country": "Malaysia",
+      "production_prev_year": 140.0,
+      "production_latest_year": 110.0,
+      "capacity": null,
+      "reserves": 710000.0,
+      "production_prev_raw": "140",
+      "production_latest_raw": "110",
+      "reserves_raw": "710000",
+      "note": "footnote 12"
+    },
+    {
+      "country": "Nigeria",
+      "production_prev_year": 1500.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1500",
+      "production_latest_raw": "1500",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 2600.0,
+      "production_latest_year": 2600.0,
+      "capacity": null,
+      "reserves": 3800000.0,
+      "production_prev_raw": "2600",
+      "production_latest_raw": "2600",
+      "reserves_raw": "3800000",
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 860000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "860000",
+      "note": null
+    },
+    {
+      "country": "Tanzania",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 890000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "890000",
+      "note": null
+    },
+    {
+      "country": "Thailand",
+      "production_prev_year": 2100.0,
+      "production_latest_year": 4800.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2100",
+      "production_latest_raw": "4800",
+      "reserves_raw": "NA",
+      "note": "footnote 12"
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 300.0,
+      "production_latest_year": 150.0,
+      "capacity": null,
+      "reserves": 3500000.0,
+      "production_prev_raw": "300",
+      "production_latest_raw": "150",
+      "reserves_raw": "3500000",
+      "note": "footnote 12"
+    },
+    {
+      "country": "Other",
+      "production_prev_year": 1000.0,
+      "production_latest_year": 550.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1000",
+      "production_latest_raw": "550",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 380000.0,
+      "production_latest_year": 390000.0,
+      "capacity": null,
+      "reserves": 85000000.0,
+      "production_prev_raw": "380000",
+      "production_latest_raw": "390000",
+      "reserves_raw": ">85,000,000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+    "1": "Data include lanthanides and yttrium but exclude most scandium. See also the Rare Earths (Heavy), Scandium, and Yttrium chapters.",
+    "2": "Excludes monazite concentrates.",
+    "3": "Production includes compounds from California and Utah. Data are rounded to two significant digits.",
+    "4": "REO equivalent or content of various materials were estimated. Source: U.S. Census Bureau.",
+    "5": "Defined as production + imports – exports.",
+    "6": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "7": "Defined as imports – exports.",
+    "8": "Includes Hong Kong.",
+    "9": "Gross weight. See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "11": "Reported.",
+    "12": "Estimated based on reported import data for China. Source: Trade Data Monitor Inc.",
+    "13": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 3.3 million tons.",
+    "14": "A 2015 report from OSCOM indicated that monazite reserves from their operations were 256,000 tons; rare-earth reserves were not reported."
+  }
+}

@@ -1,0 +1,527 @@
+{
+  "slug": "graphite",
+  "name": "Graphite (natural)",
+  "symbol": "C",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "09ec621ed6400162e7f0b09b1e0ae8260a976d968c1936d69592fe5347f8df38",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons unless otherwise specified)",
+  "price_unit_note": "Price, average unit value of imports, dollars per metric ton at",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, no natural graphite was produced domestically in the United States. Domestic production of amorphous graphite was last recorded in Montana in 1989, and flake graphite was last produced in Texas in 1979. In 2025, U.S. companies consumed an estimated 71,000 tons of natural graphite valued at $128 million. Natural graphite was widely used in batteries, brake linings, lubricants, powdered metals, refractory applications, and steelmaking, and was also incorporated into some defense-related materials and components. During 2025, U.S. natural graphite imports were an estimated 79,000 tons, consisting of 73.4% flake and high-purity, 26.2% amorphous, and 0.4% lump and chip graphite.",
+  "events_trends_summary": "In 2022, U.S. apparent consumption of natural graphite reached its highest level since 1978 and remained elevated through 2025. Imports of graphite battery anode material, natural and synthetic, during the first 8 months of 2025 were 43,400 tons compared with 28,100 tons for the same period in 2024. The leading sources in 2025 were China (55%), Indonesia (31%), and the Republic of Korea (14%). In December 2024, a group of graphite producers based in North America submitted a petition asking the U.S. Department of Commerce (DOC) and the U.S. International Trade Commission (ITC) to review China’s trade practices involving graphite active anode material (AAM). The ITC determined that AAM from China was likely being sold at less than fair market value in the United States. In 2025, the DOC released its preliminary results, which set antidumping duties at 93.50% and countervailing duties ranging from 11.58% to 721.03% depending on the company. In 2025, China was the world’s leading natural graphite supplier, producing an estimated 82% of total world production. Most production of natural graphite in China was crystalline flake. During the first 9 months of the year, China exported 115,000 tons of natural graphite, 6% more than the 109,000 tons exported during the same period in 2024. During the first 9 months of 2025, China exported 37,400 tons of spherical purified graphite (SPG), 29% more than the 29,100 tons exported during the same period in 2024. The leading recipients of natural graphite from China in the first 9 months of 2025 were Japan (36%), Indonesia (22%), the Republic of Korea (10%), and Germany (8%). The leading recipients of SPG from China in the first 9 months of 2025 were the Republic of Korea (40%), Indonesia (33%), Japan (16%), and the United States (11%). The increase of exports to Indonesia were likely owing to a Chinese company’s new SPG facility that began production in Central Java, Indonesia. Chinese companies were also developing or considering SPG facilities in Finland, Malaysia, Morocco, Oman, and Sweden. GRAPHITE (NATURAL) U.S. Geological Survey, Mineral Commodity Summaries, February 2026 Five companies were considering or developing graphite-mining projects in the United States: two in Alabama, one in Alaska, one in Montana, and one in New York. In Alaska, the company completed a feasibility study in 2025, which included plans to produce an average of 175,000 tons per year of graphite concentrate over 20 years. The project was also added to the Fixing America’s Surface Transport Act dashboard, which seeks to decrease permitting timelines. In New York, a zinc producer continued development of the Kilbourne graphite deposit near its existing zinc mine. The company also began construction of a graphite demonstration plant to produce natural graphite concentrate for qualification purposes. In 2025, Tanzania more than doubled graphite production to 75,000 tons. Commercial production began in 2017 with a Tanzanian company in Manyara, and in 2019 a Chinese company started production in Tanga. In 2024, Australian and Chinese companies commissioned graphite mines in Lindi and Manyara, respectively. In Mozambique, a Chinese company began production at a new graphite mine in Niassa and an Australian company restarted production at the Balama Mine in June after being suspended since late 2024. In Brazil, two companies continued to ramp up production at the Boa Sorte and Santa Cruz graphite mines, both of which began production in 2024. Additionally, a Russian company began graphite production at the Soyuznoye deposit in 2025. SPG was produced in the United States by two companies in Illinois and Louisiana. In Alabama, a company commissioned an SPG qualification line at its plant in Kellyton. At least eight other companies were considering SPG plants in the United States. In Australia, a company commissioned an SPG demonstration plant in Queensland.",
+  "world_resources_summary": "Domestic resources of graphite are relatively small, but the rest of the world’s resources exceed 800 million tons of recoverable graphite.",
+  "substitutes_summary": "Synthetic graphite powder, scrap from discarded machined shapes, and calcined petroleum coke compete for use in iron and steel production. Synthetic graphite powder and secondary synthetic graphite from machining graphite shapes compete for use in battery applications. Finely ground coke with olivine is a potential competitor in foundry-facing applications. Molybdenum disulfide competes as a dry lubricant but is more sensitive to oxidizing conditions.",
+  "recycling_summary": "Refractory brick and linings, alumina-graphite refractories for continuous metal castings, magnesia- graphite refractory brick for basic oxygen and electric arc furnaces, and insulation brick was increasing, with material being recycled into products such as brake linings and thermal insulation. The abundance of graphite in the world market inhibits increased recycling efforts. Information on the quantity and value of recycled graphite was not available.",
+  "salient_stats": [
+    {
+      "label": "Production, mine",
+      "footnote": null,
+      "section": "Production, mine",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 53000.0,
+        "2022": 89200.0,
+        "2023": 73500.0,
+        "2024": 73900.0,
+        "2025e": 79000.0
+      },
+      "raw_values": {
+        "2021": "53000",
+        "2022": "89200",
+        "2023": "73500",
+        "2024": "73900",
+        "2025e": "79000"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 8660.0,
+        "2022": 9500.0,
+        "2023": 7780.0,
+        "2024": 8740.0,
+        "2025e": 8400.0
+      },
+      "raw_values": {
+        "2021": "8660",
+        "2022": "9500",
+        "2023": "7780",
+        "2024": "8740",
+        "2025e": "8400"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "1",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 44300.0,
+        "2022": 79700.0,
+        "2023": 65700.0,
+        "2024": 65200.0,
+        "2025e": 71000.0
+      },
+      "raw_values": {
+        "2021": "44300",
+        "2022": "79700",
+        "2023": "65700",
+        "2024": "65200",
+        "2025e": "71000"
+      }
+    },
+    {
+      "label": "Flake",
+      "footnote": null,
+      "section": "Price, average unit value of imports, dollars per metric ton at",
+      "subsection": "foreign ports",
+      "values": {
+        "2021": 1330.0,
+        "2022": 1200.0,
+        "2023": 1080.0,
+        "2024": 1050.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "1330",
+        "2022": "1200",
+        "2023": "1080",
+        "2024": "1050",
+        "2025e": "1000"
+      }
+    },
+    {
+      "label": "Lump and chip (Sri Lanka)",
+      "footnote": null,
+      "section": "Price, average unit value of imports, dollars per metric ton at",
+      "subsection": "foreign ports",
+      "values": {
+        "2021": 2010.0,
+        "2022": 2590.0,
+        "2023": 2380.0,
+        "2024": 2810.0,
+        "2025e": 2600.0
+      },
+      "raw_values": {
+        "2021": "2010",
+        "2022": "2590",
+        "2023": "2380",
+        "2024": "2810",
+        "2025e": "2600"
+      }
+    },
+    {
+      "label": "Amorphous",
+      "footnote": null,
+      "section": "Price, average unit value of imports, dollars per metric ton at",
+      "subsection": "foreign ports",
+      "values": {
+        "2021": 629.0,
+        "2022": 563.0,
+        "2023": 607.0,
+        "2024": 535.0,
+        "2025e": 470.0
+      },
+      "raw_values": {
+        "2021": "629",
+        "2022": "563",
+        "2023": "607",
+        "2024": "535",
+        "2025e": "470"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Flake",
+      "unit_note": "Price, average unit value of imports, dollars per metric ton at",
+      "values": {
+        "2021": 1330.0,
+        "2022": 1200.0,
+        "2023": 1080.0,
+        "2024": 1050.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "1330",
+        "2022": "1200",
+        "2023": "1080",
+        "2024": "1050",
+        "2025e": "1000"
+      }
+    },
+    {
+      "form": "Lump and chip (Sri Lanka)",
+      "unit_note": "Price, average unit value of imports, dollars per metric ton at",
+      "values": {
+        "2021": 2010.0,
+        "2022": 2590.0,
+        "2023": 2380.0,
+        "2024": 2810.0,
+        "2025e": 2600.0
+      },
+      "raw_values": {
+        "2021": "2010",
+        "2022": "2590",
+        "2023": "2380",
+        "2024": "2810",
+        "2025e": "2600"
+      }
+    },
+    {
+      "form": "Amorphous",
+      "unit_note": "Price, average unit value of imports, dollars per metric ton at",
+      "values": {
+        "2021": 629.0,
+        "2022": 563.0,
+        "2023": 607.0,
+        "2024": 535.0,
+        "2025e": 470.0
+      },
+      "raw_values": {
+        "2021": "629",
+        "2022": "563",
+        "2023": "607",
+        "2024": "535",
+        "2025e": "470"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 0.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 79000.0,
+  "exports_total_latest": 8400.0,
+  "apparent_consumption_latest": 71000.0,
+  "price_usd_per_pound_latest": 1000.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "China",
+      "share_pct": 46.0
+    },
+    {
+      "country": "Canada",
+      "share_pct": 13.0
+    },
+    {
+      "country": "Mozambique",
+      "share_pct": 13.0
+    },
+    {
+      "country": "Mexico",
+      "share_pct": 12.0
+    },
+    {
+      "country": "other",
+      "share_pct": 16.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 46.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Mozambique",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 12.0
+        },
+        {
+          "country": "other",
+          "share_pct": 16.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "( )",
+      "note": "footnote 4"
+    },
+    {
+      "country": "Austria",
+      "production_prev_year": 100.0,
+      "production_latest_year": 200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "100",
+      "production_latest_raw": "200",
+      "reserves_raw": "( )",
+      "note": "footnote 4"
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 58000.0,
+      "production_latest_year": 65000.0,
+      "capacity": null,
+      "reserves": 74000000.0,
+      "production_prev_raw": "58000",
+      "production_latest_raw": "65000",
+      "reserves_raw": "74000000",
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 11700.0,
+      "production_latest_year": 8000.0,
+      "capacity": null,
+      "reserves": 5900000.0,
+      "production_prev_raw": "11700",
+      "production_latest_raw": "8000",
+      "reserves_raw": "5900000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 1270000.0,
+      "production_latest_year": 1400000.0,
+      "capacity": null,
+      "reserves": 100000000.0,
+      "production_prev_raw": "1270000",
+      "production_latest_raw": "1400000",
+      "reserves_raw": "100000000",
+      "note": null
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 140.0,
+      "production_latest_year": 140.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "140",
+      "production_latest_raw": "140",
+      "reserves_raw": "( )",
+      "note": "footnote 4"
+    },
+    {
+      "country": "India",
+      "production_prev_year": 17600.0,
+      "production_latest_year": 17000.0,
+      "capacity": null,
+      "reserves": 8600000.0,
+      "production_prev_raw": "17600",
+      "production_latest_raw": "17000",
+      "reserves_raw": "8600000",
+      "note": null
+    },
+    {
+      "country": "Korea, North",
+      "production_prev_year": 8100.0,
+      "production_latest_year": 8000.0,
+      "capacity": null,
+      "reserves": 2000000.0,
+      "production_prev_raw": "8100",
+      "production_latest_raw": "8000",
+      "reserves_raw": "2000000",
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 1000.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": 1800000.0,
+      "production_prev_raw": "1000",
+      "production_latest_raw": "500",
+      "reserves_raw": "1800000",
+      "note": null
+    },
+    {
+      "country": "Madagascar",
+      "production_prev_year": 85000.0,
+      "production_latest_year": 80000.0,
+      "capacity": null,
+      "reserves": 27000000.0,
+      "production_prev_raw": "85000",
+      "production_latest_raw": "80000",
+      "reserves_raw": "27000000",
+      "note": null
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 706.0,
+      "production_latest_year": 740.0,
+      "capacity": null,
+      "reserves": 3100000.0,
+      "production_prev_raw": "706",
+      "production_latest_raw": "740",
+      "reserves_raw": "3100000",
+      "note": null
+    },
+    {
+      "country": "Mozambique",
+      "production_prev_year": 39000.0,
+      "production_latest_year": 60000.0,
+      "capacity": null,
+      "reserves": 25000000.0,
+      "production_prev_raw": "39000",
+      "production_latest_raw": "60000",
+      "reserves_raw": "25000000",
+      "note": null
+    },
+    {
+      "country": "Norway",
+      "production_prev_year": 5340.0,
+      "production_latest_year": 6600.0,
+      "capacity": null,
+      "reserves": 600000.0,
+      "production_prev_raw": "5340",
+      "production_latest_raw": "6600",
+      "reserves_raw": "600000",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 20000.0,
+      "production_latest_year": 25000.0,
+      "capacity": null,
+      "reserves": 14000000.0,
+      "production_prev_raw": "20000",
+      "production_latest_raw": "25000",
+      "reserves_raw": "14000000",
+      "note": null
+    },
+    {
+      "country": "Sri Lanka",
+      "production_prev_year": 3000.0,
+      "production_latest_year": 3200.0,
+      "capacity": null,
+      "reserves": 1500000.0,
+      "production_prev_raw": "3000",
+      "production_latest_raw": "3200",
+      "reserves_raw": "1500000",
+      "note": null
+    },
+    {
+      "country": "Tanzania",
+      "production_prev_year": 27000.0,
+      "production_latest_year": 75000.0,
+      "capacity": null,
+      "reserves": 18000000.0,
+      "production_prev_raw": "27000",
+      "production_latest_raw": "75000",
+      "reserves_raw": "18000000",
+      "note": null
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 2600.0,
+      "production_latest_year": 2200.0,
+      "capacity": null,
+      "reserves": 6900000.0,
+      "production_prev_raw": "2600",
+      "production_latest_raw": "2200",
+      "reserves_raw": "6900000",
+      "note": null
+    },
+    {
+      "country": "Ukraine",
+      "production_prev_year": 900.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "900",
+      "production_latest_raw": "800",
+      "reserves_raw": "( )",
+      "note": "footnote 4"
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 500.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": 9700000.0,
+      "production_prev_raw": "500",
+      "production_latest_raw": "500",
+      "reserves_raw": "9700000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 1550000.0,
+      "production_latest_year": 1800000.0,
+      "capacity": null,
+      "reserves": 310000000.0,
+      "production_prev_raw": "1550000",
+      "production_latest_raw": "1800000",
+      "reserves_raw": "310000000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. — Zero.",
+    "1": "Defined as imports – exports.",
+    "2": "Includes Hong Kong.",
+    "3": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "4": "Included in “World total.”"
+  }
+}

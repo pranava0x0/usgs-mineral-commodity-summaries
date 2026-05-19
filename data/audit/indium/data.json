@@ -1,0 +1,374 @@
+{
+  "slug": "indium",
+  "name": "Indium",
+  "symbol": "In",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-indium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "43782a8086bf24da5a60e81e690c4a6f9c54c489fd276aacbf79f23945f1be05",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons unless otherwise specified)",
+  "price_unit_note": "Price, annual average, dollars per kilogram",
+  "price_footnote_text": "Price is based on 99.99%-minimum-purity, free on board U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "Indium was not recovered from ores in the United States in 2025. Several companies produced indium products—including alloys, compounds, high-purity metal, and solders—from imported indium metal. Production of indium tin oxide (ITO) continued to account for most global indium consumption. ITO thin- film coatings were primarily used for electrically conductive purposes in a variety of flat-panel displays—most commonly liquid crystal displays (LCDs). Other indium end uses included alloys and solders, compounds, electrical components and semiconductors, and research. Estimated domestic consumption of refined indium was 220 tons in 2025 and was based on the annual estimated import quantity. There were no readily available recycling or end-use data available for indium. The estimated price for refined indium in 2025 was about $350,000 per ton.",
+  "events_trends_summary": "In 2025, the estimated annual average U.S. warehouse price (free on board) was $390 per kilogram, 11% more than the reported average price in 2024. The U.S. price, as reported by Argus Media group, Argus Non-Ferrous Markets, began the year at $383 per kilogram. In June, the price peaked at $408 per kilogram. China is the leading global producer of indium, accounting for 70% of the world total. In February 2025, China’s Ministry of Commerce subjected several critical minerals, including indium, to new export restrictions. Asian Metal reported that exports of unwrought indium declined by 72%, year over year, from September 2024 to September 2025. Fifth-generation (5G) technologies continued to increase demand for indium. Indium phosphide (InP)-based substrates are used in 5G fiber-optic telecommunications networks where InP lasers and receivers send data through fiber-optic lines, which allow for lower latency, reduced signal loss, and faster speeds. Artificial intelligence was expected to increase demand for specialized chip materials, including those made of InP, that allow for more advanced computation. Indium, as ITO, is used as a coating on data-center fibers and cables to increase signal transmission and reduce loss. InP is also used in high-speed photodetectors and laser diodes for optical communications. Additionally, some electrical components in data centers use indium-based solder alloys. INDIUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026",
+  "world_resources_summary": "Indium is most commonly recovered from the zinc-sulfide ore mineral sphalerite. The indium content of zinc deposits from which it is recovered ranges from less than 1 part per million to 100 parts per million. Although the geochemical properties of indium are such that it occurs in trace amounts in other base-metal sulfides— particularly chalcopyrite and stannite—indium recovery from most deposits of these minerals was not economic.",
+  "substitutes_summary": "Antimony tin oxide coatings have been developed as an alternative to ITO coatings in LCDs and have been successfully annealed to LCD glass; carbon nanotube coatings have been developed as an alternative to ITO coatings in flexible displays, solar cells, and touch screens; poly (3,4-ethylene dioxythiophene) (PEDOT) has also been developed as a substitute for ITO in flexible displays and organic light-emitting diodes; and copper or silver nanowires have been explored as a substitute for ITO in touch screens. Graphene has been developed to replace ITO electrodes in solar cells and also has been explored as a replacement for ITO in flexible touch screens. Researchers have developed a more adhesive zinc oxide nanopowder to potentially replace ITO in LCDs. Hafnium can replace indium in nuclear reactor control rod alloys.",
+  "recycling_summary": "Indium is most commonly recovered from ITO scrap in Japan and the Republic of Korea. Indium- containing scrap was recycled domestically; however, data on the quantity of indium recovered from scrap were not available.",
+  "salient_stats": [
+    {
+      "label": "Production, refinery",
+      "footnote": null,
+      "section": "Production, refinery",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 158.0,
+        "2022": 202.0,
+        "2023": 219.0,
+        "2024": 220.0,
+        "2025e": 220.0
+      },
+      "raw_values": {
+        "2021": "158",
+        "2022": "202",
+        "2023": "219",
+        "2024": "220",
+        "2025e": "220"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Consumption, estimated",
+      "footnote": "2",
+      "section": "Consumption, estimated",
+      "subsection": null,
+      "values": {
+        "2021": 158.0,
+        "2022": 202.0,
+        "2023": 219.0,
+        "2024": 220.0,
+        "2025e": 220.0
+      },
+      "raw_values": {
+        "2021": "158",
+        "2022": "202",
+        "2023": "219",
+        "2024": "220",
+        "2025e": "220"
+      }
+    },
+    {
+      "label": "U.S. warehouse, free on board",
+      "footnote": "3",
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 223.0,
+        "2022": 250.0,
+        "2023": 244.0,
+        "2024": 351.0,
+        "2025e": 370.0
+      },
+      "raw_values": {
+        "2021": "223",
+        "2022": "250",
+        "2023": "244",
+        "2024": "351",
+        "2025e": "370"
+      }
+    },
+    {
+      "label": "Rotterdam, duties unpaid",
+      "footnote": "4",
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 217.0,
+        "2022": 252.0,
+        "2023": 249.0,
+        "2024": 311.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "217",
+        "2022": "252",
+        "2023": "249",
+        "2024": "311",
+        "2025e": "380"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of estimated consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of estimated consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "U.S. warehouse, free on board",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 223.0,
+        "2022": 250.0,
+        "2023": 244.0,
+        "2024": 351.0,
+        "2025e": 370.0
+      },
+      "raw_values": {
+        "2021": "223",
+        "2022": "250",
+        "2023": "244",
+        "2024": "351",
+        "2025e": "370"
+      }
+    },
+    {
+      "form": "Rotterdam, duties unpaid",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 217.0,
+        "2022": 252.0,
+        "2023": 249.0,
+        "2024": 311.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "217",
+        "2022": "252",
+        "2023": "249",
+        "2024": "311",
+        "2025e": "380"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 220.0,
+  "exports_total_latest": null,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 370.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "Republic of Korea",
+      "share_pct": 25.0
+    },
+    {
+      "country": "China",
+      "share_pct": 12.0
+    },
+    {
+      "country": "Canada",
+      "share_pct": 11.0
+    },
+    {
+      "country": "other",
+      "share_pct": 30.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Republic of Korea",
+          "share_pct": 25.0
+        },
+        {
+          "country": "China",
+          "share_pct": 12.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 11.0
+        },
+        {
+          "country": "other",
+          "share_pct": 30.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Refinery Production and Capacity",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Belgium",
+      "production_prev_year": 19.0,
+      "production_latest_year": 19.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "19",
+      "production_latest_raw": "19",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 40.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "40",
+      "production_latest_raw": "40",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 760.0,
+      "production_latest_year": 760.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "760",
+      "production_latest_raw": "760",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "France",
+      "production_prev_year": 21.0,
+      "production_latest_year": 21.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "21",
+      "production_latest_raw": "21",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 65.0,
+      "production_latest_year": 65.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "65",
+      "production_latest_raw": "65",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 180.0,
+      "production_latest_year": 180.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "180",
+      "production_latest_raw": "180",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 5.0,
+      "production_latest_year": 5.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "5",
+      "production_latest_raw": "5",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Uzbekistan",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 1090.0,
+      "production_latest_year": 1100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1090",
+      "production_latest_raw": "1100",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Source: Daily Metal Prices, 2025, Daily metal spot prices—Indium prices for the last day: Daily Metal Prices. (Accessed September 30, 2025, at https://www.dailymetalprice.com/metalprices.php.)",
+    "2": "Estimated to equal imports.",
+    "3": "Price is based on 99.99%-minimum-purity, free on board U.S. warehouse. Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "4": "Price is based on 99.99%-minimum-purity, duties unpaid (Rotterdam). Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "5": "Defined as imports – exports.",
+    "6": "Includes Hong Kong.",
+    "7": "Refinery production data for indium were limited or unavailable for most countries. Estimates were derived from trade data, production capacity, and (or) changes in related lead and zinc smelter production."
+  }
+}

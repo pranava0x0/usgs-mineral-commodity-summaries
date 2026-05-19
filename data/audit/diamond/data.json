@@ -1,0 +1,490 @@
+{
+  "slug": "diamond",
+  "name": "Diamond (industrial)",
+  "symbol": "C",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-diamond.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "b80adb50e11d2d5f80479dbb14e471955c2cd4866aefb863e277dec84683081e",
+  "pdf_page_count": 2,
+  "units_note": "(Data in million carats unless otherwise specified)",
+  "price_unit_note": "Price, unit value of imports, dollars per carat",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, total domestic primary production of manufactured industrial diamond bort, grit, and dust and powder was estimated to be 160 million carats with a value of $52 million, compared with 159 million carats with a value of $52 million in 2024. No industrial diamond stone was produced domestically. One company with facilities in Florida and Ohio and a second company in Pennsylvania accounted for all domestic primary production. At least four companies produced polycrystalline diamond from diamond powder. At least two companies recovered used industrial diamond material from used diamond drill bits, diamond tools, and other diamond- containing wastes for recycling. The major consuming sectors of industrial diamond are computer chip production; construction; drilling for minerals, natural gas, and oil; machinery manufacturing; stone cutting and polishing; and transportation (infrastructure and vehicles). Highway building, milling, and repair and stone cutting consumed most of the industrial diamond stone. About 97% of U.S. industrial diamond apparent consumption was synthetic industrial diamond because its quality can be controlled, and its properties can be customized.",
+  "events_trends_summary": "Most natural industrial diamond is produced as a byproduct of mining gem-quality diamond. Global natural industrial diamond production was essentially the same in 2025 as in 2024. Russia, the leading country in the production of natural industrial diamond, produced 16 million carats or 42% of total world production, followed by Congo (Kinshasa), 7 million carats (18%); Botswana, 5 million carats (14%); Zimbabwe, 5 million carats (13%); and South Africa, 3 million carats (8%). These five countries produced 95% of the world’s natural industrial diamond. In recent years, mines have closed, and output has been lower as mines approach the ends of their lives. The world’s largest diamond mines have matured and are past their peak production levels, and several of the largest diamond mines are expected to close in the near future. As these mines are depleted, global production is expected to continue declining in quantity. In 2025, U.S. synthetic-industrial-diamond producers did not manufacture any diamond stone. The combined apparent consumption of all types of industrial diamond decreased by about 20% in quantity and by 17% in value from that in 2024. During 2025, imports of all types of natural and synthetic industrial diamond imports decreased by 30% from that in 2024. In 2025, China was the leading producing country of synthetic industrial diamond, followed by the United States and Russia, in descending order of quantity. These three countries produced about 99% of the world’s synthetic industrial diamond. Synthetic diamond accounted for more than 99% of global industrial diamond production and consumption. Worldwide production of manufactured industrial diamond totaled more than 15 billion carats. The United States is likely to continue to be one of the world’s leading markets for industrial diamond into the next decade and is expected to remain a significant producer of synthetic industrial diamond as well. U.S. demand for industrial diamond is likely to be strong in the construction sector as the United States continues building, milling, and repairing the Nation’s highway system. Industrial diamond is impregnated in or coats the cutting edge of saws used to cut concrete in highway construction and repair work.",
+  "world_resources_summary": "Natural diamond deposits have been discovered in more than 35 countries. Natural diamond accounts for less than 1% of all industrial diamond used; synthetic diamond accounts for the remainder. At least 15 countries have the technology to produce synthetic diamond.",
+  "substitutes_summary": "Materials that can compete with industrial diamond in some applications include manufactured abrasives such as cubic boron nitride, fused aluminum oxide, and silicon carbide. Globally, synthetic diamond, rather than natural diamond, is used for more than 99% of industrial applications.",
+  "recycling_summary": "In 2025, the amount of diamond bort, grit, and dust and powder recycled was estimated to be 15 million carats with an estimated value of $540,000. An estimated 75,000 carats of diamond stone was recycled with an estimated value of $110,000.",
+  "salient_stats": [
+    {
+      "label": "Manufactured diamond",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 132.0,
+        "2022": 150.0,
+        "2023": 152.0,
+        "2024": 159.0,
+        "2025e": 160.0
+      },
+      "raw_values": {
+        "2021": "132",
+        "2022": "150",
+        "2023": "152",
+        "2024": "159",
+        "2025e": "160"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1.2,
+        "2022": 14.4,
+        "2023": 14.0,
+        "2024": 14.9,
+        "2025e": 15.0
+      },
+      "raw_values": {
+        "2021": "1.20",
+        "2022": "14.4",
+        "2023": "14.0",
+        "2024": "14.9",
+        "2025e": "15"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 261.0,
+        "2022": 303.0,
+        "2023": 264.0,
+        "2024": 238.0,
+        "2025e": 170.0
+      },
+      "raw_values": {
+        "2021": "261",
+        "2022": "303",
+        "2023": "264",
+        "2024": "238",
+        "2025e": "170"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 99.1,
+        "2022": 94.0,
+        "2023": 74.0,
+        "2024": 73.3,
+        "2025e": 72.0
+      },
+      "raw_values": {
+        "2021": "99.1",
+        "2022": "94.0",
+        "2023": "74.0",
+        "2024": "73.3",
+        "2025e": "72"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "2",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 294.0,
+        "2022": 374.0,
+        "2023": 356.0,
+        "2024": 334.0,
+        "2025e": 270.0
+      },
+      "raw_values": {
+        "2021": "294",
+        "2022": "374",
+        "2023": "356",
+        "2024": "334",
+        "2025e": "270"
+      }
+    },
+    {
+      "label": "Price, unit value of imports, dollars per carat",
+      "footnote": null,
+      "section": "Price, unit value of imports, dollars per carat",
+      "subsection": null,
+      "values": {
+        "2021": 0.18,
+        "2022": 0.19,
+        "2023": 0.16,
+        "2024": 0.19,
+        "2025e": 0.21
+      },
+      "raw_values": {
+        "2021": "0.18",
+        "2022": "0.19",
+        "2023": "0.16",
+        "2024": "0.19",
+        "2025e": "0.21"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 55.0,
+        "2022": 56.0,
+        "2023": 53.0,
+        "2024": 49.0,
+        "2025e": 35.0
+      },
+      "raw_values": {
+        "2021": "55",
+        "2022": "56",
+        "2023": "53",
+        "2024": "49",
+        "2025e": "35"
+      }
+    },
+    {
+      "label": "Manufactured diamond",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.08,
+        "2022": 0.08,
+        "2023": 0.08,
+        "2024": 0.08,
+        "2025e": 0.08
+      },
+      "raw_values": {
+        "2021": "0.08",
+        "2022": "0.08",
+        "2023": "0.08",
+        "2024": "0.08",
+        "2025e": "0.08"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 0.33,
+        "2022": 0.79,
+        "2023": 0.38,
+        "2024": 0.39,
+        "2025e": 0.35
+      },
+      "raw_values": {
+        "2021": "0.33",
+        "2022": "0.79",
+        "2023": "0.38",
+        "2024": "0.39",
+        "2025e": "0.35"
+      }
+    },
+    {
+      "label": "() Consumption, apparent",
+      "footnote": "2",
+      "section": "Exports",
+      "subsection": "()",
+      "values": {
+        "2021": 0.41,
+        "2022": 0.86,
+        "2023": 0.45,
+        "2024": 0.46,
+        "2025e": 0.43
+      },
+      "raw_values": {
+        "2021": "0.41",
+        "2022": "0.86",
+        "2023": "0.45",
+        "2024": "0.46",
+        "2025e": "0.43"
+      }
+    },
+    {
+      "label": "Price, unit value of imports, dollars per carat",
+      "footnote": null,
+      "section": "Price, unit value of imports, dollars per carat",
+      "subsection": null,
+      "values": {
+        "2021": 13.0,
+        "2022": 8.4,
+        "2023": 14.2,
+        "2024": 11.3,
+        "2025e": 6.7
+      },
+      "raw_values": {
+        "2021": "13.00",
+        "2022": "8.40",
+        "2023": "14.20",
+        "2024": "11.30",
+        "2025e": "6.70"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 80.0,
+        "2022": 91.0,
+        "2023": 83.0,
+        "2024": 84.0,
+        "2025e": 81.0
+      },
+      "raw_values": {
+        "2021": "80",
+        "2022": "91",
+        "2023": "83",
+        "2024": "84",
+        "2025e": "81"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, unit value of imports, dollars per carat",
+      "unit_note": "Price, unit value of imports, dollars per carat",
+      "values": {
+        "2021": 0.18,
+        "2022": 0.19,
+        "2023": 0.16,
+        "2024": 0.19,
+        "2025e": 0.21
+      },
+      "raw_values": {
+        "2021": "0.18",
+        "2022": "0.19",
+        "2023": "0.16",
+        "2024": "0.19",
+        "2025e": "0.21"
+      }
+    },
+    {
+      "form": "Price, unit value of imports, dollars per carat",
+      "unit_note": "Price, unit value of imports, dollars per carat",
+      "values": {
+        "2021": 13.0,
+        "2022": 8.4,
+        "2023": 14.2,
+        "2024": 11.3,
+        "2025e": 6.7
+      },
+      "raw_values": {
+        "2021": "13.00",
+        "2022": "8.40",
+        "2023": "14.20",
+        "2024": "11.30",
+        "2025e": "6.70"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": 15.0,
+  "imports_total_latest": 170.35,
+  "exports_total_latest": 72.43,
+  "apparent_consumption_latest": 270.0,
+  "price_usd_per_pound_latest": 0.21,
+  "net_import_reliance_pct_latest": 35.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Bort, grit, and dust and powder; natural and synthetic",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 77.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Ireland",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 10.0
+        }
+      ]
+    },
+    {
+      "category": "Stones, primarily natural",
+      "countries": [
+        {
+          "country": "India",
+          "share_pct": 49.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 26.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Botswana",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 12.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Natural Industrial Diamond Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Angola",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": 150.0,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": "150",
+      "note": null
+    },
+    {
+      "country": "Botswana",
+      "production_prev_year": 5.0,
+      "production_latest_year": 5.0,
+      "capacity": null,
+      "reserves": 250.0,
+      "production_prev_raw": "5",
+      "production_latest_raw": "5",
+      "reserves_raw": "250",
+      "note": null
+    },
+    {
+      "country": "Congo (Kinshasa)",
+      "production_prev_year": 7.0,
+      "production_latest_year": 7.0,
+      "capacity": null,
+      "reserves": 150.0,
+      "production_prev_raw": "7",
+      "production_latest_raw": "7",
+      "reserves_raw": "150",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 16.0,
+      "production_latest_year": 16.0,
+      "capacity": null,
+      "reserves": 750.0,
+      "production_prev_raw": "16",
+      "production_latest_raw": "16",
+      "reserves_raw": "750",
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 3.0,
+      "production_latest_year": 3.0,
+      "capacity": null,
+      "reserves": 87.0,
+      "production_prev_raw": "3",
+      "production_latest_raw": "3",
+      "reserves_raw": "87",
+      "note": null
+    },
+    {
+      "country": "Zimbabwe",
+      "production_prev_year": 5.0,
+      "production_latest_year": 5.0,
+      "capacity": null,
+      "reserves": 56.0,
+      "production_prev_raw": "5",
+      "production_latest_raw": "5",
+      "reserves_raw": "56",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": 250.0,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": "250",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 38.0,
+      "production_latest_year": 38.0,
+      "capacity": null,
+      "reserves": 1700.0,
+      "production_prev_raw": "38",
+      "production_latest_raw": "38",
+      "reserves_raw": "1700",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "See the Gemstones chapter for information on gem-quality diamond.",
+    "2": "Defined as manufactured diamond production + secondary diamond production + imports – exports.",
+    "3": "Defined as imports – exports.",
+    "4": "Less than 500 carats.",
+    "5": "Includes Hong Kong.",
+    "6": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

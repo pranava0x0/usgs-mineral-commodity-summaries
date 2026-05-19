@@ -1,0 +1,319 @@
+{
+  "slug": "gallium",
+  "name": "Gallium",
+  "symbol": "Ga",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
+  "pdf_page_count": 2,
+  "units_note": "(Data in kilograms, gallium content, unless otherwise specified)",
+  "price_unit_note": "Price, average unit value of imports, dollars per kilogram",
+  "price_footnote_text": "Source: Asian Metal Ltd.",
+  "domestic_use_summary": "No domestic primary (low-purity, unrefined) gallium has been recovered since 1987. Globally, primary gallium is recovered predominantly as a byproduct of processing bauxite ores. Gallium may also be recovered as a byproduct of processing zinc ores. One company in New York recovered and refined high-purity gallium from imported primary low-purity gallium metal and new scrap. In 2025, the value of imports of gallium metal was an estimated $15 million, and the value of gallium arsenide (GaAs) wafer imports was an estimated $120 million. GaAs was used to manufacture compound semiconductor wafers used in integrated circuits (ICs) and optoelectronic devices, which include laser diodes, light-emitting diodes (LEDs), photodetectors, and solar cells. Gallium nitride (GaN) was used to manufacture ICs and optoelectronic devices; ICs accounted for 73% of domestic gallium consumption, and optoelectronic devices accounted for 26%. Optoelectronic devices were used in aerospace applications, consumer goods, industrial equipment, medical equipment, and telecommunications equipment. Uses of ICs included defense applications, high-performance computers, and telecommunications equipment.",
+  "events_trends_summary": "Imports of gallium metal, GaAs wafers, and domestic production of GaAs and GaN wafers continued to account for all U.S. consumption of gallium. In 2025, imports of gallium metal were estimated to be more than double those in 2024, and the average unit value of imported gallium metal was estimated to be $580 per kilogram, about 30% more than that in 2024. Imports of gallium arsenide wafers were estimated to be 24% less than those in 2024. In November 2025, China lifted its ban on gallium exports to the United States for 1 year. This followed the Government of China’s gallium export controls implemented in August 2023 and China’s ban of all gallium exports to the United States in December 2024. China accounted for 99% of worldwide primary low-purity gallium production. The remaining primary low-purity gallium producers outside of China included Japan and Russia. Germany, Hungary, and Kazakhstan ceased primary production in 2016, 2015, and 2013, respectively. Ukraine most likely ceased primary production in 2022. Several new gallium production projects were announced including those in Australia, Canada, Greece, Kazakhstan, and the Republic of Korea. GALLIUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026 In September, the U.S. Department of Energy announced as much as $6 million in funding for domestic research and development projects to help establish a domestic supply chain for gallium. This initiative was expected to be used to support technologies to recover gallium from alumina refining or primary zinc smelting with the goal of restarting domestic primary gallium recovery for the first time in almost 40 years. In November, the U.S. Department of War, under the Defense Production Act, Title III, granted a $29.9 million award to a U.S. company to develop a demonstration facility in Louisiana that will recover gallium and scandium from industrial waste. Initial development work was expected to take place at a facility in Texas.",
+  "world_resources_summary": "Gallium occurs in very small concentrations in ores of other metals. Most gallium is produced as a byproduct of processing bauxite, and the remainder is produced from zinc-processing residues. The average gallium content of bauxite is 50 parts per million. U.S. bauxite deposits consist mainly of subeconomic resources that are not generally suitable for alumina production owing to their high silica content. Some domestic zinc ores contain up to 50 parts per million gallium and could be a significant resource, although no gallium is currently recovered from domestic ores. Gallium contained in world resources of bauxite is estimated to exceed 1 million tons.",
+  "substitutes_summary": "Liquid crystals made from organic compounds are used in visual displays as substitutes for LEDs. Silicon-based complementary metal-oxide semiconductor power amplifiers compete with GaAs power amplifiers in midtier third-generation (3G) cellular handsets. Indium phosphide components can be substituted for GaAs-based infrared laser diodes in some specific-wavelength applications, and helium-neon lasers compete with GaAs in visible laser diode applications. Silicon is the principal competitor with GaAs in solar-cell applications. In many defense- related applications, GaAs- and GaN-based ICs are used because of their unique properties, and no effective substitutes exist for GaAs and GaN in these applications. In heterojunction bipolar transistors, GaAs is being replaced in some applications by silicon-germanium.",
+  "recycling_summary": "Old scrap, none. Substantial quantities of new scrap generated in the manufacture of GaAs-based devices were reprocessed to recover high-purity gallium at one facility in New York.",
+  "salient_stats": [
+    {
+      "label": "Production, primary",
+      "footnote": null,
+      "section": "Production, primary",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Metal",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 8890.0,
+        "2022": 11400.0,
+        "2023": 11400.0,
+        "2024": 11000.0,
+        "2025e": 25000.0
+      },
+      "raw_values": {
+        "2021": "8890",
+        "2022": "11400",
+        "2023": "11400",
+        "2024": "11000",
+        "2025e": "25000"
+      }
+    },
+    {
+      "label": "Gallium arsenide wafers (gross weight)",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 306000.0,
+        "2022": 424000.0,
+        "2023": 163000.0,
+        "2024": 152000.0,
+        "2025e": 110000.0
+      },
+      "raw_values": {
+        "2021": "306000",
+        "2022": "424000",
+        "2023": "163000",
+        "2024": "152000",
+        "2025e": "110000"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Consumption, reported",
+      "footnote": "1",
+      "section": "Consumption, reported",
+      "subsection": null,
+      "values": {
+        "2021": 17100.0,
+        "2022": 19700.0,
+        "2023": 17800.0,
+        "2024": 18700.0,
+        "2025e": 19000.0
+      },
+      "raw_values": {
+        "2021": "17100",
+        "2022": "19700",
+        "2023": "17800",
+        "2024": "18700",
+        "2025e": "19000"
+      }
+    },
+    {
+      "label": "Price, average unit value of imports, dollars per kilogram",
+      "footnote": "2",
+      "section": "Price, average unit value of imports, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 277.0,
+        "2022": 432.0,
+        "2023": 365.0,
+        "2024": 439.0,
+        "2025e": 580.0
+      },
+      "raw_values": {
+        "2021": "277",
+        "2022": "432",
+        "2023": "365",
+        "2024": "439",
+        "2025e": "580"
+      }
+    },
+    {
+      "label": "Stocks, consumer, yearend",
+      "footnote": "1",
+      "section": "Stocks, consumer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 2810.0,
+        "2022": 2780.0,
+        "2023": 3340.0,
+        "2024": 3410.0,
+        "2025e": 3400.0
+      },
+      "raw_values": {
+        "2021": "2810",
+        "2022": "2780",
+        "2023": "3340",
+        "2024": "3410",
+        "2025e": "3400"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of reported consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of reported consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average unit value of imports, dollars per kilogram",
+      "unit_note": "Price, average unit value of imports, dollars per kilogram",
+      "values": {
+        "2021": 277.0,
+        "2022": 432.0,
+        "2023": 365.0,
+        "2024": 439.0,
+        "2025e": 580.0
+      },
+      "raw_values": {
+        "2021": "277",
+        "2022": "432",
+        "2023": "365",
+        "2024": "439",
+        "2025e": "580"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 135000.0,
+  "exports_total_latest": null,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 580.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Metal",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 28.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 22.0
+        },
+        {
+          "country": "China",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 16.0
+        },
+        {
+          "country": "other",
+          "share_pct": 16.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Low-Purity Production and Production Capacity",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": 0.0,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 839000.0,
+      "production_latest_year": 900000.0,
+      "capacity": 1600000.0,
+      "reserves": null,
+      "production_prev_raw": "839000",
+      "production_latest_raw": "900000",
+      "reserves_raw": null,
+      "note": "footnote 4,5"
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 3000.0,
+      "production_latest_year": 3000.0,
+      "capacity": 10000.0,
+      "reserves": null,
+      "production_prev_raw": "3000",
+      "production_latest_raw": "3000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 6000.0,
+      "production_latest_year": 6000.0,
+      "capacity": 10000.0,
+      "reserves": null,
+      "production_prev_raw": "6000",
+      "production_latest_raw": "6000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": 100000.0,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": "footnote 6"
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 848000.0,
+      "production_latest_year": 900000.0,
+      "capacity": 1700000.0,
+      "reserves": null,
+      "production_prev_raw": "848000",
+      "production_latest_raw": "900000",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Includes U.S. Geological Survey estimates.",
+    "2": "Source: U.S.Census Bureau. Average customs value of U.S. imports of gallium metal, Harmonized Tariff Schedule of the United States code 8112.92.1000.",
+    "3": "Defined as imports – exports. Excludes gallium arsenide wafers.",
+    "4": "Source: Asian Metal Ltd.",
+    "5": "Estimated from Asian Metal Ltd.",
+    "6": "Other countries estimated to still have primary low-purity gallium production capacity include Germany, Hungary, Kazakhstan, the Republic of Korea, and Ukraine.",
+    "7": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

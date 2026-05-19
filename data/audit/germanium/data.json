@@ -1,0 +1,418 @@
+{
+  "slug": "germanium",
+  "name": "Germanium",
+  "symbol": "Ge",
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-18",
+  "pdf_sha256": "52d520ef79c4ad19a91c6633a4aa304d50e0df37c7beeb1103b16e7a8cf9486f",
+  "pdf_page_count": 2,
+  "units_note": "(Data in kilograms, germanium content, unless otherwise specified)",
+  "price_unit_note": "Price, annual average, dollars per kilogram",
+  "price_footnote_text": "Average European price for minimum 99.999% purity. Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "In 2025, zinc concentrates containing germanium were produced at a mine in Alaska. Some of the germanium-containing concentrates produced in Alaska were exported to a refinery in Canada for processing and germanium recovery in the form of dioxide and tetrachloride. Operations at a mine in Tennessee that also produced germanium-containing zinc concentrates have been suspended since November 2023. Prior to the suspension, the zinc concentrates were sent to a zinc smelter in Clarksville, TN, which recovered the germanium in the form of an intermediate leach concentrate for export. The value of germanium metal and germanium dioxide (gross weight) imported domestically in 2025 was estimated to be $66 million. A company in St. George, UT, produced germanium wafers mostly for solar cells used in satellites from imported and recycled germanium. A company in Quapaw, OK, produced germanium tetrachloride for the production of fiber optics from imported and recycled germanium materials.",
+  "events_trends_summary": "The major end uses of germanium in the United States, in descending order, were fiber optics, infrared optics, semiconductor applications and solar cells, and radiation detectors. In the fiber optics industry, germanium dioxide and tetrachloride were consumed during the manufacture of fiber optic glass used for data networking and telecommunication. Germanium metal was processed into lenses for infrared optical systems used in commercial and government markets, fabricated into wafers used as substrates to produce multijunction solar cells used in space applications, and consumed to produce high-purity germanium radiation detectors. Germanium compounds were consumed to produce germane gas used in certain types of semiconductor and solar cell manufacturing. United States imports of germanium metal were estimated to have decreased by 67% in 2025 from those in 2024 to 7,000 kilograms owing to China’s ban on germanium exports to the United States in 2024. Imports of germanium dioxide increased by 55% from those in 2024 to an estimated 17,000 kilograms, likely owing to increased purchasing before potential tariff changes on imported goods from Canada. In the past, China has been a major source of germanium metal to the United States, and Canada has been a major source of germanium dioxide. In August, the U.S. Department of Energy announced several investment initiatives totaling $1 billion to advance the domestic supply chain of critical minerals and materials, including funding for the refining and alloying of select materials, including germanium, for semiconductors and funding for facilities to produce certain mineral byproducts, including germanium, from existing industrial processes. Global germanium refinery production and recycling data were limited, and available estimates were difficult to verify. China continued to be the leading global producer and exporter of germanium metal in 2025. In August 2023, the Government of China implemented an export licensing program for germanium. In December 2024, China banned all exports of germanium to the United States. China’s reported exports of germanium metal for the year through September 2025 decreased to 7,520 kilograms from 18,787 kilograms and 36,656 kilograms in the same periods in 2024 and 2023, respectively. In 2025, exports were mostly sent to Russia (28%), Belgium (26%), Germany (26%), and Japan (18%). Germanium metal and germanium dioxide prices (Europe, minimum 99.999% purity) increased between January and October 2025, with the price for germanium metal increasing from $3,150 per kilogram to $5,380 per kilogram and the price for germanium dioxide increasing from $2,200 per kilogram to $2,850 per kilogram.",
+  "world_resources_summary": "Germanium reserves data were not widely reported at a mine or country level and thus difficult to quantify. The available resources of germanium are associated with certain zinc and lead-zinc-copper sulfide ores and lignite coal deposits.",
+  "substitutes_summary": "Silicon or gallium arsenide substitute for germanium in certain electronic applications. Some metallic compounds can be substituted in high-frequency electronics applications and in some light-emitting-diode applications. Chalcogenide glass has been used as a substitute for germanium metal in infrared applications. Antimony and titanium are substitutes for use as polymerization catalysts.",
+  "recycling_summary": "The United States has the capability to recycle new (preconsumer) and old (postconsumer) germanium scrap. During the manufacture of infrared germanium optics, much of the germanium removed during the machining process is routinely recycled as new scrap. Infrared lenses and windows in decommissioned military equipment also are recycled to recover germanium. Germanium is recycled from certain wastes generated during the manufacture of optical fibers. Germanium wafers used as substrates to produce solar cells also are recycled. Available information was inadequate to make reliable estimates of the amount of secondary germanium produced.",
+  "salient_stats": [
+    {
+      "label": "Primary",
+      "footnote": null,
+      "section": "Production, refinery",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": null,
+      "section": "Production, refinery",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Germanium metal",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 13000.0,
+        "2022": 14000.0,
+        "2023": 22000.0,
+        "2024": 21000.0,
+        "2025e": 7000.0
+      },
+      "raw_values": {
+        "2021": "13000",
+        "2022": "14000",
+        "2023": "22000",
+        "2024": "21000",
+        "2025e": "7000"
+      }
+    },
+    {
+      "label": "Germanium dioxide",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 17000.0,
+        "2022": 15000.0,
+        "2023": 14000.0,
+        "2024": 11000.0,
+        "2025e": 17000.0
+      },
+      "raw_values": {
+        "2021": "17000",
+        "2022": "15000",
+        "2023": "14000",
+        "2024": "11000",
+        "2025e": "17000"
+      }
+    },
+    {
+      "label": "Germanium tetrachloride",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Germanium metal",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 5500.0,
+        "2022": 6600.0,
+        "2023": 6000.0,
+        "2024": 9000.0,
+        "2025e": 7000.0
+      },
+      "raw_values": {
+        "2021": "5500",
+        "2022": "6600",
+        "2023": "6000",
+        "2024": "9000",
+        "2025e": "7000"
+      }
+    },
+    {
+      "label": "Germanium dioxide",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 430.0,
+        "2022": 130.0,
+        "2023": 110.0,
+        "2024": 92.0,
+        "2025e": 15.0
+      },
+      "raw_values": {
+        "2021": "430",
+        "2022": "130",
+        "2023": "110",
+        "2024": "92",
+        "2025e": "15"
+      }
+    },
+    {
+      "label": "Germanium tetrachloride",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Shipments from Government stockpile",
+      "footnote": "2",
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Consumption, estimated",
+      "footnote": "3",
+      "section": "Consumption, estimated",
+      "subsection": null,
+      "values": {
+        "2021": 30000.0,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "30000",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Germanium metal",
+      "footnote": null,
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 1187.0,
+        "2022": 1294.0,
+        "2023": 1392.0,
+        "2024": 1991.0,
+        "2025e": 4100.0
+      },
+      "raw_values": {
+        "2021": "1187",
+        "2022": "1294",
+        "2023": "1392",
+        "2024": "1991",
+        "2025e": "4100"
+      }
+    },
+    {
+      "label": "Germanium dioxide",
+      "footnote": null,
+      "section": "Price, annual average, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 770.0,
+        "2022": 828.0,
+        "2023": 883.0,
+        "2024": 1281.0,
+        "2025e": 2500.0
+      },
+      "raw_values": {
+        "2021": "770",
+        "2022": "828",
+        "2023": "883",
+        "2024": "1281",
+        "2025e": "2500"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of estimated consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of estimated consumption",
+      "subsection": null,
+      "values": {
+        "2021": 50.0,
+        "2022": 50.0,
+        "2023": 50.0,
+        "2024": 50.0,
+        "2025e": 50.0
+      },
+      "raw_values": {
+        "2021": ">50",
+        "2022": ">50",
+        "2023": ">50",
+        "2024": ">50",
+        "2025e": ">50"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Germanium metal",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 1187.0,
+        "2022": 1294.0,
+        "2023": 1392.0,
+        "2024": 1991.0,
+        "2025e": 4100.0
+      },
+      "raw_values": {
+        "2021": "1187",
+        "2022": "1294",
+        "2023": "1392",
+        "2024": "1991",
+        "2025e": "4100"
+      }
+    },
+    {
+      "form": "Germanium dioxide",
+      "unit_note": "Price, annual average, dollars per kilogram",
+      "values": {
+        "2021": 770.0,
+        "2022": 828.0,
+        "2023": 883.0,
+        "2024": 1281.0,
+        "2025e": 2500.0
+      },
+      "raw_values": {
+        "2021": "770",
+        "2022": "828",
+        "2023": "883",
+        "2024": "1281",
+        "2025e": "2500"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 24000.0,
+  "exports_total_latest": 7015.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 4100.0,
+  "net_import_reliance_pct_latest": 50.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": ">50"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Germanium metal",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 41.0
+        },
+        {
+          "country": "Belgium",
+          "share_pct": 27.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 4.0
+        }
+      ]
+    },
+    {
+      "category": "Germanium dioxide (Ge content)",
+      "countries": [
+        {
+          "country": "Belgium",
+          "share_pct": 57.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 37.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 3.0
+        }
+      ]
+    },
+    {
+      "category": "Combined total",
+      "countries": [
+        {
+          "country": "Belgium",
+          "share_pct": 41.0
+        },
+        {
+          "country": "China",
+          "share_pct": 23.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 17.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 14.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Refinery Production and Reserves",
+  "world_production": [],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Data have been adjusted to exclude low-value shipments. Germanium dioxide data were multiplied by 69% to calculate the germanium content.",
+    "2": "Defined as change in total inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer available.",
+    "3": "Estimated consumption of germanium contained in metal and germanium dioxide.",
+    "4": "Average European price for minimum 99.999% purity. Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "5": "Defined for 2021–22 as imports – exports ± adjustments for Government stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "6": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "7": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}
