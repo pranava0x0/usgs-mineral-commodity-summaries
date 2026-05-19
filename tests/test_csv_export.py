@@ -152,6 +152,38 @@ class CsvLongFormatTests(unittest.TestCase):
             values = {r[col] for r in antimony}
             self.assertEqual(len(values), 1, f"{col} differs across antimony category rows: {values}")
 
+    def test_sentinel_merged_into_value_column(self) -> None:
+        """Mixed-type cells: USGS sentinels (W/E/>N/<N/NA) appear verbatim in
+        the value column. No companion *_sentinel or *_raw columns exist.
+
+        The exporter previously emitted `mined_production_latest=N/A` PLUS
+        `mined_production_latest_sentinel=W` for a withheld antimony cell;
+        consumers had to read both. The single mixed-type column simplifies
+        that — the value column carries the sentinel verbatim and pandas users
+        coerce to numeric via `pd.to_numeric(col, errors="coerce")` when they
+        want NaN-on-sentinel semantics.
+        """
+        # Synthesize a fresh fixture so the assertion is hermetic. Antimony
+        # in MCS 2026 has `mined_production_latest=None` with the W sentinel.
+        from src.csv_export import build_rows  # local — keep top-level imports tidy
+        rec = _antimony_fixture()
+        rec.mined_production_latest = None
+        rec.latest_year_sentinels = {"mined_production": "W"}
+        rec.net_import_reliance_pct_latest = 50.0
+        rec.latest_year_sentinels["net_import_reliance"] = ">50"
+        # Replace records and rebuild
+        cols, rows = build_rows([rec])
+        rows = _read(cols, rows)
+        antimony = next(r for r in rows if r["name"] == "Antimony")
+
+        # Sentinel surfaces in the value column
+        self.assertEqual(antimony["mined_production_latest"], "W")
+        self.assertEqual(antimony["net_import_reliance_pct_latest"], ">50")
+
+        # Companion columns are gone
+        leaked = [c for c in cols if c.endswith(("_sentinel", "_raw"))]
+        self.assertEqual(leaked, [], f"sentinel/raw companion columns leaked: {leaked[:5]}")
+
     def test_world_production_columns_use_pdf_years(self) -> None:
         """User instruction: country world-prod columns are named after the
         actual year tokens captured from the PDF's table sub-header.

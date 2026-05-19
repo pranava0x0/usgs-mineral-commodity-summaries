@@ -21,10 +21,9 @@ Columns are grouped into sections:
                         secondary_smelting_latest, imports_total_latest,
                         exports_total_latest, apparent_consumption_latest,
                         price_usd_per_pound_latest, net_import_reliance_pct_latest
-                        + matching *_sentinel columns for "W"/"E"/">N"
-  per-form salient      salient__<section>__<label>__<year>  (+ _raw)
+  per-form salient      salient__<section>__<label>__<year>
                         — e.g. antimony's "Imports - Oxide - 2025e" round-trips
-  per-form price        price__<form>__<year>  (+ _raw)
+  per-form price        price__<form>__<year>
 
   --- per-country columns (filled across all elements with N/A for missing) ---
   imports share         <country>_imports_share_pct
@@ -32,7 +31,7 @@ Columns are grouped into sections:
                         only. Countries not in that category render as "N/A".
                         The country axis is the alphabetical union across
                         every category of every element.
-  production            <country>_production_<year>     (+ <country>_production_<year>_raw)
+  production            <country>_production_<year>
                         Years come straight from the PDF's world-production
                         table sub-header (e.g. "2024" / "2025" for MCS 2026).
                         Elements with different year pairs get their own
@@ -40,7 +39,13 @@ Columns are grouped into sections:
                         across an element's category rows because USGS does
                         not categorise world production.
   capacity              <country>_capacity
-  reserves              <country>_reserves              (+ <country>_reserves_raw)
+  reserves              <country>_reserves
+
+Mixed-type cells. Every numeric column is ONE column that holds either a
+number or one of USGS's five non-numeric markers — W (withheld), E (net
+exporter), >N / <N (approximation), or NA — verbatim. There are no
+companion *_sentinel or *_raw columns. Pandas users who want pure numerics
+call `pd.to_numeric(col, errors="coerce")` to turn the sentinels into NaN.
 
 The country axis sorts "World *" aggregate rows to the end of each section.
 Cells where the country isn't tabulated for a given element are filled with
@@ -111,6 +116,30 @@ def _country_val(v: Optional[float]) -> str:
     return f"{v}"
 
 
+def _cell(v: Optional[float], raw: Optional[str]) -> str:
+    """Mixed-type cell formatter — merges numeric and sentinel into one column.
+
+    USGS uses five non-numeric markers that lose meaning if we drop them in
+    favour of a clean float:
+
+        W    Withheld (company-confidential)
+        E    Net exporter (only seen in NIR cells)
+        >N   Greater than N (approximation)
+        <N   Less than N
+        NA   Not available
+
+    When the raw token is one of those, we surface it verbatim — that's the
+    most faithful representation. Otherwise we use the numeric value (with
+    em-dash → 0 as USGS convention). Genuinely missing data is 'N/A'.
+
+    Single-column-per-cell schema: a CSV consumer that wants pure numerics
+    runs `pd.to_numeric(col, errors="coerce")` to turn sentinels into NaN.
+    """
+    if raw and (raw in ("W", "E", "NA") or raw.startswith((">", "<"))):
+        return raw
+    return _val(v)
+
+
 def _sorted_countries(countries: Iterable[str]) -> list[str]:
     """Alphabetical ordering; 'World *' aggregates pushed to the end.
 
@@ -130,17 +159,12 @@ def _collect_country_axes(records: list[ElementRecord]) -> dict:
     element gets the same imports / world-prod / reserves columns in the same
     order, regardless of which element appears first in the input.
 
-    Imports country axis is flat now (no category dimension) — the long-format
+    Imports country axis is flat (no category dimension) — the long-format
     rows carry the category in their own `import_category` column.
-
-    Also detects which countries have non-trivial `_raw` cells so we only
-    emit `_raw` columns where they'll carry information.
     """
     imports_countries: set[str] = set()
     world_countries: set[str] = set()
-    world_latest_raw_countries: set[str] = set()
     reserves_countries: set[str] = set()
-    reserves_raw_countries: set[str] = set()
 
     for rec in records:
         for cat in rec.import_sources_by_category:
@@ -152,19 +176,13 @@ def _collect_country_axes(records: list[ElementRecord]) -> dict:
             imports_countries.add(cs.country)
         for wp in rec.world_production:
             world_countries.add(wp.country)
-            if wp.production_latest_raw and wp.production_latest_raw != _val(wp.production_latest_year):
-                world_latest_raw_countries.add(wp.country)
             if wp.reserves is not None or wp.reserves_raw not in (None, ""):
                 reserves_countries.add(wp.country)
-            if wp.reserves_raw and wp.reserves_raw != _val(wp.reserves):
-                reserves_raw_countries.add(wp.country)
 
     return {
         "imports_countries": _sorted_countries(imports_countries),
         "world_countries": _sorted_countries(world_countries),
-        "world_latest_raw_countries": world_latest_raw_countries,
         "reserves_countries": _sorted_countries(reserves_countries),
-        "reserves_raw_countries": reserves_raw_countries,
     }
 
 
@@ -219,16 +237,17 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         "import_category",
     ):
         col(name)
-    # User-requested top-level columns
+    # User-requested top-level columns. Each is a mixed-type column: if USGS
+    # printed a sentinel (W / E / >N / <N / NA) for the latest-year value,
+    # that token appears here verbatim; otherwise it's the float. No companion
+    # _sentinel columns — pandas users can `pd.to_numeric(..., errors='coerce')`
+    # to coerce sentinels to NaN.
     for name in (
         "mined_production_latest", "primary_smelting_latest", "secondary_smelting_latest",
         "imports_total_latest", "exports_total_latest", "apparent_consumption_latest",
         "price_usd_per_pound_latest", "net_import_reliance_pct_latest",
     ):
         col(name)
-    for sk in ("mined_production", "primary_smelting", "secondary_smelting",
-               "apparent_consumption", "net_import_reliance"):
-        col(f"{sk}_latest_sentinel")
 
     # Salient-stats + price columns are still discovered lazily during the row
     # loop (their column space is shaped by per-element schemas, not unioned).
@@ -248,42 +267,42 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             # element's only (uncategorized) import line"; not missing data.
             row["import_category"] = (cat.category if cat and cat.category else "")
 
-            # Latest-year user columns
-            row["mined_production_latest"] = _val(rec.mined_production_latest)
-            row["primary_smelting_latest"] = _val(rec.primary_smelting_latest)
-            row["secondary_smelting_latest"] = _val(rec.secondary_smelting_latest)
+            # Latest-year user columns — merged value+sentinel cells.
+            # `_cell(v, raw)` returns the verbatim USGS sentinel (W / E / >N
+            # / <N / NA) when one is present, else the formatted numeric.
+            row["mined_production_latest"] = _cell(
+                rec.mined_production_latest, rec.latest_year_sentinels.get("mined_production"))
+            row["primary_smelting_latest"] = _cell(
+                rec.primary_smelting_latest, rec.latest_year_sentinels.get("primary_smelting"))
+            row["secondary_smelting_latest"] = _cell(
+                rec.secondary_smelting_latest, rec.latest_year_sentinels.get("secondary_smelting"))
             row["imports_total_latest"] = _val(rec.imports_total_latest)
             row["exports_total_latest"] = _val(rec.exports_total_latest)
-            row["apparent_consumption_latest"] = _val(rec.apparent_consumption_latest)
+            row["apparent_consumption_latest"] = _cell(
+                rec.apparent_consumption_latest, rec.latest_year_sentinels.get("apparent_consumption"))
             row["price_usd_per_pound_latest"] = _val(rec.price_usd_per_pound_latest)
-            row["net_import_reliance_pct_latest"] = _val(rec.net_import_reliance_pct_latest)
-            for sk in ("mined_production", "primary_smelting", "secondary_smelting",
-                       "apparent_consumption", "net_import_reliance"):
-                row[f"{sk}_latest_sentinel"] = rec.latest_year_sentinels.get(sk, "")
+            row["net_import_reliance_pct_latest"] = _cell(
+                rec.net_import_reliance_pct_latest, rec.latest_year_sentinels.get("net_import_reliance"))
 
-            # Per-year, per-row salient stats. Column name format:
-            #   salient__<section_slug>__<label_slug>__<year>          (numeric)
-            #   salient__<section_slug>__<label_slug>__<year>_raw      (literal token)
+            # Per-year, per-row salient stats. Each cell is a single
+            # mixed-type column: salient__<section_slug>__<label_slug>__<year>.
+            # USGS sentinel tokens (W / E / >N / <N / NA) come through verbatim;
+            # everything else is numeric.
             for yr in YEAR_COLUMNS:
                 for rec_row in rec.salient_stats:
                     sec = _slugify(rec_row.section or "")
                     lbl = _slugify(rec_row.label)
                     col_name = col(f"salient__{sec}__{lbl}__{yr}")
-                    row[col_name] = _val(rec_row.values.get(yr))
-                    raw = (rec_row.raw_values or {}).get(yr)
-                    if raw is not None and raw != "":
-                        raw_col = col(f"salient__{sec}__{lbl}__{yr}_raw")
-                        row[raw_col] = str(raw)
+                    row[col_name] = _cell(
+                        rec_row.values.get(yr), (rec_row.raw_values or {}).get(yr))
 
-            # Price quotes
+            # Price quotes — same merged-cell shape.
             for yr in YEAR_COLUMNS:
                 for pq in rec.price_quotes:
                     form = _slugify(pq.form)
                     col_name = col(f"price__{form}__{yr}")
-                    row[col_name] = _val(pq.values.get(yr))
-                    raw = (pq.raw_values or {}).get(yr)
-                    if raw not in (None, ""):
-                        row[col(f"price__{form}__{yr}_raw")] = str(raw)
+                    row[col_name] = _cell(
+                        pq.values.get(yr), (pq.raw_values or {}).get(yr))
 
             rows.append(row)
             row_meta.append((rec, cat))
@@ -307,7 +326,6 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     # Maps: (country, year_label) -> column name
     world_prev_cols: dict[tuple[str, str], str] = {}
     world_latest_cols: dict[tuple[str, str], str] = {}
-    world_latest_raw_cols: dict[tuple[str, str], str] = {}
     world_capacity_cols: dict[str, str] = {}
 
     def _years_for(rec: ElementRecord) -> tuple[str, str]:
@@ -324,20 +342,13 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                 world_prev_cols[(c, yp)] = col(f"{c_slug}_production_{yp}")
             if (c, yl) not in world_latest_cols:
                 world_latest_cols[(c, yl)] = col(f"{c_slug}_production_{yl}")
-            # Only register a _raw column where some element actually carries
-            # a non-redundant raw token (W / E / >N / etc.) for that cell.
-            if c in axes["world_latest_raw_countries"] and (c, yl) not in world_latest_raw_cols:
-                world_latest_raw_cols[(c, yl)] = col(f"{c_slug}_production_{yl}_raw")
             if c not in world_capacity_cols:
                 world_capacity_cols[c] = col(f"{c_slug}_capacity")
 
     reserves_cols: dict[str, str] = {}
-    reserves_raw_cols: dict[str, str] = {}
     for country in axes["reserves_countries"]:
         c_slug = _slugify(country)
         reserves_cols[country] = col(f"{c_slug}_reserves")
-        if country in axes["reserves_raw_countries"]:
-            reserves_raw_cols[country] = col(f"{c_slug}_reserves_raw")
 
     # Second pass to fill the country cells. Imports vary per row (one category
     # each); world production and reserves are duplicated across an element's
@@ -352,12 +363,8 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             row[cname] = "N/A"
         for cname in world_capacity_cols.values():
             row[cname] = "N/A"
-        for cname in world_latest_raw_cols.values():
-            row[cname] = ""  # raw is genuinely empty if no sentinel
         for cname in reserves_cols.values():
             row[cname] = "N/A"
-        for cname in reserves_raw_cols.values():
-            row[cname] = ""
 
         # Imports — only the row's own category fills cells.
         if cat is not None:
@@ -366,26 +373,24 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                 if cname is not None:
                     row[cname] = _country_val(cs.share_pct)
 
-        # World production — full table on every row of an element.
+        # World production — full table on every row of an element. Each cell
+        # is mixed-type: USGS sentinel (W / E / >N etc.) if present, else
+        # the formatted numeric.
         yp, yl = _years_for(rec)
         for wp in rec.world_production:
             country = wp.country
             prev_key = (country, yp)
             latest_key = (country, yl)
             if prev_key in world_prev_cols:
-                row[world_prev_cols[prev_key]] = _country_val(wp.production_prev_year)
+                row[world_prev_cols[prev_key]] = _cell(
+                    wp.production_prev_year, wp.production_prev_raw)
             if latest_key in world_latest_cols:
-                row[world_latest_cols[latest_key]] = _country_val(wp.production_latest_year)
-                raw_col = world_latest_raw_cols.get(latest_key)
-                if raw_col and wp.production_latest_raw and wp.production_latest_raw != _val(wp.production_latest_year):
-                    row[raw_col] = wp.production_latest_raw
+                row[world_latest_cols[latest_key]] = _cell(
+                    wp.production_latest_year, wp.production_latest_raw)
             if country in world_capacity_cols:
                 row[world_capacity_cols[country]] = _country_val(wp.capacity)
             if country in reserves_cols:
-                row[reserves_cols[country]] = _country_val(wp.reserves)
-                raw_col = reserves_raw_cols.get(country)
-                if raw_col and wp.reserves_raw and wp.reserves_raw != _val(wp.reserves):
-                    row[raw_col] = wp.reserves_raw
+                row[reserves_cols[country]] = _cell(wp.reserves, wp.reserves_raw)
 
     return columns, rows
 
