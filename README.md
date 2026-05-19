@@ -93,6 +93,25 @@ The parser is generic over the standard MCS sheet shape; most elements should
 work without code changes. If a sheet uses an unusual layout, log the issue in
 [issues.md](issues.md) and add a per-element override.
 
+## Deploy & data refresh
+
+Two workflows under `.github/workflows/`:
+
+| Workflow            | Trigger                  | What it does                                                                   |
+| ------------------- | ------------------------ | ------------------------------------------------------------------------------ |
+| `deploy-pages.yml`  | every push to `main`     | Tests + sanity-check + bundle the **committed** `viewer/` and `data/`. No network. |
+| `refresh-data.yml`  | manual dispatch only     | Re-runs the extraction pipeline against USGS and commits any data deltas back. |
+
+This split keeps deploys fast (~10s build + ~8s deploy) and removes the failure
+mode where a USGS URL change took down the live site. To refresh from upstream:
+Actions tab → **Refresh data from USGS** → *Run workflow*. Inputs let you scope
+to a single slug, skip the audit screenshots, or force a re-download.
+
+**Author flow when editing the parser:**
+1. Edit `src/`.
+2. `python -m src.pipeline --audit` (regenerates `data/processed/`, `viewer/data.*`, `data/audit/`).
+3. Commit code AND the regenerated data together. The deploy ships exactly what's committed.
+
 ## Repo layout
 
 ```
