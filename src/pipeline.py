@@ -51,83 +51,86 @@ def _process_primary(slug: str, *, refresh: bool, do_audit: bool) -> ElementReco
     return record
 
 
+def _blank_aggregates(rec: ElementRecord) -> None:
+    """Null out sheet-wide numeric fields on a derived record.
+
+    Used when the parent sheet's aggregates (imports/exports/production/etc.)
+    aren't applicable to the alias — e.g. a single heavy REE inheriting
+    rare-earths totals that cover the entire group.
+    """
+    rec.mined_production_latest = None
+    rec.primary_smelting_latest = None
+    rec.secondary_smelting_latest = None
+    rec.imports_total_latest = None
+    rec.exports_total_latest = None
+    rec.apparent_consumption_latest = None
+    rec.net_import_reliance_pct_latest = None
+
+
 def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
     """Derive an alias record from its parent.
 
-    Most fields are inherited verbatim (the source PDF is the same). Two cases:
+    Branches on `alias.kind` — the source-shape taxonomy declared in
+    src/config.py. Each kind corresponds to a distinct USGS PDF structure /
+    inheritance pattern:
 
-    * `parent_filter` is set — narrow the price column to the matching price
-      quote (e.g. "europium" carries the Europium-oxide price instead of
-      rare-earths' default).
-    * `parent_filter` is None AND the parent's price section is per-element
-      (rare-earths quotes Lanthanum / Cerium / Praseodymium etc. individually,
-      not a single aggregate price) — blank the price fields so we don't
-      misleadingly report lanthanum's $1/kg as dysprosium's price.
+    * `rare_earth` — alias against the rare-earths grouped sheet. When
+      `parent_filter` matches a per-element price quote (e.g. "Europium oxide"),
+      we pull that price; otherwise we blank prices (so we don't misattribute
+      lanthanum's price to dysprosium). Sheet-wide aggregates are always
+      blanked because they cover the entire REE group, not this one element.
 
-    Sub-product aliases (gallium-nitride, graphite-anodes, lithium-batteries,
-    superhard-materials, diamond-powders) inherit their parent's overall price
-    because the parent IS a single-commodity sheet whose price quote applies
-    to the parent material the sub-product is made from.
+    * `grouped` — alias against a grouped multi-commodity sheet (PGMs,
+      zirconium-and-hafnium). USGS reports data at the group level only, so
+      members inherit the parent record verbatim. The viewer should make the
+      "same data, just labeled differently" relationship visible via `kind`.
+
+    * `sub_product` — downstream product (gallium nitride, graphite anodes,
+      silicon carbide). The parent IS a single-commodity sheet whose figures
+      apply to the sub-product, so inherit verbatim.
     """
     rec = ElementRecord(**parent.model_dump())
     rec.slug = alias.slug
     rec.name = alias.name
     rec.symbol = alias.symbol
+    rec.kind = alias.kind
+    rec.parent_slug = alias.parent_slug
 
-    if alias.parent_filter and alias.parent_slug == "rare-earths":
-        pat = re.compile(alias.parent_filter, re.IGNORECASE)
+    if alias.kind == "rare_earth":
+        _blank_aggregates(rec)
 
-        matching_quote: PriceQuote | None = None
-        for pq in parent.price_quotes:
-            if pat.search(pq.form):
-                matching_quote = pq
-                break
-        # For per-element rare-earth aliases, the parent's aggregates
-        # (imports/exports/apparent consumption/etc.) are sheet-wide totals
-        # across all rare earths — NOT specific to this element. Blank them
-        # so the table doesn't misattribute samarium-only data to europium.
-        rec.mined_production_latest = None
-        rec.primary_smelting_latest = None
-        rec.secondary_smelting_latest = None
-        rec.imports_total_latest = None
-        rec.exports_total_latest = None
-        rec.apparent_consumption_latest = None
-        rec.net_import_reliance_pct_latest = None
+        if alias.parent_filter:
+            pat = re.compile(alias.parent_filter, re.IGNORECASE)
+            matching_quote: PriceQuote | None = None
+            for pq in parent.price_quotes:
+                if pat.search(pq.form):
+                    matching_quote = pq
+                    break
 
-        if matching_quote:
-            rec.price_usd_per_pound_latest = matching_quote.values.get(parent.latest_year)
-            rec.price_unit_note = matching_quote.form
-            row = YearSeries(
-                label=matching_quote.form,
-                section="Price",
-                values=matching_quote.values,
-                raw_values=matching_quote.raw_values,
-            )
-            rec.salient_stats = [row]
-            rec.price_quotes = [matching_quote]
+            if matching_quote:
+                rec.price_usd_per_pound_latest = matching_quote.values.get(parent.latest_year)
+                rec.price_unit_note = matching_quote.form
+                row = YearSeries(
+                    label=matching_quote.form,
+                    section="Price",
+                    values=matching_quote.values,
+                    raw_values=matching_quote.raw_values,
+                )
+                rec.salient_stats = [row]
+                rec.price_quotes = [matching_quote]
+            else:
+                rec.price_usd_per_pound_latest = None
+                rec.price_unit_note = None
+                rec.price_quotes = []
+                rec.salient_stats = []
         else:
+            # Heavy REE without an individual price quote — null out price
+            # fields so we don't falsely attribute another REE's value.
             rec.price_usd_per_pound_latest = None
             rec.price_unit_note = None
             rec.price_quotes = []
             rec.salient_stats = []
-    elif alias.parent_slug == "rare-earths":
-        # Heavy REE without an individual price quote in the rare-earths
-        # chapter — keep provenance but null out numeric fields so we don't
-        # falsely attribute another REE's value.
-        rec.price_usd_per_pound_latest = None
-        rec.price_unit_note = None
-        rec.price_quotes = []
-        rec.salient_stats = []
-        rec.mined_production_latest = None
-        rec.primary_smelting_latest = None
-        rec.secondary_smelting_latest = None
-        rec.imports_total_latest = None
-        rec.exports_total_latest = None
-        rec.apparent_consumption_latest = None
-        rec.net_import_reliance_pct_latest = None
-    # else: sub-product alias (gallium-nitride / graphite-anodes / etc.) — keep
-    # parent's price and aggregates verbatim, since the parent IS a single
-    # commodity whose figures cover the sub-product.
+    # grouped + sub_product: inherit parent verbatim (no extra work).
     return rec
 
 

@@ -24,28 +24,41 @@ Per CLAUDE.md §Backlog — ideas, follow-ups, and queued elements. Each item ha
 ### Done — alias / sub-product views
 
 These records reference a primary's PDF (`parent_slug`) and either filter to a
-specific price quote (`parent_filter`) or inherit the parent's aggregates:
+specific price quote (`parent_filter`) or inherit the parent's aggregates. The
+`kind` field selects the derivation branch in `pipeline._make_alias`:
 
-- [x] **Diamond powders** ← diamond
-- [x] **Gallium nitride** ← gallium
-- [x] **Graphite anodes** ← graphite
-- [x] **Lithium batteries** ← lithium
-- [x] **Superhard materials** ← abrasives
-- [x] **Europium / Gadolinium / Samarium** ← rare-earths (matched to their oxide price quote)
-- [x] **Dysprosium / Erbium / Holmium / Lutetium / Terbium / Thulium / Ytterbium / Yttrium** ← rare-earths
-      (no individual price in MCS 2026 — numeric fields are "Not available", parent's narrative + world rows still surface)
+- [x] **Sub-products (kind="sub_product")**: Diamond powders ← diamond;
+      Gallium nitride ← gallium; Graphite anodes ← graphite; Lithium batteries
+      ← lithium; Silicon carbide ← abrasives; Superhard materials ← abrasives
+- [x] **REE with per-oxide price (kind="rare_earth")**: Cerium, Europium,
+      Gadolinium, Lanthanum, Neodymium, Praseodymium, Samarium ← rare-earths
+      (matched to oxide price quote via `parent_filter`)
+- [x] **REE without individual price (kind="rare_earth")**: Dysprosium, Erbium,
+      Holmium, Lutetium, Terbium, Thulium, Ytterbium, Yttrium ← rare-earths
+      (no individual price in MCS 2026 — numeric fields blanked; parent's
+      narrative + world rows still accessible via parent record)
+- [x] **Grouped-sheet members (kind="grouped")**: Iridium, Platinum ←
+      platinum-group-metals; Hafnium, Zirconium ← zirconium-and-hafnium
+      (verbatim inherit — USGS only reports at the group level)
+
+### Done — primary additions (MCS 2026)
+
+- [x] **Aluminum, Chromium, Cobalt, Copper, Magnesium, Manganese, Nickel,
+      Niobium, Rhenium, Silicon, Silver, Tantalum, Tin, Titanium, Vanadium,
+      Zinc** — single-element MCS sheets
+- [x] **Platinum-group-metals** — grouped parent for Ir/Pt aliases
+- [x] **Zirconium-and-hafnium** — grouped parent for Zr/Hf aliases
 
 ### Queued — additional commodities (USGS 2022 critical minerals list)
 
 Standard MCS sheets exist for the rest of the list; adding any of these is a
 one-line entry to `ELEMENTS` in [src/config.py](src/config.py):
 
-- [ ] Aluminum, Arsenic, Barite, Beryllium, Cesium, Chromium, Cobalt,
-      Fluorspar, Hafnium, Iridium, Magnesium, Manganese, Nickel, Niobium,
-      Palladium, Platinum, Rhodium, Rubidium, Ruthenium, Tantalum, Titanium,
-      Vanadium, Zinc, Zirconium
-- [ ] Lanthanum / Cerium / Praseodymium / Neodymium / Mischmetal as REE
-      aliases against rare-earths (matched on their oxide price quotes)
+- [ ] Arsenic, Barite, Beryllium, Cesium, Fluorspar, Palladium, Rhodium,
+      Rubidium, Ruthenium
+- [ ] Sodium — no single MCS sheet; would need salt + soda-ash + sodium-sulfate
+      as separate primaries
+- [ ] Mischmetal as REE alias against rare-earths (Mischmetal price quote exists)
 - [ ] Standalone elements that USGS does NOT cover in MCS but the user may
       want: lithium-iron-phosphate batteries, neodymium magnets, silicon
       carbide micro-grit, polycrystalline diamond compact bits.

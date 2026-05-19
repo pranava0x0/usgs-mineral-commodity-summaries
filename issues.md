@@ -61,3 +61,9 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 - **Root cause**: Design bug — when no `parent_filter` matched, the alias was still inheriting the parent's first-row price.
 - **Fix**: Aliases whose `parent_slug == "rare-earths"` and have no `parent_filter` blank their per-element numeric fields. Sub-product aliases (gallium-nitride, lithium-batteries, etc.) still inherit because the parent IS the single commodity that covers them.
 - **Status**: Fixed. The dysprosium / holmium / yttrium rows now show "Not available" for price and aggregates rather than misleading lanthanum data.
+
+### #9 — Molybdenum's world-table year header parsed as a country
+- **Module**: `src/parser.py` (`_parse_world_production`)
+- **Symptom**: A WorldProductionRow with `country='2024'` and `prev=2025.0` is emitted from the molybdenum sheet, polluting the country axis of the wide CSV with a `world_prod__2024__*` block.
+- **Root cause**: Code bug — the bbox-based world-production parser doesn't filter out the year-header band (the row that just contains "2024" and "2025e" as column labels). For most sheets the header band sits inside the prose continuation filter; molybdenum's header band is structured enough to look like a data row.
+- **Status**: Open. Not blocking — affects one country slot in the CSV. To fix: add a filter that drops any row whose `country` is purely numeric / a 4-digit year, or detect the header by its position immediately under the section title.

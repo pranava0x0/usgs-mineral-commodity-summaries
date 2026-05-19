@@ -1,18 +1,38 @@
 """Wide-table CSV export.
 
-One row per element/alias. Columns are flat snake_case and include:
+One row per element/alias. Columns are grouped into sections:
 
-  identity              slug, name, symbol, parent_slug, source_url, units_note
-  per-year US summary   {field}_{year} for every salient-stats row, with both
-                        the numeric and the raw token (e.g. "W", ">95")
-  computed aggregates   imports_total_<year>, exports_total_<year>,
-                        mined_production_<year>, primary_smelting_<year>, etc.
-  per-form salient      {section}_{form}_{year} so antimony's
-                        "Imports for consumption - Oxide - 2025e" round-trips
-  per-category imports  import_share_{category}_{country} (multi-category sheets)
-  per-country world     world_{country}_{prev|latest|reserves}
+  identity              slug, name, symbol, kind, parent_slug, source_url,
+                        edition, edition_date, captured_at, pdf_sha256,
+                        pdf_page_count, units_note, price_unit_note,
+                        latest_year, import_sources_range, world_production_label
+  latest-year summary   mined_production_latest, primary_smelting_latest,
+                        secondary_smelting_latest, imports_total_latest,
+                        exports_total_latest, apparent_consumption_latest,
+                        price_usd_per_pound_latest, net_import_reliance_pct_latest
+                        + matching *_sentinel columns for "W"/"E"/">N"
+  per-form salient      salient__<section>__<label>__<year>  (+ _raw)
+                        — e.g. antimony's "Imports - Oxide - 2025e" round-trips
+  per-form price        price__<form>__<year>  (+ _raw)
 
-That's many columns — the user explicitly OK'd "many columns is fine."
+  --- country sections (filled across all elements with N/A for missing) ---
+  imports               imports__<category>__<country>
+                        Category is "all" for single-list sheets (bismuth)
+                        or the USGS category name (antimony's Ore / Oxide / ...)
+  world production      world_prod__<country>__prev
+                        world_prod__<country>__latest   (+ _raw)
+                        world_prod__<country>__capacity
+  world reserves        world_reserves__<country>  (+ _raw)
+
+The country axis is the alphabetical union of every country appearing in any
+element's USGS table, with "World *" aggregate rows pushed to the end of each
+section. Cells where the country isn't tabulated for a given element are
+filled with "N/A" so the CSV is rectangular and pandas-friendly. Cells where
+USGS reported an em-dash (zero) keep "0"; cells where USGS reported "NA"
+also render as "N/A".
+
+That's many columns — explicitly OK'd. Expect 1000+ when run on the full
+registry.
 """
 
 from __future__ import annotations
@@ -36,11 +56,98 @@ def _slugify(s: str) -> str:
 
 
 def _val(v: Optional[float]) -> str:
+    """Numeric formatter — '' for None.
+
+    Used for non-country cells where 'missing' is a different concept from
+    'reported NA' and we don't want to force a value.
+    """
     if v is None:
         return ""
     if isinstance(v, float) and v.is_integer():
         return str(int(v))
     return f"{v}"
+
+
+def _country_val(v: Optional[float]) -> str:
+    """Numeric formatter for country cells — 'N/A' for None.
+
+    Every country column is filled for every element so the CSV is rectangular;
+    'N/A' covers both 'USGS reported NA' and 'country not tabulated for this
+    element'. Em-dash (zero) is preserved as '0' because USGS uses em-dash to
+    mean "produced zero", not "unknown".
+    """
+    if v is None:
+        return "N/A"
+    if isinstance(v, float) and v.is_integer():
+        return str(int(v))
+    return f"{v}"
+
+
+def _sorted_countries(countries: Iterable[str]) -> list[str]:
+    """Alphabetical ordering; 'World *' aggregates pushed to the end.
+
+    USGS rows like 'World total (rounded)' aren't real countries but DO carry
+    useful summary numbers. Keeping them at the tail of the country axis means
+    the alphabetical block reads naturally and totals are easy to find.
+    """
+    primary = sorted(c for c in countries if not c.lower().startswith("world"))
+    aggregates = sorted(c for c in countries if c.lower().startswith("world"))
+    return primary + aggregates
+
+
+def _cat_slug(name: Optional[str]) -> str:
+    """Normalize an import-source category name to a slug.
+
+    `None` (bismuth-style flat list) becomes 'all'.
+    """
+    if name is None:
+        return "all"
+    return _slugify(name) or "all"
+
+
+def _collect_country_axes(records: list[ElementRecord]) -> dict:
+    """Pre-pass: build the union of (category × country) for each section.
+
+    Run before column registration so per-country columns are stable: every
+    element gets the same imports / world-prod / reserves columns in the same
+    order, regardless of which element appears first in the input.
+
+    Also detects which countries have non-trivial `_raw` cells so we only
+    emit `_raw` columns where they'll carry information.
+    """
+    import_categories: set[str] = set()
+    imports_countries: set[str] = set()
+    world_countries: set[str] = set()
+    world_latest_raw_countries: set[str] = set()
+    reserves_countries: set[str] = set()
+    reserves_raw_countries: set[str] = set()
+
+    for rec in records:
+        for cat in rec.import_sources_by_category:
+            import_categories.add(_cat_slug(cat.category))
+            for cs in cat.countries:
+                imports_countries.add(cs.country)
+        # bismuth-style flat list is normally also in by_category as category=None,
+        # but include it as a backup in case the parser populated only the flat list.
+        for cs in rec.import_sources_flat:
+            imports_countries.add(cs.country)
+        for wp in rec.world_production:
+            world_countries.add(wp.country)
+            if wp.production_latest_raw and wp.production_latest_raw != _val(wp.production_latest_year):
+                world_latest_raw_countries.add(wp.country)
+            if wp.reserves is not None or wp.reserves_raw not in (None, ""):
+                reserves_countries.add(wp.country)
+            if wp.reserves_raw and wp.reserves_raw != _val(wp.reserves):
+                reserves_raw_countries.add(wp.country)
+
+    return {
+        "import_categories": sorted(import_categories),
+        "imports_countries": _sorted_countries(imports_countries),
+        "world_countries": _sorted_countries(world_countries),
+        "world_latest_raw_countries": world_latest_raw_countries,
+        "reserves_countries": _sorted_countries(reserves_countries),
+        "reserves_raw_countries": reserves_raw_countries,
+    }
 
 
 def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, str]]]:
@@ -58,7 +165,7 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
 
     # Stable identity columns first so the CSV is readable at a glance.
     for name in (
-        "slug", "name", "symbol", "parent_slug", "source_url", "edition", "edition_date",
+        "slug", "name", "symbol", "kind", "parent_slug", "source_url", "edition", "edition_date",
         "captured_at", "pdf_sha256", "pdf_page_count", "units_note", "price_unit_note",
         "latest_year", "import_sources_range", "world_production_label",
     ):
@@ -74,12 +181,15 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                "apparent_consumption", "net_import_reliance"):
         col(f"{sk}_latest_sentinel")
 
+    # Salient-stats + price columns are still discovered lazily during the row
+    # loop (their column space is shaped by per-element schemas, not unioned).
     for rec in records:
         row: dict[str, str] = {}
         row["slug"] = rec.slug
         row["name"] = rec.name
         row["symbol"] = rec.symbol or ""
-        row["parent_slug"] = ""  # filled by caller for alias records
+        row["kind"] = rec.kind
+        row["parent_slug"] = rec.parent_slug or ""
         row["source_url"] = rec.source_url
         row["edition"] = rec.edition
         row["edition_date"] = rec.edition_date
@@ -129,31 +239,88 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                 if raw not in (None, ""):
                     row[col(f"price__{form}__{yr}_raw")] = str(raw)
 
-        # Import sources (multi-category supported)
-        for cat in rec.import_sources_by_category:
-            cat_slug = _slugify(cat.category) if cat.category else "all"
-            for cs in cat.countries:
-                row[col(f"import_share__{cat_slug}__{_slugify(cs.country)}")] = _val(cs.share_pct)
-
-        # World production rows
-        for wp in rec.world_production:
-            c_slug = _slugify(wp.country)
-            row[col(f"world__{c_slug}__production_prev")] = _val(wp.production_prev_year)
-            row[col(f"world__{c_slug}__production_latest")] = _val(wp.production_latest_year)
-            row[col(f"world__{c_slug}__capacity")] = _val(wp.capacity)
-            row[col(f"world__{c_slug}__reserves")] = _val(wp.reserves)
-            if wp.production_latest_raw and wp.production_latest_raw not in {"", _val(wp.production_latest_year)}:
-                row[col(f"world__{c_slug}__production_latest_raw")] = wp.production_latest_raw
-            if wp.reserves_raw and wp.reserves_raw not in {"", _val(wp.reserves)}:
-                row[col(f"world__{c_slug}__reserves_raw")] = wp.reserves_raw
-
         rows.append(row)
+
+    # ---- Country sections — registered after a pre-pass so columns are stable
+    # across the full record set, and every cell is filled (N/A if absent) so
+    # the CSV is rectangular for pandas / sheets consumers.
+    axes = _collect_country_axes(records)
+
+    imports_col_names: dict[tuple[str, str], str] = {}
+    for cat_slug in axes["import_categories"]:
+        for country in axes["imports_countries"]:
+            cname = col(f"imports__{cat_slug}__{_slugify(country)}")
+            imports_col_names[(cat_slug, country)] = cname
+
+    world_prev_cols: dict[str, str] = {}
+    world_latest_cols: dict[str, str] = {}
+    world_latest_raw_cols: dict[str, str] = {}
+    world_capacity_cols: dict[str, str] = {}
+    for country in axes["world_countries"]:
+        c_slug = _slugify(country)
+        world_prev_cols[country] = col(f"world_prod__{c_slug}__prev")
+        world_latest_cols[country] = col(f"world_prod__{c_slug}__latest")
+        if country in axes["world_latest_raw_countries"]:
+            world_latest_raw_cols[country] = col(f"world_prod__{c_slug}__latest_raw")
+        world_capacity_cols[country] = col(f"world_prod__{c_slug}__capacity")
+
+    reserves_cols: dict[str, str] = {}
+    reserves_raw_cols: dict[str, str] = {}
+    for country in axes["reserves_countries"]:
+        c_slug = _slugify(country)
+        reserves_cols[country] = col(f"world_reserves__{c_slug}")
+        if country in axes["reserves_raw_countries"]:
+            reserves_raw_cols[country] = col(f"world_reserves__{c_slug}_raw")
+
+    # Second pass to fill the country cells.
+    for rec, row in zip(records, rows):
+        # Default every country cell to N/A; values overwrite as we find them.
+        for cname in imports_col_names.values():
+            row[cname] = "N/A"
+        for cname in world_prev_cols.values():
+            row[cname] = "N/A"
+        for cname in world_latest_cols.values():
+            row[cname] = "N/A"
+        for cname in world_capacity_cols.values():
+            row[cname] = "N/A"
+        for cname in world_latest_raw_cols.values():
+            row[cname] = ""  # raw is genuinely empty if no sentinel
+        for cname in reserves_cols.values():
+            row[cname] = "N/A"
+        for cname in reserves_raw_cols.values():
+            row[cname] = ""
+
+        # Imports
+        for cat in rec.import_sources_by_category:
+            cs_slug = _cat_slug(cat.category)
+            for cs in cat.countries:
+                cname = imports_col_names.get((cs_slug, cs.country))
+                if cname is not None:
+                    row[cname] = _country_val(cs.share_pct)
+
+        # World production
+        for wp in rec.world_production:
+            country = wp.country
+            if country in world_prev_cols:
+                row[world_prev_cols[country]] = _country_val(wp.production_prev_year)
+                row[world_latest_cols[country]] = _country_val(wp.production_latest_year)
+                row[world_capacity_cols[country]] = _country_val(wp.capacity)
+                raw_col = world_latest_raw_cols.get(country)
+                if raw_col and wp.production_latest_raw and wp.production_latest_raw != _val(wp.production_latest_year):
+                    row[raw_col] = wp.production_latest_raw
+            if country in reserves_cols:
+                row[reserves_cols[country]] = _country_val(wp.reserves)
+                raw_col = reserves_raw_cols.get(country)
+                if raw_col and wp.reserves_raw and wp.reserves_raw != _val(wp.reserves):
+                    row[raw_col] = wp.reserves_raw
 
     return columns, rows
 
 
 def write_csv(records: list[ElementRecord], out_path) -> None:
-    """Write CSV with discovery-order columns; missing cells are empty."""
+    """Write CSV with grouped columns; country cells are filled with N/A
+    when the country isn't in this element's USGS table.
+    """
     columns, rows = build_rows(records)
     out_path.write_text(_render(columns, rows), encoding="utf-8")
     log.info("wrote csv -> %s (%d rows × %d cols)", out_path, len(rows), len(columns))

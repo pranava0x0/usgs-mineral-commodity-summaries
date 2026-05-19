@@ -15,7 +15,7 @@ Conventions:
 
 from __future__ import annotations
 
-from typing import Optional
+from typing import Literal, Optional
 
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -23,6 +23,9 @@ from pydantic import BaseModel, ConfigDict, Field
 StrictBase = ConfigDict(extra="forbid", populate_by_name=True)
 
 YEAR_COLUMNS = ("2021", "2022", "2023", "2024", "2025e")
+
+# Mirrors src.config.ElementKind — kept in sync so the viewer / CSV can filter.
+RecordKind = Literal["primary", "rare_earth", "grouped", "sub_product"]
 
 
 class YearSeries(BaseModel):
@@ -103,6 +106,8 @@ class ElementRecord(BaseModel):
     slug: str
     name: str
     symbol: Optional[str] = None
+    kind: RecordKind = "primary"              # source-shape; mirrors config.ElementKind
+    parent_slug: Optional[str] = None         # set when this record was derived from another's PDF
     source_url: str                           # traceback URL — the original USGS PDF
     edition: str                              # e.g. "MCS 2026"
     edition_date: str                         # e.g. "2026-02"

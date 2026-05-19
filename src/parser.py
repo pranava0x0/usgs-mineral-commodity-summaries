@@ -969,6 +969,8 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         slug=el.slug,
         name=el.name,
         symbol=el.symbol,
+        kind=el.kind,
+        parent_slug=el.parent_slug,
         source_url=el.mcs_url,
         edition=config.MCS_EDITION,
         edition_date=config.MCS_DATE,
