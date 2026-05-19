@@ -117,6 +117,11 @@ ELEMENTS: dict[str, Element] = {
     "indium": Element(
         slug="indium", name="Indium", symbol="In", mcs_url=_mcs("indium"),
     ),
+    "iron-and-steel": Element(
+        slug="iron-and-steel", name="Iron and Steel", symbol="Fe",
+        mcs_url=_mcs("iron-steel"),
+        notes="USGS publishes the integrated 'iron-steel' sheet (raw steel + pig iron); iron ore and iron-and-steel scrap are separate sheets.",
+    ),
     "lithium": Element(
         slug="lithium", name="Lithium", symbol="Li", mcs_url=_mcs("lithium"),
         notes="Domestic production W (withheld) — single producer. Lithium batteries are a downstream product.",
@@ -140,8 +145,8 @@ ELEMENTS: dict[str, Element] = {
     ),
     "platinum-group-metals": Element(
         slug="platinum-group-metals", name="Platinum-group metals (grouped)", symbol=None,
-        mcs_url=_mcs("platinum-group-metals"),
-        notes="Grouped sheet covering iridium, palladium, platinum, rhodium, ruthenium, osmium. Per-PGM aliases inherit this verbatim.",
+        mcs_url=_mcs("platinum-group"),
+        notes="USGS 2026 filename is 'platinum-group' (the '-metals' suffix was dropped this edition). Grouped sheet covering iridium, palladium, platinum, rhodium, ruthenium, osmium. Per-PGM aliases inherit this verbatim.",
     ),
     "rare-earths": Element(
         slug="rare-earths", name="Rare Earths (grouped)", symbol=None, mcs_url=_mcs("rare-earths"),
@@ -172,8 +177,8 @@ ELEMENTS: dict[str, Element] = {
         slug="tin", name="Tin", symbol="Sn", mcs_url=_mcs("tin"),
     ),
     "titanium": Element(
-        slug="titanium", name="Titanium", symbol="Ti", mcs_url=_mcs("titanium-and-titanium-dioxide"),
-        notes="USGS sheet is 'titanium-and-titanium-dioxide'. Titanium mineral concentrates (ilmenite/rutile) is a separate sheet.",
+        slug="titanium", name="Titanium", symbol="Ti", mcs_url=_mcs("titanium"),
+        notes="USGS 2026 filename is 'titanium' (the '-and-titanium-dioxide' suffix was dropped this edition). Titanium mineral concentrates (ilmenite/rutile) is a separate sheet.",
     ),
     "tungsten": Element(
         slug="tungsten", name="Tungsten", symbol="W", mcs_url=_mcs("tungsten"),
@@ -187,8 +192,8 @@ ELEMENTS: dict[str, Element] = {
     ),
     "zirconium-and-hafnium": Element(
         slug="zirconium-and-hafnium", name="Zirconium and hafnium (grouped)", symbol=None,
-        mcs_url=_mcs("zirconium-and-hafnium"),
-        notes="USGS publishes Zr + Hf as one combined sheet. Per-element aliases inherit verbatim.",
+        mcs_url=_mcs("zirconium-hafnium"),
+        notes="USGS 2026 filename is 'zirconium-hafnium' (the '-and-' connector was dropped this edition). Per-element aliases inherit verbatim.",
     ),
 }
 
@@ -281,21 +286,21 @@ ALIASES: dict[str, Element] = {
     # Platinum-group metals — inherit the grouped PGM sheet verbatim.
     # USGS reports PGM totals at the group level; per-PGM data isn't separately tabulated.
     "iridium": Element(slug="iridium", name="Iridium", symbol="Ir",
-                       mcs_url=_mcs("platinum-group-metals"), kind="grouped",
+                       mcs_url=_mcs("platinum-group"), kind="grouped",
                        parent_slug="platinum-group-metals",
                        notes="PGM — not a rare earth. Data inherited from platinum-group-metals sheet."),
     "platinum": Element(slug="platinum", name="Platinum", symbol="Pt",
-                        mcs_url=_mcs("platinum-group-metals"), kind="grouped",
+                        mcs_url=_mcs("platinum-group"), kind="grouped",
                         parent_slug="platinum-group-metals",
                         notes="PGM. Data inherited from platinum-group-metals sheet."),
     # Zirconium + hafnium — share a single combined USGS sheet.
     # Same workflow as PGMs: parent holds the data, members inherit verbatim.
     "hafnium": Element(slug="hafnium", name="Hafnium", symbol="Hf",
-                       mcs_url=_mcs("zirconium-and-hafnium"), kind="grouped",
+                       mcs_url=_mcs("zirconium-hafnium"), kind="grouped",
                        parent_slug="zirconium-and-hafnium",
                        notes="Transition metal — not a rare earth. Co-extracted with zirconium; USGS reports them in a combined sheet."),
     "zirconium": Element(slug="zirconium", name="Zirconium", symbol="Zr",
-                         mcs_url=_mcs("zirconium-and-hafnium"), kind="grouped",
+                         mcs_url=_mcs("zirconium-hafnium"), kind="grouped",
                          parent_slug="zirconium-and-hafnium",
                          notes="Co-reported with hafnium in the combined sheet."),
 }

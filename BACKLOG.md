@@ -71,6 +71,117 @@ one-line entry to `ELEMENTS` in [src/config.py](src/config.py):
 - [ ] **Diff alerts** (medium) — when re-running with `--refresh`, compare new SHA-256 to the stored value and surface "USGS reissued this PDF" warnings.
 - [ ] **Multi-edition history** (low) — keep `data/processed/elements_<edition>.json` so we can chart year-over-year drift in reported figures.
 
+## Rare-earths sheet — accuracy gaps (2026-05-19 audit)
+
+The rare-earths sheet has a *structurally* different layout from the typical
+single-commodity MCS sheet (antimony, bismuth, etc.). The generic parser
+handles most of it correctly, but the differences below surface gaps where
+information is silently dropped. See also AGENTS.md for the comparison
+table.
+
+### Structural differences vs. critical-mineral sheets
+- **Title carries a superscript** — `RARE EARTHS¹` (footnote 1 explains
+  "Data include lanthanides and yttrium but exclude most scandium"). All
+  primary sheets except rare-earths use a bare title.
+- **Units delimiter is `[ … ]`** — every other sheet uses `( … )`.
+- **Two production rows**, not one — `Mineral concentrates²` (REO content
+  of mined bastnaesite/monazite) AND `Compounds and metalsᵉ,³` (refined
+  product). Antimony has `Mine` + `Smelter: Primary` + `Smelter: Secondary`.
+- **Three-level salient-stats nesting** — `Imports:` → `Metals:` →
+  `Ferrocerium, alloys` / `Rare-earth metals and alloys`. Most sheets
+  only have two levels (section → row).
+- **Multi-row Price section** — 9 different priced commodities
+  (lanthanum oxide, cerium oxide, NdPr oxide, etc.), each in $/kg. Most
+  sheets have a single Price row.
+- **Multi-row NIR section** — `Compounds and metals` (>95/>95/>90/53/67)
+  AND `Mineral concentrates` (E/E/E/E/E). Most sheets have a single
+  NIR row.
+- **Section-level footnotes** — `Production:ᵉ`, `Imports:ᵉ,⁴`,
+  `Exports:ᵉ,⁴`, `Net import reliance⁷` carry footnote markers on the
+  *section header* rather than on individual rows.
+- **Multiple inline footnote markers per row** — `Compounds and metalsᵉ,³`
+  has both an estimation marker (`e`) and a numeric reference (`3`). Most
+  rows carry at most one numeric footnote.
+- **Trailing prose after Import Sources percentages** — the sheet runs
+  `"…other, 6%. Compounds and metals imported from Estonia, Japan, and
+  Malaysia were derived from mineral concentrates…"`. Most sheets terminate
+  the import-sources line at the last `%.`.
+
+### Known issues — file each one separately
+
+- [ ] **#R1 Multi-superscript row labels lose all but the last footnote** (medium) —
+      Salient-stats row `Compounds and metals` (Production section) shows
+      `footnote=None`; the PDF marks it `Compounds and metalsᵉ,³`. The "3"
+      footnote ("Production includes compounds from California and Utah.
+      Data are rounded to two significant digits.") is lost. Likely fix:
+      collect ALL trailing superscripts in `TextLine`, not just the last
+      one; promote the numeric ones into `YearSeries.footnote` as a list.
+- [ ] **#R2 Section-level footnote markers are dropped** (medium) —
+      `Production:ᵉ`, `Imports:ᵉ,⁴`, `Exports:ᵉ,⁴`, `Net import reliance⁷
+      as a percentage of apparent consumption:` all carry footnote markers
+      that don't survive parsing. Currently the section appears under
+      `YearSeries.section` as just `"Production"` / `"Imports"` etc. Likely
+      fix: add `section_footnote` / `section_footnotes_list` fields on
+      `YearSeries`, or store the section metadata once per record.
+- [ ] **#R3 Tariff section is parsed but discarded** (medium) —
+      `SECTION_STARTS` registers `TARIFF` and `_take_section` collects its
+      lines, but no `ElementRecord` field stores them. The rare-earths
+      sheet has 5 non-trivial HTS tariff lines (5% / 5.5% / 5.9% ad
+      valorem) that may matter to downstream users. Likely fix: add
+      `tariff: list[TariffItem]` to `ElementRecord` and a `_parse_tariff`
+      helper that walks the section's lines.
+- [ ] **#R4 Government Stockpile section is parsed but discarded** (medium) —
+      Same shape as #R3. Rare earths has a 1,100-ton Lanthanum FY 2025
+      potential-acquisitions row plus the prose mention of 300 t NdPr
+      oxide, 450 t NdFeB block, 60 t SmCo alloy. Not exposed anywhere.
+- [ ] **#R5 Title-level footnote is unreachable from the record** (low) —
+      `RARE EARTHS¹` — footnote 1's body IS in `record.footnotes["1"]`,
+      but nothing on the record signals that the title itself carries
+      that marker. A consumer reading the units note doesn't know to
+      look at footnote 1. Likely fix: add `title_footnote: Optional[str]`
+      to `ElementRecord`.
+- [ ] **#R6 Per-REE alias prose is unfiltered parent prose** (low) —
+      Cerium's `events_trends_summary` is the verbatim rare-earths
+      events block, which mentions samarium, gadolinium, terbium,
+      dysprosium, lutetium, scandium, yttrium, europium, holmium, erbium,
+      thulium, ytterbium — but **not cerium**. The narrative is misleading
+      on the cerium detail page. Likely fix: filter the prose at alias
+      time to sentences that mention the alias's name, OR add a
+      per-element disclaimer "prose inherited from the rare-earths
+      grouped sheet — no cerium-specific narrative is published."
+- [ ] **#R7 Salient-stats row labels collide across sections** (low) —
+      Rare earths has two rows labeled `Compounds and metals` (Production
+      section, value 8,900) and `Compounds and metals` (NIR section, value
+      67). The viewer's `salientBlock` groups by `section` so these
+      render correctly, but any consumer that keys on `label` alone will
+      collapse them. Similar collision: `Mineral concentrates` appears
+      under Production (value 51,000) AND under NIR (value E).
+- [ ] **#R8 Mined production semantic differs from antimony semantics** (low) —
+      Latest-year summary column "Mined production" = 51,000 for
+      rare earths (REO content of mineral concentrates) vs. "W" for
+      antimony (recoverable antimony content). The two are not directly
+      comparable — they measure different points in the value chain.
+      Likely fix: rename the column to something more neutral
+      ("Production — mine stage") OR surface the row label as a tooltip.
+- [ ] **#R9 Numeric reserves fields lose `>` / `<` sentinel** (low) —
+      Already partly addressed (raw form is preserved in `reserves_raw`,
+      audit.md renders it), but `world_production[*].reserves` itself is
+      a plain float (85,000,000) without the inequality. CSV consumers
+      that only look at the numeric field can't tell `>85M` from `85M`.
+      Likely fix: when a sentinel was captured, expose a `_is_lower_bound`
+      / `_is_upper_bound` boolean.
+
+### Items already addressed in this session (cross-reference)
+
+- [x] **Import-sources regex dropped the trailing entry** when followed
+      by prose — fixed in [7752b8e]; the "other, 6%" now appears.
+- [x] **Primary-smelting summary value was null** for rare earths —
+      fixed by extending `_find_row` to match `compounds and metals`.
+- [x] **Price summary value picked an arbitrary commodity** — fixed in
+      `pipeline._postprocess_record` for the rare-earths slug.
+- [x] **Per-rare-earth alias lost the $/kg unit** — fixed by composing
+      `<form> (<unit>)` in the alias's `price_unit_note`.
+
 ## Viewer enhancements
 
 - [ ] **Sort / filter** the overview table (medium) — click a column header to sort; chip filters for "REE only", "PGM only", "Critical 2022 list".

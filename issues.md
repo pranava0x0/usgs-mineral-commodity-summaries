@@ -96,12 +96,19 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 
 ### #13 — Three primary sheets fail to fetch (404)
 - **Module**: `src/config.py` (registry) / fetch URLs
-- **Symptom**: Running `python3 -m src.pipeline` against the full registry fails for `platinum-group-metals`, `titanium`, and `zirconium-and-hafnium` with HTTP 404, and their aliases (iridium, platinum, hafnium, zirconium) are skipped as a consequence.
-- **Root cause**: The MCS 2026 PDFs for those commodities are at different URLs than the registry's pattern assumes, or the slug doesn't match the USGS filename. (Spotted while regenerating data for #11.)
-- **Status**: Open. Pre-existing — not introduced here. The other 11 primaries fetch fine.
+- **Symptom**: Running `python3 -m src.pipeline` against the full registry fails for `platinum-group-metals`, `titanium`, and `zirconium-and-hafnium` with HTTP 404, and their aliases (iridium, platinum, hafnium, zirconium) are skipped as a consequence. Knock-on effect: the `Deploy viewer to GitHub Pages` workflow fails at the pipeline step on every push to main, so the live site stops updating even though the code is pushed.
+- **Root cause**: USGS dropped suffix/connector words from these three filenames in the 2026 edition: `mcs2026-platinum-group-metals.pdf` → `mcs2026-platinum-group.pdf`, `mcs2026-titanium-and-titanium-dioxide.pdf` → `mcs2026-titanium.pdf`, `mcs2026-zirconium-and-hafnium.pdf` → `mcs2026-zirconium-hafnium.pdf`. Our registry still pointed at the 2025-era slugs.
+- **Fix**: Updated all four `mcs_url=_mcs(...)` references in `ELEMENTS` and `ALIASES` to the new slugs. Pipeline now exits 0 with 58 records (29 primary + 6 sub_product + 15 rare_earth + 4 grouped + 4 newly-fetched).
+- **Status**: Fixed in this session. Pipeline run logs show all four sheets parsing cleanly: PGM (24 salient rows, 5 prices, 7 world rows), titanium (16/2/0), Zr+Hf (19/4/11), iron-and-steel (16/0/13, registered fresh in the same change).
 
 ### #11 — Scandium prose fragment parsed as a country name
 - **Module**: `src/parser.py` (import-sources parser)
 - **Symptom**: A new column `imports__although_there_are_no_domestic_trade_codes_for_scandium_materials_exclusively_shipping_records_indicated_scandium_oxide_was_imported_from_japan` appears in the wide CSV; the JSON also has this as a `country` value in `import_sources_*`. The text is the verbatim USGS prose explaining that scandium has no HTS code.
 - **Root cause**: Code bug — the parser greedily reads the line after "Import Sources" as country/share data, but on scandium that line is a prose explanation, not a country list.
 - **Status**: Open. Pre-existing (independent of #10). Was previously hidden behind the per-category column prefix. To fix: detect-and-skip lines that don't match the `<country>, <pct>%` shape before assigning them to `CountryShare`.
+
+### #14 — Iron-and-steel: top-of-table production rows carry no section label
+- **Module**: `src/parser.py` (`_parse_salient_stats`)
+- **Symptom**: For iron-and-steel, the rows `Pig iron production`, `Raw steel production`, `Continuously cast steel, percent`, `Shipments, steel mill products` all have `section=None`. Knock-on effect: the latest-year summary's `mined_production_latest`, `primary_smelting_latest`, and `secondary_smelting_latest` columns are all None because `_find_row` looks for rows under a `Production`-prefixed section. The summary therefore shows N/A for everything production-related even though the PDF reports 82 Mt of raw steel production for 2025.
+- **Root cause**: The iron-and-steel sheet uses a different convention — there is no `Production:` header line; the production rows sit immediately below the year header, before any section label. The parser's state machine starts each table with `current_section=None` and only switches when it sees a header-shaped label.
+- **Status**: Open. Filed 2026-05-19 alongside the new commodity. Likely fix: when the first non-header row appears with no section yet set, infer a "Production" section. Alternative: hardcode the four production-row labels into the latest-year summary's `_find_row` fallbacks (same pattern as the rare-earths "compounds and metals" extension).
