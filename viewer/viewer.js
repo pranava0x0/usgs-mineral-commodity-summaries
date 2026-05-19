@@ -40,15 +40,24 @@ function escapeHtml(s) {
 
 function setupTheme() {
   const btn = $('#theme-toggle');
+  const icon = $('#theme-toggle-icon');
   const stored = localStorage.getItem('cmie-theme');
   if (stored === 'dark') document.documentElement.dataset.theme = 'dark';
+  const sync = () => {
+    const isDark = document.documentElement.dataset.theme === 'dark';
+    icon.textContent = isDark ? '☾' : '☼';
+    // ARIA: announce which theme the next click switches *to*, and reflect
+    // pressed state so screen-reader users know the toggle's current value.
+    btn.setAttribute('aria-label', isDark ? 'Switch to light theme' : 'Switch to dark theme');
+    btn.setAttribute('aria-pressed', String(isDark));
+  };
   btn.addEventListener('click', () => {
     const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
     document.documentElement.dataset.theme = next;
     localStorage.setItem('cmie-theme', next);
-    btn.textContent = next === 'dark' ? '☾' : '☼';
+    sync();
   });
-  btn.textContent = document.documentElement.dataset.theme === 'dark' ? '☾' : '☼';
+  sync();
 }
 
 function renderOverview(bundle) {
@@ -79,17 +88,25 @@ function renderOverview(bundle) {
       <td class="num">${fmtNum(el.apparent_consumption_latest, sentinels.apparent_consumption)}</td>
       <td class="num">${fmtNum(el.price_usd_per_pound_latest)}</td>
       <td class="num">${fmtNum(el.net_import_reliance_pct_latest, sentinels.net_import_reliance, '%')}</td>
-      <td><a class="source-link" href="${el.source_url}" target="_blank" rel="noopener">USGS MCS ↗</a></td>
+      <td><a class="source-link" href="${el.source_url}" target="_blank" rel="noopener"
+             aria-label="Open the USGS MCS source PDF for ${escapeHtml(el.name)} in a new tab">USGS MCS<span aria-hidden="true"> ↗</span></a></td>
     `;
-    tr.addEventListener('click', () => showDetail(el));
+    // Clicks inside the inner <a> shouldn't also fire the row's open-detail
+    // handler — let the link navigate to USGS without stealing the user's
+    // intent into a detail panel pop.
+    tr.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      showDetail(el);
+    });
     tr.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
+        if (e.target.closest('a')) return;
         e.preventDefault();
         showDetail(el);
       }
     });
     body.appendChild(tr);
-    if (idx === 0) showDetail(el);
+    if (idx === 0) showDetail(el, { initial: true });
   });
 
   // Footnote line explaining latest-year framing
@@ -102,7 +119,7 @@ function renderOverview(bundle) {
   }
 }
 
-function showDetail(el) {
+function showDetail(el, { initial = false } = {}) {
   $$('#overview-body tr').forEach(tr => {
     tr.setAttribute('aria-selected', tr.dataset.slug === el.slug ? 'true' : 'false');
   });
@@ -131,7 +148,7 @@ function showDetail(el) {
 
   const tabPanels = tabs.map((t, i) => `
     <div class="tab-panel" role="tabpanel" id="panel-${t.id}"
-         aria-labelledby="tab-${t.id}" ${i === 0 ? '' : 'hidden'}>
+         aria-labelledby="tab-${t.id}" tabindex="0" ${i === 0 ? '' : 'hidden'}>
       ${t.render()}
     </div>
   `).join('');
@@ -152,7 +169,7 @@ function showDetail(el) {
           el.price_footnote_text ? ` — <em>${escapeHtml(el.price_footnote_text)}</em>` : ''
         }</p>`
       : ''}
-    <nav class="tab-strip" role="tablist" aria-label="Detail sections">${tabNav}</nav>
+    <nav class="tab-strip" role="tablist" aria-label="Detail sections" aria-orientation="horizontal">${tabNav}</nav>
     <div class="tab-panels">${tabPanels}</div>
   `;
 
@@ -185,6 +202,18 @@ function showDetail(el) {
   host.innerHTML = '';
   host.appendChild(card);
   $('#detail').hidden = false;
+
+  // A11y: a screen-reader or keyboard user who hit Enter on a row needs to
+  // discover the new detail panel. On every non-initial open, send focus to
+  // the detail heading so the next Tab key continues into the tab strip.
+  // tabindex="-1" lets us programmatically focus a non-interactive <h3>.
+  if (!initial) {
+    const h3 = card.querySelector('h3');
+    if (h3) {
+      h3.setAttribute('tabindex', '-1');
+      h3.focus({ preventScroll: false });
+    }
+  }
 }
 
 const YEARS = ['2021', '2022', '2023', '2024', '2025e'];

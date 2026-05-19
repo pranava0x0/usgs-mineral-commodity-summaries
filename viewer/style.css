@@ -73,6 +73,22 @@
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
 
+/* Screen-reader-only utility: visually hide but keep in the AT tree so
+ * decorative-glyph icons can carry real labels for assistive tech.
+ * Per WebAIM's "visually-hidden" pattern.
+ */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 html, body {
   margin: 0;
   padding: 0;
@@ -241,7 +257,11 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .export-btn:hover { background: var(--download-bar-hover); }
 .export-btn:active { background: rgba(255, 255, 255, 0.30); }
 .export-btn--primary {
-  background: rgba(255, 255, 255, 0.16);
+  /* Darker overlay (not lighter) so the cream text-on-green hits ≥4.5:1
+   * in dark mode. A 25% black overlay deepens the green; the secondary
+   * buttons keep the lighter look so the visual hierarchy still reads
+   * "primary first, then alts." */
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /* ---------- Main ---------- */
@@ -268,9 +288,12 @@ main {
 }
 
 .footnote-note {
-  margin: 12px 0 0;
+  /* Above the table now; bottom margin instead of top. Bumped font-size +
+   * weight so the 5:1 contrast on muted text still feels readable at glance. */
+  margin: 4px 0 16px;
   color: var(--text-muted);
-  font-size: 12.5px;
+  font-size: 13px;
+  max-width: 80ch;
 }
 
 /* ---------- Table ---------- */

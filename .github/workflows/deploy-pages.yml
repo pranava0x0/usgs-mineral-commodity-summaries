@@ -81,6 +81,11 @@ jobs:
           mkdir -p _site/viewer
           cp viewer/index.html viewer/style.css viewer/viewer.js _site/viewer/
           cp viewer/data.json viewer/data.csv _site/viewer/
+          # llms.txt — dataset summary for LLM crawlers (https://llmstxt.org).
+          # Mirror to both the site root and the viewer dir so /llms.txt resolves
+          # regardless of which subpath the crawler hits.
+          cp viewer/llms.txt _site/llms.txt
+          cp viewer/llms.txt _site/viewer/llms.txt
           mkdir -p _site/data
           cp -r data/audit _site/data/audit
           # Optional: ship the raw processed JSON/CSV for direct download too.

@@ -4,19 +4,27 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Commodity Summaries — Critical Minerals &amp; Rare Earths</title>
+  <meta name="description" content="Structured extraction of USGS Mineral Commodity Summaries 2026 for ~50 critical minerals and rare earths. Every value traceable to the source PDF; USGS sentinels (W / E / >N / NA) preserved verbatim." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preload" href="data.json" as="fetch" crossorigin="anonymous" />
+  <!-- llms.txt summary for LLM crawlers (https://llmstxt.org). -->
+  <link rel="alternate" type="text/markdown" title="llms.txt — LLM-friendly summary" href="llms.txt" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="download-bar" role="region" aria-label="Download data">
+  <div class="download-bar" role="region" aria-label="Download dataset">
     <div class="download-bar-inner">
-      <span class="download-bar-label">Download dataset</span>
-      <div class="export-group" role="group" aria-label="Export data">
-        <a id="export-csv" class="export-btn export-btn--primary" href="data.csv" download="commodity-summaries-critical-minerals-rare-earths.csv" title="Download as CSV">⬇ CSV</a>
-        <button id="export-xls" class="export-btn" type="button" title="Download as Excel-compatible XML">XLS</button>
-        <button id="export-pdf" class="export-btn" type="button" title="Print or save as PDF">PDF</button>
+      <span class="download-bar-label" aria-hidden="true">Download dataset</span>
+      <div class="export-group" role="group" aria-label="Export format">
+        <a id="export-csv" class="export-btn export-btn--primary"
+           href="data.csv"
+           download="commodity-summaries-critical-minerals-rare-earths.csv"
+           aria-label="Download data as CSV">
+          <span aria-hidden="true">⬇ CSV</span>
+        </a>
+        <button id="export-xls" class="export-btn" type="button" aria-label="Download data as Excel-compatible XML">XLS</button>
+        <button id="export-pdf" class="export-btn" type="button" aria-label="Print or save as PDF">PDF</button>
       </div>
     </div>
   </div>
@@ -34,7 +42,9 @@
       <p class="subtitle">USGS Mineral Commodity Summaries · primary-source extraction</p>
     </div>
     <div class="header-meta">
-      <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☼</button>
+      <button id="theme-toggle" class="icon-btn" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+        <span aria-hidden="true" id="theme-toggle-icon">☼</span>
+      </button>
     </div>
   </header>
 
@@ -42,8 +52,10 @@
     <section id="overview" aria-labelledby="overview-h">
       <h2 id="overview-h" class="eyebrow">Latest-year summary</h2>
       <p id="units-note" class="units-note"></p>
+      <p class="footnote-note" id="overview-footnote" aria-live="polite"></p>
       <div class="table-wrap">
-        <table id="overview-table" class="data-table">
+        <table id="overview-table" class="data-table" aria-describedby="overview-footnote">
+          <caption class="visually-hidden">USGS Mineral Commodity Summaries — latest-year values per commodity. Click a row or press Enter to open its detail panel.</caption>
           <thead>
             <tr>
               <th scope="col">Element</th>
@@ -61,10 +73,9 @@
           <tbody id="overview-body"></tbody>
         </table>
       </div>
-      <p class="footnote-note" id="overview-footnote"></p>
     </section>
 
-    <section id="detail" aria-labelledby="detail-h" hidden>
+    <section id="detail" aria-labelledby="detail-h" aria-live="polite" hidden>
       <h2 id="detail-h" class="eyebrow">Detail</h2>
       <div id="detail-body"></div>
     </section>

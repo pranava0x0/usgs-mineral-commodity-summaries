@@ -9,14 +9,14 @@ per element).
 
 Columns are grouped into sections:
 
-  identity              name, kind, source_url, captured_at,
-                        units_note, price_unit_note, latest_year,
-                        import_sources_range, world_production_label,
-                        import_category
+  identity              name, kind, source_url, units_note,
+                        price_unit_note, import_sources_range,
+                        world_production_label, import_category
                         (slug, symbol, parent_slug, edition, edition_date,
-                        pdf_sha256, and pdf_page_count are intentionally
-                        omitted from the CSV — they're still in elements.json
-                        for anyone who needs the traceback metadata.)
+                        captured_at, latest_year, pdf_sha256, and
+                        pdf_page_count are intentionally omitted from the
+                        CSV — they're still in elements.json for anyone
+                        who needs the traceback metadata.)
   latest-year summary   mined_production_latest, primary_smelting_latest,
                         secondary_smelting_latest, imports_total_latest,
                         exports_total_latest, apparent_consumption_latest,
@@ -235,8 +235,8 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     # from `name` + `kind` + `edition`.
     for name in (
         "name", "kind", "source_url",
-        "captured_at", "units_note", "price_unit_note",
-        "latest_year", "import_sources_range", "world_production_label",
+        "units_note", "price_unit_note",
+        "import_sources_range", "world_production_label",
         "import_category",
     ):
         col(name)
@@ -269,10 +269,8 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                 row["name"] = rec.name
             row["kind"] = rec.kind
             row["source_url"] = rec.source_url
-            row["captured_at"] = rec.captured_at
             row["units_note"] = _text(rec.units_note)
             row["price_unit_note"] = _text(rec.price_unit_note)
-            row["latest_year"] = rec.latest_year
             row["import_sources_range"] = _text(rec.import_sources_range)
             row["world_production_label"] = _text(rec.world_production_label)
             # import_category is structural — "" means "this row covers the
