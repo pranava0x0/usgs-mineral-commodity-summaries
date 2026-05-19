@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-molybdenum.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `497f50f03629cccc…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons, molybdenum content, unless otherwise specified)
@@ -12,13 +12,13 @@
 | field | value |
 | --- | --- |
 | Mined production (US) | 40,000 |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Primary smelting / refinery (US) | N/A |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 26,700 |
 | Exports (total) | 33,500 |
 | Apparent consumption | 34,000 |
 | Price, $ per pound | 51 |
-| Net import reliance (% of apparent consumption) | _Not available_ |
+| Net import reliance (% of apparent consumption) | N/A |
 
 ## Salient Statistics (US) — full table
 
@@ -33,7 +33,7 @@
 | Apparent | 3 | 33,100 | 31,500 | 30,700 | 28,500 | 34,000 |
 | Price, average, dollars per kilogram | 4 | 35.62 | 41.72 | 54.32 | 47.72 | 51 |
 | Stocks, consumer materials |  | 2,040 | 2,040 | 1,900 | 1,900 | 2,000 |
-| Net import reliance as a percentage of apparent consumption |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Net import reliance as a percentage of apparent consumption |  | E | E | E | E | E |
 
 ## Import Sources (2021-24)
 
@@ -60,24 +60,24 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| 2024 | 2,025 | _Not available_ | _Not available_ | _Not available_ |  |
-| United States | 34,000 | 40,000 | _Not available_ | 3,500 |  |
-| Armenia | 8,200 | 5,300 | _Not available_ | 150 |  |
-| Australia | 600 | 1,000 | _Not available_ | 760 | footnote 7 |
-| Canada | 1,540 | 2,200 | _Not available_ | 64 |  |
-| Chile | 38,500 | 42,000 | _Not available_ | 2,600 |  |
-| China | 100,000 | 97,000 | _Not available_ | 7,800 |  |
-| Iran | 2,900 | 3,300 | _Not available_ | 43 |  |
-| Kazakhstan | 4,080 | 4,300 | _Not available_ | 7 |  |
-| Korea, North | 800 | 800 | _Not available_ | 78 |  |
-| Korea, Republic of | 340 | 500 | _Not available_ | 8 |  |
-| Mexico | 16,200 | 17,000 | _Not available_ | 130 |  |
-| Mongolia | 3,110 | 4,200 | _Not available_ | 10 |  |
-| Peru | 41,900 | 39,000 | _Not available_ | 1,000 |  |
-| Russia | 1,500 | 1,300 | _Not available_ | 1,100 |  |
-| Uzbekistan | 2,100 | 2,000 | _Not available_ | 21 |  |
-| Other countries | 0 | 0 | _Not available_ | 150 |  |
-| World total (rounded) | 256,000 | 260,000 | _Not available_ | 17,000 |  |
+| 2024 | 2,025 | N/A | N/A | N/A |  |
+| United States | 34,000 | 40,000 | N/A | 3,500 |  |
+| Armenia | 8,200 | 5,300 | N/A | 150 |  |
+| Australia | 600 | 1,000 | N/A | 760 | footnote 7 |
+| Canada | 1,540 | 2,200 | N/A | 64 |  |
+| Chile | 38,500 | 42,000 | N/A | 2,600 |  |
+| China | 100,000 | 97,000 | N/A | 7,800 |  |
+| Iran | 2,900 | 3,300 | N/A | 43 |  |
+| Kazakhstan | 4,080 | 4,300 | N/A | 7 |  |
+| Korea, North | 800 | 800 | N/A | 78 |  |
+| Korea, Republic of | 340 | 500 | N/A | 8 |  |
+| Mexico | 16,200 | 17,000 | N/A | 130 |  |
+| Mongolia | 3,110 | 4,200 | N/A | 10 |  |
+| Peru | 41,900 | 39,000 | N/A | 1,000 |  |
+| Russia | 1,500 | 1,300 | N/A | 1,100 |  |
+| Uzbekistan | 2,100 | 2,000 | N/A | 21 |  |
+| Other countries | 0 | 0 | N/A | 150 |  |
+| World total (rounded) | 256,000 | 260,000 | N/A | 17,000 |  |
 
 ## Footnotes (verbatim)
 

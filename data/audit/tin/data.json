@@ -1,0 +1,597 @@
+{
+  "slug": "tin",
+  "name": "Tin",
+  "symbol": "Sn",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tin.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "659ee022301fcd3eda08f4ac22c8f33030c11ed0dca9851306e18c745d29a017",
+  "pdf_page_count": 2,
+  "units_note": "",
+  "price_unit_note": "Price, average, cents per pound",
+  "price_footnote_text": "Source: S&P Global Platts Metals Week.",
+  "domestic_use_summary": "Tin has not been mined or smelted in the United States since 1993 or 1989, respectively. Twenty-five firms accounted for more than 94% of the primary tin consumed domestically in 2025. The uses for tin in the United States were chemicals, 25%; tinplate, 16%; alloys, 12%; solder, 11%; babbitt, brass and bronze, and tinning, 7%; bar tin, 2%; and other, 27%. In 2025, the estimated customs value of imported refined tin was $970 million, and the estimated value of tin recovered from old scrap domestically was $340 million based on the average S&P Global Platts Metals Week New York dealer price for tin.",
+  "events_trends_summary": "The estimated amount of new and old scrap tin recycled domestically in 2025 increased by 3% compared with that in 2024. The estimated annual average New York dealer price for refined tin in 2025 was 1,600 cents per pound, a 13% increase compared with that in 2024. The estimated annual average LME cash price for refined tin in 2025 was 1,500 cents per pound, a 10% increase compared with that in 2024. In March 2025, under section 232 of the Trade Expansion Act, the United States increased tariffs on imported aluminum products to 25%, aligning with existing 25% tariffs on steel products, and ended all previously existing country-specific exemptions. In June, the tariffs on both aluminum and steel products were raised to 50% for most countries, except for the United Kingdom, which remained at 25%. Steel products affected by these tariffs included varieties of tinplate with Harmonized Tariff Schedule of the United States codes 7210.11.0000, 7210.12.0000, and 7212.10.0000. In 2025, a U.S. company with existing tin operations based in Coatesville, PA, advanced plans to establish a vertically integrated tin supply chain. In late 2024, the company was awarded $19 million from the U.S. Department of War under the Defense Production Act, Title III, to support the development of a domestic tin smelting, refining, and recycling facility. In May, the company signed a letter of intent with a Rwandan tin miner to secure feedstock supply, and in September began construction of a $65 million tin metal production and processing facility in Martinsville, VA. The Martinsville facility was expected to be operational by late 2026.",
+  "world_resources_summary": "Identified resources of tin in the United States, primarily in Alaska, were insignificant compared with those in the rest of the world. World resources, principally in western Africa, southeastern Asia, Australia, Bolivia, Brazil, Indonesia, and Russia, are extensive and, if developed, could sustain recent annual production rates well into the future.",
+  "substitutes_summary": "Aluminum, glass, paper, plastic, or tin-free steel substitute for tin in cans and containers. Other materials that substitute for tin are epoxy resins for solder; aluminum alloys, alternative copper-base alloys, and plastics for bronze; plastics for bearing metals that contain tin; and compounds of lead and sodium for some tin chemicals.",
+  "recycling_summary": "About 17,000 tons of tin from old and new scrap was estimated to have been recycled in 2025. Of this, about 10,000 tons was recovered from old scrap at 1 detinning plant and 31 secondary nonferrous-metal-processing plants, accounting for 22% of apparent consumption.",
+  "salient_stats": [
+    {
+      "label": "Old scrap",
+      "footnote": null,
+      "section": "Production, secondary",
+      "subsection": null,
+      "values": {
+        "2021": 9430.0,
+        "2022": 9420.0,
+        "2023": 9430.0,
+        "2024": 8550.0,
+        "2025e": 9000.0
+      },
+      "raw_values": {
+        "2021": "9430",
+        "2022": "9420",
+        "2023": "9430",
+        "2024": "8550",
+        "2025e": "9000"
+      }
+    },
+    {
+      "label": "New scrap",
+      "footnote": null,
+      "section": "Production, secondary",
+      "subsection": null,
+      "values": {
+        "2021": 7600.0,
+        "2022": 7900.0,
+        "2023": 7900.0,
+        "2024": 8000.0,
+        "2025e": 8000.0
+      },
+      "raw_values": {
+        "2021": "7600",
+        "2022": "7900",
+        "2023": "7900",
+        "2024": "8000",
+        "2025e": "8000"
+      }
+    },
+    {
+      "label": "Refined",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 38100.0,
+        "2022": 33200.0,
+        "2023": 28200.0,
+        "2024": 25400.0,
+        "2025e": 32000.0
+      },
+      "raw_values": {
+        "2021": "38100",
+        "2022": "33200",
+        "2023": "28200",
+        "2024": "25400",
+        "2025e": "32000"
+      }
+    },
+    {
+      "label": "Tin alloys, gross weight",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1110.0,
+        "2022": 735.0,
+        "2023": 901.0,
+        "2024": 731.0,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1110",
+        "2022": "735",
+        "2023": "901",
+        "2024": "731",
+        "2025e": "1200"
+      }
+    },
+    {
+      "label": "Tin waste and scrap, gross weight",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 18600.0,
+        "2022": 11600.0,
+        "2023": 10700.0,
+        "2024": 8210.0,
+        "2025e": 8100.0
+      },
+      "raw_values": {
+        "2021": "18600",
+        "2022": "11600",
+        "2023": "10700",
+        "2024": "8210",
+        "2025e": "8100"
+      }
+    },
+    {
+      "label": "Refined",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 1290.0,
+        "2022": 1310.0,
+        "2023": 918.0,
+        "2024": 596.0,
+        "2025e": 850.0
+      },
+      "raw_values": {
+        "2021": "1290",
+        "2022": "1310",
+        "2023": "918",
+        "2024": "596",
+        "2025e": "850"
+      }
+    },
+    {
+      "label": "Tin alloys, gross weight",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 630.0,
+        "2022": 531.0,
+        "2023": 652.0,
+        "2024": 1330.0,
+        "2025e": 800.0
+      },
+      "raw_values": {
+        "2021": "630",
+        "2022": "531",
+        "2023": "652",
+        "2024": "1330",
+        "2025e": "800"
+      }
+    },
+    {
+      "label": "Tin waste and scrap, gross weight",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 2800.0,
+        "2022": 30300.0,
+        "2023": 38000.0,
+        "2024": 13400.0,
+        "2025e": 4500.0
+      },
+      "raw_values": {
+        "2021": "2800",
+        "2022": "30300",
+        "2023": "38000",
+        "2024": "13400",
+        "2025e": "4500"
+      }
+    },
+    {
+      "label": "Shipments from Government stockpile, gross weight",
+      "footnote": "1",
+      "section": "Shipments from Government stockpile, gross weight",
+      "subsection": null,
+      "values": {
+        "2021": 437.0,
+        "2022": 0.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "437",
+        "2022": "—",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Consumption, apparent, refined",
+      "footnote": "2",
+      "section": "Consumption, apparent, refined",
+      "subsection": null,
+      "values": {
+        "2021": 48000.0,
+        "2022": 41200.0,
+        "2023": 35000.0,
+        "2024": 34600.0,
+        "2025e": 43000.0
+      },
+      "raw_values": {
+        "2021": "48000",
+        "2022": "41200",
+        "2023": "35000",
+        "2024": "34600",
+        "2025e": "43000"
+      }
+    },
+    {
+      "label": "New York dealer",
+      "footnote": null,
+      "section": "Price, average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 1580.0,
+        "2022": 1546.0,
+        "2023": 1256.0,
+        "2024": 1420.0,
+        "2025e": 1600.0
+      },
+      "raw_values": {
+        "2021": "1580",
+        "2022": "1546",
+        "2023": "1256",
+        "2024": "1420",
+        "2025e": "1600"
+      }
+    },
+    {
+      "label": "London Metal Exchange (LME), cash",
+      "footnote": null,
+      "section": "Price, average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 1478.0,
+        "2022": 1423.0,
+        "2023": 1177.0,
+        "2024": 1368.0,
+        "2025e": 1500.0
+      },
+      "raw_values": {
+        "2021": "1478",
+        "2022": "1423",
+        "2023": "1177",
+        "2024": "1368",
+        "2025e": "1500"
+      }
+    },
+    {
+      "label": "Stocks, consumer and dealer, yearend",
+      "footnote": null,
+      "section": "Stocks, consumer and dealer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 9030.0,
+        "2022": 9180.0,
+        "2023": 10900.0,
+        "2024": 9600.0,
+        "2025e": 8100.0
+      },
+      "raw_values": {
+        "2021": "9030",
+        "2022": "9180",
+        "2023": "10900",
+        "2024": "9600",
+        "2025e": "8100"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption, refined tin",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption, refined tin",
+      "subsection": null,
+      "values": {
+        "2021": 80.0,
+        "2022": 77.0,
+        "2023": 73.0,
+        "2024": 75.0,
+        "2025e": 77.0
+      },
+      "raw_values": {
+        "2021": "80",
+        "2022": "77",
+        "2023": "73",
+        "2024": "75",
+        "2025e": "77"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "New York dealer",
+      "unit_note": "Price, average, cents per pound",
+      "values": {
+        "2021": 1580.0,
+        "2022": 1546.0,
+        "2023": 1256.0,
+        "2024": 1420.0,
+        "2025e": 1600.0
+      },
+      "raw_values": {
+        "2021": "1580",
+        "2022": "1546",
+        "2023": "1256",
+        "2024": "1420",
+        "2025e": "1600"
+      }
+    },
+    {
+      "form": "London Metal Exchange (LME), cash",
+      "unit_note": "Price, average, cents per pound",
+      "values": {
+        "2021": 1478.0,
+        "2022": 1423.0,
+        "2023": 1177.0,
+        "2024": 1368.0,
+        "2025e": 1500.0
+      },
+      "raw_values": {
+        "2021": "1478",
+        "2022": "1423",
+        "2023": "1177",
+        "2024": "1368",
+        "2025e": "1500"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 41300.0,
+  "exports_total_latest": 6150.0,
+  "apparent_consumption_latest": 43000.0,
+  "price_usd_per_pound_latest": 1600.0,
+  "net_import_reliance_pct_latest": 77.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Refined tin",
+      "countries": [
+        {
+          "country": "Peru",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Bolivia",
+          "share_pct": 27.0
+        },
+        {
+          "country": "Indonesia",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Brazil",
+          "share_pct": 10.0
+        },
+        {
+          "country": "other",
+          "share_pct": 17.0
+        }
+      ]
+    },
+    {
+      "category": "Waste and scrap",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 91.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 3.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 0.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "—",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 11300.0,
+      "production_latest_year": 12000.0,
+      "capacity": null,
+      "reserves": 570000.0,
+      "production_prev_raw": "11300",
+      "production_latest_raw": "12000",
+      "reserves_raw": "570000",
+      "note": "footnote 7"
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 21200.0,
+      "production_latest_year": 15000.0,
+      "capacity": null,
+      "reserves": 400000.0,
+      "production_prev_raw": "21200",
+      "production_latest_raw": "15000",
+      "reserves_raw": "400000",
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 27600.0,
+      "production_latest_year": 28000.0,
+      "capacity": null,
+      "reserves": 700000.0,
+      "production_prev_raw": "27600",
+      "production_latest_raw": "28000",
+      "reserves_raw": "700000",
+      "note": null
+    },
+    {
+      "country": "Burma",
+      "production_prev_year": 20000.0,
+      "production_latest_year": 12000.0,
+      "capacity": null,
+      "reserves": 700000.0,
+      "production_prev_raw": "20000",
+      "production_latest_raw": "12000",
+      "reserves_raw": "700000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 71000.0,
+      "production_latest_year": 71000.0,
+      "capacity": null,
+      "reserves": 1200000.0,
+      "production_prev_raw": "71000",
+      "production_latest_raw": "71000",
+      "reserves_raw": "1200000",
+      "note": null
+    },
+    {
+      "country": "Congo (Kinshasa)",
+      "production_prev_year": 26000.0,
+      "production_latest_year": 27000.0,
+      "capacity": null,
+      "reserves": 91000.0,
+      "production_prev_raw": "26000",
+      "production_latest_raw": "27000",
+      "reserves_raw": "91000",
+      "note": null
+    },
+    {
+      "country": "Indonesia",
+      "production_prev_year": 55000.0,
+      "production_latest_year": 61000.0,
+      "capacity": null,
+      "reserves": 1400000.0,
+      "production_prev_raw": "55000",
+      "production_latest_raw": "61000",
+      "reserves_raw": "1400000",
+      "note": null
+    },
+    {
+      "country": "Laos",
+      "production_prev_year": 1860.0,
+      "production_latest_year": 1800.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1860",
+      "production_latest_raw": "1800",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Malaysia",
+      "production_prev_year": 5460.0,
+      "production_latest_year": 5000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "5460",
+      "production_latest_raw": "5000",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Nigeria",
+      "production_prev_year": 3100.0,
+      "production_latest_year": 3500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3100",
+      "production_latest_raw": "3500",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Peru",
+      "production_prev_year": 32300.0,
+      "production_latest_year": 33000.0,
+      "capacity": null,
+      "reserves": 150000.0,
+      "production_prev_raw": "32300",
+      "production_latest_raw": "33000",
+      "reserves_raw": "150000",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 3260.0,
+      "production_latest_year": 4500.0,
+      "capacity": null,
+      "reserves": 460000.0,
+      "production_prev_raw": "3260",
+      "production_latest_raw": "4500",
+      "reserves_raw": "460000",
+      "note": null
+    },
+    {
+      "country": "Rwanda",
+      "production_prev_year": 4100.0,
+      "production_latest_year": 4600.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "4100",
+      "production_latest_raw": "4600",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 11000.0,
+      "production_latest_year": 11000.0,
+      "capacity": null,
+      "reserves": 23000.0,
+      "production_prev_raw": "11000",
+      "production_latest_raw": "11000",
+      "reserves_raw": "23000",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 1570.0,
+      "production_latest_year": 1700.0,
+      "capacity": null,
+      "reserves": 310000.0,
+      "production_prev_raw": "1570",
+      "production_latest_raw": "1700",
+      "reserves_raw": "310000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 294000.0,
+      "production_latest_year": 290000.0,
+      "capacity": null,
+      "reserves": 6000000.0,
+      "production_prev_raw": "294000",
+      "production_latest_raw": "290000",
+      "reserves_raw": ">6,000,000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Defined as change in inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer available.",
+    "2": "Defined for 2021–22 as production from old scrap + refined tin imports – refined tin exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "3": "Source: S&P Global Platts Metals Week.",
+    "4": "Defined for 2021–22 as refined imports – refined exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "5": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "6": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "7": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 220,000 tons."
+  }
+}

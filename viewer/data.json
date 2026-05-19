@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-18T23:24:49",
+  "generated_at": "2026-05-19T00:07:51",
   "elements": [
     {
       "slug": "abrasives",
@@ -11,7 +11,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-abrasives.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b905055f426b2cce8ed6033d168abb5f4772088a9136ba561a7da13f338c4e11",
       "pdf_page_count": 2,
       "units_note": "(Fused aluminum oxide, silicon carbide, and metallic abrasives)",
@@ -835,7 +835,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-aluminum.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "2995b3e9e412eed53a9b565743dd8696a7fc0ae10e7f2d95266511a10b1fee30",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons unless otherwise specified)",
@@ -1389,7 +1389,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "18c4498ac13ecd988439d7c78fb951d18498b172eea578b36f665a991720ca0d",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, antimony content, unless otherwise specified)",
@@ -2073,7 +2073,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-bismuth.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "9f2f3d99adeee708d55bb17b1329b18f6ac1dafe98debbb4ef716c175eff70a7",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons unless otherwise specified)",
@@ -2541,7 +2541,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-chromium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "c19e412f65eddf60ab8b3b49ec415d7e0b817d08412733a0094a47af06fa4a04",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons, chromium content, unless otherwise specified)",
@@ -2962,8 +2962,8 @@
               "share_pct": 6.0
             },
             {
-              "country": "Finland, 5%, and other",
-              "share_pct": 24.0
+              "country": "Finland",
+              "share_pct": 5.0
             }
           ]
         },
@@ -2971,8 +2971,8 @@
           "category": "Stainless steel",
           "countries": [
             {
-              "country": "Taiwan, 16%, Finland, 12%, India, 11%, China",
-              "share_pct": 6.0
+              "country": "Taiwan",
+              "share_pct": 16.0
             },
             {
               "country": "others",
@@ -3158,7 +3158,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cobalt.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "cdfe86c808872800d8877b8af4a16d67822939a995b73960b419b2ceedb39fb3",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, cobalt content, unless otherwise specified)",
@@ -3649,7 +3649,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "c4971f7edfa38feefc51952c5f24889c46f468d936c6620d388233313ae8ae85",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons, copper content, unless otherwise specified)",
@@ -4111,6 +4111,10 @@
             {
               "country": "Mexico",
               "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 3.0
             }
           ]
         }
@@ -4349,7 +4353,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-diamond.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b80adb50e11d2d5f80479dbb14e471955c2cd4866aefb863e277dec84683081e",
       "pdf_page_count": 2,
       "units_note": "(Data in million carats unless otherwise specified)",
@@ -4841,7 +4845,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
       "pdf_page_count": 2,
       "units_note": "(Data in kilograms, gallium content, unless otherwise specified)",
@@ -5162,7 +5166,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "52d520ef79c4ad19a91c6633a4aa304d50e0df37c7beeb1103b16e7a8cf9486f",
       "pdf_page_count": 2,
       "units_note": "(Data in kilograms, germanium content, unless otherwise specified)",
@@ -5582,7 +5586,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "09ec621ed6400162e7f0b09b1e0ae8260a976d968c1936d69592fe5347f8df38",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons unless otherwise specified)",
@@ -6111,7 +6115,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-indium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "43782a8086bf24da5a60e81e690c4a6f9c54c489fd276aacbf79f23945f1be05",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons unless otherwise specified)",
@@ -6487,7 +6491,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "53f92ea45c367c36f05919151f7784feda5776095afaf3a25aec795a27be106f",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, lithium content, unless otherwise specified)",
@@ -6863,7 +6867,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-magnesium-metal.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "33466d52d8273b40b198672a9b80b75032cf2d1a660d0f670718954b8fa62177",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons unless otherwise specified)",
@@ -7219,8 +7223,8 @@
               "share_pct": 8.0
             },
             {
-              "country": "other, 27%. Combined total (includes magnesium content of alloys, metal, powder, scrap, sheet, and other): Israel",
-              "share_pct": 20.0
+              "country": "other",
+              "share_pct": 27.0
             },
             {
               "country": "Canada",
@@ -7376,7 +7380,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-manganese.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "05e4fc710af04302a9cfecb2802d926943940c7421c419b5c6501fba0ff34ff5",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons, gross weight, unless otherwise specified)",
@@ -8023,7 +8027,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-molybdenum.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "497f50f03629ccccbc6b5b7b1c3dea02be0ebb02122c37314fed59d5c77294e1",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, molybdenum content, unless otherwise specified)",
@@ -8560,7 +8564,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "70aab7644bc8b43fb9eef4d3a3e007186a9be6958dd476e3747a96e3c9d5de3c",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, nickel content, unless otherwise specified)",
@@ -8982,8 +8986,8 @@
               "share_pct": 27.0
             },
             {
-              "country": "United Kingdom, 9%, and other",
-              "share_pct": 23.0
+              "country": "United Kingdom",
+              "share_pct": 9.0
             }
           ]
         }
@@ -9136,7 +9140,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-niobium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "c4b8bcabd89012891f7473fadceac6c7d76bdcf38df4f0cc02950db8387da72d",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, niobium content, unless otherwise specified)",
@@ -9394,6 +9398,10 @@
             {
               "country": "Canada",
               "share_pct": 28.0
+            },
+            {
+              "country": "other",
+              "share_pct": 5.0
             }
           ]
         }
@@ -9522,7 +9530,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -10121,14 +10129,17 @@
       ],
       "latest_year": "2025e",
       "mined_production_latest": 51000.0,
-      "primary_smelting_latest": null,
+      "primary_smelting_latest": 8900.0,
       "secondary_smelting_latest": null,
       "imports_total_latest": 22450.0,
       "exports_total_latest": 15320.0,
       "apparent_consumption_latest": 27000.0,
-      "price_usd_per_pound_latest": 1.0,
+      "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": 67.0,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -10149,6 +10160,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -10382,7 +10397,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rhenium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "c2bd5ce5e85c6337bef1e2e8224032b6f32ec6146abbd302b42c83a6a4e79945",
       "pdf_page_count": 2,
       "units_note": "(Data in kilograms, rhenium content, unless otherwise specified)",
@@ -10817,7 +10832,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-scandium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b68e156704a9f38a5f52cd30890901c3cdfe585bbcb7720b5e24238f0824d558",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, scandium oxide equivalent, unless otherwise specified)",
@@ -11000,6 +11015,10 @@
         {
           "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
           "share_pct": 89.0
+        },
+        {
+          "country": "China",
+          "share_pct": 11.0
         }
       ],
       "import_sources_by_category": [
@@ -11009,6 +11028,10 @@
             {
               "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
               "share_pct": 89.0
+            },
+            {
+              "country": "China",
+              "share_pct": 11.0
             }
           ]
         }
@@ -11037,7 +11060,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silicon.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "985d56cd7c66234380753f75b75b753aca9d7f2f133483ce80a4699ef8ac2dcd",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons, silicon content, unless otherwise specified)",
@@ -11680,7 +11703,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silver.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "f0dfe407304855a51f7647fc711f6c32081188a86269d011cd45e297aa673855",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, silver content, unless otherwise specified)",
@@ -11973,6 +11996,10 @@
           "share_pct": 18.0
         },
         {
+          "country": "Chile and Turkey",
+          "share_pct": 5.0
+        },
+        {
           "country": "other",
           "share_pct": 25.0
         }
@@ -11988,6 +12015,10 @@
             {
               "country": "Canada",
               "share_pct": 18.0
+            },
+            {
+              "country": "Chile and Turkey",
+              "share_pct": 5.0
             },
             {
               "country": "other",
@@ -12199,7 +12230,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tantalum.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "ddcfdf129bf67c2cced06f8476ec24937ac4f0f995d2ac7354a582f35491c1bf",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, tantalum content, unless otherwise specified)",
@@ -12656,7 +12687,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tellurium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "9207db697705244bfdac9812aa81cfefa0e7fe61a9936431136f05dff4f4ee74",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, tellurium content, unless otherwise specified)",
@@ -13077,7 +13108,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tin.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "659ee022301fcd3eda08f4ac22c8f33030c11ed0dca9851306e18c745d29a017",
       "pdf_page_count": 2,
       "units_note": "",
@@ -13674,7 +13705,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "c33271f3529cc546707c05c7d02c34c9cd321772dbcbb3e787c7715dcb889847",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, tungsten content, unless otherwise specified)",
@@ -14191,7 +14222,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-vanadium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "8ffc21c8a35caeec5ae3b12298b14aa20dbd1cc618b0c9d388ab1f5010c321ef",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, vanadium content, unless otherwise specified)",
@@ -14864,7 +14895,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zinc.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "81f42c706a239392df03b26134cfffbafaaecc81193d7f3b1071f3eb68d40eca",
       "pdf_page_count": 2,
       "units_note": "(Data in thousand metric tons, zinc content, unless otherwise specified)",
@@ -15217,7 +15248,7 @@
       ],
       "latest_year": "2025e",
       "mined_production_latest": 670.0,
-      "primary_smelting_latest": null,
+      "primary_smelting_latest": 220.0,
       "secondary_smelting_latest": null,
       "imports_total_latest": 620.0,
       "exports_total_latest": 632.0,
@@ -15482,7 +15513,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-diamond.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b80adb50e11d2d5f80479dbb14e471955c2cd4866aefb863e277dec84683081e",
       "pdf_page_count": 2,
       "units_note": "(Data in million carats unless otherwise specified)",
@@ -15974,7 +16005,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-gallium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "15df2a3ef3ed992b8bb9e1785809a83219864286626b289c207ca5fda84ca27c",
       "pdf_page_count": 2,
       "units_note": "(Data in kilograms, gallium content, unless otherwise specified)",
@@ -16295,7 +16326,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "09ec621ed6400162e7f0b09b1e0ae8260a976d968c1936d69592fe5347f8df38",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons unless otherwise specified)",
@@ -16824,7 +16855,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lithium.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "53f92ea45c367c36f05919151f7784feda5776095afaf3a25aec795a27be106f",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons, lithium content, unless otherwise specified)",
@@ -17200,7 +17231,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-abrasives.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b905055f426b2cce8ed6033d168abb5f4772088a9136ba561a7da13f338c4e11",
       "pdf_page_count": 2,
       "units_note": "(Fused aluminum oxide, silicon carbide, and metallic abrasives)",
@@ -18024,7 +18055,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-abrasives.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "b905055f426b2cce8ed6033d168abb5f4772088a9136ba561a7da13f338c4e11",
       "pdf_page_count": 2,
       "units_note": "(Fused aluminum oxide, silicon carbide, and metallic abrasives)",
@@ -18848,11 +18879,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Cerium oxide, 99.5% minimum",
+      "price_unit_note": "Cerium oxide, 99.5% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -18910,7 +18941,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 1.71,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -18931,6 +18965,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -19164,7 +19202,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -19186,7 +19224,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -19207,6 +19248,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -19440,7 +19485,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -19462,7 +19507,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -19483,6 +19531,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -19716,11 +19768,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Europium oxide, 99.99% minimum",
+      "price_unit_note": "Europium oxide, 99.99% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -19778,7 +19830,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 27.0,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -19799,6 +19854,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -20032,11 +20091,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Gadolinium oxide, 99.99% minimum",
+      "price_unit_note": "Gadolinium oxide, 99.99% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -20094,7 +20153,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 30.0,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -20115,6 +20177,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -20348,7 +20414,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -20370,7 +20436,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -20391,6 +20460,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -20624,11 +20697,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Lanthanum oxide, 99.5% minimum",
+      "price_unit_note": "Lanthanum oxide, 99.5% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -20686,7 +20759,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 1.0,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -20707,6 +20783,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -20940,7 +21020,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -20962,7 +21042,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -20983,6 +21066,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -21216,11 +21303,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Neodymium oxide, 99.5% minimum",
+      "price_unit_note": "Neodymium oxide, 99.5% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -21278,7 +21365,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 73.0,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -21299,6 +21389,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -21532,11 +21626,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Praseodymium oxide, 99.99% minimum",
+      "price_unit_note": "Praseodymium oxide, 99.99% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -21594,7 +21688,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 74.0,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -21615,6 +21712,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -21848,11 +21949,11 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
-      "price_unit_note": "Samarium oxide, 99.5% minimum",
+      "price_unit_note": "Samarium oxide, 99.5% minimum (Price, average, dollars per kilogram)",
       "price_footnote_text": "Free on board. Source: Argus Media group, Argus Non-Ferrous Markets.",
       "domestic_use_summary": "Rare earths were mined and processed domestically in 2025. An estimated 51,000 tons of REO in mineral concentrates was produced and was valued at $240 million. Bastnaesite was mined as a primary product in Mountain Pass, CA. Monazite was produced from heavy-mineral-sand concentrates in the southeastern United States. Rare-earth compounds were also produced in the Western United States. U.S. imports of rare-earth compounds and metals increased by 169% in 2025; however, the estimated value of these imports decreased to $165 million from $168 million in 2024, reflecting a shift toward lower-value imported products. The estimated leading domestic end use of rare earths was catalysts, whereas the estimated leading global use was magnets. Other end uses included batteries, ceramics and glass, metallurgical applications and alloys, and polishing. A significant amount of imported rare earths was embedded in finished goods.",
       "events_trends_summary": "In April 2025, China tightened its export controls on rare-earth elements, adding specific controls on alloys, compounds, metals, and oxides of samarium, gadolinium, terbium, dysprosium, lutetium, scandium, and yttrium. In October, China expanded its rare-earths export controls to include europium, holmium, erbium, thulium, and ytterbium. In November, China suspended the October export controls for 1 year. The April export controls remained in effect, although China began to issue general export licenses to selected exporters.",
@@ -21910,7 +22011,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": 2.82,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -21931,6 +22035,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -22164,7 +22272,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -22186,7 +22294,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -22207,6 +22318,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -22440,7 +22555,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -22462,7 +22577,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -22483,6 +22601,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -22716,7 +22838,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -22738,7 +22860,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -22759,6 +22884,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }
@@ -22992,7 +23121,7 @@
       "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
       "edition": "MCS 2026",
       "edition_date": "2026-02",
-      "captured_at": "2026-05-18",
+      "captured_at": "2026-05-19",
       "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
       "pdf_page_count": 2,
       "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -23014,7 +23143,10 @@
       "apparent_consumption_latest": null,
       "price_usd_per_pound_latest": null,
       "net_import_reliance_pct_latest": null,
-      "latest_year_sentinels": {},
+      "latest_year_sentinels": {
+        "price": "see Price section",
+        "net_import_reliance_basis": "compounds and metals"
+      },
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
@@ -23035,6 +23167,10 @@
             {
               "country": "Estonia",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         }

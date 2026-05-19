@@ -2,10 +2,12 @@
   "slug": "rare-earths",
   "name": "Rare Earths (grouped)",
   "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
   "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf",
   "edition": "MCS 2026",
   "edition_date": "2026-02",
-  "captured_at": "2026-05-18",
+  "captured_at": "2026-05-19",
   "pdf_sha256": "a733c264883a3acb80b40929873a562220090251ff25adb9abc77a977e068ab1",
   "pdf_page_count": 2,
   "units_note": "[Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]",
@@ -604,14 +606,17 @@
   ],
   "latest_year": "2025e",
   "mined_production_latest": 51000.0,
-  "primary_smelting_latest": null,
+  "primary_smelting_latest": 8900.0,
   "secondary_smelting_latest": null,
   "imports_total_latest": 22450.0,
   "exports_total_latest": 15320.0,
   "apparent_consumption_latest": 27000.0,
-  "price_usd_per_pound_latest": 1.0,
+  "price_usd_per_pound_latest": null,
   "net_import_reliance_pct_latest": 67.0,
-  "latest_year_sentinels": {},
+  "latest_year_sentinels": {
+    "price": "see Price section",
+    "net_import_reliance_basis": "compounds and metals"
+  },
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -632,6 +637,10 @@
         {
           "country": "Estonia",
           "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
         }
       ]
     }

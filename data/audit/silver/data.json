@@ -1,0 +1,527 @@
+{
+  "slug": "silver",
+  "name": "Silver",
+  "symbol": "Ag",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silver.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "f0dfe407304855a51f7647fc711f6c32081188a86269d011cd45e297aa673855",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, silver content, unless otherwise specified)",
+  "price_unit_note": "Price, bullion, average, dollars per troy ounce",
+  "price_footnote_text": "Engelhard’s industrial bullion quotations. Source: S&P Global Platts Metals Week.",
+  "domestic_use_summary": "In 2025, U.S. mines produced approximately 1,100 tons of silver with an estimated value of $1.4 billion. Silver was produced at 4 silver mines and as a byproduct or coproduct from 31 domestic base- and precious-metal operations. Silver was produced in 12 States; Alaska continued as the country’s leading silver-producing State, followed by Nevada. There were 24 U.S. refiners that reported production of commercial-grade silver with an estimated total output of 2,100 tons from domestic and foreign ores and concentrates and from new and old scrap. The physical properties of silver include high ductility, electrical conductivity, malleability, and reflectivity. In 2025, the estimated domestic uses for silver were in electrical and electronics, 25%; other industrial uses and photography, 19%; net physical investment (bars), 18%; photovoltaics (PV), 15%; coins and medals, 14%; jewelry and silverware, 6%; and brazing and solder, 3%. Other applications for silver include use in antimicrobial bandages, clothing, pharmaceuticals, and plastics; batteries; bearings; brazing and soldering; catalytic converters in automobiles; electroplating; inks; mirrors; photography; photovoltaic solar cells; water purification; wood treatment; and processing of spent ethylene oxide catalysts. Mercury and silver, the main components of dental amalgam, are biocides, and their use in amalgam inhibits recurrent decay.",
+  "events_trends_summary": "The estimated average silver price in 2025 was $38 per troy ounce, 34% higher than the average price in 2024. The price began the year at $29.35 per troy ounce, which was the yearly low. The price increased for 11 months in 2025 and reached a high of $53.60 per troy ounce on November 13. The continued supply deficit was cited as a reason for price increases in 2025. In 2025, global consumption of silver was an estimated 35,700 tons, compared with 36,100 tons in 2024. Coin and bar consumption increased by 7% in 2025, but consumption of silver for industrial use was estimated to be unchanged from that in 2024, owing to slower ethylene oxide capacity growth and a decline in silver loadings in the PV sector, which was expected to offset continued growth in automotive, consumer electronics, and power grid uses. Consumption of silver in jewelry and silverware was estimated to have decreased by 6% and 15%, respectively. SILVER U.S. Geological Survey, Mineral Commodity Summaries, February 2026 World silver mine production increased slightly in 2025 to an estimated 26,000 tons compared with 25,300 tons in 2024. Domestic silver production was estimated to have increased by 4% in 2025. One company in Idaho produced from higher silver grade ore than that in 2024 and implemented operational improvements and efficiencies. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "Although silver was a principal product at several mines, silver was primarily obtained as a byproduct from lead-zinc, copper, and gold mines, in descending order of silver production. The polymetallic ore deposits from which silver was recovered account for more than two-thirds of U.S. and world resources of silver. Most recent silver discoveries have been associated with gold occurrences; however, copper and lead-zinc occurrences that contain byproduct silver will continue to account for a significant share of reserves and resources in the future.",
+  "substitutes_summary": "Digital imaging, film with reduced silver content, silverless black-and-white film, and xerography substitute for traditional photographic applications for silver. Surgical pins and plates may be made with stainless steel, tantalum, and titanium in place of silver. Stainless steel may be substituted for silver flatware. Nonsilver batteries may replace silver batteries in some applications. Aluminum and rhodium may be used to replace silver that was traditionally used in mirrors and other reflecting surfaces. Silver may be used to replace more costly metals in catalytic converters for off-road vehicles.",
+  "recycling_summary": "In 2025, approximately 1,000 tons of silver was recovered from new and old scrap, accounting for about 11% of apparent consumption.",
+  "salient_stats": [
+    {
+      "label": "Mine",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1020.0,
+        "2022": 1010.0,
+        "2023": 1020.0,
+        "2024": 1050.0,
+        "2025e": 1100.0
+      },
+      "raw_values": {
+        "2021": "1020",
+        "2022": "1010",
+        "2023": "1020",
+        "2024": "1050",
+        "2025e": "1100"
+      }
+    },
+    {
+      "label": "Primary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": "Refinery",
+      "values": {
+        "2021": 1920.0,
+        "2022": 1850.0,
+        "2023": 1150.0,
+        "2024": 1140.0,
+        "2025e": 1100.0
+      },
+      "raw_values": {
+        "2021": "1920",
+        "2022": "1850",
+        "2023": "1150",
+        "2024": "1140",
+        "2025e": "1100"
+      }
+    },
+    {
+      "label": "Secondary (new and old scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": "Refinery",
+      "values": {
+        "2021": 908.0,
+        "2022": 1090.0,
+        "2023": 1150.0,
+        "2024": 955.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "908",
+        "2022": "1090",
+        "2023": "1150",
+        "2024": "955",
+        "2025e": "1000"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": "2",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 6160.0,
+        "2022": 4490.0,
+        "2023": 4950.0,
+        "2024": 4430.0,
+        "2025e": 7600.0
+      },
+      "raw_values": {
+        "2021": "6160",
+        "2022": "4490",
+        "2023": "4950",
+        "2024": "4430",
+        "2025e": "7600"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "2",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 137.0,
+        "2022": 276.0,
+        "2023": 73.0,
+        "2024": 113.0,
+        "2025e": 300.0
+      },
+      "raw_values": {
+        "2021": "137",
+        "2022": "276",
+        "2023": "73",
+        "2024": "113",
+        "2025e": "300"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "3",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 7950.0,
+        "2022": 6310.0,
+        "2023": 7070.0,
+        "2024": 6320.0,
+        "2025e": 9400.0
+      },
+      "raw_values": {
+        "2021": "7950",
+        "2022": "6310",
+        "2023": "7070",
+        "2024": "6320",
+        "2025e": "9400"
+      }
+    },
+    {
+      "label": "Price, bullion, average, dollars per troy ounce",
+      "footnote": "4",
+      "section": "Price, bullion, average, dollars per troy ounce",
+      "subsection": null,
+      "values": {
+        "2021": 25.23,
+        "2022": 21.88,
+        "2023": 23.54,
+        "2024": 28.37,
+        "2025e": 38.0
+      },
+      "raw_values": {
+        "2021": "25.23",
+        "2022": "21.88",
+        "2023": "23.54",
+        "2024": "28.37",
+        "2025e": "38"
+      }
+    },
+    {
+      "label": "Industry",
+      "footnote": null,
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 56.0,
+        "2022": 55.0,
+        "2023": 27.0,
+        "2024": 23.0,
+        "2025e": 25.0
+      },
+      "raw_values": {
+        "2021": "56",
+        "2022": "55",
+        "2023": "27",
+        "2024": "23",
+        "2025e": "25"
+      }
+    },
+    {
+      "label": "Treasury",
+      "footnote": "5",
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 498.0,
+        "2022": 498.0,
+        "2023": 498.0,
+        "2024": 498.0,
+        "2025e": 498.0
+      },
+      "raw_values": {
+        "2021": "498",
+        "2022": "498",
+        "2023": "498",
+        "2024": "498",
+        "2025e": "498"
+      }
+    },
+    {
+      "label": "New York Commodities Exchange—COMEX",
+      "footnote": null,
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 11064.0,
+        "2022": 9299.0,
+        "2023": 8643.0,
+        "2024": 9910.0,
+        "2025e": 15000.0
+      },
+      "raw_values": {
+        "2021": "11064",
+        "2022": "9299",
+        "2023": "8643",
+        "2024": "9910",
+        "2025e": "15000"
+      }
+    },
+    {
+      "label": "Employment, mine and mill, number",
+      "footnote": "6",
+      "section": "Employment, mine and mill, number",
+      "subsection": null,
+      "values": {
+        "2021": 1265.0,
+        "2022": 1304.0,
+        "2023": 1422.0,
+        "2024": 1485.0,
+        "2025e": 1300.0
+      },
+      "raw_values": {
+        "2021": "1265",
+        "2022": "1304",
+        "2023": "1422",
+        "2024": "1485",
+        "2025e": "1300"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 76.0,
+        "2022": 67.0,
+        "2023": 69.0,
+        "2024": 68.0,
+        "2025e": 77.0
+      },
+      "raw_values": {
+        "2021": "76",
+        "2022": "67",
+        "2023": "69",
+        "2024": "68",
+        "2025e": "77"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, bullion, average, dollars per troy ounce",
+      "unit_note": "Price, bullion, average, dollars per troy ounce",
+      "values": {
+        "2021": 25.23,
+        "2022": 21.88,
+        "2023": 23.54,
+        "2024": 28.37,
+        "2025e": 38.0
+      },
+      "raw_values": {
+        "2021": "25.23",
+        "2022": "21.88",
+        "2023": "23.54",
+        "2024": "28.37",
+        "2025e": "38"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 1100.0,
+  "primary_smelting_latest": 1100.0,
+  "secondary_smelting_latest": 1000.0,
+  "imports_total_latest": 7600.0,
+  "exports_total_latest": 300.0,
+  "apparent_consumption_latest": 9400.0,
+  "price_usd_per_pound_latest": 38.0,
+  "net_import_reliance_pct_latest": 77.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "Mexico",
+      "share_pct": 47.0
+    },
+    {
+      "country": "Canada",
+      "share_pct": 18.0
+    },
+    {
+      "country": "Chile and Turkey",
+      "share_pct": 5.0
+    },
+    {
+      "country": "other",
+      "share_pct": 25.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Mexico",
+          "share_pct": 47.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Chile and Turkey",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 25.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 1050.0,
+      "production_latest_year": 1100.0,
+      "capacity": null,
+      "reserves": 23000.0,
+      "production_prev_raw": "1050",
+      "production_latest_raw": "1100",
+      "reserves_raw": "23000",
+      "note": null
+    },
+    {
+      "country": "Argentina",
+      "production_prev_year": 774.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": 6500.0,
+      "production_prev_raw": "774",
+      "production_latest_raw": "800",
+      "reserves_raw": "6500",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 1050.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": 91000.0,
+      "production_prev_raw": "1050",
+      "production_latest_raw": "1000",
+      "reserves_raw": "91000",
+      "note": "footnote 10"
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 1490.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": 22000.0,
+      "production_prev_raw": "1490",
+      "production_latest_raw": "1500",
+      "reserves_raw": "22000",
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 366.0,
+      "production_latest_year": 400.0,
+      "capacity": null,
+      "reserves": 4900.0,
+      "production_prev_raw": "366",
+      "production_latest_raw": "400",
+      "reserves_raw": "4900",
+      "note": null
+    },
+    {
+      "country": "Chile",
+      "production_prev_year": 1200.0,
+      "production_latest_year": 1400.0,
+      "capacity": null,
+      "reserves": 33000.0,
+      "production_prev_raw": "1200",
+      "production_latest_raw": "1400",
+      "reserves_raw": "33000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 3430.0,
+      "production_latest_year": 3400.0,
+      "capacity": null,
+      "reserves": 67000.0,
+      "production_prev_raw": "3430",
+      "production_latest_raw": "3400",
+      "reserves_raw": "67000",
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 700.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": 8000.0,
+      "production_prev_raw": "700",
+      "production_latest_raw": "800",
+      "reserves_raw": "8000",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 850.0,
+      "production_latest_year": 630.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "850",
+      "production_latest_raw": "630",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 5780.0,
+      "production_latest_year": 6300.0,
+      "capacity": null,
+      "reserves": 37000.0,
+      "production_prev_raw": "5780",
+      "production_latest_raw": "6300",
+      "reserves_raw": "37000",
+      "note": null
+    },
+    {
+      "country": "Peru",
+      "production_prev_year": 3510.0,
+      "production_latest_year": 3600.0,
+      "capacity": null,
+      "reserves": 110000.0,
+      "production_prev_raw": "3510",
+      "production_latest_raw": "3600",
+      "reserves_raw": "110000",
+      "note": null
+    },
+    {
+      "country": "Poland",
+      "production_prev_year": 1320.0,
+      "production_latest_year": 1300.0,
+      "capacity": null,
+      "reserves": 59000.0,
+      "production_prev_raw": "1320",
+      "production_latest_raw": "1300",
+      "reserves_raw": "59000",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 1280.0,
+      "production_latest_year": 1200.0,
+      "capacity": null,
+      "reserves": 92000.0,
+      "production_prev_raw": "1280",
+      "production_latest_raw": "1200",
+      "reserves_raw": "92000",
+      "note": null
+    },
+    {
+      "country": "Sweden",
+      "production_prev_year": 432.0,
+      "production_latest_year": 400.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "432",
+      "production_latest_raw": "400",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 2110.0,
+      "production_latest_year": 2100.0,
+      "capacity": null,
+      "reserves": 57000.0,
+      "production_prev_raw": "2110",
+      "production_latest_raw": "2100",
+      "reserves_raw": "57000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 25300.0,
+      "production_latest_year": 26000.0,
+      "capacity": null,
+      "reserves": 610000.0,
+      "production_prev_raw": "25300",
+      "production_latest_raw": "26000",
+      "reserves_raw": "610000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available.",
+    "1": "One metric ton (1,000 kilograms) = 32,150.7 troy ounces.",
+    "2": "Silver content of base metal ores and concentrates, ash and residues, refined bullion, and dore; excludes coinage and waste and scrap material.",
+    "3": "Defined as mine production + secondary production + imports – exports ± adjustments for Government and industry stock changes. Does not include investment purchases and sales.",
+    "4": "Engelhard’s industrial bullion quotations. Source: S&P Global Platts Metals Week.",
+    "5": "Source: U.S. Mint. Balance in U.S. Mint only; includes deep storage and working stocks.",
+    "6": "Source: U.S. Department of Labor, Mine Safety and Health Administration (MSHA). Only includes mines where silver is the primary product.",
+    "7": "Defined as imports – exports ± adjustments for Government and industry stock changes.",
+    "8": "Source: Metals Focus, 2025, World silver survey 2025: Silver Institute, prepared by Metals Focus, 88 p. (Accessed November 17, 2025, at https://www.silverinstitute.org/wp-content/uploads/2025/04/World-Silver-Survey-2025.pdf.)",
+    "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 22,000 tons."
+  }
+}

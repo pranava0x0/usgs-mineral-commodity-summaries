@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `18c4498ac13ecd98…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons, antimony content, unless otherwise specified)
@@ -11,7 +11,7 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
+| Mined production (US) | N/A |
 | Primary smelting / refinery (US) | 700 |
 | Secondary smelting / scrap (US) | 3,500 |
 | Imports for consumption (total) | 44,650 |
@@ -24,7 +24,7 @@
 
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
-| Mine (recoverable antimony) |  | 0 | 0 | 0 | 0 | _Not available_ |
+| Mine (recoverable antimony) |  | 0 | 0 | 0 | 0 | W |
 | Primary |  | 0 | 586 | 452 | 588 | 700 |
 | Secondary |  | 4,050 | 4,100 | 3,490 | 3,330 | 3,500 |
 | Ore and concentrates |  | 31 | 29 | 6 | 430 | 600 |
@@ -73,24 +73,24 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | _Not available_ | _Not available_ | 60,000 | footnote 7 |
-| Australia | 1,270 | 1,300 | _Not available_ | 110,000 | footnote 8 |
-| Bolivia | 5,300 | 5,000 | _Not available_ | 310,000 |  |
-| Burma | 4,500 | 4,500 | _Not available_ | 140,000 |  |
-| Canada | 0 | 0 | _Not available_ | 78,000 |  |
-| China | 40,000 | 40,000 | _Not available_ | 830,000 |  |
-| Guatemala | 50 | 50 | _Not available_ | _Not available_ |  |
-| Iran | 90 | 90 | _Not available_ | _Not available_ |  |
-| Kazakhstan | 800 | 800 | _Not available_ | _Not available_ |  |
-| Kyrgyzstan | 700 | 700 | _Not available_ | 260,000 |  |
-| Laos | 200 | 200 | _Not available_ | _Not available_ |  |
-| Mexico | 600 | 600 | _Not available_ | 18,000 |  |
-| Pakistan | 260 | 260 | _Not available_ | 26,000 |  |
-| Russia | 40,000 | 32,000 | _Not available_ | 350,000 |  |
-| Tajikistan | 22,000 | 22,000 | _Not available_ | 60,000 |  |
-| Turkey | 3,000 | 3,000 | _Not available_ | 99,000 |  |
-| Vietnam | 220 | 220 | _Not available_ | 54,000 |  |
-| World total (rounded) | 119,000 | 110,000 | _Not available_ | 2,000,000 | footnote 9 |
+| United States | 0 | W | N/A | 60,000 | footnote 7 |
+| Australia | 1,270 | 1,300 | N/A | 110,000 | footnote 8 |
+| Bolivia | 5,300 | 5,000 | N/A | 310,000 |  |
+| Burma | 4,500 | 4,500 | N/A | 140,000 |  |
+| Canada | 0 | 0 | N/A | 78,000 |  |
+| China | 40,000 | 40,000 | N/A | 830,000 |  |
+| Guatemala | 50 | 50 | N/A | NA |  |
+| Iran | 90 | 90 | N/A | NA |  |
+| Kazakhstan | 800 | 800 | N/A | NA |  |
+| Kyrgyzstan | 700 | 700 | N/A | 260,000 |  |
+| Laos | 200 | 200 | N/A | NA |  |
+| Mexico | 600 | 600 | N/A | 18,000 |  |
+| Pakistan | 260 | 260 | N/A | 26,000 |  |
+| Russia | 40,000 | 32,000 | N/A | 350,000 |  |
+| Tajikistan | 22,000 | 22,000 | N/A | 60,000 |  |
+| Turkey | 3,000 | 3,000 | N/A | 99,000 |  |
+| Vietnam | 220 | 220 | N/A | 54,000 |  |
+| World total (rounded) | 119,000 | 110,000 | N/A | >2,000,000 | footnote 9 |
 
 ## Footnotes (verbatim)
 

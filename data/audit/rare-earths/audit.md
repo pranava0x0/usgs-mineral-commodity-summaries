@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rare-earths.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `a733c264883a3acb…`
 - **Pages**: 2
 - **Units note (verbatim)**: [Data in metric tons, rare-earth-oxide (REO) equivalent, unless otherwise specified]
@@ -12,12 +12,12 @@
 | field | value |
 | --- | --- |
 | Mined production (US) | 51,000 |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Primary smelting / refinery (US) | 8,900 |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 22,450 |
 | Exports (total) | 15,320 |
 | Apparent consumption | 27,000 |
-| Price, $ per pound | 1 |
+| Price, $ per pound | N/A |
 | Net import reliance (% of apparent consumption) | 67 |
 
 ## Salient Statistics (US) — full table
@@ -43,8 +43,8 @@
 | Europium oxide, 99.99% minimum |  | 31 | 30 | 27 | 27 | 27 |
 | Gadolinium oxide, 99.99% minimum |  | 47 | 75 | 47 | 28 | 30 |
 | Employment, mine and mill, annual average, number |  | 293 | 350 | 450 | 570 | 670 |
-| Compounds and metals |  | 95 | 95 | 90 | 53 | 67 |
-| Mineral concentrates |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Compounds and metals |  | >95 | >95 | >90 | 53 | 67 |
+| Mineral concentrates |  | E | E | E | E | E |
 
 ## Import Sources (2021-24)
 
@@ -53,29 +53,30 @@
 - Malaysia: 13%
 - Japan: 5%
 - Estonia: 5%
+- other: 6%
 
 ## World Mine Production and Reserves
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 45,500 | 51,000 | _Not available_ | 1,900,000 | footnote 11 |
-| Australia | 29,000 | 29,000 | _Not available_ | 6,300,000 | footnote 13 |
-| Brazil | 560 | 2,000 | _Not available_ | 21,000,000 |  |
-| Burma | 27,000 | 22,000 | _Not available_ | _Not available_ | footnote 12 |
-| Canada | 0 | 0 | _Not available_ | 830,000 |  |
-| China | 270,000 | 270,000 | _Not available_ | 44,000,000 |  |
-| Greenland | 0 | 0 | _Not available_ | 1,500,000 |  |
-| India | 2,900 | 2,900 | _Not available_ | _Not available_ | footnote 14 |
-| Madagascar | 1,400 | 2,700 | _Not available_ | _Not available_ | footnote 12 |
-| Malaysia | 140 | 110 | _Not available_ | 710,000 | footnote 12 |
-| Nigeria | 1,500 | 1,500 | _Not available_ | _Not available_ |  |
-| Russia | 2,600 | 2,600 | _Not available_ | 3,800,000 |  |
-| South Africa | 0 | 0 | _Not available_ | 860,000 |  |
-| Tanzania | 0 | 0 | _Not available_ | 890,000 |  |
-| Thailand | 2,100 | 4,800 | _Not available_ | _Not available_ | footnote 12 |
-| Vietnam | 300 | 150 | _Not available_ | 3,500,000 | footnote 12 |
-| Other | 1,000 | 550 | _Not available_ | _Not available_ |  |
-| World total (rounded) | 380,000 | 390,000 | _Not available_ | 85,000,000 |  |
+| United States | 45,500 | 51,000 | N/A | 1,900,000 | footnote 11 |
+| Australia | 29,000 | 29,000 | N/A | 6,300,000 | footnote 13 |
+| Brazil | 560 | 2,000 | N/A | 21,000,000 |  |
+| Burma | 27,000 | 22,000 | N/A | NA | footnote 12 |
+| Canada | 0 | 0 | N/A | 830,000 |  |
+| China | 270,000 | 270,000 | N/A | 44,000,000 |  |
+| Greenland | 0 | 0 | N/A | 1,500,000 |  |
+| India | 2,900 | 2,900 | N/A | NA | footnote 14 |
+| Madagascar | 1,400 | 2,700 | N/A | NA | footnote 12 |
+| Malaysia | 140 | 110 | N/A | 710,000 | footnote 12 |
+| Nigeria | 1,500 | 1,500 | N/A | NA |  |
+| Russia | 2,600 | 2,600 | N/A | 3,800,000 |  |
+| South Africa | 0 | 0 | N/A | 860,000 |  |
+| Tanzania | 0 | 0 | N/A | 890,000 |  |
+| Thailand | 2,100 | 4,800 | N/A | NA | footnote 12 |
+| Vietnam | 300 | 150 | N/A | 3,500,000 | footnote 12 |
+| Other | 1,000 | 550 | N/A | NA |  |
+| World total (rounded) | 380,000 | 390,000 | N/A | >85,000,000 |  |
 
 ## Footnotes (verbatim)
 

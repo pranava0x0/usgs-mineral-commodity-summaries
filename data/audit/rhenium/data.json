@@ -1,0 +1,435 @@
+{
+  "slug": "rhenium",
+  "name": "Rhenium",
+  "symbol": "Re",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rhenium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "c2bd5ce5e85c6337bef1e2e8224032b6f32ec6146abbd302b42c83a6a4e79945",
+  "pdf_page_count": 2,
+  "units_note": "(Data in kilograms, rhenium content, unless otherwise specified)",
+  "price_unit_note": "Price, average value, gross weight, dollars per kilogram",
+  "price_footnote_text": "Average price per kilogram of rhenium in pellets (99.9% rhenium content) or catalytic-grade ammonium perrhenate (69.4% rhenium content). Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "During 2025, rhenium-containing products including ammonium perrhenate (APR), metal powder, and perrhenic acid were produced as byproducts from roasting molybdenum concentrates from porphyry copper-molybdenum deposits in Arizona and Montana. Total estimated U.S. primary production increased by 5% to 9,800 kilograms in 2025 compared with 9,310 kilograms in 2024. The United States continued to be a leading producer of secondary rhenium, recovering rhenium from nickel-base superalloy scrap, spent oil-refining catalysts, and foundry revert. The major uses of rhenium were in superalloys used in high-temperature turbine engine components and in petroleum-reforming catalysts, representing an estimated 80% and 15%, respectively, of end uses. Bimetallic platinum-rhenium catalysts were used in petroleum reforming to produce high-octane hydrocarbons, which are used in the production of lead-free gasoline. Rhenium improves the high-temperature (>1,000 degrees Celsius) strength properties of some nickel-base superalloys. Rhenium alloys were used in crucibles, electrical contacts, electromagnets, electron tubes and targets, heating elements, ionization gauges, mass spectrographs, metallic coatings, semiconductors, temperature controls, thermocouples, vacuum tubes, and other applications.",
+  "events_trends_summary": "In 2025, the estimated price for catalytic-grade APR averaged $2,300 per kilogram, 78% more than the annual average price in 2024. The estimated rhenium metal pellet price averaged $2,600 per kilogram in 2025, a 90% increase from the annual average price in 2024. During 2025, the United States continued to rely on imports for much of its supply of rhenium. Canada, Chile, Germany, Kazakhstan, and Poland supplied most of the imported rhenium. Estimated imports of APR increased by 5% in 2025 compared with those in 2024. Estimated imports of unwrought rhenium and rhenium powders increased by 83% in 2025 compared with those in 2024. Estimated apparent consumption in 2025 increased by 34% compared with that in 2024. Estimated world rhenium production in 2025 increased by 1% to 81,000 kilograms compared with 79,800 kilograms in 2024. The United States and Germany remained the leading producers of secondary rhenium, with additional production in Canada, Estonia, France, Japan, Poland, and Russia. Available data were insufficient to estimate U.S. output. RHENIUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026 Industry sources estimated global secondary production to be between 20,000 and 25,000 kilograms in 2025, excluding rhenium recovered from spent catalysts, which was retained in a closed-loop system and reused to manufacture new catalysts. Several molybdenum-rhenium medical devices were approved by the U.S. Food and Drug Administration, highlighting the growing importance of medical implants as an end use for rhenium alongside aerospace and petroleum- reforming catalysts. As rhenium prices increased, recycling of rhenium-bearing superalloys was expected to become more financially attractive. However, industry sources indicated that recyclers would require prices to remain consistently above $3,000 per kilogram to offset high processing costs. In response, some companies increased investment in hydrometallurgical technologies to improve recovery from superalloy scrap. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "Most rhenium occurs with molybdenum in porphyry copper deposits. Identified U.S. resources are estimated to be about 7 million kilograms. Rhenium also is associated with copper minerals in sedimentary deposits in Armenia, Kazakhstan, Poland, Russia, and Uzbekistan, where ore is processed for copper recovery and the rhenium-bearing residues are recovered at copper smelters.",
+  "substitutes_summary": "Substitutes for rhenium in platinum-rhenium catalysts are continually being evaluated; one such application using iridium and tin has achieved commercial success. Other metals being evaluated for catalytic use include gallium, germanium, indium, selenium, silicon, tungsten, and vanadium. The use of these and other metals in bimetallic catalysts might decrease rhenium’s share of the existing catalyst market; however, this would likely be offset by rhenium-bearing catalysts being considered for use in several proposed gas-to-liquid projects. Materials that can substitute for rhenium in various end uses are as follows: cobalt and tungsten for coatings on copper X-ray targets, rhodium and rhodium-iridium for high-temperature thermocouples, tungsten and platinum-ruthenium for coatings on electrical contacts, and tungsten and tantalum for electron emitters.",
+  "recycling_summary": "Nickel-base superalloy scrap and scrapped turbine blades and vanes continued to be recycled hydrometallurgically to produce rhenium metal for use in new superalloy melts. The scrapped parts also were processed to generate engine revert—a high-quality, lower cost superalloy meltstock—by an increasing number of companies, mainly in Canada, Estonia, France, Germany, Japan, Poland, Russia, and the United States. Rhenium- containing catalysts also were recycled. The rhenium recycled from spent catalysts was either returned to the oil companies or to the catalyst producer for production of new catalysts in what is considered a closed-loop system.",
+  "salient_stats": [
+    {
+      "label": "Production",
+      "footnote": "1",
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 9290.0,
+        "2022": 8870.0,
+        "2023": 9410.0,
+        "2024": 9310.0,
+        "2025e": 9800.0
+      },
+      "raw_values": {
+        "2021": "9290",
+        "2022": "8870",
+        "2023": "9410",
+        "2024": "9310",
+        "2025e": "9800"
+      }
+    },
+    {
+      "label": "Rhenium, unwrought and powders",
+      "footnote": "2",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 15900.0,
+        "2022": 11000.0,
+        "2023": 10200.0,
+        "2024": 12600.0,
+        "2025e": 23000.0
+      },
+      "raw_values": {
+        "2021": "15900",
+        "2022": "11000",
+        "2023": "10200",
+        "2024": "12600",
+        "2025e": "23000"
+      }
+    },
+    {
+      "label": "Ammonium perrhenate",
+      "footnote": "3",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 6020.0,
+        "2022": 8810.0,
+        "2023": 4890.0,
+        "2024": 7450.0,
+        "2025e": 7800.0
+      },
+      "raw_values": {
+        "2021": "6020",
+        "2022": "8810",
+        "2023": "4890",
+        "2024": "7450",
+        "2025e": "7800"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 92.0,
+        "2023": 689.0,
+        "2024": 735.0,
+        "2025e": 2200.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "92",
+        "2023": "689",
+        "2024": "735",
+        "2025e": "2200"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "4",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 31200.0,
+        "2022": 28600.0,
+        "2023": 23800.0,
+        "2024": 28700.0,
+        "2025e": 38000.0
+      },
+      "raw_values": {
+        "2021": "31200",
+        "2022": "28600",
+        "2023": "23800",
+        "2024": "28700",
+        "2025e": "38000"
+      }
+    },
+    {
+      "label": "Metal, 99.99% pure",
+      "footnote": null,
+      "section": "Price, average value, gross weight, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 977.0,
+        "2022": 1120.0,
+        "2023": 1070.0,
+        "2024": 1360.0,
+        "2025e": 2600.0
+      },
+      "raw_values": {
+        "2021": "977",
+        "2022": "1120",
+        "2023": "1070",
+        "2024": "1360",
+        "2025e": "2600"
+      }
+    },
+    {
+      "label": "Ammonium perrhenate",
+      "footnote": null,
+      "section": "Price, average value, gross weight, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 866.0,
+        "2022": 911.0,
+        "2023": 920.0,
+        "2024": 1290.0,
+        "2025e": 2300.0
+      },
+      "raw_values": {
+        "2021": "866",
+        "2022": "911",
+        "2023": "920",
+        "2024": "1290",
+        "2025e": "2300"
+      }
+    },
+    {
+      "label": "Small Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Employment, number",
+      "subsection": "Small",
+      "values": {
+        "2021": 70.0,
+        "2022": 69.0,
+        "2023": 61.0,
+        "2024": 68.0,
+        "2025e": 75.0
+      },
+      "raw_values": {
+        "2021": "70",
+        "2022": "69",
+        "2023": "61",
+        "2024": "68",
+        "2025e": "75"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Metal, 99.99% pure",
+      "unit_note": "Price, average value, gross weight, dollars per kilogram",
+      "values": {
+        "2021": 977.0,
+        "2022": 1120.0,
+        "2023": 1070.0,
+        "2024": 1360.0,
+        "2025e": 2600.0
+      },
+      "raw_values": {
+        "2021": "977",
+        "2022": "1120",
+        "2023": "1070",
+        "2024": "1360",
+        "2025e": "2600"
+      }
+    },
+    {
+      "form": "Ammonium perrhenate",
+      "unit_note": "Price, average value, gross weight, dollars per kilogram",
+      "values": {
+        "2021": 866.0,
+        "2022": 911.0,
+        "2023": 920.0,
+        "2024": 1290.0,
+        "2025e": 2300.0
+      },
+      "raw_values": {
+        "2021": "866",
+        "2022": "911",
+        "2023": "920",
+        "2024": "1290",
+        "2025e": "2300"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 30800.0,
+  "exports_total_latest": 2200.0,
+  "apparent_consumption_latest": 38000.0,
+  "price_usd_per_pound_latest": 2600.0,
+  "net_import_reliance_pct_latest": 75.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Ammonium perrhenate",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Kazakhstan",
+          "share_pct": 24.0
+        },
+        {
+          "country": "Poland",
+          "share_pct": 20.0
+        },
+        {
+          "country": "Chile",
+          "share_pct": 17.0
+        },
+        {
+          "country": "other",
+          "share_pct": 14.0
+        }
+      ]
+    },
+    {
+      "category": "Rhenium metal",
+      "countries": [
+        {
+          "country": "Chile",
+          "share_pct": 38.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 28.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 21.0
+        },
+        {
+          "country": "Poland",
+          "share_pct": 11.0
+        },
+        {
+          "country": "other",
+          "share_pct": 2.0
+        }
+      ]
+    },
+    {
+      "category": "Total imports",
+      "countries": [
+        {
+          "country": "Chile",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 27.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 16.0
+        },
+        {
+          "country": "Poland",
+          "share_pct": 14.0
+        },
+        {
+          "country": "other",
+          "share_pct": 12.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 9310.0,
+      "production_latest_year": 9800.0,
+      "capacity": null,
+      "reserves": 400000.0,
+      "production_prev_raw": "9310",
+      "production_latest_raw": "9800",
+      "reserves_raw": "400000",
+      "note": null
+    },
+    {
+      "country": "Armenia",
+      "production_prev_year": 200.0,
+      "production_latest_year": 200.0,
+      "capacity": null,
+      "reserves": 95000.0,
+      "production_prev_raw": "200",
+      "production_latest_raw": "200",
+      "reserves_raw": "95000",
+      "note": null
+    },
+    {
+      "country": "Chile",
+      "production_prev_year": 29000.0,
+      "production_latest_year": 30000.0,
+      "capacity": null,
+      "reserves": 1300000.0,
+      "production_prev_raw": "29000",
+      "production_latest_raw": "30000",
+      "reserves_raw": "1300000",
+      "note": "footnote 9"
+    },
+    {
+      "country": "China",
+      "production_prev_year": 20000.0,
+      "production_latest_year": 20000.0,
+      "capacity": null,
+      "reserves": 200000.0,
+      "production_prev_raw": "20000",
+      "production_latest_raw": "20000",
+      "reserves_raw": "200000",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 1500.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": 190000.0,
+      "production_prev_raw": "1500",
+      "production_latest_raw": "1000",
+      "reserves_raw": "190000",
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 3000.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3000",
+      "production_latest_raw": "3000",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Poland",
+      "production_prev_year": 9400.0,
+      "production_latest_year": 10000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "9400",
+      "production_latest_raw": "10000",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": 310000.0,
+      "production_prev_raw": "NA",
+      "production_latest_raw": "NA",
+      "reserves_raw": "310000",
+      "note": null
+    },
+    {
+      "country": "Uzbekistan",
+      "production_prev_year": 7400.0,
+      "production_latest_year": 7000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "7400",
+      "production_latest_raw": "7000",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 79800.0,
+      "production_latest_year": 81000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "79800",
+      "production_latest_raw": "81000",
+      "reserves_raw": "Large",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Based on 80% recovery of estimated rhenium contained in molybdenum disulfide concentrates. Secondary rhenium production not included.",
+    "2": "Includes data for the following Harmonized Tariff Schedule of the United States (HTS) codes: 8112.41.1000, 8112.92.5000 (2021) and 8112.41.5000 and 8112.49.0000 (2022–25). Does not include wrought forms.",
+    "3": "The rhenium content of ammonium perrhenate is 69.42%.",
+    "4": "Defined as production + imports – exports.",
+    "5": "Average price per kilogram of rhenium in pellets (99.9% rhenium content) or catalytic-grade ammonium perrhenate (69.4% rhenium content). Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "6": "Defined as imports – exports.",
+    "7": "Estimated amount of rhenium recovered in association with copper and molybdenum production. Secondary rhenium production not included.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "9": "Estimated rhenium recovered from roaster residues from Belgium, Chile, Mexico, and Peru."
+  }
+}

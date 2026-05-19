@@ -1,0 +1,618 @@
+{
+  "slug": "zinc",
+  "name": "Zinc",
+  "symbol": "Zn",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-zinc.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "81f42c706a239392df03b26134cfffbafaaecc81193d7f3b1071f3eb68d40eca",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons, zinc content, unless otherwise specified)",
+  "price_unit_note": "Price, average, cents per pound",
+  "price_footnote_text": "Source: S&P Global Platts Metals Week, North American SHG zinc; based on the LME cash price plus premium.",
+  "domestic_use_summary": "The estimated value of zinc mined in 2025 was $2.2 billion. Zinc was mined in five States at six mining operations by five companies. Two smelter facilities, one primary and one secondary, operated by two companies, accounted for most of the commercial-grade zinc metal produced in the United States. Of the total reported zinc consumed, most was used to produce galvanized steel, followed by brass and bronze, zinc-base alloys, and other uses.",
+  "events_trends_summary": "U.S. zinc mine production was estimated to have decreased by 12% in 2025 compared with that in 2024, mostly owing to a decrease in production at the Red Dog Mine in Alaska owing to lower ore grades as the operation approached the end of its mine life. Operations at the Middle Tennessee zinc mines have been suspended since November 2023. During the closure, drilling work was conducted to define additional zinc, germanium, and gallium resources. Development advanced for several domestic zinc mine projects, including the restart of the Bunker Hill Mine in Idaho and the opening of the Hermosa project in Arizona. Domestic refined production was estimated to have remained essentially unchanged in 2025 compared with that in 2024, and apparent consumption increased slightly alongside an estimated increase in net imports of refined zinc. Galvanized steel was the leading use of refined zinc in the United States, which was used widely in the automobile and construction end markets. The annual average LME cash price for Special High Grade (SHG) zinc was projected to increase by 3% in 2025 from that in 2024. After decreasing in 2024 and 2023, the annual average North American premium to the LME cash price was projected to increase in 2025 by 6%. According to the International Lead and Zinc Study Group, estimated global refined zinc production in 2025 was forecast to increase slightly to 13.8 million tons mostly owing to the commissioning of a significant amount of refining capacity in China, and estimated metal consumption was forecast to increase slightly to 13.7 million tons, resulting in a production-to-consumption surplus of 85,000 tons.",
+  "world_resources_summary": "Identified zinc resources of the world are about 1.9 billion tons.",
+  "substitutes_summary": "Aluminum and plastics substitute for galvanized sheet in automobiles; aluminum alloys, cadmium, paint, and plastic coatings replace zinc coatings in other applications. Aluminum- and magnesium-base alloys are major substitutes for zinc-base diecasting alloys. Many elements are substitutes for zinc in chemical, electronic, and pigment uses.",
+  "recycling_summary": "Refined zinc produced in the United States was recovered from secondary materials at both primary and secondary smelters. These secondary materials included galvanizing residues and crude zinc oxide recovered from electric arc furnace dust.",
+  "salient_stats": [
+    {
+      "label": "Mine, zinc in concentrates",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 704.0,
+        "2022": 766.0,
+        "2023": 766.0,
+        "2024": 759.0,
+        "2025e": 670.0
+      },
+      "raw_values": {
+        "2021": "704",
+        "2022": "766",
+        "2023": "766",
+        "2024": "759",
+        "2025e": "670"
+      }
+    },
+    {
+      "label": "Refined zinc",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 220.0,
+        "2022": 220.0,
+        "2023": 220.0,
+        "2024": 220.0,
+        "2025e": 220.0
+      },
+      "raw_values": {
+        "2021": "220",
+        "2022": "220",
+        "2023": "220",
+        "2024": "220",
+        "2025e": "220"
+      }
+    },
+    {
+      "label": "Ores and concentrates",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 13.0,
+        "2022": 5.0,
+        "2023": 18.0,
+        "2024": 18.0,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "13",
+        "2022": "5",
+        "2023": "18",
+        "2024": "18",
+        "2025e": "20"
+      }
+    },
+    {
+      "label": "Refined zinc",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 701.0,
+        "2022": 762.0,
+        "2023": 705.0,
+        "2024": 590.0,
+        "2025e": 600.0
+      },
+      "raw_values": {
+        "2021": "701",
+        "2022": "762",
+        "2023": "705",
+        "2024": "590",
+        "2025e": "600"
+      }
+    },
+    {
+      "label": "Ores and concentrates",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 644.0,
+        "2022": 644.0,
+        "2023": 641.0,
+        "2024": 660.0,
+        "2025e": 630.0
+      },
+      "raw_values": {
+        "2021": "644",
+        "2022": "644",
+        "2023": "641",
+        "2024": "660",
+        "2025e": "630"
+      }
+    },
+    {
+      "label": "Refined zinc",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 13.0,
+        "2022": 8.0,
+        "2023": 3.0,
+        "2024": 2.0,
+        "2025e": 2.0
+      },
+      "raw_values": {
+        "2021": "13",
+        "2022": "8",
+        "2023": "3",
+        "2024": "2",
+        "2025e": "2"
+      }
+    },
+    {
+      "label": "Shipments from Government stockpile",
+      "footnote": "2",
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 1.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "1",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Consumption, apparent, refined zinc",
+      "footnote": "3",
+      "section": "Consumption, apparent, refined zinc",
+      "subsection": null,
+      "values": {
+        "2021": 908.0,
+        "2022": 974.0,
+        "2023": 921.0,
+        "2024": 808.0,
+        "2025e": 820.0
+      },
+      "raw_values": {
+        "2021": "908",
+        "2022": "974",
+        "2023": "921",
+        "2024": "808",
+        "2025e": "820"
+      }
+    },
+    {
+      "label": "North American",
+      "footnote": "4",
+      "section": "Price, average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 145.8,
+        "2022": 190.2,
+        "2023": 151.3,
+        "2024": 144.2,
+        "2025e": 149.0
+      },
+      "raw_values": {
+        "2021": "145.8",
+        "2022": "190.2",
+        "2023": "151.3",
+        "2024": "144.2",
+        "2025e": "149"
+      }
+    },
+    {
+      "label": "London Metal Exchange (LME), cash",
+      "footnote": null,
+      "section": "Price, average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 136.3,
+        "2022": 158.1,
+        "2023": 120.1,
+        "2024": 126.0,
+        "2025e": 130.0
+      },
+      "raw_values": {
+        "2021": "136.3",
+        "2022": "158.1",
+        "2023": "120.1",
+        "2024": "126.0",
+        "2025e": "130"
+      }
+    },
+    {
+      "label": "Stocks, reported producer and consumer, refined zinc, yearend",
+      "footnote": null,
+      "section": "Stocks, reported producer and consumer, refined zinc, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 114.0,
+        "2022": 133.0,
+        "2023": 105.0,
+        "2024": 110.0,
+        "2025e": 110.0
+      },
+      "raw_values": {
+        "2021": "114",
+        "2022": "133",
+        "2023": "105",
+        "2024": "110",
+        "2025e": "110"
+      }
+    },
+    {
+      "label": "Mine and mill",
+      "footnote": "5",
+      "section": "Employment, number",
+      "subsection": null,
+      "values": {
+        "2021": 2480.0,
+        "2022": 2500.0,
+        "2023": 2630.0,
+        "2024": 2510.0,
+        "2025e": 2600.0
+      },
+      "raw_values": {
+        "2021": "2480",
+        "2022": "2500",
+        "2023": "2630",
+        "2024": "2510",
+        "2025e": "2600"
+      }
+    },
+    {
+      "label": "Smelter, primary",
+      "footnote": null,
+      "section": "Employment, number",
+      "subsection": null,
+      "values": {
+        "2021": 220.0,
+        "2022": 220.0,
+        "2023": 340.0,
+        "2024": 340.0,
+        "2025e": 340.0
+      },
+      "raw_values": {
+        "2021": "220",
+        "2022": "220",
+        "2023": "340",
+        "2024": "340",
+        "2025e": "340"
+      }
+    },
+    {
+      "label": "Ores and concentrates",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "E",
+        "2022": "E",
+        "2023": "E",
+        "2024": "E",
+        "2025e": "E"
+      }
+    },
+    {
+      "label": "Refined zinc",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 76.0,
+        "2022": 77.0,
+        "2023": 76.0,
+        "2024": 73.0,
+        "2025e": 73.0
+      },
+      "raw_values": {
+        "2021": "76",
+        "2022": "77",
+        "2023": "76",
+        "2024": "73",
+        "2025e": "73"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "North American",
+      "unit_note": "Price, average, cents per pound",
+      "values": {
+        "2021": 145.8,
+        "2022": 190.2,
+        "2023": 151.3,
+        "2024": 144.2,
+        "2025e": 149.0
+      },
+      "raw_values": {
+        "2021": "145.8",
+        "2022": "190.2",
+        "2023": "151.3",
+        "2024": "144.2",
+        "2025e": "149"
+      }
+    },
+    {
+      "form": "London Metal Exchange (LME), cash",
+      "unit_note": "Price, average, cents per pound",
+      "values": {
+        "2021": 136.3,
+        "2022": 158.1,
+        "2023": 120.1,
+        "2024": 126.0,
+        "2025e": 130.0
+      },
+      "raw_values": {
+        "2021": "136.3",
+        "2022": "158.1",
+        "2023": "120.1",
+        "2024": "126.0",
+        "2025e": "130"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 670.0,
+  "primary_smelting_latest": 220.0,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 620.0,
+  "exports_total_latest": 632.0,
+  "apparent_consumption_latest": 820.0,
+  "price_usd_per_pound_latest": 149.0,
+  "net_import_reliance_pct_latest": null,
+  "latest_year_sentinels": {
+    "net_import_reliance": "E"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Ores and concentrates",
+      "countries": [
+        {
+          "country": "Peru",
+          "share_pct": 50.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Turkey",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
+        }
+      ]
+    },
+    {
+      "category": "Refined metal",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 57.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Peru",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 13.0
+        }
+      ]
+    },
+    {
+      "category": "Waste and scrap (gross weight)",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 64.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 33.0
+        },
+        {
+          "country": "other",
+          "share_pct": 3.0
+        }
+      ]
+    },
+    {
+      "category": "Combined total (includes gross weight of waste and scrap)",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 56.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Peru",
+          "share_pct": 9.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 13.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 759.0,
+      "production_latest_year": 670.0,
+      "capacity": null,
+      "reserves": 9300.0,
+      "production_prev_raw": "759",
+      "production_latest_raw": "670",
+      "reserves_raw": "9300",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 1100.0,
+      "production_latest_year": 1100.0,
+      "capacity": null,
+      "reserves": 64000.0,
+      "production_prev_raw": "1100",
+      "production_latest_raw": "1100",
+      "reserves_raw": "64000",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 512.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "512",
+      "production_latest_raw": "500",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 4000.0,
+      "production_latest_year": 4100.0,
+      "capacity": null,
+      "reserves": 60000.0,
+      "production_prev_raw": "4000",
+      "production_latest_raw": "4100",
+      "reserves_raw": "60000",
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 870.0,
+      "production_latest_year": 870.0,
+      "capacity": null,
+      "reserves": 10000.0,
+      "production_prev_raw": "870",
+      "production_latest_raw": "870",
+      "reserves_raw": "10000",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 380.0,
+      "production_latest_year": 360.0,
+      "capacity": null,
+      "reserves": 7400.0,
+      "production_prev_raw": "380",
+      "production_latest_raw": "360",
+      "reserves_raw": "7400",
+      "note": null
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 773.0,
+      "production_latest_year": 780.0,
+      "capacity": null,
+      "reserves": 14000.0,
+      "production_prev_raw": "773",
+      "production_latest_raw": "780",
+      "reserves_raw": "14000",
+      "note": null
+    },
+    {
+      "country": "Peru",
+      "production_prev_year": 1270.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": 18000.0,
+      "production_prev_raw": "1270",
+      "production_latest_raw": "1500",
+      "reserves_raw": "18000",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 310.0,
+      "production_latest_year": 430.0,
+      "capacity": null,
+      "reserves": 29000.0,
+      "production_prev_raw": "310",
+      "production_latest_raw": "430",
+      "reserves_raw": "29000",
+      "note": null
+    },
+    {
+      "country": "Sweden",
+      "production_prev_year": 239.0,
+      "production_latest_year": 230.0,
+      "capacity": null,
+      "reserves": 4100.0,
+      "production_prev_raw": "239",
+      "production_latest_raw": "230",
+      "reserves_raw": "4100",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 1730.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 25000.0,
+      "production_prev_raw": "1730",
+      "production_latest_raw": "2000",
+      "reserves_raw": "25000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 11900.0,
+      "production_latest_year": 13000.0,
+      "capacity": null,
+      "reserves": 240000.0,
+      "production_prev_raw": "11900",
+      "production_latest_raw": "13000",
+      "reserves_raw": "240000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+    "1": "Includes primary and secondary zinc metal production.",
+    "2": "Defined as changes in total inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer available.",
+    "3": "Defined for 2021–22 as refined production + refined imports – refined exports ± adjustments for Government stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "4": "Source: S&P Global Platts Metals Week, North American SHG zinc; based on the LME cash price plus premium.",
+    "5": "Includes mine and mill employment at zinc-containing deposits. Excludes office workers. Source: Mine Safety and Health Administration.",
+    "6": "Defined for 2021–22 as imports – exports ± adjustments for Government stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "7": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "8": "Source: International Lead and Zinc Study Group, 2025, ILZSG session/forecasts: Lisbon, Portugal, International Lead and Zinc Study Group press release, October 13, [4] p.",
+    "9": "Zinc content of concentrates and direct shipping ores.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "11": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 19 million tons."
+  }
+}

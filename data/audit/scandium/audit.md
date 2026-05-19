@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-scandium.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `b68e156704a9f38a…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons, scandium oxide equivalent, unless otherwise specified)
@@ -11,11 +11,11 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Mined production (US) | N/A |
+| Primary smelting / refinery (US) | N/A |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 4 |
-| Exports (total) | _Not available_ |
+| Exports (total) | N/A |
 | Apparent consumption | 100 |
 | Price, $ per pound | 640 |
 | Net import reliance (% of apparent consumption) | 100 |
@@ -34,6 +34,7 @@
 
 **(all)**
 - Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan: 89%
+- China: 11%
 
 ## World Mine Production and Reserves
 

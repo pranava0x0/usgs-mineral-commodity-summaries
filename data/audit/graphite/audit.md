@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-graphite.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `09ec621ed6400162…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons unless otherwise specified)
@@ -12,8 +12,8 @@
 | field | value |
 | --- | --- |
 | Mined production (US) | 0 |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Primary smelting / refinery (US) | N/A |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 79,000 |
 | Exports (total) | 8,400 |
 | Apparent consumption | 71,000 |
@@ -46,26 +46,26 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | _Not available_ | _Not available_ | footnote 4 |
-| Austria | 100 | 200 | _Not available_ | _Not available_ | footnote 4 |
-| Brazil | 58,000 | 65,000 | _Not available_ | 74,000,000 |  |
-| Canada | 11,700 | 8,000 | _Not available_ | 5,900,000 |  |
-| China | 1,270,000 | 1,400,000 | _Not available_ | 100,000,000 |  |
-| Germany | 140 | 140 | _Not available_ | _Not available_ | footnote 4 |
-| India | 17,600 | 17,000 | _Not available_ | 8,600,000 |  |
-| Korea, North | 8,100 | 8,000 | _Not available_ | 2,000,000 |  |
-| Korea, Republic of | 1,000 | 500 | _Not available_ | 1,800,000 |  |
-| Madagascar | 85,000 | 80,000 | _Not available_ | 27,000,000 |  |
-| Mexico | 706 | 740 | _Not available_ | 3,100,000 |  |
-| Mozambique | 39,000 | 60,000 | _Not available_ | 25,000,000 |  |
-| Norway | 5,340 | 6,600 | _Not available_ | 600,000 |  |
-| Russia | 20,000 | 25,000 | _Not available_ | 14,000,000 |  |
-| Sri Lanka | 3,000 | 3,200 | _Not available_ | 1,500,000 |  |
-| Tanzania | 27,000 | 75,000 | _Not available_ | 18,000,000 |  |
-| Turkey | 2,600 | 2,200 | _Not available_ | 6,900,000 |  |
-| Ukraine | 900 | 800 | _Not available_ | _Not available_ | footnote 4 |
-| Vietnam | 500 | 500 | _Not available_ | 9,700,000 |  |
-| World total (rounded) | 1,550,000 | 1,800,000 | _Not available_ | 310,000,000 |  |
+| United States | 0 | 0 | N/A | N/A | footnote 4 |
+| Austria | 100 | 200 | N/A | N/A | footnote 4 |
+| Brazil | 58,000 | 65,000 | N/A | 74,000,000 |  |
+| Canada | 11,700 | 8,000 | N/A | 5,900,000 |  |
+| China | 1,270,000 | 1,400,000 | N/A | 100,000,000 |  |
+| Germany | 140 | 140 | N/A | N/A | footnote 4 |
+| India | 17,600 | 17,000 | N/A | 8,600,000 |  |
+| Korea, North | 8,100 | 8,000 | N/A | 2,000,000 |  |
+| Korea, Republic of | 1,000 | 500 | N/A | 1,800,000 |  |
+| Madagascar | 85,000 | 80,000 | N/A | 27,000,000 |  |
+| Mexico | 706 | 740 | N/A | 3,100,000 |  |
+| Mozambique | 39,000 | 60,000 | N/A | 25,000,000 |  |
+| Norway | 5,340 | 6,600 | N/A | 600,000 |  |
+| Russia | 20,000 | 25,000 | N/A | 14,000,000 |  |
+| Sri Lanka | 3,000 | 3,200 | N/A | 1,500,000 |  |
+| Tanzania | 27,000 | 75,000 | N/A | 18,000,000 |  |
+| Turkey | 2,600 | 2,200 | N/A | 6,900,000 |  |
+| Ukraine | 900 | 800 | N/A | N/A | footnote 4 |
+| Vietnam | 500 | 500 | N/A | 9,700,000 |  |
+| World total (rounded) | 1,550,000 | 1,800,000 | N/A | 310,000,000 |  |
 
 ## Footnotes (verbatim)
 

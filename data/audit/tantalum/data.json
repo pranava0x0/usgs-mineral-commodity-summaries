@@ -1,0 +1,457 @@
+{
+  "slug": "tantalum",
+  "name": "Tantalum",
+  "symbol": "Ta",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tantalum.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "ddcfdf129bf67c2cced06f8476ec24937ac4f0f995d2ac7354a582f35491c1bf",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, tantalum content, unless otherwise specified)",
+  "price_unit_note": "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (TaO) content",
+  "price_footnote_text": "Sources: CRU Group (2021), the Institute for Rare Earths and Metals (2022–24), and Asian Metal (2025).",
+  "domestic_use_summary": "Tantalum has not been mined in the United States since 1959. Domestic tantalum resources are low grade; some are mineralogically complex, and most are not commercially recoverable. Companies in the United States produced tantalum alloys, capacitors, carbides, compounds, and tantalum metal from imported tantalum ores and concentrates and tantalum-containing materials. Tantalum metal and alloys were recovered from foreign and domestic scrap. Domestic tantalum consumption was not reported by consumers. The value of tantalum consumed in 2025 was estimated to be $190 million as measured by the value of imports.",
+  "events_trends_summary": "In 2025, U.S. tantalum apparent consumption (measured in tantalum content) was estimated to be 890 tons, a 58% increase from that in 2024. The estimated U.S. imports for consumption for 2025 increased by 22%, and exports decreased by 17% in 2025 from that in 2024. The value of waste and scrap imports increased by 40%, whereas the value of primary metal decreased by 20% compared with that in 2024. As of November 2025, the average monthly price for tantalum ore was $180 per kilogram of TaO content. TANTALUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026 In June, the U.S. Department of State reported that the Governments of Congo (Kinshasa) and Rwanda signed a peace agreement. The accord, mediated by the United States and observed by Qatar, called for ending support to nonstate armed groups, respecting territorial sovereignty, and establishing joint security and oversight mechanisms. If sustained, the agreement was expected to improve stability in eastern Congo (Kinshasa) and strengthen conditions for regional mineral trade, which included tantalum. In September, the U.S. Defense Logistics Agency awarded an $8.6 million delivery order to a company with tantalum processing operations in Boyertown, PA, to supply tantalum ingots for the National Defense Stockpile. The company also was awarded a separate 5-year contract for as much as $100 million to maintain a domestic source of tantalum processed directly from ore for defense and aerospace applications. Tantalum ingots were used to produce high- temperature superalloys and metal powders for high-reliability electronic components.",
+  "world_resources_summary": "Identified world resources of tantalum, most of which are in Australia, Brazil, Canada, and China, are considered adequate to supply projected needs. The United States has about 55,000 tons of tantalum resources in identified deposits, most of which were considered subeconomic at 2025 prices for tantalum.",
+  "substitutes_summary": "The following materials can be substituted for tantalum, but performance loss or higher costs may ensue: niobium and tungsten in carbides; aluminum, ceramics, and niobium in electronic capacitors; glass, molybdenum, nickel, niobium, platinum, stainless steel, titanium, and zirconium in corrosion-resistant applications; and hafnium, iridium, molybdenum, niobium, rhenium, and tungsten in high-temperature applications.",
+  "recycling_summary": "Tantalum was recycled mostly from new scrap generated during the manufacture of tantalum-containing electronic components and from tantalum-containing cemented carbide and superalloy scrap. The amount of tantalum recycled was not available, but it may account for as much as 30% of consumption by domestic primary processors.",
+  "salient_stats": [
+    {
+      "label": "Mine",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": "1",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1330.0,
+        "2022": 1720.0,
+        "2023": 1110.0,
+        "2024": 1070.0,
+        "2025e": 1300.0
+      },
+      "raw_values": {
+        "2021": "1330",
+        "2022": "1720",
+        "2023": "1110",
+        "2024": "1070",
+        "2025e": "1300"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "1",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 655.0,
+        "2022": 662.0,
+        "2023": 672.0,
+        "2024": 506.0,
+        "2025e": 420.0
+      },
+      "raw_values": {
+        "2021": "655",
+        "2022": "662",
+        "2023": "672",
+        "2024": "506",
+        "2025e": "420"
+      }
+    },
+    {
+      "label": "NA Consumption, apparent",
+      "footnote": "3",
+      "section": "Shipments from Government stockpile",
+      "subsection": "NA",
+      "values": {
+        "2021": 663.0,
+        "2022": 1060.0,
+        "2023": 440.0,
+        "2024": 566.0,
+        "2025e": 890.0
+      },
+      "raw_values": {
+        "2021": "663",
+        "2022": "1060",
+        "2023": "440",
+        "2024": "566",
+        "2025e": "890"
+      }
+    },
+    {
+      "label": "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (TaO) content",
+      "footnote": "5",
+      "section": "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (TaO) content",
+      "subsection": null,
+      "values": {
+        "2021": 158.0,
+        "2022": 196.0,
+        "2023": 170.0,
+        "2024": 167.0,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "158",
+        "2022": "196",
+        "2023": "170",
+        "2024": "167",
+        "2025e": "180"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (TaO) content",
+      "unit_note": "Price, tantalite, annual average, dollars per kilogram of tantalum oxide (TaO) content",
+      "values": {
+        "2021": 158.0,
+        "2022": 196.0,
+        "2023": 170.0,
+        "2024": 167.0,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "158",
+        "2022": "196",
+        "2023": "170",
+        "2024": "167",
+        "2025e": "180"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 0.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 1300.0,
+  "exports_total_latest": 420.0,
+  "apparent_consumption_latest": 890.0,
+  "price_usd_per_pound_latest": 180.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Tantalum ores and concentrates",
+      "countries": [
+        {
+          "country": "Australia",
+          "share_pct": 64.0
+        },
+        {
+          "country": "Congo (Kinshasa)",
+          "share_pct": 9.0
+        },
+        {
+          "country": "Mozambique",
+          "share_pct": 10.0
+        },
+        {
+          "country": "United Arab Emirates",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 12.0
+        }
+      ]
+    },
+    {
+      "category": "Tantalum metal and powder",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 47.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Kazakhstan",
+          "share_pct": 16.0
+        },
+        {
+          "country": "Thailand",
+          "share_pct": 4.0
+        },
+        {
+          "country": "other",
+          "share_pct": 8.0
+        }
+      ]
+    },
+    {
+      "category": "Tantalum waste and scrap",
+      "countries": [
+        {
+          "country": "Indonesia",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 12.0
+        },
+        {
+          "country": "China",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 44.0
+        }
+      ]
+    },
+    {
+      "category": "Total",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 22.0
+        },
+        {
+          "country": "Australia",
+          "share_pct": 14.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 11.0
+        },
+        {
+          "country": "Indonesia",
+          "share_pct": 7.0
+        },
+        {
+          "country": "other",
+          "share_pct": 46.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 0.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "—",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 52.0,
+      "production_latest_year": 50.0,
+      "capacity": null,
+      "reserves": 120000.0,
+      "production_prev_raw": "52",
+      "production_latest_raw": "50",
+      "reserves_raw": "120000",
+      "note": "footnote 10"
+    },
+    {
+      "country": "Bolivia",
+      "production_prev_year": 2.0,
+      "production_latest_year": 2.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2",
+      "production_latest_raw": "2",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 210.0,
+      "production_latest_year": 190.0,
+      "capacity": null,
+      "reserves": 40000.0,
+      "production_prev_raw": "210",
+      "production_latest_raw": "190",
+      "reserves_raw": "40000",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Burundi",
+      "production_prev_year": 2.0,
+      "production_latest_year": 2.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2",
+      "production_latest_raw": "2",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 76.0,
+      "production_latest_year": 80.0,
+      "capacity": null,
+      "reserves": 240000.0,
+      "production_prev_raw": "76",
+      "production_latest_raw": "80",
+      "reserves_raw": "240000",
+      "note": null
+    },
+    {
+      "country": "Congo (Kinshasa)",
+      "production_prev_year": 1270.0,
+      "production_latest_year": 1300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1270",
+      "production_latest_raw": "1300",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Ethiopia",
+      "production_prev_year": 40.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "40",
+      "production_latest_raw": "40",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Mozambique",
+      "production_prev_year": 55.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "55",
+      "production_latest_raw": "1",
+      "reserves_raw": "NA",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Nigeria",
+      "production_prev_year": 390.0,
+      "production_latest_year": 390.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "390",
+      "production_latest_raw": "390",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 29.0,
+      "production_latest_year": 30.0,
+      "capacity": null,
+      "reserves": 150.0,
+      "production_prev_raw": "29",
+      "production_latest_raw": "30",
+      "reserves_raw": "150",
+      "note": null
+    },
+    {
+      "country": "Rwanda",
+      "production_prev_year": 374.0,
+      "production_latest_year": 400.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "374",
+      "production_latest_raw": "400",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 2500.0,
+      "production_latest_year": 2500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2500",
+      "production_latest_raw": "2500",
+      "reserves_raw": "NA",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Imports and exports include the estimated tantalum content of synthetic tantalum-niobium concentrates, niobium and tantalum ores and concentrates, tantalum waste and scrap, unwrought tantalum alloys and powder, and other tantalum articles. Synthetic concentrates and niobium ores and concentrates were assumed to contain 50% TaO. Tantalum ores and concentrates were assumed to contain 32% TaO. Niobium ores and concentrates were assumed to contain 28% TaO. TaO is 81.897% tantalum.",
+    "2": "Defined aschange in total inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer available.",
+    "3": "Defined for 2021–22 as production + imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "4": "Decrease in apparent consumption is due to a decline in imports for consumption caused by stockpiling in 2022.",
+    "5": "Sources: CRU Group (2021), the Institute for Rare Earths and Metals (2022–24), and Asian Metal (2025).",
+    "6": "Defined for 2021–22 as imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "7": "Includes Hong Kong.",
+    "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "10": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 33,000 tons.",
+    "11": "Reported."
+  }
+}

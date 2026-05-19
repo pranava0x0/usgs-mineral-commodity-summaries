@@ -1,0 +1,617 @@
+{
+  "slug": "chromium",
+  "name": "Chromium",
+  "symbol": "Cr",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-chromium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "c19e412f65eddf60ab8b3b49ec415d7e0b817d08412733a0094a47af06fa4a04",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons, chromium content, unless otherwise specified)",
+  "price_unit_note": "Price",
+  "price_footnote_text": "Source: Argus Media group, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "In 2025, the United States consumed an estimated 4% of world chromite ore production in various forms of imported materials, such as chromite ore, chromium chemicals, ferrochromium, chromium metal, and stainless steel. Imported chromite ore was consumed by one company to produce chromium chemicals. Stainless-steel and heat-resisting-steel producers were the leading consumers of ferrochromium. Stainless steels and superalloys require the addition of chromium via chromium-containing scrap, chromium metal, or ferrochromium. The value of chromium material consumption was estimated to be $720 million in 2025 (as measured by the value of net imports, excluding stainless steel), which was a 15% decrease from $852 million in 2024.",
+  "events_trends_summary": "South Africa was the leading chromite ore producer. Global chromite ore mine production was estimated to have increased by 3% in 2025 compared with production in 2024. Challenges related to shifting market demands, particularly in China, combined with deep-level mining and labor costs and an unreliable supply of electricity could affect production in South Africa. Investment, major expansions, and new mines may increase the production of chromite ore in Brazil, Kazakhstan, and Zimbabwe. China was the leading ferrochromium- and stainless-steel-producing country and the leading chromium-consuming country. However, the production of stainless steel in China has been affected by oversupply and decreases in consumer demand, which may have contributed to decreases in the price of ferrochromium. Potential export controls and tariffs on chromite ore from South Africa may also affect ferrochromium production in China.",
+  "world_resources_summary": "World resources are greater than 12 billion tons of shipping-grade chromite, sufficient to meet conceivable demand for centuries. World chromium resources are heavily geographically concentrated (95%) in Kazakhstan and southern Africa; United States chromium resources are mostly in the Stillwater Complex in Montana.",
+  "substitutes_summary": "Chromium has no substitute in stainless steel, the leading end use, or in superalloys, the major strategic end use. Chromium-containing scrap can substitute for ferrochromium in some metallurgical uses.",
+  "recycling_summary": "In 2025, recycled chromium (contained in reported stainless-steel scrap receipts) accounted for 21% of apparent consumption.",
+  "salient_stats": [
+    {
+      "label": "Mine",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary",
+      "footnote": "1",
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 147.0,
+        "2022": 138.0,
+        "2023": 126.0,
+        "2024": 103.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "147",
+        "2022": "138",
+        "2023": "126",
+        "2024": "103",
+        "2025e": "100"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": "2",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 571.0,
+        "2022": 610.0,
+        "2023": 451.0,
+        "2024": 492.0,
+        "2025e": 520.0
+      },
+      "raw_values": {
+        "2021": "571",
+        "2022": "610",
+        "2023": "451",
+        "2024": "492",
+        "2025e": "520"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "2",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 114.0,
+        "2022": 162.0,
+        "2023": 178.0,
+        "2024": 148.0,
+        "2025e": 140.0
+      },
+      "raw_values": {
+        "2021": "114",
+        "2022": "162",
+        "2023": "178",
+        "2024": "148",
+        "2025e": "140"
+      }
+    },
+    {
+      "label": "Shipments from Government stockpile",
+      "footnote": "3",
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 7.0,
+        "2022": 5.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "7",
+        "2022": "5",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Reported",
+      "footnote": null,
+      "section": "Consumption (includes recycling)",
+      "subsection": null,
+      "values": {
+        "2021": 389.0,
+        "2022": 328.0,
+        "2023": 365.0,
+        "2024": 360.0,
+        "2025e": 360.0
+      },
+      "raw_values": {
+        "2021": "389",
+        "2022": "328",
+        "2023": "365",
+        "2024": "360",
+        "2025e": "360"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "4",
+      "section": "Consumption (includes recycling)",
+      "subsection": null,
+      "values": {
+        "2021": 612.0,
+        "2022": 591.0,
+        "2023": 399.0,
+        "2024": 442.0,
+        "2025e": 480.0
+      },
+      "raw_values": {
+        "2021": "612",
+        "2022": "591",
+        "2023": "399",
+        "2024": "442",
+        "2025e": "480"
+      }
+    },
+    {
+      "label": "Chromite ore (gross weight), dollars per metric ton",
+      "footnote": null,
+      "section": "Price",
+      "subsection": null,
+      "values": {
+        "2021": 199.0,
+        "2022": 277.0,
+        "2023": 321.0,
+        "2024": 331.0,
+        "2025e": 290.0
+      },
+      "raw_values": {
+        "2021": "199",
+        "2022": "277",
+        "2023": "321",
+        "2024": "331",
+        "2025e": "290"
+      }
+    },
+    {
+      "label": "Ferrochromium (chromium content), dollars per pound",
+      "footnote": "6",
+      "section": "Price",
+      "subsection": null,
+      "values": {
+        "2021": 1.5,
+        "2022": 3.19,
+        "2023": 2.55,
+        "2024": 1.76,
+        "2025e": 1.6
+      },
+      "raw_values": {
+        "2021": "1.50",
+        "2022": "3.19",
+        "2023": "2.55",
+        "2024": "1.76",
+        "2025e": "1.60"
+      }
+    },
+    {
+      "label": "Chromium metal (gross weight), dollars per pound",
+      "footnote": null,
+      "section": "Price",
+      "subsection": null,
+      "values": {
+        "2021": 4.23,
+        "2022": 7.2,
+        "2023": 5.05,
+        "2024": 5.3,
+        "2025e": 5.9
+      },
+      "raw_values": {
+        "2021": "4.23",
+        "2022": "7.20",
+        "2023": "5.05",
+        "2024": "5.30",
+        "2025e": "5.90"
+      }
+    },
+    {
+      "label": "Stocks, consumer, yearend",
+      "footnote": null,
+      "section": "Stocks, consumer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 6.0,
+        "2022": 5.0,
+        "2023": 5.0,
+        "2024": 5.0,
+        "2025e": 5.0
+      },
+      "raw_values": {
+        "2021": "6",
+        "2022": "5",
+        "2023": "5",
+        "2024": "5",
+        "2025e": "5"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 76.0,
+        "2022": 77.0,
+        "2023": 68.0,
+        "2024": 77.0,
+        "2025e": 79.0
+      },
+      "raw_values": {
+        "2021": "76",
+        "2022": "77",
+        "2023": "68",
+        "2024": "77",
+        "2025e": "79"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Chromite ore (gross weight), dollars per metric ton",
+      "unit_note": "Price",
+      "values": {
+        "2021": 199.0,
+        "2022": 277.0,
+        "2023": 321.0,
+        "2024": 331.0,
+        "2025e": 290.0
+      },
+      "raw_values": {
+        "2021": "199",
+        "2022": "277",
+        "2023": "321",
+        "2024": "331",
+        "2025e": "290"
+      }
+    },
+    {
+      "form": "Ferrochromium (chromium content), dollars per pound",
+      "unit_note": "Price",
+      "values": {
+        "2021": 1.5,
+        "2022": 3.19,
+        "2023": 2.55,
+        "2024": 1.76,
+        "2025e": 1.6
+      },
+      "raw_values": {
+        "2021": "1.50",
+        "2022": "3.19",
+        "2023": "2.55",
+        "2024": "1.76",
+        "2025e": "1.60"
+      }
+    },
+    {
+      "form": "Chromium metal (gross weight), dollars per pound",
+      "unit_note": "Price",
+      "values": {
+        "2021": 4.23,
+        "2022": 7.2,
+        "2023": 5.05,
+        "2024": 5.3,
+        "2025e": 5.9
+      },
+      "raw_values": {
+        "2021": "4.23",
+        "2022": "7.20",
+        "2023": "5.05",
+        "2024": "5.30",
+        "2025e": "5.90"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 0.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": 100.0,
+  "imports_total_latest": 520.0,
+  "exports_total_latest": 140.0,
+  "apparent_consumption_latest": 480.0,
+  "price_usd_per_pound_latest": 290.0,
+  "net_import_reliance_pct_latest": 79.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Chromite (ores and concentrates)",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 96.0
+        },
+        {
+          "country": "Turkey",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 1.0
+        }
+      ]
+    },
+    {
+      "category": "Chromium-containing chemicals",
+      "countries": [
+        {
+          "country": "Kazakhstan",
+          "share_pct": 25.0
+        },
+        {
+          "country": "China",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 14.0
+        },
+        {
+          "country": "India",
+          "share_pct": 13.0
+        },
+        {
+          "country": "other",
+          "share_pct": 29.0
+        }
+      ]
+    },
+    {
+      "category": "Chromium-containing scrap",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 50.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 45.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    },
+    {
+      "category": "Chromium metal",
+      "countries": [
+        {
+          "country": "China",
+          "share_pct": 40.0
+        },
+        {
+          "country": "United Kingdom",
+          "share_pct": 26.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 15.0
+        },
+        {
+          "country": "France",
+          "share_pct": 14.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    },
+    {
+      "category": "Ferrochromium",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 41.0
+        },
+        {
+          "country": "Kazakhstan",
+          "share_pct": 24.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 6.0
+        },
+        {
+          "country": "Finland",
+          "share_pct": 5.0
+        }
+      ]
+    },
+    {
+      "category": "Stainless steel",
+      "countries": [
+        {
+          "country": "Taiwan",
+          "share_pct": 16.0
+        },
+        {
+          "country": "others",
+          "share_pct": 55.0
+        }
+      ]
+    },
+    {
+      "category": "Total imports",
+      "countries": [
+        {
+          "country": "South Africa",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Kazakhstan",
+          "share_pct": 11.0
+        },
+        {
+          "country": "Finland",
+          "share_pct": 6.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 47.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "2024",
+      "production_prev_year": 2025.0,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2025",
+      "production_latest_raw": "Ore",
+      "reserves_raw": "Cr O",
+      "note": "footnote 2,3"
+    },
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 8500.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "8500",
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 1400.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 3900.0,
+      "production_prev_raw": "1400",
+      "production_latest_raw": "2000",
+      "reserves_raw": "3900",
+      "note": null
+    },
+    {
+      "country": "Finland",
+      "production_prev_year": 1940.0,
+      "production_latest_year": 1900.0,
+      "capacity": null,
+      "reserves": 63000.0,
+      "production_prev_raw": "1940",
+      "production_latest_raw": "1900",
+      "reserves_raw": "63000",
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 3370.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": 79000.0,
+      "production_prev_raw": "3370",
+      "production_latest_raw": "3000",
+      "reserves_raw": "79000",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 6100.0,
+      "production_latest_year": 7000.0,
+      "capacity": null,
+      "reserves": 230000.0,
+      "production_prev_raw": "6100",
+      "production_latest_raw": "7000",
+      "reserves_raw": "230000",
+      "note": "footnote 14"
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 22900.0,
+      "production_latest_year": 23000.0,
+      "capacity": null,
+      "reserves": 350000.0,
+      "production_prev_raw": "22900",
+      "production_latest_raw": "23000",
+      "reserves_raw": "350000",
+      "note": null
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 9300.0,
+      "production_latest_year": 9000.0,
+      "capacity": null,
+      "reserves": 27000.0,
+      "production_prev_raw": "9300",
+      "production_latest_raw": "9000",
+      "reserves_raw": "27000",
+      "note": null
+    },
+    {
+      "country": "Zimbabwe",
+      "production_prev_year": 1600.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 140000.0,
+      "production_prev_raw": "1600",
+      "production_latest_raw": "2000",
+      "reserves_raw": "140000",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 3000.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3000",
+      "production_latest_raw": "3000",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 49600.0,
+      "production_latest_year": 51000.0,
+      "capacity": null,
+      "reserves": 1200000.0,
+      "production_prev_raw": "49600",
+      "production_latest_raw": "51000",
+      "reserves_raw": ">1,200,000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Secondary production is based on reported receipts of all types of stainless-steel scrap.",
+    "2": "Includes chromium chemicals, chromium metal, chromite ores, ferrochromium, ferrosilicon chromium, and stainless-steel products and scrap.",
+    "3": "Defined as change in total inventory from prior yearend inventory. Beginning in 2023, Government stock changes no longer available.",
+    "4": "Defined for 2021–22 as production (from mines and secondary) + imports – exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "5": "Source: Argus Media group, Argus Non-Ferrous Markets.",
+    "6": "Excludes ferrosilicon chromium.",
+    "7": "Defined for 2021–22 as imports – exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "8": "Chromium-containing scrap includes chromium metal scrap and stainless-steel scrap.",
+    "9": "Includes Hong Kong.",
+    "10": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "11": "High-carbon and low-carbon ferrochromium, combined.",
+    "12": "Mine production and ore reserves are reported in gross weight.",
+    "13": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "14": "Reserves for Kazakhstan are likely based on the State Committee of the Russian Federation (GKZ) classification system A+B+C1+C2, where A reserves are well established, B reserves have been explored, and C1+C2 reserves are less explored and have lower confidence levels. The reference for Kazakhstan’s reserves did not provide data for A reserves. C2 reserves were excluded here."
+  }
+}

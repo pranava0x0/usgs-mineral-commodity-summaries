@@ -1,0 +1,513 @@
+{
+  "slug": "magnesium",
+  "name": "Magnesium",
+  "symbol": "Mg",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-magnesium-metal.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "33466d52d8273b40b198672a9b80b75032cf2d1a660d0f670718954b8fa62177",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons unless otherwise specified)",
+  "price_unit_note": "Price, annual average",
+  "price_footnote_text": "Source: S&P Global Platts Metals Week.",
+  "domestic_use_summary": "One company in Utah had a smelter to recover primary magnesium from brines from the Great Salt Lake in Utah by an electrolytic process but production was reported to have stopped in 2022. Secondary magnesium was recovered from scrap at smelters that produced magnesium ingot and castings and from aluminum alloy scrap at secondary aluminum smelters. In 2025, an estimated 69% of primary magnesium consumption was used in castings, principally for the automotive industry. Aluminum-base alloys that were used for packaging, transportation, and other applications accounted for an estimated 15% of consumption; desulfurization of iron and steel, 9%; and all other uses, 7%. About 58% of secondary magnesium was estimated to be used in aluminum alloys, and about 42% was consumed for structural uses.",
+  "events_trends_summary": "In September 2025, the operator of the only U.S. primary magnesium smelter located in Utah filed for Chapter 11 bankruptcy protection. Production decreased significantly in September 2021 after failures of critical equipment used in the production of magnesium, with only limited production which ceased in 2022. After primary production of magnesium stopped, production was limited to deicing products, dust suppressants, and sodium chloride from stockpiles. MAGNESIUM METAL U.S. Geological Survey, Mineral Commodity Summaries, February 2026 Magnesium prices in the United States decreased in April but remained stable through the end of 2025. Average U.S. import prices started the year at $3.25 per pound and decreased to $3.13 per pound the beginning of April and remained at that price through November. The price decrease was potentially attributable to sufficient inventory and decreased demand for primary magnesium, with secondary magnesium substituting part of that consumption. Based on domestic import data for the year through August, imports of magnesium metal (99.8% purity) decreased by 27% compared with those in the same period in 2024. Conversely, imports of magnesium alloys increased by 37% and imports of waste and scrap increased by 48% compared with those for the same period in 2024. In 2025, magnesium prices in Europe gradually fluctuated throughout the year. Prices in Europe started the year with a range of $2,300 to $2,410 per ton, increased to a range of $2,550 to $2,650 per ton in the third quarter, and decreased to $2,450 to $2,550 at the end of November. The price fluctuations were attributed to closures related to ongoing maintenance and decreased producer inventories in China. The 2025 annual average price range for magnesium in Europe was estimated to be 13% less than that in 2024. A company based in California continued the development of a pilot plant to produce magnesium metal from brines. In February 2024, the U.S. Department of War (DOW) awarded $19.6 million in financing to the company through the Defense Production Act, Title III, program. In July 2025, the company produced a sample of metal that was confirmed by the DOW to have met the purity target for the project on a pilot scale. In December, the company announced plans to construct a commercial phase 1 plant in southwestern Arkansas.",
+  "world_resources_summary": "Resources from which magnesium may be recovered range from large to virtually unlimited and are globally widespread. Resources of dolomite, serpentine, and magnesium-bearing evaporite minerals are enormous. Magnesium-bearing brines are estimated to constitute a resource in the billions of tons, and magnesium could be recovered from seawater along world coastlines.",
+  "substitutes_summary": "Aluminum and zinc may substitute for magnesium in castings and wrought products. The relatively light weight of magnesium is an advantage over aluminum and zinc in castings and wrought products in most applications; however, its high cost is a disadvantage relative to these substitutes. For iron and steel desulfurization, calcium carbide may be used instead of magnesium. Magnesium is preferred to calcium carbide for desulfurization of iron and steel because calcium carbide produces acetylene in the presence of water.",
+  "recycling_summary": "In 2025, about 26,000 tons of secondary magnesium was recovered from old scrap and 82,000 tons was recovered from new scrap. Aluminum-base alloys accounted for about 53% of the secondary magnesium recovered, and magnesium-based castings, ingot, and other materials accounted for about 47%.",
+  "salient_stats": [
+    {
+      "label": "Primary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Secondary (new and old scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 103.0,
+        "2022": 115.0,
+        "2023": 108.0,
+        "2024": 109.0,
+        "2025e": 110.0
+      },
+      "raw_values": {
+        "2021": "103",
+        "2022": "115",
+        "2023": "108",
+        "2024": "109",
+        "2025e": "110"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 50.0,
+        "2022": 107.0,
+        "2023": 93.0,
+        "2024": 70.0,
+        "2025e": 82.0
+      },
+      "raw_values": {
+        "2021": "50",
+        "2022": "107",
+        "2023": "93",
+        "2024": "70",
+        "2025e": "82"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 10.0,
+        "2022": 9.0,
+        "2023": 5.0,
+        "2024": 5.0,
+        "2025e": 3.0
+      },
+      "raw_values": {
+        "2021": "10",
+        "2022": "9",
+        "2023": "5",
+        "2024": "5",
+        "2025e": "3"
+      }
+    },
+    {
+      "label": "Reported, primary",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 48.0,
+        "2022": 50.0,
+        "2023": 53.0,
+        "2024": 46.0,
+        "2025e": 40.0
+      },
+      "raw_values": {
+        "2021": "48",
+        "2022": "50",
+        "2023": "53",
+        "2024": "46",
+        "2025e": "40"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "2",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "U.S. spot Western, dollars per pound",
+      "footnote": null,
+      "section": "Price, annual average",
+      "subsection": null,
+      "values": {
+        "2021": 3.53,
+        "2022": 7.59,
+        "2023": 4.98,
+        "2024": 3.52,
+        "2025e": 3.2
+      },
+      "raw_values": {
+        "2021": "3.53",
+        "2022": "7.59",
+        "2023": "4.98",
+        "2024": "3.52",
+        "2025e": "3.20"
+      }
+    },
+    {
+      "label": "European free market, dollars per metric ton",
+      "footnote": null,
+      "section": "Price, annual average",
+      "subsection": null,
+      "values": {
+        "2021": 5011.0,
+        "2022": 5206.0,
+        "2023": 3240.0,
+        "2024": 2850.0,
+        "2025e": 2500.0
+      },
+      "raw_values": {
+        "2021": "5011",
+        "2022": "5206",
+        "2023": "3240",
+        "2024": "2850",
+        "2025e": "2500"
+      }
+    },
+    {
+      "label": "Stocks, producer, yearend",
+      "footnote": null,
+      "section": "Stocks, producer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Employment, number",
+      "footnote": null,
+      "section": "Employment, number",
+      "subsection": null,
+      "values": {
+        "2021": 400.0,
+        "2022": 400.0,
+        "2023": 200.0,
+        "2024": 200.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "400",
+        "2022": "400",
+        "2023": "200",
+        "2024": "200",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 25.0,
+        "2022": 75.0,
+        "2023": 75.0,
+        "2024": 50.0,
+        "2025e": 75.0
+      },
+      "raw_values": {
+        "2021": ">25",
+        "2022": ">75",
+        "2023": ">75",
+        "2024": ">50",
+        "2025e": ">75"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "U.S. spot Western, dollars per pound",
+      "unit_note": "Price, annual average",
+      "values": {
+        "2021": 3.53,
+        "2022": 7.59,
+        "2023": 4.98,
+        "2024": 3.52,
+        "2025e": 3.2
+      },
+      "raw_values": {
+        "2021": "3.53",
+        "2022": "7.59",
+        "2023": "4.98",
+        "2024": "3.52",
+        "2025e": "3.20"
+      }
+    },
+    {
+      "form": "European free market, dollars per metric ton",
+      "unit_note": "Price, annual average",
+      "values": {
+        "2021": 5011.0,
+        "2022": 5206.0,
+        "2023": 3240.0,
+        "2024": 2850.0,
+        "2025e": 2500.0
+      },
+      "raw_values": {
+        "2021": "5011",
+        "2022": "5206",
+        "2023": "3240",
+        "2024": "2850",
+        "2025e": "2500"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": 110.0,
+  "imports_total_latest": 82.0,
+  "exports_total_latest": 3.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 3.2,
+  "net_import_reliance_pct_latest": 75.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": ">75",
+    "apparent_consumption": "W"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Magnesium alloys (magnesium content)",
+      "countries": [
+        {
+          "country": "Czechia",
+          "share_pct": 26.0
+        },
+        {
+          "country": "Republic of Korea",
+          "share_pct": 20.0
+        },
+        {
+          "country": "Israel",
+          "share_pct": 11.0
+        },
+        {
+          "country": "Taiwan",
+          "share_pct": 11.0
+        },
+        {
+          "country": "other",
+          "share_pct": 32.0
+        }
+      ]
+    },
+    {
+      "category": "Sheet, powder, and other (magnesium content)",
+      "countries": [
+        {
+          "country": "Mexico",
+          "share_pct": 30.0
+        },
+        {
+          "country": "Austria",
+          "share_pct": 23.0
+        },
+        {
+          "country": "China",
+          "share_pct": 17.0
+        },
+        {
+          "country": "Taiwan",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 21.0
+        }
+      ]
+    },
+    {
+      "category": "Scrap",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 36.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 15.0
+        },
+        {
+          "country": "China",
+          "share_pct": 14.0
+        },
+        {
+          "country": "India",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 27.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 15.0
+        },
+        {
+          "country": "Turkey",
+          "share_pct": 11.0
+        },
+        {
+          "country": "Czechia",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 45.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Primary Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 20.0,
+      "production_latest_year": 20.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "20",
+      "production_latest_raw": "20",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 953.0,
+      "production_latest_year": 950.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "953",
+      "production_latest_raw": "950",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "Iran",
+      "production_prev_year": 5.0,
+      "production_latest_year": 5.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "5",
+      "production_latest_raw": "5",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Israel",
+      "production_prev_year": 17.0,
+      "production_latest_year": 20.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "17",
+      "production_latest_raw": "20",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 15.0,
+      "production_latest_year": 13.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "15",
+      "production_latest_raw": "13",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 59.0,
+      "production_latest_year": 60.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "59",
+      "production_latest_raw": "60",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 15.0,
+      "production_latest_year": 15.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "15",
+      "production_latest_raw": "15",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 1080.0,
+      "production_latest_year": 1100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1080",
+      "production_latest_raw": "1100",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+    "1": "See also the Magnesium Compounds chapter.",
+    "2": "Defined as primary production + secondary production from old scrap + imports – exports ± adjustments for industry stock changes.",
+    "3": "Source: S&P Global Platts Metals Week.",
+    "4": "Defined as imports – exports ± adjustments for industry stock changes.",
+    "5": "Includes Hong Kong.",
+    "6": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "7": "Reported.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

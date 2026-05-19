@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-indium.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `43782a8086bf24da…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons unless otherwise specified)
@@ -11,12 +11,12 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
+| Mined production (US) | N/A |
 | Primary smelting / refinery (US) | 0 |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 220 |
-| Exports (total) | _Not available_ |
-| Apparent consumption | _Not available_ |
+| Exports (total) | N/A |
+| Apparent consumption | N/A |
 | Price, $ per pound | 370 |
 | Net import reliance (% of apparent consumption) | 100 |
 
@@ -26,7 +26,7 @@
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Production, refinery |  | 0 | 0 | 0 | 0 | 0 |
 | Imports for consumption |  | 158 | 202 | 219 | 220 | 220 |
-| Exports |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Exports |  | NA | NA | NA | NA | NA |
 | Consumption, estimated | 2 | 158 | 202 | 219 | 220 | 220 |
 | U.S. warehouse, free on board | 3 | 223 | 250 | 244 | 351 | 370 |
 | Rotterdam, duties unpaid | 4 | 217 | 252 | 249 | 311 | 380 |
@@ -44,16 +44,16 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | _Not available_ | _Not available_ |  |
-| Belgium | 19 | 19 | _Not available_ | _Not available_ |  |
-| Canada | 40 | 40 | _Not available_ | _Not available_ |  |
-| China | 760 | 760 | _Not available_ | _Not available_ |  |
-| France | 21 | 21 | _Not available_ | _Not available_ |  |
-| Japan | 65 | 65 | _Not available_ | _Not available_ |  |
-| Korea, Republic of | 180 | 180 | _Not available_ | _Not available_ |  |
-| Russia | 5 | 5 | _Not available_ | _Not available_ |  |
-| Uzbekistan | 1 | 1 | _Not available_ | _Not available_ |  |
-| World total (rounded) | 1,090 | 1,100 | _Not available_ | _Not available_ |  |
+| United States | 0 | 0 | N/A | N/A |  |
+| Belgium | 19 | 19 | N/A | N/A |  |
+| Canada | 40 | 40 | N/A | N/A |  |
+| China | 760 | 760 | N/A | N/A |  |
+| France | 21 | 21 | N/A | N/A |  |
+| Japan | 65 | 65 | N/A | N/A |  |
+| Korea, Republic of | 180 | 180 | N/A | N/A |  |
+| Russia | 5 | 5 | N/A | N/A |  |
+| Uzbekistan | 1 | 1 | N/A | N/A |  |
+| World total (rounded) | 1,090 | 1,100 | N/A | N/A |  |
 
 ## Footnotes (verbatim)
 

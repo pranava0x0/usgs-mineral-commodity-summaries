@@ -1,0 +1,673 @@
+{
+  "slug": "vanadium",
+  "name": "Vanadium",
+  "symbol": "V",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-vanadium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "8ffc21c8a35caeec5ae3b12298b14aa20dbd1cc618b0c9d388ab1f5010c321ef",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, vanadium content, unless otherwise specified)",
+  "price_unit_note": "Price, average, vanadium pentoxide, dollars per pound",
+  "price_footnote_text": "Chinese annual average VOprices (98% VO content). Source: Argus Media, Argus Non-Ferrous Markets.",
+  "domestic_use_summary": "Vanadium production in Utah from the mining of uraniferous sandstones on the Colorado Plateau ceased in early 2020 and was not restarted in 2025. Secondary vanadium production continued in Arkansas, Delaware, Ohio, Pennsylvania, and Texas, where processed waste materials (petroleum residues, spent catalysts, and utility ash) were used to produce ferrovanadium, vanadium-bearing chemicals or specialty alloys, and vanadium pentoxide. Estimated U.S. apparent consumption of vanadium in 2025 increased by 2% from that in 2024. Metallurgical use, primarily as an alloying agent for iron and steel, accounted for more than 90% of domestic reported vanadium consumption in 2025. Of the other uses for vanadium, the major nonmetallurgical use was in catalysts to produce maleic anhydride and sulfuric acid.",
+  "events_trends_summary": "The estimated average Chinese vanadium pentoxide (VO) price (98% VO content) in 2025 was $5.02 per pound compared with $5.44 in 2024. The estimated United States ferrovanadium price (78% to 82% vanadium content) was $14.14 per pound in 2025 compared with $13.05 in 2024. Like most ferroalloys, vanadium is largely dependent on the market characteristics of the steel industry, particularly the Chinese steel sector, which plays a central role in global steel production. In 2025, China continued to be the world’s top vanadium producer, with most of its production originating as a coproduct from vanadiferous titanomagnetite ores processed during steelmaking. Executive Order 14257, effective April 5, 2025, established a 10% baseline reciprocal tariff on most imports, with higher rates for select countries. Executive Order 14323 increased tariffs from 10% to 50%, effective August 6, 2025, on many imports from Brazil, including high-purity vanadium products but not ferrovanadium. A major producer and supplier of vanadium in Brazil sought an exemption after experiencing delays and defaults on its high-purity vanadium contracts, citing the importance of its high-purity vanadium for U.S. aerospace and defense applications. Imports for the year were estimated based on data through July 2025 and may not fully reflect the effects of the tariffs. Vanadium redox flow batteries (VRFBs) continued to be used in large-scale energy storage systems in 2025, owing to their operational safety, long cycle life, and suitability for medium- to long-duration use. Installations increased worldwide, supported by renewable energy growth and government policies. However, high capital costs and limited availability of high-purity vanadium feedstock remained key challenges. VRFBs also faced competition from a range of alternative battery chemistries being developed for similar grid-scale storage applications.",
+  "world_resources_summary": "World resources of vanadium exceed 63 million tons. Vanadium occurs in deposits of phosphate rock, titaniferous magnetite, and uraniferous sandstone and siltstone, in which it constitutes less than 2% of the host rock. Significant quantities are also present in bauxite and carboniferous materials, such as coal, crude oil, oil shale, and tar sands. Because vanadium is typically recovered as a byproduct or coproduct, demonstrated world resources of the element are not fully indicative of available supplies.",
+  "substitutes_summary": "Steels containing various combinations of other alloying elements can be substituted for steels containing vanadium. Certain metals, such as manganese, molybdenum, niobium (columbium), titanium, and tungsten, are to some degree interchangeable with vanadium as alloying elements in steel. Platinum and nickel can replace vanadium compounds as catalysts in some chemical processes. Currently, no acceptable substitute for vanadium is available for use in aerospace titanium alloys.",
+  "recycling_summary": "Recycling of vanadium is mainly associated with reprocessing vanadium catalysts into new catalysts. The range in vanadium content in spent catalysts varies depending on the crude oil feedstock and the uncertainty associated with the quantity of vanadium recycled from spent chemical process catalysts was significant.",
+  "salient_stats": [
+    {
+      "label": "Production from primary ore and concentrate",
+      "footnote": null,
+      "section": "Production from primary ore and concentrate",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Production from ash, residues, and spent catalysts",
+      "footnote": null,
+      "section": "Production from ash, residues, and spent catalysts",
+      "subsection": null,
+      "values": {
+        "2021": 3200.0,
+        "2022": 4400.0,
+        "2023": 6500.0,
+        "2024": 6800.0,
+        "2025e": 7500.0
+      },
+      "raw_values": {
+        "2021": "3200",
+        "2022": "4400",
+        "2023": "6500",
+        "2024": "6800",
+        "2025e": "7500"
+      }
+    },
+    {
+      "label": "Aluminum-vanadium master alloy",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 35.0,
+        "2022": 104.0,
+        "2023": 221.0,
+        "2024": 67.0,
+        "2025e": 10.0
+      },
+      "raw_values": {
+        "2021": "35",
+        "2022": "104",
+        "2023": "221",
+        "2024": "67",
+        "2025e": "10"
+      }
+    },
+    {
+      "label": "Ash and residues",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1680.0,
+        "2022": 2240.0,
+        "2023": 3140.0,
+        "2024": 2180.0,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1680",
+        "2022": "2240",
+        "2023": "3140",
+        "2024": "2180",
+        "2025e": "1200"
+      }
+    },
+    {
+      "label": "Ferrovanadium",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 2170.0,
+        "2022": 2650.0,
+        "2023": 2330.0,
+        "2024": 1820.0,
+        "2025e": 2200.0
+      },
+      "raw_values": {
+        "2021": "2170",
+        "2022": "2650",
+        "2023": "2330",
+        "2024": "1820",
+        "2025e": "2200"
+      }
+    },
+    {
+      "label": "Oxides and hydroxides, other",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 69.0,
+        "2022": 222.0,
+        "2023": 151.0,
+        "2024": 139.0,
+        "2025e": 460.0
+      },
+      "raw_values": {
+        "2021": "69",
+        "2022": "222",
+        "2023": "151",
+        "2024": "139",
+        "2025e": "460"
+      }
+    },
+    {
+      "label": "Vanadium chemicals",
+      "footnote": "3",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 846.0,
+        "2022": 722.0,
+        "2023": 430.0,
+        "2024": 528.0,
+        "2025e": 560.0
+      },
+      "raw_values": {
+        "2021": "846",
+        "2022": "722",
+        "2023": "430",
+        "2024": "528",
+        "2025e": "560"
+      }
+    },
+    {
+      "label": "Vanadium metal",
+      "footnote": "4",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1.0,
+        "2022": 28.0,
+        "2023": 20.0,
+        "2024": 9.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "1",
+        "2022": "28",
+        "2023": "20",
+        "2024": "9",
+        "2025e": "30"
+      }
+    },
+    {
+      "label": "Vanadium ores and concentrates",
+      "footnote": "1",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 4.0,
+        "2022": 492.0,
+        "2023": 674.0,
+        "2024": 395.0,
+        "2025e": 90.0
+      },
+      "raw_values": {
+        "2021": "4",
+        "2022": "492",
+        "2023": "674",
+        "2024": "395",
+        "2025e": "90"
+      }
+    },
+    {
+      "label": "Vanadium pentoxide",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1710.0,
+        "2022": 1980.0,
+        "2023": 2320.0,
+        "2024": 2360.0,
+        "2025e": 1800.0
+      },
+      "raw_values": {
+        "2021": "1710",
+        "2022": "1980",
+        "2023": "2320",
+        "2024": "2360",
+        "2025e": "1800"
+      }
+    },
+    {
+      "label": "Aluminum-vanadium master alloy",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 72.0,
+        "2022": 28.0,
+        "2023": 36.0,
+        "2024": 83.0,
+        "2025e": 22.0
+      },
+      "raw_values": {
+        "2021": "72",
+        "2022": "28",
+        "2023": "36",
+        "2024": "83",
+        "2025e": "22"
+      }
+    },
+    {
+      "label": "Ash and residues",
+      "footnote": "1",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 930.0,
+        "2022": 1130.0,
+        "2023": 905.0,
+        "2024": 955.0,
+        "2025e": 580.0
+      },
+      "raw_values": {
+        "2021": "930",
+        "2022": "1130",
+        "2023": "905",
+        "2024": "955",
+        "2025e": "580"
+      }
+    },
+    {
+      "label": "Ferrovanadium",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 173.0,
+        "2022": 154.0,
+        "2023": 159.0,
+        "2024": 68.0,
+        "2025e": 10.0
+      },
+      "raw_values": {
+        "2021": "173",
+        "2022": "154",
+        "2023": "159",
+        "2024": "68",
+        "2025e": "10"
+      }
+    },
+    {
+      "label": "Oxides and hydroxides, other",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 235.0,
+        "2022": 309.0,
+        "2023": 142.0,
+        "2024": 404.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "235",
+        "2022": "309",
+        "2023": "142",
+        "2024": "404",
+        "2025e": "380"
+      }
+    },
+    {
+      "label": "Vanadium metal",
+      "footnote": "4",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 4.0,
+        "2022": 8.0,
+        "2023": 38.0,
+        "2024": 3.0,
+        "2025e": 2.0
+      },
+      "raw_values": {
+        "2021": "4",
+        "2022": "8",
+        "2023": "38",
+        "2024": "3",
+        "2025e": "2"
+      }
+    },
+    {
+      "label": "Vanadium ores and concentrates",
+      "footnote": "1",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 81.0,
+        "2022": 185.0,
+        "2023": 160.0,
+        "2024": 17.0,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "81",
+        "2022": "185",
+        "2023": "160",
+        "2024": "17",
+        "2025e": "20"
+      }
+    },
+    {
+      "label": "Vanadium pentoxide",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 17.0,
+        "2022": 143.0,
+        "2023": 28.0,
+        "2024": 93.0,
+        "2025e": 140.0
+      },
+      "raw_values": {
+        "2021": "17",
+        "2022": "143",
+        "2023": "28",
+        "2024": "93",
+        "2025e": "140"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "5",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 8200.0,
+        "2022": 10900.0,
+        "2023": 14300.0,
+        "2024": 12700.0,
+        "2025e": 13000.0
+      },
+      "raw_values": {
+        "2021": "8200",
+        "2022": "10900",
+        "2023": "14300",
+        "2024": "12700",
+        "2025e": "13000"
+      }
+    },
+    {
+      "label": "Reported",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 8030.0,
+        "2022": 7510.0,
+        "2023": 8000.0,
+        "2024": 8500.0,
+        "2025e": 9000.0
+      },
+      "raw_values": {
+        "2021": "8030",
+        "2022": "7510",
+        "2023": "8000",
+        "2024": "8500",
+        "2025e": "9000"
+      }
+    },
+    {
+      "label": "Price, average, vanadium pentoxide, dollars per pound",
+      "footnote": null,
+      "section": "Price, average, vanadium pentoxide, dollars per pound",
+      "subsection": null,
+      "values": {
+        "2021": 8.17,
+        "2022": 9.29,
+        "2023": 7.5,
+        "2024": 5.44,
+        "2025e": 5.02
+      },
+      "raw_values": {
+        "2021": "8.17",
+        "2022": "9.29",
+        "2023": "7.50",
+        "2024": "5.44",
+        "2025e": "5.02"
+      }
+    },
+    {
+      "label": "Stocks, yearend",
+      "footnote": "7",
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 271.0,
+        "2022": 248.0,
+        "2023": 232.0,
+        "2024": 230.0,
+        "2025e": 240.0
+      },
+      "raw_values": {
+        "2021": "271",
+        "2022": "248",
+        "2023": "232",
+        "2024": "230",
+        "2025e": "240"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 61.0,
+        "2022": 60.0,
+        "2023": 55.0,
+        "2024": 46.0,
+        "2025e": 41.0
+      },
+      "raw_values": {
+        "2021": "61",
+        "2022": "60",
+        "2023": "55",
+        "2024": "46",
+        "2025e": "41"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average, vanadium pentoxide, dollars per pound",
+      "unit_note": "Price, average, vanadium pentoxide, dollars per pound",
+      "values": {
+        "2021": 8.17,
+        "2022": 9.29,
+        "2023": 7.5,
+        "2024": 5.44,
+        "2025e": 5.02
+      },
+      "raw_values": {
+        "2021": "8.17",
+        "2022": "9.29",
+        "2023": "7.50",
+        "2024": "5.44",
+        "2025e": "5.02"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 0.0,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 6350.0,
+  "exports_total_latest": 1154.0,
+  "apparent_consumption_latest": 13000.0,
+  "price_usd_per_pound_latest": 5.02,
+  "net_import_reliance_pct_latest": 41.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Ferrovanadium",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 50.0
+        },
+        {
+          "country": "Austria",
+          "share_pct": 35.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 6.0
+        },
+        {
+          "country": "Latvia",
+          "share_pct": 4.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    },
+    {
+      "category": "Vanadium pentoxide",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 47.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 43.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 4.0
+        }
+      ]
+    },
+    {
+      "category": "Total",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 34.0
+        },
+        {
+          "country": "Brazil",
+          "share_pct": 13.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Austria",
+          "share_pct": 10.0
+        },
+        {
+          "country": "other",
+          "share_pct": 30.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "2024",
+      "production_prev_year": 2025.0,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2025",
+      "production_latest_raw": "(thousand metric tons)",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 50.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "50",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 10000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "10000",
+      "note": "footnote 11"
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 5190.0,
+      "production_latest_year": 5300.0,
+      "capacity": null,
+      "reserves": 94.0,
+      "production_prev_raw": "5190",
+      "production_latest_raw": "5300",
+      "reserves_raw": "94",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 84000.0,
+      "production_latest_year": 82000.0,
+      "capacity": null,
+      "reserves": 5800.0,
+      "production_prev_raw": "84000",
+      "production_latest_raw": "82000",
+      "reserves_raw": "5800",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 21000.0,
+      "production_latest_year": 21000.0,
+      "capacity": null,
+      "reserves": 5000.0,
+      "production_prev_raw": "21000",
+      "production_latest_raw": "21000",
+      "reserves_raw": "5000",
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 8050.0,
+      "production_latest_year": 5000.0,
+      "capacity": null,
+      "reserves": 520.0,
+      "production_prev_raw": "8050",
+      "production_latest_raw": "5000",
+      "reserves_raw": "520",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 118000.0,
+      "production_latest_year": 110000.0,
+      "capacity": null,
+      "reserves": 21000.0,
+      "production_prev_raw": "118000",
+      "production_latest_raw": "110000",
+      "reserves_raw": "21000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. — Zero.",
+    "1": "Reported by the U.S. Census Bureau as kilograms of VO. To convert VOcontent to vanadium content, multiply by 0.56.",
+    "2": "Includes estimates for data suppressed by the U.S. Census Bureau in the years 2021 through 2025.",
+    "3": "Includes Harmonized Tariff Schedule of the United States codes for chloride oxides and hydroxides of vanadium (2827.49.1000), hydrides and nitrides of vanadium (2850.00.2000), vanadates (2841.90.1000), vanadium chlorides (2827.39.1000), and vanadium sulfates (2833.29.3000).",
+    "4": "Includes waste and scrap.",
+    "5": "Defined as primary production + secondary production + imports – exports ± adjustments for industry stock changes.",
+    "6": "Chinese annual average VOprices (98% VO content). Source: Argus Media, Argus Non-Ferrous Markets.",
+    "7": "Includes ferrovanadium, vanadium-aluminum alloy, other vanadium alloys, vanadium metal, vanadium pentoxide, and other specialty chemicals.",
+    "8": "Defined as imports – exports ± adjustments for industry stock changes.",
+    "9": "Aluminum-vanadium master alloy consisting of 35% aluminum and 64.5% vanadium and is the main master alloy for the vanadium industry. Unwrought aluminum-vanadium master alloy (Harmonized Tariff Schedule of the United States code 7601.20.9030) was not included.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "11": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 2.3 million tons."
+  }
+}

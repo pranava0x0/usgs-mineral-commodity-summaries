@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-tungsten.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `c33271f3529cc546…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons, tungsten content, unless otherwise specified)
@@ -12,11 +12,11 @@
 | field | value |
 | --- | --- |
 | Mined production (US) | 0 |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Primary smelting / refinery (US) | N/A |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 11,700 |
 | Exports (total) | 4,700 |
-| Apparent consumption | _Not available_ |
+| Apparent consumption | N/A |
 | Price, $ per pound | 380 |
 | Net import reliance (% of apparent consumption) | 50 |
 
@@ -25,18 +25,18 @@
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Mine |  | 0 | 0 | 0 | 0 | 0 |
-| Secondary |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Secondary |  | W | W | W | W | W |
 | Ores and concentrates |  | 1,600 | 2,130 | 1,640 | 1,550 | 1,700 |
 | Other forms | 1 | 10,500 | 12,200 | 10,000 | 8,730 | 10,000 |
 | Ores and concentrates |  | 441 | 614 | 1,510 | 1,410 | 1,400 |
 | Other forms | 2 | 2,970 | 3,680 | 3,180 | 3,480 | 3,300 |
-| Concentrate |  | 1,030 | 689 | _Not available_ | _Not available_ | _Not available_ |
-| Other forms |  | 93 | 0 | _Not available_ | _Not available_ | _Not available_ |
-| Reported, concentrate |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
-| Apparent, all forms |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Concentrate |  | 1,030 | 689 | NA | NA | NA |
+| Other forms |  | 93 | 0 | NA | NA | NA |
+| Reported, concentrate |  | W | W | W | W | W |
+| Apparent, all forms |  | W | W | W | W | W |
 | Price, concentrate, average in-warehouse Rotterdam, dollars per dry metric ton unit of tungsten trioxide | 6 | 225 | 275 | 258 | 252 | 380 |
-| Stocks, industry, concentrate and other forms, yearend |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
-| Net import reliance as a percentage of apparent consumption |  | 50 | 50 | 50 | 50 | 50 |
+| Stocks, industry, concentrate and other forms, yearend |  | W | W | W | W | W |
+| Net import reliance as a percentage of apparent consumption |  | >50 | >50 | >50 | >50 | >50 |
 
 ## Import Sources (2021-24)
 
@@ -51,20 +51,20 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | _Not available_ | _Not available_ |  |
-| Australia | 920 | 1,000 | _Not available_ | 570,000 | footnote 11 |
-| Austria | 840 | 840 | _Not available_ | 10,000 |  |
-| Bolivia | 1,700 | 1,700 | _Not available_ | _Not available_ |  |
-| China | 67,000 | 67,000 | _Not available_ | 2,500,000 |  |
-| Kazakhstan | 0 | 2,400 | _Not available_ | _Not available_ |  |
-| Korea, North | 1,900 | 2,000 | _Not available_ | 29,000 |  |
-| Portugal | 650 | 700 | _Not available_ | 3,400 |  |
-| Russia | 1,500 | 2,000 | _Not available_ | 400,000 |  |
-| Rwanda | 1,300 | 1,300 | _Not available_ | _Not available_ |  |
-| Spain | 700 | 800 | _Not available_ | 66,000 |  |
-| Vietnam | 3,400 | 3,000 | _Not available_ | 170,000 |  |
-| Other countries | 1,700 | 2,400 | _Not available_ | 950,000 |  |
-| World total (rounded) | 82,000 | 85,000 | _Not available_ | 4,700,000 |  |
+| United States | 0 | 0 | N/A | NA |  |
+| Australia | 920 | 1,000 | N/A | 570,000 | footnote 11 |
+| Austria | 840 | 840 | N/A | 10,000 |  |
+| Bolivia | 1,700 | 1,700 | N/A | NA |  |
+| China | 67,000 | 67,000 | N/A | 2,500,000 |  |
+| Kazakhstan | 0 | 2,400 | N/A | NA |  |
+| Korea, North | 1,900 | 2,000 | N/A | 29,000 |  |
+| Portugal | 650 | 700 | N/A | 3,400 |  |
+| Russia | 1,500 | 2,000 | N/A | 400,000 |  |
+| Rwanda | 1,300 | 1,300 | N/A | NA |  |
+| Spain | 700 | 800 | N/A | 66,000 |  |
+| Vietnam | 3,400 | 3,000 | N/A | 170,000 |  |
+| Other countries | 1,700 | 2,400 | N/A | 950,000 |  |
+| World total (rounded) | 82,000 | 85,000 | N/A | >4,700,000 |  |
 
 ## Footnotes (verbatim)
 

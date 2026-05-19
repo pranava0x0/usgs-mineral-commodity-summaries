@@ -2,10 +2,12 @@
   "slug": "scandium",
   "name": "Scandium",
   "symbol": "Sc",
+  "kind": "primary",
+  "parent_slug": null,
   "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-scandium.pdf",
   "edition": "MCS 2026",
   "edition_date": "2026-02",
-  "captured_at": "2026-05-18",
+  "captured_at": "2026-05-19",
   "pdf_sha256": "b68e156704a9f38a5f52cd30890901c3cdfe585bbcb7720b5e24238f0824d558",
   "pdf_page_count": 2,
   "units_note": "(Data in metric tons, scandium oxide equivalent, unless otherwise specified)",
@@ -188,6 +190,10 @@
     {
       "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
       "share_pct": 89.0
+    },
+    {
+      "country": "China",
+      "share_pct": 11.0
     }
   ],
   "import_sources_by_category": [
@@ -197,6 +203,10 @@
         {
           "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
           "share_pct": 89.0
+        },
+        {
+          "country": "China",
+          "share_pct": 11.0
         }
       ]
     }

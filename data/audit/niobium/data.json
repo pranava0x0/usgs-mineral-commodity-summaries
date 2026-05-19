@@ -1,0 +1,390 @@
+{
+  "slug": "niobium",
+  "name": "Niobium (columbium)",
+  "symbol": "Nb",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-niobium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "c4b8bcabd89012891f7473fadceac6c7d76bdcf38df4f0cc02950db8387da72d",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, niobium content, unless otherwise specified)",
+  "price_unit_note": "Price, average unit value, ferroniobium, dollars per kilogram",
+  "price_footnote_text": null,
+  "domestic_use_summary": "Significant U.S. niobium mine production has not been reported since 1959. Companies in the United States produced niobium-containing materials from imported niobium concentrates, oxides, and ferroniobium. Niobium was consumed mostly in the form of ferroniobium by the steel industry and as niobium alloys and metal by the aerospace industry. Major end-use distribution of domestic niobium consumption was estimated as follows: steels, about 77%, and superalloys, about 23%. The estimated value of niobium imports was $525 million.",
+  "events_trends_summary": "In 2025, U.S. niobium apparent consumption (measured in niobium content) was estimated to be 9,900 tons, a 6% decrease from that in 2024. One domestic company developing its niobium, scandium, and titanium project in Nebraska continued to secure financing in 2025. In August, the U.S. Department of War awarded $10 million to the company to support the establishment of a vertically integrated domestic supply chain for scandium alloy production. Although the award was directed toward scandium alloy supply chain development, advancements to the project were also expected to support development of the company’s niobium and titanium operations. Once operational, the site would be the only niobium mine and primary niobium-processing facility in the United States. Brazil continued to be the world’s leading niobium producer, accounting for approximately 93% of global production, followed by Canada with 5%. According to international trade statistics under the Harmonized System code 7202.93 (ferroniobium), Brazil’s total exports in 2024 were 92,000 tons and were 63,200 tons from January through August 2025. Most of Brazil’s exports went to China (49%), followed by the Netherlands (17%), Singapore (9%), and the Republic of Korea and the United States (8% each).",
+  "world_resources_summary": "World resources of niobium are more than adequate to supply projected needs. Most of the world’s identified resources of niobium occur as pyrochlore in carbonatite (igneous rocks that contain more than 50%-by-volume carbonate minerals) deposits and are outside the United States.",
+  "substitutes_summary": "The following materials can be substituted for niobium, but a performance loss or higher cost may ensue: ceramic matrix composites, molybdenum, tantalum, and tungsten in high-temperature (superalloy) applications; molybdenum, tantalum, and titanium as alloying elements in stainless and high-strength steels; and molybdenum and vanadium as alloying elements in high-strength low-alloy steels.",
+  "recycling_summary": "Niobium was recycled when niobium-bearing steels and superalloys were recycled; scrap recovery, specifically for niobium content, was negligible. The amount of niobium recycled was not available, but it may have been as much as 20% of apparent consumption.",
+  "salient_stats": [
+    {
+      "label": "Production, mine",
+      "footnote": null,
+      "section": "Production, mine",
+      "subsection": null,
+      "values": {
+        "2021": 0.0,
+        "2022": 0.0,
+        "2023": 0.0,
+        "2024": 0.0,
+        "2025e": 0.0
+      },
+      "raw_values": {
+        "2021": "—",
+        "2022": "—",
+        "2023": "—",
+        "2024": "—",
+        "2025e": "—"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": "1",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 8230.0,
+        "2022": 9110.0,
+        "2023": 10100.0,
+        "2024": 9820.0,
+        "2025e": 10000.0
+      },
+      "raw_values": {
+        "2021": "8230",
+        "2022": "9110",
+        "2023": "10100",
+        "2024": "9820",
+        "2025e": "10000"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "1",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 992.0,
+        "2022": 667.0,
+        "2023": 951.0,
+        "2024": 485.0,
+        "2025e": 420.0
+      },
+      "raw_values": {
+        "2021": "992",
+        "2022": "667",
+        "2023": "951",
+        "2024": "485",
+        "2025e": "420"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "3",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 7240.0,
+        "2022": 8440.0,
+        "2023": 9100.0,
+        "2024": 9340.0,
+        "2025e": 9900.0
+      },
+      "raw_values": {
+        "2021": "7240",
+        "2022": "8440",
+        "2023": "9100",
+        "2024": "9340",
+        "2025e": "9900"
+      }
+    },
+    {
+      "label": "Reported",
+      "footnote": "4",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 6110.0,
+        "2022": 7230.0,
+        "2023": 7110.0,
+        "2024": 6600.0,
+        "2025e": 6700.0
+      },
+      "raw_values": {
+        "2021": "6110",
+        "2022": "7230",
+        "2023": "7110",
+        "2024": "6600",
+        "2025e": "6700"
+      }
+    },
+    {
+      "label": "Price, average unit value, ferroniobium, dollars per kilogram",
+      "footnote": "5",
+      "section": "Price, average unit value, ferroniobium, dollars per kilogram",
+      "subsection": null,
+      "values": {
+        "2021": 21.0,
+        "2022": 25.0,
+        "2023": 25.0,
+        "2024": 26.0,
+        "2025e": 26.0
+      },
+      "raw_values": {
+        "2021": "21",
+        "2022": "25",
+        "2023": "25",
+        "2024": "26",
+        "2025e": "26"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average unit value, ferroniobium, dollars per kilogram",
+      "unit_note": "Price, average unit value, ferroniobium, dollars per kilogram",
+      "values": {
+        "2021": 21.0,
+        "2022": 25.0,
+        "2023": 25.0,
+        "2024": 26.0,
+        "2025e": 26.0
+      },
+      "raw_values": {
+        "2021": "21",
+        "2022": "25",
+        "2023": "25",
+        "2024": "26",
+        "2025e": "26"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 0.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 10000.0,
+  "exports_total_latest": 420.0,
+  "apparent_consumption_latest": 9900.0,
+  "price_usd_per_pound_latest": 26.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Niobium and tantalum ores and concentrates",
+      "countries": [
+        {
+          "country": "Australia",
+          "share_pct": 62.0
+        },
+        {
+          "country": "Congo (Kinshasa)",
+          "share_pct": 9.0
+        },
+        {
+          "country": "Mozambique",
+          "share_pct": 9.0
+        },
+        {
+          "country": "United Arab Emirates",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 15.0
+        }
+      ]
+    },
+    {
+      "category": "Niobium oxide",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 89.0
+        },
+        {
+          "country": "Estonia",
+          "share_pct": 4.0
+        },
+        {
+          "country": "Thailand",
+          "share_pct": 4.0
+        },
+        {
+          "country": "other",
+          "share_pct": 3.0
+        }
+      ]
+    },
+    {
+      "category": "Ferroniobium and niobium metal",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 65.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 31.0
+        },
+        {
+          "country": "other",
+          "share_pct": 4.0
+        }
+      ]
+    },
+    {
+      "category": "Total imports",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 67.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 28.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": 210000.0,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": "210000",
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 104000.0,
+      "production_latest_year": 104000.0,
+      "capacity": null,
+      "reserves": 14000000.0,
+      "production_prev_raw": "104000",
+      "production_latest_raw": "104000",
+      "reserves_raw": "14000000",
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 6900.0,
+      "production_latest_year": 6000.0,
+      "capacity": null,
+      "reserves": 640000.0,
+      "production_prev_raw": "6900",
+      "production_latest_raw": "6000",
+      "reserves_raw": "640000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 44.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": 6500000.0,
+      "production_prev_raw": "44",
+      "production_latest_raw": "40",
+      "reserves_raw": "6500000",
+      "note": null
+    },
+    {
+      "country": "Congo (Kinshasa)",
+      "production_prev_year": 930.0,
+      "production_latest_year": 970.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "930",
+      "production_latest_raw": "970",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 300.0,
+      "production_latest_year": 300.0,
+      "capacity": null,
+      "reserves": 3000.0,
+      "production_prev_raw": "300",
+      "production_latest_raw": "300",
+      "reserves_raw": "3000",
+      "note": null
+    },
+    {
+      "country": "Rwanda",
+      "production_prev_year": 210.0,
+      "production_latest_year": 200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "210",
+      "production_latest_raw": "200",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 160.0,
+      "production_latest_year": 120.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "160",
+      "production_latest_raw": "120",
+      "reserves_raw": "NA",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 112000.0,
+      "production_latest_year": 112000.0,
+      "capacity": null,
+      "reserves": 21000000.0,
+      "production_prev_raw": "112000",
+      "production_latest_raw": "112000",
+      "reserves_raw": ">21,000,000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "Imports and exports include the estimated niobium content of ferroniobium, niobium and tantalum ores and concentrates, niobium oxide, and niobium powders and unwrought metal. Niobium content was estimated assuming the following: 28% niobium oxide (NbO) content in niobium ores and concentrates; 10% NbO content in tantalum ores and concentrates and synthetic concentrates; 100% niobium content in unwrought niobium metal (powders and other); and 65% niobium content in ferroniobium. NbO is 69.904% niobium by weight.",
+    "2": "Defined for 2021–22 as change in total inventory from prior yearend inventory. If negative, increase in inventory. Beginning in 2023, Government stock changes no longer included.",
+    "3": "Defined for 2021–22 as production + imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "4": "Only includes ferroniobium and nickel niobium.",
+    "5": "Unit value is weighted average unit value of gross weight of U.S. ferroniobium trade (imports plus exports).",
+    "6": "This category includes niobium-containing material and other material.",
+    "7": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

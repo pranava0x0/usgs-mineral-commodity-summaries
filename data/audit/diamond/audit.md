@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-diamond.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `b80adb50e11d2d5f…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in million carats unless otherwise specified)
@@ -11,8 +11,8 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
-| Primary smelting / refinery (US) | _Not available_ |
+| Mined production (US) | N/A |
+| Primary smelting / refinery (US) | N/A |
 | Secondary smelting / scrap (US) | 15 |
 | Imports for consumption (total) | 170.35 |
 | Exports (total) | 72.43 |
@@ -57,15 +57,15 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | _Not available_ | _Not available_ |  |
-| Angola | 1 | 1 | _Not available_ | 150 |  |
-| Botswana | 5 | 5 | _Not available_ | 250 |  |
-| Congo (Kinshasa) | 7 | 7 | _Not available_ | 150 |  |
-| Russia | 16 | 16 | _Not available_ | 750 |  |
-| South Africa | 3 | 3 | _Not available_ | 87 |  |
-| Zimbabwe | 5 | 5 | _Not available_ | 56 |  |
-| Other countries | 1 | 1 | _Not available_ | 250 |  |
-| World total (rounded) | 38 | 38 | _Not available_ | 1,700 |  |
+| United States | 0 | 0 | N/A | NA |  |
+| Angola | 1 | 1 | N/A | 150 |  |
+| Botswana | 5 | 5 | N/A | 250 |  |
+| Congo (Kinshasa) | 7 | 7 | N/A | 150 |  |
+| Russia | 16 | 16 | N/A | 750 |  |
+| South Africa | 3 | 3 | N/A | 87 |  |
+| Zimbabwe | 5 | 5 | N/A | 56 |  |
+| Other countries | 1 | 1 | N/A | 250 |  |
+| World total (rounded) | 38 | 38 | N/A | 1,700 |  |
 
 ## Footnotes (verbatim)
 

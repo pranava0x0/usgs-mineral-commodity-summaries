@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-abrasives.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `b905055f426b2cce…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Fused aluminum oxide, silicon carbide, and metallic abrasives)
@@ -11,12 +11,12 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
-| Primary smelting / refinery (US) | _Not available_ |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Mined production (US) | N/A |
+| Primary smelting / refinery (US) | N/A |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 261,000 |
 | Exports (total) | 34,600 |
-| Apparent consumption | _Not available_ |
+| Apparent consumption | N/A |
 | Price, $ per pound | 699 |
 | Net import reliance (% of apparent consumption) | 95 |
 
@@ -41,9 +41,9 @@
 | Fused aluminum oxide, ground and refined |  | 1,290 | 1,560 | 1,380 | 1,440 | 1,500 |
 | Silicon carbide, crude |  | 587 | 1,080 | 905 | 832 | 829 |
 | Metallic abrasives |  | 1,510 | 2,130 | 1,850 | 1,910 | 2,000 |
-| Fused aluminum oxide |  | 95 | 95 | 95 | 95 | 95 |
+| Fused aluminum oxide |  | >95 | >95 | >95 | >95 | >95 |
 | Silicon carbide |  | 76 | 79 | 70 | 72 | 74 |
-| Metallic abrasives |  | 3 | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Metallic abrasives |  | 3 | E | E | E | E |
 
 ## Import Sources (2021-24)
 
@@ -92,20 +92,20 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 60,000 | 60,000 | _Not available_ | _Not available_ |  |
-| Australia | 50,000 | 50,000 | _Not available_ | _Not available_ |  |
-| Austria | 90,000 | 90,000 | _Not available_ | _Not available_ |  |
-| Brazil | 50,000 | 50,000 | _Not available_ | _Not available_ |  |
-| China | 800,000 | 800,000 | _Not available_ | _Not available_ |  |
-| France | 40,000 | 40,000 | _Not available_ | _Not available_ |  |
-| Germany | 80,000 | 80,000 | _Not available_ | _Not available_ |  |
-| India | 40,000 | 40,000 | _Not available_ | _Not available_ |  |
-| Japan | 15,000 | 15,000 | _Not available_ | _Not available_ |  |
-| Mexico | 0 | 0 | _Not available_ | _Not available_ |  |
-| Norway | 0 | 0 | _Not available_ | _Not available_ |  |
-| Venezuela | 0 | 0 | _Not available_ | _Not available_ |  |
-| Other countries | 80,000 | 80,000 | _Not available_ | _Not available_ |  |
-| World total (rounded) | 1,310,000 | 1,300,000 | _Not available_ | _Not available_ |  |
+| United States | 60,000 | 60,000 | N/A | N/A |  |
+| Australia | 50,000 | 50,000 | N/A | N/A |  |
+| Austria | 90,000 | 90,000 | N/A | N/A |  |
+| Brazil | 50,000 | 50,000 | N/A | N/A |  |
+| China | 800,000 | 800,000 | N/A | N/A |  |
+| France | 40,000 | 40,000 | N/A | N/A |  |
+| Germany | 80,000 | 80,000 | N/A | N/A |  |
+| India | 40,000 | 40,000 | N/A | N/A |  |
+| Japan | 15,000 | 15,000 | N/A | N/A |  |
+| Mexico | 0 | 0 | N/A | N/A |  |
+| Norway | 0 | 0 | N/A | N/A |  |
+| Venezuela | 0 | 0 | N/A | N/A |  |
+| Other countries | 80,000 | 80,000 | N/A | N/A |  |
+| World total (rounded) | 1,310,000 | 1,300,000 | N/A | N/A |  |
 
 ## Footnotes (verbatim)
 

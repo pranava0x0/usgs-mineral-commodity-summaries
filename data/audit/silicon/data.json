@@ -1,0 +1,643 @@
+{
+  "slug": "silicon",
+  "name": "Silicon",
+  "symbol": "Si",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-silicon.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "985d56cd7c66234380753f75b75b753aca9d7f2f133483ce80a4699ef8ac2dcd",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons, silicon content, unless otherwise specified)",
+  "price_unit_note": "Price, average, cents per pound of silicon",
+  "price_footnote_text": "Source: S&P Global Platts Metals Week, mean import prices based on monthly averages. Estimated 2025 price is the mean based on monthly average of January through October 2025.",
+  "domestic_use_summary": "Ferrosilicon and silicon metal were produced at five facilities in 2025, all east of the Mississippi River. Most ferrosilicon was consumed in the ferrous foundry and steel industries, predominantly in the Eastern United States, and was sourced primarily from domestic quartzite (silica). The main consumers of silicon metal were producers of aluminum alloys and the chemical industry, in particular for the manufacture of silicones. Silicon metal may be further processed into ultra-high-purity semiconductor- or solar-grades, commonly referred to as polysilicon. Three companies produced polysilicon in the United States; a fourth facility announced at the end of 2024 that it would cease polysilicon production owing to its unsuccessful attempts to meet the quality standards and volumes required by its customer.",
+  "events_trends_summary": "Combined domestic ferrosilicon and silicon metal production in 2025 was withheld to avoid disclosing proprietary information but was estimated to be less than that in 2024. China accounted for almost 80% of total global estimated production of silicon materials in 2025. Global production of silicon materials, on a silicon-content basis, was estimated to have decreased compared with 2024 production. According to industry publications, the January through October 2025 average U.S. price for silicon metal was about 21% less than the SILICON U.S. Geological Survey, Mineral Commodity Summaries, February 2026 annual average price in 2024, and the average U.S. price for 75%-grade ferrosilicon was about 3% more than the annual average price in 2024. The decrease in the average price of silicon metal in 2025 was attributed to oversupply, weak demand from the aluminum and silicon industries, and the availability of polysilicon stocks. In April 2025, prices of silicon metal from China were the lowest since November 2016. In 2025, total silicon metal imports were estimated to be about 50% more than those in 2024. Uncertainty regarding tariffs and concerns over possible future export restrictions from other countries may have contributed to the increase in silicon metal imports. In April, the U.S. International Trade Commission determined that a United States industry was materially injured by imports of ferrosilicon (subheadings 7202.21 and 7202.29 of the Harmonized Tariff Schedule of the United States) from Brazil, Kazakhstan, and Malaysia and issued countervailing and antidumping duty orders on imports of ferrosilicon from those countries. This followed the U.S. Department of Commerce’s determination that ferrosilicon had been sold at less than fair value and was subsidized by the Governments of Brazil, Kazakhstan, and Malaysia. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "World and domestic resources for making silicon metal and alloys are abundant and, in most producing countries, adequate to supply world requirements for many decades. The source of the silicon is silica in various natural forms, such as quartzite.",
+  "substitutes_summary": "Aluminum, silicon carbide, and silicomanganese can be substituted for ferrosilicon in some applications. Gallium arsenide and germanium are the principal substitutes for silicon in semiconductor and infrared applications.",
+  "recycling_summary": "Insignificant.",
+  "salient_stats": [
+    {
+      "label": "Production, ferrosilicon and silicon metal",
+      "footnote": "2",
+      "section": "Production, ferrosilicon and silicon metal",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Ferrosilicon, all grades",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 125.0,
+        "2022": 175.0,
+        "2023": 154.0,
+        "2024": 126.0,
+        "2025e": 110.0
+      },
+      "raw_values": {
+        "2021": "125",
+        "2022": "175",
+        "2023": "154",
+        "2024": "126",
+        "2025e": "110"
+      }
+    },
+    {
+      "label": "Silicon metal",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 97.0,
+        "2022": 116.0,
+        "2023": 79.0,
+        "2024": 117.0,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "97",
+        "2022": "116",
+        "2023": "79",
+        "2024": "117",
+        "2025e": "180"
+      }
+    },
+    {
+      "label": "Ferrosilicon, all grades",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 7.0,
+        "2022": 9.0,
+        "2023": 5.0,
+        "2024": 4.0,
+        "2025e": 2.0
+      },
+      "raw_values": {
+        "2021": "7",
+        "2022": "9",
+        "2023": "5",
+        "2024": "4",
+        "2025e": "2"
+      }
+    },
+    {
+      "label": "Silicon metal",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 53.0,
+        "2022": 47.0,
+        "2023": 42.0,
+        "2024": 40.0,
+        "2025e": 30.0
+      },
+      "raw_values": {
+        "2021": "53",
+        "2022": "47",
+        "2023": "42",
+        "2024": "40",
+        "2025e": "30"
+      }
+    },
+    {
+      "label": "Consumption, apparent, ferrosilicon and silicon metal",
+      "footnote": "2",
+      "section": "Consumption, apparent, ferrosilicon and silicon metal",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Ferrosilicon, 50% silicon",
+      "footnote": "4",
+      "section": "Price, average, cents per pound of silicon",
+      "subsection": null,
+      "values": {
+        "2021": 137.94,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "137.94",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Ferrosilicon, 75% silicon",
+      "footnote": "5",
+      "section": "Price, average, cents per pound of silicon",
+      "subsection": null,
+      "values": {
+        "2021": 192.28,
+        "2022": 312.1,
+        "2023": 142.23,
+        "2024": 131.96,
+        "2025e": 140.0
+      },
+      "raw_values": {
+        "2021": "192.28",
+        "2022": "312.10",
+        "2023": "142.23",
+        "2024": "131.96",
+        "2025e": "140"
+      }
+    },
+    {
+      "label": "Silicon metal",
+      "footnote": null,
+      "section": "Price, average, cents per pound of silicon",
+      "subsection": null,
+      "values": {
+        "2021": 220.31,
+        "2022": 361.86,
+        "2023": 179.69,
+        "2024": 170.34,
+        "2025e": 130.0
+      },
+      "raw_values": {
+        "2021": "220.31",
+        "2022": "361.86",
+        "2023": "179.69",
+        "2024": "170.34",
+        "2025e": "130"
+      }
+    },
+    {
+      "label": "Stocks, producer, ferrosilicon and silicon metal, yearend",
+      "footnote": null,
+      "section": "Stocks, producer, ferrosilicon and silicon metal, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 11.0,
+        "2022": 17.0,
+        "2023": 15.0,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "11",
+        "2022": "17",
+        "2023": "15",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Ferrosilicon, all grades",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 50.0,
+        "2022": 50.0,
+        "2023": 50.0,
+        "2024": 50.0,
+        "2025e": 50.0
+      },
+      "raw_values": {
+        "2021": "<50",
+        "2022": ">50",
+        "2023": ">50",
+        "2024": "<50",
+        "2025e": "<50"
+      }
+    },
+    {
+      "label": "Silicon metal",
+      "footnote": "2",
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 25.0,
+        "2022": 50.0,
+        "2023": 50.0,
+        "2024": 50.0,
+        "2025e": 50.0
+      },
+      "raw_values": {
+        "2021": "<25",
+        "2022": "<50",
+        "2023": "<50",
+        "2024": "<50",
+        "2025e": ">50"
+      }
+    },
+    {
+      "label": "Total",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 50.0,
+        "2022": 50.0,
+        "2023": 50.0,
+        "2024": 50.0,
+        "2025e": 50.0
+      },
+      "raw_values": {
+        "2021": "<50",
+        "2022": "<50",
+        "2023": "<50",
+        "2024": "<50",
+        "2025e": ">50"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Ferrosilicon, 50% silicon",
+      "unit_note": "Price, average, cents per pound of silicon",
+      "values": {
+        "2021": 137.94,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "137.94",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "form": "Ferrosilicon, 75% silicon",
+      "unit_note": "Price, average, cents per pound of silicon",
+      "values": {
+        "2021": 192.28,
+        "2022": 312.1,
+        "2023": 142.23,
+        "2024": 131.96,
+        "2025e": 140.0
+      },
+      "raw_values": {
+        "2021": "192.28",
+        "2022": "312.10",
+        "2023": "142.23",
+        "2024": "131.96",
+        "2025e": "140"
+      }
+    },
+    {
+      "form": "Silicon metal",
+      "unit_note": "Price, average, cents per pound of silicon",
+      "values": {
+        "2021": 220.31,
+        "2022": 361.86,
+        "2023": 179.69,
+        "2024": 170.34,
+        "2025e": 130.0
+      },
+      "raw_values": {
+        "2021": "220.31",
+        "2022": "361.86",
+        "2023": "179.69",
+        "2024": "170.34",
+        "2025e": "130"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 290.0,
+  "exports_total_latest": 32.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 140.0,
+  "net_import_reliance_pct_latest": 50.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": "<50",
+    "apparent_consumption": "W"
+  },
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Ferrosilicon",
+      "countries": [
+        {
+          "country": "Russia",
+          "share_pct": 30.0
+        },
+        {
+          "country": "Brazil",
+          "share_pct": 16.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 13.0
+        },
+        {
+          "country": "Malaysia",
+          "share_pct": 11.0
+        },
+        {
+          "country": "other",
+          "share_pct": 30.0
+        }
+      ]
+    },
+    {
+      "category": "Silicon metal",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 38.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 29.0
+        },
+        {
+          "country": "Norway",
+          "share_pct": 12.0
+        },
+        {
+          "country": "Australia",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 15.0
+        }
+      ]
+    },
+    {
+      "category": "Total",
+      "countries": [
+        {
+          "country": "Brazil",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 20.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 18.0
+        },
+        {
+          "country": "Malaysia",
+          "share_pct": 8.0
+        },
+        {
+          "country": "other",
+          "share_pct": 29.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Production",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "W",
+      "production_latest_raw": "W",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Bhutan",
+      "production_prev_year": 98.0,
+      "production_latest_year": 98.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "98",
+      "production_latest_raw": "98",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 160.0,
+      "production_latest_year": 170.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "160",
+      "production_latest_raw": "170",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 23.0,
+      "production_latest_year": 23.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "23",
+      "production_latest_raw": "23",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 3100.0,
+      "production_latest_year": 3500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3100",
+      "production_latest_raw": "3500",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "France",
+      "production_prev_year": 21.0,
+      "production_latest_year": 21.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "21",
+      "production_latest_raw": "21",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 0.0,
+      "production_latest_year": 0.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "—",
+      "production_latest_raw": "—",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Iceland",
+      "production_prev_year": 90.0,
+      "production_latest_year": 72.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "90",
+      "production_latest_raw": "72",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 59.0,
+      "production_latest_year": 59.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "59",
+      "production_latest_raw": "59",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 120.0,
+      "production_latest_year": 120.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "120",
+      "production_latest_raw": "120",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Malaysia",
+      "production_prev_year": 120.0,
+      "production_latest_year": 120.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "120",
+      "production_latest_raw": "120",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Norway",
+      "production_prev_year": 160.0,
+      "production_latest_year": 150.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "160",
+      "production_latest_raw": "150",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 420.0,
+      "production_latest_year": 420.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "420",
+      "production_latest_raw": "420",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 36.0,
+      "production_latest_year": 35.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "36",
+      "production_latest_raw": "35",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Spain",
+      "production_prev_year": 41.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "41",
+      "production_latest_raw": "40",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 120.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "120",
+      "production_latest_raw": "40",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 4600.0,
+      "production_latest_year": 5000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "4600",
+      "production_latest_raw": "5000",
+      "reserves_raw": null,
+      "note": "footnote 7"
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+    "1": "Ferrosilicon grades include the two standard grades of ferrosilicon—50% silicon and 75% silicon—plus miscellaneous silicon alloys.",
+    "2": "Metallurgical-grade silicon metal.",
+    "3": "Defined as production + imports – exports ± adjustments for industry stock changes.",
+    "4": "Source: CRU Group, transaction prices based on weekly averages. Average spot prices for ferrosilicon, 50% grade, were discontinued in April 2022.",
+    "5": "Source: S&P Global Platts Metals Week, mean import prices based on monthly averages. Estimated 2025 price is the mean based on monthly average of January through October 2025.",
+    "6": "Defined as imports – exports ± adjustments for industry stock changes.",
+    "7": "Excludes U.S. production.",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

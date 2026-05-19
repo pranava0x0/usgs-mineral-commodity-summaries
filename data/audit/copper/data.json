@@ -1,0 +1,704 @@
+{
+  "slug": "copper",
+  "name": "Copper",
+  "symbol": "Cu",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-copper.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "c4971f7edfa38feefc51952c5f24889c46f468d936c6620d388233313ae8ae85",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons, copper content, unless otherwise specified)",
+  "price_unit_note": "Price, annual average, cents per pound",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, the recoverable copper content of U.S. mine production was an estimated 1.0 million tons, a decrease of 5% from that in 2024, and was valued at an estimated $11 billion, 10% greater than $10.0 billion in 2024. Arizona was the leading copper-producing State and accounted for approximately 70% of domestic output; copper was also mined in Alaska, Michigan, Missouri, Montana, Nevada, New Mexico, and Utah. Copper was recovered or processed at 26 mines (17 of which accounted for more than 99% of mine production), 2 primary smelters, 2 secondary smelters, 2 primary electrolytic refineries, 14 electrowon refineries, and 4 secondary refineries. Refined copper and scrap were consumed at about 30 brass mills, 14 rod mills, and several hundred foundries and miscellaneous manufacturers. According to the Copper Development Association, copper and copper alloy products were used in building construction, 42%; electrical and electronic products, 23%; transportation equipment, 18%; consumer and general products, 10%; and industrial machinery and equipment, 7%.",
+  "events_trends_summary": "In 2025, production of copper was affected by concentrator shutdowns and lower ore grades at multiple mines in the United States. Domestic output of refined copper decreased by an estimated 9% compared with that in 2024 owing to planned maintenance of both primary smelters. As of September, copper production started in 2025 at a new mine in Arizona, at a new secondary smelter in Georgia, and at a new secondary refinery in Kentucky. By yearend, one additional mine in Arizona was expected to begin commercial operations. The COMEX copper price was projected to average a record high of $4.80 per pound in 2025, 14% greater than $4.22 per pound in 2024. Analysts attributed the increase primarily to uncertainty regarding the implementation of tariffs on U.S. imports of copper materials. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey (USGS) updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "The most recent USGS assessment of global copper resources indicated that, as of 2015, identified resources contained 1.5 billion tons of unextracted copper (2.1 billion tons when past production of 600 million tons is included) and undiscovered resources contained an estimated 3.5 billion tons of copper.",
+  "substitutes_summary": "Aluminum substitutes for copper in automobile radiators, cooling and refrigeration tube, electrical equipment, and power cable. Optical fiber substitutes for copper in telecommunications applications, and plastics substitute for copper in drain pipe, plumbing fixtures, and water pipe. Titanium and steel are used in heat exchangers.",
+  "recycling_summary": "Old (post-consumer) scrap, converted to refined metal, alloys, and other forms, provided an estimated 160,000 tons of copper in 2025, and an estimated 760,000 tons of copper was recovered from new (manufacturing) scrap derived from fabricating operations. Brass and wire-rod mills accounted for approximately 80% of the total copper recovered from scrap. Copper recovered from scrap contributed about 30% of the U.S. copper supply.",
+  "salient_stats": [
+    {
+      "label": "Mine, recoverable",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1230.0,
+        "2022": 1230.0,
+        "2023": 1130.0,
+        "2024": 1050.0,
+        "2025e": 1000.0
+      },
+      "raw_values": {
+        "2021": "1230",
+        "2022": "1230",
+        "2023": "1130",
+        "2024": "1050",
+        "2025e": "1000"
+      }
+    },
+    {
+      "label": "Primary (from ore)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": "Refinery",
+      "values": {
+        "2021": 931.0,
+        "2022": 917.0,
+        "2023": 843.0,
+        "2024": 882.0,
+        "2025e": 790.0
+      },
+      "raw_values": {
+        "2021": "931",
+        "2022": "917",
+        "2023": "843",
+        "2024": "882",
+        "2025e": "790"
+      }
+    },
+    {
+      "label": "Secondary (from scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": "Refinery",
+      "values": {
+        "2021": 49.0,
+        "2022": 40.0,
+        "2023": 39.0,
+        "2024": 39.0,
+        "2025e": 60.0
+      },
+      "raw_values": {
+        "2021": "49",
+        "2022": "40",
+        "2023": "39",
+        "2024": "39",
+        "2025e": "60"
+      }
+    },
+    {
+      "label": "Copper recovered from old (post-consumer) scrap",
+      "footnote": "1",
+      "section": "Production",
+      "subsection": "Refinery",
+      "values": {
+        "2021": 169.0,
+        "2022": 152.0,
+        "2023": 137.0,
+        "2024": 140.0,
+        "2025e": 160.0
+      },
+      "raw_values": {
+        "2021": "169",
+        "2022": "152",
+        "2023": "137",
+        "2024": "140",
+        "2025e": "160"
+      }
+    },
+    {
+      "label": "() Refined",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": "()",
+      "values": {
+        "2021": 919.0,
+        "2022": 732.0,
+        "2023": 771.0,
+        "2024": 903.0,
+        "2025e": 1700.0
+      },
+      "raw_values": {
+        "2021": "919",
+        "2022": "732",
+        "2023": "771",
+        "2024": "903",
+        "2025e": "1700"
+      }
+    },
+    {
+      "label": "Ore and concentrate",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 344.0,
+        "2022": 351.0,
+        "2023": 339.0,
+        "2024": 326.0,
+        "2025e": 340.0
+      },
+      "raw_values": {
+        "2021": "344",
+        "2022": "351",
+        "2023": "339",
+        "2024": "326",
+        "2025e": "340"
+      }
+    },
+    {
+      "label": "Refined",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 48.0,
+        "2022": 27.0,
+        "2023": 29.0,
+        "2024": 72.0,
+        "2025e": 110.0
+      },
+      "raw_values": {
+        "2021": "48",
+        "2022": "27",
+        "2023": "29",
+        "2024": "72",
+        "2025e": "110"
+      }
+    },
+    {
+      "label": "Reported, refined copper",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1750.0,
+        "2022": 1720.0,
+        "2023": 1580.0,
+        "2024": 1580.0,
+        "2025e": 1700.0
+      },
+      "raw_values": {
+        "2021": "1750",
+        "2022": "1720",
+        "2023": "1580",
+        "2024": "1580",
+        "2025e": "1700"
+      }
+    },
+    {
+      "label": "Apparent, primary refined copper and copper from old scrap",
+      "footnote": "3",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 1970.0,
+        "2022": 1810.0,
+        "2023": 1680.0,
+        "2024": 1860.0,
+        "2025e": 2200.0
+      },
+      "raw_values": {
+        "2021": "1970",
+        "2022": "1810",
+        "2023": "1680",
+        "2024": "1860",
+        "2025e": "2200"
+      }
+    },
+    {
+      "label": "U.S. producer, cathode (COMEX + premium)",
+      "footnote": null,
+      "section": "Price, annual average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 432.3,
+        "2022": 410.8,
+        "2023": 395.3,
+        "2024": 431.8,
+        "2025e": 490.0
+      },
+      "raw_values": {
+        "2021": "432.3",
+        "2022": "410.8",
+        "2023": "395.3",
+        "2024": "431.8",
+        "2025e": "490"
+      }
+    },
+    {
+      "label": "COMEX, high-grade, first position",
+      "footnote": null,
+      "section": "Price, annual average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 424.3,
+        "2022": 400.7,
+        "2023": 385.7,
+        "2024": 421.6,
+        "2025e": 480.0
+      },
+      "raw_values": {
+        "2021": "424.3",
+        "2022": "400.7",
+        "2023": "385.7",
+        "2024": "421.6",
+        "2025e": "480"
+      }
+    },
+    {
+      "label": "London Metal Exchange, grade A, cash",
+      "footnote": null,
+      "section": "Price, annual average, cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 422.5,
+        "2022": 399.8,
+        "2023": 384.8,
+        "2024": 414.7,
+        "2025e": 440.0
+      },
+      "raw_values": {
+        "2021": "422.5",
+        "2022": "399.8",
+        "2023": "384.8",
+        "2024": "414.7",
+        "2025e": "440"
+      }
+    },
+    {
+      "label": "Stocks, refined, held by U.S. producers, consumers, and metal exchanges, yearend",
+      "footnote": null,
+      "section": "Stocks, refined, held by U.S. producers, consumers, and metal exchanges, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 117.0,
+        "2022": 84.0,
+        "2023": 128.0,
+        "2024": 123.0,
+        "2025e": 450.0
+      },
+      "raw_values": {
+        "2021": "117",
+        "2022": "84",
+        "2023": "128",
+        "2024": "123",
+        "2025e": "450"
+      }
+    },
+    {
+      "label": "Employment, mine and plant, number",
+      "footnote": null,
+      "section": "Employment, mine and plant, number",
+      "subsection": null,
+      "values": {
+        "2021": 11400.0,
+        "2022": 12000.0,
+        "2023": 12600.0,
+        "2024": 13000.0,
+        "2025e": 13000.0
+      },
+      "raw_values": {
+        "2021": "11400",
+        "2022": "12000",
+        "2023": "12600",
+        "2024": "13000",
+        "2025e": "13000"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 44.0,
+        "2022": 41.0,
+        "2023": 42.0,
+        "2024": 45.0,
+        "2025e": 57.0
+      },
+      "raw_values": {
+        "2021": "44",
+        "2022": "41",
+        "2023": "42",
+        "2024": "45",
+        "2025e": "57"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "U.S. producer, cathode (COMEX + premium)",
+      "unit_note": "Price, annual average, cents per pound",
+      "values": {
+        "2021": 432.3,
+        "2022": 410.8,
+        "2023": 395.3,
+        "2024": 431.8,
+        "2025e": 490.0
+      },
+      "raw_values": {
+        "2021": "432.3",
+        "2022": "410.8",
+        "2023": "395.3",
+        "2024": "431.8",
+        "2025e": "490"
+      }
+    },
+    {
+      "form": "COMEX, high-grade, first position",
+      "unit_note": "Price, annual average, cents per pound",
+      "values": {
+        "2021": 424.3,
+        "2022": 400.7,
+        "2023": 385.7,
+        "2024": 421.6,
+        "2025e": 480.0
+      },
+      "raw_values": {
+        "2021": "424.3",
+        "2022": "400.7",
+        "2023": "385.7",
+        "2024": "421.6",
+        "2025e": "480"
+      }
+    },
+    {
+      "form": "London Metal Exchange, grade A, cash",
+      "unit_note": "Price, annual average, cents per pound",
+      "values": {
+        "2021": 422.5,
+        "2022": 399.8,
+        "2023": 384.8,
+        "2024": 414.7,
+        "2025e": 440.0
+      },
+      "raw_values": {
+        "2021": "422.5",
+        "2022": "399.8",
+        "2023": "384.8",
+        "2024": "414.7",
+        "2025e": "440"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 1000.0,
+  "primary_smelting_latest": 790.0,
+  "secondary_smelting_latest": 60.0,
+  "imports_total_latest": 1700.0,
+  "exports_total_latest": 450.0,
+  "apparent_consumption_latest": 2200.0,
+  "price_usd_per_pound_latest": 490.0,
+  "net_import_reliance_pct_latest": 57.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "Copper content of blister and anodes",
+      "countries": [
+        {
+          "country": "Finland",
+          "share_pct": 88.0
+        },
+        {
+          "country": "Malaysia",
+          "share_pct": 3.0
+        },
+        {
+          "country": "United Kingdom",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
+        }
+      ]
+    },
+    {
+      "category": "Copper content of matte, ash, and precipitate",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 52.0
+        },
+        {
+          "country": "Belgium",
+          "share_pct": 24.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 9.0
+        },
+        {
+          "country": "Spain",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 9.0
+        }
+      ]
+    },
+    {
+      "category": "Copper content of scrap",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 45.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 43.0
+        },
+        {
+          "country": "other",
+          "share_pct": 12.0
+        }
+      ]
+    },
+    {
+      "category": "Refined copper",
+      "countries": [
+        {
+          "country": "Chile",
+          "share_pct": 68.0
+        },
+        {
+          "country": "Canada",
+          "share_pct": 16.0
+        },
+        {
+          "country": "Peru",
+          "share_pct": 7.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 3.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine and Refinery Production and Reserves",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 921.0,
+      "production_latest_year": 850.0,
+      "capacity": null,
+      "reserves": 47000.0,
+      "production_prev_raw": "921",
+      "production_latest_raw": "850",
+      "reserves_raw": "47000",
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 434.0,
+      "production_latest_year": 460.0,
+      "capacity": null,
+      "reserves": 100000.0,
+      "production_prev_raw": "434",
+      "production_latest_raw": "460",
+      "reserves_raw": "100000",
+      "note": "footnote 7"
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 324.0,
+      "production_latest_year": 320.0,
+      "capacity": null,
+      "reserves": 7000.0,
+      "production_prev_raw": "324",
+      "production_latest_raw": "320",
+      "reserves_raw": "7000",
+      "note": null
+    },
+    {
+      "country": "Chile",
+      "production_prev_year": 1940.0,
+      "production_latest_year": 1700.0,
+      "capacity": null,
+      "reserves": 180000.0,
+      "production_prev_raw": "1940",
+      "production_latest_raw": "1700",
+      "reserves_raw": "180000",
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 12400.0,
+      "production_latest_year": 14000.0,
+      "capacity": null,
+      "reserves": 41000.0,
+      "production_prev_raw": "12400",
+      "production_latest_raw": "14000",
+      "reserves_raw": "41000",
+      "note": null
+    },
+    {
+      "country": "Congo (Kinshasa)",
+      "production_prev_year": 2560.0,
+      "production_latest_year": 2800.0,
+      "capacity": null,
+      "reserves": 80000.0,
+      "production_prev_raw": "2560",
+      "production_latest_raw": "2800",
+      "reserves_raw": "80000",
+      "note": null
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 597.0,
+      "production_latest_year": 610.0,
+      "capacity": null,
+      "reserves": 0.0,
+      "production_prev_raw": "597",
+      "production_latest_raw": "610",
+      "reserves_raw": "—",
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 545.0,
+      "production_latest_year": 620.0,
+      "capacity": null,
+      "reserves": 2200.0,
+      "production_prev_raw": "545",
+      "production_latest_raw": "620",
+      "reserves_raw": "2200",
+      "note": null
+    },
+    {
+      "country": "Indonesia",
+      "production_prev_year": 349.0,
+      "production_latest_year": 400.0,
+      "capacity": null,
+      "reserves": 21000.0,
+      "production_prev_raw": "349",
+      "production_latest_raw": "400",
+      "reserves_raw": "21000",
+      "note": null
+    },
+    {
+      "country": "Japan",
+      "production_prev_year": 1570.0,
+      "production_latest_year": 1400.0,
+      "capacity": null,
+      "reserves": 0.0,
+      "production_prev_raw": "1570",
+      "production_latest_raw": "1400",
+      "reserves_raw": "—",
+      "note": null
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 498.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": 20000.0,
+      "production_prev_raw": "498",
+      "production_latest_raw": "500",
+      "reserves_raw": "20000",
+      "note": null
+    },
+    {
+      "country": "Korea, Republic of",
+      "production_prev_year": 604.0,
+      "production_latest_year": 610.0,
+      "capacity": null,
+      "reserves": 0.0,
+      "production_prev_raw": "604",
+      "production_latest_raw": "610",
+      "reserves_raw": "—",
+      "note": null
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 489.0,
+      "production_latest_year": 480.0,
+      "capacity": null,
+      "reserves": 53000.0,
+      "production_prev_raw": "489",
+      "production_latest_raw": "480",
+      "reserves_raw": "53000",
+      "note": null
+    },
+    {
+      "country": "Peru",
+      "production_prev_year": 385.0,
+      "production_latest_year": 340.0,
+      "capacity": null,
+      "reserves": 85000.0,
+      "production_prev_raw": "385",
+      "production_latest_raw": "340",
+      "reserves_raw": "85000",
+      "note": null
+    },
+    {
+      "country": "Poland",
+      "production_prev_year": 589.0,
+      "production_latest_year": 560.0,
+      "capacity": null,
+      "reserves": 33000.0,
+      "production_prev_raw": "589",
+      "production_latest_raw": "560",
+      "reserves_raw": "33000",
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 896.0,
+      "production_latest_year": 950.0,
+      "capacity": null,
+      "reserves": 80000.0,
+      "production_prev_raw": "896",
+      "production_latest_raw": "950",
+      "reserves_raw": "80000",
+      "note": null
+    },
+    {
+      "country": "Zambia",
+      "production_prev_year": 189.0,
+      "production_latest_year": 270.0,
+      "capacity": null,
+      "reserves": 21000.0,
+      "production_prev_raw": "189",
+      "production_latest_raw": "270",
+      "reserves_raw": "21000",
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 2310.0,
+      "production_latest_year": 2100.0,
+      "capacity": null,
+      "reserves": 210000.0,
+      "production_prev_raw": "2310",
+      "production_latest_raw": "2100",
+      "reserves_raw": "210000",
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 27600.0,
+      "production_latest_year": 29000.0,
+      "capacity": null,
+      "reserves": 980000.0,
+      "production_prev_raw": "27600",
+      "production_latest_raw": "29000",
+      "reserves_raw": "980000",
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. — Zero.",
+    "1": "Copper converted to refined metal, alloys, and other forms by brass and wire-rod mills, foundries, refineries, and other manufacturers.",
+    "2": "Less than ½ unit.",
+    "3": "Primary refined production + copper recovered from old scrap + refined imports – refined exports ± adjustments for refined copper stock changes.",
+    "4": "Defined as refined imports – refined exports ± adjustments for refined copper stock changes.",
+    "5": "Primary refined production + copper from old and new scrap + refined imports – refined exports ± adjustments for refined copper stock changes.",
+    "6": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "7": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 27 million tons.",
+    "8": "Source: Hammarstrom, J.M., Zientek, M.L., Parks, H.L., Dicken, C.L., and the U.S. Geological Survey Global Copper Mineral Resource Assessment Team, 2019, Assessment of undiscovered copper resources of the world, 2015 (ver. 1.2, December 2021): U.S. Geological Survey Scientific Investigations Report 2018–5160, 619 p. (Accessed November 24, 2025, at https://doi.org/10.3133/sir20185160.)"
+  }
+}

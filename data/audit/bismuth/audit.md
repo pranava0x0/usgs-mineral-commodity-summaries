@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-bismuth.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `9f2f3d99adeee708…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons unless otherwise specified)
@@ -11,7 +11,7 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
+| Mined production (US) | N/A |
 | Primary smelting / refinery (US) | 0 |
 | Secondary smelting / scrap (US) | 80 |
 | Imports for consumption (total) | 1,500 |
@@ -26,14 +26,14 @@
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Refinery |  | 0 | 0 | 0 | 0 | 0 |
 | Secondary (scrap) |  | 80 | 80 | 80 | 80 | 80 |
-| Containing more than 99.99% bismuth, by weight |  | _Not available_ | 740 | 731 | 626 | 650 |
-| Other |  | _Not available_ | 2,340 | 1,110 | 1,180 | 820 |
+| Containing more than 99.99% bismuth, by weight |  | NA | 740 | 731 | 626 | 650 |
+| Other |  | NA | 2,340 | 1,110 | 1,180 | 820 |
 | Total | 1 | 1,980 | 3,080 | 1,840 | 1,800 | 1,500 |
-| Containing more than 99.99% bismuth, by weight |  | _Not available_ | 144 | 131 | 430 | 180 |
-| Other |  | _Not available_ | 360 | 329 | 620 | 360 |
+| Containing more than 99.99% bismuth, by weight |  | NA | 144 | 131 | 430 | 180 |
+| Other |  | NA | 360 | 329 | 620 | 360 |
 | Total | 2 | 1,010 | 503 | 460 | 1,050 | 540 |
 | Apparent | 3 | 1,030 | 2,600 | 1,450 | 830 | 1,000 |
-| Reported |  | 597 | 724 | 691 | 700 | _Not available_ |
+| Reported |  | 597 | 724 | 691 | 700 | NA |
 | Price, average, dollars per pound |  | 3.74 | 3.90 | 4.08 | 5.40 | 20 |
 | Stocks, yearend, consumer, bismuth metal |  | 297 | 356 | 365 | 365 | 360 |
 | Net import reliance as a percentage of apparent consumption |  | 92 | 97 | 94 | 90 | 92 |
@@ -50,15 +50,15 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | _Not available_ | _Not available_ |  |
-| Bolivia | 50 | 50 | _Not available_ | _Not available_ |  |
-| Bulgaria | 48 | 50 | _Not available_ | _Not available_ |  |
-| China | 14,000 | 14,000 | _Not available_ | _Not available_ |  |
-| Japan | 500 | 500 | _Not available_ | _Not available_ |  |
-| Kazakhstan | 180 | 180 | _Not available_ | _Not available_ |  |
-| Korea, Republic of | 1,000 | 1,000 | _Not available_ | _Not available_ |  |
-| Laos | 492 | 500 | _Not available_ | _Not available_ | footnote 7 |
-| World total (rounded) | 16,300 | 16,000 | _Not available_ | _Not available_ |  |
+| United States | 0 | 0 | N/A | N/A |  |
+| Bolivia | 50 | 50 | N/A | N/A |  |
+| Bulgaria | 48 | 50 | N/A | N/A |  |
+| China | 14,000 | 14,000 | N/A | N/A |  |
+| Japan | 500 | 500 | N/A | N/A |  |
+| Kazakhstan | 180 | 180 | N/A | N/A |  |
+| Korea, Republic of | 1,000 | 1,000 | N/A | N/A |  |
+| Laos | 492 | 500 | N/A | N/A | footnote 7 |
+| World total (rounded) | 16,300 | 16,000 | N/A | N/A |  |
 
 ## Footnotes (verbatim)
 

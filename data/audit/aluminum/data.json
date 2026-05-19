@@ -1,0 +1,554 @@
+{
+  "slug": "aluminum",
+  "name": "Aluminum",
+  "symbol": "Al",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-aluminum.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-05-19",
+  "pdf_sha256": "2995b3e9e412eed53a9b565743dd8696a7fc0ae10e7f2d95266511a10b1fee30",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons unless otherwise specified)",
+  "price_unit_note": "Price, ingot, average U.S. market (spot), cents per pound",
+  "price_footnote_text": "Source: S&P Global Platts Metals Week.",
+  "domestic_use_summary": "In 2025, three companies operated six primary aluminum smelters in five States. Two of these smelters operated at full capacity throughout the year, whereas two smelters operated at reduced capacity. Two smelters located in Hawesville, KY, and New Madrid, MO, have been temporarily shut down since 2022 and 2024, respectively. Domestic smelter capacity was 1.31 million tons per year in 2025, unchanged from that in 2024. Estimated primary production and secondary production from new and old scrap both decreased slightly from that in 2024. Based on published prices, the value of primary aluminum production was an estimated $2.6 billion, 35% more than that in 2024. The estimated average annual U.S. market price increased by 39% from that in 2024. Transportation applications accounted for 36% of domestic consumption; the remainder was used in packaging, 24%; building, 13%; electrical, 9%; consumer durables and machinery, 8% each; and other, 2%.",
+  "events_trends_summary": "In March, the United States imposed a 25% tariff on aluminum and aluminum derivative products and ended all previously existing country-specific exemptions. The action, authorized under section 232 of the Trade Expansion Act, was intended to address national security concerns related to the volume of aluminum imports and increase domestic production capacity. By June, tariffs doubled to 50% ad valorem for most countries, except for the United Kingdom, which remained at 25%. In August, over 400 additional aluminum-related tariff codes were added, with the tariffs applying only to the aluminum content of those products. Two aluminum sheet facilities in Virginia and West Virgina closed in May and June, respectively. Commissioning continued at a 650,000-ton-per-year recycled aluminum flat-rolled products mill in Mississippi, which in June had shipped its first coils. In July, production began at an expanded recycling plant in Minnesota, adding 55,000 tons per year of billet capacity and increasing the plant’s total capacity to 165,000 tons per year. In August, plans were announced to restart more than 50,000 tons per year of idled capacity at a 229,000-ton-per-year primary aluminum smelter in South Carolina, with full production planned for mid-2026. In September, an expansion project doubled capacity at a high-purity aluminum facility in Iowa. In San Ciprian, Spain, a 228,000-ton-per-year primary aluminum smelter restarted after stopping production in 2022, with full production expected by mid-2026. Operations were expected to begin by yearend at a 500,000-ton-per-year primary aluminum smelter in North Kalimantan, Indonesia. In China, smelters in Guangxi, Guizhou, Qinghai, Sichuan, and Yunnan Provinces resumed production, or completed upgrades, including the addition of new potlines.",
+  "world_resources_summary": "Global resources of bauxite are estimated to be between 55 billion and 75 billion tons and are sufficient to meet world demand for aluminum metal well into the future.",
+  "substitutes_summary": "Composites can substitute for aluminum in aircraft fuselages and wings. Glass, paper, plastics, and steel can substitute for aluminum in packaging. Composites, magnesium, steel, and titanium can substitute for aluminum in ground transportation uses. Composites, steel, vinyl, and wood can substitute for aluminum in construction. Copper can replace aluminum in electrical and heat-exchange applications.",
+  "recycling_summary": "In 2025, aluminum recovered from purchased scrap in the United States was about 3.6 million tons, of which about 56% came from new scrap (manufacturing) and 44% from old scrap (discarded aluminum products). Aluminum recovered from old scrap was equivalent to about 28% of apparent consumption.",
+  "salient_stats": [
+    {
+      "label": "Primary",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 889.0,
+        "2022": 861.0,
+        "2023": 750.0,
+        "2024": 676.0,
+        "2025e": 660.0
+      },
+      "raw_values": {
+        "2021": "889",
+        "2022": "861",
+        "2023": "750",
+        "2024": "676",
+        "2025e": "660"
+      }
+    },
+    {
+      "label": "Secondary (from old scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1520.0,
+        "2022": 1480.0,
+        "2023": 1560.0,
+        "2024": 1560.0,
+        "2025e": 1600.0
+      },
+      "raw_values": {
+        "2021": "1520",
+        "2022": "1480",
+        "2023": "1560",
+        "2024": "1560",
+        "2025e": "1600"
+      }
+    },
+    {
+      "label": "Secondary (from new scrap)",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1780.0,
+        "2022": 1920.0,
+        "2023": 1870.0,
+        "2024": 2120.0,
+        "2025e": 2000.0
+      },
+      "raw_values": {
+        "2021": "1780",
+        "2022": "1920",
+        "2023": "1870",
+        "2024": "2120",
+        "2025e": "2000"
+      }
+    },
+    {
+      "label": "Crude and semi-fabricated products",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 4940.0,
+        "2022": 5730.0,
+        "2023": 4900.0,
+        "2024": 4840.0,
+        "2025e": 4400.0
+      },
+      "raw_values": {
+        "2021": "4940",
+        "2022": "5730",
+        "2023": "4900",
+        "2024": "4840",
+        "2025e": "4400"
+      }
+    },
+    {
+      "label": "Scrap",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 679.0,
+        "2022": 685.0,
+        "2023": 677.0,
+        "2024": 700.0,
+        "2025e": 890.0
+      },
+      "raw_values": {
+        "2021": "679",
+        "2022": "685",
+        "2023": "677",
+        "2024": "700",
+        "2025e": "890"
+      }
+    },
+    {
+      "label": "Crude and semi-fabricated products",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 900.0,
+        "2022": 1040.0,
+        "2023": 1240.0,
+        "2024": 1360.0,
+        "2025e": 890.0
+      },
+      "raw_values": {
+        "2021": "900",
+        "2022": "1040",
+        "2023": "1240",
+        "2024": "1360",
+        "2025e": "890"
+      }
+    },
+    {
+      "label": "Scrap",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 1930.0,
+        "2022": 1720.0,
+        "2023": 1780.0,
+        "2024": 2100.0,
+        "2025e": 2200.0
+      },
+      "raw_values": {
+        "2021": "1930",
+        "2022": "1720",
+        "2023": "1780",
+        "2024": "2100",
+        "2025e": "2200"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": null,
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 6240.0,
+        "2022": 6910.0,
+        "2023": 6210.0,
+        "2024": 5830.0,
+        "2025e": 5700.0
+      },
+      "raw_values": {
+        "2021": "6240",
+        "2022": "6910",
+        "2023": "6210",
+        "2024": "5830",
+        "2025e": "5700"
+      }
+    },
+    {
+      "label": "Supply, apparent",
+      "footnote": null,
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 8020.0,
+        "2022": 8820.0,
+        "2023": 8070.0,
+        "2024": 7950.0,
+        "2025e": 7700.0
+      },
+      "raw_values": {
+        "2021": "8020",
+        "2022": "8820",
+        "2023": "8070",
+        "2024": "7950",
+        "2025e": "7700"
+      }
+    },
+    {
+      "label": "Price, ingot, average U.S. market (spot), cents per pound",
+      "footnote": "5",
+      "section": "Price, ingot, average U.S. market (spot), cents per pound",
+      "subsection": null,
+      "values": {
+        "2021": 138.5,
+        "2022": 152.6,
+        "2023": 125.9,
+        "2024": 129.5,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "138.5",
+        "2022": "152.6",
+        "2023": "125.9",
+        "2024": "129.5",
+        "2025e": "180"
+      }
+    },
+    {
+      "label": "Aluminum industry",
+      "footnote": null,
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 1870.0,
+        "2022": 2050.0,
+        "2023": 1820.0,
+        "2024": 1690.0,
+        "2025e": 1800.0
+      },
+      "raw_values": {
+        "2021": "1870",
+        "2022": "2050",
+        "2023": "1820",
+        "2024": "1690",
+        "2025e": "1800"
+      }
+    },
+    {
+      "label": "London Metal Exchange (LME), U.S. warehouses",
+      "footnote": "6",
+      "section": "Stocks, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 69.0,
+        "2022": 9.0,
+        "2023": 5.0,
+        "2024": 16.0,
+        "2025e": 8.0
+      },
+      "raw_values": {
+        "2021": "69",
+        "2022": "9",
+        "2023": "5",
+        "2024": "16",
+        "2025e": "8"
+      }
+    },
+    {
+      "label": "Employment, number",
+      "footnote": "7",
+      "section": "Employment, number",
+      "subsection": null,
+      "values": {
+        "2021": 28900.0,
+        "2022": 30200.0,
+        "2023": 30500.0,
+        "2024": 29900.0,
+        "2025e": 30000.0
+      },
+      "raw_values": {
+        "2021": "28900",
+        "2022": "30200",
+        "2023": "30500",
+        "2024": "29900",
+        "2025e": "30000"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 61.0,
+        "2022": 66.0,
+        "2023": 63.0,
+        "2024": 62.0,
+        "2025e": 60.0
+      },
+      "raw_values": {
+        "2021": "61",
+        "2022": "66",
+        "2023": "63",
+        "2024": "62",
+        "2025e": "60"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, ingot, average U.S. market (spot), cents per pound",
+      "unit_note": "Price, ingot, average U.S. market (spot), cents per pound",
+      "values": {
+        "2021": 138.5,
+        "2022": 152.6,
+        "2023": 125.9,
+        "2024": 129.5,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "138.5",
+        "2022": "152.6",
+        "2023": "125.9",
+        "2024": "129.5",
+        "2025e": "180"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": 660.0,
+  "secondary_smelting_latest": 1600.0,
+  "imports_total_latest": 5290.0,
+  "exports_total_latest": 3090.0,
+  "apparent_consumption_latest": 5700.0,
+  "price_usd_per_pound_latest": 180.0,
+  "net_import_reliance_pct_latest": 60.0,
+  "latest_year_sentinels": {},
+  "import_sources_flat": [
+    {
+      "country": "Canada",
+      "share_pct": 56.0
+    },
+    {
+      "country": "United Arab Emirates",
+      "share_pct": 8.0
+    },
+    {
+      "country": "Bahrain",
+      "share_pct": 4.0
+    },
+    {
+      "country": "China",
+      "share_pct": 3.0
+    },
+    {
+      "country": "other",
+      "share_pct": 29.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 56.0
+        },
+        {
+          "country": "United Arab Emirates",
+          "share_pct": 8.0
+        },
+        {
+          "country": "Bahrain",
+          "share_pct": 4.0
+        },
+        {
+          "country": "China",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 29.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Smelter Production and Capacity",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 676.0,
+      "production_latest_year": 660.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "676",
+      "production_latest_raw": "660",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 1570.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1570",
+      "production_latest_raw": "1500",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Bahrain",
+      "production_prev_year": 1620.0,
+      "production_latest_year": 1600.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1620",
+      "production_latest_raw": "1600",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 1100.0,
+      "production_latest_year": 1200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1100",
+      "production_latest_raw": "1200",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 3320.0,
+      "production_latest_year": 3300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3320",
+      "production_latest_raw": "3300",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "China",
+      "production_prev_year": 44000.0,
+      "production_latest_year": 45000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "44000",
+      "production_latest_raw": "45000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Iceland",
+      "production_prev_year": 742.0,
+      "production_latest_year": 750.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "742",
+      "production_latest_raw": "750",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "India",
+      "production_prev_year": 4200.0,
+      "production_latest_year": 4200.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "4200",
+      "production_latest_raw": "4200",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Malaysia",
+      "production_prev_year": 1050.0,
+      "production_latest_year": 1100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1050",
+      "production_latest_raw": "1100",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Norway",
+      "production_prev_year": 1300.0,
+      "production_latest_year": 1300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1300",
+      "production_latest_raw": "1300",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 3880.0,
+      "production_latest_year": 3900.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3880",
+      "production_latest_raw": "3900",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "United Arab Emirates",
+      "production_prev_year": 2690.0,
+      "production_latest_year": 2700.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2690",
+      "production_latest_raw": "2700",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 6680.0,
+      "production_latest_year": 7000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "6680",
+      "production_latest_raw": "7000",
+      "reserves_raw": null,
+      "note": null
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 72800.0,
+      "production_latest_year": 74000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "72800",
+      "production_latest_raw": "74000",
+      "reserves_raw": null,
+      "note": null
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. — Zero.",
+    "1": "See also the Bauxite and Alumina chapter.",
+    "2": "Defined as primary production + secondary production from old scrap + imports – exports ± adjustments for stock changes; excludes traded scrap.",
+    "3": "These calculations no longer include exported scrap, because its return to the domestic supply cannot be reliably determined.",
+    "4": "Defined as primary production + secondary production + imports – exports ± adjustments for stock changes; excludes traded scrap.",
+    "5": "Source: S&P Global Platts Metals Week.",
+    "6": "Includes off-warrant stocks of primary and alloyed aluminum.",
+    "7": "Alumina and aluminum production workers (North American Industry Classification System—3313). Source: U.S. Department of Labor, Bureau of Labor Statistics.",
+    "8": "Defined as imports – exports ± adjustments for industry stock changes; excludes traded scrap.",
+    "9": "Includes Hong Kong.",
+    "10": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "11": "See Appendix C for resource and reserve definitions and information concerning data sources."
+  }
+}

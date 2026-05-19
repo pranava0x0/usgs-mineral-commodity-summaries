@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-germanium.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-18
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `52d520ef79c4ad19…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in kilograms, germanium content, unless otherwise specified)
@@ -11,12 +11,12 @@
 
 | field | value |
 | --- | --- |
-| Mined production (US) | _Not available_ |
+| Mined production (US) | N/A |
 | Primary smelting / refinery (US) | 0 |
-| Secondary smelting / scrap (US) | _Not available_ |
+| Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 24,000 |
 | Exports (total) | 7,015 |
-| Apparent consumption | _Not available_ |
+| Apparent consumption | N/A |
 | Price, $ per pound | 4,100 |
 | Net import reliance (% of apparent consumption) | 50 |
 
@@ -25,18 +25,18 @@
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Primary |  | 0 | 0 | 0 | 0 | 0 |
-| Secondary |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Secondary |  | NA | NA | NA | NA | NA |
 | Germanium metal |  | 13,000 | 14,000 | 22,000 | 21,000 | 7,000 |
 | Germanium dioxide |  | 17,000 | 15,000 | 14,000 | 11,000 | 17,000 |
-| Germanium tetrachloride |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Germanium tetrachloride |  | NA | NA | NA | NA | NA |
 | Germanium metal |  | 5,500 | 6,600 | 6,000 | 9,000 | 7,000 |
 | Germanium dioxide |  | 430 | 130 | 110 | 92 | 15 |
-| Germanium tetrachloride |  | _Not available_ | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
-| Shipments from Government stockpile | 2 | 0 | 0 | _Not available_ | _Not available_ | _Not available_ |
-| Consumption, estimated | 3 | 30,000 | _Not available_ | _Not available_ | _Not available_ | _Not available_ |
+| Germanium tetrachloride |  | NA | NA | NA | NA | NA |
+| Shipments from Government stockpile | 2 | 0 | 0 | NA | NA | NA |
+| Consumption, estimated | 3 | 30,000 | NA | NA | NA | NA |
 | Germanium metal |  | 1,187 | 1,294 | 1,392 | 1,991 | 4,100 |
 | Germanium dioxide |  | 770 | 828 | 883 | 1,281 | 2,500 |
-| Net import reliance as a percentage of estimated consumption |  | 50 | 50 | 50 | 50 | 50 |
+| Net import reliance as a percentage of estimated consumption |  | >50 | >50 | >50 | >50 | >50 |
 
 ## Import Sources (2021-24)
 
