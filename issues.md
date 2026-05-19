@@ -67,3 +67,41 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 - **Symptom**: A WorldProductionRow with `country='2024'` and `prev=2025.0` is emitted from the molybdenum sheet, polluting the country axis of the wide CSV with a `world_prod__2024__*` block.
 - **Root cause**: Code bug — the bbox-based world-production parser doesn't filter out the year-header band (the row that just contains "2024" and "2025e" as column labels). For most sheets the header band sits inside the prose continuation filter; molybdenum's header band is structured enough to look like a data row.
 - **Status**: Open. Not blocking — affects one country slot in the CSV. To fix: add a filter that drops any row whose `country` is purely numeric / a 4-digit year, or detect the header by its position immediately under the section title.
+
+### #10 — CSV collapsed multi-category import sources into one row per element
+- **Module**: `src/csv_export.py`
+- **Symptom**: 20 USGS sheets break Import Sources into multiple commodity forms (antimony has 4 forms: Ore and concentrates / Oxide / Unwrought metal and powder / Total metal and oxide; abrasives has 7; chromium has 7; etc.). The exporter packed every form's country shares into a single element row using `imports__<cat>__<country>` columns, making it awkward to slice in pandas / Sheets.
+- **Root cause**: Design choice — the original exporter chose wide-on-category. User feedback: the UX page is fine as one detail panel, but the CSV should be long on category.
+- **Affected elements** (one CSV row per import-source category for each):
+  - 7 categories: abrasives, silicon-carbide (alias), superhard-materials (alias), chromium
+  - 4 categories: antimony, copper, manganese, niobium, tantalum, zinc
+  - 3 categories: germanium, magnesium, molybdenum, rhenium, silicon, vanadium
+  - 2 categories: diamond, diamond-powders (alias), nickel, tin
+- **Audited surfaces (no fix needed elsewhere)**: `src/audit.py` (`write_audit_report` already loops `import_sources_by_category` into separate Markdown sub-blocks); `viewer/viewer.js` (`importSourcesBlock` already renders one mini-table per category); `data/processed/elements.json` already stores categories as a nested list with their own `countries`. CSV was the only flattened surface.
+- **Fix**: Exporter now emits one row per `(element, import-source category)`. Country axis is flat (`imports__<country>`); new `import_category` identity column distinguishes the rows; world-production / reserves data is duplicated across an element's rows because USGS doesn't categorize it. Single-flat-list sheets (bismuth, graphite, indium, lithium, scandium, tellurium) still emit one row with `import_category=""`. Aliases inherit their parent's category set.
+- **Status**: Fixed in this session. Regression coverage: `tests/test_csv_export.py` (5 tests using small fixtures, no PDF I/O).
+
+### #11 — Stale elements.json was missing `kind` and `parent_slug` fields
+- **Module**: `data/processed/elements.json` (artifact, not code)
+- **Symptom**: The committed JSON had only 30 records and lacked `kind` / `parent_slug` for every element. Reading it back through pydantic silently filled defaults (`kind="primary"`, `parent_slug=None`), so a CSV regenerated from the stale JSON had `kind="primary"` for every alias (gallium-nitride, dysprosium, etc.).
+- **Root cause**: The JSON was committed before the model added `kind`/`parent_slug`. Pydantic accepts the older shape because the fields have defaults, so the discrepancy is invisible at load time.
+- **Fix**: Re-ran `python3 -m src.pipeline` against cached PDFs to regenerate `elements.json` (50 records: 29 primary, 6 sub_product, 15 rare_earth) and `elements.csv` (108 rows × 3706 cols). Aliases now carry correct kind/parent_slug.
+- **Status**: Fixed in this session (data refresh). No code change required; the parser was already producing the field — only the on-disk artifact was stale.
+
+### #12 — Country-share parser merges multiple countries when separator is "and"
+- **Module**: `src/parser.py` (import-sources splitter)
+- **Symptom**: Chromium's Ferrochromium row carries `"country": "Finland, 5%, and other"` instead of two entries (`Finland: 5%` + `other: 24%`); the Stainless steel row carries `"country": "Taiwan, 16%, Finland, 12%, India, 11%, China"` as one giant name. Similar smashing likely affects any USGS line that uses "and" as a separator between country shares.
+- **Root cause**: Code bug — the country splitter only breaks on `,` / `;`, but USGS sometimes writes `..., 5%, and other, ...` or runs multiple countries with intervening percentages.
+- **Status**: Open. Pre-existing (independent of #10). Surfaced while auditing #10 because the new long-format CSV makes per-category bad cells more visible. To fix: tokenise the line as `<country> <share>% (separator) ...` and split on the `<share>%` boundary rather than punctuation alone.
+
+### #13 — Three primary sheets fail to fetch (404)
+- **Module**: `src/config.py` (registry) / fetch URLs
+- **Symptom**: Running `python3 -m src.pipeline` against the full registry fails for `platinum-group-metals`, `titanium`, and `zirconium-and-hafnium` with HTTP 404, and their aliases (iridium, platinum, hafnium, zirconium) are skipped as a consequence.
+- **Root cause**: The MCS 2026 PDFs for those commodities are at different URLs than the registry's pattern assumes, or the slug doesn't match the USGS filename. (Spotted while regenerating data for #11.)
+- **Status**: Open. Pre-existing — not introduced here. The other 11 primaries fetch fine.
+
+### #11 — Scandium prose fragment parsed as a country name
+- **Module**: `src/parser.py` (import-sources parser)
+- **Symptom**: A new column `imports__although_there_are_no_domestic_trade_codes_for_scandium_materials_exclusively_shipping_records_indicated_scandium_oxide_was_imported_from_japan` appears in the wide CSV; the JSON also has this as a `country` value in `import_sources_*`. The text is the verbatim USGS prose explaining that scandium has no HTS code.
+- **Root cause**: Code bug — the parser greedily reads the line after "Import Sources" as country/share data, but on scandium that line is a prose explanation, not a country list.
+- **Status**: Open. Pre-existing (independent of #10). Was previously hidden behind the per-category column prefix. To fix: detect-and-skip lines that don't match the `<country>, <pct>%` shape before assigning them to `CountryShare`.

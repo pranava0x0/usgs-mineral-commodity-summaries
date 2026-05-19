@@ -1,11 +1,19 @@
 """Wide-table CSV export.
 
-One row per element/alias. Columns are grouped into sections:
+One row per (element/alias, import-source category). Multi-category sheets
+like antimony emit one row per category (Ore and concentrates / Oxide /
+Unwrought metal and powder / Total metal and oxide); single-category sheets
+like bismuth emit one row with `import_category=""`. The UX viewer still
+shows one detail panel per element (it reads the JSON, which keeps one record
+per element).
+
+Columns are grouped into sections:
 
   identity              slug, name, symbol, kind, parent_slug, source_url,
                         edition, edition_date, captured_at, pdf_sha256,
                         pdf_page_count, units_note, price_unit_note,
-                        latest_year, import_sources_range, world_production_label
+                        latest_year, import_sources_range, world_production_label,
+                        import_category
   latest-year summary   mined_production_latest, primary_smelting_latest,
                         secondary_smelting_latest, imports_total_latest,
                         exports_total_latest, apparent_consumption_latest,
@@ -16,20 +24,23 @@ One row per element/alias. Columns are grouped into sections:
   per-form price        price__<form>__<year>  (+ _raw)
 
   --- country sections (filled across all elements with N/A for missing) ---
-  imports               imports__<category>__<country>
-                        Category is "all" for single-list sheets (bismuth)
-                        or the USGS category name (antimony's Ore / Oxide / ...)
+  imports               imports__<country>
+                        Each row's share reflects the row's `import_category`
+                        only. Countries not in that category render as "N/A".
+                        The country axis is the alphabetical union across
+                        every category of every element.
   world production      world_prod__<country>__prev
                         world_prod__<country>__latest   (+ _raw)
                         world_prod__<country>__capacity
+                        (duplicated across all category rows for an element —
+                        production is not categorized.)
   world reserves        world_reserves__<country>  (+ _raw)
+                        (also duplicated across an element's category rows.)
 
-The country axis is the alphabetical union of every country appearing in any
-element's USGS table, with "World *" aggregate rows pushed to the end of each
-section. Cells where the country isn't tabulated for a given element are
-filled with "N/A" so the CSV is rectangular and pandas-friendly. Cells where
-USGS reported an em-dash (zero) keep "0"; cells where USGS reported "NA"
-also render as "N/A".
+The country axis sorts "World *" aggregate rows to the end of each section.
+Cells where the country isn't tabulated for a given element are filled with
+"N/A" so the CSV is rectangular and pandas-friendly. Em-dash (zero) keeps
+"0"; USGS-reported "NA" also renders as "N/A".
 
 That's many columns — explicitly OK'd. Expect 1000+ when run on the full
 registry.
@@ -43,7 +54,7 @@ import logging
 import re
 from typing import Iterable, Optional
 
-from .models import ElementRecord, YEAR_COLUMNS
+from .models import ElementRecord, ImportSourceCategory, YEAR_COLUMNS
 
 log = logging.getLogger(__name__)
 
@@ -56,16 +67,28 @@ def _slugify(s: str) -> str:
 
 
 def _val(v: Optional[float]) -> str:
-    """Numeric formatter — '' for None.
+    """Numeric formatter — 'N/A' for None.
 
-    Used for non-country cells where 'missing' is a different concept from
-    'reported NA' and we don't want to force a value.
+    Per user instruction: never leave a missing value blank. USGS-reported
+    em-dash "—" is converted to 0.0 upstream (USGS convention for "produced
+    zero") and renders as "0" here. Only genuinely missing values become N/A.
     """
     if v is None:
-        return ""
+        return "N/A"
     if isinstance(v, float) and v.is_integer():
         return str(int(v))
     return f"{v}"
+
+
+def _text(v: Optional[str]) -> str:
+    """Text formatter — 'N/A' for None or empty.
+
+    Used for identity/text fields (symbol, parent_slug, price_unit_note, etc.).
+    Empty source values are treated as missing.
+    """
+    if v is None or v == "":
+        return "N/A"
+    return str(v)
 
 
 def _country_val(v: Optional[float]) -> str:
@@ -95,27 +118,19 @@ def _sorted_countries(countries: Iterable[str]) -> list[str]:
     return primary + aggregates
 
 
-def _cat_slug(name: Optional[str]) -> str:
-    """Normalize an import-source category name to a slug.
-
-    `None` (bismuth-style flat list) becomes 'all'.
-    """
-    if name is None:
-        return "all"
-    return _slugify(name) or "all"
-
-
 def _collect_country_axes(records: list[ElementRecord]) -> dict:
-    """Pre-pass: build the union of (category × country) for each section.
+    """Pre-pass: build the union of countries for each section.
 
     Run before column registration so per-country columns are stable: every
     element gets the same imports / world-prod / reserves columns in the same
     order, regardless of which element appears first in the input.
 
+    Imports country axis is flat now (no category dimension) — the long-format
+    rows carry the category in their own `import_category` column.
+
     Also detects which countries have non-trivial `_raw` cells so we only
     emit `_raw` columns where they'll carry information.
     """
-    import_categories: set[str] = set()
     imports_countries: set[str] = set()
     world_countries: set[str] = set()
     world_latest_raw_countries: set[str] = set()
@@ -124,7 +139,6 @@ def _collect_country_axes(records: list[ElementRecord]) -> dict:
 
     for rec in records:
         for cat in rec.import_sources_by_category:
-            import_categories.add(_cat_slug(cat.category))
             for cs in cat.countries:
                 imports_countries.add(cs.country)
         # bismuth-style flat list is normally also in by_category as category=None,
@@ -141,7 +155,6 @@ def _collect_country_axes(records: list[ElementRecord]) -> dict:
                 reserves_raw_countries.add(wp.country)
 
     return {
-        "import_categories": sorted(import_categories),
         "imports_countries": _sorted_countries(imports_countries),
         "world_countries": _sorted_countries(world_countries),
         "world_latest_raw_countries": world_latest_raw_countries,
@@ -150,11 +163,36 @@ def _collect_country_axes(records: list[ElementRecord]) -> dict:
     }
 
 
+def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory]]:
+    """Return the list of import-source categories that should each become a CSV row.
+
+    - Multi-category sheets (antimony, molybdenum, abrasives, …) → one entry
+      per `ImportSourceCategory`.
+    - Single-category sheets (bismuth) → one entry with `category=None`.
+    - Sheets with only a flat list and no `by_category` → wrap the flat list
+      into a synthetic category entry.
+    - Sheets with no import sources at all → one `None` entry so the element
+      still appears in the CSV.
+    """
+    if rec.import_sources_by_category:
+        return list(rec.import_sources_by_category)
+    if rec.import_sources_flat:
+        return [ImportSourceCategory(category=None, countries=list(rec.import_sources_flat))]
+    return [None]
+
+
 def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, str]]]:
-    """Build (header columns in order, list of row dicts)."""
+    """Build (header columns in order, list of row dicts).
+
+    Emits one row per (element, import-source category). All identity / salient /
+    price / world-production columns are duplicated across an element's rows;
+    only the `imports__<country>` columns vary, reflecting the row's category.
+    """
     columns: list[str] = []
     seen: set[str] = set()
     rows: list[dict[str, str]] = []
+    # Parallel to `rows`: (record, category) for the country-fill pass.
+    row_meta: list[tuple[ElementRecord, Optional[ImportSourceCategory]]] = []
 
     def col(name: str) -> str:
         """Register a column on first sight; preserves discovery order."""
@@ -168,6 +206,7 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         "slug", "name", "symbol", "kind", "parent_slug", "source_url", "edition", "edition_date",
         "captured_at", "pdf_sha256", "pdf_page_count", "units_note", "price_unit_note",
         "latest_year", "import_sources_range", "world_production_label",
+        "import_category",
     ):
         col(name)
     # User-requested top-level columns
@@ -184,73 +223,78 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     # Salient-stats + price columns are still discovered lazily during the row
     # loop (their column space is shaped by per-element schemas, not unioned).
     for rec in records:
-        row: dict[str, str] = {}
-        row["slug"] = rec.slug
-        row["name"] = rec.name
-        row["symbol"] = rec.symbol or ""
-        row["kind"] = rec.kind
-        row["parent_slug"] = rec.parent_slug or ""
-        row["source_url"] = rec.source_url
-        row["edition"] = rec.edition
-        row["edition_date"] = rec.edition_date
-        row["captured_at"] = rec.captured_at
-        row["pdf_sha256"] = rec.pdf_sha256
-        row["pdf_page_count"] = str(rec.pdf_page_count)
-        row["units_note"] = rec.units_note
-        row["price_unit_note"] = rec.price_unit_note or ""
-        row["latest_year"] = rec.latest_year
-        row["import_sources_range"] = rec.import_sources_range or ""
-        row["world_production_label"] = rec.world_production_label or ""
+        for cat in _category_rows_for(rec):
+            row: dict[str, str] = {}
+            row["slug"] = rec.slug
+            row["name"] = rec.name
+            # Text identity fields: missing -> "N/A" (per user instruction:
+            # never blank, never fake; if it's not present, surface that).
+            row["symbol"] = _text(rec.symbol)
+            row["kind"] = rec.kind
+            row["parent_slug"] = _text(rec.parent_slug)
+            row["source_url"] = rec.source_url
+            row["edition"] = rec.edition
+            row["edition_date"] = rec.edition_date
+            row["captured_at"] = rec.captured_at
+            row["pdf_sha256"] = rec.pdf_sha256
+            row["pdf_page_count"] = str(rec.pdf_page_count)
+            row["units_note"] = _text(rec.units_note)
+            row["price_unit_note"] = _text(rec.price_unit_note)
+            row["latest_year"] = rec.latest_year
+            row["import_sources_range"] = _text(rec.import_sources_range)
+            row["world_production_label"] = _text(rec.world_production_label)
+            # import_category is structural — "" means "this row covers the
+            # element's only (uncategorized) import line"; not missing data.
+            row["import_category"] = (cat.category if cat and cat.category else "")
 
-        # Latest-year user columns
-        row["mined_production_latest"] = _val(rec.mined_production_latest)
-        row["primary_smelting_latest"] = _val(rec.primary_smelting_latest)
-        row["secondary_smelting_latest"] = _val(rec.secondary_smelting_latest)
-        row["imports_total_latest"] = _val(rec.imports_total_latest)
-        row["exports_total_latest"] = _val(rec.exports_total_latest)
-        row["apparent_consumption_latest"] = _val(rec.apparent_consumption_latest)
-        row["price_usd_per_pound_latest"] = _val(rec.price_usd_per_pound_latest)
-        row["net_import_reliance_pct_latest"] = _val(rec.net_import_reliance_pct_latest)
-        for sk in ("mined_production", "primary_smelting", "secondary_smelting",
-                   "apparent_consumption", "net_import_reliance"):
-            row[f"{sk}_latest_sentinel"] = rec.latest_year_sentinels.get(sk, "")
+            # Latest-year user columns
+            row["mined_production_latest"] = _val(rec.mined_production_latest)
+            row["primary_smelting_latest"] = _val(rec.primary_smelting_latest)
+            row["secondary_smelting_latest"] = _val(rec.secondary_smelting_latest)
+            row["imports_total_latest"] = _val(rec.imports_total_latest)
+            row["exports_total_latest"] = _val(rec.exports_total_latest)
+            row["apparent_consumption_latest"] = _val(rec.apparent_consumption_latest)
+            row["price_usd_per_pound_latest"] = _val(rec.price_usd_per_pound_latest)
+            row["net_import_reliance_pct_latest"] = _val(rec.net_import_reliance_pct_latest)
+            for sk in ("mined_production", "primary_smelting", "secondary_smelting",
+                       "apparent_consumption", "net_import_reliance"):
+                row[f"{sk}_latest_sentinel"] = rec.latest_year_sentinels.get(sk, "")
 
-        # Per-year, per-row salient stats. Column name format:
-        #   salient__<section_slug>__<label_slug>__<year>          (numeric)
-        #   salient__<section_slug>__<label_slug>__<year>_raw      (literal token)
-        for yr in YEAR_COLUMNS:
-            for rec_row in rec.salient_stats:
-                sec = _slugify(rec_row.section or "")
-                lbl = _slugify(rec_row.label)
-                col_name = col(f"salient__{sec}__{lbl}__{yr}")
-                row[col_name] = _val(rec_row.values.get(yr))
-                raw = (rec_row.raw_values or {}).get(yr)
-                if raw is not None and raw != "":
-                    raw_col = col(f"salient__{sec}__{lbl}__{yr}_raw")
-                    row[raw_col] = str(raw)
+            # Per-year, per-row salient stats. Column name format:
+            #   salient__<section_slug>__<label_slug>__<year>          (numeric)
+            #   salient__<section_slug>__<label_slug>__<year>_raw      (literal token)
+            for yr in YEAR_COLUMNS:
+                for rec_row in rec.salient_stats:
+                    sec = _slugify(rec_row.section or "")
+                    lbl = _slugify(rec_row.label)
+                    col_name = col(f"salient__{sec}__{lbl}__{yr}")
+                    row[col_name] = _val(rec_row.values.get(yr))
+                    raw = (rec_row.raw_values or {}).get(yr)
+                    if raw is not None and raw != "":
+                        raw_col = col(f"salient__{sec}__{lbl}__{yr}_raw")
+                        row[raw_col] = str(raw)
 
-        # Price quotes
-        for yr in YEAR_COLUMNS:
-            for pq in rec.price_quotes:
-                form = _slugify(pq.form)
-                col_name = col(f"price__{form}__{yr}")
-                row[col_name] = _val(pq.values.get(yr))
-                raw = (pq.raw_values or {}).get(yr)
-                if raw not in (None, ""):
-                    row[col(f"price__{form}__{yr}_raw")] = str(raw)
+            # Price quotes
+            for yr in YEAR_COLUMNS:
+                for pq in rec.price_quotes:
+                    form = _slugify(pq.form)
+                    col_name = col(f"price__{form}__{yr}")
+                    row[col_name] = _val(pq.values.get(yr))
+                    raw = (pq.raw_values or {}).get(yr)
+                    if raw not in (None, ""):
+                        row[col(f"price__{form}__{yr}_raw")] = str(raw)
 
-        rows.append(row)
+            rows.append(row)
+            row_meta.append((rec, cat))
 
     # ---- Country sections — registered after a pre-pass so columns are stable
     # across the full record set, and every cell is filled (N/A if absent) so
     # the CSV is rectangular for pandas / sheets consumers.
     axes = _collect_country_axes(records)
 
-    imports_col_names: dict[tuple[str, str], str] = {}
-    for cat_slug in axes["import_categories"]:
-        for country in axes["imports_countries"]:
-            cname = col(f"imports__{cat_slug}__{_slugify(country)}")
-            imports_col_names[(cat_slug, country)] = cname
+    imports_col_names: dict[str, str] = {}
+    for country in axes["imports_countries"]:
+        imports_col_names[country] = col(f"imports__{_slugify(country)}")
 
     world_prev_cols: dict[str, str] = {}
     world_latest_cols: dict[str, str] = {}
@@ -272,8 +316,10 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         if country in axes["reserves_raw_countries"]:
             reserves_raw_cols[country] = col(f"world_reserves__{c_slug}_raw")
 
-    # Second pass to fill the country cells.
-    for rec, row in zip(records, rows):
+    # Second pass to fill the country cells. Imports vary per row (one category
+    # each); world production and reserves are duplicated across an element's
+    # category rows because they aren't categorized by USGS.
+    for (rec, cat), row in zip(row_meta, rows):
         # Default every country cell to N/A; values overwrite as we find them.
         for cname in imports_col_names.values():
             row[cname] = "N/A"
@@ -290,15 +336,14 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
         for cname in reserves_raw_cols.values():
             row[cname] = ""
 
-        # Imports
-        for cat in rec.import_sources_by_category:
-            cs_slug = _cat_slug(cat.category)
+        # Imports — only the row's own category fills cells.
+        if cat is not None:
             for cs in cat.countries:
-                cname = imports_col_names.get((cs_slug, cs.country))
+                cname = imports_col_names.get(cs.country)
                 if cname is not None:
                     row[cname] = _country_val(cs.share_pct)
 
-        # World production
+        # World production — full table on every row of an element.
         for wp in rec.world_production:
             country = wp.country
             if country in world_prev_cols:
@@ -327,9 +372,15 @@ def write_csv(records: list[ElementRecord], out_path) -> None:
 
 
 def _render(columns: list[str], rows: list[dict[str, str]]) -> str:
+    """Render with 'N/A' as the default for any column we didn't explicitly fill.
+
+    Salient-stats and price columns are discovered lazily during the row loop —
+    any element whose schema lacks that column falls to this default. Per the
+    user's instruction (never blank, never fake), missing data renders as N/A.
+    """
     buf = io.StringIO()
     writer = csv.DictWriter(buf, fieldnames=columns, extrasaction="ignore")
     writer.writeheader()
     for r in rows:
-        writer.writerow({c: r.get(c, "") for c in columns})
+        writer.writerow({c: r.get(c, "N/A") for c in columns})
     return buf.getvalue()

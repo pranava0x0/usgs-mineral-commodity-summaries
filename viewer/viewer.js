@@ -12,7 +12,7 @@ const AUDIT_BASE = '../data/audit';
 const $ = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
 
-function fmt(value, { suffix = '', muted = 'Not available' } = {}) {
+function fmt(value, { suffix = '', muted = 'N/A' } = {}) {
   if (value === null || value === undefined || Number.isNaN(value)) {
     return `<span class="muted-cell">${muted}</span>`;
   }
@@ -99,9 +99,7 @@ function renderOverview(bundle) {
     $('#overview-footnote').innerHTML =
       `Showing <strong>${first.latest_year}</strong> values; ` +
       `<code>W</code> = withheld, <code>E</code> = net exporter, <code>&gt;95</code> = "more than 95%". ` +
-      `Null cells render as <em class="muted-cell">Not available</em> per ` +
-      `<a href="../DESIGN.md">DESIGN.md §11</a>. ` +
-      `<a href="data.csv" download class="csv-link">Download as CSV ↓</a>`;
+      `Missing values render as <em class="muted-cell">N/A</em>.`;
   }
 }
 
@@ -308,8 +306,106 @@ function screenshotsBlock(el) {
   return `<div class="screenshots">${figs.join('')}</div>`;
 }
 
+/* ---------- Exports ----------
+ * CSV is a plain <a download> — no JS needed.
+ * XLS builds an Office XML "Spreadsheet ML" file inline from the CSV. Excel,
+ * Numbers, and LibreOffice all open the .xls extension. No library.
+ * PDF triggers window.print(); a print stylesheet hides the page chrome so
+ * the resulting PDF is the data + currently-open detail panel.
+ */
+
+function setupExports() {
+  $('#export-xls').addEventListener('click', exportXls);
+  $('#export-pdf').addEventListener('click', () => window.print());
+}
+
+async function exportXls() {
+  // Read the same CSV the user can already download, then wrap each row in
+  // Office-XML cells. This guarantees byte-identical numbers across formats.
+  let csvText;
+  try {
+    const res = await fetch('data.csv');
+    csvText = await res.text();
+  } catch (err) {
+    alert('Failed to load data.csv for XLS export: ' + String(err));
+    return;
+  }
+
+  const rows = parseCsv(csvText);
+  if (!rows.length) return;
+
+  const xmlRows = rows.map(cells => {
+    const xmlCells = cells.map(cell => {
+      // Numbers (including signed/decimal); leave "N/A" and "W"/"E" as String.
+      if (/^-?\d+(?:\.\d+)?$/.test(cell)) {
+        return `<Cell><Data ss:Type="Number">${cell}</Data></Cell>`;
+      }
+      return `<Cell><Data ss:Type="String">${escapeXml(cell)}</Data></Cell>`;
+    }).join('');
+    return `<Row>${xmlCells}</Row>`;
+  }).join('');
+
+  const xml =
+    '<?xml version="1.0"?>\n' +
+    '<?mso-application progid="Excel.Sheet"?>\n' +
+    '<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"\n' +
+    ' xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet">\n' +
+    '<Worksheet ss:Name="Critical Minerals">\n' +
+    `<Table>${xmlRows}</Table>\n` +
+    '</Worksheet>\n</Workbook>';
+
+  const blob = new Blob([xml], { type: 'application/vnd.ms-excel' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'critical-minerals-mcs2026.xls';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  // Revoke after the download has had a beat to start.
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function parseCsv(text) {
+  // Minimal RFC-4180 parser: handles quoted cells, escaped quotes, and CRLF.
+  const rows = [];
+  let row = [];
+  let cell = '';
+  let inQuotes = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i];
+    if (inQuotes) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { cell += '"'; i++; }
+        else { inQuotes = false; }
+      } else {
+        cell += c;
+      }
+    } else {
+      if (c === '"') { inQuotes = true; }
+      else if (c === ',') { row.push(cell); cell = ''; }
+      else if (c === '\n') { row.push(cell); rows.push(row); row = []; cell = ''; }
+      else if (c === '\r') { /* swallow */ }
+      else { cell += c; }
+    }
+  }
+  if (cell.length > 0 || row.length > 0) { row.push(cell); rows.push(row); }
+  // Drop a trailing empty row if the file ended with a newline.
+  if (rows.length && rows[rows.length - 1].length === 1 && rows[rows.length - 1][0] === '') {
+    rows.pop();
+  }
+  return rows;
+}
+
+function escapeXml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&apos;'
+  }[c]));
+}
+
 async function main() {
   setupTheme();
+  setupExports();
   let bundle;
   try {
     const res = await fetch(DATA_PATH);

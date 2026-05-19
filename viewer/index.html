@@ -16,6 +16,11 @@
       <p class="subtitle">USGS Mineral Commodity Summaries · primary-source extraction</p>
     </div>
     <div class="header-meta">
+      <div class="export-group" role="group" aria-label="Export data">
+        <a id="export-csv" class="export-btn" href="data.csv" download="critical-minerals-mcs2026.csv" title="Download as CSV">CSV</a>
+        <button id="export-xls" class="export-btn" type="button" title="Download as Excel-compatible XML">XLS</button>
+        <button id="export-pdf" class="export-btn" type="button" title="Print or save as PDF">PDF</button>
+      </div>
       <span class="pill outline" id="edition-pill">MCS edition</span>
       <button id="theme-toggle" class="icon-btn" title="Toggle theme" aria-label="Toggle theme">☼</button>
     </div>
@@ -56,8 +61,7 @@
   <footer role="contentinfo" class="page-footer">
     <p>Data extracted from <a id="primary-source" href="#" rel="noopener">USGS MCS</a> ·
        generated <span id="generated-at"></span> ·
-       null values render as <em class="muted-cell">Not available</em> per
-       <a href="../DESIGN.md">DESIGN.md §11</a>.
+       missing values render as <em class="muted-cell">N/A</em> — no derived or substituted figures.
     </p>
   </footer>
 

@@ -137,9 +137,13 @@ def write_audit_report(record: ElementRecord, out_path: Path) -> None:
 
 
 def _fmt(value) -> str:
-    """Pretty-format a numeric/optional value for Markdown."""
+    """Pretty-format a numeric/optional value for Markdown.
+
+    Per user instruction: missing data renders as "N/A" — never blank, never
+    a substituted/fake value.
+    """
     if value is None:
-        return "_Not available_"
+        return "N/A"
     if isinstance(value, float):
         # show ints as ints; keep 2 dp for fractional
         if value.is_integer():
