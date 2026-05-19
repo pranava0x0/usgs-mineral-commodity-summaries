@@ -21,8 +21,11 @@ Columns are grouped into sections:
                         secondary_smelting_latest, imports_total_latest,
                         exports_total_latest, apparent_consumption_latest,
                         price_usd_per_pound_latest, net_import_reliance_pct_latest
-  per-form salient      salient__<section>__<label>__<year>
+  per-form salient      <section>__<label>__<year>  (when section ≠ label)
+                        <label>__<year>             (when section == label)
                         — e.g. antimony's "Imports - Oxide - 2025e" round-trips
+                        as `imports_for_consumption__oxide__2025e`. The earlier
+                        `salient__` namespace prefix was dropped as noise.
   per-form price        price__<form>__<year>
 
   --- per-country columns (filled across all elements with N/A for missing) ---
@@ -252,9 +255,18 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
     # Salient-stats + price columns are still discovered lazily during the row
     # loop (their column space is shaped by per-element schemas, not unioned).
     for rec in records:
-        for cat in _category_rows_for(rec):
+        cat_rows = _category_rows_for(rec)
+        # When a record emits >1 row, disambiguate the `name` column with
+        # the import category so a single Antimony entry becomes
+        #   "Antimony (Ore and concentrates)" / "Antimony (Oxide)" / …
+        # Single-row records keep the bare name.
+        annotate_name = len(cat_rows) > 1
+        for cat in cat_rows:
             row: dict[str, str] = {}
-            row["name"] = rec.name
+            if annotate_name and cat and cat.category:
+                row["name"] = f"{rec.name} ({cat.category})"
+            else:
+                row["name"] = rec.name
             row["kind"] = rec.kind
             row["source_url"] = rec.source_url
             row["captured_at"] = rec.captured_at
@@ -284,15 +296,23 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             row["net_import_reliance_pct_latest"] = _cell(
                 rec.net_import_reliance_pct_latest, rec.latest_year_sentinels.get("net_import_reliance"))
 
-            # Per-year, per-row salient stats. Each cell is a single
-            # mixed-type column: salient__<section_slug>__<label_slug>__<year>.
+            # Per-year, per-row salient stats. Column name format:
+            #   <section>__<label>__<year>   (when section and label differ)
+            #   <label>__<year>              (when section == label, e.g.
+            #                                 "Consumption, apparent" rows)
             # USGS sentinel tokens (W / E / >N / <N / NA) come through verbatim;
-            # everything else is numeric.
+            # everything else is numeric. The earlier `salient__` namespace
+            # prefix was stripped — it added noise without disambiguation
+            # (price columns keep `price__` because they shadow plain commodity
+            # rows when forms collide with section labels).
             for yr in YEAR_COLUMNS:
                 for rec_row in rec.salient_stats:
                     sec = _slugify(rec_row.section or "")
                     lbl = _slugify(rec_row.label)
-                    col_name = col(f"salient__{sec}__{lbl}__{yr}")
+                    if sec and sec != lbl:
+                        col_name = col(f"{sec}__{lbl}__{yr}")
+                    else:
+                        col_name = col(f"{lbl}__{yr}")
                     row[col_name] = _cell(
                         rec_row.values.get(yr), (rec_row.raw_values or {}).get(yr))
 

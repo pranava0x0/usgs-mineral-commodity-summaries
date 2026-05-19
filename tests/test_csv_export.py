@@ -126,7 +126,7 @@ class CsvLongFormatTests(unittest.TestCase):
         self.rows = _read(cols, rows)
 
     def test_antimony_has_four_rows(self) -> None:
-        antimony = [r for r in self.rows if r["name"] == "Antimony"]
+        antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
         self.assertEqual(len(antimony), 4)
         cats = [r["import_category"] for r in antimony]
         self.assertEqual(
@@ -134,8 +134,29 @@ class CsvLongFormatTests(unittest.TestCase):
             ["Ore and concentrates", "Oxide", "Unwrought metal and powder", "Total metal and oxide"],
         )
 
+    def test_multi_row_name_annotated_with_category(self) -> None:
+        """When an element is split across multiple CSV rows (one per import
+        category), each row's `name` cell carries the disambiguating category
+        in parentheses so a viewer / Sheets user can tell rows apart without
+        having to read the separate `import_category` column. Single-row
+        elements (bismuth) keep the bare name.
+        """
+        antimony_names = [r["name"] for r in self.rows if r["name"].startswith("Antimony")]
+        self.assertEqual(
+            antimony_names,
+            [
+                "Antimony (Ore and concentrates)",
+                "Antimony (Oxide)",
+                "Antimony (Unwrought metal and powder)",
+                "Antimony (Total metal and oxide)",
+            ],
+        )
+        # Bismuth has one row → no parenthesised tail.
+        bismuth_names = [r["name"] for r in self.rows if r["name"].startswith("Bismuth")]
+        self.assertEqual(bismuth_names, ["Bismuth"])
+
     def test_country_share_isolated_per_category(self) -> None:
-        antimony = {r["import_category"]: r for r in self.rows if r["name"] == "Antimony"}
+        antimony = {r["import_category"]: r for r in self.rows if r["name"].startswith("Antimony")}
         # Ore-and-concentrates row has Mexico=86 but China=N/A
         self.assertEqual(antimony["Ore and concentrates"]["mexico_imports_share_pct"], "86")
         self.assertEqual(antimony["Ore and concentrates"]["china_imports_share_pct"], "N/A")
@@ -144,7 +165,7 @@ class CsvLongFormatTests(unittest.TestCase):
         self.assertEqual(antimony["Oxide"]["mexico_imports_share_pct"], "N/A")
 
     def test_non_country_columns_identical_across_category_rows(self) -> None:
-        antimony = [r for r in self.rows if r["name"] == "Antimony"]
+        antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
         # World production is duplicated across all category rows for an
         # element (USGS doesn't categorise it), so the year-tagged column
         # must read the same on every row.
@@ -174,7 +195,7 @@ class CsvLongFormatTests(unittest.TestCase):
         # Replace records and rebuild
         cols, rows = build_rows([rec])
         rows = _read(cols, rows)
-        antimony = next(r for r in rows if r["name"] == "Antimony")
+        antimony = next(r for r in rows if r["name"].startswith("Antimony"))
 
         # Sentinel surfaces in the value column
         self.assertEqual(antimony["mined_production_latest"], "W")
@@ -199,7 +220,7 @@ class CsvLongFormatTests(unittest.TestCase):
         legacy = [c for c in self.cols if c.startswith(("world_prod__", "world_reserves__", "imports__"))]
         self.assertEqual(legacy, [], f"legacy columns leaked: {legacy[:5]}")
         # Values populate
-        antimony = next(r for r in self.rows if r["name"] == "Antimony")
+        antimony = next(r for r in self.rows if r["name"].startswith("Antimony"))
         self.assertEqual(antimony["china_production_2024"], "40000")
         self.assertEqual(antimony["china_production_2025e"], "40000")
 
@@ -217,7 +238,7 @@ class CsvLongFormatTests(unittest.TestCase):
         net_import_reliance, etc.); those must surface as 'N/A' so a CSV
         consumer can never confuse a missing reading with a present zero.
         """
-        antimony = next(r for r in self.rows if r["name"] == "Antimony")
+        antimony = next(r for r in self.rows if r["name"].startswith("Antimony"))
         # Numeric latest-year fields the fixture didn't set
         self.assertEqual(antimony["mined_production_latest"], "N/A")
         self.assertEqual(antimony["apparent_consumption_latest"], "N/A")
