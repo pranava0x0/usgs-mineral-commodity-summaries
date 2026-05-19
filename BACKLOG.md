@@ -182,6 +182,72 @@ table.
 - [x] **Per-rare-earth alias lost the $/kg unit** — fixed by composing
       `<form> (<unit>)` in the alias's `price_unit_note`.
 
+## Multi-category element audit — 2026-05-19
+
+Walked through every sheet that emits more than one CSV row (one row
+per import-source category). Most are clean; the issues below recur
+across multiple commodities and are the same *class* as rare-earths
+#R8 (semantic mismatch in the "Mined production" summary column).
+
+### Latest-year summary is N/A but the PDF reports production
+
+The summary's `mined_production_latest` / `primary_smelting_latest` /
+`secondary_smelting_latest` triplet only matches rows whose label or
+section keyword is `mine` / `primary` / `secondary` / `refinery`. Many
+sheets use different label conventions. Affected elements (latest-year
+values from the PDF in parens; current summary in column 2):
+
+| Element                 | Summary shows        | PDF reports                                 |
+| ----------------------- | -------------------- | ------------------------------------------- |
+| Abrasives (manufactured)| mine/primary/sec N/A | 4 production rows (fused Al₂O₃, SiC, metallic, shipments — no single total) |
+| Silicon                 | all N/A              | 1 row "Production, ferrosilicon and silicon metal" = `W` (withheld) |
+| Titanium                | all N/A              | 1 bare "Production" row = `—` (zero)        |
+| Rhenium                 | all N/A              | 1 bare "Production" row = `9,800`           |
+| Zirconium-and-hafnium   | all N/A              | 1 row "Production, zirconium ores and concentrates" = `<100,000` |
+| Iron-and-steel          | all N/A              | 4 rows (pig iron 21, raw steel 82, continuously-cast %, shipments 82) — already filed as issues.md #14 |
+
+Suggested fix: extend `_find_row` to (a) match a bare `Production`
+section as the `mine` fallback when no labelled mine row exists, and
+(b) match `production, <anything>` as the `mine` fallback when the
+section is anchored at "Production". For genuinely multi-product
+sheets (abrasives, silicon), pick the first production row OR leave
+N/A — same trade-off as rare-earths' multi-price summary.
+
+### Confirmed parser label-merging bugs
+
+These show up in audit reports and the CSV as nonsensical row labels:
+
+- [ ] **Tantalum** — under section "Shipments from Government stockpile",
+      the row label is `"NA Consumption, apparent"` with value `890`.
+      The stockpile cell value `NA` got concatenated onto the next
+      row's label. The real shape: stockpile row → NA; apparent
+      consumption row → 890. Likely in the label-continuation merge
+      in `_parse_salient_stats` (a leading short token like "NA" is
+      ambiguous with a label fragment).
+- [ ] **Rhenium** — under section "Employment, number", the row label
+      is `"Small Net import reliance as a percentage of apparent c…"`.
+      The Employment-number value (probably "Small") got prefixed to
+      the NIR row's wrapped label. Same root cause as the tantalum
+      one: tiny right-edge tokens are mis-classified as label
+      fragments.
+
+### Chromium "Stainless steel" import-sources truncated
+
+- [ ] **Chromium** — the `Stainless steel` import-source category
+      currently lists only `Taiwan, 16%; others, 55%`. The PDF lists
+      more countries (Finland, India, China). Surfaced by the country-
+      share parser bug already filed as issues.md #12 ("merges
+      multiple countries when separator is 'and'"). When that fix
+      lands, chromium's stainless-steel row should round-trip to 5+
+      countries.
+
+### Things that look correct
+
+Confirmed-good across the multi-category set: copper, manganese,
+niobium, nickel, molybdenum, tin, vanadium, zinc, diamond, germanium,
+magnesium. The Antimony / Rare-Earths audits earlier this session
+cover those.
+
 ## CSV pruning — 2026-05-19 inventory
 
 `elements.csv` currently sits at **135 rows × 2,305 cols**. Most of the
