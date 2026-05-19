@@ -84,6 +84,12 @@ class WorldProductionRow(BaseModel):
     production_latest_raw: Optional[str] = None
     reserves_raw: Optional[str] = None
     note: Optional[str] = None                     # e.g. "footnote 7" indicating "Reported"
+    # Per-metal latest-year production for grouped sheets that break the table
+    # into sub-columns (PGM splits Mine Production into Palladium + Platinum).
+    # Empty for elements whose world-production table has a single production
+    # column. Keys are the sub-metal display name as printed in the PDF
+    # header (e.g. "Palladium", "Platinum").
+    sub_metal_production_latest: dict[str, Optional[float]] = Field(default_factory=dict)
 
 
 class PriceQuote(BaseModel):
@@ -145,6 +151,12 @@ class ElementRecord(BaseModel):
     # Withheld / net-exporter markers for the latest year so the viewer / CSV
     # can show "W" or "E" instead of a blank when USGS suppresses the number.
     latest_year_sentinels: dict[str, str] = Field(default_factory=dict)
+
+    # Government Stockpile — FY 2025 Potential Acquisitions. Summed across
+    # material rows when the sheet lists more than one (e.g. tungsten lists
+    # "Ores and concentrates" + "Tungsten"; both contribute). None when the
+    # sheet says "Not available" or no Stockpile section exists.
+    stockpile_fy2025_potential_acquisitions: Optional[float] = None
 
     # Per-country breakdowns
     import_sources_flat: list[CountryShare] = Field(default_factory=list)  # bismuth-style single list

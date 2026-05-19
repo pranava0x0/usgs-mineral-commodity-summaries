@@ -605,21 +605,47 @@ def _parse_world_production(
 
     # Convert each band of words into cells, then classify rows
     column_titles: list[str] = []
+    sub_metals: list[str] = []
     data_bands: list[list[tuple[str, tuple[float, float, float, float]]]] = []
     saw_year_header = False
     year_header_tokens: list[str] = []  # verbatim year tokens captured from the year-sub-header band
 
     def _is_header_token(t: str) -> bool:
         s = t.strip().lower()
+        # PGM uses "PGM reserves"; Indium uses "Refinery capacity" — accept
+        # any " reserves" / " capacity" suffix so the column gets classified.
         return (
             s.endswith("production")
             or s.startswith("production capacity")
-            or s in {"reserves", "reserve base", "capacity"}
+            or s == "capacity"
+            or s.endswith(" capacity")
+            or s in {"reserves", "reserve base"}
+            or s.endswith(" reserves")
         )
 
     # USGS year tokens are "2024" or "2025" plain — sometimes "2025e" or "2025ᵉ"
     # when the estimated marker is rendered inline (rare in the world-prod band).
     _YEAR_RE = re.compile(r"^20\d\d[eᵉ]?$")
+
+    def _looks_like_submetal_row(texts: list[str]) -> bool:
+        """A sub-metal header row sits between the column-titles row and the
+        year-sub-header row when USGS splits a column by commodity sub-type
+        (PGM splits Mine Production into Palladium + Platinum). Identified by:
+        ≥2 cells, every cell is a short alphabetical label (no digits, no
+        section keywords, no country commas)."""
+        if len(texts) < 2:
+            return False
+        for t in texts:
+            s = t.strip()
+            if not s or len(s) > 24:
+                return False
+            if NUMERIC.match(s) or _YEAR_RE.match(s):
+                return False
+            if not all(c.isalpha() or c.isspace() or c == "-" for c in s):
+                return False
+            if _is_header_token(s):
+                return False
+        return True
 
     for _, band in rows_by_y:
         cells = _cluster_to_cells(band)
@@ -634,6 +660,18 @@ def _parse_world_production(
         # Single-cell header
         if len(cells) == 1 and _is_header_token(texts[0]):
             column_titles.append(texts[0])
+            continue
+        # Sub-metal header row (PGM-style) — must come after we've seen a
+        # production column-title, before the year row, and have ≥2
+        # alphabetical-only cells.
+        if (
+            column_titles
+            and not saw_year_header
+            and any(c.lower().endswith("production") for c in column_titles)
+            and _looks_like_submetal_row(texts)
+        ):
+            for t in texts:
+                sub_metals.append(t.strip())
             continue
         # Year sub-header row — capture the verbatim tokens so downstream
         # consumers (CSV exporter, viewer) can use the PDF's actual column
@@ -654,7 +692,7 @@ def _parse_world_production(
             continue
         data_bands.append(cells)
 
-    kinds = _infer_column_kinds(column_titles)
+    kinds = _infer_column_kinds(column_titles, sub_metals)
 
     rows: list[WorldProductionRow] = []
     for cells in data_bands:
@@ -669,6 +707,7 @@ def _parse_world_production(
         value_cells = cells[1:]
         prev = latest = capacity = reserves = None
         prev_raw = latest_raw = reserves_raw = None
+        sub_metal_latest: dict[str, Optional[float]] = {}
         for idx, (text, _bbox) in enumerate(value_cells):
             kind = kinds[idx] if idx < len(kinds) else None
             val, raw = _to_float(text)
@@ -680,6 +719,19 @@ def _parse_world_production(
                 capacity = val
             elif kind == "reserves":
                 reserves, reserves_raw = val, raw
+            elif kind and kind.startswith("submetal:"):
+                # `submetal:<name>:prev` / `submetal:<name>:latest`
+                _, name, slot = kind.split(":", 2)
+                if slot == "latest":
+                    sub_metal_latest[name] = val
+                    # Mirror the first sub-metal into the legacy prev/latest
+                    # fields so consumers that don't know about sub-metals
+                    # still see *some* production value for the country.
+                    if latest is None:
+                        latest, latest_raw = val, raw
+                elif slot == "prev":
+                    if prev is None:
+                        prev, prev_raw = val, raw
 
         rows.append(WorldProductionRow(
             country=country,
@@ -691,6 +743,7 @@ def _parse_world_production(
             production_latest_raw=latest_raw or None,
             reserves_raw=reserves_raw or None,
             note=note,
+            sub_metal_production_latest=sub_metal_latest,
         ))
 
         if country.lower().startswith("world total"):
@@ -749,22 +802,139 @@ def _cell_from_words(words: list[extractor.Word]) -> tuple[str, tuple[float, flo
     return text, bbox
 
 
-def _infer_column_kinds(column_titles: list[str]) -> list[str]:
-    """Map header strings to per-cell column kinds in data rows."""
+def _infer_column_kinds(column_titles: list[str], sub_metals: list[str] | None = None) -> list[str]:
+    """Map header strings to per-cell column kinds in data rows.
+
+    When `sub_metals` is non-empty (PGM's "Palladium" / "Platinum"), the
+    production column expands into one (prev, latest) pair per sub-metal,
+    encoded as `submetal:<name>:prev` / `submetal:<name>:latest`. The
+    data-row mapper unpacks those into `sub_metal_production_latest` on
+    the WorldProductionRow.
+    """
     titles_lower = [t.lower() for t in column_titles]
     kinds: list[str] = []
     saw_production = False
     for t in titles_lower:
         if t.endswith("production"):
-            kinds += ["prev", "latest"]
+            if sub_metals:
+                # One (prev, latest) pair per sub-metal — preserves PDF order.
+                for m in sub_metals:
+                    kinds.append(f"submetal:{m}:prev")
+                    kinds.append(f"submetal:{m}:latest")
+            else:
+                kinds += ["prev", "latest"]
             saw_production = True
-        elif t.startswith("production capacity"):
+        elif t.startswith("production capacity") or t == "capacity" or t.endswith(" capacity"):
             kinds.append("capacity")
-        elif t in {"reserves", "reserve base"}:
+        elif t in {"reserves", "reserve base"} or t.endswith(" reserves"):
             kinds.append("reserves")
     if not saw_production:
         kinds = ["prev", "latest"] + kinds
     return kinds
+
+
+# ---------------------------------------------------------------------------
+# Government Stockpile — small table with FY 2025 / FY 2026 columns
+# ---------------------------------------------------------------------------
+
+
+def _parse_government_stockpile(
+    header_line: Optional[extractor.TextLine],
+    section_lines: list[extractor.TextLine],
+) -> Optional[float]:
+    """Sum FY 2025 Potential Acquisitions across all material rows.
+
+    Layout (typical):
+        FY 2025                    FY 2026
+        Material   Potential       Potential       Potential       Potential
+                   acquisitions    disposals       acquisitions    disposals
+        <row 1>    <value>         <value>         <value>         <value>
+        <row 2>    ...
+
+    Some sheets break the column headers across multiple physical lines
+    ("Potential" / "acquisitions" on two separate text spans). We walk the
+    line stream, find any line that follows the header band and starts with
+    a non-numeric material label, then take its first numeric cell as the
+    FY 2025 Potential Acquisitions value. Em-dash "—" counts as 0 (USGS
+    convention); "NA" / "W" / "E" / non-numeric tokens count as missing.
+
+    Returns the sum across material rows, or None if the section says
+    "Not available" or has no parseable rows.
+    """
+    if header_line and "not available" in header_line.text.lower():
+        return None
+
+    # Stockpile tables always sit on the same page as their header. The
+    # generic section extractor walks past page boundaries until it finds
+    # the next section header; for sheets whose stockpile is at the bottom
+    # of page 1, that means we accidentally pick up page 2's page-header
+    # ("COBALT") and citation line ("...February 2026") — the "2026" tokens
+    # parse as numbers and pollute the sum. Confine to the header's page.
+    header_page = header_line.page if header_line else None
+    if header_page is not None:
+        section_lines = [l for l in section_lines if l.page == header_page]
+
+    # Skip header tokens. The header band ends after we've seen any of
+    # "Potential", "acquisitions", "disposals", or "Material" — once a
+    # following line starts with a value-looking word, we're into data.
+    HEADER_TOKENS = {"fy", "fy 2025", "fy 2026", "material", "potential",
+                     "acquisitions", "disposals"}
+
+    def _is_header_band(t: str) -> bool:
+        s = t.strip().lower()
+        return s in HEADER_TOKENS or s.startswith("fy ")
+
+    total: Optional[float] = None
+    seen_header = False
+    i = 0
+    while i < len(section_lines):
+        line = section_lines[i]
+        t = line.text.strip()
+        if not t:
+            i += 1
+            continue
+        if _is_header_band(t):
+            seen_header = True
+            i += 1
+            continue
+        if not seen_header:
+            # Prose lines that come BEFORE the header band (rare-earths-style
+            # narrative) — skip without considering as data.
+            i += 1
+            continue
+        # Data row: <label> <value> <value> <value> <value>. Some PDFs
+        # split the row across lines (label alone, then values on the next).
+        # We accept either: a single line with label + 4 values, or
+        # label-only followed by a values-only line.
+        parts = t.split()
+        # Find the first value-looking token in the line. Anything before
+        # it is the material label; anything from it onward is the values row.
+        first_val_idx = next(
+            (k for k, p in enumerate(parts) if _looks_like_value(p)),
+            None,
+        )
+        if first_val_idx is None or first_val_idx == 0:
+            # label-only line — peek ahead for a values line
+            if i + 1 < len(section_lines):
+                next_t = section_lines[i + 1].text.strip()
+                next_parts = next_t.split()
+                if next_parts and all(_looks_like_value(p) for p in next_parts):
+                    first_val = next_parts[0]
+                    v, _ = _to_float(first_val)
+                    if v is not None:
+                        total = (total or 0.0) + v
+                    i += 2
+                    continue
+            i += 1
+            continue
+        # Single line with label + values
+        first_val = parts[first_val_idx]
+        v, _ = _to_float(first_val)
+        if v is not None:
+            total = (total or 0.0) + v
+        i += 1
+
+    return total
 
 
 # ---------------------------------------------------------------------------
@@ -901,6 +1071,12 @@ def parse_element_pdf(slug: str) -> ElementRecord:
     if "WORLD_PROD" in sections:
         world_label, world_rows, world_year_prev, world_year_latest = _parse_world_production(
             section_header_lines["WORLD_PROD"], sections["WORLD_PROD"], words, lines,
+        )
+
+    stockpile_fy2025: Optional[float] = None
+    if "STOCKPILE" in sections:
+        stockpile_fy2025 = _parse_government_stockpile(
+            section_header_lines.get("STOCKPILE"), sections["STOCKPILE"],
         )
 
     footnotes = _parse_footnotes(lines)
@@ -1048,6 +1224,7 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         world_production_year_prev=world_year_prev,
         world_production_year_latest=world_year_latest,
         world_production=world_rows,
+        stockpile_fy2025_potential_acquisitions=stockpile_fy2025,
         footnotes=footnotes,
     )
     log.info("[%s] %d salient rows | %d price quotes | %d import categories | %d world rows",
