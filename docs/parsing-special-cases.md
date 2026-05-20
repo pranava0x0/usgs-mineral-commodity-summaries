@@ -256,6 +256,62 @@ capacity = 1,100. Antimony China mine = 40,000, reserves = 830,000.
 
 ---
 
+## Per-form import rows ("Mechanism A")
+
+**What:** A single-mineral sheet whose imports the PDF lists by **form**
+(antimony: ore / oxide / metal; germanium: metal / dioxide; tin: refined /
+scrap) emits one CSV row per import-source category. Each form row carries
+**only that form's imports/exports + its import-source country shares**; the
+mineral-wide summary (production, consumption, price, NIR) and the
+world-production / reserves table live on a **bare parent/total row**
+(`import_category=""`). This is the same parent + sub-row shape used for the
+true multi-mineral groups (PGM, iron-and-steel, titanium) — here applied to
+single minerals so a form row never repeats the sheet-wide import total.
+
+**Why:** previously every form row repeated the sheet total (e.g. antimony's
+`Oxide` row showed imports = 44,650, the all-forms total, instead of 39,000).
+That's the "group sum on a sub-item" problem. See BACKLOG "Repeat values in
+group/multi-form rows".
+
+**Scope:** primaries with >1 import category **and no alias children** —
+antimony, chromium, copper, germanium, magnesium, manganese, molybdenum,
+nickel, niobium, rhenium, silicon, tantalum, tin, vanadium, zinc (15 sheets).
+Group sheets that *have* aliases (abrasives, rare-earths, PGM,
+zirconium-and-hafnium) are handled via their aliases instead, NOT here.
+
+**Where:** [src/csv_export.py](../src/csv_export.py) — `_is_per_form_sheet`,
+`_form_summary` / `_best_form_row` (category→salient-form matcher), and the
+`_emit(... is_form=...)` dispatch in `build_rows`.
+
+**How the matcher works:** the import-source category label is matched to a
+salient import/export row by token overlap, after dropping the element name
+(non-distinctive) and applying a crude singular stem (`ore`~`ores`). It is
+**conservative** — an ambiguous tie or no overlap yields **N/A**, never a
+guess. A `Total`/`Combined` category carries the sheet total. Sheets whose
+salient does NOT break imports out by form (chromium, magnesium, niobium,
+tantalum) therefore show N/A on the form rows; the total survives on the
+parent (and on a `Total` category row when one exists).
+
+**The bare total row.** Sheets with no `Total`/`Combined` import category
+(copper, magnesium, manganese, nickel, tin) get a synthesized bare parent row
+so the sheet total isn't lost. Sheets that already have one show the total on
+both the parent and that category row (the category row keeps its own country
+shares) — minor, intentional redundancy.
+
+**Verify:** antimony — parent imports 44,650; `Oxide` form 39,000; `Ore and
+concentrates` 600. magnesium — bare parent imports 82; all three form rows
+N/A (no per-form salient). nickel — bare parent imports 145,000; `Primary
+nickel` 100,000; `…scrap` N/A.
+
+**Column note (2026-05-20):** the two summary columns
+`usgs_2025_total_primary_smelting` / `usgs_2025_total_secondary_smelting` were
+renamed to `…_primary_production` / `…_secondary_production` (the values cover
+mine + smelter + chemical-process output, so "production" is more accurate than
+"smelting"). The `ElementRecord` field names (`primary_smelting_latest`, …) and
+the `latest_year_sentinels` keys are unchanged — only the CSV headers moved.
+
+---
+
 ## Government Stockpile (summary column 9)
 
 **What:** The "Government Stockpile" section is a small table with FY 2025 /

@@ -18,6 +18,7 @@ from src.models import (
     ElementRecord,
     ImportSourceCategory,
     WorldProductionRow,
+    YearSeries,
 )
 
 
@@ -158,13 +159,15 @@ class CsvLongFormatTests(unittest.TestCase):
         # Block 5 — Reserves (last)
         self.assertEqual(self.cols[-1], f"{slugs[-1]}__reserves")
 
-    def test_antimony_has_four_rows(self) -> None:
+    def test_antimony_has_parent_plus_form_rows(self) -> None:
+        """Per-form layout: a bare parent/total row (import_category="") plus
+        one form row per import category (Mechanism A)."""
         antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
-        self.assertEqual(len(antimony), 4)
+        self.assertEqual(len(antimony), 5)  # 1 parent + 4 form rows
         cats = [r["import_category"] for r in antimony]
         self.assertEqual(
             cats,
-            ["Ore and concentrates", "Oxide", "Unwrought metal and powder", "Total metal and oxide"],
+            ["", "Ore and concentrates", "Oxide", "Unwrought metal and powder", "Total metal and oxide"],
         )
 
     def test_multi_row_name_annotated_with_category(self) -> None:
@@ -172,13 +175,14 @@ class CsvLongFormatTests(unittest.TestCase):
         self.assertEqual(
             antimony_names,
             [
+                "Antimony",  # bare parent/total row
                 "Antimony (Ore and concentrates)",
                 "Antimony (Oxide)",
                 "Antimony (Unwrought metal and powder)",
                 "Antimony (Total metal and oxide)",
             ],
         )
-        bismuth_names = [r["name"] for r in self.rows if r["name"].startswith("Bismuth")]
+        bismuth_names = [r["name"] for r in self.rows if r["name"] == "Bismuth"]
         self.assertEqual(bismuth_names, ["Bismuth"])
 
     def test_country_share_isolated_per_category(self) -> None:
@@ -230,19 +234,30 @@ class CsvLongFormatTests(unittest.TestCase):
 
     def test_summary_column_population(self) -> None:
         antimony = next(r for r in self.rows if r["name"].startswith("Antimony"))
-        self.assertEqual(antimony["usgs_2025_total_primary_smelting"], "700")
+        self.assertEqual(antimony["usgs_2025_total_primary_production"], "700")
         # Government stockpile populates
         self.assertEqual(antimony["government_stockpile_fy2025_potential_acquisitions"], "700")
         # Unset summary fields become N/A
         self.assertEqual(antimony["usgs_2025_total_mined_production"], "N/A")
 
-    def test_non_country_columns_identical_across_category_rows(self) -> None:
-        antimony = [r for r in self.rows if r["name"].startswith("Antimony")]
-        # World production / reserves are duplicated across all category rows.
-        for col in ("usgs_2025_total_primary_smelting", "units_note",
-                    "china__mine_production", "china__reserves"):
-            values = {r[col] for r in antimony}
-            self.assertEqual(len(values), 1, f"{col} differs across antimony category rows: {values}")
+    def test_per_form_summary_and_world_on_parent_only(self) -> None:
+        """Per-form layout: the mineral-wide summary + world-production table
+        live on the bare parent row; form rows carry only their own
+        imports/exports + import shares, everything else N/A."""
+        antimony = {r["import_category"]: r for r in self.rows if r["name"].startswith("Antimony")}
+        parent = antimony[""]
+        # Parent carries summary + world production + reserves.
+        self.assertEqual(parent["usgs_2025_total_primary_production"], "700")
+        self.assertEqual(parent["china__mine_production"], "40000")
+        self.assertEqual(parent["china__reserves"], "830000")
+        # Form rows have those blanked (world tables are mineral-wide, not per-form).
+        for cat in ("Ore and concentrates", "Oxide"):
+            self.assertEqual(antimony[cat]["usgs_2025_total_primary_production"], "N/A")
+            self.assertEqual(antimony[cat]["china__mine_production"], "N/A")
+            self.assertEqual(antimony[cat]["china__reserves"], "N/A")
+        # Identity columns stay identical across every row.
+        units = {r["units_note"] for r in antimony.values()}
+        self.assertEqual(len(units), 1)
 
     def test_sentinel_merged_into_value_column(self) -> None:
         rec = _antimony_fixture()
@@ -288,6 +303,132 @@ class CsvLongFormatTests(unittest.TestCase):
                                 f"{c!r} is blank for antimony — should be a value or 'N/A'")
 
 
+def _per_form_fixture() -> ElementRecord:
+    """Antimony-like single-mineral sheet WITH per-form salient rows, so the
+    Mechanism A category->form value extraction can be exercised."""
+    return ElementRecord(
+        slug="antimony", name="Antimony", symbol="Sb", kind="primary",
+        source_url="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-antimony.pdf",
+        edition="MCS 2026", edition_date="2026-02", captured_at="2026-05-20",
+        pdf_sha256="x", pdf_page_count=2,
+        units_note="(Data in metric tons unless otherwise specified)",
+        latest_year="2025e",
+        imports_total_latest=44650.0, exports_total_latest=3281.0,
+        mined_production_latest=None, primary_smelting_latest=700.0,
+        net_import_reliance_pct_latest=91.0,
+        salient_stats=[
+            YearSeries(label="Ore and concentrates", section="Imports for consumption",
+                       values={"2025e": 600.0}, raw_values={"2025e": "600"}),
+            YearSeries(label="Oxide", section="Imports for consumption",
+                       values={"2025e": 39000.0}, raw_values={"2025e": "39000"}),
+            YearSeries(label="Unwrought, powder", section="Imports for consumption",
+                       values={"2025e": 4500.0}, raw_values={"2025e": "4500"}),
+            YearSeries(label="Oxide", section="Exports",
+                       values={"2025e": 2900.0}, raw_values={"2025e": "2900"}),
+        ],
+        import_sources_by_category=[
+            ImportSourceCategory(category="Ore and concentrates",
+                                 countries=[CountryShare(country="Mexico", share_pct=86.0)]),
+            ImportSourceCategory(category="Oxide",
+                                 countries=[CountryShare(country="China", share_pct=66.0)]),
+            ImportSourceCategory(category="Unwrought metal and powder",
+                                 countries=[CountryShare(country="China", share_pct=22.0)]),
+            ImportSourceCategory(category="Total metal and oxide",
+                                 countries=[CountryShare(country="China", share_pct=55.0)]),
+        ],
+        world_production=[WorldProductionRow(country="China",
+                                             production_latest_year=40000.0, reserves=830000.0)],
+    )
+
+
+def _no_total_category_fixture() -> ElementRecord:
+    """Nickel-like sheet: import categories but NO 'Total' category, and only
+    one form broken out in the salient. The sheet total must survive on a bare
+    parent row, and the unmatched form must be N/A (not the sheet total)."""
+    return ElementRecord(
+        slug="nickel", name="Nickel", symbol="Ni", kind="primary",
+        source_url="https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nickel.pdf",
+        edition="MCS 2026", edition_date="2026-02", captured_at="2026-05-20",
+        pdf_sha256="x", pdf_page_count=2,
+        units_note="(Data in metric tons unless otherwise specified)",
+        latest_year="2025e",
+        imports_total_latest=145000.0, exports_total_latest=56000.0,
+        mined_production_latest=10000.0,
+        salient_stats=[
+            YearSeries(label="Primary", section="Imports for consumption",
+                       values={"2025e": 100000.0}, raw_values={"2025e": "100000"}),
+        ],
+        import_sources_by_category=[
+            ImportSourceCategory(category="Primary nickel",
+                                 countries=[CountryShare(country="Canada", share_pct=40.0)]),
+            ImportSourceCategory(category="Nickel-containing scrap",
+                                 countries=[CountryShare(country="Canada", share_pct=20.0)]),
+        ],
+        world_production=[WorldProductionRow(country="Canada",
+                                             production_latest_year=10000.0)],
+    )
+
+
+class MechanismAPerFormTests(unittest.TestCase):
+    """Mechanism A: single-mineral sheets emit a bare parent/total row plus
+    per-import-form rows that carry only their own imports/exports + shares."""
+
+    def _rows(self, rec: ElementRecord) -> dict[str, dict[str, str]]:
+        cols, rows = csv_export.build_rows([rec])
+        rows = _read(cols, rows)
+        return {r["import_category"]: r for r in rows}
+
+    def test_parent_row_holds_summary_and_world(self) -> None:
+        rows = self._rows(_per_form_fixture())
+        parent = rows[""]
+        self.assertEqual(parent["name"], "Antimony")
+        self.assertEqual(parent["imports_for_consumption_total"], "44650")
+        self.assertEqual(parent["exports_total"], "3281")
+        self.assertEqual(parent["usgs_2025_total_primary_production"], "700")
+        self.assertEqual(parent["net_import_reliance_pct"], "91")
+        self.assertEqual(parent["china__mine_production"], "40000")
+        self.assertEqual(parent["china__reserves"], "830000")
+
+    def test_form_rows_carry_only_their_form_value(self) -> None:
+        rows = self._rows(_per_form_fixture())
+        # Oxide grabs the oxide salient value, NOT the sheet total.
+        self.assertEqual(rows["Oxide"]["imports_for_consumption_total"], "39000")
+        self.assertEqual(rows["Oxide"]["exports_total"], "2900")
+        self.assertEqual(rows["Ore and concentrates"]["imports_for_consumption_total"], "600")
+        # Fuzzy match: category "Unwrought metal and powder" -> salient "Unwrought, powder".
+        self.assertEqual(rows["Unwrought metal and powder"]["imports_for_consumption_total"], "4500")
+        # Everything non-form on a form row is N/A.
+        for col in ("usgs_2025_total_mined_production", "usgs_2025_total_primary_production",
+                    "consumption_apparent", "net_import_reliance_pct",
+                    "china__mine_production", "china__reserves"):
+            self.assertEqual(rows["Oxide"][col], "N/A", f"Oxide {col} should be N/A")
+        # Import shares still land on the form row.
+        self.assertEqual(rows["Oxide"]["china__imports_share_pct"], "66")
+        self.assertEqual(rows["Ore and concentrates"]["mexico__imports_share_pct"], "86")
+
+    def test_total_category_row_carries_sheet_total(self) -> None:
+        rows = self._rows(_per_form_fixture())
+        self.assertEqual(rows["Total metal and oxide"]["imports_for_consumption_total"], "44650")
+        self.assertEqual(rows["Total metal and oxide"]["exports_total"], "3281")
+
+    def test_no_total_category_gets_bare_parent_row(self) -> None:
+        rows = self._rows(_no_total_category_fixture())
+        # A bare parent row preserves the sheet total even with no Total category.
+        self.assertIn("", rows)
+        self.assertEqual(rows[""]["name"], "Nickel")
+        self.assertEqual(rows[""]["imports_for_consumption_total"], "145000")
+        self.assertEqual(rows[""]["usgs_2025_total_mined_production"], "10000")
+        # Matched form gets its value; unmatched form is N/A (never the sheet total).
+        self.assertEqual(rows["Primary nickel"]["imports_for_consumption_total"], "100000")
+        self.assertEqual(rows["Nickel-containing scrap"]["imports_for_consumption_total"], "N/A")
+
+    def test_renamed_columns_present(self) -> None:
+        self.assertIn("usgs_2025_total_primary_production", csv_export.SUMMARY_COLUMNS)
+        self.assertIn("usgs_2025_total_secondary_production", csv_export.SUMMARY_COLUMNS)
+        self.assertNotIn("usgs_2025_total_primary_smelting", csv_export.SUMMARY_COLUMNS)
+        self.assertNotIn("usgs_2025_total_secondary_smelting", csv_export.SUMMARY_COLUMNS)
+
+
 class IronAndSteelSpecialCasingTests(unittest.TestCase):
     """End-to-end coverage for the iron-and-steel parent + sub-product
     special casing (user spec 2026-05-19). Pulls the live CSV produced
@@ -312,11 +453,11 @@ class IronAndSteelSpecialCasingTests(unittest.TestCase):
         return next(r for r in self.rows if r["name"] == name)
 
     def test_parent_row_primary_smelting_is_sum(self) -> None:
-        """Iron and Steel parent's `usgs_2025_total_primary_smelting` equals
+        """Iron and Steel parent's `usgs_2025_total_primary_production` equals
         Pig iron (21) + Raw steel (82) = 103. `mined_production` stays N/A
         (both rows are post-mine smelting per user spec)."""
         parent = self._row("Iron and Steel")
-        self.assertEqual(parent["usgs_2025_total_primary_smelting"], "103")
+        self.assertEqual(parent["usgs_2025_total_primary_production"], "103")
         self.assertEqual(parent["usgs_2025_total_mined_production"], "N/A")
 
     def test_sub_product_rows_only_have_primary_and_country(self) -> None:
@@ -333,11 +474,11 @@ class IronAndSteelSpecialCasingTests(unittest.TestCase):
         )
         for name, expected_primary, expected_china in cases:
             row = self._row(name)
-            self.assertEqual(row["usgs_2025_total_primary_smelting"], expected_primary)
+            self.assertEqual(row["usgs_2025_total_primary_production"], expected_primary)
             # mined → N/A (was previously echoing the primary value)
             self.assertEqual(row["usgs_2025_total_mined_production"], "N/A")
             # All other summary fields blanked
-            for c in ("usgs_2025_total_secondary_smelting",
+            for c in ("usgs_2025_total_secondary_production",
                       "imports_for_consumption_total", "exports_total",
                       "consumption_apparent", "price_metal_average_dollars_per_pound",
                       "net_import_reliance_pct",
@@ -406,8 +547,8 @@ class TitaniumSplitTests(unittest.TestCase):
         self.assertEqual(parent["kind"], "primary")
         self.assertEqual(parent["import_category"], "")
         for c in ("usgs_2025_total_mined_production",
-                  "usgs_2025_total_primary_smelting",
-                  "usgs_2025_total_secondary_smelting",
+                  "usgs_2025_total_primary_production",
+                  "usgs_2025_total_secondary_production",
                   "imports_for_consumption_total", "exports_total",
                   "consumption_apparent", "price_metal_average_dollars_per_pound",
                   "net_import_reliance_pct"):
@@ -428,7 +569,7 @@ class TitaniumSplitTests(unittest.TestCase):
         self.assertEqual(row["kind"], "sub_product")
         self.assertEqual(row["import_category"], "Sponge metal")
         # Production (US sponge ceased 2024) lands in primary_smelting = 0.
-        self.assertEqual(row["usgs_2025_total_primary_smelting"], "0")
+        self.assertEqual(row["usgs_2025_total_primary_production"], "0")
         self.assertEqual(row["imports_for_consumption_total"], "44000")
         self.assertEqual(row["exports_total"], "63")
         self.assertEqual(row["consumption_apparent"], "44000")
@@ -446,7 +587,7 @@ class TitaniumSplitTests(unittest.TestCase):
         row = self._row("Titanium (dioxide)")
         self.assertEqual(row["kind"], "sub_product")
         self.assertEqual(row["import_category"], "TiO pigment")
-        self.assertEqual(row["usgs_2025_total_primary_smelting"], "1000000")
+        self.assertEqual(row["usgs_2025_total_primary_production"], "1000000")
         self.assertEqual(row["imports_for_consumption_total"], "230000")
         self.assertEqual(row["exports_total"], "330000")
         self.assertEqual(row["consumption_apparent"], "900000")

@@ -53,6 +53,7 @@ import logging
 import re
 from typing import Iterable, Optional
 
+from .config import ALIASES
 from .countries import CANONICAL_COUNTRIES, canonical_slugs, map_country
 from .models import ElementRecord, ImportSourceCategory
 
@@ -143,8 +144,8 @@ IDENTITY_COLUMNS: tuple[str, ...] = (
 
 SUMMARY_COLUMNS: tuple[str, ...] = (
     "usgs_2025_total_mined_production",
-    "usgs_2025_total_primary_smelting",
-    "usgs_2025_total_secondary_smelting",
+    "usgs_2025_total_primary_production",
+    "usgs_2025_total_secondary_production",
     "imports_for_consumption_total",
     "exports_total",
     "consumption_apparent",
@@ -238,6 +239,96 @@ def _aggregate_country_values(
     return out
 
 
+# --- Per-form (Mechanism A) splitting --------------------------------------
+#
+# Single-mineral sheets whose imports the PDF lists by FORM (antimony: ore /
+# oxide / metal; germanium: metal / dioxide) get one CSV row per form. Each
+# form row carries ONLY that form's imports/exports + its import-source country
+# shares; the mineral-wide summary + world-production table live on a bare
+# parent/total row (import_category=""). This mirrors the parent + sub-row shape
+# used for groups (PGM, iron-and-steel, titanium) — see pipeline._make_alias.
+#
+# Group sheets (those that have alias children — abrasives, rare-earths, PGM,
+# zirconium-and-hafnium, …) are NOT handled here; their per-mineral split runs
+# through the aliases instead.
+_PARENTS_WITH_ALIASES: set[str] = {
+    el.parent_slug for el in ALIASES.values() if el.parent_slug
+}
+
+# Generic words to ignore when matching an import-source category label to a
+# salient import/export form row. The element name is dropped dynamically
+# (e.g. "manganese" is non-distinctive on the manganese sheet).
+_FORM_STOP = {
+    "and", "or", "the", "of", "for", "a", "an", "in", "to", "from",
+    "content", "gross", "weight", "includes", "principal", "all",
+    "grades", "including",
+}
+
+
+def _stem(t: str) -> str:
+    """Crude singular stem so 'ore' matches 'ores', 'concentrate'~'concentrates'."""
+    return t[:-1] if t.endswith("s") and len(t) > 3 else t
+
+
+def _form_tokens(s: str, drop: set[str]) -> set[str]:
+    return {
+        _stem(t)
+        for t in _NON_ALNUM.split(s.lower())
+        if t and t not in _FORM_STOP and _stem(t) not in drop
+    }
+
+
+def _is_per_form_sheet(rec: ElementRecord) -> bool:
+    """True for a single-mineral primary whose imports are listed by form
+    (>1 import category) and that has no alias children. These get the bare
+    parent row + per-form row layout."""
+    if rec.kind != "primary" or rec.slug in _PARENTS_WITH_ALIASES:
+        return False
+    return len([c for c in rec.import_sources_by_category if c.category]) > 1
+
+
+def _best_form_row(category: str, salient, section_kw: str, drop: set[str]):
+    """Highest token-overlap salient row in `section_kw`, or None on no match
+    or an ambiguous tie. Conservative on purpose: ambiguity → N/A, never a guess."""
+    ct = _form_tokens(category, drop)
+    if not ct:
+        return None
+    scored = sorted(
+        (
+            (len(ct & _form_tokens(r.label, drop)), r)
+            for r in salient
+            if r.section and r.section.lower().startswith(section_kw)
+        ),
+        key=lambda x: -x[0],
+    )
+    if not scored or scored[0][0] == 0:
+        return None
+    if len(scored) > 1 and scored[0][0] == scored[1][0]:
+        return None
+    return scored[0][1]
+
+
+def _form_summary(
+    rec: ElementRecord, category: str
+) -> tuple[Optional[float], Optional[str], Optional[float], Optional[str]]:
+    """(import_val, import_raw, export_val, export_raw) for one import-form
+    category. A 'Total'/'Combined' category carries the sheet total; otherwise
+    match the category to a salient import/export form row (or N/A)."""
+    low = category.lower()
+    if "total" in low or "combined" in low:
+        return (rec.imports_total_latest, None, rec.exports_total_latest, None)
+    drop = {_stem(t) for t in _NON_ALNUM.split(rec.name.lower()) if t}
+    ly = rec.latest_year
+    imp = _best_form_row(category, rec.salient_stats, "import", drop)
+    exp = _best_form_row(category, rec.salient_stats, "export", drop)
+    return (
+        imp.values.get(ly) if imp else None,
+        (imp.raw_values or {}).get(ly) if imp else None,
+        exp.values.get(ly) if exp else None,
+        (exp.raw_values or {}).get(ly) if exp else None,
+    )
+
+
 def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, str]]]:
     """Build (header columns in order, list of row dicts)."""
     # Pre-compute the country axis once — it's fixed by the spec.
@@ -305,14 +396,11 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             prod_by_canonical = _aggregate_country_values(prod_items)
             capacity_by_canonical = _aggregate_country_values(cap_items)
 
-        cat_rows = _category_rows_for(rec)
-        annotate_name = len(cat_rows) > 1
-
-        for cat in cat_rows:
+        def _emit(cat, *, is_form: bool, annotate: bool) -> None:
             row: dict[str, str] = {}
 
             # Identity
-            if annotate_name and cat and cat.category:
+            if annotate and cat and cat.category:
                 row["name"] = f"{rec.name} ({cat.category})"
             else:
                 row["name"] = rec.name
@@ -324,33 +412,47 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
             row["world_production_label"] = _text(rec.world_production_label)
             row["import_category"] = (cat.category if cat and cat.category else "")
 
-            # Summary
-            row["usgs_2025_total_mined_production"] = _cell(
-                rec.mined_production_latest,
-                rec.latest_year_sentinels.get("mined_production"),
-            )
-            row["usgs_2025_total_primary_smelting"] = _cell(
-                rec.primary_smelting_latest,
-                rec.latest_year_sentinels.get("primary_smelting"),
-            )
-            row["usgs_2025_total_secondary_smelting"] = _cell(
-                rec.secondary_smelting_latest,
-                rec.latest_year_sentinels.get("secondary_smelting"),
-            )
-            row["imports_for_consumption_total"] = _val(rec.imports_total_latest)
-            row["exports_total"] = _val(rec.exports_total_latest)
-            row["consumption_apparent"] = _cell(
-                rec.apparent_consumption_latest,
-                rec.latest_year_sentinels.get("apparent_consumption"),
-            )
-            row["price_metal_average_dollars_per_pound"] = _val(rec.price_usd_per_pound_latest)
-            row["net_import_reliance_pct"] = _cell(
-                rec.net_import_reliance_pct_latest,
-                rec.latest_year_sentinels.get("net_import_reliance"),
-            )
-            row["government_stockpile_fy2025_potential_acquisitions"] = _val(
-                rec.stockpile_fy2025_potential_acquisitions
-            )
+            # Summary. A form row carries ONLY its form's imports/exports; the
+            # mineral-wide summary (production, consumption, price, NIR, totals)
+            # lives on the bare parent/total row.
+            if is_form:
+                imp_v, imp_raw, exp_v, exp_raw = _form_summary(rec, cat.category)
+                row["usgs_2025_total_mined_production"] = "N/A"
+                row["usgs_2025_total_primary_production"] = "N/A"
+                row["usgs_2025_total_secondary_production"] = "N/A"
+                row["imports_for_consumption_total"] = _cell(imp_v, imp_raw)
+                row["exports_total"] = _cell(exp_v, exp_raw)
+                row["consumption_apparent"] = "N/A"
+                row["price_metal_average_dollars_per_pound"] = "N/A"
+                row["net_import_reliance_pct"] = "N/A"
+                row["government_stockpile_fy2025_potential_acquisitions"] = "N/A"
+            else:
+                row["usgs_2025_total_mined_production"] = _cell(
+                    rec.mined_production_latest,
+                    rec.latest_year_sentinels.get("mined_production"),
+                )
+                row["usgs_2025_total_primary_production"] = _cell(
+                    rec.primary_smelting_latest,
+                    rec.latest_year_sentinels.get("primary_smelting"),
+                )
+                row["usgs_2025_total_secondary_production"] = _cell(
+                    rec.secondary_smelting_latest,
+                    rec.latest_year_sentinels.get("secondary_smelting"),
+                )
+                row["imports_for_consumption_total"] = _val(rec.imports_total_latest)
+                row["exports_total"] = _val(rec.exports_total_latest)
+                row["consumption_apparent"] = _cell(
+                    rec.apparent_consumption_latest,
+                    rec.latest_year_sentinels.get("apparent_consumption"),
+                )
+                row["price_metal_average_dollars_per_pound"] = _val(rec.price_usd_per_pound_latest)
+                row["net_import_reliance_pct"] = _cell(
+                    rec.net_import_reliance_pct_latest,
+                    rec.latest_year_sentinels.get("net_import_reliance"),
+                )
+                row["government_stockpile_fy2025_potential_acquisitions"] = _val(
+                    rec.stockpile_fy2025_potential_acquisitions
+                )
 
             # Default every country cell to N/A across all 5 blocks.
             for cname in imports_cols:
@@ -377,30 +479,45 @@ def build_rows(records: list[ElementRecord]) -> tuple[list[str], list[dict[str, 
                         if name == canonical:
                             row[f"{slug}__imports_share_pct"] = _cell(v, raw)
 
-            # Production / Capacity / Reserves — same across an element's rows.
-            if block == "mine":
-                for canonical, (v, raw) in prod_by_canonical.items():
-                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
-                        if name == canonical:
-                            row[f"{slug}__mine_production"] = _cell(v, raw)
-            elif block == "refinery":
-                for canonical, (v, raw) in prod_by_canonical.items():
-                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
-                        if name == canonical:
-                            row[f"{slug}__refinery_production"] = _cell(v, raw)
-                for canonical, (v, raw) in capacity_by_canonical.items():
-                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
-                        if name == canonical:
-                            row[f"{slug}__capacity"] = _cell(v, raw)
+            # Production / Capacity / Reserves live on parent/normal rows only.
+            # Form rows are import/export-specific; the world tables are
+            # mineral-wide, so they belong on the parent/total row.
+            if not is_form:
+                if block == "mine":
+                    for canonical, (v, raw) in prod_by_canonical.items():
+                        for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                            if name == canonical:
+                                row[f"{slug}__mine_production"] = _cell(v, raw)
+                elif block == "refinery":
+                    for canonical, (v, raw) in prod_by_canonical.items():
+                        for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                            if name == canonical:
+                                row[f"{slug}__refinery_production"] = _cell(v, raw)
+                    for canonical, (v, raw) in capacity_by_canonical.items():
+                        for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                            if name == canonical:
+                                row[f"{slug}__capacity"] = _cell(v, raw)
 
-            # Reserves are populated for any element whose USGS table has
-            # them — independent of the mine/refinery placement decision.
-            for canonical, (v, raw) in reserves_by_canonical.items():
-                for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
-                    if name == canonical:
-                        row[f"{slug}__reserves"] = _cell(v, raw)
+                # Reserves — independent of the mine/refinery placement decision.
+                for canonical, (v, raw) in reserves_by_canonical.items():
+                    for slug, name in zip(country_slugs, CANONICAL_COUNTRIES):
+                        if name == canonical:
+                            row[f"{slug}__reserves"] = _cell(v, raw)
 
             rows.append(row)
+
+        if _is_per_form_sheet(rec):
+            # Bare parent/total row (mineral-wide summary + world table) + one
+            # form row per import category (its own imports/exports + shares).
+            _emit(None, is_form=False, annotate=False)
+            for cat in rec.import_sources_by_category:
+                if cat.category:
+                    _emit(cat, is_form=True, annotate=True)
+        else:
+            cat_rows = _category_rows_for(rec)
+            annotate_name = len(cat_rows) > 1
+            for cat in cat_rows:
+                _emit(cat, is_form=False, annotate=annotate_name)
 
     return columns, rows
 
