@@ -558,8 +558,14 @@ def _parse_world_production(
     section_label = header_line.text.split(":")[0]
 
     # Confine ourselves to the world-prod section's y-range on each page.
+    # Use the header line's vertical CENTER, not its bottom: a PDF line box is
+    # taller than its visible glyphs, so a sub-commodity header sitting on the
+    # very next row (iron-and-steel's "Pig iron" / "Raw steel", ~1pt below the
+    # "World Production:" box bottom) would be excluded if we cut at bbox[3].
+    # The header's own words start at bbox[1] (top), always above the center,
+    # so they stay excluded.
     pages = sorted({l.page for l in section_lines if l.text.strip()} | {header_line.page})
-    y_min = header_line.bbox[3]  # below the header line
+    y_min = (header_line.bbox[1] + header_line.bbox[3]) / 2.0  # header vertical center
     y_max = max((l.bbox[3] for l in section_lines if l.text.strip()), default=y_min + 600.0)
 
     in_range = [w for w in words if w.page in pages and y_min <= w.bbox[1] <= y_max + 2]
@@ -609,6 +615,13 @@ def _parse_world_production(
     data_bands: list[list[tuple[str, tuple[float, float, float, float]]]] = []
     saw_year_header = False
     year_header_tokens: list[str] = []  # verbatim year tokens captured from the year-sub-header band
+    # When the section header itself is a production table ("World Production:",
+    # "World Mine Production and Reserves:"), a sub-commodity band can appear
+    # with NO explicit "X production" column-title row. Iron-and-steel does
+    # this — "Pig iron" / "Raw steel" are the only sub-headers, sitting
+    # directly under "World Production:". We allow sub-metal detection in
+    # that case too.
+    header_is_production = "production" in section_label.lower()
 
     def _is_header_token(t: str) -> bool:
         s = t.strip().lower()
@@ -661,14 +674,22 @@ def _parse_world_production(
         if len(cells) == 1 and _is_header_token(texts[0]):
             column_titles.append(texts[0])
             continue
-        # Sub-metal header row (PGM-style) — must come after we've seen a
-        # production column-title, before the year row, and have ≥2
-        # alphabetical-only cells.
+        # Sub-metal / sub-commodity header row. Two shapes:
+        #   PGM:           ["Palladium", "Platinum"] under a "Mine production"
+        #                  column-title row.
+        #   iron-and-steel:["Pig iron", "Raw steel"] directly under the
+        #                  "World Production:" section header (no column title).
+        # Either way: before the year row, ≥2 alphabetical-only cells, and
+        # the table is a production table (column title ends "production" OR
+        # the section header is a production header).
         if (
-            column_titles
-            and not saw_year_header
-            and any(c.lower().endswith("production") for c in column_titles)
+            not saw_year_header
+            and not sub_metals
             and _looks_like_submetal_row(texts)
+            and (
+                any(c.lower().endswith("production") for c in column_titles)
+                or (header_is_production and not column_titles)
+            )
         ):
             for t in texts:
                 sub_metals.append(t.strip())
@@ -829,7 +850,18 @@ def _infer_column_kinds(column_titles: list[str], sub_metals: list[str] | None =
         elif t in {"reserves", "reserve base"} or t.endswith(" reserves"):
             kinds.append("reserves")
     if not saw_production:
-        kinds = ["prev", "latest"] + kinds
+        if sub_metals:
+            # Sub-commodity table with no explicit "X production" column title
+            # (iron-and-steel: "Pig iron" / "Raw steel" under "World
+            # Production:"). Each sub-metal has a (prev, latest) pair, leftmost,
+            # ahead of any capacity / reserves columns already collected.
+            prod_kinds: list[str] = []
+            for m in sub_metals:
+                prod_kinds.append(f"submetal:{m}:prev")
+                prod_kinds.append(f"submetal:{m}:latest")
+            kinds = prod_kinds + kinds
+        else:
+            kinds = ["prev", "latest"] + kinds
     return kinds
 
 

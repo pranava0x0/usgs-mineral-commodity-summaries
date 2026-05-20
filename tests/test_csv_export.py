@@ -321,11 +321,19 @@ class IronAndSteelSpecialCasingTests(unittest.TestCase):
 
     def test_sub_product_rows_only_have_primary_and_country(self) -> None:
         """Pig iron / Raw steel rows: only `primary_smelting` summary and
-        the refinery_production per-country block. Everything else N/A."""
-        for name, expected in (("Iron and Steel (Pig iron)", "21"),
-                               ("Iron and Steel (Raw steel)", "82")):
+        the refinery_production per-country block. Everything else N/A.
+
+        Crucially the per-country values DIFFER between sub-products — the
+        USGS World Production table splits into Pig iron / Raw steel
+        sub-columns, so China shows pig iron 830 vs raw steel 980.
+        """
+        cases = (
+            ("Iron and Steel (Pig iron)", "21", "830"),
+            ("Iron and Steel (Raw steel)", "82", "980"),
+        )
+        for name, expected_primary, expected_china in cases:
             row = self._row(name)
-            self.assertEqual(row["usgs_2025_total_primary_smelting"], expected)
+            self.assertEqual(row["usgs_2025_total_primary_smelting"], expected_primary)
             # mined → N/A (was previously echoing the primary value)
             self.assertEqual(row["usgs_2025_total_mined_production"], "N/A")
             # All other summary fields blanked
@@ -340,8 +348,17 @@ class IronAndSteelSpecialCasingTests(unittest.TestCase):
             self.assertTrue(import_cols)
             for c in import_cols:
                 self.assertEqual(row[c], "N/A", f"{name}: {c} should be N/A")
-            # Refinery block IS populated — China is a known iron-and-steel producer
-            self.assertEqual(row["china__refinery_production"], "830")
+            # Refinery block shows THIS sub-commodity's per-country value
+            self.assertEqual(row["china__refinery_production"], expected_china,
+                             f"{name}: china refinery should be {expected_china}")
+
+    def test_parent_per_country_is_sum_of_sub_commodities(self) -> None:
+        """Iron and Steel parent's per-country refinery = Pig iron + Raw
+        steel (China 830 + 980 = 1810), consistent with the summary
+        primary_smelting = 21 + 82 = 103."""
+        parent = self._row("Iron and Steel")
+        self.assertEqual(parent["china__refinery_production"], "1810")
+        self.assertEqual(parent["united_states__refinery_production"], "103")
 
 
 if __name__ == "__main__":

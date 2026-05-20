@@ -444,18 +444,18 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
       N/A (per user — both rows are post-mine smelting). Sub-product rows
       (Pig iron / Raw steel) now strip to only primary_smelting +
       refinery_production country block; all other fields N/A.
-- [ ] **Iron and Steel sub-products inherit parent's combined per-country
-      refinery numbers** — `Iron and Steel (Pig iron)` and `Iron and Steel
-      (Raw steel)` rows both display the same `china__refinery_production
-      = 830`. The USGS World Production table reports a single combined
-      column for iron-and-steel (no pig-iron / raw-steel split per
-      country), so the sub-product aliases inherit that figure verbatim.
-      That's misleading: China's actual pig-iron-only or raw-steel-only
-      output is some unknown fraction of 830. Options when we revisit:
-      (a) blank the per-country refinery block on sub-products (cleanest,
-      loses info), (b) keep but render with a "combined parent figure"
-      disclaimer in the viewer, or (c) estimate a split using the US
-      pig:raw ratio (21:82 ≈ 20:80) as a synthetic proxy.
+- [x] **Iron and Steel sub-products inherit parent's combined per-country
+      refinery numbers** — RESOLVED. The earlier assumption (single
+      combined World Production column) was wrong: the USGS table DOES
+      split into "Pig iron" / "Raw steel" sub-columns, exactly like PGM's
+      Pd / Pt. The parser missed it because there's no explicit "X
+      production" column-title row (the sub-headers sit directly under
+      "World Production:") AND the header line's tall bbox overlapped the
+      sub-header row, excluding it from the y-range. Fixed by (a) using the
+      header's vertical center as `y_min`, and (b) allowing sub-metal
+      detection when the section header itself is a production table. Now
+      China shows pig iron 830 vs raw steel 980; the parent shows the sum
+      (1810) consistent with its summary primary_smelting (103).
 - [ ] **Canonical country list audit (post-revision)** — the user revised
       the canonical list to 94 entries on 2026-05-19. The shorter list
       means more USGS countries fall to `map_country() → None` than
