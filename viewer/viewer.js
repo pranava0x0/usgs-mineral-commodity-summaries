@@ -216,7 +216,15 @@ function showDetail(el, { initial = false } = {}) {
   }
 }
 
+// Year columns for the salient-stats table. The trailing entry carries the
+// USGS estimated marker — 2021–2024 are reported actuals, the latest year is
+// a preliminary USGS estimate. `YEAR_KEYS` are the data keys in the JSON;
+// `YEAR_LABELS` are what we render (estimate spelled out, not a cryptic "e").
 const YEARS = ['2021', '2022', '2023', '2024', '2025e'];
+const YEAR_LABELS = {
+  '2021': '2021', '2022': '2022', '2023': '2023', '2024': '2024',
+  '2025e': '2025<sup title="USGS estimate — preliminary, not finalized">e</sup>',
+};
 
 function salientBlock(el) {
   // Group rows by their `section` so the table reads "Production / Imports /
@@ -256,7 +264,7 @@ function salientBlock(el) {
         <thead>
           <tr>
             <th>Row</th>
-            ${YEARS.map(y => `<th class="num">${y}</th>`).join('')}
+            ${YEARS.map(y => `<th class="num">${YEAR_LABELS[y] || y}</th>`).join('')}
           </tr>
         </thead>
         <tbody>${rows}</tbody>
@@ -267,6 +275,10 @@ function salientBlock(el) {
     <div style="grid-column: 1 / -1">
       <h4 class="eyebrow">Salient Statistics — United States</h4>
       ${tables}
+      <p class="muted-cell" style="margin-top:.5rem;font-size:.85em">
+        <strong>e</strong> = USGS estimate. The latest year is a preliminary
+        estimate; 2021–2024 are reported actuals.
+      </p>
     </div>
   `;
 }
