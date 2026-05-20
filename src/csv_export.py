@@ -175,8 +175,13 @@ def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory
     PGM aliases (palladium, platinum, …); the grouped parent represents
     the aggregate, so splitting it twice was double-counting visual
     information.
+
+    Same logic for the titanium parent: its two import categories ("Sponge
+    metal" / "TiO pigment") move to the titanium-sponge-metal /
+    titanium-dioxide sub-rows, so the de-blended parent collapses to one
+    bare row.
     """
-    if rec.slug == "platinum-group-metals":
+    if rec.slug in ("platinum-group-metals", "titanium"):
         return [None]
     if rec.import_sources_by_category:
         return list(rec.import_sources_by_category)

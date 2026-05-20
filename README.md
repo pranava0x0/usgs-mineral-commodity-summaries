@@ -26,9 +26,12 @@ Currently covered (MCS 2026 edition):
 - **Grouped-sheet aliases (`kind="grouped"`)** — inherit a grouped parent
   verbatim because USGS only reports at the group level: Iridium, Platinum
   (← platinum-group-metals); Hafnium, Zirconium (← zirconium-and-hafnium).
-- **Sub-product aliases (`kind="sub_product"`)** — downstream products that
-  share parent data: Diamond powders, Gallium nitride, Graphite anodes,
-  Lithium batteries, Silicon carbide, Superhard materials.
+- **Sub-product aliases (`kind="sub_product"`)** — downstream products or
+  per-commodity splits derived from a parent sheet: Diamond powders, Gallium
+  nitride, Graphite anodes, Lithium batteries, Silicon carbide, Superhard
+  materials; Iron and Steel (Pig iron / Raw steel); Titanium (sponge/metal) and
+  Titanium (dioxide) — the titanium sheet stacks two commodities, so the parent
+  de-blends and each sub-row carries its own figures.
 
 Each record's `kind` field surfaces this taxonomy so the viewer / CSV can
 filter by category (e.g. "REE only", "PGM only"). See

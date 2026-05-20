@@ -334,6 +334,28 @@ ALIASES: dict[str, Element] = {
         parent_filter="Raw steel",
         notes="US raw steel production row from the iron-and-steel sheet.",
     ),
+    # Titanium sub-products. The "TITANIUM AND TITANIUM DIOXIDE" sheet stacks
+    # TWO complete salient sub-tables — "Titanium sponge metal:" and
+    # "TiO2 pigment:" — each with its own Production / Imports / Exports /
+    # Consumption / Price / NIR rows. The generic summary blends them (imports
+    # are SUMMED across both commodities; consumption/price/NIR silently take
+    # only the first sub-table), which is meaningless because the two are
+    # different materials. We fan the parent out into these two rows so each
+    # commodity carries its own per-commodity figures + import-source category.
+    # Unlike iron-and-steel (which splits only production), titanium's split is
+    # full-table, so these aliases carry the full summary, not just production.
+    "titanium-sponge-metal": Element(
+        slug="titanium-sponge-metal", name="Titanium (sponge/metal)", symbol="Ti",
+        mcs_url=_mcs("titanium"), kind="sub_product", parent_slug="titanium",
+        parent_filter="sponge",
+        notes="Titanium sponge metal sub-table from the titanium sheet. US sponge production ceased in 2024; the US is ~100% import-reliant.",
+    ),
+    "titanium-dioxide": Element(
+        slug="titanium-dioxide", name="Titanium (dioxide)", symbol="Ti",
+        mcs_url=_mcs("titanium"), kind="sub_product", parent_slug="titanium",
+        parent_filter="dioxide",
+        notes="Titanium dioxide (TiO2) pigment sub-table from the titanium sheet. US is a net exporter of TiO2 pigment (NIR = E).",
+    ),
     # Zirconium + hafnium — share a single combined USGS sheet.
     # Same workflow as PGMs: parent holds the data, members inherit verbatim.
     "hafnium": Element(slug="hafnium", name="Hafnium", symbol="Hf",

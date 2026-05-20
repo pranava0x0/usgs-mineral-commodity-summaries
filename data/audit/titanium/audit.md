@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-titanium.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-19
+- **Captured**: 2026-05-20
 - **PDF SHA-256**: `c93f5a562e3b3270…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons unless otherwise specified)
@@ -14,13 +14,15 @@
 | Mined production (US) | N/A |
 | Primary smelting / refinery (US) | N/A |
 | Secondary smelting / scrap (US) | N/A |
-| Imports for consumption (total) | 274,000 |
-| Exports (total) | 330,063 |
-| Apparent consumption | 44,000 |
-| Price, $ per pound | 12 |
-| Net import reliance (% of apparent consumption) | 100 |
+| Imports for consumption (total) | N/A |
+| Exports (total) | N/A |
+| Apparent consumption | N/A |
+| Price, $ per pound | N/A |
+| Net import reliance (% of apparent consumption) | N/A |
 
 ## Salient Statistics (US) — full table
+
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -58,7 +60,23 @@
 
 ## World Sponge Metal Production and Sponge and Pigment Capacity
 
-_Not reported._
+| country | prev-yr | latest-yr | capacity | reserves | note |
+| --- | ---: | ---: | ---: | ---: | --- |
+| United States | W | 0 | N/A | N/A |  |
+| Australia | 0 | 0 | N/A | N/A |  |
+| Canada | 0 | 0 | N/A | N/A |  |
+| China | 256,000 | 260,000 | N/A | N/A |  |
+| Germany | 0 | 0 | N/A | N/A |  |
+| India | 300 | 300 | N/A | N/A |  |
+| Japan | 57,000 | 53,000 | N/A | N/A |  |
+| Kazakhstan | 19,000 | 16,000 | N/A | N/A |  |
+| Mexico | 0 | 0 | N/A | N/A |  |
+| Russia | 33,000 | 25,000 | N/A | N/A |  |
+| Saudi Arabia | 14,000 | 12,000 | N/A | N/A |  |
+| Ukraine | 0 | 0 | N/A | N/A |  |
+| United Kingdom | 0 | 0 | N/A | N/A |  |
+| Other countries | 0 | 0 | N/A | N/A |  |
+| World total (rounded) | 380,000 | 370,000 | N/A | N/A | footnote 8 |
 
 ## Footnotes (verbatim)
 

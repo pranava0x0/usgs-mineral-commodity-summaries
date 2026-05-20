@@ -154,6 +154,77 @@ US — Pig iron 21, Raw steel 82, parent 103.
 
 ---
 
+## Titanium — two stacked salient sub-tables (sponge metal / TiO₂)
+
+**What:** The sheet titled "TITANIUM AND TITANIUM DIOXIDE" packs **two complete
+salient sub-tables** into one Salient Statistics block — `Titanium sponge metal:`
+then `TiO2 pigment:` — each with its own Production / Imports / Exports /
+Consumption / Price / NIR rows:
+
+```
+Titanium sponge metal:
+  Production                  W   W   W   W   —
+  Imports for consumption     ... ...        44,000
+  Exports                                        63
+  Consumption, apparent                      44,000
+  Price, dollars per kilogram                    12
+  Net import reliance ...                       100
+TiO2 pigment:
+  Production                              1,000,000
+  Imports for consumption                  230,000
+  Exports                                  330,000
+  Consumption, apparent                    900,000
+  Price, dollars per metric ton              3,200
+  Net import reliance ...                        E   (net exporter)
+```
+
+**Why bespoke:** the generic summary treats the whole block as one commodity,
+so it **blended** the two — `_latest_value_by_section` SUMMED imports
+(44,000 + 230,000 = 274,000) and exports (330,063), while consumption / price /
+NIR silently took only the *first* sub-table (sponge). Neither commodity's
+figure was recoverable. (The `Titanium sponge metal:` / `TiO2 pigment:` group
+headers are dropped by the generic salient parser — a data-row that is itself a
+section header, like "Production", resets `current_subsection`, so they don't
+survive as subsections. We don't fight that here; see below.)
+
+**Decision (user, 2026-05-20):** mirror iron-and-steel — keep a `titanium`
+parent **plus** two sub-product rows (3 rows total). Unlike iron-and-steel
+(whose sub-products differ only in *production*), titanium's two sub-tables are
+*complete*, so the sub-rows carry the **full** per-commodity summary, not just
+production.
+
+**Where:** [src/config.py](../src/config.py) (`titanium-sponge-metal`,
+`titanium-dioxide` aliases, `parent_filter="sponge"/"dioxide"`);
+[src/pipeline.py](../src/pipeline.py) `_postprocess_record` (parent de-blend),
+`_titanium_salient_groups` + `_fill_titanium_group_summary` (split + per-group
+summary), `_make_alias` (titanium branch — placed **before** the iron-and-steel
+`sub_product` branch since titanium is also `sub_product` *with* a
+`parent_filter`); [src/csv_export.py](../src/csv_export.py) `_category_rows_for`
+(parent collapses to one bare row, like the PGM grouped parent).
+
+**How the split works:**
+- **Boundary detection** — the two sub-tables are concatenated in source order
+  and the second restarts at `Production`, so `_titanium_salient_groups` splits
+  at the first row whose `section` repeats one already seen. (Robust for the
+  two-table shape; if a future edition merges the tables, the second group is
+  empty and the dioxide row falls to all-N/A rather than crashing.)
+- **Production placement** — sponge reduction / TiO₂ pigment manufacture are
+  post-mine processing, so production lands in `primary_smelting_latest` (same
+  column iron-and-steel uses). Sponge = 0 (US ceased 2024), TiO₂ = 1,000,000.
+- **Import sources** — the parent's two categories (`Sponge metal`,
+  `TiO pigment`) move to the matching sub-row; the de-blended parent shows none.
+- **Price unit** — carried per sub-row (`$/kg` for sponge, `$/metric ton` for
+  TiO₂) since the two differ. The NIR `E` (net exporter) sentinel on TiO₂
+  survives into `latest_year_sentinels`.
+
+**Verify:** parent `Titanium` — all summary cells N/A. `Titanium (sponge/metal)`
+— primary_smelting 0, imports 44,000, exports 63, consumption 44,000, price 12,
+NIR 100, Japan import 77%. `Titanium (dioxide)` — primary_smelting 1,000,000,
+imports 230,000, exports 330,000, consumption 900,000, price 3,200, NIR `E`,
+Canada import 45%. No titanium row shows the old 274,000 / 330,063 blend.
+
+---
+
 ## Block placement (mine vs refinery)
 
 **What:** Each element's world-production rows go into either the **Mine

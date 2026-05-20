@@ -91,6 +91,26 @@ def _postprocess_record(rec: ElementRecord) -> None:
                 vals = [v for v in sm.values() if v is not None]
                 wp.production_latest_year = sum(vals) if vals else None
 
+    if rec.slug == "titanium":
+        # The "TITANIUM AND TITANIUM DIOXIDE" sheet stacks two independent
+        # salient sub-tables (titanium sponge metal, then TiO2 pigment). The
+        # generic summary blends them: imports/exports get SUMMED across both
+        # commodities (44,000 sponge + 230,000 TiO2 = 274,000) while
+        # consumption/price/NIR silently take only the first sub-table. Neither
+        # commodity's figure is recoverable from the blend, so null the combined
+        # summary on the parent — the real per-commodity numbers live on the
+        # titanium-sponge-metal / titanium-dioxide sub-product rows.
+        rec.mined_production_latest = None
+        rec.primary_smelting_latest = None
+        rec.secondary_smelting_latest = None
+        rec.imports_total_latest = None
+        rec.exports_total_latest = None
+        rec.apparent_consumption_latest = None
+        rec.price_usd_per_pound_latest = None
+        rec.price_unit_note = None
+        rec.net_import_reliance_pct_latest = None
+        rec.latest_year_sentinels = {}
+
     if rec.slug == "rare-earths":
         # The rare-earths sheet quotes 9 separate REE-oxide prices in $/kg.
         # There is no single representative "rare earths price" — picking the
@@ -113,6 +133,78 @@ def _first_value(rec: ElementRecord, label_prefix: str) -> Optional[float]:
         if row.label.lower().startswith(pfx):
             return row.values.get(rec.latest_year)
     return None
+
+
+def _titanium_salient_groups(
+    salient: list[YearSeries],
+) -> tuple[list[YearSeries], list[YearSeries]]:
+    """Split titanium's two stacked salient sub-tables (sponge metal, TiO2).
+
+    The USGS sheet groups its salient rows under "Titanium sponge metal:" and
+    "TiO2 pigment:" headers. The generic parser drops those group headers, but
+    the two sub-tables are concatenated in source order and the second one
+    restarts at "Production" — so the boundary is the first row whose section
+    repeats one already seen. Returns (sponge_metal_rows, dioxide_rows); the
+    second list is empty if no boundary is found (defensive — keeps callers
+    from blowing up if a future edition collapses the two tables).
+    """
+    seen: set[str] = set()
+    boundary: Optional[int] = None
+    for idx, row in enumerate(salient):
+        key = (row.section or row.label or "").strip().lower()
+        if key and key in seen:
+            boundary = idx
+            break
+        seen.add(key)
+    if boundary is None:
+        return list(salient), []
+    return list(salient[:boundary]), list(salient[boundary:])
+
+
+def _fill_titanium_group_summary(
+    rec: ElementRecord, rows: list[YearSeries], latest_year: str
+) -> None:
+    """Populate an alias's summary from ONE of titanium's salient sub-tables.
+
+    Reuses the parser's section-scoped extractors on the row subset so each
+    commodity's figures match how the parser would read a standalone sheet.
+    Titanium production (sponge reduction / TiO2 pigment manufacture) is
+    post-mine processing, so it lands in `primary_smelting_latest` — the same
+    column iron-and-steel uses for its pig-iron / raw-steel output.
+    """
+    prod_row = parser._find_row(rows, "production", "production")
+    imports_total, _ = parser._latest_value_by_section(rows, "imports", latest_year)
+    exports_total, _ = parser._latest_value_by_section(rows, "exports", latest_year)
+    cons_row = parser._find_row(rows, "consumption", "apparent")
+    nir_row = parser._find_row(rows, "net import reliance", "net import reliance")
+    price_row: Optional[YearSeries] = None
+    for r in rows:
+        if r.label.lower().startswith("price") and r.values.get(latest_year) is not None:
+            price_row = r
+            break
+
+    rec.mined_production_latest = None
+    rec.primary_smelting_latest = parser._latest_or_none(prod_row, latest_year)
+    rec.secondary_smelting_latest = None
+    rec.imports_total_latest = imports_total
+    rec.exports_total_latest = exports_total
+    rec.apparent_consumption_latest = parser._latest_or_none(cons_row, latest_year)
+    rec.price_usd_per_pound_latest = parser._latest_or_none(price_row, latest_year)
+    rec.price_unit_note = price_row.label if price_row else None
+    rec.net_import_reliance_pct_latest = parser._latest_or_none(nir_row, latest_year)
+    rec.stockpile_fy2025_potential_acquisitions = None
+
+    # Preserve non-numeric sentinels (e.g. TiO2's NIR = "E" net exporter).
+    sentinels: dict[str, str] = {}
+    for key, row in (
+        ("primary_smelting", prod_row),
+        ("net_import_reliance", nir_row),
+        ("apparent_consumption", cons_row),
+    ):
+        raw = (row.raw_values or {}).get(latest_year) if row else None
+        if raw and (raw in {"W", "E"} or raw.startswith((">", "<"))):
+            sentinels[key] = raw
+    rec.latest_year_sentinels = sentinels
 
 
 def _pgm_fill_per_metal_summary(
@@ -328,6 +420,39 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
             rec.world_production = []
             rec.import_sources_by_category = []
             rec.import_sources_flat = []
+
+    elif alias.kind == "sub_product" and alias.parent_slug == "titanium":
+        # Titanium sub-products (sponge metal / TiO2 pigment). The parent's
+        # salient_stats is two stacked sub-tables; split it and recompute this
+        # commodity's full summary from its half only (NOT the blended parent).
+        # Unlike iron-and-steel, each titanium sub-table is complete, so the
+        # sub-rows carry imports/exports/consumption/price/NIR — not just
+        # production. Titanium has no per-country world table, so all country
+        # production/reserves blocks stay empty.
+        want_sponge = (alias.parent_filter or "").lower() == "sponge"
+        sponge_rows, dioxide_rows = _titanium_salient_groups(parent.salient_stats)
+        group = sponge_rows if want_sponge else dioxide_rows
+        _fill_titanium_group_summary(rec, group, parent.latest_year)
+
+        # Keep only this commodity's salient rows + price quotes for the
+        # detail panel.
+        rec.salient_stats = list(group)
+        group_price_forms = {
+            r.label for r in group if r.label.lower().startswith("price")
+        }
+        rec.price_quotes = [
+            pq for pq in parent.price_quotes if pq.form in group_price_forms
+        ]
+
+        # Import sources: keep only this commodity's category ("Sponge metal"
+        # for sponge; "TiO pigment" for dioxide).
+        want_keyword = "sponge" if want_sponge else "pigment"
+        rec.import_sources_by_category = [
+            c for c in parent.import_sources_by_category
+            if c.category and want_keyword in c.category.lower()
+        ]
+        rec.import_sources_flat = []
+        rec.world_production = []
 
     elif alias.kind == "sub_product" and alias.parent_filter:
         # Iron-and-steel sub-products (Pig iron / Raw steel). Per user spec

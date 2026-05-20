@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-19T23:11:36",
+  "generated_at": "2026-05-20T07:32:44",
   "elements": [
     {
       "slug": "abrasives",
@@ -15571,7 +15571,7 @@
       "pdf_sha256": "c93f5a562e3b32706c4c77312b9fd32bbdb17237feae70228eaeb8fe2c7f1e94",
       "pdf_page_count": 2,
       "units_note": "(Data in metric tons unless otherwise specified)",
-      "price_unit_note": "Price, dollars per kilogram",
+      "price_unit_note": null,
       "price_footnote_text": null,
       "domestic_use_summary": "The United States did not produce titanium sponge metal in 2025. The last domestic sponge plant closed in 2024. The facility was in Utah and had an estimated capacity of 500 tons per year of sponge that was further refined for use in electronics. A second sponge facility in Henderson, NV, with an estimated capacity of 12,600 tons per year has been idled since 2020 owing to market conditions. A third facility in Rowley, UT, with an estimated capacity of 10,900 tons per year has remained idle since 2016. Although detailed 2025 consumption data were withheld to avoid disclosing proprietary data, the majority of titanium metal was used in aerospace applications, and the remainder was used in armor, chemical processing, marine hardware, medical implants, power generation, and other applications. The customs value of imported sponge was about $460 million, a 3% increase compared with $447 million in 2024. In 2025, titanium dioxide (TiO) pigment production, by four companies operating five facilities in four States, was valued at an estimated $3 billion. The leading uses of TiO pigment were, in descending order, paints (including lacquers and varnishes), plastics, and paper. Other uses of TiO pigment included catalysts, ceramics, coated fabrics and textiles, floor coverings, printing ink, and roofing granules.",
       "events_trends_summary": "U.S. producers of titanium ingot and downstream products were reliant on imports of titanium sponge and scrap. U.S. imports of titanium sponge were an estimated 44,000 tons in 2025, exceeding the historical high of 40,300 tons imported in 2023. Japan (73%), Kazakhstan (13%), and Saudi Arabia (13%) were the leading import sources for titanium sponge in 2025 through July. With funding support from the U.S. Government, a company in Virginia began commercial production of titanium powder from titanium scrap metal in late 2024. In 2025, the company was scaling up production capacity and aimed to achieve 1,400 tons per year in 2027 with potential for future expansion. U.S. imports of titanium scrap were estimated to be 32,000 tons in 2025. The United Kingdom (19%), France and Japan (10% each), and Germany, the Republic of Korea, and Singapore (9% each), were the leading import sources for titanium waste and scrap in 2025 through July. Through July 2025, the average duty-paid unit value of scrap imports was about $7.70 per kilogram compared with the annual average price of $8.50 per kilogram in 2024. Domestic production of TiO pigment in 2025 was an estimated 1,000,000 tons. Although heavily reliant on imports of titanium mineral concentrates, the United States was a net exporter of TiO pigments.",
@@ -15942,11 +15942,11 @@
       "mined_production_latest": null,
       "primary_smelting_latest": null,
       "secondary_smelting_latest": null,
-      "imports_total_latest": 274000.0,
-      "exports_total_latest": 330063.0,
-      "apparent_consumption_latest": 44000.0,
-      "price_usd_per_pound_latest": 12.0,
-      "net_import_reliance_pct_latest": 100.0,
+      "imports_total_latest": null,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": null,
+      "net_import_reliance_pct_latest": null,
       "latest_year_sentinels": {},
       "stockpile_fy2025_potential_acquisitions": 15000.0,
       "import_sources_flat": [],
@@ -32236,6 +32236,522 @@
         "5": "Defined as imports of finished steel mill products – total exports ± adjustments for industry stock changes.",
         "6": "See Appendix B for definitions. Reported in metric tons. For fiscal year 2026, the Annual Materials Plan was not released.",
         "7": "Source: World Steel Association, 2025, worldsteel Short Range Outlook October 2025: Brussels, Belgium, World Steel Association press release, October 13, 3 p. (Accessed November 18, 2025, at https://worldsteel.org/media/press-releases/2025/worldsteel-short-range-outlook-october-2025/.)"
+      }
+    },
+    {
+      "slug": "titanium-sponge-metal",
+      "name": "Titanium (sponge/metal)",
+      "symbol": "Ti",
+      "kind": "sub_product",
+      "parent_slug": "titanium",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-titanium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "c93f5a562e3b32706c4c77312b9fd32bbdb17237feae70228eaeb8fe2c7f1e94",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price, dollars per kilogram",
+      "price_footnote_text": null,
+      "domestic_use_summary": "The United States did not produce titanium sponge metal in 2025. The last domestic sponge plant closed in 2024. The facility was in Utah and had an estimated capacity of 500 tons per year of sponge that was further refined for use in electronics. A second sponge facility in Henderson, NV, with an estimated capacity of 12,600 tons per year has been idled since 2020 owing to market conditions. A third facility in Rowley, UT, with an estimated capacity of 10,900 tons per year has remained idle since 2016. Although detailed 2025 consumption data were withheld to avoid disclosing proprietary data, the majority of titanium metal was used in aerospace applications, and the remainder was used in armor, chemical processing, marine hardware, medical implants, power generation, and other applications. The customs value of imported sponge was about $460 million, a 3% increase compared with $447 million in 2024. In 2025, titanium dioxide (TiO) pigment production, by four companies operating five facilities in four States, was valued at an estimated $3 billion. The leading uses of TiO pigment were, in descending order, paints (including lacquers and varnishes), plastics, and paper. Other uses of TiO pigment included catalysts, ceramics, coated fabrics and textiles, floor coverings, printing ink, and roofing granules.",
+      "events_trends_summary": "U.S. producers of titanium ingot and downstream products were reliant on imports of titanium sponge and scrap. U.S. imports of titanium sponge were an estimated 44,000 tons in 2025, exceeding the historical high of 40,300 tons imported in 2023. Japan (73%), Kazakhstan (13%), and Saudi Arabia (13%) were the leading import sources for titanium sponge in 2025 through July. With funding support from the U.S. Government, a company in Virginia began commercial production of titanium powder from titanium scrap metal in late 2024. In 2025, the company was scaling up production capacity and aimed to achieve 1,400 tons per year in 2027 with potential for future expansion. U.S. imports of titanium scrap were estimated to be 32,000 tons in 2025. The United Kingdom (19%), France and Japan (10% each), and Germany, the Republic of Korea, and Singapore (9% each), were the leading import sources for titanium waste and scrap in 2025 through July. Through July 2025, the average duty-paid unit value of scrap imports was about $7.70 per kilogram compared with the annual average price of $8.50 per kilogram in 2024. Domestic production of TiO pigment in 2025 was an estimated 1,000,000 tons. Although heavily reliant on imports of titanium mineral concentrates, the United States was a net exporter of TiO pigments.",
+      "world_resources_summary": "Resources of titanium minerals are discussed in the Titanium Mineral Concentrates chapter.",
+      "substitutes_summary": "Few materials possess titanium metal’s strength-to-weight ratio and corrosion resistance. In high-strength applications, titanium competes with aluminum, composites, intermetallics, steel, and superalloys. Aluminum, nickel, specialty steels, and zirconium alloys may be substituted for titanium for applications that require corrosion resistance. Ground calcium carbonate, precipitated calcium carbonate, kaolin, and talc compete with TiO as a white pigment.",
+      "recycling_summary": "Owing to limited responses from voluntary surveys, consumption data for titanium scrap metal for the titanium metal industry were withheld. Consumption data for titanium scrap for the steel, superalloy, and other industries were not available.",
+      "salient_stats": [
+        {
+          "label": "Production",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": 0.0
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "—"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 16000.0,
+            "2022": 30900.0,
+            "2023": 40300.0,
+            "2024": 39800.0,
+            "2025e": 44000.0
+          },
+          "raw_values": {
+            "2021": "16000",
+            "2022": "30900",
+            "2023": "40300",
+            "2024": "39800",
+            "2025e": "44000"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 117.0,
+            "2022": 105.0,
+            "2023": 247.0,
+            "2024": 70.0,
+            "2025e": 63.0
+          },
+          "raw_values": {
+            "2021": "117",
+            "2022": "105",
+            "2023": "247",
+            "2024": "70",
+            "2025e": "63"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 15900.0,
+            "2022": 30800.0,
+            "2023": 40100.0,
+            "2024": 39800.0,
+            "2025e": 44000.0
+          },
+          "raw_values": {
+            "2021": "15900",
+            "2022": "30800",
+            "2023": "40100",
+            "2024": "39800",
+            "2025e": "44000"
+          }
+        },
+        {
+          "label": "Consumption, reported",
+          "footnote": null,
+          "section": "Consumption, reported",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Price, dollars per kilogram",
+          "footnote": "4",
+          "section": "Price, dollars per kilogram",
+          "subsection": null,
+          "values": {
+            "2021": 11.1,
+            "2022": 11.1,
+            "2023": 12.3,
+            "2024": 13.3,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "11.10",
+            "2022": "11.10",
+            "2023": "12.30",
+            "2024": "13.30",
+            "2025e": "12"
+          }
+        },
+        {
+          "label": "Stocks, industry, yearend",
+          "footnote": null,
+          "section": "Stocks, industry, yearend",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Employment, number",
+          "footnote": null,
+          "section": "Employment, number",
+          "subsection": null,
+          "values": {
+            "2021": 20.0,
+            "2022": 20.0,
+            "2023": 20.0,
+            "2024": 10.0,
+            "2025e": 0.0
+          },
+          "raw_values": {
+            "2021": "20",
+            "2022": "20",
+            "2023": "20",
+            "2024": "10",
+            "2025e": "—"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 95.0,
+            "2022": 95.0,
+            "2023": 95.0,
+            "2024": 95.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": ">95",
+            "2022": ">95",
+            "2023": ">95",
+            "2024": ">95",
+            "2025e": "100"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, dollars per kilogram",
+          "unit_note": "Price, dollars per kilogram",
+          "values": {
+            "2021": 11.1,
+            "2022": 11.1,
+            "2023": 12.3,
+            "2024": 13.3,
+            "2025e": 12.0
+          },
+          "raw_values": {
+            "2021": "11.10",
+            "2022": "11.10",
+            "2023": "12.30",
+            "2024": "13.30",
+            "2025e": "12"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": 0.0,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 44000.0,
+      "exports_total_latest": 63.0,
+      "apparent_consumption_latest": 44000.0,
+      "price_usd_per_pound_latest": 12.0,
+      "net_import_reliance_pct_latest": 100.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Sponge metal",
+          "countries": [
+            {
+              "country": "Japan",
+              "share_pct": 77.0
+            },
+            {
+              "country": "Saudi Arabia",
+              "share_pct": 13.0
+            },
+            {
+              "country": "Kazakhstan",
+              "share_pct": 8.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Sponge Metal Production and Sponge and Pigment Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+        "1": "See also the Titanium Mineral Concentrates chapter.",
+        "2": "Defined as production + imports – exports.",
+        "3": "Excludes domestic production of sponge in Utah.",
+        "4": "Landed duty-paid value based on U.S. imports for consumption.",
+        "5": "Defined as imports – exports.",
+        "6": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "7": "Yearend operating capacity.",
+        "8": "Excludes U.S. production.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
+      "slug": "titanium-dioxide",
+      "name": "Titanium (dioxide)",
+      "symbol": "Ti",
+      "kind": "sub_product",
+      "parent_slug": "titanium",
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-titanium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-05-19",
+      "pdf_sha256": "c93f5a562e3b32706c4c77312b9fd32bbdb17237feae70228eaeb8fe2c7f1e94",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons unless otherwise specified)",
+      "price_unit_note": "Price, dollars per metric ton",
+      "price_footnote_text": null,
+      "domestic_use_summary": "The United States did not produce titanium sponge metal in 2025. The last domestic sponge plant closed in 2024. The facility was in Utah and had an estimated capacity of 500 tons per year of sponge that was further refined for use in electronics. A second sponge facility in Henderson, NV, with an estimated capacity of 12,600 tons per year has been idled since 2020 owing to market conditions. A third facility in Rowley, UT, with an estimated capacity of 10,900 tons per year has remained idle since 2016. Although detailed 2025 consumption data were withheld to avoid disclosing proprietary data, the majority of titanium metal was used in aerospace applications, and the remainder was used in armor, chemical processing, marine hardware, medical implants, power generation, and other applications. The customs value of imported sponge was about $460 million, a 3% increase compared with $447 million in 2024. In 2025, titanium dioxide (TiO) pigment production, by four companies operating five facilities in four States, was valued at an estimated $3 billion. The leading uses of TiO pigment were, in descending order, paints (including lacquers and varnishes), plastics, and paper. Other uses of TiO pigment included catalysts, ceramics, coated fabrics and textiles, floor coverings, printing ink, and roofing granules.",
+      "events_trends_summary": "U.S. producers of titanium ingot and downstream products were reliant on imports of titanium sponge and scrap. U.S. imports of titanium sponge were an estimated 44,000 tons in 2025, exceeding the historical high of 40,300 tons imported in 2023. Japan (73%), Kazakhstan (13%), and Saudi Arabia (13%) were the leading import sources for titanium sponge in 2025 through July. With funding support from the U.S. Government, a company in Virginia began commercial production of titanium powder from titanium scrap metal in late 2024. In 2025, the company was scaling up production capacity and aimed to achieve 1,400 tons per year in 2027 with potential for future expansion. U.S. imports of titanium scrap were estimated to be 32,000 tons in 2025. The United Kingdom (19%), France and Japan (10% each), and Germany, the Republic of Korea, and Singapore (9% each), were the leading import sources for titanium waste and scrap in 2025 through July. Through July 2025, the average duty-paid unit value of scrap imports was about $7.70 per kilogram compared with the annual average price of $8.50 per kilogram in 2024. Domestic production of TiO pigment in 2025 was an estimated 1,000,000 tons. Although heavily reliant on imports of titanium mineral concentrates, the United States was a net exporter of TiO pigments.",
+      "world_resources_summary": "Resources of titanium minerals are discussed in the Titanium Mineral Concentrates chapter.",
+      "substitutes_summary": "Few materials possess titanium metal’s strength-to-weight ratio and corrosion resistance. In high-strength applications, titanium competes with aluminum, composites, intermetallics, steel, and superalloys. Aluminum, nickel, specialty steels, and zirconium alloys may be substituted for titanium for applications that require corrosion resistance. Ground calcium carbonate, precipitated calcium carbonate, kaolin, and talc compete with TiO as a white pigment.",
+      "recycling_summary": "Owing to limited responses from voluntary surveys, consumption data for titanium scrap metal for the titanium metal industry were withheld. Consumption data for titanium scrap for the steel, superalloy, and other industries were not available.",
+      "salient_stats": [
+        {
+          "label": "Production",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 1150000.0,
+            "2022": 1150000.0,
+            "2023": 910000.0,
+            "2024": 940000.0,
+            "2025e": 1000000.0
+          },
+          "raw_values": {
+            "2021": "1150000",
+            "2022": "1150000",
+            "2023": "910000",
+            "2024": "940000",
+            "2025e": "1000000"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 251000.0,
+            "2022": 265000.0,
+            "2023": 228000.0,
+            "2024": 236000.0,
+            "2025e": 230000.0
+          },
+          "raw_values": {
+            "2021": "251000",
+            "2022": "265000",
+            "2023": "228000",
+            "2024": "236000",
+            "2025e": "230000"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 494000.0,
+            "2022": 378000.0,
+            "2023": 288000.0,
+            "2024": 358000.0,
+            "2025e": 330000.0
+          },
+          "raw_values": {
+            "2021": "494000",
+            "2022": "378000",
+            "2023": "288000",
+            "2024": "358000",
+            "2025e": "330000"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 907000.0,
+            "2022": 1040000.0,
+            "2023": 850000.0,
+            "2024": 818000.0,
+            "2025e": 900000.0
+          },
+          "raw_values": {
+            "2021": "907000",
+            "2022": "1040000",
+            "2023": "850000",
+            "2024": "818000",
+            "2025e": "900000"
+          }
+        },
+        {
+          "label": "Price, dollars per metric ton",
+          "footnote": "4",
+          "section": "Price, dollars per metric ton",
+          "subsection": null,
+          "values": {
+            "2021": 2920.0,
+            "2022": 3450.0,
+            "2023": 3240.0,
+            "2024": 3170.0,
+            "2025e": 3200.0
+          },
+          "raw_values": {
+            "2021": "2920",
+            "2022": "3450",
+            "2023": "3240",
+            "2024": "3170",
+            "2025e": "3200"
+          }
+        },
+        {
+          "label": "Employment, number",
+          "footnote": null,
+          "section": "Employment, number",
+          "subsection": null,
+          "values": {
+            "2021": 3200.0,
+            "2022": 3200.0,
+            "2023": 3200.0,
+            "2024": 3200.0,
+            "2025e": 3000.0
+          },
+          "raw_values": {
+            "2021": "3200",
+            "2022": "3200",
+            "2023": "3200",
+            "2024": "3200",
+            "2025e": "3000"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "E",
+            "2022": "E",
+            "2023": "E",
+            "2024": "E",
+            "2025e": "E"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, dollars per metric ton",
+          "unit_note": "Price, dollars per metric ton",
+          "values": {
+            "2021": 2920.0,
+            "2022": 3450.0,
+            "2023": 3240.0,
+            "2024": 3170.0,
+            "2025e": 3200.0
+          },
+          "raw_values": {
+            "2021": "2920",
+            "2022": "3450",
+            "2023": "3240",
+            "2024": "3170",
+            "2025e": "3200"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": 1000000.0,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 230000.0,
+      "exports_total_latest": 330000.0,
+      "apparent_consumption_latest": 900000.0,
+      "price_usd_per_pound_latest": 3200.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "net_import_reliance": "E"
+      },
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "TiO pigment",
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 45.0
+            },
+            {
+              "country": "China",
+              "share_pct": 11.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 7.0
+            },
+            {
+              "country": "Mexico",
+              "share_pct": 7.0
+            },
+            {
+              "country": "other",
+              "share_pct": 30.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Sponge Metal Production and Sponge and Pigment Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. — Zero.",
+        "1": "See also the Titanium Mineral Concentrates chapter.",
+        "2": "Defined as production + imports – exports.",
+        "3": "Excludes domestic production of sponge in Utah.",
+        "4": "Landed duty-paid value based on U.S. imports for consumption.",
+        "5": "Defined as imports – exports.",
+        "6": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "7": "Yearend operating capacity.",
+        "8": "Excludes U.S. production.",
+        "9": "See Appendix C for resource and reserve definitions and information concerning data sources."
       }
     },
     {

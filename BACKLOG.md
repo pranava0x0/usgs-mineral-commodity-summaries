@@ -201,7 +201,7 @@ values from the PDF in parens; current summary in column 2):
 | ----------------------- | -------------------- | ------------------------------------------- |
 | Abrasives (manufactured)| mine/primary/sec N/A | 4 production rows (fused Al₂O₃, SiC, metallic, shipments — no single total) |
 | Silicon                 | all N/A              | 1 row "Production, ferrosilicon and silicon metal" = `W` (withheld) |
-| Titanium                | all N/A              | 1 bare "Production" row = `—` (zero)        |
+| Titanium                | RESOLVED (split)     | two sub-tables → sub-rows carry production in `primary_smelting` (sponge 0, TiO₂ 1,000,000); see "Titanium split" |
 | Rhenium                 | all N/A              | 1 bare "Production" row = `9,800`           |
 | Zirconium-and-hafnium   | all N/A              | 1 row "Production, zirconium ores and concentrates" = `<100,000` |
 | Iron-and-steel          | all N/A              | 4 rows (pig iron 21, raw steel 82, continuously-cast %, shipments 82) — already filed as issues.md #14 |
@@ -379,7 +379,7 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
 | **PGM: Platinum** (existing alias, reshape)                                      | ✅ (platinum sub-column) | — | — | — |
 | **PGM: Iridium / Osmium / Rhodium / Ruthenium** (Pd/Rh/Ru/Os are new aliases)    | —    | — | — | — |
 | **PGM (grouped parent)**                                                         | —    | — | — | ✅ (PGM-aggregate) |
-| **Titanium** (skipped per user)                                                  | —    | — | — | — |
+| **Titanium** (parent + 2 sub-rows; no world table — see "Titanium split" below)  | —    | — | — | — |
 | Abrasives, Scandium (no world table)                                             | —    | — | — | — |
 
 ¹ Iron and Steel placement: open question. PDF table is just "World
@@ -486,16 +486,21 @@ Kyrgyzstan) all round-trip correctly. Findings:
       the Consumption section with a non-NIR fallback; scandium correctly
       reports apparent_consumption = None. Regression test in
       `tests/test_antimony.py::ScandiumRecordTests`.
-- [ ] **Titanium summary blends two commodities** — the sheet is "TITANIUM
-      AND TITANIUM DIOXIDE" with two stacked salient sub-tables (Ti metal:
-      imports 44,000 / exports 63 / cons 44,000 / $12 per kg; TiO₂: prod
-      1,000,000 / imports 230,000 / exports 330,000 / cons 900,000 / $3,200
-      per t). `_latest_value_by_section` SUMS across both, so the row shows
-      imports 274,000 + exports 330,063 — a blend of titanium sponge and
-      TiO₂ pigment, while consumption/price/NIR pick only the first
-      sub-table. Same class as abrasives. Fix would split titanium into two
-      rows (like iron-and-steel pig iron / raw steel) — needs a design call
-      on naming. Medium priority; flagged for user.
+- [x] **Titanium summary blends two commodities** — FIXED (split into two
+      sub-product rows, mirroring iron-and-steel; user-confirmed naming
+      2026-05-20). The "TITANIUM AND TITANIUM DIOXIDE" sheet has two stacked
+      salient sub-tables (Ti metal: imports 44,000 / exports 63 / cons 44,000 /
+      $12 per kg; TiO₂: prod 1,000,000 / imports 230,000 / exports 330,000 /
+      cons 900,000 / $3,200 per t), which the generic summary blended (imports
+      274,000 + exports 330,063; consumption/price/NIR from the first sub-table
+      only). The parent `titanium` now de-blends (summary nulled in
+      `_postprocess_record`) and fans out into `titanium-sponge-metal`
+      ("Titanium (sponge/metal)") and `titanium-dioxide` ("Titanium (dioxide)")
+      sub-products, each carrying its own full per-commodity summary +
+      import-source category. Sub-table boundary detected by section-repeat in
+      `pipeline._titanium_salient_groups`. Regression tests in
+      `tests/test_csv_export.py::TitaniumSplitTests`; see
+      `docs/parsing-special-cases.md` §"Titanium".
 - [ ] **Vanadium production summary undercounts byproduct recovery** —
       `primary_smelting` = 0 (from "Production from primary ore and
       concentrates" = 0); the real 7,500 t from "Production from ash,

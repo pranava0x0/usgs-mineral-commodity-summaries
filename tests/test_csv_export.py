@@ -361,5 +361,104 @@ class IronAndSteelSpecialCasingTests(unittest.TestCase):
         self.assertEqual(parent["united_states__refinery_production"], "103")
 
 
+class TitaniumSplitTests(unittest.TestCase):
+    """End-to-end coverage for the titanium parent + sub-product split.
+
+    The "TITANIUM AND TITANIUM DIOXIDE" sheet stacks two complete salient
+    sub-tables (sponge metal, TiO2 pigment). The generic summary blended
+    them (imports 44,000 + 230,000 = 274,000; consumption/price/NIR from
+    the first sub-table only). The split de-blends the parent and fans the
+    two commodities into their own rows. Like the iron-and-steel test, this
+    pulls the live CSV because the special casing sits in
+    `_postprocess_record` + `_make_alias`, upstream of `build_rows`.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        import csv
+        from src import config
+        path = config.PROCESSED_DIR / "elements.csv"
+        if not path.exists():
+            raise unittest.SkipTest("elements.csv not present — run `python -m src.pipeline` first")
+        with path.open() as f:
+            cls.rows = list(csv.DictReader(f))
+
+    def _rows_named(self, name: str) -> list[dict[str, str]]:
+        return [r for r in self.rows if r["name"] == name]
+
+    def _row(self, name: str) -> dict[str, str]:
+        matches = self._rows_named(name)
+        self.assertEqual(len(matches), 1, f"expected exactly one {name!r} row, got {len(matches)}")
+        return matches[0]
+
+    def test_three_titanium_rows_total(self) -> None:
+        """Parent + two sub-rows = 3 rows (was 2 blended rows)."""
+        names = [r["name"] for r in self.rows if r["name"].startswith("Titanium")]
+        self.assertEqual(
+            sorted(names),
+            ["Titanium", "Titanium (dioxide)", "Titanium (sponge/metal)"],
+        )
+
+    def test_parent_summary_is_deblended(self) -> None:
+        """The parent keeps prose/identity but its blended summary numbers
+        are nulled — the misleading 274,000 / 330,063 blend is gone."""
+        parent = self._row("Titanium")
+        self.assertEqual(parent["kind"], "primary")
+        self.assertEqual(parent["import_category"], "")
+        for c in ("usgs_2025_total_mined_production",
+                  "usgs_2025_total_primary_smelting",
+                  "usgs_2025_total_secondary_smelting",
+                  "imports_for_consumption_total", "exports_total",
+                  "consumption_apparent", "price_metal_average_dollars_per_pound",
+                  "net_import_reliance_pct"):
+            self.assertEqual(parent[c], "N/A", f"parent {c} should be N/A but is {parent[c]!r}")
+
+    def test_no_titanium_row_carries_the_blend(self) -> None:
+        """The summed-blend values (imports 274,000 / exports 330,063) must
+        not appear on any titanium row anymore."""
+        for r in self.rows:
+            if not r["name"].startswith("Titanium"):
+                continue
+            self.assertNotEqual(r["imports_for_consumption_total"], "274000")
+            self.assertNotEqual(r["exports_total"], "330063")
+
+    def test_sponge_metal_row(self) -> None:
+        """Titanium (sponge/metal): sponge sub-table figures + sponge imports."""
+        row = self._row("Titanium (sponge/metal)")
+        self.assertEqual(row["kind"], "sub_product")
+        self.assertEqual(row["import_category"], "Sponge metal")
+        # Production (US sponge ceased 2024) lands in primary_smelting = 0.
+        self.assertEqual(row["usgs_2025_total_primary_smelting"], "0")
+        self.assertEqual(row["imports_for_consumption_total"], "44000")
+        self.assertEqual(row["exports_total"], "63")
+        self.assertEqual(row["consumption_apparent"], "44000")
+        self.assertEqual(row["price_metal_average_dollars_per_pound"], "12")
+        self.assertEqual(row["net_import_reliance_pct"], "100")
+        # Mine block stays N/A (titanium has no per-country world table).
+        self.assertEqual(row["usgs_2025_total_mined_production"], "N/A")
+        # Sponge import shares isolated to this row.
+        self.assertEqual(row["japan__imports_share_pct"], "77")
+        # TiO2's Canada share must NOT leak onto the sponge row.
+        self.assertEqual(row["canada__imports_share_pct"], "N/A")
+
+    def test_dioxide_row(self) -> None:
+        """Titanium (dioxide): TiO2 sub-table figures, NIR = E (net exporter)."""
+        row = self._row("Titanium (dioxide)")
+        self.assertEqual(row["kind"], "sub_product")
+        self.assertEqual(row["import_category"], "TiO pigment")
+        self.assertEqual(row["usgs_2025_total_primary_smelting"], "1000000")
+        self.assertEqual(row["imports_for_consumption_total"], "230000")
+        self.assertEqual(row["exports_total"], "330000")
+        self.assertEqual(row["consumption_apparent"], "900000")
+        self.assertEqual(row["price_metal_average_dollars_per_pound"], "3200")
+        # USGS marks TiO2 pigment NIR as "E" (net exporter) — sentinel survives.
+        self.assertEqual(row["net_import_reliance_pct"], "E")
+        # TiO2 import shares isolated to this row.
+        self.assertEqual(row["canada__imports_share_pct"], "45")
+        self.assertEqual(row["china__imports_share_pct"], "11")
+        # Sponge's Japan share must NOT leak onto the dioxide row.
+        self.assertEqual(row["japan__imports_share_pct"], "N/A")
+
+
 if __name__ == "__main__":
     unittest.main()
