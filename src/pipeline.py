@@ -79,6 +79,18 @@ def _postprocess_record(rec: ElementRecord) -> None:
         rec.primary_smelting_latest = total
         rec.mined_production_latest = None
 
+        # The World Production table splits into Pig iron + Raw steel
+        # sub-columns. The parent represents the combined entity, so its
+        # per-country refinery figure is the sum of the two sub-commodities
+        # (consistent with the summary primary_smelting = pig + raw). The
+        # sub-metal dict is left intact so the Pig iron / Raw steel aliases
+        # can still pick out their individual per-country values.
+        for wp in rec.world_production:
+            sm = wp.sub_metal_production_latest
+            if sm:
+                vals = [v for v in sm.values() if v is not None]
+                wp.production_latest_year = sum(vals) if vals else None
+
     if rec.slug == "rare-earths":
         # The rare-earths sheet quotes 9 separate REE-oxide prices in $/kg.
         # There is no single representative "rare earths price" — picking the
@@ -319,13 +331,17 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
 
     elif alias.kind == "sub_product" and alias.parent_filter:
         # Iron-and-steel sub-products (Pig iron / Raw steel). Per user spec
-        # (2026-05-19), these rows should carry ONLY the production total
-        # for the latest year + per-country production (refinery block).
-        # All other summary + per-country fields blank out.
+        # (2026-05-19), these rows carry ONLY the production total for the
+        # latest year + per-country production (refinery block). All other
+        # summary + per-country fields blank out.
         #
-        # The parent salient_stats list has separate "<form> production"
-        # rows; pick the one matching this alias's filter and route it to
-        # primary_smelting (not mined — both rows are post-mine smelting).
+        # The US production total comes from the parent's salient row
+        # ("Pig iron production" = 21 / "Raw steel production" = 82). The
+        # per-country breakdown comes from the parent's World Production
+        # table, which splits into "Pig iron" / "Raw steel" sub-columns
+        # (captured as WorldProductionRow.sub_metal_production_latest) —
+        # so Pig iron and Raw steel rows show DIFFERENT per-country figures
+        # (e.g. China pig iron 830 vs raw steel 980).
         pat = re.compile(alias.parent_filter, re.IGNORECASE)
         v: Optional[float] = None
         for row in parent.salient_stats:
@@ -333,9 +349,7 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
                 v = row.values.get(parent.latest_year)
                 break
 
-        # Reset every summary field except primary_smelting; reset every
-        # per-country field except the refinery_production block (which is
-        # already inherited from the parent's world_production list).
+        # Reset every summary field except primary_smelting.
         rec.mined_production_latest = None
         rec.primary_smelting_latest = v
         rec.secondary_smelting_latest = None
@@ -347,10 +361,34 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
         rec.net_import_reliance_pct_latest = None
         rec.stockpile_fy2025_potential_acquisitions = None
         rec.latest_year_sentinels = {}
-        # Blank import sources so the per-country imports_share_pct block
-        # falls through to N/A.
         rec.import_sources_flat = []
         rec.import_sources_by_category = []
+
+        # Rewrite world_production so the refinery block shows THIS
+        # sub-commodity's per-country values (not the parent's combined /
+        # first-column figure). Match the sub-metal key case-insensitively
+        # against the alias's parent_filter.
+        metal_key = alias.parent_filter.lower()
+        new_rows: list[WorldProductionRow] = []
+        for wp in parent.world_production:
+            cv: Optional[float] = None
+            for k, val in wp.sub_metal_production_latest.items():
+                if k.lower() == metal_key:
+                    cv = val
+                    break
+            new_rows.append(WorldProductionRow(
+                country=wp.country,
+                production_prev_year=None,
+                production_latest_year=cv,
+                capacity=None,
+                reserves=None,
+                production_prev_raw=None,
+                production_latest_raw=None,
+                reserves_raw=None,
+                note=wp.note,
+                sub_metal_production_latest={},
+            ))
+        rec.world_production = new_rows
 
     # grouped (without parent_filter) + sub_product (without parent_filter):
     # inherit parent verbatim (no extra work).
