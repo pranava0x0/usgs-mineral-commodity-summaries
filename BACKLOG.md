@@ -470,3 +470,36 @@ Total: ~1,032 cols × ~140 rows (was 2,305 cols × 135 rows).
       Kosovo and Liechtenstein in the Europe block). Captures 700 t
       antimony mine production + 260,000 t reserves that were previously
       dropped. CSV column count grew 1,032 → 1,037.
+
+## Cell-validation pass — 2026-05-19 (against MCS 2026 PDFs)
+
+Walked every primary element's summary columns + world-production /
+reserves cells against the source PDFs. World production, reserves,
+sentinel preservation (W / E / >N / —), and country-name mapping
+(Congo (Kinshasa) / DRC, Burma (Myanmar), Korea N/S, Côte d'Ivoire,
+Kyrgyzstan) all round-trip correctly. Findings:
+
+- [x] **Scandium apparent_consumption was the NIR % (100), not consumption**
+      — FIXED. Scandium has no consumption row, but its NIR label ("Net
+      import reliance as a percentage of apparent consumption") contains
+      "apparent", so `_find_row(None, "apparent")` grabbed it. Now scoped to
+      the Consumption section with a non-NIR fallback; scandium correctly
+      reports apparent_consumption = None. Regression test in
+      `tests/test_antimony.py::ScandiumRecordTests`.
+- [ ] **Titanium summary blends two commodities** — the sheet is "TITANIUM
+      AND TITANIUM DIOXIDE" with two stacked salient sub-tables (Ti metal:
+      imports 44,000 / exports 63 / cons 44,000 / $12 per kg; TiO₂: prod
+      1,000,000 / imports 230,000 / exports 330,000 / cons 900,000 / $3,200
+      per t). `_latest_value_by_section` SUMS across both, so the row shows
+      imports 274,000 + exports 330,063 — a blend of titanium sponge and
+      TiO₂ pigment, while consumption/price/NIR pick only the first
+      sub-table. Same class as abrasives. Fix would split titanium into two
+      rows (like iron-and-steel pig iron / raw steel) — needs a design call
+      on naming. Medium priority; flagged for user.
+- [ ] **Vanadium production summary undercounts byproduct recovery** —
+      `primary_smelting` = 0 (from "Production from primary ore and
+      concentrates" = 0); the real 7,500 t from "Production from ash,
+      residues, and spent catalysts" lands in no summary field. Vanadium is
+      mostly a byproduct, so the headline production reads as zero. Low
+      priority — full data is in salient_stats; only the summary triplet is
+      incomplete.
