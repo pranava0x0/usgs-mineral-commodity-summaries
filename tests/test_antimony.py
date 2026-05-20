@@ -115,6 +115,14 @@ class ScandiumRecordTests(unittest.TestCase):
         self.assertEqual(oxide.raw_values["2025e"], "640")
         self.assertEqual(oxide.values["2025e"], 640.0)
 
+    def test_apparent_consumption_not_nir_row(self) -> None:
+        # Scandium has NO apparent-consumption row, but its NIR label is
+        # "Net import reliance as a percentage of apparent consumption" —
+        # which contains the substring "apparent". A naive
+        # `_find_row(None, "apparent")` used to grab that NIR row and report
+        # apparent_consumption = 100 (the NIR percentage). It must be None.
+        self.assertIsNone(self.record.apparent_consumption_latest)
+
 
 if __name__ == "__main__":
     unittest.main()

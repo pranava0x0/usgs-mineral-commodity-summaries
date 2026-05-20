@@ -1164,7 +1164,22 @@ def parse_element_pdf(slug: str) -> ElementRecord:
         exports_total, s = _latest_value_by_section(salient, "exports", latest_year)
         sentinels_acc.update(s)
 
-    apparent_row = _find_row(salient, None, "apparent")
+    # Apparent consumption. Match the Consumption section first; the bare
+    # substring "apparent" also appears in the NIR row label ("Net import
+    # reliance as a percentage of apparent consumption"), so a naive
+    # `_find_row(None, "apparent")` mis-fires on sheets that have a NIR row
+    # but no real consumption row (e.g. scandium). Scope to the Consumption
+    # section, then fall back to an "apparent" label that is NOT a NIR row.
+    apparent_row = (
+        _find_row(salient, "consumption", "apparent")
+        or _find_row(salient, "consumption", "consumption")
+    )
+    if apparent_row is None:
+        for row in salient:
+            lab = row.label.lower()
+            if "apparent" in lab and not lab.startswith("net import reliance"):
+                apparent_row = row
+                break
     apparent = _latest_or_none(apparent_row, latest_year)
 
     # NIR: pick the row whose label is "Net import reliance ..." with values, or
