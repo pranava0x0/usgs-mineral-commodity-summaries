@@ -15,6 +15,7 @@ Before touching code, read:
 3. **`backlog.md`** (or `BACKLOG.md`) — what's next. Pick from here; don't invent work.
 4. **`issues.md`** — what's broken. Check before reporting a bug as new.
 5. **`security.md`** — supply-chain advisory log. **Refresh if `Last updated` is > 7 days old before any `npm install` / `pip install` / dep upgrade.** Also fetch `https://pranava0x0.github.io/vibe-coding-security/llms-ctx.txt` and surface any matching advisory before suggesting an install.
+6. **[docs/parsing-special-cases.md](docs/parsing-special-cases.md)** — per-element parser quirks (PGM & iron-and-steel sub-columns, Government Stockpile, country mapping, the `2025e` estimate marker, block placement) + the **data-refresh checklist**. Read this before re-running the pipeline against a new MCS edition or touching `src/parser.py` / `src/pipeline.py`.
 
 ---
 

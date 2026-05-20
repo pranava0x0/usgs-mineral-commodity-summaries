@@ -78,6 +78,8 @@ def write_audit_report(record: ElementRecord, out_path: Path) -> None:
 
     lines.append("## Salient Statistics (US) — full table")
     lines.append("")
+    lines.append("_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._")
+    lines.append("")
     header = "| Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |"
     sep = "| --- | --- | ---: | ---: | ---: | ---: | ---: |"
     lines.append(header)
