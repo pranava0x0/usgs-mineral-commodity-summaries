@@ -312,6 +312,57 @@ the `latest_year_sentinels` keys are unchanged — only the CSV headers moved.
 
 ---
 
+## Multi-mineral group members ("Mechanism B")
+
+**What:** a few sheets cover **several distinct minerals** in one PDF and we
+split them into per-mineral alias rows. Each member must carry only its own
+mineral's figures; the group **parent** collapses to a bare sum row. Covers:
+
+- **zirconium-and-hafnium** → `zirconium`, `hafnium`
+- **abrasives** → `fused-aluminum-oxide`, `silicon-carbide`, `metallic-abrasives`
+  (+ `superhard-materials`, an all-N/A proxy with no source line)
+- (PGM and rare-earths are also grouped but predate this — PGM via its own
+  branch, rare-earths via `kind="rare_earth"`.)
+
+**Why:** members previously inherited the parent verbatim — `hafnium` showed the
+combined Zr+Hf import total (18,294) and the zircon world table; `silicon-carbide`
+showed the abrasives group total (261,000) and *all* abrasive import categories
+(incl. fused-alumina). See BACKLOG "Group / multi-form repeat values".
+
+**Where:** [src/config.py](../src/config.py) (`parent_filter` keyword +
+`inherits_world_table` flag on each member; new fused/metallic aliases);
+[src/pipeline.py](../src/pipeline.py) `_make_alias` group-member branch +
+`_fill_group_member`; [src/csv_export.py](../src/csv_export.py)
+`_category_rows_for` (parent collapse) and `_is_per_form_sheet` (members reuse
+the Mechanism A per-form split).
+
+**How a member is derived:** keep only the parent salient rows whose label
+contains the member's `parent_filter` keyword, recompute the summary from that
+subset (reusing the parser's section extractors), filter import categories to
+the keyword, and keep the parent world table only if `inherits_world_table`
+(zirconium owns the zircon "World Mine Production and Reserves"; everyone else →
+N/A). Members with >1 import form additionally split per form (Mechanism A), so
+zirconium's `compounds` row shows 1,300, not the 18,210 member total.
+
+**Production column:** routed to `mined_` for the mine sheet
+(zirconium-and-hafnium → zircon) and `primary_` for the manufactured sheet
+(abrasives), matching the per-country block.
+
+**Blanked-to-N/A members:** `superhard-materials` (abrasives proxy) and the
+single-mineral downstream products (`diamond-powders`, `gallium-nitride`,
+`graphite-anodes`, `lithium-batteries`) inherit prose/identity only — every
+numeric field + world table + import sources is N/A (the `else` branch of
+`_make_alias`). Rare-earth aliases likewise drop the group REO world table +
+import sources (keeping only the per-element oxide price).
+
+**Verify:** Hafnium bare imports 84 (unwrought 72 / wrought 12), world N/A.
+Zirconium bare imports 18,210 / production 100,000, `compounds` row 1,300, China
+mine 100 on the bare row. Silicon carbide bare imports 95,000 / production
+30,000. `Zirconium and hafnium (grouped)` + `Abrasives (manufactured)` each one
+row (imports 18,294 / 261,000). Cerium china reserves = N/A (was 44,000,000).
+
+---
+
 ## Government Stockpile (summary column 9)
 
 **What:** The "Government Stockpile" section is a small table with FY 2025 /

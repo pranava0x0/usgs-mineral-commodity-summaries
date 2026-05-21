@@ -289,6 +289,87 @@ def _pgm_fill_per_metal_summary(
     rec.latest_year_sentinels = sentinels
 
 
+def _fill_group_member(
+    rec: ElementRecord,
+    parent: ElementRecord,
+    keyword: str,
+    *,
+    production_field: str,
+    keep_world: bool,
+) -> None:
+    """Fill a multi-mineral group member's record from the parent, by keyword.
+
+    For the zirconium-and-hafnium and abrasives sheets, whose Salient Statistics
+    break figures out per mineral/material. Keep only the parent salient rows
+    whose label contains `keyword`, and recompute the summary from that subset
+    (reusing the parser's section-scoped extractors). `production_field` routes
+    the production value to `mined_` (mine sheets, e.g. zircon) vs `primary_`
+    (manufactured, e.g. abrasives). `keep_world` keeps the parent's
+    world-production table (zirconium owns the zircon table); otherwise it's
+    blanked (the PDF has no per-material world table).
+    """
+    kw = keyword.lower()
+    rows = [r for r in parent.salient_stats if kw in r.label.lower()]
+    ly = parent.latest_year
+
+    prod_row = parser._find_row(rows, "production", "production")
+    if prod_row is None:
+        prod_row = next(
+            (
+                r for r in rows
+                if (r.section or "").lower().startswith("production")
+                and not r.label.lower().startswith("shipments")
+            ),
+            None,
+        )
+    imports_total, _ = parser._latest_value_by_section(rows, "imports", ly)
+    exports_total, _ = parser._latest_value_by_section(rows, "exports", ly)
+    cons_row = (
+        parser._find_row(rows, "consumption", "apparent")
+        or parser._find_row(rows, "consumption", "consumption")
+    )
+    nir_row = parser._find_row(rows, "net import reliance", "net import reliance")
+    price_row = next(
+        (
+            r for r in rows
+            if (r.section or "").lower().startswith("price")
+            and r.values.get(ly) is not None
+        ),
+        None,
+    )
+
+    rec.mined_production_latest = None
+    rec.primary_smelting_latest = None
+    rec.secondary_smelting_latest = None
+    pv = parser._latest_or_none(prod_row, ly)
+    if production_field == "mined":
+        rec.mined_production_latest = pv
+    else:
+        rec.primary_smelting_latest = pv
+    rec.imports_total_latest = imports_total
+    rec.exports_total_latest = exports_total
+    rec.apparent_consumption_latest = parser._latest_or_none(cons_row, ly)
+    rec.price_usd_per_pound_latest = parser._latest_or_none(price_row, ly)
+    if price_row:
+        sec = price_row.section or ""
+        rec.price_unit_note = sec if "dollar" in sec.lower() else price_row.label
+    else:
+        rec.price_unit_note = None
+    rec.net_import_reliance_pct_latest = parser._latest_or_none(nir_row, ly)
+    rec.stockpile_fy2025_potential_acquisitions = None
+    rec.latest_year_sentinels = {}
+
+    rec.salient_stats = list(rows)
+    rec.price_quotes = [pq for pq in parent.price_quotes if kw in pq.form.lower()]
+    rec.import_sources_by_category = [
+        c for c in parent.import_sources_by_category
+        if c.category and kw in c.category.lower()
+    ]
+    rec.import_sources_flat = []
+    if not keep_world:
+        rec.world_production = []
+
+
 def _blank_aggregates(rec: ElementRecord) -> None:
     """Null out sheet-wide numeric fields on a derived record.
 
@@ -336,6 +417,14 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
 
     if alias.kind == "rare_earth":
         _blank_aggregates(rec)
+        # USGS reports rare-earth mine production / reserves and import sources
+        # only at the GROUP level (REO content). Per-element figures aren't
+        # published, so don't let an individual REE inherit the group's world
+        # table or import-source shares — that would attribute the whole
+        # group's 270,000 t China mine / 44,000,000 t reserves to one element.
+        rec.world_production = []
+        rec.import_sources_flat = []
+        rec.import_sources_by_category = []
 
         if alias.parent_filter:
             pat = re.compile(alias.parent_filter, re.IGNORECASE)
@@ -454,6 +543,20 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
         rec.import_sources_flat = []
         rec.world_production = []
 
+    elif alias.parent_slug in ("zirconium-and-hafnium", "abrasives") and alias.parent_filter:
+        # Multi-mineral group member (zirconium / hafnium; fused-aluminum-oxide
+        # / silicon-carbide / metallic-abrasives). The sheet breaks Salient
+        # Statistics out per mineral, so keep only this mineral's rows + import
+        # categories and recompute the summary from them. zirconium owns the
+        # zircon World Mine Production and Reserves table; the rest get world
+        # N/A. The parent collapses to a bare sum row (see csv_export).
+        production_field = "mined" if alias.parent_slug == "zirconium-and-hafnium" else "primary"
+        _fill_group_member(
+            rec, parent, alias.parent_filter,
+            production_field=production_field,
+            keep_world=alias.inherits_world_table,
+        )
+
     elif alias.kind == "sub_product" and alias.parent_filter:
         # Iron-and-steel sub-products (Pig iron / Raw steel). Per user spec
         # (2026-05-19), these rows carry ONLY the production total for the
@@ -515,8 +618,24 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
             ))
         rec.world_production = new_rows
 
-    # grouped (without parent_filter) + sub_product (without parent_filter):
-    # inherit parent verbatim (no extra work).
+    else:
+        # No per-mineral / per-product data in the PDF: superhard-materials
+        # (abrasives proxy) and the single-mineral downstream products
+        # (diamond-powders / gallium-nitride / graphite-anodes /
+        # lithium-batteries). Inherit prose + identity only; blank every numeric
+        # field + world table + import sources so the row never presents the
+        # parent's figures as if they were its own.
+        _blank_aggregates(rec)
+        rec.price_usd_per_pound_latest = None
+        rec.price_unit_note = None
+        rec.price_quotes = []
+        rec.salient_stats = []
+        rec.world_production = []
+        rec.import_sources_flat = []
+        rec.import_sources_by_category = []
+        rec.stockpile_fy2025_potential_acquisitions = None
+        rec.latest_year_sentinels = {}
+
     return rec
 
 

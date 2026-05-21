@@ -53,6 +53,7 @@ class Element:
     notes: str = ""       # any per-element parser hints
     parent_slug: str | None = None  # if set, this commodity is sourced from another's PDF
     parent_filter: str | None = None  # regex over salient row labels / price quote forms
+    inherits_world_table: bool = False  # group member keeps the parent's world-production table (else N/A)
 
 
 # Edition currently targeted. MCS 2026 is published February 2026.
@@ -207,35 +208,53 @@ ELEMENTS: dict[str, Element] = {
 #   grouped      — inherit parent verbatim (USGS reports at group level only)
 ALIASES: dict[str, Element] = {
     # Specialty / downstream products (sub_product)
+    # Downstream products of single-mineral sheets. USGS publishes no
+    # product-specific data, so numeric fields are N/A (the parent is one
+    # mineral, not a group to apportion); prose/identity inherited.
     "diamond-powders": Element(
         slug="diamond-powders", name="Diamond powders", symbol="C", mcs_url=_mcs("diamond"),
         kind="sub_product", parent_slug="diamond",
-        notes="Industrial diamond category — powder grades. No separate MCS sheet.",
+        notes="Industrial diamond powder grades. No separate MCS line → numeric fields N/A.",
     ),
     "gallium-nitride": Element(
         slug="gallium-nitride", name="Gallium nitride (GaN)", symbol="Ga", mcs_url=_mcs("gallium"),
         kind="sub_product", parent_slug="gallium",
-        notes="Downstream semiconductor product. Inventory falls under gallium imports.",
+        notes="Downstream semiconductor product. No GaN-specific MCS data → numeric fields N/A.",
     ),
     "graphite-anodes": Element(
         slug="graphite-anodes", name="Graphite anodes", symbol="C", mcs_url=_mcs("graphite"),
         kind="sub_product", parent_slug="graphite",
-        notes="Downstream battery component. MCS reports natural graphite; anodes are largely synthetic and not separately tabulated.",
+        notes="Downstream battery component (largely synthetic). Not separately tabulated → numeric fields N/A.",
     ),
     "lithium-batteries": Element(
         slug="lithium-batteries", name="Lithium batteries", symbol="Li", mcs_url=_mcs("lithium"),
         kind="sub_product", parent_slug="lithium",
-        notes="Finished good. No MCS line item — share parent lithium data.",
+        notes="Finished good. No MCS line item → numeric fields N/A.",
+    ),
+    # Abrasives materials. The abrasives sheet breaks Salient Statistics out by
+    # material (fused aluminum oxide / silicon carbide / metallic abrasives), so
+    # each gets its own row carrying only that material's figures (parent_filter
+    # keyword). The abrasives sheet has no per-material world table, so all keep
+    # world N/A. The parent collapses to a bare sum row (see csv_export).
+    "fused-aluminum-oxide": Element(
+        slug="fused-aluminum-oxide", name="Fused aluminum oxide", symbol=None, mcs_url=_mcs("abrasives"),
+        kind="sub_product", parent_slug="abrasives", parent_filter="fused aluminum oxide",
+        notes="Manufactured abrasive. Salient figures filtered to fused aluminum oxide rows of the abrasives sheet.",
     ),
     "silicon-carbide": Element(
         slug="silicon-carbide", name="Silicon carbide", symbol=None, mcs_url=_mcs("abrasives"),
-        kind="sub_product", parent_slug="abrasives",
-        notes="Synthetic ceramic abrasive. Not a rare earth — covered in the abrasives sheet alongside fused aluminum oxide.",
+        kind="sub_product", parent_slug="abrasives", parent_filter="silicon carbide",
+        notes="Synthetic ceramic abrasive. Salient figures filtered to silicon carbide rows of the abrasives sheet.",
+    ),
+    "metallic-abrasives": Element(
+        slug="metallic-abrasives", name="Metallic abrasives", symbol=None, mcs_url=_mcs("abrasives"),
+        kind="sub_product", parent_slug="abrasives", parent_filter="metallic",
+        notes="Steel shot / grit etc. Salient figures filtered to metallic abrasives rows of the abrasives sheet.",
     ),
     "superhard-materials": Element(
         slug="superhard-materials", name="Superhard materials", symbol=None, mcs_url=_mcs("abrasives"),
         kind="sub_product", parent_slug="abrasives",
-        notes="No dedicated MCS sheet. Closest source: industrial diamond + abrasives. Pulls from abrasives.",
+        notes="No dedicated MCS line (proxy for PCD/PcBN). USGS publishes no superhard-specific data → all numeric fields N/A; prose inherited from the abrasives sheet.",
     ),
     # Individual rare-earth elements — all from the grouped Rare Earths sheet.
     "cerium": Element(slug="cerium", name="Cerium", symbol="Ce",
@@ -356,16 +375,21 @@ ALIASES: dict[str, Element] = {
         parent_filter="dioxide",
         notes="Titanium dioxide (TiO2) pigment sub-table from the titanium sheet. US is a net exporter of TiO2 pigment (NIR = E).",
     ),
-    # Zirconium + hafnium — share a single combined USGS sheet.
-    # Same workflow as PGMs: parent holds the data, members inherit verbatim.
+    # Zirconium + hafnium — share a single combined USGS sheet. The Salient
+    # Statistics break imports/exports/price out per metal, so each member
+    # carries only its own figures (parent_filter keyword). The World Mine
+    # Production and Reserves table is zircon (= zirconium), so zirconium keeps
+    # it (inherits_world_table) and hafnium gets world N/A. Parent collapses to
+    # a bare sum row (see csv_export).
     "hafnium": Element(slug="hafnium", name="Hafnium", symbol="Hf",
                        mcs_url=_mcs("zirconium-hafnium"), kind="grouped",
-                       parent_slug="zirconium-and-hafnium",
-                       notes="Transition metal — not a rare earth. Co-extracted with zirconium; USGS reports them in a combined sheet."),
+                       parent_slug="zirconium-and-hafnium", parent_filter="hafnium",
+                       notes="Transition metal — not a rare earth. Co-extracted with zirconium; only its own imports/exports/price are reported (no separate hafnium world table)."),
     "zirconium": Element(slug="zirconium", name="Zirconium", symbol="Zr",
                          mcs_url=_mcs("zirconium-hafnium"), kind="grouped",
-                         parent_slug="zirconium-and-hafnium",
-                         notes="Co-reported with hafnium in the combined sheet."),
+                         parent_slug="zirconium-and-hafnium", parent_filter="zirconium",
+                         inherits_world_table=True,
+                         notes="Owns the sheet's World Mine Production and Reserves table (zircon ores and concentrates)."),
 }
 
 

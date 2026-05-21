@@ -601,5 +601,94 @@ class TitaniumSplitTests(unittest.TestCase):
         self.assertEqual(row["japan__imports_share_pct"], "N/A")
 
 
+class MechanismBGroupTests(unittest.TestCase):
+    """Mechanism B: true multi-mineral group sheets. Each member alias carries
+    only its own mineral's data (and splits per import form); the group parent
+    collapses to a bare sum row. Pulls the live CSV (the logic is in
+    pipeline._make_alias, upstream of build_rows)."""
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        import csv
+        from src import config
+        path = config.PROCESSED_DIR / "elements.csv"
+        if not path.exists():
+            raise unittest.SkipTest("elements.csv not present — run `python -m src.pipeline` first")
+        with path.open() as f:
+            cls.rows = list(csv.DictReader(f))
+
+    def _named(self, *names: str) -> dict[str, dict[str, str]]:
+        want = set(names)
+        return {r["import_category"]: r for r in self.rows if r["name"] in want}
+
+    def _exact(self, name: str) -> list[dict[str, str]]:
+        return [r for r in self.rows if r["name"] == name or r["name"].startswith(name + " (")]
+
+    def test_group_parents_collapse_to_one_sum_row(self) -> None:
+        for name, imp, exp in (
+            ("Zirconium and hafnium (grouped)", "18294", "12322"),
+            ("Abrasives (manufactured)", "261000", "34600"),
+        ):
+            rs = [r for r in self.rows if r["name"] == name]
+            self.assertEqual(len(rs), 1, f"{name} should collapse to one row")
+            self.assertEqual(rs[0]["import_category"], "")
+            self.assertEqual(rs[0]["imports_for_consumption_total"], imp)
+            self.assertEqual(rs[0]["exports_total"], exp)
+
+    def test_hafnium_carries_only_hafnium(self) -> None:
+        rows = {r["import_category"]: r for r in self._exact("Hafnium")}
+        self.assertEqual(rows[""]["imports_for_consumption_total"], "84")   # not the 18,294 group total
+        self.assertEqual(rows["Hafnium, unwrought"]["imports_for_consumption_total"], "72")
+        self.assertEqual(rows["Hafnium, wrought"]["imports_for_consumption_total"], "12")
+        # Hafnium has no world table.
+        self.assertEqual(rows[""]["china__mine_production"], "N/A")
+        self.assertEqual(rows[""]["china__reserves"], "N/A")
+
+    def test_zirconium_carries_only_zirconium_and_keeps_zircon_world(self) -> None:
+        rows = {r["import_category"]: r for r in self._exact("Zirconium")}
+        self.assertEqual(rows[""]["imports_for_consumption_total"], "18210")
+        self.assertEqual(rows[""]["usgs_2025_total_mined_production"], "100000")
+        # per-form values, not the member total
+        self.assertEqual(rows["Zirconium ores and concentrates"]["imports_for_consumption_total"], "16000")
+        self.assertEqual(rows["Zirconium, compounds"]["imports_for_consumption_total"], "1300")
+        # zirconium owns the zircon mine table (on the bare row)
+        self.assertEqual(rows[""]["china__mine_production"], "100")
+        # a sibling's import form must not appear
+        self.assertNotIn("Hafnium, unwrought", rows)
+
+    def test_abrasives_members_split(self) -> None:
+        sic = {r["import_category"]: r for r in self._exact("Silicon carbide")}
+        self.assertEqual(sic[""]["imports_for_consumption_total"], "95000")
+        self.assertEqual(sic[""]["usgs_2025_total_primary_production"], "30000")
+        fused = {r["import_category"]: r for r in self._exact("Fused aluminum oxide")}
+        self.assertEqual(fused[""]["imports_for_consumption_total"], "150000")
+        self.assertEqual(fused[""]["usgs_2025_total_primary_production"], "20000")
+        metallic = self._exact("Metallic abrasives")
+        self.assertEqual(metallic[0]["imports_for_consumption_total"], "16000")
+        self.assertEqual(metallic[0]["usgs_2025_total_primary_production"], "160000")
+        # No silicon-carbide row carries a fused-alumina category (no sibling leak).
+        self.assertFalse(any("fused" in r["import_category"].lower() for r in self._exact("Silicon carbide")))
+
+    def test_superhard_and_downstream_are_all_na(self) -> None:
+        for name in ("Superhard materials", "Gallium nitride (GaN)", "Diamond powders",
+                     "Graphite anodes", "Lithium batteries"):
+            rs = self._exact(name)
+            self.assertEqual(len(rs), 1, f"{name} should be a single bare row")
+            r = rs[0]
+            for c in ("imports_for_consumption_total", "exports_total",
+                      "usgs_2025_total_mined_production", "usgs_2025_total_primary_production",
+                      "consumption_apparent", "net_import_reliance_pct"):
+                self.assertEqual(r[c], "N/A", f"{name}: {c} should be N/A")
+
+    def test_rare_earth_aliases_drop_group_world_table(self) -> None:
+        """REE aliases keep their oxide price but must NOT inherit the group's
+        REO mine production / reserves (was: China 270,000 / 44,000,000)."""
+        cerium = next(r for r in self.rows if r["name"] == "Cerium")
+        self.assertEqual(cerium["imports_for_consumption_total"], "N/A")
+        self.assertEqual(cerium["china__mine_production"], "N/A")
+        self.assertEqual(cerium["china__reserves"], "N/A")
+        self.assertEqual(cerium["price_metal_average_dollars_per_pound"], "1.71")  # own oxide price kept
+
+
 if __name__ == "__main__":
     unittest.main()

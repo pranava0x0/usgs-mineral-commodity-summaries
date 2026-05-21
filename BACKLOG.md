@@ -528,29 +528,36 @@ iron-and-steel, titanium.
 - [x] **Renamed summary columns** `usgs_2025_total_primary_smelting` →
       `…_primary_production`, `…_secondary_smelting` → `…_secondary_production`.
 
-### Mechanism B — true multi-mineral GROUPS — PENDING
+### Mechanism B — true multi-mineral GROUPS — DONE (2026-05-20)
 
-These aliases still inherit the parent verbatim (group sum + all siblings'
-import categories). Fix = give each a `parent_filter` + a `_make_alias` branch
-that grabs only its mineral's salient rows / import categories / world table
-(else N/A), with the parent holding the sum. Decisions captured 2026-05-20:
-downstream single-mineral aliases → blank to N/A; superhard → all-N/A proxy;
-parent-row shape (collapse vs keep, + abrasives fused-alumina/metallic split)
-still to evaluate.
+Each member alias now grabs only its mineral's salient rows / import categories
+/ world table via `parent_filter` + `pipeline._fill_group_member`; members also
+reuse the Mechanism A per-form split so their import-form rows don't repeat the
+member total. Group parents collapse to a bare sum row (`csv_export`). See
+`docs/parsing-special-cases.md` §"Mechanism B"; tests in
+`tests/test_csv_export.py::MechanismBGroupTests`.
 
-- [ ] **Hafnium / Zirconium** (← zirconium-and-hafnium) — currently both show
-      the combined Zr+Hf summary, the zircon world table, and all 6 import
-      categories (incl. siblings'). Target: Hf → hafnium imports 84 / world
-      N/A / 2 hafnium cats; Zr → production 100,000, imports ~18,210, 4
-      zirconium cats, keeps the zircon mine+reserves table.
-- [ ] **Silicon carbide** (← abrasives) — currently abrasives group total + all
-      7 cats incl. fused-alumina. Target: SiC production 30,000 / imports
-      95,000 / exports 8,600 / NIR 74 / 3 SiC cats.
-- [ ] **Superhard materials** (← abrasives) — no source line; → all N/A proxy.
-- [ ] **Diamond powders / Gallium nitride / Graphite anodes / Lithium
-      batteries** — single-mineral downstream products; → blank summary +
-      country blocks to N/A (no product-specific PDF data).
-- [ ] **Abrasives / Zr-Hf parent shape** — collapse to a bare sum row (like
-      PGM/titanium) vs keep per-category; abrasives would need
-      `fused-aluminum-oxide` + `metallic-abrasives` sub-rows to collapse
-      without losing those import shares.
+- [x] **Hafnium / Zirconium** (← zirconium-and-hafnium) — Hf: bare 84 (unwrought
+      72 / wrought 12), world N/A; Zr: bare imports 18,210 + production 100,000,
+      per-form rows (ores 16,000 / compounds 1,300 / unwrought 530 / wrought
+      380), keeps the zircon mine+reserves table.
+- [x] **Silicon carbide / Fused aluminum oxide / Metallic abrasives**
+      (← abrasives) — own production/imports/exports/consumption per material
+      (SiC 30,000/95,000; fused 20,000/150,000; metallic 160,000/16,000); world
+      N/A. Added `fused-aluminum-oxide` + `metallic-abrasives` aliases.
+- [x] **Superhard materials** (← abrasives) — all-N/A proxy (prose kept).
+- [x] **Diamond powders / Gallium nitride / Graphite anodes / Lithium
+      batteries** — single-mineral downstream products; summary + world + import
+      sources blanked to N/A (prose kept).
+- [x] **Rare-earth aliases** — also drop the inherited group REO world table +
+      import sources (kept only the per-element oxide price). Was: every REE
+      showed China mine 270,000 / reserves 44,000,000.
+- [x] **Abrasives / Zr-Hf parent shape** — both collapse to a bare sum row;
+      abrasives fully split into fused-alumina / SiC / metallic so no import
+      shares are lost.
+
+Residual (minor, pre-existing): the Zr-Hf *parent* row's `mined_production`
+summary is N/A (the bare "Production, zirconium ores…" salient row doesn't match
+the parser's mine-row heuristic) even though the zirconium member shows 100,000
+and the parent's per-country mine block is populated. Tracked by the existing
+"bare Production → mine fallback" item.

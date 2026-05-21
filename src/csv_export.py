@@ -181,8 +181,16 @@ def _category_rows_for(rec: ElementRecord) -> list[Optional[ImportSourceCategory
     metal" / "TiO pigment") move to the titanium-sponge-metal /
     titanium-dioxide sub-rows, so the de-blended parent collapses to one
     bare row.
+
+    And for the zirconium-and-hafnium + abrasives group parents: their import
+    categories move to the per-mineral member rows (hafnium / zirconium;
+    fused-aluminum-oxide / silicon-carbide / metallic-abrasives), so each
+    parent collapses to a bare sum row holding the group totals + world table.
     """
-    if rec.slug in ("platinum-group-metals", "titanium"):
+    if rec.slug in (
+        "platinum-group-metals", "titanium",
+        "zirconium-and-hafnium", "abrasives",
+    ):
         return [None]
     if rec.import_sources_by_category:
         return list(rec.import_sources_by_category)
@@ -279,12 +287,21 @@ def _form_tokens(s: str, drop: set[str]) -> set[str]:
 
 
 def _is_per_form_sheet(rec: ElementRecord) -> bool:
-    """True for a single-mineral primary whose imports are listed by form
-    (>1 import category) and that has no alias children. These get the bare
-    parent row + per-form row layout."""
-    if rec.kind != "primary" or rec.slug in _PARENTS_WITH_ALIASES:
+    """True for records that get the bare parent row + per-form row layout:
+
+    * a single-mineral primary whose imports are listed by form (>1 import
+      category) and that has no alias children; OR
+    * a multi-mineral group member alias (zirconium / hafnium / silicon-carbide
+      / fused-aluminum-oxide) that kept its own filtered salient and still has
+      >1 import form — so its form rows don't repeat the member total.
+    """
+    if len([c for c in rec.import_sources_by_category if c.category]) <= 1:
         return False
-    return len([c for c in rec.import_sources_by_category if c.category]) > 1
+    if rec.parent_slug is None:
+        return rec.slug not in _PARENTS_WITH_ALIASES
+    # Alias: only the group members keep a non-empty salient to match forms
+    # against (downstream / superhard / REE were blanked → empty salient).
+    return bool(rec.salient_stats)
 
 
 def _best_form_row(category: str, salient, section_kw: str, drop: set[str]):

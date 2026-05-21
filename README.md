@@ -23,15 +23,18 @@ Currently covered (MCS 2026 edition):
   Dysprosium, Erbium, Holmium, Lutetium, Terbium, Thulium, Ytterbium, Yttrium
   carry parent provenance with "Not available" where MCS 2026 doesn't
   separately price them.
-- **Grouped-sheet aliases (`kind="grouped"`)** — inherit a grouped parent
-  verbatim because USGS only reports at the group level: Iridium, Platinum
-  (← platinum-group-metals); Hafnium, Zirconium (← zirconium-and-hafnium).
+- **Grouped-sheet aliases (`kind="grouped"`)** — members of a grouped parent
+  sheet: Iridium, Palladium, Platinum, … (← platinum-group-metals); Hafnium,
+  Zirconium (← zirconium-and-hafnium). Each carries only its own mineral's
+  figures where USGS breaks them out (e.g. zirconium owns the zircon world
+  table; hafnium imports 84 vs the combined 18,294); the parent holds the sum.
 - **Sub-product aliases (`kind="sub_product"`)** — downstream products or
-  per-commodity splits derived from a parent sheet: Diamond powders, Gallium
-  nitride, Graphite anodes, Lithium batteries, Silicon carbide, Superhard
-  materials; Iron and Steel (Pig iron / Raw steel); Titanium (sponge/metal) and
-  Titanium (dioxide) — the titanium sheet stacks two commodities, so the parent
-  de-blends and each sub-row carries its own figures.
+  per-material splits derived from a parent sheet: Diamond powders, Gallium
+  nitride, Graphite anodes, Lithium batteries (single-mineral downstream
+  products — numeric fields N/A); Fused aluminum oxide, Silicon carbide,
+  Metallic abrasives, Superhard materials (← abrasives); Iron and Steel (Pig
+  iron / Raw steel); Titanium (sponge/metal) and Titanium (dioxide). Group
+  parents collapse to a bare sum row and each member carries its own figures.
 
 Each record's `kind` field surfaces this taxonomy so the viewer / CSV can
 filter by category (e.g. "REE only", "PGM only"). See
