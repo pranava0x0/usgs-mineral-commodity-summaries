@@ -627,6 +627,92 @@ main {
   * { transition: none !important; }
 }
 
+/* ---------- Top-level view switcher (By element / By country) ---------- */
+.view-switch {
+  display: inline-flex;
+  gap: 2px;
+  margin: 0 0 20px;
+  padding: 3px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+}
+.view-tab {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 8px 18px;
+  min-height: 44px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 120ms ease, background 120ms ease;
+}
+.view-tab:hover { color: var(--text); }
+.view-tab[aria-selected="true"] {
+  color: #fff;
+  background: var(--accent);
+}
+
+/* ---------- By-country view ---------- */
+.country-picker-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 12px 0 20px;
+}
+.country-picker-row label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+#country-select {
+  appearance: none;
+  -webkit-appearance: none;
+  font: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 38px 10px 12px;
+  min-height: 44px;
+  min-width: min(280px, 100%);
+  cursor: pointer;
+  /* caret (theme-neutral gray) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23888' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+}
+#country-body h3 {
+  margin: 6px 0 2px;
+  font-size: 22px;
+}
+#country-body h4.eyebrow {
+  margin-top: 22px;
+}
+.count-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 1px 8px;
+  margin-left: 4px;
+  vertical-align: middle;
+  letter-spacing: 0;
+}
+
 /* ---------- Print (Export PDF) ---------- */
 @media print {
   :root { --bg: #fff; --surface: #fff; --surface-2: #f5f5f5; --border: #bbb;

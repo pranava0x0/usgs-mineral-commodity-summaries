@@ -405,6 +405,148 @@ function screenshotsBlock(el) {
   return `<div class="screenshots">${figs.join('')}</div>`;
 }
 
+/* ---------- By-country view ----------
+ * A supplier-first pivot of the same data: pick a country and see every
+ * commodity it ships to the U.S. (import share) and the production / capacity /
+ * reserves USGS attributes to it. Built from the canonical-mapped CSV columns
+ * (`<slug>__<block>`) so the USGS→canonical name mapping (src/countries.py)
+ * isn't duplicated in JS; the country list comes from baked countries.json.
+ */
+
+const COUNTRY_BLOCKS = [
+  { suffix: 'imports_share_pct',   title: 'Imported by the U.S. from {C}', valueLabel: 'Import share', pct: true },
+  { suffix: 'mine_production',      title: 'Mine production',     valueLabel: 'Production' },
+  { suffix: 'refinery_production',  title: 'Refinery production', valueLabel: 'Production' },
+  { suffix: 'capacity',            title: 'Capacity',            valueLabel: 'Capacity' },
+  { suffix: 'reserves',            title: 'Reserves',            valueLabel: 'Reserves' },
+];
+
+let _countryData = null;  // { idx: {header->col}, rows: string[][], countries: [{name,slug}] }
+
+async function ensureCountryData() {
+  if (_countryData) return _countryData;
+  const [csvText, list] = await Promise.all([
+    fetch('data.csv').then(r => r.text()),
+    fetch('countries.json').then(r => r.json()),
+  ]);
+  const all = parseCsv(csvText);
+  const idx = {};
+  (all[0] || []).forEach((h, i) => { idx[h] = i; });
+  _countryData = { idx, rows: all.slice(1), countries: list };
+  return _countryData;
+}
+
+function fmtCsvCell(cell, pct = false) {
+  if (/^-?\d+(?:\.\d+)?$/.test(cell)) {
+    return Number(cell).toLocaleString('en-US') + (pct ? '%' : '');
+  }
+  return `<span class="sentinel" title="raw value from PDF">${escapeHtml(cell)}</span>`;
+}
+
+function renderCountryPanel(slug) {
+  const d = _countryData;
+  const host = $('#country-body');
+  const country = d.countries.find(c => c.slug === slug);
+  if (!country) { host.innerHTML = `<p class="muted-cell">Unknown country.</p>`; return; }
+
+  const nameI = d.idx['name'];
+  const nirI = d.idx['net_import_reliance_pct'];
+  const isNA = (v) => v === undefined || v === 'N/A' || v === '';
+  const numOrNaN = (v) => { const n = parseFloat(v); return Number.isNaN(n) ? -Infinity : n; };
+
+  const sections = COUNTRY_BLOCKS.map(blk => {
+    const col = d.idx[`${slug}__${blk.suffix}`];
+    if (col === undefined) return '';
+    const entries = d.rows
+      .filter(r => !isNA(r[col]))
+      .map(r => ({ name: r[nameI], value: r[col], nir: nirI !== undefined ? r[nirI] : 'N/A' }))
+      .sort((a, b) => numOrNaN(b.value) - numOrNaN(a.value));
+    if (!entries.length) return '';
+    const showNir = blk.pct;  // US net-import-reliance context only on the imports table
+    const head = `<tr><th scope="col">Commodity</th><th scope="col" class="num">${escapeHtml(blk.valueLabel)}</th>${showNir ? '<th scope="col" class="num">U.S. net import reliance</th>' : ''}</tr>`;
+    const body = entries.map(e => `
+      <tr>
+        <td>${escapeHtml(e.name)}</td>
+        <td class="num">${fmtCsvCell(e.value, blk.pct)}</td>
+        ${showNir ? `<td class="num">${isNA(e.nir) ? '<span class="muted-cell">N/A</span>' : fmtCsvCell(e.nir, true)}</td>` : ''}
+      </tr>`).join('');
+    return `<h4 class="eyebrow">${escapeHtml(blk.title.replace('{C}', country.name))} <span class="count-badge">${entries.length}</span></h4>
+      <table class="mini-table"><thead>${head}</thead><tbody>${body}</tbody></table>`;
+  }).filter(Boolean);
+
+  if (!sections.length) {
+    host.innerHTML = `<h3 tabindex="-1">${escapeHtml(country.name)}</h3>
+      <p class="muted-cell">No MCS 2026 commodity reports <strong>${escapeHtml(country.name)}</strong> as an import source, producer, or reserve holder.</p>`;
+    return;
+  }
+  host.innerHTML = `<h3 tabindex="-1">${escapeHtml(country.name)}</h3>${sections.join('')}`;
+}
+
+function updateCountryUrl(slug) {
+  const u = new URL(location);
+  u.searchParams.set('view', 'country');
+  u.searchParams.set('country', slug);
+  history.replaceState(null, '', u);
+}
+
+let _countryInit = false;
+async function initCountryView() {
+  if (_countryInit) return;
+  _countryInit = true;
+  const sel = $('#country-select');
+  let d;
+  try {
+    d = await ensureCountryData();
+  } catch (err) {
+    $('#country-body').innerHTML = `<p class="muted-cell">Failed to load country data: ${escapeHtml(String(err))} — run <code>python -m src.pipeline</code> first.</p>`;
+    return;
+  }
+  const sorted = [...d.countries].sort((a, b) => a.name.localeCompare(b.name));
+  sel.innerHTML = sorted.map(c => `<option value="${escapeHtml(c.slug)}">${escapeHtml(c.name)}</option>`).join('');
+  sel.addEventListener('change', () => { renderCountryPanel(sel.value); updateCountryUrl(sel.value); });
+
+  const want = new URL(location).searchParams.get('country');
+  const initial = (want && d.countries.some(c => c.slug === want)) ? want
+    : (d.countries.some(c => c.slug === 'china') ? 'china' : sorted[0].slug);
+  sel.value = initial;
+  renderCountryPanel(initial);
+}
+
+function setupViewSwitch() {
+  const tabs = $$('.view-tab');
+  const panels = { element: $('#view-element'), country: $('#view-country') };
+  const activate = (view, { focusPanel = false } = {}) => {
+    tabs.forEach(t => {
+      const on = t.dataset.view === view;
+      t.setAttribute('aria-selected', String(on));
+      t.tabIndex = on ? 0 : -1;
+    });
+    panels.element.hidden = view !== 'element';
+    panels.country.hidden = view !== 'country';
+    if (view === 'country') {
+      initCountryView();
+      const u = new URL(location); u.searchParams.set('view', 'country'); history.replaceState(null, '', u);
+    } else {
+      const u = new URL(location); u.searchParams.delete('view'); u.searchParams.delete('country'); history.replaceState(null, '', u);
+    }
+    if (focusPanel) panels[view].focus?.();
+  };
+  tabs.forEach((t, i) => {
+    t.addEventListener('click', () => activate(t.dataset.view));
+    t.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const next = tabs[(i + dir + tabs.length) % tabs.length];
+        next.focus(); activate(next.dataset.view);
+      }
+    });
+  });
+  // Honor a ?view=country deep link on load.
+  const params = new URL(location).searchParams;
+  if (params.get('view') === 'country') activate('country');
+}
+
 /* ---------- Exports ----------
  * CSV is a plain <a download> — no JS needed.
  * XLS builds an Office XML "Spreadsheet ML" file inline from the CSV. Excel,
@@ -517,6 +659,7 @@ async function main() {
     return;
   }
   renderOverview(bundle);
+  setupViewSwitch();
 }
 
 main();

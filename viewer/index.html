@@ -49,36 +49,58 @@
   </header>
 
   <main id="main" role="main">
-    <section id="overview" aria-labelledby="overview-h">
-      <h2 id="overview-h" class="eyebrow">Latest-year summary</h2>
-      <p id="units-note" class="units-note"></p>
-      <p class="footnote-note" id="overview-footnote" aria-live="polite"></p>
-      <div class="table-wrap">
-        <table id="overview-table" class="data-table" aria-describedby="overview-footnote">
-          <caption class="visually-hidden">USGS Mineral Commodity Summaries — latest-year values per commodity. Click a row or press Enter to open its detail panel.</caption>
-          <thead>
-            <tr>
-              <th scope="col">Element</th>
-              <th scope="col" class="num">Mined production</th>
-              <th scope="col" class="num">Primary smelting</th>
-              <th scope="col" class="num">Secondary smelting</th>
-              <th scope="col" class="num">Imports for consumption (total)</th>
-              <th scope="col" class="num">Exports (total)</th>
-              <th scope="col" class="num">Apparent consumption</th>
-              <th scope="col" class="num">Price (latest)</th>
-              <th scope="col" class="num">Net import reliance %</th>
-              <th scope="col">Source</th>
-            </tr>
-          </thead>
-          <tbody id="overview-body"></tbody>
-        </table>
-      </div>
-    </section>
+    <nav class="view-switch" role="tablist" aria-label="View mode">
+      <button id="viewtab-element" class="view-tab" type="button" role="tab"
+              aria-selected="true" aria-controls="view-element" data-view="element">By element</button>
+      <button id="viewtab-country" class="view-tab" type="button" role="tab"
+              aria-selected="false" aria-controls="view-country" tabindex="-1" data-view="country">By country</button>
+    </nav>
 
-    <section id="detail" aria-labelledby="detail-h" aria-live="polite" hidden>
-      <h2 id="detail-h" class="eyebrow">Detail</h2>
-      <div id="detail-body"></div>
-    </section>
+    <div id="view-element" role="tabpanel" aria-labelledby="viewtab-element">
+      <section id="overview" aria-labelledby="overview-h">
+        <h2 id="overview-h" class="eyebrow">Latest-year summary</h2>
+        <p id="units-note" class="units-note"></p>
+        <p class="footnote-note" id="overview-footnote" aria-live="polite"></p>
+        <div class="table-wrap">
+          <table id="overview-table" class="data-table" aria-describedby="overview-footnote">
+            <caption class="visually-hidden">USGS Mineral Commodity Summaries — latest-year values per commodity. Click a row or press Enter to open its detail panel.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Element</th>
+                <th scope="col" class="num">Mined production</th>
+                <th scope="col" class="num">Primary production</th>
+                <th scope="col" class="num">Secondary production</th>
+                <th scope="col" class="num">Imports for consumption (total)</th>
+                <th scope="col" class="num">Exports (total)</th>
+                <th scope="col" class="num">Apparent consumption</th>
+                <th scope="col" class="num">Price (latest)</th>
+                <th scope="col" class="num">Net import reliance %</th>
+                <th scope="col">Source</th>
+              </tr>
+            </thead>
+            <tbody id="overview-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="detail" aria-labelledby="detail-h" aria-live="polite" hidden>
+        <h2 id="detail-h" class="eyebrow">Detail</h2>
+        <div id="detail-body"></div>
+      </section>
+    </div>
+
+    <div id="view-country" role="tabpanel" aria-labelledby="viewtab-country" hidden>
+      <section id="country" aria-labelledby="country-h">
+        <h2 id="country-h" class="eyebrow">By country</h2>
+        <p class="units-note">Pick a country to see every commodity it supplies to the U.S. (import share) and the production, capacity, and reserves USGS attributes to it — a supplier-first pivot of the same MCS 2026 data.</p>
+        <div class="country-picker-row">
+          <label for="country-select">Country</label>
+          <select id="country-select" aria-describedby="country-picker-help"></select>
+          <span id="country-picker-help" class="visually-hidden">Selecting a country updates the panel below.</span>
+        </div>
+        <div id="country-body" aria-live="polite"></div>
+      </section>
+    </div>
   </main>
 
   <footer role="contentinfo" class="page-footer">

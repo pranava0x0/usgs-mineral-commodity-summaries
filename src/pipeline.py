@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 from typing import Optional
 
-from . import audit, config, csv_export, parser
+from . import audit, config, countries, csv_export, parser
 from .models import (
     ElementBundle,
     ElementRecord,
@@ -663,6 +663,24 @@ def _write_bundle(records: list[ElementRecord]) -> tuple[Path, Path]:
     viewer_data.write_text(out_json.read_text(encoding="utf-8"), encoding="utf-8")
     viewer_csv = config.VIEWER_DIR / "data.csv"
     viewer_csv.write_text(out_csv.read_text(encoding="utf-8"), encoding="utf-8")
+
+    # Country axis for the viewer's "by country" view. Baked from
+    # src/countries.py so the canonical names/slugs have a single source of
+    # truth (no duplicated list in viewer.js). Order matches the CSV columns.
+    viewer_countries = config.VIEWER_DIR / "countries.json"
+    viewer_countries.write_text(
+        json.dumps(
+            [
+                {"name": name, "slug": slug}
+                for name, slug in zip(
+                    countries.CANONICAL_COUNTRIES, countries.canonical_slugs()
+                )
+            ],
+            indent=2,
+            ensure_ascii=False,
+        ),
+        encoding="utf-8",
+    )
 
     log.info("wrote %s, %s, and %s", out_json, out_csv, viewer_data)
     return out_json, out_csv

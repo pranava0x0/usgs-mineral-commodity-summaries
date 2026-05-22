@@ -119,5 +119,22 @@ class TopCountryDataTests(unittest.TestCase):
         self.assertEqual(ny_cols, [])
 
 
+class CountriesJsonArtifactTests(unittest.TestCase):
+    """viewer/countries.json (the country-view axis) must stay a faithful copy
+    of src/countries.py — single source of truth, no drift."""
+
+    def test_viewer_countries_json_matches_source(self) -> None:
+        import json
+        path = config.VIEWER_DIR / "countries.json"
+        if not path.exists():
+            raise unittest.SkipTest("viewer/countries.json not generated — run the pipeline")
+        data = json.loads(path.read_text(encoding="utf-8"))
+        expected = [
+            {"name": name, "slug": slug}
+            for name, slug in zip(CANONICAL_COUNTRIES, canonical_slugs())
+        ]
+        self.assertEqual(data, expected)
+
+
 if __name__ == "__main__":
     unittest.main()

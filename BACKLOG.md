@@ -311,7 +311,16 @@ open it, slow `pd.read_csv`).
 - [ ] **Sparkline cells** (low) — add a tiny inline 5-year line for each numeric column.
 - [ ] **Bookmarkable detail URLs** (low) — `?element=bismuth` opens straight to that element's detail card.
 - [ ] **Mobile bottom sheet for detail** (low) — per DESIGN.md §7, swap the inline detail card for a bottom sheet at <640px.
-- [ ] **Views by country** (medium) — a country-centric pivot of the existing
+- [x] **Views by country** (medium) — v1 SHIPPED (2026-05-22). A "By country"
+      top-level tab in the viewer: a country picker (94-entry axis from baked
+      `viewer/countries.json`) + a per-country panel with 5 blocks (import share
+      w/ US net-import-reliance context, mine / refinery / capacity / reserves),
+      sorted, with an empty state for prose-only countries (e.g. Bhutan) and a
+      `?view=country&country=` deep link. Built client-side from the
+      canonical-mapped `data.csv` (option b below was not needed). Possible
+      follow-ups: filter/sort controls, a "top suppliers" landing view, baked
+      `by_country.json` for static/LLM consumers. Original spec:
+      a country-centric pivot of the existing
       per-element data: pick a country (from the 94-entry canonical axis) and
       see every commodity it touches — as an import source (% share + which
       form/category), and as a mine / refinery / capacity / reserves holder —
