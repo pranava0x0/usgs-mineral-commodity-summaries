@@ -311,6 +311,30 @@ open it, slow `pd.read_csv`).
 - [ ] **Sparkline cells** (low) — add a tiny inline 5-year line for each numeric column.
 - [ ] **Bookmarkable detail URLs** (low) — `?element=bismuth` opens straight to that element's detail card.
 - [ ] **Mobile bottom sheet for detail** (low) — per DESIGN.md §7, swap the inline detail card for a bottom sheet at <640px.
+- [ ] **Views by country** (medium) — a country-centric pivot of the existing
+      per-element data: pick a country (from the 94-entry canonical axis) and
+      see every commodity it touches — as an import source (% share + which
+      form/category), and as a mine / refinery / capacity / reserves holder —
+      with the US import-reliance context. Inverts today's element-first view
+      ("where does the US get antimony?") into a supplier-first view ("what does
+      China supply, and how dominant is it?"). The data already exists: the CSV's
+      5 per-country blocks (`<country>__imports_share_pct` / `__mine_production` /
+      `__refinery_production` / `__capacity` / `__reserves`) are exactly this
+      table transposed, and `src/countries.py` already maps USGS spellings to the
+      canonical axis. Build options: (a) a viewer tab that transposes
+      `data.csv`/`data.json` client-side and renders a per-country card
+      (commodity, role, value, share, US NIR); (b) a baked `by_country.json`
+      pivot emitted from `csv_export` so static consumers/LLMs get it too.
+      Notes/decisions:
+      - Drop the residual `other`/`others` bucket and `World total` (already
+        excluded from the canonical axis) so a country page sums cleanly.
+      - Surface the same sentinels verbatim (W / E / >N / NA) per cell.
+      - "Top suppliers" landing view (China, Canada, Australia, Mexico, Japan,
+        South Korea lead by coverage — see `tests/test_countries.py`).
+      - New Zealand (and other non-canonical names) have no data — render an
+        explicit "not reported in MCS 2026" empty state, don't 404.
+      - Pairs well with **Sort / filter** (filter the per-country list by block)
+        and **Bookmarkable URLs** (`?country=china`).
 
 ## Audit module enhancements
 
