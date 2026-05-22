@@ -5,7 +5,7 @@
 ## Data
 
 - [Bundle JSON](data.json): canonical machine-readable form. One `ElementRecord` per commodity (and per rare-earth-element / per-PGM alias). Includes `salient_stats` (5-year US table), `import_sources_by_category`, `world_production` (per-country mine production + reserves), prose blocks, and footnotes. Latest-year sentinels (W = withheld, E = net exporter, >N = "more than N", NA = USGS-reported not-available) appear in both `raw_values` and `latest_year_sentinels`.
-- [Flat CSV](data.csv): one row per (element, import-source-category). Wide schema (~2000 columns) covering identity + latest-year summary + per-year salient stats + per-country production / capacity / reserves. Each numeric column is mixed-type — it carries either a number or a USGS sentinel verbatim. Pandas users coerce sentinels to NaN via `pd.to_numeric(col, errors="coerce")`.
+- [Flat CSV](data.csv): one row per (element/alias, import-source category or form). Fixed ~487-column public schema: 8 identity + 9 latest-year summary (USGS 2025 mined / primary / secondary production, imports for consumption, exports, apparent consumption, price, net import reliance %, government stockpile) + 5 per-country blocks (import-source share, mine production, refinery production, capacity, reserves) over a 94-country canonical axis. Multi-form sheets (antimony) and multi-mineral group sheets (abrasives, zirconium-and-hafnium) emit a bare parent/total row plus one row per form/member, each carrying only its own figures. Each numeric column is mixed-type — a number or a USGS sentinel verbatim. Pandas users coerce sentinels to NaN via `pd.to_numeric(col, errors="coerce")`.
 
 ## Source & methodology
 
@@ -19,9 +19,9 @@
 - **`W` is withheld** — proprietary-data suppression. Numeric field is `None`; CSV cell carries `W`.
 - **`E` is net exporter** — appears only in Net Import Reliance rows.
 - **`>N` / `<N`** — bounded approximation. Numeric field carries `N`; CSV cell carries the inequality verbatim.
-- **Year tagging** — column names like `australia_production_2025` are taken straight from the PDF's table sub-header band; no interpolation.
+- **Country columns** — the CSV's per-country columns are `<country>__<block>` (e.g. `australia__mine_production`, `china__imports_share_pct`) over a fixed 94-country canonical axis. USGS spellings are mapped to canonical entries (e.g. "Korea, Republic of" → South Korea, "Burma" → Burma (Myanmar), "Congo (Kinshasa)" → Congo (Kinshasa) / DRC); non-country labels ("Other", "World total") are dropped. The full 5-year salient series (2021–2025e) lives in the JSON `salient_stats`, not the CSV.
 
 ## Optional
 
-- [Per-element audit reports](data/audit/): one directory per commodity with `audit.md` (extracted values + verbatim PDF text side by side) and `page-NN.png` screenshots of the source PDF.
+- [Per-element audit reports](https://github.com/pranava0x0/usgs-mineral-commodity-summaries/tree/main/data/audit): one directory per commodity with `audit.md` (extracted values + verbatim PDF text side by side) and `page-NN.png` screenshots of the source PDF. (Not served from the site root — linked on GitHub.)
 - [GitHub repository](https://github.com/pranava0x0/usgs-mineral-commodity-summaries): source code, tests, refresh workflows.
