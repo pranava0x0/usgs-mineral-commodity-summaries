@@ -441,12 +441,23 @@ See the extensive rare-earths audit notes in [../BACKLOG.md](../BACKLOG.md).
 
 ---
 
-## Confirmed parser label-merging bugs (open in BACKLOG)
+## Import-sources country-share parser (rewritten 2026-05-22)
 
-These are known wrong-but-not-yet-fixed; don't be surprised by them on a
-refresh, and don't "fix" them without checking BACKLOG first:
+`_parse_country_share_list` scans every `country, [footnote] pct%` entry with
+`re.finditer` (not `;`-splitting), so it handles both `;`- and `,`-separated
+lists, a footnote digit between country and percent (`China,9 6%`), a prose
+prefix on the first entry (scandium → keep trailing `Japan`), and a trailing
+`…, and other, N%`. `_looks_like_country` rejects prose runs (niobium's
+`"68% was ferroniobium"`). `_CATEGORY_HEAD` allows `%` in labels (`Magnesium
+metal (99.8% purity)`) and labels up to 120 chars (`Combined total (includes
+…)`). On a refresh, if a sheet's import sources look wrong, check these.
+See issues.md #19; tests in `tests/test_import_sources.py`.
+
+## Confirmed parser label-merging bugs (still open — salient stats)
+
+Known wrong-but-not-yet-fixed in `_parse_salient_stats`; don't be surprised on a
+refresh, and check BACKLOG/issues first:
 - **Tantalum** — `NA` from a stockpile cell concatenates onto the next row's
   label (`"NA Consumption, apparent"`).
-- **Rhenium** — Employment-number value prefixes the wrapped NIR label.
-- **Chromium** — stainless-steel import-source list truncated (country-share
-  parser drops entries joined by "and").
+- **Rhenium** — Employment-number value (`"Small"`) prefixes the wrapped NIR
+  label (`"Small Net import reliance …"`).

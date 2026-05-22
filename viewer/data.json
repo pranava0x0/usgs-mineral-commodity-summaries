@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-20T07:32:44",
+  "generated_at": "2026-05-22T10:06:20",
   "elements": [
     {
       "slug": "abrasives",
@@ -3074,6 +3074,10 @@
             {
               "country": "Finland",
               "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 24.0
             }
           ]
         },
@@ -3083,6 +3087,18 @@
             {
               "country": "Taiwan",
               "share_pct": 16.0
+            },
+            {
+              "country": "Finland",
+              "share_pct": 12.0
+            },
+            {
+              "country": "India",
+              "share_pct": 11.0
+            },
+            {
+              "country": "China",
+              "share_pct": 6.0
             },
             {
               "country": "others",
@@ -7995,6 +8011,31 @@
       "import_sources_flat": [],
       "import_sources_by_category": [
         {
+          "category": "Magnesium metal (99.8% purity)",
+          "countries": [
+            {
+              "country": "Israel",
+              "share_pct": 47.0
+            },
+            {
+              "country": "Turkey",
+              "share_pct": 31.0
+            },
+            {
+              "country": "Russia",
+              "share_pct": 8.0
+            },
+            {
+              "country": "China",
+              "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 8.0
+            }
+          ]
+        },
+        {
           "category": "Magnesium alloys (magnesium content)",
           "countries": [
             {
@@ -8066,6 +8107,15 @@
             {
               "country": "other",
               "share_pct": 27.0
+            }
+          ]
+        },
+        {
+          "category": "Combined total (includes magnesium content of alloys, metal, powder, scrap, sheet, and other)",
+          "countries": [
+            {
+              "country": "Israel",
+              "share_pct": 20.0
             },
             {
               "country": "Canada",
@@ -9865,6 +9915,10 @@
             {
               "country": "United Kingdom",
               "share_pct": 9.0
+            },
+            {
+              "country": "other",
+              "share_pct": 23.0
             }
           ]
         }
@@ -11048,6 +11102,10 @@
             {
               "country": "Canada",
               "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 15.0
             }
           ]
         },
@@ -12729,7 +12787,7 @@
       "stockpile_fy2025_potential_acquisitions": null,
       "import_sources_flat": [
         {
-          "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+          "country": "Japan",
           "share_pct": 89.0
         },
         {
@@ -12742,7 +12800,7 @@
           "category": null,
           "countries": [
             {
-              "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+              "country": "Japan",
               "share_pct": 89.0
             },
             {
@@ -18566,6 +18624,10 @@
             {
               "country": "Australia",
               "share_pct": 10.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         },
@@ -22883,6 +22945,10 @@
             {
               "country": "Canada",
               "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 15.0
             }
           ]
         }
@@ -27114,6 +27180,10 @@
             {
               "country": "Australia",
               "share_pct": 10.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
             }
           ]
         },

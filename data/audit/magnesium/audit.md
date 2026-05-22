@@ -40,6 +40,13 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 
 ## Import Sources (2021-24)
 
+**Magnesium metal (99.8% purity)**
+- Israel: 47%
+- Turkey: 31%
+- Russia: 8%
+- China: 6%
+- other: 8%
+
 **Magnesium alloys (magnesium content)**
 - Czechia: 26%
 - Republic of Korea: 20%
@@ -60,6 +67,9 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - China: 14%
 - India: 8%
 - other: 27%
+
+**Combined total (includes magnesium content of alloys, metal, powder, scrap, sheet, and other)**
+- Israel: 20%
 - Canada: 15%
 - Turkey: 11%
 - Czechia: 9%

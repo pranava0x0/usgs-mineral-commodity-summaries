@@ -528,6 +528,10 @@
         {
           "country": "Australia",
           "share_pct": 10.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
         }
       ]
     },

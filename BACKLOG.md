@@ -233,13 +233,12 @@ These show up in audit reports and the CSV as nonsensical row labels:
 
 ### Chromium "Stainless steel" import-sources truncated
 
-- [ ] **Chromium** — the `Stainless steel` import-source category
-      currently lists only `Taiwan, 16%; others, 55%`. The PDF lists
-      more countries (Finland, India, China). Surfaced by the country-
-      share parser bug already filed as issues.md #12 ("merges
-      multiple countries when separator is 'and'"). When that fix
-      lands, chromium's stainless-steel row should round-trip to 5+
-      countries.
+- [x] **Chromium** — FIXED (2026-05-22, issues.md #19). The `Stainless
+      steel` category now round-trips to `Taiwan 16%, Finland 12%, India
+      11%, China 6%, others 55%`. Root cause was comma-separated countries
+      (not "and") being dropped by the country-share splitter; rewritten to
+      scan all entries with `re.finditer`. Ferrochromium also recovered its
+      trailing `other, 24%`.
 
 ### Things that look correct
 

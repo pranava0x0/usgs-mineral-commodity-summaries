@@ -295,6 +295,31 @@
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
+      "category": "Magnesium metal (99.8% purity)",
+      "countries": [
+        {
+          "country": "Israel",
+          "share_pct": 47.0
+        },
+        {
+          "country": "Turkey",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 8.0
+        },
+        {
+          "country": "China",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 8.0
+        }
+      ]
+    },
+    {
       "category": "Magnesium alloys (magnesium content)",
       "countries": [
         {
@@ -366,6 +391,15 @@
         {
           "country": "other",
           "share_pct": 27.0
+        }
+      ]
+    },
+    {
+      "category": "Combined total (includes magnesium content of alloys, metal, powder, scrap, sheet, and other)",
+      "countries": [
+        {
+          "country": "Israel",
+          "share_pct": 20.0
         },
         {
           "country": "Canada",

@@ -56,6 +56,7 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - Canada: 41%
 - Mexico: 27%
 - United Kingdom: 9%
+- other: 23%
 
 ## World Mine Production and Reserves
 

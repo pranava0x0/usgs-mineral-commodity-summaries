@@ -446,14 +446,17 @@ def _parse_salient_stats(section_lines: list[extractor.TextLine]) -> tuple[list[
 # Import Sources — supports multi-category sheets (antimony, tungsten, etc.)
 # ---------------------------------------------------------------------------
 
-# Each category is a phrase ending in ":", containing 1-6 words, after which
-# the country / share pairs follow. Categories are delimited by sentence-ending
-# periods — semicolons separate countries *within* a category, not categories.
-# We additionally require the label to not contain "%" (which would mean we
-# accidentally matched a tail like "9%; and other, 5%. Oxide").
+# Each category is a phrase ending in ":", after which the country / share
+# pairs follow. Categories are delimited by sentence-ending periods —
+# semicolons/commas separate countries *within* a category, not categories.
+# The label may contain "%" (magnesium: "Magnesium metal (99.8% purity):") and
+# can be long (magnesium: "Combined total (includes magnesium content of
+# alloys, metal, powder, scrap, sheet, and other):" ≈ 92 chars). A bogus match
+# on a country-share tail is prevented by the sentence anchor + the "[A-Z]"
+# start (tails begin with a digit) + the required terminating ":".
 _CATEGORY_HEAD = re.compile(
-    r"(?:^|(?<=\.\s))"           # start of body, or after ". "
-    r"([A-Z][^:%]{1,80}):\s*"    # category label up to ":" without "%" inside
+    r"(?:^|(?<=\.\s))"            # start of body, or after ". "
+    r"([A-Z][^:]{1,120}):\s*"    # category label up to ":" (may contain "%")
 )
 
 
@@ -507,29 +510,74 @@ def _parse_import_sources(
     return flat, categories, date_range
 
 
+# One "<country>, <pct>%" entry. We scan for every entry (re.finditer) rather
+# than splitting, because USGS separates countries inconsistently — usually with
+# ";", but chromium's stainless-steel list uses "," ("Taiwan, 16%, Finland,
+# 12%, …"). An entry may carry a footnote digit between the country and the
+# percent ("China,9 6%"), and the first entry may sit after a prose prefix
+# (scandium: "…imported from Japan, 89%").
+_COUNTRY_SHARE = re.compile(
+    r"([A-Za-z][A-Za-z.'’&()/\-]*(?:\s+[A-Za-z.'’&()/\-]+)*?)"  # country (proper-noun run)
+    r"\s*,\s*(?:\d+\s+)?"          # comma, optional footnote-digits + space
+    r"(\d+(?:\.\d+)?)\s*%"         # the percentage
+)
+_LEADING_CONNECTOR = re.compile(r"^(?:and|from)\s+", re.IGNORECASE)
+
+# Lowercase words allowed *inside* a country name (e.g. "Korea, Republic of").
+_COUNTRY_INNER_LC = {"of", "and", "the", "da", "du", "del", "des", "la", "el"}
+
+
+def _looks_like_country(name: str) -> bool:
+    """True if `name` reads like a country (proper-noun run), not prose.
+
+    Every word must carry an uppercase letter (Japan, U.S., d'Ivoire) or be an
+    allowed connector (of/and/…); at least one word must be capitalized. This
+    rejects the trailing prose that some sheets append after the last share
+    (niobium: "…68% was ferroniobium, 22% was niobium metal"). The residual
+    "other"/"others" bucket is always allowed (the CSV drops it later).
+    """
+    if name.lower() in {"other", "others"}:
+        return True
+    words = name.split()
+    if not words:
+        return False
+
+    def _word_ok(w: str) -> bool:
+        return any(ch.isupper() for ch in w) or w.lower() in _COUNTRY_INNER_LC
+
+    return all(_word_ok(w) for w in words) and any(
+        any(ch.isupper() for ch in w) for w in words
+    )
+
+
 def _parse_country_share_list(segment: str) -> list[CountryShare]:
     """Parse 'Mexico, 86%; Italy, 9%; and other, 5%' -> list of CountryShare.
 
-    The last chunk frequently has trailing prose after the period (e.g. the
-    rare-earths sheet runs "...other, 6%. Compounds and metals imported from
-    Estonia, Japan, and Malaysia were derived from..."), so we anchor on
-    "country, NN%" without requiring end-of-chunk to follow.
+    Robust to: ';'- AND ','-separated entries (chromium stainless steel uses
+    commas); an 'and'/'from' connector prefix; a footnote digit between the
+    country and percent ('China,9 6%'); trailing prose after the last entry
+    (niobium); and a prose prefix on the first entry (scandium '…imported from
+    Japan, 89%').
     """
     shares: list[CountryShare] = []
-    for chunk in segment.split(";"):
-        chunk = chunk.strip()
-        if not chunk:
-            continue
-        chunk = re.sub(r"^and\s+", "", chunk)
-        m2 = re.match(r"(.+?),\s*(\d+(?:\.\d+)?)\s*%", chunk)
-        if not m2:
-            continue
-        country = m2.group(1).strip().rstrip(",")
-        # Strip a trailing footnote-digit attached to a country, e.g. "China,8" -> "China"
-        country = re.sub(r"\s*,\s*\d+$", "", country).strip()
-        # Some sheets terminate the segment with a period inside the country word
-        country = country.rstrip(".")
-        shares.append(CountryShare(country=country, share_pct=float(m2.group(2))))
+    for m in _COUNTRY_SHARE.finditer(segment):
+        country = _LEADING_CONNECTOR.sub("", m.group(1).strip()).rstrip(",").strip()
+        # If the capture is a prose prefix (real country sits at the end, e.g.
+        # "…imported from Japan"), keep only the trailing run of capitalized
+        # words. Real country names are short; >4 words means we grabbed prose.
+        words = country.split()
+        if len(words) > 4:
+            tail: list[str] = []
+            for w in reversed(words):
+                if any(ch.isupper() for ch in w):
+                    tail.insert(0, w)
+                else:
+                    break
+            if tail:
+                country = " ".join(tail)
+        country = country.rstrip(".").strip()
+        if country and _looks_like_country(country):
+            shares.append(CountryShare(country=country, share_pct=float(m.group(2))))
     return shares
 
 

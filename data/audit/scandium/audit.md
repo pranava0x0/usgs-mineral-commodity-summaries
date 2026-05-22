@@ -35,7 +35,7 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 ## Import Sources (2021-24)
 
 **(all)**
-- Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan: 89%
+- Japan: 89%
 - China: 11%
 
 ## World Mine Production and Reserves

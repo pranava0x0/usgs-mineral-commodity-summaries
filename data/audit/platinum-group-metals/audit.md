@@ -58,6 +58,7 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - Russia: 36%
 - Belgium: 6%
 - Canada: 6%
+- other: 15%
 
 **Platinum**
 - South Africa: 49%

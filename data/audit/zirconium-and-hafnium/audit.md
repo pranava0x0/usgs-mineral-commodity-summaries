@@ -59,6 +59,7 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - South Africa: 31%
 - France: 12%
 - Australia: 10%
+- other: 6%
 
 **Zirconium, unwrought**
 - China: 55%

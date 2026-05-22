@@ -92,7 +92,7 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 - **Module**: `src/parser.py` (import-sources splitter)
 - **Symptom**: Chromium's Ferrochromium row carries `"country": "Finland, 5%, and other"` instead of two entries (`Finland: 5%` + `other: 24%`); the Stainless steel row carries `"country": "Taiwan, 16%, Finland, 12%, India, 11%, China"` as one giant name. Similar smashing likely affects any USGS line that uses "and" as a separator between country shares.
 - **Root cause**: Code bug — the country splitter only breaks on `,` / `;`, but USGS sometimes writes `..., 5%, and other, ...` or runs multiple countries with intervening percentages.
-- **Status**: Open. Pre-existing (independent of #10). Surfaced while auditing #10 because the new long-format CSV makes per-category bad cells more visible. To fix: tokenise the line as `<country> <share>% (separator) ...` and split on the `<share>%` boundary rather than punctuation alone.
+- **Status**: Fixed (2026-05-22, #19). `_parse_country_share_list` rewritten to scan every `country, [footnote] pct%` entry with `re.finditer` instead of splitting on `;` — so `,`-separated lists (chromium stainless steel: Taiwan/Finland/India/China) and trailing `…, and other, N%` are all captured. Regression tests in `tests/test_import_sources.py`.
 
 ### #13 — Three primary sheets fail to fetch (404)
 - **Module**: `src/config.py` (registry) / fetch URLs
@@ -105,7 +105,7 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 - **Module**: `src/parser.py` (import-sources parser)
 - **Symptom**: A new column `imports__although_there_are_no_domestic_trade_codes_for_scandium_materials_exclusively_shipping_records_indicated_scandium_oxide_was_imported_from_japan` appears in the wide CSV; the JSON also has this as a `country` value in `import_sources_*`. The text is the verbatim USGS prose explaining that scandium has no HTS code.
 - **Root cause**: Code bug — the parser greedily reads the line after "Import Sources" as country/share data, but on scandium that line is a prose explanation, not a country list.
-- **Status**: Open. Pre-existing (independent of #10). Was previously hidden behind the per-category column prefix. To fix: detect-and-skip lines that don't match the `<country>, <pct>%` shape before assigning them to `CountryShare`.
+- **Status**: Fixed (2026-05-22, #19). The real sources ARE published (Japan 89%, China 11%) — the parser was grabbing the prose prefix as the country instead of the trailing "Japan". `_parse_country_share_list` now reduces a prose capture to its trailing run of capitalized words and validates each name with `_looks_like_country` (rejecting prose like "was ferroniobium"). Regression test in `tests/test_import_sources.py`.
 
 ### #14 — Iron-and-steel: top-of-table production rows carry no section label
 - **Module**: `src/parser.py` (`_parse_salient_stats`)
@@ -149,3 +149,20 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 ### Audit-snapshot staleness — FIXED
 - The `data/audit/<slug>/data.json` + `audit.md` snapshots predated later parser additions (`world_production_year_prev/latest`, `stockpile`, `sub_metal_production_latest`), so they differed from `data/processed/elements.json` on those fields only — the world-production *content* matched. `elements.json`/`.csv` were correct.
 - **Fixed**: regenerated `audit.md` + `data.json` for all 33 primaries from the current records (PNGs left untouched — same PDFs; `captured_at` unchanged). Bundle-vs-snapshot check now reports 0 mismatches.
+
+## 2026-05-22 — import-sources parser audit
+
+### #19 — Import-sources parser dropped/garbled countries on several sheets
+- **Module**: `src/parser.py` (`_parse_import_sources`, `_parse_country_share_list`, `_CATEGORY_HEAD`)
+- **Symptom** (found by a full-dataset audit): four distinct failures in the Import Sources block —
+  1. **chromium** (#12) — countries separated by `,` instead of `;` were dropped: Stainless steel showed only `Taiwan 16%, others 55%` (lost Finland 12%, India 11%, China 6%).
+  2. **scandium** (#11) — the prose prefix was captured as the country (`"Although there are no domestic trade codes … imported from Japan" = 89%`) instead of `Japan 89%`.
+  3. **magnesium** — the `Magnesium metal (99.8% purity)` category was dropped entirely (label contains `%`) and `Combined total (includes …)` was swallowed into `Scrap` (label > 80 chars).
+  4. several sheets (nickel, niobium, PGM/palladium, zirconium) dropped a trailing `…, and other, N%` entry.
+- **Root cause**: (a) `_parse_country_share_list` split on `;` and matched once per chunk — so comma-separated lists and trailing `and other` were lost, and a non-greedy `.+?` grabbed prose as the country; (b) `_CATEGORY_HEAD` excluded `%` and capped labels at 80 chars.
+- **Fix**: rewrote `_parse_country_share_list` to `re.finditer` every `country, [footnote] pct%` entry (handles `;` and `,`), reduce a prose capture to its trailing capitalized run, and validate names with `_looks_like_country` (rejects prose such as niobium's `"68% was ferroniobium, 22% was niobium metal"`). Relaxed `_CATEGORY_HEAD` to allow `%` in labels and raised the length cap to 120. Verified by full re-parse + diff: only the intended sheets changed, every change recovers a real country or fixes a name; no regressions. **Net: chromium, scandium, magnesium, niobium, nickel, PGM, zirconium import sources are now complete and correct.**
+- **Status**: Fixed. Regression tests: `tests/test_import_sources.py` (8). Resolves #11 (scandium) and #12 (chromium "and").
+
+### Still open (salient-stats label merges — separate from #19)
+- **Tantalum** — a Government-Stockpile `NA` cell merges onto the next label: salient row `"NA Consumption, apparent"` (should be stockpile `NA` + apparent consumption 890). In `_parse_salient_stats` label-continuation.
+- **Rhenium** — an Employment value `"Small"` prefixes the wrapped NIR label: `"Small Net import reliance as a percentage of apparent consumption"`. Same root cause class. Both deferred this pass (salient parser, higher blast radius than the import-sources fix).

@@ -189,7 +189,7 @@
   "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [
     {
-      "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+      "country": "Japan",
       "share_pct": 89.0
     },
     {
@@ -202,7 +202,7 @@
       "category": null,
       "countries": [
         {
-          "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
+          "country": "Japan",
           "share_pct": 89.0
         },
         {

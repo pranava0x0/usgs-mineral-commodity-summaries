@@ -431,6 +431,10 @@
         {
           "country": "Finland",
           "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 24.0
         }
       ]
     },
@@ -440,6 +444,18 @@
         {
           "country": "Taiwan",
           "share_pct": 16.0
+        },
+        {
+          "country": "Finland",
+          "share_pct": 12.0
+        },
+        {
+          "country": "India",
+          "share_pct": 11.0
+        },
+        {
+          "country": "China",
+          "share_pct": 6.0
         },
         {
           "country": "others",

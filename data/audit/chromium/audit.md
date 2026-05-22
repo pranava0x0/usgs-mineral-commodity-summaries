@@ -70,9 +70,13 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - Kazakhstan: 24%
 - Russia: 6%
 - Finland: 5%
+- other: 24%
 
 **Stainless steel**
 - Taiwan: 16%
+- Finland: 12%
+- India: 11%
+- China: 6%
 - others: 55%
 
 **Total imports**
