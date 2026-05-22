@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Mine |  | 0 | 0 | 0 | 0 | 0 |
@@ -84,7 +86,6 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| 2024 | 2,025 | N/A | N/A | N/A | footnote 2,3 |
 | United States | 0 | 0 | N/A | 8,500 |  |
 | Brazil | 1,400 | 2,000 | N/A | 3,900 |  |
 | Finland | 1,940 | 1,900 | N/A | 63,000 |  |

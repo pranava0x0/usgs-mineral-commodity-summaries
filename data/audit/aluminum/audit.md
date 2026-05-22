@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Primary |  | 889 | 861 | 750 | 676 | 660 |
@@ -52,20 +54,20 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 676 | 660 | N/A | N/A |  |
-| Australia | 1,570 | 1,500 | N/A | N/A |  |
-| Bahrain | 1,620 | 1,600 | N/A | N/A |  |
-| Brazil | 1,100 | 1,200 | N/A | N/A |  |
-| Canada | 3,320 | 3,300 | N/A | N/A |  |
-| China | 44,000 | 45,000 | N/A | N/A |  |
-| Iceland | 742 | 750 | N/A | N/A |  |
-| India | 4,200 | 4,200 | N/A | N/A |  |
-| Malaysia | 1,050 | 1,100 | N/A | N/A |  |
-| Norway | 1,300 | 1,300 | N/A | N/A |  |
-| Russia | 3,880 | 3,900 | N/A | N/A |  |
-| United Arab Emirates | 2,690 | 2,700 | N/A | N/A |  |
-| Other countries | 6,680 | 7,000 | N/A | N/A |  |
-| World total (rounded) | 72,800 | 74,000 | N/A | N/A |  |
+| United States | 676 | 660 | 1,310 | N/A |  |
+| Australia | 1,570 | 1,500 | 1,730 | N/A |  |
+| Bahrain | 1,620 | 1,600 | 1,620 | N/A |  |
+| Brazil | 1,100 | 1,200 | 1,280 | N/A |  |
+| Canada | 3,320 | 3,300 | 3,310 | N/A |  |
+| China | 44,000 | 45,000 | 44,600 | N/A |  |
+| Iceland | 742 | 750 | 880 | N/A |  |
+| India | 4,200 | 4,200 | 4,200 | N/A |  |
+| Malaysia | 1,050 | 1,100 | 1,080 | N/A |  |
+| Norway | 1,300 | 1,300 | 1,460 | N/A |  |
+| Russia | 3,880 | 3,900 | 4,080 | N/A |  |
+| United Arab Emirates | 2,690 | 2,700 | 2,790 | N/A |  |
+| Other countries | 6,680 | 7,000 | 10,500 | N/A |  |
+| World total (rounded) | 72,800 | 74,000 | 78,800 | N/A |  |
 
 ## Footnotes (verbatim)
 

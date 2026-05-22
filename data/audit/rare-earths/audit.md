@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Mineral concentrates | 2 | 42,400 | 42,500 | 41,600 | 45,500 | 51,000 |

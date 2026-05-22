@@ -16,11 +16,13 @@
 | Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 4 |
 | Exports (total) | N/A |
-| Apparent consumption | 100 |
+| Apparent consumption | N/A |
 | Price, $ per pound | 640 |
 | Net import reliance (% of apparent consumption) | 100 |
 
 ## Salient Statistics (US) — full table
+
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |

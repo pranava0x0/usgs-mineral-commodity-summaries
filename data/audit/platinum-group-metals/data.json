@@ -602,6 +602,7 @@
   "price_usd_per_pound_latest": 1100.0,
   "net_import_reliance_pct_latest": 57.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": 0.0,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -653,61 +654,83 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
       "production_prev_year": 10200.0,
       "production_latest_year": 6200.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 590000.0,
       "production_prev_raw": "10200",
       "production_latest_raw": "6200",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": "590000",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 6200.0,
+        "Platinum": 1800.0
+      }
     },
     {
       "country": "Canada",
       "production_prev_year": 17000.0,
       "production_latest_year": 16000.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 310000.0,
       "production_prev_raw": "17000",
       "production_latest_raw": "16000",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": "310000",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 16000.0,
+        "Platinum": 5000.0
+      }
     },
     {
       "country": "Russia",
       "production_prev_year": 89000.0,
       "production_latest_year": 84000.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 11000000.0,
       "production_prev_raw": "89000",
       "production_latest_raw": "84000",
-      "reserves_raw": null,
-      "note": "footnote 10"
+      "reserves_raw": "11000000",
+      "note": "footnote 10",
+      "sub_metal_production_latest": {
+        "Palladium": 84000.0,
+        "Platinum": 20000.0
+      }
     },
     {
       "country": "South Africa",
       "production_prev_year": 82600.0,
       "production_latest_year": 70000.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 63000000.0,
       "production_prev_raw": "82600",
       "production_latest_raw": "70000",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": "63000000",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 70000.0,
+        "Platinum": 120000.0
+      }
     },
     {
       "country": "Zimbabwe",
       "production_prev_year": 15200.0,
       "production_latest_year": 15000.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 1300000.0,
       "production_prev_raw": "15200",
       "production_latest_raw": "15000",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": "1300000",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 15000.0,
+        "Platinum": 18000.0
+      }
     },
     {
       "country": "Other countries",
@@ -717,19 +740,27 @@
       "reserves": null,
       "production_prev_raw": "2870",
       "production_latest_raw": "2900",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 2900.0,
+        "Platinum": 3900.0
+      }
     },
     {
       "country": "World total (rounded)",
       "production_prev_year": 217000.0,
       "production_latest_year": 190000.0,
       "capacity": null,
-      "reserves": null,
+      "reserves": 76000000.0,
       "production_prev_raw": "217000",
       "production_latest_raw": "190000",
-      "reserves_raw": null,
-      "note": null
+      "reserves_raw": ">76,000,000",
+      "note": null,
+      "sub_metal_production_latest": {
+        "Palladium": 190000.0,
+        "Platinum": 170000.0
+      }
     }
   ],
   "footnotes": {

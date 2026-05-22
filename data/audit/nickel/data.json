@@ -390,6 +390,7 @@
   "latest_year_sentinels": {
     "primary_smelting": "W"
   },
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -437,6 +438,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
@@ -447,7 +450,8 @@
       "production_prev_raw": "7490",
       "production_latest_raw": "10000",
       "reserves_raw": "340000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Australia",
@@ -458,7 +462,8 @@
       "production_prev_raw": "98000",
       "production_latest_raw": "45000",
       "reserves_raw": "25000000",
-      "note": "footnote 9"
+      "note": "footnote 9",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Brazil",
@@ -469,7 +474,8 @@
       "production_prev_raw": "67500",
       "production_latest_raw": "70000",
       "reserves_raw": "16000000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Canada",
@@ -480,7 +486,8 @@
       "production_prev_raw": "125000",
       "production_latest_raw": "140000",
       "reserves_raw": "2200000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "China",
@@ -491,7 +498,8 @@
       "production_prev_raw": "115000",
       "production_latest_raw": "120000",
       "reserves_raw": "4400000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Indonesia",
@@ -502,7 +510,8 @@
       "production_prev_raw": "2310000",
       "production_latest_raw": "2600000",
       "reserves_raw": "62000000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "New Caledonia",
@@ -513,7 +522,8 @@
       "production_prev_raw": "116000",
       "production_latest_raw": "140000",
       "reserves_raw": "7100000",
-      "note": "footnote 10"
+      "note": "footnote 10",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Philippines",
@@ -524,7 +534,8 @@
       "production_prev_raw": "354000",
       "production_latest_raw": "270000",
       "reserves_raw": "4800000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
@@ -535,7 +546,8 @@
       "production_prev_raw": "205000",
       "production_latest_raw": "200000",
       "reserves_raw": "8300000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Other countries",
@@ -546,7 +558,8 @@
       "production_prev_raw": "308000",
       "production_latest_raw": "290000",
       "reserves_raw": ">9,100,000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
@@ -557,7 +570,8 @@
       "production_prev_raw": "3710000",
       "production_latest_raw": "3900000",
       "reserves_raw": ">140,000,000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

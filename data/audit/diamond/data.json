@@ -328,6 +328,7 @@
   "price_usd_per_pound_latest": 0.21,
   "net_import_reliance_pct_latest": 35.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -379,6 +380,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Natural Industrial Diamond Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
@@ -389,7 +392,8 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": "NA",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Angola",
@@ -400,7 +404,8 @@
       "production_prev_raw": "1",
       "production_latest_raw": "1",
       "reserves_raw": "150",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Botswana",
@@ -411,7 +416,8 @@
       "production_prev_raw": "5",
       "production_latest_raw": "5",
       "reserves_raw": "250",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Congo (Kinshasa)",
@@ -422,7 +428,8 @@
       "production_prev_raw": "7",
       "production_latest_raw": "7",
       "reserves_raw": "150",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
@@ -433,7 +440,8 @@
       "production_prev_raw": "16",
       "production_latest_raw": "16",
       "reserves_raw": "750",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "South Africa",
@@ -444,7 +452,8 @@
       "production_prev_raw": "3",
       "production_latest_raw": "3",
       "reserves_raw": "87",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Zimbabwe",
@@ -455,7 +464,8 @@
       "production_prev_raw": "5",
       "production_latest_raw": "5",
       "reserves_raw": "56",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Other countries",
@@ -466,7 +476,8 @@
       "production_prev_raw": "1",
       "production_latest_raw": "1",
       "reserves_raw": "250",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
@@ -477,7 +488,8 @@
       "production_prev_raw": "38",
       "production_latest_raw": "38",
       "reserves_raw": "1700",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

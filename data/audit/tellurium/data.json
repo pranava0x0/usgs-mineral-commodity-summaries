@@ -231,6 +231,7 @@
     "net_import_reliance": ">25",
     "apparent_consumption": "W"
   },
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [
     {
       "country": "Canada",
@@ -282,6 +283,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Refinery Production and Capacity",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States (copper telluride)",
@@ -292,95 +295,104 @@
       "production_prev_raw": "W",
       "production_latest_raw": "W",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Bulgaria",
       "production_prev_year": 1.0,
       "production_latest_year": 1.0,
-      "capacity": null,
+      "capacity": 5.0,
       "reserves": null,
       "production_prev_raw": "1",
       "production_latest_raw": "1",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Canada",
       "production_prev_year": 27.0,
       "production_latest_year": 28.0,
-      "capacity": null,
+      "capacity": 30.0,
       "reserves": null,
       "production_prev_raw": "27",
       "production_latest_raw": "28",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "China",
       "production_prev_year": 750.0,
       "production_latest_year": 800.0,
-      "capacity": null,
+      "capacity": 1000.0,
       "reserves": null,
       "production_prev_raw": "750",
       "production_latest_raw": "800",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Japan",
       "production_prev_year": 70.0,
       "production_latest_year": 61.0,
-      "capacity": null,
+      "capacity": 75.0,
       "reserves": null,
       "production_prev_raw": "70",
       "production_latest_raw": "61",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
       "production_prev_year": 64.0,
       "production_latest_year": 67.0,
-      "capacity": null,
+      "capacity": 80.0,
       "reserves": null,
       "production_prev_raw": "64",
       "production_latest_raw": "67",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "South Africa",
       "production_prev_year": 5.0,
       "production_latest_year": 5.0,
-      "capacity": null,
+      "capacity": 10.0,
       "reserves": null,
       "production_prev_raw": "5",
       "production_latest_raw": "5",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Sweden (concentrate)",
       "production_prev_year": 46.0,
       "production_latest_year": 48.0,
-      "capacity": null,
+      "capacity": 50.0,
       "reserves": null,
       "production_prev_raw": "46",
       "production_latest_raw": "48",
       "reserves_raw": null,
-      "note": "footnote 7"
+      "note": "footnote 7",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Uzbekistan",
       "production_prev_year": 18.0,
       "production_latest_year": 18.0,
-      "capacity": null,
+      "capacity": 50.0,
       "reserves": null,
       "production_prev_raw": "18",
       "production_latest_raw": "18",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Other countries",
@@ -391,18 +403,20 @@
       "production_prev_raw": "NA",
       "production_latest_raw": "NA",
       "reserves_raw": null,
-      "note": "footnote 8"
+      "note": "footnote 8",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
       "production_prev_year": 981.0,
       "production_latest_year": 1000.0,
-      "capacity": null,
+      "capacity": 1300.0,
       "reserves": null,
       "production_prev_raw": "981",
       "production_latest_raw": "1000",
       "reserves_raw": null,
-      "note": "footnote 9"
+      "note": "footnote 9",
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

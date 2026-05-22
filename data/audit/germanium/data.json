@@ -330,6 +330,7 @@
   "latest_year_sentinels": {
     "net_import_reliance": ">50"
   },
+  "stockpile_fy2025_potential_acquisitions": 0.0,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -406,6 +407,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Refinery Production and Reserves",
+  "world_production_year_prev": null,
+  "world_production_year_latest": null,
   "world_production": [],
   "footnotes": {
     "e": "Estimated. NA Not available. — Zero.",

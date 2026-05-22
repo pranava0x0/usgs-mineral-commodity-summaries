@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Mine |  | 18,400 | 17,500 | 16,400 | 7,490 | 10,000 |

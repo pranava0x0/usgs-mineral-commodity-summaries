@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Production from primary ore and concentrate |  | 0 | 0 | 0 | 0 | 0 |
@@ -73,7 +75,6 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| 2024 | 2,025 | N/A | N/A | N/A |  |
 | United States | 0 | 0 | N/A | 50 |  |
 | Australia | 0 | 0 | N/A | 10,000 | footnote 11 |
 | Brazil | 5,190 | 5,300 | N/A | 94 |  |

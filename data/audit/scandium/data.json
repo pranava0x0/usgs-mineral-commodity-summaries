@@ -182,10 +182,11 @@
   "secondary_smelting_latest": null,
   "imports_total_latest": 4.0,
   "exports_total_latest": null,
-  "apparent_consumption_latest": 100.0,
+  "apparent_consumption_latest": null,
   "price_usd_per_pound_latest": 640.0,
   "net_import_reliance_pct_latest": 100.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [
     {
       "country": "Although there are no domestic trade codes for scandium materials exclusively, shipping records indicated scandium oxide was imported from Japan",
@@ -213,6 +214,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": null,
+  "world_production_year_latest": null,
   "world_production": [],
   "footnotes": {
     "e": "Estimated. NA Not available.",

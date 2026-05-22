@@ -343,7 +343,7 @@
   "price_quotes": [],
   "latest_year": "2025e",
   "mined_production_latest": null,
-  "primary_smelting_latest": null,
+  "primary_smelting_latest": 103.0,
   "secondary_smelting_latest": null,
   "imports_total_latest": 24.0,
   "exports_total_latest": 7.0,
@@ -351,6 +351,7 @@
   "price_usd_per_pound_latest": null,
   "net_import_reliance_pct_latest": 13.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": 5570.0,
   "import_sources_flat": [
     {
       "country": "Canada",
@@ -402,149 +403,203 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Production",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
       "production_prev_year": 20.6,
-      "production_latest_year": 21.0,
+      "production_latest_year": 103.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "20.6",
       "production_latest_raw": "21",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 21.0,
+        "Raw steel": 82.0
+      }
     },
     {
       "country": "Brazil",
       "production_prev_year": 27.0,
-      "production_latest_year": 28.0,
+      "production_latest_year": 63.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "27",
       "production_latest_raw": "28",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 28.0,
+        "Raw steel": 35.0
+      }
     },
     {
       "country": "China",
       "production_prev_year": 852.0,
-      "production_latest_year": 830.0,
+      "production_latest_year": 1810.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "852",
       "production_latest_raw": "830",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 830.0,
+        "Raw steel": 980.0
+      }
     },
     {
       "country": "Germany",
       "production_prev_year": 24.0,
-      "production_latest_year": 25.0,
+      "production_latest_year": 63.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "24",
       "production_latest_raw": "25",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 25.0,
+        "Raw steel": 38.0
+      }
     },
     {
       "country": "India",
       "production_prev_year": 90.0,
-      "production_latest_year": 98.0,
+      "production_latest_year": 258.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "90",
       "production_latest_raw": "98",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 98.0,
+        "Raw steel": 160.0
+      }
     },
     {
       "country": "Iran",
       "production_prev_year": 4.0,
-      "production_latest_year": 4.0,
+      "production_latest_year": 36.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "4",
       "production_latest_raw": "4",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 4.0,
+        "Raw steel": 32.0
+      }
     },
     {
       "country": "Japan",
       "production_prev_year": 61.0,
-      "production_latest_year": 59.0,
+      "production_latest_year": 140.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "61",
       "production_latest_raw": "59",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 59.0,
+        "Raw steel": 81.0
+      }
     },
     {
       "country": "Korea, Republic of",
       "production_prev_year": 44.0,
-      "production_latest_year": 41.0,
+      "production_latest_year": 101.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "44",
       "production_latest_raw": "41",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 41.0,
+        "Raw steel": 60.0
+      }
     },
     {
       "country": "Russia",
       "production_prev_year": 51.0,
-      "production_latest_year": 47.0,
+      "production_latest_year": 112.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "51",
       "production_latest_raw": "47",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 47.0,
+        "Raw steel": 65.0
+      }
     },
     {
       "country": "Turkey",
       "production_prev_year": 10.0,
-      "production_latest_year": 10.0,
+      "production_latest_year": 47.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "10",
       "production_latest_raw": "10",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 10.0,
+        "Raw steel": 37.0
+      }
     },
     {
       "country": "Vietnam",
       "production_prev_year": 14.0,
-      "production_latest_year": 14.0,
+      "production_latest_year": 37.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "14",
       "production_latest_raw": "14",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 14.0,
+        "Raw steel": 23.0
+      }
     },
     {
       "country": "Other countries",
       "production_prev_year": 78.0,
-      "production_latest_year": 93.0,
+      "production_latest_year": 373.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "78",
       "production_latest_raw": "93",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 93.0,
+        "Raw steel": 280.0
+      }
     },
     {
       "country": "World total (rounded)",
       "production_prev_year": 1280.0,
-      "production_latest_year": 1300.0,
+      "production_latest_year": 3200.0,
       "capacity": null,
       "reserves": null,
       "production_prev_raw": "1280",
       "production_latest_raw": "1300",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Pig iron": 1300.0,
+        "Raw steel": 1900.0
+      }
     }
   ],
   "footnotes": {

@@ -146,5 +146,6 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 - **Fix**: clear `stockpile_fy2025_potential_acquisitions` + `latest_year_sentinels` in the `rare_earth` branch. The group total stays on the rare-earths parent row. (Attributing the 1,100 specifically to lanthanum would need per-material Stockpile-section parsing — separate BACKLOG item.)
 - **Status**: Fixed. Regression assertion added to `MechanismBGroupTests::test_rare_earth_aliases_drop_group_world_table`.
 
-### Audit-snapshot staleness (noted, not a data bug)
-- The `data/audit/<slug>/data.json` + `audit.md` snapshots predate later parser additions (`world_production_year_prev/latest`, `stockpile`, `sub_metal_production_latest`), so they differ from `data/processed/elements.json` on those fields only — the world-production *content* matches. `elements.json`/`.csv` are correct; the audit snapshots should be regenerated (`python -m src.pipeline --audit`) on the next refresh.
+### Audit-snapshot staleness — FIXED
+- The `data/audit/<slug>/data.json` + `audit.md` snapshots predated later parser additions (`world_production_year_prev/latest`, `stockpile`, `sub_metal_production_latest`), so they differed from `data/processed/elements.json` on those fields only — the world-production *content* matched. `elements.json`/`.csv` were correct.
+- **Fixed**: regenerated `audit.md` + `data.json` for all 33 primaries from the current records (PNGs left untouched — same PDFs; `captured_at` unchanged). Bundle-vs-snapshot check now reports 0 mismatches.

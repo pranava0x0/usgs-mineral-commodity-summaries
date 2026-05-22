@@ -330,6 +330,7 @@
   "price_usd_per_pound_latest": 180.0,
   "net_import_reliance_pct_latest": 60.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": 3.2,
   "import_sources_flat": [
     {
       "country": "Canada",
@@ -381,160 +382,176 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Smelter Production and Capacity",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
       "production_prev_year": 676.0,
       "production_latest_year": 660.0,
-      "capacity": null,
+      "capacity": 1310.0,
       "reserves": null,
       "production_prev_raw": "676",
       "production_latest_raw": "660",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Australia",
       "production_prev_year": 1570.0,
       "production_latest_year": 1500.0,
-      "capacity": null,
+      "capacity": 1730.0,
       "reserves": null,
       "production_prev_raw": "1570",
       "production_latest_raw": "1500",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Bahrain",
       "production_prev_year": 1620.0,
       "production_latest_year": 1600.0,
-      "capacity": null,
+      "capacity": 1620.0,
       "reserves": null,
       "production_prev_raw": "1620",
       "production_latest_raw": "1600",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Brazil",
       "production_prev_year": 1100.0,
       "production_latest_year": 1200.0,
-      "capacity": null,
+      "capacity": 1280.0,
       "reserves": null,
       "production_prev_raw": "1100",
       "production_latest_raw": "1200",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Canada",
       "production_prev_year": 3320.0,
       "production_latest_year": 3300.0,
-      "capacity": null,
+      "capacity": 3310.0,
       "reserves": null,
       "production_prev_raw": "3320",
       "production_latest_raw": "3300",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "China",
       "production_prev_year": 44000.0,
       "production_latest_year": 45000.0,
-      "capacity": null,
+      "capacity": 44600.0,
       "reserves": null,
       "production_prev_raw": "44000",
       "production_latest_raw": "45000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Iceland",
       "production_prev_year": 742.0,
       "production_latest_year": 750.0,
-      "capacity": null,
+      "capacity": 880.0,
       "reserves": null,
       "production_prev_raw": "742",
       "production_latest_raw": "750",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "India",
       "production_prev_year": 4200.0,
       "production_latest_year": 4200.0,
-      "capacity": null,
+      "capacity": 4200.0,
       "reserves": null,
       "production_prev_raw": "4200",
       "production_latest_raw": "4200",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Malaysia",
       "production_prev_year": 1050.0,
       "production_latest_year": 1100.0,
-      "capacity": null,
+      "capacity": 1080.0,
       "reserves": null,
       "production_prev_raw": "1050",
       "production_latest_raw": "1100",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Norway",
       "production_prev_year": 1300.0,
       "production_latest_year": 1300.0,
-      "capacity": null,
+      "capacity": 1460.0,
       "reserves": null,
       "production_prev_raw": "1300",
       "production_latest_raw": "1300",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
       "production_prev_year": 3880.0,
       "production_latest_year": 3900.0,
-      "capacity": null,
+      "capacity": 4080.0,
       "reserves": null,
       "production_prev_raw": "3880",
       "production_latest_raw": "3900",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "United Arab Emirates",
       "production_prev_year": 2690.0,
       "production_latest_year": 2700.0,
-      "capacity": null,
+      "capacity": 2790.0,
       "reserves": null,
       "production_prev_raw": "2690",
       "production_latest_raw": "2700",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Other countries",
       "production_prev_year": 6680.0,
       "production_latest_year": 7000.0,
-      "capacity": null,
+      "capacity": 10500.0,
       "reserves": null,
       "production_prev_raw": "6680",
       "production_latest_raw": "7000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
       "production_prev_year": 72800.0,
       "production_latest_year": 74000.0,
-      "capacity": null,
+      "capacity": 78800.0,
       "reserves": null,
       "production_prev_raw": "72800",
       "production_latest_raw": "74000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

@@ -16,11 +16,13 @@
 | Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 220 |
 | Exports (total) | N/A |
-| Apparent consumption | N/A |
+| Apparent consumption | 220 |
 | Price, $ per pound | 370 |
 | Net import reliance (% of apparent consumption) | 100 |
 
 ## Salient Statistics (US) — full table
+
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -44,16 +46,16 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | N/A | N/A |  |
-| Belgium | 19 | 19 | N/A | N/A |  |
-| Canada | 40 | 40 | N/A | N/A |  |
-| China | 760 | 760 | N/A | N/A |  |
-| France | 21 | 21 | N/A | N/A |  |
-| Japan | 65 | 65 | N/A | N/A |  |
-| Korea, Republic of | 180 | 180 | N/A | N/A |  |
-| Russia | 5 | 5 | N/A | N/A |  |
+| United States | 0 | 0 | 0 | N/A |  |
+| Belgium | 19 | 19 | 50 | N/A |  |
+| Canada | 40 | 40 | 70 | N/A |  |
+| China | 760 | 760 | 1,100 | N/A |  |
+| France | 21 | 21 | 70 | N/A |  |
+| Japan | 65 | 65 | 70 | N/A |  |
+| Korea, Republic of | 180 | 180 | 310 | N/A |  |
+| Russia | 5 | 5 | 15 | N/A |  |
 | Uzbekistan | 1 | 1 | N/A | N/A |  |
-| World total (rounded) | 1,090 | 1,100 | N/A | N/A |  |
+| World total (rounded) | 1,090 | 1,100 | 1,700 | N/A |  |
 
 ## Footnotes (verbatim)
 

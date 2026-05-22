@@ -206,10 +206,11 @@
   "secondary_smelting_latest": null,
   "imports_total_latest": 135000.0,
   "exports_total_latest": null,
-  "apparent_consumption_latest": null,
+  "apparent_consumption_latest": 19000.0,
   "price_usd_per_pound_latest": 580.0,
   "net_import_reliance_pct_latest": 100.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -240,6 +241,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Low-Purity Production and Production Capacity",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
@@ -250,7 +253,8 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "China",
@@ -261,7 +265,8 @@
       "production_prev_raw": "839000",
       "production_latest_raw": "900000",
       "reserves_raw": null,
-      "note": "footnote 4,5"
+      "note": "footnote 4,5",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Japan",
@@ -272,7 +277,8 @@
       "production_prev_raw": "3000",
       "production_latest_raw": "3000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
@@ -283,7 +289,8 @@
       "production_prev_raw": "6000",
       "production_latest_raw": "6000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Other countries",
@@ -294,7 +301,8 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": "footnote 6"
+      "note": "footnote 6",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
@@ -305,7 +313,8 @@
       "production_prev_raw": "848000",
       "production_latest_raw": "900000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

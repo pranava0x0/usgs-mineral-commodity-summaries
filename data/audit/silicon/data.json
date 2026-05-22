@@ -349,6 +349,7 @@
     "net_import_reliance": "<50",
     "apparent_consumption": "W"
   },
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -429,6 +430,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Production",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
@@ -439,7 +442,11 @@
       "production_prev_raw": "W",
       "production_latest_raw": "W",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": null,
+        "Silicon metal": null
+      }
     },
     {
       "country": "Australia",
@@ -450,7 +457,11 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 0.0,
+        "Silicon metal": 47.0
+      }
     },
     {
       "country": "Bhutan",
@@ -461,7 +472,11 @@
       "production_prev_raw": "98",
       "production_latest_raw": "98",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 98.0,
+        "Silicon metal": 0.0
+      }
     },
     {
       "country": "Brazil",
@@ -472,7 +487,11 @@
       "production_prev_raw": "160",
       "production_latest_raw": "170",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 170.0,
+        "Silicon metal": 180.0
+      }
     },
     {
       "country": "Canada",
@@ -483,7 +502,11 @@
       "production_prev_raw": "23",
       "production_latest_raw": "23",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 23.0,
+        "Silicon metal": 34.0
+      }
     },
     {
       "country": "China",
@@ -494,7 +517,11 @@
       "production_prev_raw": "3100",
       "production_latest_raw": "3500",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 3500.0,
+        "Silicon metal": 4000.0
+      }
     },
     {
       "country": "France",
@@ -505,7 +532,11 @@
       "production_prev_raw": "21",
       "production_latest_raw": "21",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 21.0,
+        "Silicon metal": 68.0
+      }
     },
     {
       "country": "Germany",
@@ -516,7 +547,11 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 0.0,
+        "Silicon metal": 13.0
+      }
     },
     {
       "country": "Iceland",
@@ -527,7 +562,11 @@
       "production_prev_raw": "90",
       "production_latest_raw": "72",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 72.0,
+        "Silicon metal": 16.0
+      }
     },
     {
       "country": "India",
@@ -538,7 +577,11 @@
       "production_prev_raw": "59",
       "production_latest_raw": "59",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 59.0,
+        "Silicon metal": 0.0
+      }
     },
     {
       "country": "Kazakhstan",
@@ -549,7 +592,11 @@
       "production_prev_raw": "120",
       "production_latest_raw": "120",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 120.0,
+        "Silicon metal": 7.0
+      }
     },
     {
       "country": "Malaysia",
@@ -560,7 +607,11 @@
       "production_prev_raw": "120",
       "production_latest_raw": "120",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 120.0,
+        "Silicon metal": 0.0
+      }
     },
     {
       "country": "Norway",
@@ -571,7 +622,11 @@
       "production_prev_raw": "160",
       "production_latest_raw": "150",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 150.0,
+        "Silicon metal": 130.0
+      }
     },
     {
       "country": "Russia",
@@ -582,7 +637,11 @@
       "production_prev_raw": "420",
       "production_latest_raw": "420",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 420.0,
+        "Silicon metal": 35.0
+      }
     },
     {
       "country": "South Africa",
@@ -593,7 +652,11 @@
       "production_prev_raw": "36",
       "production_latest_raw": "35",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 35.0,
+        "Silicon metal": 10.0
+      }
     },
     {
       "country": "Spain",
@@ -604,7 +667,11 @@
       "production_prev_raw": "41",
       "production_latest_raw": "40",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 40.0,
+        "Silicon metal": 4.0
+      }
     },
     {
       "country": "Other countries",
@@ -615,7 +682,11 @@
       "production_prev_raw": "120",
       "production_latest_raw": "40",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 40.0,
+        "Silicon metal": 46.0
+      }
     },
     {
       "country": "World total (rounded)",
@@ -626,7 +697,11 @@
       "production_prev_raw": "4600",
       "production_latest_raw": "5000",
       "reserves_raw": null,
-      "note": "footnote 7"
+      "note": "footnote 7",
+      "sub_metal_production_latest": {
+        "Ferrosilicon": 5000.0,
+        "Silicon metal": 4600.0
+      }
     }
   ],
   "footnotes": {

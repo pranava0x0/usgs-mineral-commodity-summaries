@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Production, mine |  | 41,100 | 34,600 | 34,000 | 34,000 | 40,000 |
@@ -60,7 +62,6 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| 2024 | 2,025 | N/A | N/A | N/A |  |
 | United States | 34,000 | 40,000 | N/A | 3,500 |  |
 | Armenia | 8,200 | 5,300 | N/A | 150 |  |
 | Australia | 600 | 1,000 | N/A | 760 | footnote 7 |

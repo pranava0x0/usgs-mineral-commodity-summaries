@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Production, copper telluride |  | W | W | W | W | W |
@@ -47,16 +49,16 @@
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
 | United States (copper telluride) | W | W | N/A | N/A |  |
-| Bulgaria | 1 | 1 | N/A | N/A |  |
-| Canada | 27 | 28 | N/A | N/A |  |
-| China | 750 | 800 | N/A | N/A |  |
-| Japan | 70 | 61 | N/A | N/A |  |
-| Russia | 64 | 67 | N/A | N/A |  |
-| South Africa | 5 | 5 | N/A | N/A |  |
-| Sweden (concentrate) | 46 | 48 | N/A | N/A | footnote 7 |
-| Uzbekistan | 18 | 18 | N/A | N/A |  |
+| Bulgaria | 1 | 1 | 5 | N/A |  |
+| Canada | 27 | 28 | 30 | N/A |  |
+| China | 750 | 800 | 1,000 | N/A |  |
+| Japan | 70 | 61 | 75 | N/A |  |
+| Russia | 64 | 67 | 80 | N/A |  |
+| South Africa | 5 | 5 | 10 | N/A |  |
+| Sweden (concentrate) | 46 | 48 | 50 | N/A | footnote 7 |
+| Uzbekistan | 18 | 18 | 50 | N/A |  |
 | Other countries | NA | NA | N/A | N/A | footnote 8 |
-| World total (rounded) | 981 | 1,000 | N/A | N/A | footnote 9 |
+| World total (rounded) | 981 | 1,000 | 1,300 | N/A | footnote 9 |
 
 ## Footnotes (verbatim)
 

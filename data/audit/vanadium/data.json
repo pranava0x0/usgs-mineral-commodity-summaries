@@ -490,6 +490,7 @@
   "price_usd_per_pound_latest": 5.02,
   "net_import_reliance_pct_latest": 41.0,
   "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -566,18 +567,9 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
-    {
-      "country": "2024",
-      "production_prev_year": 2025.0,
-      "production_latest_year": null,
-      "capacity": null,
-      "reserves": null,
-      "production_prev_raw": "2025",
-      "production_latest_raw": "(thousand metric tons)",
-      "reserves_raw": null,
-      "note": null
-    },
     {
       "country": "United States",
       "production_prev_year": 0.0,
@@ -587,7 +579,8 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": "50",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Australia",
@@ -598,7 +591,8 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": "10000",
-      "note": "footnote 11"
+      "note": "footnote 11",
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Brazil",
@@ -609,7 +603,8 @@
       "production_prev_raw": "5190",
       "production_latest_raw": "5300",
       "reserves_raw": "94",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "China",
@@ -620,7 +615,8 @@
       "production_prev_raw": "84000",
       "production_latest_raw": "82000",
       "reserves_raw": "5800",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "Russia",
@@ -631,7 +627,8 @@
       "production_prev_raw": "21000",
       "production_latest_raw": "21000",
       "reserves_raw": "5000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "South Africa",
@@ -642,7 +639,8 @@
       "production_prev_raw": "8050",
       "production_latest_raw": "5000",
       "reserves_raw": "520",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     },
     {
       "country": "World total (rounded)",
@@ -653,7 +651,8 @@
       "production_prev_raw": "118000",
       "production_latest_raw": "110000",
       "reserves_raw": "21000",
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {}
     }
   ],
   "footnotes": {

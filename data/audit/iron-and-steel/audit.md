@@ -12,7 +12,7 @@
 | field | value |
 | --- | --- |
 | Mined production (US) | N/A |
-| Primary smelting / refinery (US) | N/A |
+| Primary smelting / refinery (US) | 103 |
 | Secondary smelting / scrap (US) | N/A |
 | Imports for consumption (total) | 24 |
 | Exports (total) | 7 |
@@ -21,6 +21,8 @@
 | Net import reliance (% of apparent consumption) | 13 |
 
 ## Salient Statistics (US) — full table
+
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
@@ -54,19 +56,19 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 20.60 | 21 | N/A | N/A |  |
-| Brazil | 27 | 28 | N/A | N/A |  |
-| China | 852 | 830 | N/A | N/A |  |
-| Germany | 24 | 25 | N/A | N/A |  |
-| India | 90 | 98 | N/A | N/A |  |
-| Iran | 4 | 4 | N/A | N/A |  |
-| Japan | 61 | 59 | N/A | N/A |  |
-| Korea, Republic of | 44 | 41 | N/A | N/A |  |
-| Russia | 51 | 47 | N/A | N/A |  |
-| Turkey | 10 | 10 | N/A | N/A |  |
-| Vietnam | 14 | 14 | N/A | N/A |  |
-| Other countries | 78 | 93 | N/A | N/A |  |
-| World total (rounded) | 1,280 | 1,300 | N/A | N/A |  |
+| United States | 20.60 | 103 | N/A | N/A |  |
+| Brazil | 27 | 63 | N/A | N/A |  |
+| China | 852 | 1,810 | N/A | N/A |  |
+| Germany | 24 | 63 | N/A | N/A |  |
+| India | 90 | 258 | N/A | N/A |  |
+| Iran | 4 | 36 | N/A | N/A |  |
+| Japan | 61 | 140 | N/A | N/A |  |
+| Korea, Republic of | 44 | 101 | N/A | N/A |  |
+| Russia | 51 | 112 | N/A | N/A |  |
+| Turkey | 10 | 47 | N/A | N/A |  |
+| Vietnam | 14 | 37 | N/A | N/A |  |
+| Other countries | 78 | 373 | N/A | N/A |  |
+| World total (rounded) | 1,280 | 3,200 | N/A | N/A |  |
 
 ## Footnotes (verbatim)
 

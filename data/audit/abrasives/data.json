@@ -506,6 +506,7 @@
   "latest_year_sentinels": {
     "net_import_reliance": ">95"
   },
+  "stockpile_fy2025_potential_acquisitions": null,
   "import_sources_flat": [],
   "import_sources_by_category": [
     {
@@ -654,6 +655,8 @@
   ],
   "import_sources_range": "2021-24",
   "world_production_label": "World Production Capacity",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
   "world_production": [
     {
       "country": "United States",
@@ -664,7 +667,11 @@
       "production_prev_raw": "60000",
       "production_latest_raw": "60000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 60000.0,
+        "Silicon carbide": 40000.0
+      }
     },
     {
       "country": "Australia",
@@ -675,7 +682,11 @@
       "production_prev_raw": "50000",
       "production_latest_raw": "50000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 50000.0,
+        "Silicon carbide": 0.0
+      }
     },
     {
       "country": "Austria",
@@ -686,7 +697,11 @@
       "production_prev_raw": "90000",
       "production_latest_raw": "90000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 90000.0,
+        "Silicon carbide": 0.0
+      }
     },
     {
       "country": "Brazil",
@@ -697,7 +712,11 @@
       "production_prev_raw": "50000",
       "production_latest_raw": "50000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 50000.0,
+        "Silicon carbide": 40000.0
+      }
     },
     {
       "country": "China",
@@ -708,7 +727,11 @@
       "production_prev_raw": "800000",
       "production_latest_raw": "800000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 800000.0,
+        "Silicon carbide": 450000.0
+      }
     },
     {
       "country": "France",
@@ -719,7 +742,11 @@
       "production_prev_raw": "40000",
       "production_latest_raw": "40000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 40000.0,
+        "Silicon carbide": 20000.0
+      }
     },
     {
       "country": "Germany",
@@ -730,7 +757,11 @@
       "production_prev_raw": "80000",
       "production_latest_raw": "80000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 80000.0,
+        "Silicon carbide": 35000.0
+      }
     },
     {
       "country": "India",
@@ -741,7 +772,11 @@
       "production_prev_raw": "40000",
       "production_latest_raw": "40000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 40000.0,
+        "Silicon carbide": 5000.0
+      }
     },
     {
       "country": "Japan",
@@ -752,7 +787,11 @@
       "production_prev_raw": "15000",
       "production_latest_raw": "15000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 15000.0,
+        "Silicon carbide": 60000.0
+      }
     },
     {
       "country": "Mexico",
@@ -763,7 +802,11 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 0.0,
+        "Silicon carbide": 45000.0
+      }
     },
     {
       "country": "Norway",
@@ -774,7 +817,11 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 0.0,
+        "Silicon carbide": 80000.0
+      }
     },
     {
       "country": "Venezuela",
@@ -785,7 +832,11 @@
       "production_prev_raw": "—",
       "production_latest_raw": "—",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 0.0,
+        "Silicon carbide": 30000.0
+      }
     },
     {
       "country": "Other countries",
@@ -796,7 +847,11 @@
       "production_prev_raw": "80000",
       "production_latest_raw": "80000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 80000.0,
+        "Silicon carbide": 200000.0
+      }
     },
     {
       "country": "World total (rounded)",
@@ -807,7 +862,11 @@
       "production_prev_raw": "1310000",
       "production_latest_raw": "1300000",
       "reserves_raw": null,
-      "note": null
+      "note": null,
+      "sub_metal_production_latest": {
+        "Fused aluminum oxide": 1300000.0,
+        "Silicon carbide": 1000000.0
+      }
     }
   ],
   "footnotes": {

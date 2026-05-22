@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Palladium |  | 13,700 | 10,100 | 10,300 | 10,200 | 6,200 |
@@ -68,13 +70,13 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 10,200 | 6,200 | N/A | N/A |  |
-| Canada | 17,000 | 16,000 | N/A | N/A |  |
-| Russia | 89,000 | 84,000 | N/A | N/A | footnote 10 |
-| South Africa | 82,600 | 70,000 | N/A | N/A |  |
-| Zimbabwe | 15,200 | 15,000 | N/A | N/A |  |
-| Other countries | 2,870 | 2,900 | N/A | N/A |  |
-| World total (rounded) | 217,000 | 190,000 | N/A | N/A |  |
+| United States | 10,200 | 6,200 | N/A | 590,000 |  |
+| Canada | 17,000 | 16,000 | N/A | 310,000 |  |
+| Russia | 89,000 | 84,000 | N/A | 11,000,000 | footnote 10 |
+| South Africa | 82,600 | 70,000 | N/A | 63,000,000 |  |
+| Zimbabwe | 15,200 | 15,000 | N/A | 1,300,000 |  |
+| Other countries | 2,870 | 2,900 | N/A | NA |  |
+| World total (rounded) | 217,000 | 190,000 | N/A | >76,000,000 |  |
 
 ## Footnotes (verbatim)
 

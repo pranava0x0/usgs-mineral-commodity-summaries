@@ -22,6 +22,8 @@
 
 ## Salient Statistics (US) — full table
 
+_`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
+
 | Row | Footnote | 2021 | 2022 | 2023 | 2024 | 2025e |
 | --- | --- | ---: | ---: | ---: | ---: | ---: |
 | Primary |  | W | W | 0 | 0 | 0 |
@@ -67,16 +69,16 @@
 
 | country | prev-yr | latest-yr | capacity | reserves | note |
 | --- | ---: | ---: | ---: | ---: | --- |
-| United States | 0 | 0 | N/A | N/A | footnote 7 |
-| Brazil | 20 | 20 | N/A | N/A |  |
-| China | 953 | 950 | N/A | N/A | footnote 7 |
-| Iran | 5 | 5 | N/A | N/A |  |
-| Israel | 17 | 20 | N/A | N/A | footnote 7 |
-| Kazakhstan | 15 | 13 | N/A | N/A |  |
-| Russia | 59 | 60 | N/A | N/A |  |
-| Turkey | 15 | 15 | N/A | N/A | footnote 7 |
-| Other countries | 0 | 0 | N/A | N/A |  |
-| World total (rounded) | 1,080 | 1,100 | N/A | N/A |  |
+| United States | 0 | 0 | 64 | N/A | footnote 7 |
+| Brazil | 20 | 20 | 22 | N/A |  |
+| China | 953 | 950 | 1,480 | N/A | footnote 7 |
+| Iran | 5 | 5 | 6 | N/A |  |
+| Israel | 17 | 20 | 34 | N/A | footnote 7 |
+| Kazakhstan | 15 | 13 | 21 | N/A |  |
+| Russia | 59 | 60 | 81 | N/A |  |
+| Turkey | 15 | 15 | 15 | N/A | footnote 7 |
+| Other countries | 0 | 0 | 42 | N/A |  |
+| World total (rounded) | 1,080 | 1,100 | 1,800 | N/A |  |
 
 ## Footnotes (verbatim)
 

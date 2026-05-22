@@ -2,7 +2,7 @@
 
 - **Source**: <https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-titanium.pdf>
 - **Edition**: MCS 2026 (2026-02)
-- **Captured**: 2026-05-20
+- **Captured**: 2026-05-19
 - **PDF SHA-256**: `c93f5a562e3b3270…`
 - **Pages**: 2
 - **Units note (verbatim)**: (Data in metric tons unless otherwise specified)
