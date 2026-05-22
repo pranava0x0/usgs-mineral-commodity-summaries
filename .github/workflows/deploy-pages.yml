@@ -62,6 +62,7 @@ jobs:
           paths = [
               Path("viewer/data.json"),
               Path("viewer/data.csv"),
+              Path("viewer/countries.json"),
               Path("data/processed/elements.json"),
               Path("data/processed/elements.csv"),
           ]
@@ -80,7 +81,7 @@ jobs:
           set -euo pipefail
           mkdir -p _site/viewer
           cp viewer/index.html viewer/style.css viewer/viewer.js _site/viewer/
-          cp viewer/data.json viewer/data.csv _site/viewer/
+          cp viewer/data.json viewer/data.csv viewer/countries.json _site/viewer/
           # llms.txt — dataset summary for LLM crawlers (https://llmstxt.org).
           # Mirror to both the site root and the viewer dir so /llms.txt resolves
           # regardless of which subpath the crawler hits.

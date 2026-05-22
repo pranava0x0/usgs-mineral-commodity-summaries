@@ -134,7 +134,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: 14px;
+  flex-wrap: wrap;       /* view-switch + downloads wrap onto two rows when tight */
+  gap: 10px 14px;
 }
 .download-bar-label {
   font-size: 11.5px;
@@ -627,35 +628,32 @@ main {
   * { transition: none !important; }
 }
 
-/* ---------- Top-level view switcher (By element / By country) ---------- */
+/* ---------- View switcher (By element / By country) — lives in the download bar ---------- */
 .view-switch {
   display: inline-flex;
-  gap: 2px;
-  margin: 0 0 20px;
-  padding: 3px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
-  border-radius: 999px;
+  gap: 4px;
+  margin-right: auto;   /* sit on the left; downloads stay right-aligned */
 }
 .view-tab {
   appearance: none;
-  border: 0;
-  background: transparent;
-  color: var(--text-muted);
+  border: 1px solid var(--banner-border);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--download-bar-text);
   font-family: var(--font-sans);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  padding: 8px 18px;
-  min-height: 44px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 0 14px;
+  min-height: 36px;     /* matches the export buttons + theme toggle in this bar */
   border-radius: 999px;
   cursor: pointer;
-  transition: color 120ms ease, background 120ms ease;
+  transition: background 120ms ease, color 120ms ease;
 }
-.view-tab:hover { color: var(--text); }
+.view-tab:hover { background: var(--download-bar-hover); }
 .view-tab[aria-selected="true"] {
-  color: #fff;
-  background: var(--accent);
+  background: #ffffff;
+  color: #0b5a36;       /* dark green — ≥7:1 on the white pill, in both themes */
+  border-color: #ffffff;
 }
 
 /* ---------- By-country view ---------- */

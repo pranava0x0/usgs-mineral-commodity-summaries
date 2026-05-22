@@ -13,8 +13,14 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="download-bar" role="region" aria-label="Download dataset">
+  <div class="download-bar" role="region" aria-label="Views and dataset downloads">
     <div class="download-bar-inner">
+      <nav class="view-switch" role="tablist" aria-label="View mode">
+        <button id="viewtab-element" class="view-tab" type="button" role="tab"
+                aria-selected="true" aria-controls="view-element" data-view="element">By element</button>
+        <button id="viewtab-country" class="view-tab" type="button" role="tab"
+                aria-selected="false" aria-controls="view-country" tabindex="-1" data-view="country">By country</button>
+      </nav>
       <span class="download-bar-label" aria-hidden="true">Download dataset</span>
       <div class="export-group" role="group" aria-label="Export format">
         <a id="export-csv" class="export-btn export-btn--primary"
@@ -49,13 +55,6 @@
   </header>
 
   <main id="main" role="main">
-    <nav class="view-switch" role="tablist" aria-label="View mode">
-      <button id="viewtab-element" class="view-tab" type="button" role="tab"
-              aria-selected="true" aria-controls="view-element" data-view="element">By element</button>
-      <button id="viewtab-country" class="view-tab" type="button" role="tab"
-              aria-selected="false" aria-controls="view-country" tabindex="-1" data-view="country">By country</button>
-    </nav>
-
     <div id="view-element" role="tabpanel" aria-labelledby="viewtab-element">
       <section id="overview" aria-labelledby="overview-h">
         <h2 id="overview-h" class="eyebrow">Latest-year summary</h2>

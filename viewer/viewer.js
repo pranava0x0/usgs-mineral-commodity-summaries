@@ -425,9 +425,17 @@ let _countryData = null;  // { idx: {header->col}, rows: string[][], countries: 
 
 async function ensureCountryData() {
   if (_countryData) return _countryData;
+  // Check response.ok before parsing: a 404 returns the HTML fallback page,
+  // and `.json()` on that throws a cryptic "Unexpected token '<'". Surface the
+  // real HTTP status instead.
+  const grab = async (url, as) => {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error(`${url} → HTTP ${r.status}`);
+    return as === 'json' ? r.json() : r.text();
+  };
   const [csvText, list] = await Promise.all([
-    fetch('data.csv').then(r => r.text()),
-    fetch('countries.json').then(r => r.json()),
+    grab('data.csv', 'text'),
+    grab('countries.json', 'json'),
   ]);
   const all = parseCsv(csvText);
   const idx = {};
