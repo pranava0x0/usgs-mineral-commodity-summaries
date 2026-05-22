@@ -417,14 +417,17 @@ def _make_alias(parent: ElementRecord, alias: config.Element) -> ElementRecord:
 
     if alias.kind == "rare_earth":
         _blank_aggregates(rec)
-        # USGS reports rare-earth mine production / reserves and import sources
-        # only at the GROUP level (REO content). Per-element figures aren't
-        # published, so don't let an individual REE inherit the group's world
-        # table or import-source shares — that would attribute the whole
-        # group's 270,000 t China mine / 44,000,000 t reserves to one element.
+        # USGS reports rare-earth mine production / reserves, import sources, and
+        # the Government Stockpile only at the GROUP level (REO content / the
+        # group's lanthanum stockpile). Per-element figures aren't published, so
+        # don't let an individual REE inherit them — that would attribute the
+        # whole group's 270,000 t China mine / 44,000,000 t reserves / 1,100 t
+        # stockpile to one element.
         rec.world_production = []
         rec.import_sources_flat = []
         rec.import_sources_by_category = []
+        rec.stockpile_fy2025_potential_acquisitions = None
+        rec.latest_year_sentinels = {}
 
         if alias.parent_filter:
             pat = re.compile(alias.parent_filter, re.IGNORECASE)

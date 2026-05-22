@@ -688,6 +688,13 @@ class MechanismBGroupTests(unittest.TestCase):
         self.assertEqual(cerium["china__mine_production"], "N/A")
         self.assertEqual(cerium["china__reserves"], "N/A")
         self.assertEqual(cerium["price_metal_average_dollars_per_pound"], "1.71")  # own oxide price kept
+        # The group's lanthanum stockpile (1,100) must NOT be attributed per-REE.
+        for name in ("Cerium", "Dysprosium", "Lanthanum", "Yttrium"):
+            row = next(r for r in self.rows if r["name"] == name)
+            self.assertEqual(
+                row["government_stockpile_fy2025_potential_acquisitions"], "N/A",
+                f"{name} should not inherit the group stockpile",
+            )
 
 
 if __name__ == "__main__":
