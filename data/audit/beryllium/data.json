@@ -1,0 +1,400 @@
+{
+  "slug": "beryllium",
+  "name": "Beryllium",
+  "symbol": "Be",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-beryllium.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "dee2faa35a4a824d04f37cf74e732074a315e8d541efc14d78d458f9ac9f317a",
+  "pdf_page_count": 2,
+  "units_note": "(Data in metric tons, beryllium content, unless otherwise specified)",
+  "price_unit_note": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+  "price_footnote_text": null,
+  "domestic_use_summary": "One company in Utah mined bertrandite ore and converted it, along with imported beryl, into beryllium hydroxide. Some of the beryllium hydroxide was shipped to the company’s plant in Ohio, where it was converted into metal, oxide, and downstream beryllium-copper master alloy, and some was sold. Estimated beryllium apparent consumption in 2025 was 230 tons and was valued at about $360 million based on the most recent beryllium price estimate. Based on sales revenues, approximately 29% of beryllium products were used in consumer electronics, 24% in aerospace and defense applications, 17% in industrial components, 9% in automotive electronics, 8% in energy applications, 2% in semiconductor applications, and 11% in other applications. Beryllium alloy strip and bulk products, the most common forms of processed beryllium, were used in all application areas. Most unalloyed beryllium metal and beryllium composite products were used in defense and scientific applications. The U.S. Department of War supports the availability of domestic beryllium to meet critical defense needs. In 2010, under the Defense Production Act, Title III, a public-private partnership with the leading U.S. beryllium producer reestablished domestic production of beryllium metal.",
+  "events_trends_summary": "Apparent consumption in 2025 increased by 2% from that in 2024 owing primarily to a 43% decrease in estimated beryllium exports, offset by a 34% decrease in estimated imports. The decrease in exports reflected a large reduction in beryllium metal exports to Canada, China, France, and Germany. The decrease in imports reflected a reduction in beryllium metal imports from Germany, Kazakhstan, and Latvia. During the first 6 months of 2025, the leading U.S. beryllium producer reported that net sales of its beryllium alloy strip and bulk products and beryllium metal and composite products were about the same as those during the first 6 months of 2024. Net sales of beryllium products decreased primarily in the automotive electronics, consumer electronics, and life sciences end markets. Because of the toxic nature of beryllium, various international, national, and State guidelines and regulations have been established regarding beryllium in air, water, and other media. Industry is required to carefully control the quantity of beryllium dust, fumes, and mists in the workplace.",
+  "world_resources_summary": "The world’s identified resources of beryllium have been estimated to be more than 100,000 tons. About 60% of these resources are in the United States; by tonnage, the Spor Mountain area in Utah, the McCullough Butte area in Nevada, the Black Hills area in South Dakota, the Sierra Blanca area in Texas, the Seward Peninsula in Alaska, and the Gold Hill area in Utah account for most of the total.",
+  "substitutes_summary": "Because the cost of beryllium is high compared with that of other materials, it is used in applications in which its properties are crucial. In some applications, certain metal matrix or organic composites, high-strength grades of aluminum, pyrolytic graphite, silicon carbide, steel, or titanium may be substituted for beryllium metal or beryllium composites. Copper alloys containing nickel and silicon, tin, titanium, or other alloying elements or phosphor bronze alloys (copper-tin-phosphorus) may be substituted for beryllium-copper alloys, but these substitutions can result in substantially reduced performance. Aluminum nitride or boron nitride may be substituted for beryllium oxide.",
+  "recycling_summary": "Beryllium was recovered from new scrap generated during the manufacture of beryllium products and from old scrap. Detailed data on the quantities of beryllium recycled were not available but may account for as much as 20% to 25% of total beryllium consumption. The leading U.S. beryllium producer managed a recycling program for all its beryllium products, recovering approximately 40% of the beryllium content of the new and old beryllium alloy scrap.",
+  "salient_stats": [
+    {
+      "label": "Production, mine shipments",
+      "footnote": null,
+      "section": "Production, mine shipments",
+      "subsection": null,
+      "values": {
+        "2021": 175.0,
+        "2022": 175.0,
+        "2023": 185.0,
+        "2024": 230.0,
+        "2025e": 230.0
+      },
+      "raw_values": {
+        "2021": "175",
+        "2022": "175",
+        "2023": "185",
+        "2024": "230",
+        "2025e": "230"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": "1",
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 49.0,
+        "2022": 39.0,
+        "2023": 25.0,
+        "2024": 16.0,
+        "2025e": 10.0
+      },
+      "raw_values": {
+        "2021": "49",
+        "2022": "39",
+        "2023": "25",
+        "2024": "16",
+        "2025e": "10"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "2",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 30.0,
+        "2022": 59.0,
+        "2023": 68.0,
+        "2024": 26.0,
+        "2025e": 15.0
+      },
+      "raw_values": {
+        "2021": "30",
+        "2022": "59",
+        "2023": "68",
+        "2024": "26",
+        "2025e": "15"
+      }
+    },
+    {
+      "label": "Shipments from Government stockpile",
+      "footnote": "3",
+      "section": "Shipments from Government stockpile",
+      "subsection": null,
+      "values": {
+        "2021": 7.0,
+        "2022": 9.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "7",
+        "2022": "9",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Apparent",
+      "footnote": "4",
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 196.0,
+        "2022": 189.0,
+        "2023": 142.0,
+        "2024": 220.0,
+        "2025e": 230.0
+      },
+      "raw_values": {
+        "2021": "196",
+        "2022": "189",
+        "2023": "142",
+        "2024": "220",
+        "2025e": "230"
+      }
+    },
+    {
+      "label": "Reported, ore",
+      "footnote": null,
+      "section": "Consumption",
+      "subsection": null,
+      "values": {
+        "2021": 170.0,
+        "2022": 170.0,
+        "2023": 180.0,
+        "2024": 180.0,
+        "2025e": 180.0
+      },
+      "raw_values": {
+        "2021": "170",
+        "2022": "170",
+        "2023": "180",
+        "2024": "180",
+        "2025e": "180"
+      }
+    },
+    {
+      "label": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+      "footnote": "5",
+      "section": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+      "subsection": null,
+      "values": {
+        "2021": 680.0,
+        "2022": 660.0,
+        "2023": 1400.0,
+        "2024": 1500.0,
+        "2025e": 1600.0
+      },
+      "raw_values": {
+        "2021": "680",
+        "2022": "660",
+        "2023": "1400",
+        "2024": "1500",
+        "2025e": "1600"
+      }
+    },
+    {
+      "label": "Stocks, ore, industry, yearend",
+      "footnote": null,
+      "section": "Stocks, ore, industry, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 35.0,
+        "2022": 10.0,
+        "2023": 10.0,
+        "2024": 10.0,
+        "2025e": 10.0
+      },
+      "raw_values": {
+        "2021": "35",
+        "2022": "10",
+        "2023": "10",
+        "2024": "10",
+        "2025e": "10"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 11.0,
+        "2022": 7.0,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "11",
+        "2022": "7",
+        "2023": "E",
+        "2024": "E",
+        "2025e": "E"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+      "unit_note": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+      "values": {
+        "2021": 680.0,
+        "2022": 660.0,
+        "2023": 1400.0,
+        "2024": 1500.0,
+        "2025e": 1600.0
+      },
+      "raw_values": {
+        "2021": "680",
+        "2022": "660",
+        "2023": "1400",
+        "2024": "1500",
+        "2025e": "1600"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": 230.0,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 10.0,
+  "exports_total_latest": 15.0,
+  "apparent_consumption_latest": 230.0,
+  "price_usd_per_pound_latest": 1600.0,
+  "net_import_reliance_pct_latest": null,
+  "latest_year_sentinels": {
+    "net_import_reliance": "E"
+  },
+  "stockpile_fy2025_potential_acquisitions": 0.0,
+  "import_sources_flat": [
+    {
+      "country": "Kazakhstan",
+      "share_pct": 31.0
+    },
+    {
+      "country": "Latvia",
+      "share_pct": 25.0
+    },
+    {
+      "country": "Japan",
+      "share_pct": 19.0
+    },
+    {
+      "country": "Germany",
+      "share_pct": 5.0
+    },
+    {
+      "country": "other",
+      "share_pct": 20.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Kazakhstan",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Latvia",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 20.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 230.0,
+      "production_latest_year": 230.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "230",
+      "production_latest_raw": "230",
+      "reserves_raw": "The United States has very little beryl that can be",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 80.0,
+      "production_latest_year": 80.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "80",
+      "production_latest_raw": "80",
+      "reserves_raw": "economically hand sorted from pegmatite",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China",
+      "production_prev_year": 78.0,
+      "production_latest_year": 77.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "78",
+      "production_latest_raw": "77",
+      "reserves_raw": "deposits. An epithermal deposit in the Spor",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Madagascar",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": "Mountain area in Utah is a large bertrandite",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Mozambique",
+      "production_prev_year": 3.0,
+      "production_latest_year": 3.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "3",
+      "production_latest_raw": "3",
+      "reserves_raw": "resource, which is being mined. Proven and",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Nigeria",
+      "production_prev_year": 40.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "40",
+      "production_latest_raw": "40",
+      "reserves_raw": "probable bertrandite reserves in Utah total about",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Rwanda",
+      "production_prev_year": 1.0,
+      "production_latest_year": 1.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1",
+      "production_latest_raw": "1",
+      "reserves_raw": "19,000 tons of beryllium content. World beryllium",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 433.0,
+      "production_latest_year": 430.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "433",
+      "production_latest_raw": "430",
+      "reserves_raw": "reserves were not available.",
+      "note": null,
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+    "1": "Includes estimated beryllium content of imported ores and concentrates, oxide and hydroxide, unwrought metal (including powders), beryllium articles, waste and scrap, beryllium-copper master alloy, and beryllium-copper plates, sheets, and strip.",
+    "2": "Includes estimated beryllium content of exported unwrought metal (including powders), beryllium articles, and waste and scrap.",
+    "3": "Change in total inventory from prior yearend inventory. Negative values indicate increase in inventory. Beginning in 2023, Government stock changes are no longer available.",
+    "4": "Defined for 2020–22 as production + imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "5": "Calculated from gross weight and customs value of imports; beryllium content estimated to be 4%. Rounded to two significant figures.",
+    "6": "Defined for 2020–22 as imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+    "7": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+    "8": "In addition to the countries listed, Kazakhstan and Portugal may have produced beryl ore, but available information was inadequate to make reliable estimates of output. Other nations that produced gemstone beryl ore may also have produced some industrial beryl ore.",
+    "9": "Based on 4% beryllium content of bertrandite and beryl sources.",
+    "10": "See Appendix C for resource and reserve definitions and information concerning data sources. Reserves The United States has very little beryl that can be economically hand sorted from pegmatite deposits. An epithermal deposit in the Spor Mountain area in Utah is a large bertrandite resource, which is being mined. Proven and probable bertrandite reserves in Utah total about 19,000 tons of beryllium content. World beryllium reserves were not available."
+  }
+}

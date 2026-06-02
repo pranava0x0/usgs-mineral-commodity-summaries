@@ -51,6 +51,7 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - Gabon: 64%
 - South Africa: 24%
 - Mexico: 12%
+- other: 1%
 
 **Ferromanganese**
 - Malaysia: 26%

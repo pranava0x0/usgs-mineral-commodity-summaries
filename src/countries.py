@@ -203,10 +203,16 @@ def map_country(usgs_name: str) -> str | None:
     if direct is not None or s in NON_COUNTRY_LABELS:
         return direct
 
-    # Strip trailing parenthetical commodity qualifiers, e.g. "Sweden
-    # (concentrate)" → "Sweden", "United States (copper telluride)" → "United States".
-    # Only applied as a fallback after the full-string lookup miss.
-    stripped = re.sub(r"\s*\([^)]*\)\s*$", "", s).strip()
+    # Strip a trailing commodity qualifier and retry — parenthetical
+    # ("Sweden (concentrate)" → "Sweden", "United States (copper telluride)" →
+    # "United States") or comma-delimited ("Turkey, refined borates" → "Turkey",
+    # "Bolivia, ulexite" → "Bolivia"; boron's world table tags every country
+    # with its borate form). Applied ONLY after the full-string lookup miss, so
+    # names whose comma/parens are intrinsic ("Korea, Republic of",
+    # "Congo (Kinshasa)") are matched above and never reach here. No canonical
+    # entry contains a comma, so the comma split can't truncate a real name.
+    stripped = re.sub(r"\s*\([^)]*\)\s*$", "", s).strip()  # drop trailing (...)
+    stripped = stripped.split(",", 1)[0].strip()           # drop trailing , qualifier
     if stripped != s and stripped:
         return _lookup(stripped)
 

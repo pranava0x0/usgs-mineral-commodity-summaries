@@ -88,9 +88,29 @@ ELEMENTS: dict[str, Element] = {
         slug="antimony", name="Antimony", symbol="Sb", mcs_url=_mcs("antimony"),
         notes="Salient stats include 5 import + 5 export forms; no Total row. World table is Mine Production / Reserves.",
     ),
+    "arsenic": Element(
+        slug="arsenic", name="Arsenic", symbol="As", mcs_url=_mcs("arsenic"),
+        notes="No domestic production (trioxide/metal imported). On the 2022 + 2025 Critical Minerals Lists.",
+    ),
+    "barite": Element(
+        slug="barite", name="Barite", symbol=None, mcs_url=_mcs("barite"),
+        notes="Industrial mineral (barium sulfate), mostly oil-and-gas drilling mud. World table is Mine Production / Reserves.",
+    ),
+    "beryllium": Element(
+        slug="beryllium", name="Beryllium", symbol="Be", mcs_url=_mcs("beryllium"),
+        notes="US is the leading producer (bertrandite). On the 2022 + 2025 Critical Minerals Lists.",
+    ),
     "bismuth": Element(
         slug="bismuth", name="Bismuth", symbol="Bi", mcs_url=_mcs("bismuth"),
         notes="Byproduct of lead/tungsten/zinc; world table is Refinery production. No country-level reserves.",
+    ),
+    "boron": Element(
+        slug="boron", name="Boron", symbol="B", mcs_url=_mcs("boron"),
+        notes="Industrial mineral (borates). New on the 2025 USGS Critical Minerals List. World table is Mine Production / Reserves.",
+    ),
+    "cesium": Element(
+        slug="cesium", name="Cesium", symbol="Cs", mcs_url=_mcs("cesium"),
+        notes="No domestic production; USGS reports limited data (pollucite). On the 2022 + 2025 Critical Minerals Lists.",
     ),
     "chromium": Element(
         slug="chromium", name="Chromium", symbol="Cr", mcs_url=_mcs("chromium"),
@@ -104,6 +124,10 @@ ELEMENTS: dict[str, Element] = {
     "diamond": Element(
         slug="diamond", name="Diamond (industrial)", symbol="C", mcs_url=_mcs("diamond"),
         notes="USGS bundles industrial diamond (natural + synthetic) into one sheet. Diamond powders are inside it.",
+    ),
+    "fluorspar": Element(
+        slug="fluorspar", name="Fluorspar", symbol=None, mcs_url=_mcs("fluorspar"),
+        notes="Industrial mineral (calcium fluoride); acid- vs metallurgical-grade forms. World table is Mine Production / Reserves.",
     ),
     "gallium": Element(
         slug="gallium", name="Gallium", symbol="Ga", mcs_url=_mcs("gallium"),
@@ -122,6 +146,10 @@ ELEMENTS: dict[str, Element] = {
         slug="iron-and-steel", name="Iron and Steel", symbol="Fe",
         mcs_url=_mcs("iron-steel"),
         notes="USGS publishes the integrated 'iron-steel' sheet (raw steel + pig iron); iron ore and iron-and-steel scrap are separate sheets.",
+    ),
+    "lead": Element(
+        slug="lead", name="Lead", symbol="Pb", mcs_url=_mcs("lead"),
+        notes="New on the 2025 USGS Critical Minerals List. Mine + refinery (secondary/recycled) production; world table is Mine Production / Reserves.",
     ),
     "lithium": Element(
         slug="lithium", name="Lithium", symbol="Li", mcs_url=_mcs("lithium"),
@@ -144,10 +172,18 @@ ELEMENTS: dict[str, Element] = {
         slug="niobium", name="Niobium (columbium)", symbol="Nb", mcs_url=_mcs("niobium"),
         notes="USGS uses 'niobium' in the modern sheet name; historically 'columbium'.",
     ),
+    "phosphate": Element(
+        slug="phosphate", name="Phosphate rock", symbol=None, mcs_url=_mcs("phosphate"),
+        notes="New on the 2025 USGS Critical Minerals List. Industrial mineral (fertilizer feedstock); world table is Mine Production / Reserves.",
+    ),
     "platinum-group-metals": Element(
         slug="platinum-group-metals", name="Platinum-group metals (grouped)", symbol=None,
         mcs_url=_mcs("platinum-group"),
         notes="USGS 2026 filename is 'platinum-group' (the '-metals' suffix was dropped this edition). Grouped sheet covering iridium, palladium, platinum, rhodium, ruthenium, osmium. Per-PGM aliases inherit this verbatim.",
+    ),
+    "potash": Element(
+        slug="potash", name="Potash", symbol=None, mcs_url=_mcs("potash"),
+        notes="New on the 2025 USGS Critical Minerals List. Industrial mineral (potassium fertilizer, K2O equivalent); world table is Mine Production / Reserves.",
     ),
     "rare-earths": Element(
         slug="rare-earths", name="Rare Earths (grouped)", symbol=None, mcs_url=_mcs("rare-earths"),
@@ -156,6 +192,10 @@ ELEMENTS: dict[str, Element] = {
     "rhenium": Element(
         slug="rhenium", name="Rhenium", symbol="Re", mcs_url=_mcs("rhenium"),
         notes="Transition metal — superalloy component. Byproduct of molybdenum/copper refining.",
+    ),
+    "rubidium": Element(
+        slug="rubidium", name="Rubidium", symbol="Rb", mcs_url=_mcs("rubidium"),
+        notes="No domestic production; tiny sheet (byproduct of lithium/cesium ores). On the 2022 + 2025 Critical Minerals Lists.",
     ),
     "scandium": Element(
         slug="scandium", name="Scandium", symbol="Sc", mcs_url=_mcs("scandium"),

@@ -1,0 +1,462 @@
+{
+  "slug": "barite",
+  "name": "Barite",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-barite.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "78c4191315efe0a1ec006a34fe115fdbcc530d43529fff32c843a58a7ccc1377",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons unless otherwise specified)",
+  "price_unit_note": "Price, average unit value, ground, ex-works, dollars per metric ton",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, three companies mined barite at four operations in Nevada. Mine production increased, but data were withheld to avoid disclosing company proprietary data. An estimated 2.3 million tons of barite (from domestic production and imports) was sold by companies that operated crushers and grinders in nine States. Typically, more than 90% of the barite sold in the United States is used as a weighting agent in fluids used in the drilling of oil and natural gas wells. The majority of Nevada crude barite was ground in Nevada and then sold to companies drilling in the Central and Western United States. Because of the higher cost of rail and truck transportation compared with ocean freight, offshore and onshore drilling operations in other regions primarily used imported barite. Barite also is used as a filler, extender, or weighting agent in products such as paints, plastics, and rubber. Some specific applications include use in automobile brake and clutch pads, in automobile paint primer for metal protection and gloss, as a weighting agent in rubber, and in the cement jacket around underwater petroleum pipelines. In the metal-casting industry, barite is part of the mold-release compounds. Because barite significantly blocks X-ray and gamma-ray emissions, it is used as aggregate in high-density concrete for radiation shielding around X-ray units in hospitals, nuclear powerplants, and university nuclear research facilities. Ultrapure barite is used as a contrast medium in X-ray and computed tomography examinations of the gastrointestinal tract.",
+  "events_trends_summary": "Rig counts for oil and gas production are often used as an indicator of barite consumption. However, barite use per rig has been increasing owing to deeper oil and gas wells that require fewer rigs for oil and gas production. Through October 2025, the world annual average rig count excluding the United States was 1,258 compared with 1,349 through the same period in 2024 and the domestic average rig count was 564 compared with 599 through the same period in 2024. Despite the decrease in global and domestic drill rig counts, barite sales were estimated to have increased. A company in Kazakhstan announced that it planned to start mining barite in Qaraghandy Province.",
+  "world_resources_summary": "In the United States, identified resources of barite were estimated to be 150 million tons, and undiscovered resources contributed an additional 150 million tons. The world’s barite resources in all categories were about 2 billion tons, but only about 740 million tons were identified resources.",
+  "substitutes_summary": "Owing to technical and economic factors, there are no large-scale alternatives to barite in oil- and gas- drilling fluids. Calcium carbonate, hematite, ilmenite, and manganese tetroxide are the most common alternatives used in specific circumstances. Some technical literature and patents also mention use of celestite, iron carbonate, and strontium carbonate, but these are not estimated to be widely used.",
+  "recycling_summary": "None.",
+  "salient_stats": [
+    {
+      "label": "Sold or used, mine",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Ground and crushed",
+      "footnote": "1",
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 1670.0,
+        "2022": 2220.0,
+        "2023": 2260.0,
+        "2024": 2280.0,
+        "2025e": 2300.0
+      },
+      "raw_values": {
+        "2021": "1670",
+        "2022": "2220",
+        "2023": "2260",
+        "2024": "2280",
+        "2025e": "2300"
+      }
+    },
+    {
+      "label": "For consumption",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 1660.0,
+        "2022": 2330.0,
+        "2023": 2420.0,
+        "2024": 1880.0,
+        "2025e": 2300.0
+      },
+      "raw_values": {
+        "2021": "1660",
+        "2022": "2330",
+        "2023": "2420",
+        "2024": "1880",
+        "2025e": "2300"
+      }
+    },
+    {
+      "label": "General",
+      "footnote": null,
+      "section": "Imports",
+      "subsection": null,
+      "values": {
+        "2021": 1440.0,
+        "2022": 1890.0,
+        "2023": 2220.0,
+        "2024": 1810.0,
+        "2025e": 1700.0
+      },
+      "raw_values": {
+        "2021": "1440",
+        "2022": "1890",
+        "2023": "2220",
+        "2024": "1810",
+        "2025e": "1700"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": "3",
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 62.0,
+        "2022": 87.0,
+        "2023": 75.0,
+        "2024": 65.0,
+        "2025e": 67.0
+      },
+      "raw_values": {
+        "2021": "62",
+        "2022": "87",
+        "2023": "75",
+        "2024": "65",
+        "2025e": "67"
+      }
+    },
+    {
+      "label": "Consumption, apparent (crude and ground)",
+      "footnote": "4",
+      "section": "Consumption, apparent (crude and ground)",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Price, average unit value, ground, ex-works, dollars per metric ton",
+      "footnote": null,
+      "section": "Price, average unit value, ground, ex-works, dollars per metric ton",
+      "subsection": null,
+      "values": {
+        "2021": 167.0,
+        "2022": 145.0,
+        "2023": 218.0,
+        "2024": 210.0,
+        "2025e": 210.0
+      },
+      "raw_values": {
+        "2021": "167",
+        "2022": "145",
+        "2023": "218",
+        "2024": "210",
+        "2025e": "210"
+      }
+    },
+    {
+      "label": "Employment, mine and mill, number",
+      "footnote": null,
+      "section": "Employment, mine and mill, number",
+      "subsection": null,
+      "values": {
+        "2021": 330.0,
+        "2022": 380.0,
+        "2023": 440.0,
+        "2024": 400.0,
+        "2025e": 400.0
+      },
+      "raw_values": {
+        "2021": "330",
+        "2022": "380",
+        "2023": "440",
+        "2024": "400",
+        "2025e": "400"
+      }
+    },
+    {
+      "label": "Net import relianceas a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import relianceas a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 75.0,
+        "2022": 75.0,
+        "2023": 75.0,
+        "2024": 75.0,
+        "2025e": 75.0
+      },
+      "raw_values": {
+        "2021": ">75",
+        "2022": ">75",
+        "2023": ">75",
+        "2024": ">75",
+        "2025e": ">75"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average unit value, ground, ex-works, dollars per metric ton",
+      "unit_note": "Price, average unit value, ground, ex-works, dollars per metric ton",
+      "values": {
+        "2021": 167.0,
+        "2022": 145.0,
+        "2023": 218.0,
+        "2024": 210.0,
+        "2025e": 210.0
+      },
+      "raw_values": {
+        "2021": "167",
+        "2022": "145",
+        "2023": "218",
+        "2024": "210",
+        "2025e": "210"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 4000.0,
+  "exports_total_latest": 67.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 210.0,
+  "net_import_reliance_pct_latest": 75.0,
+  "latest_year_sentinels": {
+    "net_import_reliance": ">75",
+    "mined_production": "W",
+    "apparent_consumption": "W"
+  },
+  "stockpile_fy2025_potential_acquisitions": null,
+  "import_sources_flat": [
+    {
+      "country": "India",
+      "share_pct": 39.0
+    },
+    {
+      "country": "China",
+      "share_pct": 21.0
+    },
+    {
+      "country": "Morocco",
+      "share_pct": 19.0
+    },
+    {
+      "country": "Mexico",
+      "share_pct": 14.0
+    },
+    {
+      "country": "other",
+      "share_pct": 7.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "India",
+          "share_pct": 39.0
+        },
+        {
+          "country": "China",
+          "share_pct": 21.0
+        },
+        {
+          "country": "Morocco",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 14.0
+        },
+        {
+          "country": "other",
+          "share_pct": 7.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "W",
+      "production_latest_raw": "W",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China",
+      "production_prev_year": 2100.0,
+      "production_latest_year": 2200.0,
+      "capacity": null,
+      "reserves": 120000.0,
+      "production_prev_raw": "2100",
+      "production_latest_raw": "2200",
+      "reserves_raw": "120000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "India",
+      "production_prev_year": 2600.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": 51000.0,
+      "production_prev_raw": "2600",
+      "production_latest_raw": "3000",
+      "reserves_raw": "51000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Iran",
+      "production_prev_year": 300.0,
+      "production_latest_year": 300.0,
+      "capacity": null,
+      "reserves": 100000.0,
+      "production_prev_raw": "300",
+      "production_latest_raw": "300",
+      "reserves_raw": "100000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 650.0,
+      "production_latest_year": 700.0,
+      "capacity": null,
+      "reserves": 85000.0,
+      "production_prev_raw": "650",
+      "production_latest_raw": "700",
+      "reserves_raw": "85000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Laos",
+      "production_prev_year": 250.0,
+      "production_latest_year": 260.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "250",
+      "production_latest_raw": "260",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 244.0,
+      "production_latest_year": 300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "244",
+      "production_latest_raw": "300",
+      "reserves_raw": "NA",
+      "note": "footnote 9",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Morocco",
+      "production_prev_year": 930.0,
+      "production_latest_year": 1000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "930",
+      "production_latest_raw": "1000",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Pakistan",
+      "production_prev_year": 94.0,
+      "production_latest_year": 100.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "94",
+      "production_latest_raw": "100",
+      "reserves_raw": "NA",
+      "note": "footnote 9",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 200.0,
+      "production_latest_year": 230.0,
+      "capacity": null,
+      "reserves": 12000.0,
+      "production_prev_raw": "200",
+      "production_latest_raw": "230",
+      "reserves_raw": "12000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 261.0,
+      "production_latest_year": 260.0,
+      "capacity": null,
+      "reserves": 34000.0,
+      "production_prev_raw": "261",
+      "production_latest_raw": "260",
+      "reserves_raw": "34000",
+      "note": "footnote 9",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 340.0,
+      "production_latest_year": 350.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "340",
+      "production_latest_raw": "350",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 8000.0,
+      "production_latest_year": 8700.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "8000",
+      "production_latest_raw": "8700",
+      "reserves_raw": "NA",
+      "note": "footnote 10",
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available. W Withheld to avoid disclosing company proprietary data.",
+    "1": "Imported and domestic barite, crushed and ground, sold or used by domestic grinding establishments.",
+    "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 2511.10.1000, 2511.10.5000, and 2833.27.0000. General imports and imports for consumption data differ because of barite processed in free trade zones. General import data reports the form of imported barite at the time it entered the United States, whereas imports for consumption data reports crude barite processed in free trade zones as ground. Imports for consumption may not be immediately reported depending on processing time.",
+    "3": "Includes data for the following Schedule B numbers: 2511.10.1000 and 2833.27.0000.",
+    "4": "Defined as mine production (sold or used) + imports for consumption – exports.",
+    "5": "Defined as imports for consumption – exports.",
+    "6": "Includes Hong Kong.",
+    "7": "Source: Baker Hughes Co., 2025, Worldwide Rig Count: Baker Hughes Co. (Accessed November 14, 2025, at https://bakerhughesrigcount.gcs- web.com/intl-rig-count.)",
+    "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "9": "Reported.",
+    "10": "Excludes U.S. production."
+  }
+}

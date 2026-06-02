@@ -436,6 +436,19 @@
       ]
     },
     {
+      "category": "Copper content of ore and concentrate",
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 99.0
+        },
+        {
+          "country": "other",
+          "share_pct": 1.0
+        }
+      ]
+    },
+    {
       "category": "Copper content of scrap",
       "countries": [
         {

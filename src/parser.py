@@ -79,6 +79,7 @@ RANGE = re.compile(r"^([\d,]+(?:\.\d+)?)\s*[–-]\s*([\d,]+(?:\.\d+)?)$")
 DASH_VARIANTS = {"—"}  # em-dash (U+2014) = USGS zero. Hyphens and en-dashes are NOT zero.
 WITHHELD = {"W"}                  # withheld to protect proprietary data
 NET_EXPORTER = {"E"}              # only appears in NIR cells
+NOT_APPLICABLE = {"XX"}           # USGS "XX" = not applicable (distinct from NA = not available)
 
 
 def _to_float(token: str) -> tuple[Optional[float], str]:
@@ -92,6 +93,8 @@ def _to_float(token: str) -> tuple[Optional[float], str]:
         return None, ""
     if s.upper() == "NA":
         return None, "NA"
+    if s.upper() == "XX":
+        return None, "XX"
     if s in DASH_VARIANTS:
         return 0.0, "—"
     if s in WITHHELD:
@@ -131,7 +134,7 @@ def _looks_like_value(text: str) -> bool:
     s = text.strip()
     if not s:
         return False
-    if s.upper() == "NA":
+    if s.upper() in {"NA", "XX"}:
         return True
     if s in DASH_VARIANTS:
         return True
@@ -142,6 +145,22 @@ def _looks_like_value(text: str) -> bool:
     if RANGE.match(s):
         return True
     return bool(NUMERIC.match(s))
+
+
+def _world_cell_has_data(raw: Optional[str]) -> bool:
+    """True if a world-table raw cell carries real data — a number or a
+    recognized USGS sentinel (— / NA / W / E / XX / >N / <N / range).
+
+    Arbitrary text (a wrapped unit sub-header like "(arsenic trioxide,") is
+    NOT data; such a token reaches a cell only when a non-table line was
+    mis-banded as a row, and the row should be dropped.
+    """
+    if not raw:
+        return False
+    s = raw.strip()
+    if any(ch.isdigit() for ch in s):  # numbers, >N, <N, ranges all contain a digit
+        return True
+    return s in DASH_VARIANTS or s.upper() in {"NA", "XX"} or s in WITHHELD or s in NET_EXPORTER
 
 
 def _detect_section(text: str) -> Optional[str]:
@@ -519,7 +538,8 @@ def _parse_import_sources(
 _COUNTRY_SHARE = re.compile(
     r"([A-Za-z][A-Za-z.'’&()/\-]*(?:\s+[A-Za-z.'’&()/\-]+)*?)"  # country (proper-noun run)
     r"\s*,\s*(?:\d+\s+)?"          # comma, optional footnote-digits + space
-    r"(\d+(?:\.\d+)?)\s*%"         # the percentage
+    r"(?:[<>~]\s*)?"              # optional inequality / approx bound ("Peru, >99%")
+    r"(\d+(?:\.\d+)?)\s*%"         # the percentage (numeric part; bound dropped — share_pct is a float)
 )
 _LEADING_CONNECTOR = re.compile(r"^(?:and|from)\s+", re.IGNORECASE)
 
@@ -801,6 +821,20 @@ def _parse_world_production(
                 elif slot == "prev":
                     if prev is None:
                         prev, prev_raw = val, raw
+
+        # Skip rows that carry no real data — no number and no recognized
+        # sentinel in any cell. These are wrapped unit sub-headers mis-banded as
+        # rows (arsenic's "(arsenic trioxide, / gross weight)" under "World
+        # Production and Capacity:"), whose label text lands in a raw cell. A
+        # real country row always has a number or a — / NA / W / E / XX cell, so
+        # this never drops actual data.
+        has_data = (
+            capacity is not None
+            or any(_world_cell_has_data(r) for r in (prev_raw, latest_raw, reserves_raw))
+            or bool(sub_metal_latest)
+        )
+        if not has_data and not country.lower().startswith("world total"):
+            continue
 
         rows.append(WorldProductionRow(
             country=country,

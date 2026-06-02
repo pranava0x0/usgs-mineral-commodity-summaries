@@ -2,6 +2,116 @@
 
 Per CLAUDE.md §Backlog — ideas, follow-ups, and queued elements. Each item has a priority.
 
+## New ideas — 2026-06-02 online research
+
+Sourced from a web sweep on critical-minerals policy + comparable tools. These
+are *external-facing* features (the rest of this backlog is mostly internal
+parser/CSV refinement). Each carries a priority + effort + the source that
+motivated it.
+
+> **Data-source rule (user, 2026-06-02): only grab documents from official U.S.
+> government (`.gov`) websites** — USGS (`pubs.usgs.gov`), Census
+> (`census.gov` / `usatrade.census.gov`), `trade.gov`, Federal Register
+> (`federalregister.gov`), Commerce/BIS (`bis.gov`). The non-`.gov` links below
+> (CSIS, Pillsbury, IEA, ScienceDirect, UN Comtrade, …) are *context /
+> methodology references only* — never data sources. Any idea that needs a
+> non-gov feed must be re-sourced to a `.gov` equivalent before it's built.
+
+### 1. Align to the **2025 USGS Critical Minerals List** (HIGH)
+
+The project is framed around the *2022* critical-minerals list (see README,
+"USGS 2022 critical minerals list" in §Elements). On **2025-11-07** USGS
+finalized the **2025 List** — all 50 from 2022 **plus 10 new**: boron, copper,
+lead, metallurgical coal, phosphate, potash, rhenium, silicon, silver, uranium
+→ **60 total**. We already cover copper, rhenium, silicon, silver. This is the
+most timely gap. Two parts:
+
+- [ ] **1a. Tag each element with the list(s) it appears on** (medium, ~2 h) —
+      add a `critical_lists: list[int]` field (e.g. `[2018, 2022, 2025]`) on
+      `ElementRecord` / the `ELEMENTS` config, surfaced in JSON + CSV + viewer.
+      Single source of truth for "is this critical, and since when?". Directly
+      powers the **already-backlogged** "chip filters for Critical 2022 list"
+      (see §Viewer enhancements → Sort/filter) and lets the viewer show a
+      "**New in 2025**" badge. Each element is one literal in config. STILL
+      OPEN — the 2026-06-02 work added the commodities and noted list membership
+      in each `Element.notes` prose, but did not add the structured field.
+- [x] **1b. Add the missing 2025-list commodities** — DONE (2026-06-02). Added
+      **Boron, Lead, Phosphate rock, Potash** (new on the 2025 list) plus the
+      2022-list leftovers **Arsenic, Barite, Beryllium, Cesium, Fluorspar,
+      Rubidium** (see §Elements "Queued" below — now resolved). All 10 had
+      standard MCS 2026 sheets and parsed with the generic state machine (one
+      `ELEMENTS` entry each); regression tests in
+      `tests/test_new_commodities.py`. **Uranium** and **Metallurgical coal**
+      confirmed absent from the MCS 2026 index (EIA-DOE domain) — left out of
+      scope, not faked. Four small parser fixes shipped alongside (see
+      issues.md #20–#23): `XX` sentinel recognition, bounded import shares
+      (`>99%`), wrapped-unit-subheader world rows, and a comma-qualifier
+      country-name fallback. Bonus: the bounded-share fix recovered
+      previously-dropped import data on **copper** (Canada >99%) and
+      **manganese** (other <1%). Also fixed `captured_at` churn (issues.md #24).
+      Source: [USGS final 2025 list](https://www.usgs.gov/news/science-snippet/interior-department-releases-final-2025-list-critical-minerals),
+      [Federal Register 2025-19813](https://www.federalregister.gov/documents/2025/11/07/2025-19813/final-2025-list-of-critical-minerals).
+
+### 2. **Supply-concentration / HHI metric** (MEDIUM, ~3 h)
+
+Derive a **Herfindahl-Hirschman Index** per commodity from the per-country
+production shares we *already* parse (`world_production[*]`). HHI = Σ(country
+share %)², range 0–10,000; it's the standard criticality / supply-risk metric
+used by IEA and the academic literature. Emit two derived summary fields:
+`production_hhi` and `top_producer_share_pct` (+ optionally `top3_share_pct`).
+Pure computation — **no new data source, no network**. Pairs naturally with the
+shipped "By country" view and the latest-year summary block. Surface as a
+"supply concentration: 6,400 (highly concentrated — China 78%)" callout.
+Caveat to document: HHI under-reads risk in *less* concentrated markets (per
+the literature) — present it as one signal, not a verdict.
+Source: [HHI criticality study (ScienceDirect)](https://www.sciencedirect.com/science/article/pii/S0140988325000313),
+[IEA Critical Minerals Data Explorer](https://www.iea.org/data-and-statistics/data-tools/critical-minerals-data-explorer).
+
+### 3. **Export-control / supply-shock context layer** (MEDIUM, ~3 h)
+
+China's controls hit *exactly* the commodities we track, with price spikes of
+**200–437%**: Dec-2024 gallium/germanium/antimony/superhard + graphite review;
+Apr-2025 seven heavy REEs (Tb, Dy, Sm, Gd, Lu, Sc, Y); Oct-2025 expansion;
+Nov-2025 one-year suspension. We already half-acknowledge this (the dysprosium
+config note cites "Apr-2025 China export controls"). Idea: a small **curated
+`data/events.json`** (date, commodities[], action, price-impact, source URL),
+rendered as a "supply-risk timeline / callout" on affected element pages.
+Hand-maintained, append-only, source-attributed per CLAUDE.md §Data. Keeps the
+tool's "as of" framing honest — USGS MCS numbers predate the shock. **Per the
+data-source rule, each event must cite a `.gov` primary document** — Commerce/BIS
+(`bis.gov`), the Federal Register (`federalregister.gov`), or USTR (`ustr.gov`) —
+not the think-tank summaries that first surfaced them.
+Source (context only, non-gov): [CSIS on China rare-earth controls](https://www.csis.org/analysis/consequences-chinas-new-rare-earths-export-restrictions),
+[Pillsbury — Nov-2025 suspension](https://www.pillsburylaw.com/en/news-and-insights/china-suspends-export-controls-certain-critical-minerals-related-items.html).
+
+### 4. **Real bilateral trade flows from the US Census trade API** (MEDIUM-HIGH, ~1–2 days)
+
+The repo is literally named *"Critical Minerals Import Export Data"*, but we
+only carry USGS **import-source shares (%)** — not actual tonnage/value flows.
+The **US Census Bureau International Trade API** (`api.census.gov`, a `.gov`
+source) exposes real US import/export tonnage + value time series by HS code and
+partner country — the gov-native feed for this. (UN Comtrade was the original
+candidate but is `un.org`, not `.gov` → excluded per the data-source rule above.)
+Adding even a handful of HS-mapped series per commodity would turn the % shares
+into absolute, year-over-year flows. Biggest scope here: needs an
+HS-code↔commodity mapping table and a new cached+rate-limited fetcher (mirror
+`fetcher.py` etiquette; Census API key is free). Highest user value, largest
+effort, first external runtime dependency — scope a 2–3-commodity spike first.
+Source: [US Census trade API guide](https://www.census.gov/foreign-trade/reference/guides/Guide_to_International_Trade_Datasets.pdf),
+[Census International Trade API](https://www.census.gov/data/developers/data-sets/international-trade.html).
+
+### 5. **Choropleth world-production map** (MEDIUM, ~4 h)
+
+USGS itself ships an "Interactive Atlas of Critical Minerals." We have the
+per-country mine-production / reserves data already; a world map shaded by a
+selected commodity's production share would be a strong visual for the "By
+country" / element-detail views. Per CLAUDE.md §Frontend (minimize page weight,
+boring tech): use a **lightweight inline SVG world map** keyed by ISO code —
+not a heavyweight mapping library — and reuse the existing canonical-country
+mapping in `src/countries.py`. Pairs with the HHI metric (#2) as the headline
+of an element page.
+Source: [USGS 2025 list + Critical Minerals Atlas](https://www.usgs.gov/programs/mineral-resources-program/science/about-2025-list-critical-minerals).
+
 ## Elements
 
 ### Done — primary MCS sheets
@@ -54,8 +164,9 @@ specific price quote (`parent_filter`) or inherit the parent's aggregates. The
 Standard MCS sheets exist for the rest of the list; adding any of these is a
 one-line entry to `ELEMENTS` in [src/config.py](src/config.py):
 
-- [ ] Arsenic, Barite, Beryllium, Cesium, Fluorspar, Palladium, Rhodium,
-      Rubidium, Ruthenium
+- [x] **Arsenic, Barite, Beryllium, Cesium, Fluorspar, Rubidium** — DONE
+      (2026-06-02, alongside the 2025-list additions; see §"New ideas" #1b).
+      Palladium, Rhodium, Ruthenium were already covered as PGM aliases.
 - [ ] Sodium — no single MCS sheet; would need salt + soda-ash + sodium-sulfate
       as separate primaries
 - [ ] Mischmetal as REE alias against rare-earths (Mischmetal price quote exists)
@@ -68,6 +179,7 @@ one-line entry to `ELEMENTS` in [src/config.py](src/config.py):
 - [ ] **Mine production vs refinery production normalization** (medium) — current schema has both `production_prev_year` and `production_latest_year` regardless of label; viewer shows the section's label verbatim. When we add elements whose world table is "Mine Production and Reserves" (most of them), `reserves` will populate where it's null for bismuth — confirm the column-kinds inference picks "reserves" up.
 - [ ] **Yearbook integration** (medium) — pull historical Minerals Yearbook chapters for longer time series than the 5-year MCS window. Source: https://www.usgs.gov/centers/national-minerals-information-center/minerals-yearbook-metals-and-minerals
 - [ ] **Per-element parser overrides** (low) — keep a `src/parsers/<slug>.py` registry hook for elements where the generic state machine misreads. (Not needed for bismuth.)
+- [ ] **`ELEMENT_PRODUCTION_BLOCK` silent-drop footgun** (medium) — `csv_export.ELEMENT_PRODUCTION_BLOCK` is a hardcoded `slug → "mine"/"refinery"/None` map. A new primary added to `config.ELEMENTS` but *not* to this map gets `block=None`, so its per-country production silently vanishes from the CSV (reserves still map — they aggregate independently). Bit us on 2026-06-02 (boron/lead/potash/arsenic). Fix options: (a) derive the block from `world_production_label` (e.g. contains "Mine"→mine, "Refinery"→refinery) with the dict as an override-only table; or (b) at minimum, `log.warning` when a record has a non-empty `world_production` but no block mapping. Pairs with the existing "Mine production vs refinery production normalization" item above.
 - [ ] **Diff alerts** (medium) — when re-running with `--refresh`, compare new SHA-256 to the stored value and surface "USGS reissued this PDF" warnings.
 - [ ] **Multi-edition history** (low) — keep `data/processed/elements_<edition>.json` so we can chart year-over-year drift in reported figures.
 

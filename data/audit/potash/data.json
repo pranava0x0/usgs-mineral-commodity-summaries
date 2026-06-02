@@ -1,0 +1,476 @@
+{
+  "slug": "potash",
+  "name": "Potash",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-potash.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "c2e6605e30ef764f50d400f609e6424da7e46f5d8751f6bf8b62ab58d5ad809b",
+  "pdf_page_count": 2,
+  "units_note": "[Data in thousand metric tons, potassium oxide (KO) equivalent, unless otherwise specified]",
+  "price_unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, the estimated sales value of marketable potash, free on board (f.o.b.) mine, was $550 million, which was 13% higher than that in 2024. The majority of U.S. production was from southeastern New Mexico, where two companies operated two underground mines and one deep-well solution mine. Sylvinite and langbeinite ores in New Mexico were beneficiated by flotation, dissolution-recrystallization, heavy-media separation, solar evaporation, and (or) combinations of these processes. In Utah, two companies operated three facilities. One company extracted underground sylvinite ore by deep-well solution mining. Solar evaporation crystallized the sylvinite ore from the brine solution, and a flotation process separated the muriate of potash (MOP) from byproduct sodium chloride. The firm also processed subsurface brines by solar evaporation and flotation to produce MOP at its other facility. Another company processed brine from the Great Salt Lake by solar evaporation to produce potassium sulfate or sulfate of potash (SOP) and other byproducts. Potash denotes a variety of mined and manufactured salts that contain the element potassium in water-soluble form. In agriculture, the term potash refers to potassic fertilizers, which are potassium chloride (KCl), SOP, and potassium magnesium sulfate (SOPM) or langbeinite. MOP is an agriculturally acceptable mix of KCl (95% pure or greater) and sodium chloride for fertilizer use. The fertilizer industry used about 85% of U.S. potash sales, and the remainder was used for chemical and industrial applications. More than 60% of the potash produced was SOPM and SOP, which are required to fertilize certain chloride-sensitive crops. The remainder of production was MOP and was used for agricultural and chemical applications.",
+  "events_trends_summary": "In 2025, domestic production, sales, and exports were estimated to have increased compared with those in 2024. Apparent consumption and imports were both lower than those in 2024. World consumption of potash in fertilizer was estimated to be 41.6 million tons of KO, compared with 40.6 million tons in 2024. Asia and South America were the regions with the highest growth in consumption. World consumption was projected to increase to 45.3 million tons in 2029. POTASH U.S. Geological Survey, Mineral Commodity Summaries, February 2026 In January 2025, a Michigan-based company received a conditional commitment from the U.S. Department of Energy for a $1.26 billion loan to help finance the development of a new potash and salt mine in Osceola County, MI. The company is required to meet certain environmental, financial, legal, and technical conditions within 1 year before the loan can be approved. The new mine was planned to have an initial annual production capacity of 800,000 tons of MOP and 1 million tons of salt. World annual potash production capacity was 66.1 million tons of KO in 2025 and projected to increase to 77.4 million tons of KO by 2029. Most of the increase would be MOP from new mines and expansion projects in Laos and Russia. New MOP mines in Belarus, Brazil, Canada, Ethiopia, Morocco, and Spain were planned to begin operation beyond 2029. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "Estimated domestic potash resources total about 7 billion tons. Most of these lie at depths between 1,800 and 3,100 meters in a 3,110-square-kilometer area of Montana and North Dakota as an extension of the Williston Basin deposits in Manitoba and Saskatchewan, Canada. The Paradox Basin in Utah contains resources of about 2 billion tons, mostly at depths of more than 1,200 meters. The Holbrook Basin of Arizona contains resources of about 0.7 billion to 2.5 billion tons. A large potash resource lies about 2,100 meters under central Michigan and contains more than 75 million tons. Estimated world resources total about 250 billion tons.",
+  "substitutes_summary": "No substitutes exist for potassium as an essential plant nutrient and as an essential nutritional requirement for animals and humans. Manure and glauconite (greensand) are low-potassium-content materials that can be profitably transported only short distances to crop fields. Glauconite is used as a potassium source for organic farming.",
+  "recycling_summary": "None.",
+  "salient_stats": [
+    {
+      "label": "Production, marketable",
+      "footnote": "1",
+      "section": "Production, marketable",
+      "subsection": null,
+      "values": {
+        "2021": 480.0,
+        "2022": 430.0,
+        "2023": 390.0,
+        "2024": 410.0,
+        "2025e": 500.0
+      },
+      "raw_values": {
+        "2021": "480",
+        "2022": "430",
+        "2023": "390",
+        "2024": "410",
+        "2025e": "500"
+      }
+    },
+    {
+      "label": "Sales by producers, marketable",
+      "footnote": "1",
+      "section": "Production, marketable",
+      "subsection": null,
+      "values": {
+        "2021": 490.0,
+        "2022": 400.0,
+        "2023": 400.0,
+        "2024": 420.0,
+        "2025e": 460.0
+      },
+      "raw_values": {
+        "2021": "490",
+        "2022": "400",
+        "2023": "400",
+        "2024": "420",
+        "2025e": "460"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 6480.0,
+        "2022": 4940.0,
+        "2023": 5620.0,
+        "2024": 5970.0,
+        "2025e": 5600.0
+      },
+      "raw_values": {
+        "2021": "6480",
+        "2022": "4940",
+        "2023": "5620",
+        "2024": "5970",
+        "2025e": "5600"
+      }
+    },
+    {
+      "label": "Exports",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 112.0,
+        "2022": 267.0,
+        "2023": 157.0,
+        "2024": 150.0,
+        "2025e": 170.0
+      },
+      "raw_values": {
+        "2021": "112",
+        "2022": "267",
+        "2023": "157",
+        "2024": "150",
+        "2025e": "170"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": null,
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 6900.0,
+        "2022": 5100.0,
+        "2023": 5900.0,
+        "2024": 6200.0,
+        "2025e": 5900.0
+      },
+      "raw_values": {
+        "2021": "6900",
+        "2022": "5100",
+        "2023": "5900",
+        "2024": "6200",
+        "2025e": "5900"
+      }
+    },
+    {
+      "label": "All products",
+      "footnote": "3",
+      "section": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+      "subsection": "equivalent",
+      "values": {
+        "2021": 1120.0,
+        "2022": 1790.0,
+        "2023": 1250.0,
+        "2024": 1150.0,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1120",
+        "2022": "1790",
+        "2023": "1250",
+        "2024": "1150",
+        "2025e": "1200"
+      }
+    },
+    {
+      "label": "MOP",
+      "footnote": null,
+      "section": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+      "subsection": "equivalent",
+      "values": {
+        "2021": 650.0,
+        "2022": 980.0,
+        "2023": 620.0,
+        "2024": 690.0,
+        "2025e": 600.0
+      },
+      "raw_values": {
+        "2021": "650",
+        "2022": "980",
+        "2023": "620",
+        "2024": "690",
+        "2025e": "600"
+      }
+    },
+    {
+      "label": "Employment, mine and mill, number",
+      "footnote": null,
+      "section": "Employment, mine and mill, number",
+      "subsection": null,
+      "values": {
+        "2021": 900.0,
+        "2022": 900.0,
+        "2023": 900.0,
+        "2024": 900.0,
+        "2025e": 900.0
+      },
+      "raw_values": {
+        "2021": "900",
+        "2022": "900",
+        "2023": "900",
+        "2024": "900",
+        "2025e": "900"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 93.0,
+        "2022": 92.0,
+        "2023": 93.0,
+        "2024": 94.0,
+        "2025e": 92.0
+      },
+      "raw_values": {
+        "2021": "93",
+        "2022": "92",
+        "2023": "93",
+        "2024": "94",
+        "2025e": "92"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "All products",
+      "unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+      "values": {
+        "2021": 1120.0,
+        "2022": 1790.0,
+        "2023": 1250.0,
+        "2024": 1150.0,
+        "2025e": 1200.0
+      },
+      "raw_values": {
+        "2021": "1120",
+        "2022": "1790",
+        "2023": "1250",
+        "2024": "1150",
+        "2025e": "1200"
+      }
+    },
+    {
+      "form": "MOP",
+      "unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+      "values": {
+        "2021": 650.0,
+        "2022": 980.0,
+        "2023": 620.0,
+        "2024": 690.0,
+        "2025e": 600.0
+      },
+      "raw_values": {
+        "2021": "650",
+        "2022": "980",
+        "2023": "620",
+        "2024": "690",
+        "2025e": "600"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 5600.0,
+  "exports_total_latest": 170.0,
+  "apparent_consumption_latest": 5900.0,
+  "price_usd_per_pound_latest": 1200.0,
+  "net_import_reliance_pct_latest": 92.0,
+  "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
+  "import_sources_flat": [
+    {
+      "country": "Canada",
+      "share_pct": 79.0
+    },
+    {
+      "country": "Russia",
+      "share_pct": 12.0
+    },
+    {
+      "country": "Israel",
+      "share_pct": 3.0
+    },
+    {
+      "country": "other",
+      "share_pct": 6.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Canada",
+          "share_pct": 79.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 12.0
+        },
+        {
+          "country": "Israel",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 410.0,
+      "production_latest_year": 500.0,
+      "capacity": null,
+      "reserves": 970000.0,
+      "production_prev_raw": "410",
+      "production_latest_raw": "500",
+      "reserves_raw": "970000",
+      "note": "footnote 1",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Belarus",
+      "production_prev_year": 5000.0,
+      "production_latest_year": 6000.0,
+      "capacity": null,
+      "reserves": 3300000.0,
+      "production_prev_raw": "5000",
+      "production_latest_raw": "6000",
+      "reserves_raw": "3300000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 331.0,
+      "production_latest_year": 300.0,
+      "capacity": null,
+      "reserves": 10000.0,
+      "production_prev_raw": "331",
+      "production_latest_raw": "300",
+      "reserves_raw": "10000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Canada",
+      "production_prev_year": 14400.0,
+      "production_latest_year": 15000.0,
+      "capacity": null,
+      "reserves": 4500000.0,
+      "production_prev_raw": "14400",
+      "production_latest_raw": "15000",
+      "reserves_raw": "4500000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Chile",
+      "production_prev_year": 564.0,
+      "production_latest_year": 600.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "564",
+      "production_latest_raw": "600",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China",
+      "production_prev_year": 6300.0,
+      "production_latest_year": 6300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "6300",
+      "production_latest_raw": "6300",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 2500.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2500",
+      "production_latest_raw": "3000",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Israel",
+      "production_prev_year": 2260.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2260",
+      "production_latest_raw": "2000",
+      "reserves_raw": "NA",
+      "note": "footnote 6",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Jordan",
+      "production_prev_year": 1730.0,
+      "production_latest_year": 1800.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1730",
+      "production_latest_raw": "1800",
+      "reserves_raw": "NA",
+      "note": "footnote 6",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Laos",
+      "production_prev_year": 2400.0,
+      "production_latest_year": 2400.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "2400",
+      "production_latest_raw": "2400",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 10000.0,
+      "production_latest_year": 10000.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "10000",
+      "production_latest_raw": "10000",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Spain",
+      "production_prev_year": 489.0,
+      "production_latest_year": 450.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "489",
+      "production_latest_raw": "450",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 350.0,
+      "production_latest_year": 350.0,
+      "capacity": null,
+      "reserves": 1500000.0,
+      "production_prev_raw": "350",
+      "production_latest_raw": "350",
+      "reserves_raw": "1500000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 46700.0,
+      "production_latest_year": 49000.0,
+      "capacity": null,
+      "reserves": 10000000.0,
+      "production_prev_raw": "46700",
+      "production_latest_raw": "49000",
+      "reserves_raw": ">10,000,000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available.",
+    "1": "Data are rounded to no more than two significant digits to avoid disclosing company proprietary data.",
+    "2": "Defined as sales + imports – exports.",
+    "3": "Includes MOP, SOP, and SOPM. Does not include other chemical compounds that contain potassium.",
+    "4": "Defined as imports – exports.",
+    "5": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "6": "Israel and Jordan recover potash from the Dead Sea, which contains nearly 2 billion tons of potassium chloride."
+  }
+}

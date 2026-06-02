@@ -11,6 +11,8 @@ Advisory sweep log per CLAUDE.md §Security.
 
 No `pip install` was run during initial scaffolding — both packages were already present on the user's machine. Refresh sweep before adding any new dependency.
 
+**2026-06-02** — added 10 commodities (2025 Critical Minerals List) + parser fixes. No new dependencies introduced (same `pymupdf` + `pydantic`); no `pip install` run, so no advisory sweep was required this session.
+
 ## Secrets
 
 - No API keys are required by this project (USGS publishes MCS PDFs without auth).

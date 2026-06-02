@@ -1,0 +1,558 @@
+{
+  "slug": "phosphate",
+  "name": "Phosphate rock",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-phosphate.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "6aec496668eb9d9e5483a2ce23caa28f94a1201b64b75453965c35879200a4fc",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons, marketable phosphate rock, unless otherwise specified)",
+  "price_unit_note": "Price, average value, f.o.b. mine, dollars per metric ton",
+  "price_footnote_text": null,
+  "domestic_use_summary": "In 2025, phosphate rock ore was mined by five companies at 10 mines in four States and processed into an estimated 20 million tons of marketable product, valued at $1.9 billion, free on board (f.o.b.) mine. Phosphate rock was produced in Florida, Idaho, North Carolina, and Utah. Marketable product refers to beneficiated phosphate rock with phosphorus pentoxide (PO) content suitable for phosphoric acid or elemental phosphorus production. More than 95% of the phosphate rock mined in the United States was used to manufacture wet-process phosphoric acid and superphosphoric acid, which were used as intermediate feedstocks in the manufacture of granular and liquid ammonium phosphate fertilizers and animal feed supplements. About 25% of the wet-process phosphoric acid produced was exported in the form of upgraded granular diammonium phosphate (DAP), monoammonium phosphate (MAP) fertilizer, merchant-grade phosphoric acid, and other phosphate fertilizer products. The balance of phosphate rock mined was for the manufacture of elemental phosphorus, which was used to produce phosphorus compounds for industrial applications, primarily glyphosate herbicide.",
+  "events_trends_summary": "U.S. apparent consumption of phosphate rock in 2025 was estimated to be 7% lower than that in 2024, owing to a decrease in the production of phosphoric acid. Phosphate rock production has been about 20 million tons over the past several years as producers in Florida contend with decreasing reserves and lower PO content. This has resulted in an increase in imports over the same period. Global production of phosphate rock was estimated to be 5% higher than that in 2024, with China, Morocco, the United States, and Russia, in descending order of production, remaining the leading producers. World consumption of PO contained in fertilizers was estimated to have been 47.8 million tons in 2025 compared with 47.1 million tons in 2024. World consumption of PO in fertilizers was projected to increase to 51.5 million tons by 2029. The leading regions for growth were expected to be Asia and South America. In October 2025, the U.S. Bureau of Land Management approved a new phosphate rock mine in Caribou County, ID. The new mine will replace an existing mine when that mine is depleted within the next decade. Global phosphate production capacity, in terms of POcontent, was projected to increase to 71.7 million tons by 2029 compared with 63.7 million tons in 2025. Capacity expansions to phosphate rock production that were expected to be completed by 2028 were ongoing in Brazil, Kazakhstan, Mexico, Morocco, and Russia. Significant new mining projects that were planned to be completed after 2028 were under development in Canada, Congo (Brazzaville), Guinea-Bissau, and Senegal. PHOSPHATE ROCK U.S. Geological Survey, Mineral Commodity Summaries, February 2026 On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+  "world_resources_summary": "Some world reserves were reported only in terms of ore tonnage and grade. Phosphate rock resources occur principally as sedimentary marine phosphorites. The largest sedimentary deposits are found in northern Africa, the Middle East, China, and the United States. Significant igneous occurrences are found in Brazil, Canada, Finland, Russia, and South Africa. Large phosphate resources have been identified on the continental shelves and on seamounts in the Atlantic Ocean and the Pacific Ocean. World resources of phosphate rock are more than 300 billion tons. There are no imminent shortages of phosphate rock.",
+  "substitutes_summary": "There are no substitutes for phosphorus in agriculture.",
+  "recycling_summary": "None.",
+  "salient_stats": [
+    {
+      "label": "Production, marketable",
+      "footnote": null,
+      "section": "Production, marketable",
+      "subsection": null,
+      "values": {
+        "2021": 21600.0,
+        "2022": 19800.0,
+        "2023": 19600.0,
+        "2024": 19400.0,
+        "2025e": 20000.0
+      },
+      "raw_values": {
+        "2021": "21600",
+        "2022": "19800",
+        "2023": "19600",
+        "2024": "19400",
+        "2025e": "20000"
+      }
+    },
+    {
+      "label": "Sold or used by producers",
+      "footnote": null,
+      "section": "Production, marketable",
+      "subsection": null,
+      "values": {
+        "2021": 21900.0,
+        "2022": 19800.0,
+        "2023": 20000.0,
+        "2024": 19100.0,
+        "2025e": 18000.0
+      },
+      "raw_values": {
+        "2021": "21900",
+        "2022": "19800",
+        "2023": "20000",
+        "2024": "19100",
+        "2025e": "18000"
+      }
+    },
+    {
+      "label": "Imports for consumption",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 2460.0,
+        "2022": 2500.0,
+        "2023": 2590.0,
+        "2024": 3390.0,
+        "2025e": 3400.0
+      },
+      "raw_values": {
+        "2021": "2460",
+        "2022": "2500",
+        "2023": "2590",
+        "2024": "3390",
+        "2025e": "3400"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "1",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 24400.0,
+        "2022": 22300.0,
+        "2023": 22600.0,
+        "2024": 22500.0,
+        "2025e": 21000.0
+      },
+      "raw_values": {
+        "2021": "24400",
+        "2022": "22300",
+        "2023": "22600",
+        "2024": "22500",
+        "2025e": "21000"
+      }
+    },
+    {
+      "label": "Price, average value, f.o.b. mine, dollars per metric ton",
+      "footnote": null,
+      "section": "Price, average value, f.o.b. mine, dollars per metric ton",
+      "subsection": null,
+      "values": {
+        "2021": 83.0,
+        "2022": 99.0,
+        "2023": 101.0,
+        "2024": 96.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "83",
+        "2022": "99",
+        "2023": "101",
+        "2024": "96",
+        "2025e": "100"
+      }
+    },
+    {
+      "label": "Stocks, producer, yearend",
+      "footnote": null,
+      "section": "Stocks, producer, yearend",
+      "subsection": null,
+      "values": {
+        "2021": 10700.0,
+        "2022": 10600.0,
+        "2023": 9550.0,
+        "2024": 8740.0,
+        "2025e": 8400.0
+      },
+      "raw_values": {
+        "2021": "10700",
+        "2022": "10600",
+        "2023": "9550",
+        "2024": "8740",
+        "2025e": "8400"
+      }
+    },
+    {
+      "label": "Employment, mine and beneficiation plant, number",
+      "footnote": null,
+      "section": "Employment, mine and beneficiation plant, number",
+      "subsection": null,
+      "values": {
+        "2021": 2000.0,
+        "2022": 1900.0,
+        "2023": 2000.0,
+        "2024": 2000.0,
+        "2025e": 1900.0
+      },
+      "raw_values": {
+        "2021": "2000",
+        "2022": "1900",
+        "2023": "2000",
+        "2024": "2000",
+        "2025e": "1900"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 11.0,
+        "2022": 12.0,
+        "2023": 16.0,
+        "2024": 18.0,
+        "2025e": 16.0
+      },
+      "raw_values": {
+        "2021": "11",
+        "2022": "12",
+        "2023": "16",
+        "2024": "18",
+        "2025e": "16"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average value, f.o.b. mine, dollars per metric ton",
+      "unit_note": "Price, average value, f.o.b. mine, dollars per metric ton",
+      "values": {
+        "2021": 83.0,
+        "2022": 99.0,
+        "2023": 101.0,
+        "2024": 96.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "83",
+        "2022": "99",
+        "2023": "101",
+        "2024": "96",
+        "2025e": "100"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 3400.0,
+  "exports_total_latest": null,
+  "apparent_consumption_latest": 21000.0,
+  "price_usd_per_pound_latest": 100.0,
+  "net_import_reliance_pct_latest": 16.0,
+  "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
+  "import_sources_flat": [
+    {
+      "country": "Peru",
+      "share_pct": 99.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Peru",
+          "share_pct": 99.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": 19400.0,
+      "production_latest_year": 20000.0,
+      "capacity": null,
+      "reserves": 1000000.0,
+      "production_prev_raw": "19400",
+      "production_latest_raw": "20000",
+      "reserves_raw": "1000000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Algeria",
+      "production_prev_year": 2000.0,
+      "production_latest_year": 2000.0,
+      "capacity": null,
+      "reserves": 2200000.0,
+      "production_prev_raw": "2000",
+      "production_latest_raw": "2000",
+      "reserves_raw": "2200000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Australia",
+      "production_prev_year": 2500.0,
+      "production_latest_year": 2500.0,
+      "capacity": null,
+      "reserves": 800000.0,
+      "production_prev_raw": "2500",
+      "production_latest_raw": "2500",
+      "reserves_raw": "800000",
+      "note": "footnote 5",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 5300.0,
+      "production_latest_year": 5000.0,
+      "capacity": null,
+      "reserves": 1600000.0,
+      "production_prev_raw": "5300",
+      "production_latest_raw": "5000",
+      "reserves_raw": "1600000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China",
+      "production_prev_year": 105000.0,
+      "production_latest_year": 110000.0,
+      "capacity": null,
+      "reserves": 3400000.0,
+      "production_prev_raw": "105000",
+      "production_latest_raw": "110000",
+      "reserves_raw": "3400000",
+      "note": "footnote 6",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Egypt",
+      "production_prev_year": 5300.0,
+      "production_latest_year": 5500.0,
+      "capacity": null,
+      "reserves": 2800000.0,
+      "production_prev_raw": "5300",
+      "production_latest_raw": "5500",
+      "reserves_raw": "2800000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Finland",
+      "production_prev_year": 974.0,
+      "production_latest_year": 980.0,
+      "capacity": null,
+      "reserves": 1000000.0,
+      "production_prev_raw": "974",
+      "production_latest_raw": "980",
+      "reserves_raw": "1000000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "India",
+      "production_prev_year": 1700.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": 31000.0,
+      "production_prev_raw": "1700",
+      "production_latest_raw": "1500",
+      "reserves_raw": "31000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Israel",
+      "production_prev_year": 2380.0,
+      "production_latest_year": 2400.0,
+      "capacity": null,
+      "reserves": 60000.0,
+      "production_prev_raw": "2380",
+      "production_latest_raw": "2400",
+      "reserves_raw": "60000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Jordan",
+      "production_prev_year": 11500.0,
+      "production_latest_year": 12000.0,
+      "capacity": null,
+      "reserves": 820000.0,
+      "production_prev_raw": "11500",
+      "production_latest_raw": "12000",
+      "reserves_raw": "820000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Kazakhstan",
+      "production_prev_year": 1700.0,
+      "production_latest_year": 1900.0,
+      "capacity": null,
+      "reserves": 260000.0,
+      "production_prev_raw": "1700",
+      "production_latest_raw": "1900",
+      "reserves_raw": "260000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 365.0,
+      "production_latest_year": 450.0,
+      "capacity": null,
+      "reserves": 30000.0,
+      "production_prev_raw": "365",
+      "production_latest_raw": "450",
+      "reserves_raw": "30000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Morocco",
+      "production_prev_year": 35300.0,
+      "production_latest_year": 36000.0,
+      "capacity": null,
+      "reserves": 50000000.0,
+      "production_prev_raw": "35300",
+      "production_latest_raw": "36000",
+      "reserves_raw": "50000000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Peru",
+      "production_prev_year": 4800.0,
+      "production_latest_year": 4800.0,
+      "capacity": null,
+      "reserves": 210000.0,
+      "production_prev_raw": "4800",
+      "production_latest_raw": "4800",
+      "reserves_raw": "210000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Russia",
+      "production_prev_year": 14400.0,
+      "production_latest_year": 14000.0,
+      "capacity": null,
+      "reserves": 2400000.0,
+      "production_prev_raw": "14400",
+      "production_latest_raw": "14000",
+      "reserves_raw": "2400000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Saudi Arabia",
+      "production_prev_year": 10000.0,
+      "production_latest_year": 10000.0,
+      "capacity": null,
+      "reserves": 1000000.0,
+      "production_prev_raw": "10000",
+      "production_latest_raw": "10000",
+      "reserves_raw": "1000000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Senegal",
+      "production_prev_year": 2800.0,
+      "production_latest_year": 2800.0,
+      "capacity": null,
+      "reserves": 50000.0,
+      "production_prev_raw": "2800",
+      "production_latest_raw": "2800",
+      "reserves_raw": "50000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 2220.0,
+      "production_latest_year": 2200.0,
+      "capacity": null,
+      "reserves": 1500000.0,
+      "production_prev_raw": "2220",
+      "production_latest_raw": "2200",
+      "reserves_raw": "1500000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Syria",
+      "production_prev_year": 800.0,
+      "production_latest_year": 800.0,
+      "capacity": null,
+      "reserves": 250000.0,
+      "production_prev_raw": "800",
+      "production_latest_raw": "800",
+      "reserves_raw": "250000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Togo",
+      "production_prev_year": 1560.0,
+      "production_latest_year": 1600.0,
+      "capacity": null,
+      "reserves": 30000.0,
+      "production_prev_raw": "1560",
+      "production_latest_raw": "1600",
+      "reserves_raw": "30000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Tunisia",
+      "production_prev_year": 3280.0,
+      "production_latest_year": 3300.0,
+      "capacity": null,
+      "reserves": 2500000.0,
+      "production_prev_raw": "3280",
+      "production_latest_raw": "3300",
+      "reserves_raw": "2500000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Turkey",
+      "production_prev_year": 1220.0,
+      "production_latest_year": 1200.0,
+      "capacity": null,
+      "reserves": 71000.0,
+      "production_prev_raw": "1220",
+      "production_latest_raw": "1200",
+      "reserves_raw": "71000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Uzbekistan",
+      "production_prev_year": 950.0,
+      "production_latest_year": 950.0,
+      "capacity": null,
+      "reserves": 100000.0,
+      "production_prev_raw": "950",
+      "production_latest_raw": "950",
+      "reserves_raw": "100000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 3000.0,
+      "production_latest_year": 3000.0,
+      "capacity": null,
+      "reserves": 30000.0,
+      "production_prev_raw": "3000",
+      "production_latest_raw": "3000",
+      "reserves_raw": "30000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 769.0,
+      "production_latest_year": 770.0,
+      "capacity": null,
+      "reserves": 800000.0,
+      "production_prev_raw": "769",
+      "production_latest_raw": "770",
+      "reserves_raw": "800000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 239000.0,
+      "production_latest_year": 250000.0,
+      "capacity": null,
+      "reserves": 73000000.0,
+      "production_prev_raw": "239000",
+      "production_latest_raw": "250000",
+      "reserves_raw": "73000000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated.",
+    "1": "Defined as phosphate rock sold or used by producers + imports. U.S. producers stopped exporting phosphate rock in 2003.",
+    "2": "Marketable phosphate rock, weighted value, all grades.",
+    "3": "Defined as imports ± adjustments for industry stock changes.",
+    "4": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "5": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 120 million tons.",
+    "6": "Production data for large mines only, as reported by the National Bureau of Statistics of China."
+  }
+}

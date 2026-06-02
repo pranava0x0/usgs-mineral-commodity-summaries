@@ -90,10 +90,18 @@ ELEMENT_PRODUCTION_BLOCK: dict[str, str | None] = {
     "niobium": "mine", "rare-earths": "mine", "silver": "mine", "tantalum": "mine",
     "tin": "mine", "tungsten": "mine", "vanadium": "mine", "zinc": "mine",
     "zirconium-and-hafnium": "mine",
+    # Added 2026-06-02 with the 2025-list commodities. All carry a standard
+    # "<X> Mine Production and Reserves" world table → mine + reserves.
+    "boron": "mine", "lead": "mine", "phosphate": "mine", "potash": "mine",
+    "barite": "mine", "beryllium": "mine", "fluorspar": "mine",
     # Refinery + Capacity
     "bismuth": "refinery", "indium": "refinery", "tellurium": "refinery",
     "germanium": "refinery", "gallium": "refinery",
     "iron-and-steel": "refinery",
+    # Arsenic's table is "World Production and Capacity" (no reserves); arsenic
+    # trioxide is a smelter-stage product, so production → refinery + the
+    # capacity column → capacity block.
+    "arsenic": "refinery",
     # Grouped parent — reserves only (per BACKLOG); PGM aliases handled by alias inheritance.
     "platinum-group-metals": "mine",
     # No per-country world table
@@ -102,6 +110,8 @@ ELEMENT_PRODUCTION_BLOCK: dict[str, str | None] = {
     "titanium": None,
     "abrasives": None,
     "scandium": None,
+    "cesium": None,
+    "rubidium": None,
 }
 
 

@@ -166,3 +166,45 @@ Bug log per CLAUDE.md §Issue tracking. One entry per defect; record root cause 
 ### Still open (salient-stats label merges — separate from #19)
 - **Tantalum** — a Government-Stockpile `NA` cell merges onto the next label: salient row `"NA Consumption, apparent"` (should be stockpile `NA` + apparent consumption 890). In `_parse_salient_stats` label-continuation.
 - **Rhenium** — an Employment value `"Small"` prefixes the wrapped NIR label: `"Small Net import reliance as a percentage of apparent consumption"`. Same root cause class. Both deferred this pass (salient parser, higher blast radius than the import-sources fix).
+
+## 2026-06-02 — adding the 2025-list commodities (parser fixes)
+
+Found while adding 10 commodities to align with the 2025 USGS Critical Minerals
+List (boron, lead, phosphate, potash + arsenic, barite, beryllium, cesium,
+fluorspar, rubidium; see BACKLOG §"New ideas" #1b). The generic parser handled
+all 10 sheets; these four small fixes plus a provenance fix landed alongside.
+
+### #20 — `XX` ("Not applicable") sentinel not recognized
+- **Module**: `src/parser.py` (`_to_float`, `_looks_like_value`).
+- **Symptom**: boron/arsenic use the USGS `XX` = "Not applicable" cell sentinel; the parser logged `could not coerce token to float: 'XX'` and treated it as junk.
+- **Root cause**: Code bug — only `NA`/`—`/`W`/`E`/`>N` were recognized; `XX` (semantically distinct from `NA` = "not available") was missing.
+- **Fix**: added `NOT_APPLICABLE = {"XX"}`; `_to_float("XX") -> (None, "XX")` and `_looks_like_value` accepts it. Raw `XX` preserved verbatim per the project's sentinel convention.
+- **Status**: Fixed. Regression test: `tests/test_new_commodities.py::XXSentinelTests`.
+
+### #21 — Bounded import-source shares (`>99%` / `<1%`) dropped the whole entry
+- **Module**: `src/parser.py` (`_COUNTRY_SHARE`).
+- **Symptom** (found while verifying phosphate): phosphate's `Import Sources: Peru, >99%; other <1%` parsed to **zero** countries. The same bug silently dropped **copper** (`Copper content of ore and concentrate: Canada, >99%`) and **manganese** (`…; and other, <1%`).
+- **Root cause**: Code bug — the percentage capture required bare digits before `%`; a leading `>`/`<` made the entry fail to match, so it was discarded.
+- **Fix**: allow an optional `[<>~]` bound before the percentage. The numeric part is kept (`share_pct` is a float, no raw form); the bound is dropped, mirroring `_to_float(">95") -> 95.0`. Recovers Peru 99% (phosphate), Canada 99% (copper), other 1% (manganese).
+- **Status**: Fixed. Regression test: `tests/test_import_sources.py::test_bounded_share` + `PhosphateImportSourceFixTests`.
+
+### #22 — Wrapped unit sub-header mis-banded as world-table rows
+- **Module**: `src/parser.py` (`_parse_world_production`, new `_world_cell_has_data`).
+- **Symptom**: arsenic's world table is titled `World Production and Capacity:` with a wrapped parenthetical unit `(arsenic trioxide, / gross weight)`. Those two lines became junk "country" rows (`"(arsenic trioxide,"`, `"gross weight)"`) in `world_production`. Dropped from the CSV by `map_country`, but polluted the JSON.
+- **Root cause**: Code bug — any banded line became a row; a line with no value cells still produced a row whose label text landed in `production_prev_raw`.
+- **Fix**: skip a candidate row that carries no real data — no number and no recognized sentinel (`— / NA / W / E / XX / >N`) in any cell (`_world_cell_has_data`). A real country always has a value or sentinel cell, so no actual data is dropped (verified: 0 world-row-count changes across all 33 existing sheets).
+- **Status**: Fixed. Regression test: `tests/test_new_commodities.py::ArsenicWorldRowGuardTests`.
+
+### #23 — Comma-qualified country labels dropped from the CSV
+- **Module**: `src/countries.py` (`map_country`).
+- **Symptom**: boron's world table tags every country with its borate form (`Turkey, refined borates`, `Bolivia, ulexite`, `China, boric oxide equivalent`, …). `map_country` returned None for these, so boron's entire per-country **mine-production** block was empty in the CSV (reserves/imports mapped fine).
+- **Root cause**: Code bug — the fallback only stripped trailing *parenthetical* qualifiers (`Sweden (concentrate)`), not comma-delimited ones.
+- **Fix**: after a full-string lookup miss, also strip the part after the first comma and retry. Safe because (a) the full lookup runs first, so intrinsic-comma names (`Korea, Republic of`, `Congo (Kinshasa)`) match before the fallback, and (b) no canonical entry contains a comma. Recovers boron's Turkey 1,500 / China 230 / etc. Verified 0 changes to existing elements' CSV rows.
+- **Status**: Fixed. Also added `arsenic`/`boron`/`lead`/`phosphate`/`potash`/`barite`/`beryllium`/`fluorspar` (+ `cesium`/`rubidium` = None) to `csv_export.ELEMENT_PRODUCTION_BLOCK` so their production lands in the mine/refinery block (a missing entry silently drops production — see BACKLOG follow-up). Regression test: `tests/test_new_commodities.py` block assertions.
+
+### #24 — `captured_at` re-stamped to today on every re-parse
+- **Module**: `src/parser.py` (stamp), `src/pipeline.py` (fix).
+- **Symptom**: a full `--audit` re-run rewrote `captured_at` to today for all 33 existing elements (whose source PDFs are byte-identical since 2026-05-19), churning all 66 audit snapshots and misstating provenance.
+- **Root cause**: Code bug — `parser.parse_element_pdf` sets `captured_at=date.today()` unconditionally; nothing preserved the original capture date for unchanged bytes.
+- **Fix**: `pipeline._load_prior_capture_map()` reads the committed bundle; `_process_primary` restores `captured_at` for any record whose `pdf_sha256` is unchanged, **before** the audit snapshot renders (aliases inherit via `_make_alias`). A genuinely reissued PDF (new SHA via `--refresh`) correctly re-stamps to today. captured_at now means "first date we saw these exact bytes" (CLAUDE.md §Data). Existing snapshots no longer churn; the 10 new commodities stamp 2026-06-02.
+- **Status**: Fixed.

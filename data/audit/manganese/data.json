@@ -427,6 +427,10 @@
         {
           "country": "Mexico",
           "share_pct": 12.0
+        },
+        {
+          "country": "other",
+          "share_pct": 1.0
         }
       ]
     },

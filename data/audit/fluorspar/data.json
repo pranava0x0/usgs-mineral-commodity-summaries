@@ -1,0 +1,597 @@
+{
+  "slug": "fluorspar",
+  "name": "Fluorspar",
+  "symbol": null,
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-fluorspar.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "7cb5aa4a162fadf72f77aa60ec9f2adb38e83e548d797ad6393e9c015c6822eb",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons unless otherwise specified)",
+  "price_unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+  "price_footnote_text": null,
+  "domestic_use_summary": "Significant U.S. fluorspar (calcium fluoride, CaF) mine production has not been reported since 1995. In 2025, one company likely processed and sold fluorspar from stockpiles produced as a byproduct of its limestone quarrying operation in Cave-In-Rock, IL; however, production data were not available. A second company continued construction of a fluorspar mine and lumps-processing plant in Utah, with completion anticipated by yearend. Excluding sales from stockpiled fluorspar, the United States was 100% net import reliant for fluorspar. U.S. fluorspar consumption was satisfied mostly by imports. Domestically, CaF was used in the production of anhydrous hydrogen fluoride (HF) in Louisiana and Texas and was by far the leading use for acid-grade fluorspar. Aqueous HF is the primary feedstock for the manufacture of virtually all fluorine-bearing chemicals, particularly refrigerants and fluoropolymers, and chemicals used in the processing of primary aluminum and uranium. HF was also used as a catalyst in the petrochemical industry and essential in the cleaning and etching process during semiconductor manufacturing. Other uses of fluorspar were in cement production, in enamels, as a flux in steelmaking, in glass manufacture, in iron and steel casting, and in welding rod coatings. The U.S. Department of Energy continued to produce aqueous HF as a byproduct of the conversion of depleted uranium hexafluoride to depleted uranium oxide at plants in Paducah, KY, and Portsmouth, OH; the aqueous HF was sold into the commercial market. One company in Aurora, NC, produced HF from fluorosilicic acid (FSA). In 2025, an estimated 45,000 tons of FSA, equivalent to about 73,000 tons of fluorspar grading 100% CaF, was recovered from three phosphoric acid plants that processed phosphate rock.",
+  "events_trends_summary": "Global mine production of fluorspar was estimated to have decreased by 1% to 10 million tons in 2025. The supply of fluorspar in China continued to be constrained by rectification measures on fluorspar mining, with some mines suspending production for safety inspections. As such, China’s imports of fluorspar in the first half of 2025 increased by 48% to 856,000 tons compared with those in the same period in 2024, with 86% of imports sourced from Mongolia. In Canada, a fluorspar mine that was previously idled in 2022, restarted production and made its first shipment of acid-grade fluorspar at the end of August. The company anticipated ramping up production to 200,000 tons per year. In China, a fluorspar mine in Xinjiang began operations in September, with a projected annual production of 300,000 tons of acid-grade fluorspar. Several other fluorspar mines were in development or in the process of reopening in Australia, Canada, Germany, Italy, Kenya, Mongolia, Mozambique, and the United States.",
+  "world_resources_summary": "Large quantities of fluorine are present in phosphate rock. Current U.S. reserves of phosphate rock are estimated to be 1 billion tons, containing about 72 million tons of 100% fluorspar equivalent assuming an average fluorine content of 3.5% in the phosphate rock. World reserves of phosphate rock are estimated to be 74 billion tons, containing about 5 billion tons of 100% fluorspar equivalent.",
+  "substitutes_summary": "FSA has been used as an alternative to fluorspar in the production of AlF and HF. Aluminum smelting dross, borax, calcium chloride, iron oxides, manganese ore, silica sand, and titanium dioxide have been used as substitutes for fluorspar fluxes.",
+  "recycling_summary": "Synthetic fluorspar may be produced from neutralization of waste in the enrichment of uranium, petroleum alkylation, and stainless-steel pickling; however, undesirable impurities constrain its use. Primary aluminum producers recycle HF and fluorides from smelting operations.",
+  "salient_stats": [
+    {
+      "label": "Finished, metallurgical grade",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "NA",
+        "2022": "NA",
+        "2023": "NA",
+        "2024": "NA",
+        "2025e": "NA"
+      }
+    },
+    {
+      "label": "Fluorosilicic acid from phosphate rock",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": 40.0,
+        "2022": 43.0,
+        "2023": 43.0,
+        "2024": 45.0,
+        "2025e": 45.0
+      },
+      "raw_values": {
+        "2021": "40",
+        "2022": "43",
+        "2023": "43",
+        "2024": "45",
+        "2025e": "45"
+      }
+    },
+    {
+      "label": "Acid grade",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 391.0,
+        "2022": 448.0,
+        "2023": 378.0,
+        "2024": 372.0,
+        "2025e": 360.0
+      },
+      "raw_values": {
+        "2021": "391",
+        "2022": "448",
+        "2023": "378",
+        "2024": "372",
+        "2025e": "360"
+      }
+    },
+    {
+      "label": "Metallurgical grade",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 59.0,
+        "2022": 84.0,
+        "2023": 34.0,
+        "2024": 31.0,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "59",
+        "2022": "84",
+        "2023": "34",
+        "2024": "31",
+        "2025e": "20"
+      }
+    },
+    {
+      "label": "Total fluorspar imports",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 451.0,
+        "2022": 532.0,
+        "2023": 412.0,
+        "2024": 403.0,
+        "2025e": 380.0
+      },
+      "raw_values": {
+        "2021": "451",
+        "2022": "532",
+        "2023": "412",
+        "2024": "403",
+        "2025e": "380"
+      }
+    },
+    {
+      "label": "Hydrofluoric acid",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 103.0,
+        "2022": 99.0,
+        "2023": 87.0,
+        "2024": 69.0,
+        "2025e": 76.0
+      },
+      "raw_values": {
+        "2021": "103",
+        "2022": "99",
+        "2023": "87",
+        "2024": "69",
+        "2025e": "76"
+      }
+    },
+    {
+      "label": "Aluminum fluoride",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 28.0,
+        "2022": 21.0,
+        "2023": 25.0,
+        "2024": 22.0,
+        "2025e": 20.0
+      },
+      "raw_values": {
+        "2021": "28",
+        "2022": "21",
+        "2023": "25",
+        "2024": "22",
+        "2025e": "20"
+      }
+    },
+    {
+      "label": "Cryolite",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 42.0,
+        "2022": 28.0,
+        "2023": 32.0,
+        "2024": 22.0,
+        "2025e": 21.0
+      },
+      "raw_values": {
+        "2021": "42",
+        "2022": "28",
+        "2023": "32",
+        "2024": "22",
+        "2025e": "21"
+      }
+    },
+    {
+      "label": "Exports, fluorspar, all grades",
+      "footnote": "1",
+      "section": "Exports, fluorspar, all grades",
+      "subsection": null,
+      "values": {
+        "2021": 15.0,
+        "2022": 24.0,
+        "2023": 20.0,
+        "2024": 14.0,
+        "2025e": 7.0
+      },
+      "raw_values": {
+        "2021": "15",
+        "2022": "24",
+        "2023": "20",
+        "2024": "14",
+        "2025e": "7"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "2",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": 436.0,
+        "2022": 508.0,
+        "2023": 392.0,
+        "2024": 390.0,
+        "2025e": 370.0
+      },
+      "raw_values": {
+        "2021": "436",
+        "2022": "508",
+        "2023": "392",
+        "2024": "390",
+        "2025e": "370"
+      }
+    },
+    {
+      "label": "Acid grade",
+      "footnote": null,
+      "section": "Price, average unit value of imports, cost, insurance, and freight,",
+      "subsection": "dollars per metric ton",
+      "values": {
+        "2021": 322.0,
+        "2022": 387.0,
+        "2023": 428.0,
+        "2024": 464.0,
+        "2025e": 470.0
+      },
+      "raw_values": {
+        "2021": "322",
+        "2022": "387",
+        "2023": "428",
+        "2024": "464",
+        "2025e": "470"
+      }
+    },
+    {
+      "label": "Metallurgical grade",
+      "footnote": null,
+      "section": "Price, average unit value of imports, cost, insurance, and freight,",
+      "subsection": "dollars per metric ton",
+      "values": {
+        "2021": 151.0,
+        "2022": 206.0,
+        "2023": 338.0,
+        "2024": 336.0,
+        "2025e": 400.0
+      },
+      "raw_values": {
+        "2021": "151",
+        "2022": "206",
+        "2023": "338",
+        "2024": "336",
+        "2025e": "400"
+      }
+    },
+    {
+      "label": "Employment, mine, number",
+      "footnote": null,
+      "section": "Employment, mine, number",
+      "subsection": null,
+      "values": {
+        "2021": 17.0,
+        "2022": 15.0,
+        "2023": 16.0,
+        "2024": 15.0,
+        "2025e": 15.0
+      },
+      "raw_values": {
+        "2021": "17",
+        "2022": "15",
+        "2023": "16",
+        "2024": "15",
+        "2025e": "15"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": 100.0,
+        "2022": 100.0,
+        "2023": 100.0,
+        "2024": 100.0,
+        "2025e": 100.0
+      },
+      "raw_values": {
+        "2021": "100",
+        "2022": "100",
+        "2023": "100",
+        "2024": "100",
+        "2025e": "100"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Acid grade",
+      "unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+      "values": {
+        "2021": 322.0,
+        "2022": 387.0,
+        "2023": 428.0,
+        "2024": 464.0,
+        "2025e": 470.0
+      },
+      "raw_values": {
+        "2021": "322",
+        "2022": "387",
+        "2023": "428",
+        "2024": "464",
+        "2025e": "470"
+      }
+    },
+    {
+      "form": "Metallurgical grade",
+      "unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+      "values": {
+        "2021": 151.0,
+        "2022": 206.0,
+        "2023": 338.0,
+        "2024": 336.0,
+        "2025e": 400.0
+      },
+      "raw_values": {
+        "2021": "151",
+        "2022": "206",
+        "2023": "338",
+        "2024": "336",
+        "2025e": "400"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 877.0,
+  "exports_total_latest": 7.0,
+  "apparent_consumption_latest": 370.0,
+  "price_usd_per_pound_latest": 470.0,
+  "net_import_reliance_pct_latest": 100.0,
+  "latest_year_sentinels": {},
+  "stockpile_fy2025_potential_acquisitions": null,
+  "import_sources_flat": [
+    {
+      "country": "Mexico",
+      "share_pct": 64.0
+    },
+    {
+      "country": "Vietnam",
+      "share_pct": 12.0
+    },
+    {
+      "country": "China",
+      "share_pct": 10.0
+    },
+    {
+      "country": "South Africa",
+      "share_pct": 9.0
+    },
+    {
+      "country": "other",
+      "share_pct": 5.0
+    }
+  ],
+  "import_sources_by_category": [
+    {
+      "category": null,
+      "countries": [
+        {
+          "country": "Mexico",
+          "share_pct": 64.0
+        },
+        {
+          "country": "Vietnam",
+          "share_pct": 12.0
+        },
+        {
+          "country": "China",
+          "share_pct": 10.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Mine Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "NA",
+      "production_latest_raw": "NA",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Brazil",
+      "production_prev_year": 85.0,
+      "production_latest_year": 100.0,
+      "capacity": null,
+      "reserves": 2500.0,
+      "production_prev_raw": "85",
+      "production_latest_raw": "100",
+      "reserves_raw": "2500",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China",
+      "production_prev_year": 6000.0,
+      "production_latest_year": 6000.0,
+      "capacity": null,
+      "reserves": 110000.0,
+      "production_prev_raw": "6000",
+      "production_latest_raw": "6000",
+      "reserves_raw": "110000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Germany",
+      "production_prev_year": 35.0,
+      "production_latest_year": 35.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "35",
+      "production_latest_raw": "35",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Iran",
+      "production_prev_year": 53.0,
+      "production_latest_year": 70.0,
+      "capacity": null,
+      "reserves": 7600.0,
+      "production_prev_raw": "53",
+      "production_latest_raw": "70",
+      "reserves_raw": "7600",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Mexico",
+      "production_prev_year": 1510.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": 68000.0,
+      "production_prev_raw": "1510",
+      "production_latest_raw": "1500",
+      "reserves_raw": "68000",
+      "note": "footnote 6",
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Mongolia",
+      "production_prev_year": 1430.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": 34000.0,
+      "production_prev_raw": "1430",
+      "production_latest_raw": "1500",
+      "reserves_raw": "34000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Pakistan",
+      "production_prev_year": 60.0,
+      "production_latest_year": 50.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "60",
+      "production_latest_raw": "50",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "South Africa",
+      "production_prev_year": 447.0,
+      "production_latest_year": 410.0,
+      "capacity": null,
+      "reserves": 41000.0,
+      "production_prev_raw": "447",
+      "production_latest_raw": "410",
+      "reserves_raw": "41000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Spain",
+      "production_prev_year": 138.0,
+      "production_latest_year": 140.0,
+      "capacity": null,
+      "reserves": 15000.0,
+      "production_prev_raw": "138",
+      "production_latest_raw": "140",
+      "reserves_raw": "15000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Tajikistan",
+      "production_prev_year": 15.0,
+      "production_latest_year": 15.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "15",
+      "production_latest_raw": "15",
+      "reserves_raw": "NA",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Thailand",
+      "production_prev_year": 75.0,
+      "production_latest_year": 55.0,
+      "capacity": null,
+      "reserves": 3600.0,
+      "production_prev_raw": "75",
+      "production_latest_raw": "55",
+      "reserves_raw": "3600",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Vietnam",
+      "production_prev_year": 146.0,
+      "production_latest_year": 160.0,
+      "capacity": null,
+      "reserves": 16000.0,
+      "production_prev_raw": "146",
+      "production_latest_raw": "160",
+      "reserves_raw": "16000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Other countries",
+      "production_prev_year": 316.0,
+      "production_latest_year": 200.0,
+      "capacity": null,
+      "reserves": 32000.0,
+      "production_prev_raw": "316",
+      "production_latest_raw": "200",
+      "reserves_raw": "32000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total (rounded)",
+      "production_prev_year": 10300.0,
+      "production_latest_year": 10000.0,
+      "capacity": null,
+      "reserves": 330000.0,
+      "production_prev_raw": "10300",
+      "production_latest_raw": "10000",
+      "reserves_raw": "330000",
+      "note": null,
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. NA Not available.",
+    "1": "Includes data for the following Schedule B numbers: 2529.21.0000 and 2529.22.0000.",
+    "2": "Defined as total fluorspar imports – exports.",
+    "3": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 2529.21.0000 and 2529.22.0000.",
+    "4": "Includes Hong Kong.",
+    "5": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "6": "Reported.",
+    "7": "Measured as 100% CaF."
+  }
+}

@@ -65,6 +65,13 @@ class CountryShareListTests(unittest.TestCase):
         self.assertEqual(self._p("China, 12.5%; other, 87.5%"),
                          [("China", 12.5), ("other", 87.5)])
 
+    def test_bounded_share(self) -> None:
+        # phosphate: "Peru, >99%" — the inequality bound must not cause the
+        # whole entry to be dropped. The numeric part is kept (share_pct is a
+        # float); the ">" is discarded, mirroring _to_float(">95") -> 95.0.
+        self.assertEqual(self._p("Peru, >99%; China, <1%"),
+                         [("Peru", 99.0), ("China", 1.0)])
+
 
 class ImportCategoryDetectionTests(unittest.TestCase):
     """`_CATEGORY_HEAD` must accept labels with '%' and long labels."""

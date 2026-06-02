@@ -1,0 +1,430 @@
+{
+  "slug": "boron",
+  "name": "Boron",
+  "symbol": "B",
+  "kind": "primary",
+  "parent_slug": null,
+  "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-boron.pdf",
+  "edition": "MCS 2026",
+  "edition_date": "2026-02",
+  "captured_at": "2026-06-02",
+  "pdf_sha256": "a7606ad4a3c2b0b24d3fd7f3092fdd71f6256b196875137d9b9dfb1c591d2ec9",
+  "pdf_page_count": 2,
+  "units_note": "(Data in thousand metric tons unless otherwise specified)",
+  "price_unit_note": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+  "price_footnote_text": null,
+  "domestic_use_summary": "Three companies in southern California produced borates in 2025, and most of the boron products consumed in the United States were manufactured domestically. Estimated boron production was essentially the same in 2025 compared with production in 2024. U.S. boron production and consumption data were withheld to avoid disclosing company proprietary data. The leading boron producer mined borate ores, which contain the minerals kernite, tincal, and ulexite, by open pit methods and operated associated compound plants. Kernite was used to produce boric acid, tincal was used to produce sodium borate, and ulexite was used as a primary ingredient in the manufacture of a variety of specialty glasses and ceramics. Two companies produced borates from brines extracted through solution-mining techniques. Boron minerals and chemicals were principally consumed in the north-central and eastern United States. In 2025, the glass and ceramics industries remained the leading domestic users of boron products. Boron also was used as a component in abrasives, cleaning products, insecticides, insulation, and in the production of semiconductors.",
+  "events_trends_summary": "Elemental boron is a metalloid with limited commercial applications. Although the term “boron” is commonly referenced, it does not occur in nature in an elemental state. Boron combines with oxygen and other elements to form boric acid or inorganic salts called borates. Boron compounds, chiefly borates, are commercially important; therefore, boron products are priced and sold based on their boric oxide (BO) content, varying by ore and compound and by the absence or presence of calcium and sodium. Four borate minerals— colemanite, kernite, tincal, and ulexite—account for 90% of the borate minerals used by industry worldwide. Although borates were used in more than 300 applications, more than three-quarters of world consumption was used in ceramics, detergents, fertilizers, and glass. China, India, Malaysia, Indonesia, the Netherlands, and Canada, in decreasing order of tonnage, were the countries that imported the largest quantities of refined borates from the United States in 2025. Domestic shipments of boric acid were sent to China, the Netherlands, the Republic of Korea, Taiwan, and Japan, in decreasing order of tonnage. BORON U.S. Geological Survey, Mineral Commodity Summaries, February 2026 Because China has low-grade boron reserves and demand for boron is anticipated to rise in that country, imports from the United States were expected to remain steady during the next several years. Interests and investments in boron derivatives continued abroad and domestically. In May 2025, a boron project in Piskanja, Serbia, owned by a Canada-based mine developer signed a letter of intent with a Serbian mining company to renovate the Pobrdje Mine, extend its mine life, and to repurpose regional mining equipment. The Pobrdje Mine’s deposit consisted primarily of colemanite and the mine was estimated to have a mine life of 21 years. A geologic exploration of the Jarandol Basin, Serbia, was also completed in May and confirmed boron mineralization. In June, the European Commission designated the Jadar project, developed by a London-based global mining company, as one of the 60 strategic projects for the Critical Raw Materials Act. The Jadar Project was endorsed for investment in the extraction of boron and lithium to help the European Union ensure that it maintains diverse, stable, and secure supply chains. The project is in western Serbia and was expected to produce 286,000 tons per year of boric acid at full production. In July 2025, one Australia-based mine developer delayed construction of its project in Nevada until March 2026 owing to an 80% decrease in lithium prices when compared with prices in 2022. It was initially expected to begin construction in 2025, and initial production was expected to begin in 2028. Once completed, the project was expected to have a 95-year mine life and produce about 170,000 tons of boric acid per year as a byproduct of lithium production. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate, and uranium were also added.",
+  "world_resources_summary": "Deposits of borates are associated with volcanic activity and arid climates, with the largest economically viable deposits in the Mojave Desert of the United States, the Alpide belt along the southern margin of Eurasia, and the Andean belt of South America. In order of abundance, U.S. deposits consist primarily of tincal, kernite, and borates contained in brines, and to a lesser extent, ulexite and colemanite. About 70% of all deposits in Turkey are colemanite, primarily used in the production of heat-resistant glass. At current levels of consumption, world resources are adequate for the foreseeable future.",
+  "substitutes_summary": "The substitution of other materials for boron is possible in detergents, enamels, insulation, and soaps. Sodium percarbonate can replace borates in detergents and requires lower temperatures to undergo hydrolysis, which is an environmental consideration. Some enamels can use other glass-producing substances, such as phosphates. Insulation substitutes include cellulose, foams, and mineral wools. In soaps, sodium and potassium salts of fatty acids can act as cleaning and emulsifying agents.",
+  "recycling_summary": "Insignificant.",
+  "salient_stats": [
+    {
+      "label": "Production",
+      "footnote": null,
+      "section": "Production",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Refined borax",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 232.0,
+        "2022": 168.0,
+        "2023": 156.0,
+        "2024": 150.0,
+        "2025e": 120.0
+      },
+      "raw_values": {
+        "2021": "232",
+        "2022": "168",
+        "2023": "156",
+        "2024": "150",
+        "2025e": "120"
+      }
+    },
+    {
+      "label": "Boric acid",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 54.0,
+        "2022": 48.0,
+        "2023": 38.0,
+        "2024": 43.0,
+        "2025e": 45.0
+      },
+      "raw_values": {
+        "2021": "54",
+        "2022": "48",
+        "2023": "38",
+        "2024": "43",
+        "2025e": "45"
+      }
+    },
+    {
+      "label": "Colemanite (calcium borates)",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 3.0,
+        "2022": 1.0,
+        "2023": 2.0,
+        "2024": 1.0,
+        "2025e": 2.0
+      },
+      "raw_values": {
+        "2021": "3",
+        "2022": "1",
+        "2023": "2",
+        "2024": "1",
+        "2025e": "2"
+      }
+    },
+    {
+      "label": "Ulexite (sodium borates)",
+      "footnote": null,
+      "section": "Imports for consumption",
+      "subsection": null,
+      "values": {
+        "2021": 49.0,
+        "2022": 38.0,
+        "2023": 20.0,
+        "2024": 28.0,
+        "2025e": 38.0
+      },
+      "raw_values": {
+        "2021": "49",
+        "2022": "38",
+        "2023": "20",
+        "2024": "28",
+        "2025e": "38"
+      }
+    },
+    {
+      "label": "Boric acid",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 280.0,
+        "2022": 239.0,
+        "2023": 253.0,
+        "2024": 246.0,
+        "2025e": 260.0
+      },
+      "raw_values": {
+        "2021": "280",
+        "2022": "239",
+        "2023": "253",
+        "2024": "246",
+        "2025e": "260"
+      }
+    },
+    {
+      "label": "Refined borax",
+      "footnote": null,
+      "section": "Exports",
+      "subsection": null,
+      "values": {
+        "2021": 607.0,
+        "2022": 651.0,
+        "2023": 604.0,
+        "2024": 655.0,
+        "2025e": 600.0
+      },
+      "raw_values": {
+        "2021": "607",
+        "2022": "651",
+        "2023": "604",
+        "2024": "655",
+        "2025e": "600"
+      }
+    },
+    {
+      "label": "Consumption, apparent",
+      "footnote": "1",
+      "section": "Consumption, apparent",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "W",
+        "2022": "W",
+        "2023": "W",
+        "2024": "W",
+        "2025e": "W"
+      }
+    },
+    {
+      "label": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+      "footnote": null,
+      "section": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+      "subsection": null,
+      "values": {
+        "2021": 394.0,
+        "2022": 485.0,
+        "2023": 606.0,
+        "2024": 574.0,
+        "2025e": 540.0
+      },
+      "raw_values": {
+        "2021": "394",
+        "2022": "485",
+        "2023": "606",
+        "2024": "574",
+        "2025e": "540"
+      }
+    },
+    {
+      "label": "Employment, number",
+      "footnote": null,
+      "section": "Employment, number",
+      "subsection": null,
+      "values": {
+        "2021": 1330.0,
+        "2022": 1400.0,
+        "2023": 1430.0,
+        "2024": 1500.0,
+        "2025e": 1500.0
+      },
+      "raw_values": {
+        "2021": "1330",
+        "2022": "1400",
+        "2023": "1430",
+        "2024": "1500",
+        "2025e": "1500"
+      }
+    },
+    {
+      "label": "Net import reliance as a percentage of apparent consumption",
+      "footnote": null,
+      "section": "Net import reliance as a percentage of apparent consumption",
+      "subsection": null,
+      "values": {
+        "2021": null,
+        "2022": null,
+        "2023": null,
+        "2024": null,
+        "2025e": null
+      },
+      "raw_values": {
+        "2021": "E",
+        "2022": "E",
+        "2023": "E",
+        "2024": "E",
+        "2025e": "E"
+      }
+    }
+  ],
+  "price_quotes": [
+    {
+      "form": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+      "unit_note": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+      "values": {
+        "2021": 394.0,
+        "2022": 485.0,
+        "2023": 606.0,
+        "2024": 574.0,
+        "2025e": 540.0
+      },
+      "raw_values": {
+        "2021": "394",
+        "2022": "485",
+        "2023": "606",
+        "2024": "574",
+        "2025e": "540"
+      }
+    }
+  ],
+  "latest_year": "2025e",
+  "mined_production_latest": null,
+  "primary_smelting_latest": null,
+  "secondary_smelting_latest": null,
+  "imports_total_latest": 205.0,
+  "exports_total_latest": 860.0,
+  "apparent_consumption_latest": null,
+  "price_usd_per_pound_latest": 540.0,
+  "net_import_reliance_pct_latest": null,
+  "latest_year_sentinels": {
+    "net_import_reliance": "E",
+    "apparent_consumption": "W"
+  },
+  "stockpile_fy2025_potential_acquisitions": null,
+  "import_sources_flat": [],
+  "import_sources_by_category": [
+    {
+      "category": "All forms",
+      "countries": [
+        {
+          "country": "Turkey",
+          "share_pct": 90.0
+        },
+        {
+          "country": "Bolivia",
+          "share_pct": 6.0
+        },
+        {
+          "country": "other",
+          "share_pct": 4.0
+        }
+      ]
+    }
+  ],
+  "import_sources_range": "2021-24",
+  "world_production_label": "World Production and Reserves",
+  "world_production_year_prev": "2024",
+  "world_production_year_latest": "2025",
+  "world_production": [
+    {
+      "country": "United States",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "W",
+      "production_latest_raw": "W",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Argentina, crude ore",
+      "production_prev_year": 160.0,
+      "production_latest_year": 170.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "160",
+      "production_latest_raw": "170",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Bolivia, ulexite",
+      "production_prev_year": 230.0,
+      "production_latest_year": 380.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "230",
+      "production_latest_raw": "380",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Chile, ulexite",
+      "production_prev_year": 470.0,
+      "production_latest_year": 300.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "470",
+      "production_latest_raw": "300",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "China, boric oxide equivalent",
+      "production_prev_year": 210.0,
+      "production_latest_year": 230.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "210",
+      "production_latest_raw": "230",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Germany, compounds",
+      "production_prev_year": 45.0,
+      "production_latest_year": 40.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "45",
+      "production_latest_raw": "40",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Peru, crude borates",
+      "production_prev_year": 190.0,
+      "production_latest_year": 220.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "190",
+      "production_latest_raw": "220",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Russia, datolite ore",
+      "production_prev_year": 90.0,
+      "production_latest_year": 80.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "90",
+      "production_latest_raw": "80",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "Turkey, refined borates",
+      "production_prev_year": 1800.0,
+      "production_latest_year": 1500.0,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "1800",
+      "production_latest_raw": "1500",
+      "reserves_raw": null,
+      "note": null,
+      "sub_metal_production_latest": {}
+    },
+    {
+      "country": "World total",
+      "production_prev_year": null,
+      "production_latest_year": null,
+      "capacity": null,
+      "reserves": null,
+      "production_prev_raw": "XX",
+      "production_latest_raw": "XX",
+      "reserves_raw": null,
+      "note": "footnote 4",
+      "sub_metal_production_latest": {}
+    }
+  ],
+  "footnotes": {
+    "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. XX Not applicable.",
+    "1": "Defined as production + imports – exports.",
+    "2": "Defined as imports – exports.",
+    "3": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+    "4": "World totals cannot be calculated because production and reserves are not reported in a consistent manner by all countries."
+  }
+}

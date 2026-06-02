@@ -1,6 +1,6 @@
 {
   "edition": "MCS 2026",
-  "generated_at": "2026-05-22T10:06:20",
+  "generated_at": "2026-06-02T07:44:41",
   "elements": [
     {
       "slug": "abrasives",
@@ -2162,6 +2162,1252 @@
       }
     },
     {
+      "slug": "arsenic",
+      "name": "Arsenic",
+      "symbol": "As",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-arsenic.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "2344d21a385e4fada4d5e0f81c48391604963e46c04c259236a54793178eceb3",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons, arsenic content, unless otherwise specified)",
+      "price_unit_note": "Price, metal, annual average, U.S. warehouse, dollars per pound",
+      "price_footnote_text": "Minimum 99% arsenic. Source: Argus Media group, Argus Non-Ferrous Markets.",
+      "domestic_use_summary": "Arsenic trioxide and primary arsenic metal have not been produced in the United States since 1985. The principal use for arsenic compounds was in herbicides and insecticides. Arsenic trioxide was predominantly used for the production of arsenic acid, which is a key ingredient in the production of chromated copper arsenate (CCA) preservatives. CCA preservatives are used for the pressure treating of lumber for primarily nonresidential applications such as light poles, marine applications, and retaining walls. Seven companies produced CCA-treated wood in the United States in 2025. High-purity (99.9999%) arsenic metal was used to produce gallium-arsenide (GaAs) semiconductors for solar cells, space research, and telecommunications; germanium- arsenide-selenide specialty optical materials; and indium-gallium-arsenide (InGaAs) for use in shortwave infrared technology. Arsenic metal was used as an antifriction additive for bearings, to harden lead shot and clip-on wheel weights, and to strengthen the grids in lead-acid storage batteries. The estimated value of arsenic compounds and metal imported domestically in 2025 was $8.4 million. Given that arsenic metal has not been produced domestically since 1985, it is likely that only a small portion of the material reported by the U.S. Census Bureau as arsenic exports was pure arsenic metal, and most of the material that was reported under this category reflects the gross weight of alloys, compounds, residues, scrap, and waste products containing arsenic. Therefore, the estimated consumption reported under U.S. salient statistics reflects only imports of arsenic products. Domestically, the leading use of arsenic was for the production of herbicides, insecticides, and wood preservatives (more than 80%), followed by metallurgical and semiconductor applications.",
+      "events_trends_summary": "Peru, China, and Morocco, in descending order of production, continued to be the leading global producers of arsenic trioxide, accounting for more than 95% of estimated world production in 2025. China supplied more than 80% of United States imports of arsenic trioxide and more than 90% of arsenic metal imports through July 2025. Malaysia supplied almost all of the arsenic acid that was imported through July 2025. High-purity arsenic metal was used to produce GaAs, indium-arsenide, and InGaAs semiconductors that were used in aerospace devices, biomedical devices, military applications, mobile devices, optoelectronic devices, photovoltaic applications, satellites, and wireless communications.",
+      "world_resources_summary": "Arsenic may be obtained from copper, gold, and lead smelter flue dust, as well as from roasting arsenopyrite, the most abundant ore mineral of arsenic. Arsenic has been recovered from orpiment and realgar in China, Peru, and the Philippines and from copper-gold ores in Chile, and arsenic is associated with gold occurrences in Canada. Orpiment and realgar from gold mines in Sichuan Province, China, were stockpiled for later recovery of arsenic. Arsenic also may be recovered from enargite, a copper mineral. Arsenic trioxide was produced at the hydrometallurgical complex of Guemassa, near Marrakech, Morocco, from cobalt-arsenide ore from the Bou Azzer Mine. World reserve data were unavailable but were estimated to be more than 20 times world production.",
+      "substitutes_summary": "Substitutes for CCA in wood treatment include alkaline copper quaternary, ammoniacal copper quaternary, ammoniacal copper zinc arsenate, alkaline copper quaternary boron-based preservatives, copper azole, copper citrate, and copper naphthenate. Treated wood substitutes include concrete, plastic composite material, plasticized wood scrap, or steel. Silicon-based complementary metal-oxide semiconductor power amplifiers compete with GaAs power amplifiers in midtier third-generation cellular handsets. Many semiconductor manufacturers were moving away from GaAs- and silicon-based lateral diffused metal-oxide-semiconductor field-effect transistors to those using gallium nitride. Indium phosphide components can be substituted for GaAs-based infrared laser diodes in some specific-wavelength applications, and helium-neon lasers compete with GaAs in visible laser diode applications. Silicon is the principal competitor with GaAs in solar-cell applications. In many defense-related applications, GaAs-based integrated circuits are used because of their unique properties, and no effective substitutes exist for GaAs in these applications. In heterojunction bipolar transistors, GaAs is being replaced in some applications by silicon-germanium.",
+      "recycling_summary": "Arsenic metal was contained in new scrap recycled during GaAs semiconductor manufacturing. Arsenic-containing process water was internally recycled at wood treatment plants where CCA was used. Although scrap electronic circuit boards, relays, and switches may contain arsenic, no arsenic was known to have been recovered during the recycling process to recover other contained metals. No arsenic was recovered domestically from arsenic-containing residues and dusts generated at nonferrous smelters in the United States.",
+      "salient_stats": [
+        {
+          "label": "Arsenic metal",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 835.0,
+            "2022": 896.0,
+            "2023": 612.0,
+            "2024": 533.0,
+            "2025e": 740.0
+          },
+          "raw_values": {
+            "2021": "835",
+            "2022": "896",
+            "2023": "612",
+            "2024": "533",
+            "2025e": "740"
+          }
+        },
+        {
+          "label": "Compounds",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 4730.0,
+            "2022": 9190.0,
+            "2023": 5810.0,
+            "2024": 9070.0,
+            "2025e": 5500.0
+          },
+          "raw_values": {
+            "2021": "4730",
+            "2022": "9190",
+            "2023": "5810",
+            "2024": "9070",
+            "2025e": "5500"
+          }
+        },
+        {
+          "label": "Total",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 5560.0,
+            "2022": 10100.0,
+            "2023": 6430.0,
+            "2024": 9610.0,
+            "2025e": 6300.0
+          },
+          "raw_values": {
+            "2021": "5560",
+            "2022": "10100",
+            "2023": "6430",
+            "2024": "9610",
+            "2025e": "6300"
+          }
+        },
+        {
+          "label": "Exports, arsenic metal",
+          "footnote": "3",
+          "section": "Exports, arsenic metal",
+          "subsection": null,
+          "values": {
+            "2021": 31.0,
+            "2022": 82.0,
+            "2023": 34.0,
+            "2024": 138.0,
+            "2025e": 51.0
+          },
+          "raw_values": {
+            "2021": "31",
+            "2022": "82",
+            "2023": "34",
+            "2024": "138",
+            "2025e": "51"
+          }
+        },
+        {
+          "label": "Consumption, estimated, all forms of arsenic",
+          "footnote": "4",
+          "section": "Consumption, estimated, all forms of arsenic",
+          "subsection": null,
+          "values": {
+            "2021": 5560.0,
+            "2022": 10100.0,
+            "2023": 6430.0,
+            "2024": 9610.0,
+            "2025e": 6300.0
+          },
+          "raw_values": {
+            "2021": "5560",
+            "2022": "10100",
+            "2023": "6430",
+            "2024": "9610",
+            "2025e": "6300"
+          }
+        },
+        {
+          "label": "Price, metal, annual average, U.S. warehouse, dollars per pound",
+          "footnote": "5",
+          "section": "Price, metal, annual average, U.S. warehouse, dollars per pound",
+          "subsection": null,
+          "values": {
+            "2021": 1.11,
+            "2022": 1.82,
+            "2023": 2.05,
+            "2024": 1.97,
+            "2025e": 1.85
+          },
+          "raw_values": {
+            "2021": "1.11",
+            "2022": "1.82",
+            "2023": "2.05",
+            "2024": "1.97",
+            "2025e": "1.85"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of estimated consumption, all forms of arsenic",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of estimated consumption, all forms of arsenic",
+          "subsection": null,
+          "values": {
+            "2021": 100.0,
+            "2022": 100.0,
+            "2023": 100.0,
+            "2024": 100.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": "100",
+            "2022": "100",
+            "2023": "100",
+            "2024": "100",
+            "2025e": "100"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, metal, annual average, U.S. warehouse, dollars per pound",
+          "unit_note": "Price, metal, annual average, U.S. warehouse, dollars per pound",
+          "values": {
+            "2021": 1.11,
+            "2022": 1.82,
+            "2023": 2.05,
+            "2024": 1.97,
+            "2025e": 1.85
+          },
+          "raw_values": {
+            "2021": "1.11",
+            "2022": "1.82",
+            "2023": "2.05",
+            "2024": "1.97",
+            "2025e": "1.85"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 6300.0,
+      "exports_total_latest": 51.0,
+      "apparent_consumption_latest": 6300.0,
+      "price_usd_per_pound_latest": 1.85,
+      "net_import_reliance_pct_latest": 100.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Arsenic acid",
+          "countries": [
+            {
+              "country": "Malaysia",
+              "share_pct": 99.0
+            },
+            {
+              "country": "other",
+              "share_pct": 1.0
+            }
+          ]
+        },
+        {
+          "category": "Arsenic metal",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 95.0
+            },
+            {
+              "country": "Japan",
+              "share_pct": 3.0
+            },
+            {
+              "country": "other",
+              "share_pct": 2.0
+            }
+          ]
+        },
+        {
+          "category": "Arsenic trioxide",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 61.0
+            },
+            {
+              "country": "Morocco",
+              "share_pct": 27.0
+            },
+            {
+              "country": "Belgium",
+              "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
+            }
+          ]
+        },
+        {
+          "category": "All forms of arsenic",
+          "countries": [
+            {
+              "country": "China",
+              "share_pct": 45.0
+            },
+            {
+              "country": "Malaysia",
+              "share_pct": 30.0
+            },
+            {
+              "country": "Morocco",
+              "share_pct": 16.0
+            },
+            {
+              "country": "other",
+              "share_pct": 9.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Production and Capacity",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 0.0,
+          "production_latest_year": 0.0,
+          "capacity": 0.0,
+          "reserves": null,
+          "production_prev_raw": "—",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Belgium",
+          "production_prev_year": 1000.0,
+          "production_latest_year": 1000.0,
+          "capacity": 1500.0,
+          "reserves": null,
+          "production_prev_raw": "1000",
+          "production_latest_raw": "1000",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 24000.0,
+          "production_latest_year": 24000.0,
+          "capacity": 30000.0,
+          "reserves": null,
+          "production_prev_raw": "24000",
+          "production_latest_raw": "24000",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Japan",
+          "production_prev_year": 40.0,
+          "production_latest_year": 0.0,
+          "capacity": 60.0,
+          "reserves": null,
+          "production_prev_raw": "40",
+          "production_latest_raw": "—",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Morocco",
+          "production_prev_year": 6000.0,
+          "production_latest_year": 5000.0,
+          "capacity": 8000.0,
+          "reserves": null,
+          "production_prev_raw": "6000",
+          "production_latest_raw": "5000",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Peru",
+          "production_prev_year": 31000.0,
+          "production_latest_year": 30000.0,
+          "capacity": 37000.0,
+          "reserves": null,
+          "production_prev_raw": "31000",
+          "production_latest_raw": "30000",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 500.0,
+          "production_latest_year": 500.0,
+          "capacity": 4000.0,
+          "reserves": null,
+          "production_prev_raw": "500",
+          "production_latest_raw": "500",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 62500.0,
+          "production_latest_year": 61000.0,
+          "capacity": 81000.0,
+          "reserves": null,
+          "production_prev_raw": "62500",
+          "production_latest_raw": "61000",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. — Zero.",
+        "1": "Arsenic content of arsenic metal is 100%; arsenic content of arsenic compounds is 52.8% for arsenic acid, 60.7% for arsenic sulfide, 41.33% for arsenic trichloride, and 75.71% for arsenic trioxide.",
+        "2": "Arsenic content calculated from the reported gross weight of imports. See footnote 1 for content percentages of arsenic metal and compounds.",
+        "3": "May include alloys, compounds, and waste.",
+        "4": "Estimated to be the same as total imports.",
+        "5": "Minimum 99% arsenic. Source: Argus Media group, Argus Non-Ferrous Markets.",
+        "6": "Defined as imports.",
+        "7": "Includes Hong Kong.",
+        "8": "Includes calculated arsenic trioxide equivalent of output of elemental arsenic compounds other than arsenic trioxide; inclusion of such materials would not duplicate reported arsenic trioxide production. Chile and Mexico were estimated to be significant producers of commercial-grade arsenic trioxide but have reported no production in recent years.",
+        "9": "Yearend operation capacity.",
+        "10": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
+      "slug": "barite",
+      "name": "Barite",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-barite.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "78c4191315efe0a1ec006a34fe115fdbcc530d43529fff32c843a58a7ccc1377",
+      "pdf_page_count": 2,
+      "units_note": "(Data in thousand metric tons unless otherwise specified)",
+      "price_unit_note": "Price, average unit value, ground, ex-works, dollars per metric ton",
+      "price_footnote_text": null,
+      "domestic_use_summary": "In 2025, three companies mined barite at four operations in Nevada. Mine production increased, but data were withheld to avoid disclosing company proprietary data. An estimated 2.3 million tons of barite (from domestic production and imports) was sold by companies that operated crushers and grinders in nine States. Typically, more than 90% of the barite sold in the United States is used as a weighting agent in fluids used in the drilling of oil and natural gas wells. The majority of Nevada crude barite was ground in Nevada and then sold to companies drilling in the Central and Western United States. Because of the higher cost of rail and truck transportation compared with ocean freight, offshore and onshore drilling operations in other regions primarily used imported barite. Barite also is used as a filler, extender, or weighting agent in products such as paints, plastics, and rubber. Some specific applications include use in automobile brake and clutch pads, in automobile paint primer for metal protection and gloss, as a weighting agent in rubber, and in the cement jacket around underwater petroleum pipelines. In the metal-casting industry, barite is part of the mold-release compounds. Because barite significantly blocks X-ray and gamma-ray emissions, it is used as aggregate in high-density concrete for radiation shielding around X-ray units in hospitals, nuclear powerplants, and university nuclear research facilities. Ultrapure barite is used as a contrast medium in X-ray and computed tomography examinations of the gastrointestinal tract.",
+      "events_trends_summary": "Rig counts for oil and gas production are often used as an indicator of barite consumption. However, barite use per rig has been increasing owing to deeper oil and gas wells that require fewer rigs for oil and gas production. Through October 2025, the world annual average rig count excluding the United States was 1,258 compared with 1,349 through the same period in 2024 and the domestic average rig count was 564 compared with 599 through the same period in 2024. Despite the decrease in global and domestic drill rig counts, barite sales were estimated to have increased. A company in Kazakhstan announced that it planned to start mining barite in Qaraghandy Province.",
+      "world_resources_summary": "In the United States, identified resources of barite were estimated to be 150 million tons, and undiscovered resources contributed an additional 150 million tons. The world’s barite resources in all categories were about 2 billion tons, but only about 740 million tons were identified resources.",
+      "substitutes_summary": "Owing to technical and economic factors, there are no large-scale alternatives to barite in oil- and gas- drilling fluids. Calcium carbonate, hematite, ilmenite, and manganese tetroxide are the most common alternatives used in specific circumstances. Some technical literature and patents also mention use of celestite, iron carbonate, and strontium carbonate, but these are not estimated to be widely used.",
+      "recycling_summary": "None.",
+      "salient_stats": [
+        {
+          "label": "Sold or used, mine",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Ground and crushed",
+          "footnote": "1",
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 1670.0,
+            "2022": 2220.0,
+            "2023": 2260.0,
+            "2024": 2280.0,
+            "2025e": 2300.0
+          },
+          "raw_values": {
+            "2021": "1670",
+            "2022": "2220",
+            "2023": "2260",
+            "2024": "2280",
+            "2025e": "2300"
+          }
+        },
+        {
+          "label": "For consumption",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 1660.0,
+            "2022": 2330.0,
+            "2023": 2420.0,
+            "2024": 1880.0,
+            "2025e": 2300.0
+          },
+          "raw_values": {
+            "2021": "1660",
+            "2022": "2330",
+            "2023": "2420",
+            "2024": "1880",
+            "2025e": "2300"
+          }
+        },
+        {
+          "label": "General",
+          "footnote": null,
+          "section": "Imports",
+          "subsection": null,
+          "values": {
+            "2021": 1440.0,
+            "2022": 1890.0,
+            "2023": 2220.0,
+            "2024": 1810.0,
+            "2025e": 1700.0
+          },
+          "raw_values": {
+            "2021": "1440",
+            "2022": "1890",
+            "2023": "2220",
+            "2024": "1810",
+            "2025e": "1700"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": "3",
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 62.0,
+            "2022": 87.0,
+            "2023": 75.0,
+            "2024": 65.0,
+            "2025e": 67.0
+          },
+          "raw_values": {
+            "2021": "62",
+            "2022": "87",
+            "2023": "75",
+            "2024": "65",
+            "2025e": "67"
+          }
+        },
+        {
+          "label": "Consumption, apparent (crude and ground)",
+          "footnote": "4",
+          "section": "Consumption, apparent (crude and ground)",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Price, average unit value, ground, ex-works, dollars per metric ton",
+          "footnote": null,
+          "section": "Price, average unit value, ground, ex-works, dollars per metric ton",
+          "subsection": null,
+          "values": {
+            "2021": 167.0,
+            "2022": 145.0,
+            "2023": 218.0,
+            "2024": 210.0,
+            "2025e": 210.0
+          },
+          "raw_values": {
+            "2021": "167",
+            "2022": "145",
+            "2023": "218",
+            "2024": "210",
+            "2025e": "210"
+          }
+        },
+        {
+          "label": "Employment, mine and mill, number",
+          "footnote": null,
+          "section": "Employment, mine and mill, number",
+          "subsection": null,
+          "values": {
+            "2021": 330.0,
+            "2022": 380.0,
+            "2023": 440.0,
+            "2024": 400.0,
+            "2025e": 400.0
+          },
+          "raw_values": {
+            "2021": "330",
+            "2022": "380",
+            "2023": "440",
+            "2024": "400",
+            "2025e": "400"
+          }
+        },
+        {
+          "label": "Net import relianceas a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import relianceas a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 75.0,
+            "2022": 75.0,
+            "2023": 75.0,
+            "2024": 75.0,
+            "2025e": 75.0
+          },
+          "raw_values": {
+            "2021": ">75",
+            "2022": ">75",
+            "2023": ">75",
+            "2024": ">75",
+            "2025e": ">75"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, average unit value, ground, ex-works, dollars per metric ton",
+          "unit_note": "Price, average unit value, ground, ex-works, dollars per metric ton",
+          "values": {
+            "2021": 167.0,
+            "2022": 145.0,
+            "2023": 218.0,
+            "2024": 210.0,
+            "2025e": 210.0
+          },
+          "raw_values": {
+            "2021": "167",
+            "2022": "145",
+            "2023": "218",
+            "2024": "210",
+            "2025e": "210"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 4000.0,
+      "exports_total_latest": 67.0,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": 210.0,
+      "net_import_reliance_pct_latest": 75.0,
+      "latest_year_sentinels": {
+        "net_import_reliance": ">75",
+        "mined_production": "W",
+        "apparent_consumption": "W"
+      },
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [
+        {
+          "country": "India",
+          "share_pct": 39.0
+        },
+        {
+          "country": "China",
+          "share_pct": 21.0
+        },
+        {
+          "country": "Morocco",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Mexico",
+          "share_pct": 14.0
+        },
+        {
+          "country": "other",
+          "share_pct": 7.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "India",
+              "share_pct": 39.0
+            },
+            {
+              "country": "China",
+              "share_pct": 21.0
+            },
+            {
+              "country": "Morocco",
+              "share_pct": 19.0
+            },
+            {
+              "country": "Mexico",
+              "share_pct": 14.0
+            },
+            {
+              "country": "other",
+              "share_pct": 7.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": null,
+          "production_latest_year": null,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "W",
+          "production_latest_raw": "W",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 2100.0,
+          "production_latest_year": 2200.0,
+          "capacity": null,
+          "reserves": 120000.0,
+          "production_prev_raw": "2100",
+          "production_latest_raw": "2200",
+          "reserves_raw": "120000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "India",
+          "production_prev_year": 2600.0,
+          "production_latest_year": 3000.0,
+          "capacity": null,
+          "reserves": 51000.0,
+          "production_prev_raw": "2600",
+          "production_latest_raw": "3000",
+          "reserves_raw": "51000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Iran",
+          "production_prev_year": 300.0,
+          "production_latest_year": 300.0,
+          "capacity": null,
+          "reserves": 100000.0,
+          "production_prev_raw": "300",
+          "production_latest_raw": "300",
+          "reserves_raw": "100000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Kazakhstan",
+          "production_prev_year": 650.0,
+          "production_latest_year": 700.0,
+          "capacity": null,
+          "reserves": 85000.0,
+          "production_prev_raw": "650",
+          "production_latest_raw": "700",
+          "reserves_raw": "85000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Laos",
+          "production_prev_year": 250.0,
+          "production_latest_year": 260.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "250",
+          "production_latest_raw": "260",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mexico",
+          "production_prev_year": 244.0,
+          "production_latest_year": 300.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "244",
+          "production_latest_raw": "300",
+          "reserves_raw": "NA",
+          "note": "footnote 9",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Morocco",
+          "production_prev_year": 930.0,
+          "production_latest_year": 1000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "930",
+          "production_latest_raw": "1000",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Pakistan",
+          "production_prev_year": 94.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "94",
+          "production_latest_raw": "100",
+          "reserves_raw": "NA",
+          "note": "footnote 9",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 200.0,
+          "production_latest_year": 230.0,
+          "capacity": null,
+          "reserves": 12000.0,
+          "production_prev_raw": "200",
+          "production_latest_raw": "230",
+          "reserves_raw": "12000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Turkey",
+          "production_prev_year": 261.0,
+          "production_latest_year": 260.0,
+          "capacity": null,
+          "reserves": 34000.0,
+          "production_prev_raw": "261",
+          "production_latest_raw": "260",
+          "reserves_raw": "34000",
+          "note": "footnote 9",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 340.0,
+          "production_latest_year": 350.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "340",
+          "production_latest_raw": "350",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 8000.0,
+          "production_latest_year": 8700.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "8000",
+          "production_latest_raw": "8700",
+          "reserves_raw": "NA",
+          "note": "footnote 10",
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. W Withheld to avoid disclosing company proprietary data.",
+        "1": "Imported and domestic barite, crushed and ground, sold or used by domestic grinding establishments.",
+        "2": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 2511.10.1000, 2511.10.5000, and 2833.27.0000. General imports and imports for consumption data differ because of barite processed in free trade zones. General import data reports the form of imported barite at the time it entered the United States, whereas imports for consumption data reports crude barite processed in free trade zones as ground. Imports for consumption may not be immediately reported depending on processing time.",
+        "3": "Includes data for the following Schedule B numbers: 2511.10.1000 and 2833.27.0000.",
+        "4": "Defined as mine production (sold or used) + imports for consumption – exports.",
+        "5": "Defined as imports for consumption – exports.",
+        "6": "Includes Hong Kong.",
+        "7": "Source: Baker Hughes Co., 2025, Worldwide Rig Count: Baker Hughes Co. (Accessed November 14, 2025, at https://bakerhughesrigcount.gcs- web.com/intl-rig-count.)",
+        "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "9": "Reported.",
+        "10": "Excludes U.S. production."
+      }
+    },
+    {
+      "slug": "beryllium",
+      "name": "Beryllium",
+      "symbol": "Be",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-beryllium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "dee2faa35a4a824d04f37cf74e732074a315e8d541efc14d78d458f9ac9f317a",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons, beryllium content, unless otherwise specified)",
+      "price_unit_note": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+      "price_footnote_text": null,
+      "domestic_use_summary": "One company in Utah mined bertrandite ore and converted it, along with imported beryl, into beryllium hydroxide. Some of the beryllium hydroxide was shipped to the company’s plant in Ohio, where it was converted into metal, oxide, and downstream beryllium-copper master alloy, and some was sold. Estimated beryllium apparent consumption in 2025 was 230 tons and was valued at about $360 million based on the most recent beryllium price estimate. Based on sales revenues, approximately 29% of beryllium products were used in consumer electronics, 24% in aerospace and defense applications, 17% in industrial components, 9% in automotive electronics, 8% in energy applications, 2% in semiconductor applications, and 11% in other applications. Beryllium alloy strip and bulk products, the most common forms of processed beryllium, were used in all application areas. Most unalloyed beryllium metal and beryllium composite products were used in defense and scientific applications. The U.S. Department of War supports the availability of domestic beryllium to meet critical defense needs. In 2010, under the Defense Production Act, Title III, a public-private partnership with the leading U.S. beryllium producer reestablished domestic production of beryllium metal.",
+      "events_trends_summary": "Apparent consumption in 2025 increased by 2% from that in 2024 owing primarily to a 43% decrease in estimated beryllium exports, offset by a 34% decrease in estimated imports. The decrease in exports reflected a large reduction in beryllium metal exports to Canada, China, France, and Germany. The decrease in imports reflected a reduction in beryllium metal imports from Germany, Kazakhstan, and Latvia. During the first 6 months of 2025, the leading U.S. beryllium producer reported that net sales of its beryllium alloy strip and bulk products and beryllium metal and composite products were about the same as those during the first 6 months of 2024. Net sales of beryllium products decreased primarily in the automotive electronics, consumer electronics, and life sciences end markets. Because of the toxic nature of beryllium, various international, national, and State guidelines and regulations have been established regarding beryllium in air, water, and other media. Industry is required to carefully control the quantity of beryllium dust, fumes, and mists in the workplace.",
+      "world_resources_summary": "The world’s identified resources of beryllium have been estimated to be more than 100,000 tons. About 60% of these resources are in the United States; by tonnage, the Spor Mountain area in Utah, the McCullough Butte area in Nevada, the Black Hills area in South Dakota, the Sierra Blanca area in Texas, the Seward Peninsula in Alaska, and the Gold Hill area in Utah account for most of the total.",
+      "substitutes_summary": "Because the cost of beryllium is high compared with that of other materials, it is used in applications in which its properties are crucial. In some applications, certain metal matrix or organic composites, high-strength grades of aluminum, pyrolytic graphite, silicon carbide, steel, or titanium may be substituted for beryllium metal or beryllium composites. Copper alloys containing nickel and silicon, tin, titanium, or other alloying elements or phosphor bronze alloys (copper-tin-phosphorus) may be substituted for beryllium-copper alloys, but these substitutions can result in substantially reduced performance. Aluminum nitride or boron nitride may be substituted for beryllium oxide.",
+      "recycling_summary": "Beryllium was recovered from new scrap generated during the manufacture of beryllium products and from old scrap. Detailed data on the quantities of beryllium recycled were not available but may account for as much as 20% to 25% of total beryllium consumption. The leading U.S. beryllium producer managed a recycling program for all its beryllium products, recovering approximately 40% of the beryllium content of the new and old beryllium alloy scrap.",
+      "salient_stats": [
+        {
+          "label": "Production, mine shipments",
+          "footnote": null,
+          "section": "Production, mine shipments",
+          "subsection": null,
+          "values": {
+            "2021": 175.0,
+            "2022": 175.0,
+            "2023": 185.0,
+            "2024": 230.0,
+            "2025e": 230.0
+          },
+          "raw_values": {
+            "2021": "175",
+            "2022": "175",
+            "2023": "185",
+            "2024": "230",
+            "2025e": "230"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": "1",
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 49.0,
+            "2022": 39.0,
+            "2023": 25.0,
+            "2024": 16.0,
+            "2025e": 10.0
+          },
+          "raw_values": {
+            "2021": "49",
+            "2022": "39",
+            "2023": "25",
+            "2024": "16",
+            "2025e": "10"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": "2",
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 30.0,
+            "2022": 59.0,
+            "2023": 68.0,
+            "2024": 26.0,
+            "2025e": 15.0
+          },
+          "raw_values": {
+            "2021": "30",
+            "2022": "59",
+            "2023": "68",
+            "2024": "26",
+            "2025e": "15"
+          }
+        },
+        {
+          "label": "Shipments from Government stockpile",
+          "footnote": "3",
+          "section": "Shipments from Government stockpile",
+          "subsection": null,
+          "values": {
+            "2021": 7.0,
+            "2022": 9.0,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "7",
+            "2022": "9",
+            "2023": "NA",
+            "2024": "NA",
+            "2025e": "NA"
+          }
+        },
+        {
+          "label": "Apparent",
+          "footnote": "4",
+          "section": "Consumption",
+          "subsection": null,
+          "values": {
+            "2021": 196.0,
+            "2022": 189.0,
+            "2023": 142.0,
+            "2024": 220.0,
+            "2025e": 230.0
+          },
+          "raw_values": {
+            "2021": "196",
+            "2022": "189",
+            "2023": "142",
+            "2024": "220",
+            "2025e": "230"
+          }
+        },
+        {
+          "label": "Reported, ore",
+          "footnote": null,
+          "section": "Consumption",
+          "subsection": null,
+          "values": {
+            "2021": 170.0,
+            "2022": 170.0,
+            "2023": 180.0,
+            "2024": 180.0,
+            "2025e": 180.0
+          },
+          "raw_values": {
+            "2021": "170",
+            "2022": "170",
+            "2023": "180",
+            "2024": "180",
+            "2025e": "180"
+          }
+        },
+        {
+          "label": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+          "footnote": "5",
+          "section": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+          "subsection": null,
+          "values": {
+            "2021": 680.0,
+            "2022": 660.0,
+            "2023": 1400.0,
+            "2024": 1500.0,
+            "2025e": 1600.0
+          },
+          "raw_values": {
+            "2021": "680",
+            "2022": "660",
+            "2023": "1400",
+            "2024": "1500",
+            "2025e": "1600"
+          }
+        },
+        {
+          "label": "Stocks, ore, industry, yearend",
+          "footnote": null,
+          "section": "Stocks, ore, industry, yearend",
+          "subsection": null,
+          "values": {
+            "2021": 35.0,
+            "2022": 10.0,
+            "2023": 10.0,
+            "2024": 10.0,
+            "2025e": 10.0
+          },
+          "raw_values": {
+            "2021": "35",
+            "2022": "10",
+            "2023": "10",
+            "2024": "10",
+            "2025e": "10"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 11.0,
+            "2022": 7.0,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "11",
+            "2022": "7",
+            "2023": "E",
+            "2024": "E",
+            "2025e": "E"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+          "unit_note": "Price, annual average unit value, beryllium-copper master alloy, dollars per kilogram of contained beryllium",
+          "values": {
+            "2021": 680.0,
+            "2022": 660.0,
+            "2023": 1400.0,
+            "2024": 1500.0,
+            "2025e": 1600.0
+          },
+          "raw_values": {
+            "2021": "680",
+            "2022": "660",
+            "2023": "1400",
+            "2024": "1500",
+            "2025e": "1600"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": 230.0,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 10.0,
+      "exports_total_latest": 15.0,
+      "apparent_consumption_latest": 230.0,
+      "price_usd_per_pound_latest": 1600.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "net_import_reliance": "E"
+      },
+      "stockpile_fy2025_potential_acquisitions": 0.0,
+      "import_sources_flat": [
+        {
+          "country": "Kazakhstan",
+          "share_pct": 31.0
+        },
+        {
+          "country": "Latvia",
+          "share_pct": 25.0
+        },
+        {
+          "country": "Japan",
+          "share_pct": 19.0
+        },
+        {
+          "country": "Germany",
+          "share_pct": 5.0
+        },
+        {
+          "country": "other",
+          "share_pct": 20.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "Kazakhstan",
+              "share_pct": 31.0
+            },
+            {
+              "country": "Latvia",
+              "share_pct": 25.0
+            },
+            {
+              "country": "Japan",
+              "share_pct": 19.0
+            },
+            {
+              "country": "Germany",
+              "share_pct": 5.0
+            },
+            {
+              "country": "other",
+              "share_pct": 20.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 230.0,
+          "production_latest_year": 230.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "230",
+          "production_latest_raw": "230",
+          "reserves_raw": "The United States has very little beryl that can be",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Brazil",
+          "production_prev_year": 80.0,
+          "production_latest_year": 80.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "80",
+          "production_latest_raw": "80",
+          "reserves_raw": "economically hand sorted from pegmatite",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 78.0,
+          "production_latest_year": 77.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "78",
+          "production_latest_raw": "77",
+          "reserves_raw": "deposits. An epithermal deposit in the Spor",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Madagascar",
+          "production_prev_year": 1.0,
+          "production_latest_year": 1.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1",
+          "production_latest_raw": "1",
+          "reserves_raw": "Mountain area in Utah is a large bertrandite",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mozambique",
+          "production_prev_year": 3.0,
+          "production_latest_year": 3.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "3",
+          "production_latest_raw": "3",
+          "reserves_raw": "resource, which is being mined. Proven and",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Nigeria",
+          "production_prev_year": 40.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "40",
+          "production_latest_raw": "40",
+          "reserves_raw": "probable bertrandite reserves in Utah total about",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Rwanda",
+          "production_prev_year": 1.0,
+          "production_latest_year": 1.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1",
+          "production_latest_raw": "1",
+          "reserves_raw": "19,000 tons of beryllium content. World beryllium",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 433.0,
+          "production_latest_year": 430.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "433",
+          "production_latest_raw": "430",
+          "reserves_raw": "reserves were not available.",
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. — Zero.",
+        "1": "Includes estimated beryllium content of imported ores and concentrates, oxide and hydroxide, unwrought metal (including powders), beryllium articles, waste and scrap, beryllium-copper master alloy, and beryllium-copper plates, sheets, and strip.",
+        "2": "Includes estimated beryllium content of exported unwrought metal (including powders), beryllium articles, and waste and scrap.",
+        "3": "Change in total inventory from prior yearend inventory. Negative values indicate increase in inventory. Beginning in 2023, Government stock changes are no longer available.",
+        "4": "Defined for 2020–22 as production + imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+        "5": "Calculated from gross weight and customs value of imports; beryllium content estimated to be 4%. Rounded to two significant figures.",
+        "6": "Defined for 2020–22 as imports − exports ± adjustments for Government and industry stock changes. Beginning in 2023, Government stock changes no longer included.",
+        "7": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
+        "8": "In addition to the countries listed, Kazakhstan and Portugal may have produced beryl ore, but available information was inadequate to make reliable estimates of output. Other nations that produced gemstone beryl ore may also have produced some industrial beryl ore.",
+        "9": "Based on 4% beryllium content of bertrandite and beryl sources.",
+        "10": "See Appendix C for resource and reserve definitions and information concerning data sources. Reserves The United States has very little beryl that can be economically hand sorted from pegmatite deposits. An epithermal deposit in the Spor Mountain area in Utah is a large bertrandite resource, which is being mined. Proven and probable bertrandite reserves in Utah total about 19,000 tons of beryllium content. World beryllium reserves were not available."
+      }
+    },
+    {
       "slug": "bismuth",
       "name": "Bismuth",
       "symbol": "Bi",
@@ -2639,6 +3885,480 @@
         "6": "Includes Hong Kong.",
         "7": "Reported.",
         "8": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
+      "slug": "boron",
+      "name": "Boron",
+      "symbol": "B",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-boron.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "a7606ad4a3c2b0b24d3fd7f3092fdd71f6256b196875137d9b9dfb1c591d2ec9",
+      "pdf_page_count": 2,
+      "units_note": "(Data in thousand metric tons unless otherwise specified)",
+      "price_unit_note": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+      "price_footnote_text": null,
+      "domestic_use_summary": "Three companies in southern California produced borates in 2025, and most of the boron products consumed in the United States were manufactured domestically. Estimated boron production was essentially the same in 2025 compared with production in 2024. U.S. boron production and consumption data were withheld to avoid disclosing company proprietary data. The leading boron producer mined borate ores, which contain the minerals kernite, tincal, and ulexite, by open pit methods and operated associated compound plants. Kernite was used to produce boric acid, tincal was used to produce sodium borate, and ulexite was used as a primary ingredient in the manufacture of a variety of specialty glasses and ceramics. Two companies produced borates from brines extracted through solution-mining techniques. Boron minerals and chemicals were principally consumed in the north-central and eastern United States. In 2025, the glass and ceramics industries remained the leading domestic users of boron products. Boron also was used as a component in abrasives, cleaning products, insecticides, insulation, and in the production of semiconductors.",
+      "events_trends_summary": "Elemental boron is a metalloid with limited commercial applications. Although the term “boron” is commonly referenced, it does not occur in nature in an elemental state. Boron combines with oxygen and other elements to form boric acid or inorganic salts called borates. Boron compounds, chiefly borates, are commercially important; therefore, boron products are priced and sold based on their boric oxide (BO) content, varying by ore and compound and by the absence or presence of calcium and sodium. Four borate minerals— colemanite, kernite, tincal, and ulexite—account for 90% of the borate minerals used by industry worldwide. Although borates were used in more than 300 applications, more than three-quarters of world consumption was used in ceramics, detergents, fertilizers, and glass. China, India, Malaysia, Indonesia, the Netherlands, and Canada, in decreasing order of tonnage, were the countries that imported the largest quantities of refined borates from the United States in 2025. Domestic shipments of boric acid were sent to China, the Netherlands, the Republic of Korea, Taiwan, and Japan, in decreasing order of tonnage. BORON U.S. Geological Survey, Mineral Commodity Summaries, February 2026 Because China has low-grade boron reserves and demand for boron is anticipated to rise in that country, imports from the United States were expected to remain steady during the next several years. Interests and investments in boron derivatives continued abroad and domestically. In May 2025, a boron project in Piskanja, Serbia, owned by a Canada-based mine developer signed a letter of intent with a Serbian mining company to renovate the Pobrdje Mine, extend its mine life, and to repurpose regional mining equipment. The Pobrdje Mine’s deposit consisted primarily of colemanite and the mine was estimated to have a mine life of 21 years. A geologic exploration of the Jarandol Basin, Serbia, was also completed in May and confirmed boron mineralization. In June, the European Commission designated the Jadar project, developed by a London-based global mining company, as one of the 60 strategic projects for the Critical Raw Materials Act. The Jadar Project was endorsed for investment in the extraction of boron and lithium to help the European Union ensure that it maintains diverse, stable, and secure supply chains. The project is in western Serbia and was expected to produce 286,000 tons per year of boric acid at full production. In July 2025, one Australia-based mine developer delayed construction of its project in Nevada until March 2026 owing to an 80% decrease in lithium prices when compared with prices in 2022. It was initially expected to begin construction in 2025, and initial production was expected to begin in 2028. Once completed, the project was expected to have a 95-year mine life and produce about 170,000 tons of boric acid per year as a byproduct of lithium production. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate, and uranium were also added.",
+      "world_resources_summary": "Deposits of borates are associated with volcanic activity and arid climates, with the largest economically viable deposits in the Mojave Desert of the United States, the Alpide belt along the southern margin of Eurasia, and the Andean belt of South America. In order of abundance, U.S. deposits consist primarily of tincal, kernite, and borates contained in brines, and to a lesser extent, ulexite and colemanite. About 70% of all deposits in Turkey are colemanite, primarily used in the production of heat-resistant glass. At current levels of consumption, world resources are adequate for the foreseeable future.",
+      "substitutes_summary": "The substitution of other materials for boron is possible in detergents, enamels, insulation, and soaps. Sodium percarbonate can replace borates in detergents and requires lower temperatures to undergo hydrolysis, which is an environmental consideration. Some enamels can use other glass-producing substances, such as phosphates. Insulation substitutes include cellulose, foams, and mineral wools. In soaps, sodium and potassium salts of fatty acids can act as cleaning and emulsifying agents.",
+      "recycling_summary": "Insignificant.",
+      "salient_stats": [
+        {
+          "label": "Production",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Refined borax",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 232.0,
+            "2022": 168.0,
+            "2023": 156.0,
+            "2024": 150.0,
+            "2025e": 120.0
+          },
+          "raw_values": {
+            "2021": "232",
+            "2022": "168",
+            "2023": "156",
+            "2024": "150",
+            "2025e": "120"
+          }
+        },
+        {
+          "label": "Boric acid",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 54.0,
+            "2022": 48.0,
+            "2023": 38.0,
+            "2024": 43.0,
+            "2025e": 45.0
+          },
+          "raw_values": {
+            "2021": "54",
+            "2022": "48",
+            "2023": "38",
+            "2024": "43",
+            "2025e": "45"
+          }
+        },
+        {
+          "label": "Colemanite (calcium borates)",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 3.0,
+            "2022": 1.0,
+            "2023": 2.0,
+            "2024": 1.0,
+            "2025e": 2.0
+          },
+          "raw_values": {
+            "2021": "3",
+            "2022": "1",
+            "2023": "2",
+            "2024": "1",
+            "2025e": "2"
+          }
+        },
+        {
+          "label": "Ulexite (sodium borates)",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 49.0,
+            "2022": 38.0,
+            "2023": 20.0,
+            "2024": 28.0,
+            "2025e": 38.0
+          },
+          "raw_values": {
+            "2021": "49",
+            "2022": "38",
+            "2023": "20",
+            "2024": "28",
+            "2025e": "38"
+          }
+        },
+        {
+          "label": "Boric acid",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 280.0,
+            "2022": 239.0,
+            "2023": 253.0,
+            "2024": 246.0,
+            "2025e": 260.0
+          },
+          "raw_values": {
+            "2021": "280",
+            "2022": "239",
+            "2023": "253",
+            "2024": "246",
+            "2025e": "260"
+          }
+        },
+        {
+          "label": "Refined borax",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 607.0,
+            "2022": 651.0,
+            "2023": 604.0,
+            "2024": 655.0,
+            "2025e": 600.0
+          },
+          "raw_values": {
+            "2021": "607",
+            "2022": "651",
+            "2023": "604",
+            "2024": "655",
+            "2025e": "600"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "1",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "W",
+            "2022": "W",
+            "2023": "W",
+            "2024": "W",
+            "2025e": "W"
+          }
+        },
+        {
+          "label": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+          "footnote": null,
+          "section": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+          "subsection": null,
+          "values": {
+            "2021": 394.0,
+            "2022": 485.0,
+            "2023": 606.0,
+            "2024": 574.0,
+            "2025e": 540.0
+          },
+          "raw_values": {
+            "2021": "394",
+            "2022": "485",
+            "2023": "606",
+            "2024": "574",
+            "2025e": "540"
+          }
+        },
+        {
+          "label": "Employment, number",
+          "footnote": null,
+          "section": "Employment, number",
+          "subsection": null,
+          "values": {
+            "2021": 1330.0,
+            "2022": 1400.0,
+            "2023": 1430.0,
+            "2024": 1500.0,
+            "2025e": 1500.0
+          },
+          "raw_values": {
+            "2021": "1330",
+            "2022": "1400",
+            "2023": "1430",
+            "2024": "1500",
+            "2025e": "1500"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "E",
+            "2022": "E",
+            "2023": "E",
+            "2024": "E",
+            "2025e": "E"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+          "unit_note": "Price, average unit value of combined imports, cost, insurance, and freight, dollars per metric ton",
+          "values": {
+            "2021": 394.0,
+            "2022": 485.0,
+            "2023": 606.0,
+            "2024": 574.0,
+            "2025e": 540.0
+          },
+          "raw_values": {
+            "2021": "394",
+            "2022": "485",
+            "2023": "606",
+            "2024": "574",
+            "2025e": "540"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 205.0,
+      "exports_total_latest": 860.0,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": 540.0,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {
+        "net_import_reliance": "E",
+        "apparent_consumption": "W"
+      },
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "All forms",
+          "countries": [
+            {
+              "country": "Turkey",
+              "share_pct": 90.0
+            },
+            {
+              "country": "Bolivia",
+              "share_pct": 6.0
+            },
+            {
+              "country": "other",
+              "share_pct": 4.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": null,
+          "production_latest_year": null,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "W",
+          "production_latest_raw": "W",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Argentina, crude ore",
+          "production_prev_year": 160.0,
+          "production_latest_year": 170.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "160",
+          "production_latest_raw": "170",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Bolivia, ulexite",
+          "production_prev_year": 230.0,
+          "production_latest_year": 380.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "230",
+          "production_latest_raw": "380",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Chile, ulexite",
+          "production_prev_year": 470.0,
+          "production_latest_year": 300.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "470",
+          "production_latest_raw": "300",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China, boric oxide equivalent",
+          "production_prev_year": 210.0,
+          "production_latest_year": 230.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "210",
+          "production_latest_raw": "230",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Germany, compounds",
+          "production_prev_year": 45.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "45",
+          "production_latest_raw": "40",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Peru, crude borates",
+          "production_prev_year": 190.0,
+          "production_latest_year": 220.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "190",
+          "production_latest_raw": "220",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia, datolite ore",
+          "production_prev_year": 90.0,
+          "production_latest_year": 80.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "90",
+          "production_latest_raw": "80",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Turkey, refined borates",
+          "production_prev_year": 1800.0,
+          "production_latest_year": 1500.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1800",
+          "production_latest_raw": "1500",
+          "reserves_raw": null,
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total",
+          "production_prev_year": null,
+          "production_latest_year": null,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "XX",
+          "production_latest_raw": "XX",
+          "reserves_raw": null,
+          "note": "footnote 4",
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. E Net exporter. NA Not available. W Withheld to avoid disclosing company proprietary data. XX Not applicable.",
+        "1": "Defined as production + imports – exports.",
+        "2": "Defined as imports – exports.",
+        "3": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "4": "World totals cannot be calculated because production and reserves are not reported in a consistent manner by all countries."
+      }
+    },
+    {
+      "slug": "cesium",
+      "name": "Cesium",
+      "symbol": "Cs",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-cesium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "f5f3cf939c4a2a517f013aafd86bc6077918486b11e7b4945994623b7ed88417",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons, cesium oxide, unless otherwise specified)",
+      "price_unit_note": null,
+      "price_footnote_text": null,
+      "domestic_use_summary": "In 2025, no cesium was mined domestically, and the United States was 100% net import reliant for cesium minerals. Pollucite, mainly found in association with lithium-rich, lepidolite-bearing or petalite- bearing zoned granite pegmatites, is the principal cesium ore mineral. Cesium is used in relatively small-scale applications, using only a few grams for most applications. Owing to the lack of global availability of cesium, many applications have used mineral substitutes and the use of primary cesium in any particular application may no longer be viable. On the basis of consumption by quantity in end-use products, cesium carbonate and hydroxide are the leading cesium products consumed globally, followed by cesium formate, cesium iodide, cesium nitrate, and cesium chloride. Cesium catalysts, such as cesium carbonate and cesium hydroxide, are used largely in industrial processes. Cesium catalysts have largely replaced potassium promoters in high-purity sulfuric acid manufacturing, which may enable lower plant stack emissions and lower ignition temperatures. Additionally, cesium catalysts are primarily used in methyl methacrylate manufacturing in place of conventional cyanide-based processes and are necessary to improve efficiency, lower operating costs, and reduce environmental impacts. Sulfuric acid catalysts and methyl methacrylate may be used in aerospace, automotive, and manufacturing applications. Cesium formate brines are used for high- pressure, high-temperature well drilling for oil and gas exploration and production. Cesium iodide is used primarily in X-ray panel production. Cesium bromide may be used in infrared detectors, optics, photoelectric cells, scintillation counters, and spectrophotometers. Cesium carbonate may be used in the alkylation of organic compounds and in energy conversion devices, such as fuel cells, magneto-hydrodynamic generators, and polymer solar cells. Cesium chloride may be used in analytical chemistry applications as a reagent, in high-temperature solders, as an intermediate in cesium metal production, in isopycnic centrifugation, as a radioisotope in nuclear medicine, as an insect repellent in agricultural applications, and in specialty glasses. Cesium hydroxide may be used as an electrolyte in alkaline storage batteries. Cesium iodide may be used in fluoroscopy equipment as the input phosphor of X-ray image intensifier tubes, and in scintillators. Cesium metal may be used in the production of cesium compounds and photoelectric cells. Cesium nitrate may be used as a colorant and oxidizer in the pyrotechnic industry, in petroleum cracking, in scintillation counters, and in X-ray phosphors. Cesium sulfates may be used in water treatment, fuel cells, and to improve optical quality for scientific instruments. Cesium isotopes, which are obtained as a byproduct in nuclear fission or formed from other isotopes, may be used in electronic, medical, metallurgical, and research applications. Cesium isotopes are used as an atomic resonance frequency standard in atomic clocks, playing a vital role in aircraft guidance systems, global positioning satellites, and internet and cellular telephone transmissions. Cesium-131 was used in medical products for treatment of various cancers. Cesium-137 may be used in industrial gauges, in mining and geophysical instruments, and for sterilization of food, sewage, and surgical equipment. Because of the danger posed by the radiological properties of cesium-137, Congress set a goal for the National Nuclear Security Administration to eliminate cesium-137 blood irradiators by 2027 in the United States. Alternatives, including X-ray irradiators, have been developed with similar capabilities and have been partially implemented.",
+      "events_trends_summary": "Domestic cesium occurrences will likely remain subeconomic unless market conditions change. No known human health issues are associated with exposure to naturally occurring cesium, and its use has minimal environmental impacts. Manufactured radioactive isotopes of cesium have been known to cause adverse health effects. Certain cesium compounds may be toxic if consumed. Food that has been irradiated using the radioisotope cesium-137 has been found to be safe by the U.S. Food and Drug Administration. During 2025, one company in Canada reported intermittent cesium production and processing from mined ore and stockpiles at the Tanco Mine. The recovery and processing of cesium from tailings at the Bikita Mine in Zimbabwe for shipment to China was restarted in recent years. Throughout 2025, multiple projects that could produce cesium as a byproduct of lepidolite, pollucite, spodumene, or zinnwaldite mining, focused primarily on lithium or rubidium extraction, were in the exploration and feasibility stages in Canada, Laos, Namibia, and the United States. One company that was developing a lepidolite (hard-rock) mine and processing facility in Namibia brought in an independent administrator owing to the lack of project financing at the end of 2024. Another company was in the process of securing financing to take ownership of the project as of September 2025. Based on historical information, the Namibia project contained a Joint Ore Reserves Committee-compliant measured and indicated mineral resource estimate totaling 3,100 tons of cesium. One company developed a recycling program for X-ray panels in 2020 that recovered cesium iodide during the production process for reproduction into new panels, which was believed to now be the industry standard.",
+      "world_resources_summary": "Cesium is associated with lithium-bearing pegmatites worldwide, and cesium resources have been identified in Australia, Canada, Namibia, the United States, and Zimbabwe. In the United States, pollucite occurs in pegmatites in Alaska, Maine, and South Dakota. Lower concentrations occur in brines in Chile and China and in geothermal systems in China, Germany, and India. China was estimated to have cesium-rich deposits of geyserite, lepidolite, and pollucite, with concentrations highest in Yichun, Jiangxi Province, although no resource, reserve, or production estimates were available. Cesium-bearing clays have been identified in Laos and in situ extraction was being researched.",
+      "substitutes_summary": "Cesium and rubidium can be used interchangeably in many applications because they have similar physical properties and atomic radii. Cesium, however, is more electropositive than rubidium, making it a preferred material for some applications. Rubidium is mined from similar deposits in smaller quantities as a byproduct of cesium production in pegmatites and as a byproduct of lithium production from lepidolite mining and processing, making it no more readily available than cesium.",
+      "recycling_summary": "Cesium formate brines are typically rented by oil and gas exploration clients. After completion of the well, the used cesium formate brine is returned and reprocessed for subsequent drilling operations. Cesium formate brines are recycled, recovering nearly 85% of the brines for recycling to be reprocessed for further use. Cesium iodide is recycled from radiography panels and used in the production of new panels. CESIUM U.S. Geological Survey, Mineral Commodity Summaries, February 2026",
+      "salient_stats": [],
+      "price_quotes": [],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": null,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": null,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": null,
+      "world_production_year_latest": null,
+      "world_production": [],
+      "footnotes": {
+        "1": "See Appendix C for resource and reserve definitions and information concerning data sources."
       }
     },
     {
@@ -4222,6 +5942,19 @@
           ]
         },
         {
+          "category": "Copper content of ore and concentrate",
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 99.0
+            },
+            {
+              "country": "other",
+              "share_pct": 1.0
+            }
+          ]
+        },
+        {
           "category": "Copper content of scrap",
           "countries": [
             {
@@ -5012,6 +6745,603 @@
         "4": "Less than 500 carats.",
         "5": "Includes Hong Kong.",
         "6": "See Appendix C for resource and reserve definitions and information concerning data sources."
+      }
+    },
+    {
+      "slug": "fluorspar",
+      "name": "Fluorspar",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-fluorspar.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "7cb5aa4a162fadf72f77aa60ec9f2adb38e83e548d797ad6393e9c015c6822eb",
+      "pdf_page_count": 2,
+      "units_note": "(Data in thousand metric tons unless otherwise specified)",
+      "price_unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+      "price_footnote_text": null,
+      "domestic_use_summary": "Significant U.S. fluorspar (calcium fluoride, CaF) mine production has not been reported since 1995. In 2025, one company likely processed and sold fluorspar from stockpiles produced as a byproduct of its limestone quarrying operation in Cave-In-Rock, IL; however, production data were not available. A second company continued construction of a fluorspar mine and lumps-processing plant in Utah, with completion anticipated by yearend. Excluding sales from stockpiled fluorspar, the United States was 100% net import reliant for fluorspar. U.S. fluorspar consumption was satisfied mostly by imports. Domestically, CaF was used in the production of anhydrous hydrogen fluoride (HF) in Louisiana and Texas and was by far the leading use for acid-grade fluorspar. Aqueous HF is the primary feedstock for the manufacture of virtually all fluorine-bearing chemicals, particularly refrigerants and fluoropolymers, and chemicals used in the processing of primary aluminum and uranium. HF was also used as a catalyst in the petrochemical industry and essential in the cleaning and etching process during semiconductor manufacturing. Other uses of fluorspar were in cement production, in enamels, as a flux in steelmaking, in glass manufacture, in iron and steel casting, and in welding rod coatings. The U.S. Department of Energy continued to produce aqueous HF as a byproduct of the conversion of depleted uranium hexafluoride to depleted uranium oxide at plants in Paducah, KY, and Portsmouth, OH; the aqueous HF was sold into the commercial market. One company in Aurora, NC, produced HF from fluorosilicic acid (FSA). In 2025, an estimated 45,000 tons of FSA, equivalent to about 73,000 tons of fluorspar grading 100% CaF, was recovered from three phosphoric acid plants that processed phosphate rock.",
+      "events_trends_summary": "Global mine production of fluorspar was estimated to have decreased by 1% to 10 million tons in 2025. The supply of fluorspar in China continued to be constrained by rectification measures on fluorspar mining, with some mines suspending production for safety inspections. As such, China’s imports of fluorspar in the first half of 2025 increased by 48% to 856,000 tons compared with those in the same period in 2024, with 86% of imports sourced from Mongolia. In Canada, a fluorspar mine that was previously idled in 2022, restarted production and made its first shipment of acid-grade fluorspar at the end of August. The company anticipated ramping up production to 200,000 tons per year. In China, a fluorspar mine in Xinjiang began operations in September, with a projected annual production of 300,000 tons of acid-grade fluorspar. Several other fluorspar mines were in development or in the process of reopening in Australia, Canada, Germany, Italy, Kenya, Mongolia, Mozambique, and the United States.",
+      "world_resources_summary": "Large quantities of fluorine are present in phosphate rock. Current U.S. reserves of phosphate rock are estimated to be 1 billion tons, containing about 72 million tons of 100% fluorspar equivalent assuming an average fluorine content of 3.5% in the phosphate rock. World reserves of phosphate rock are estimated to be 74 billion tons, containing about 5 billion tons of 100% fluorspar equivalent.",
+      "substitutes_summary": "FSA has been used as an alternative to fluorspar in the production of AlF and HF. Aluminum smelting dross, borax, calcium chloride, iron oxides, manganese ore, silica sand, and titanium dioxide have been used as substitutes for fluorspar fluxes.",
+      "recycling_summary": "Synthetic fluorspar may be produced from neutralization of waste in the enrichment of uranium, petroleum alkylation, and stainless-steel pickling; however, undesirable impurities constrain its use. Primary aluminum producers recycle HF and fluorides from smelting operations.",
+      "salient_stats": [
+        {
+          "label": "Finished, metallurgical grade",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": null,
+            "2022": null,
+            "2023": null,
+            "2024": null,
+            "2025e": null
+          },
+          "raw_values": {
+            "2021": "NA",
+            "2022": "NA",
+            "2023": "NA",
+            "2024": "NA",
+            "2025e": "NA"
+          }
+        },
+        {
+          "label": "Fluorosilicic acid from phosphate rock",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 40.0,
+            "2022": 43.0,
+            "2023": 43.0,
+            "2024": 45.0,
+            "2025e": 45.0
+          },
+          "raw_values": {
+            "2021": "40",
+            "2022": "43",
+            "2023": "43",
+            "2024": "45",
+            "2025e": "45"
+          }
+        },
+        {
+          "label": "Acid grade",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 391.0,
+            "2022": 448.0,
+            "2023": 378.0,
+            "2024": 372.0,
+            "2025e": 360.0
+          },
+          "raw_values": {
+            "2021": "391",
+            "2022": "448",
+            "2023": "378",
+            "2024": "372",
+            "2025e": "360"
+          }
+        },
+        {
+          "label": "Metallurgical grade",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 59.0,
+            "2022": 84.0,
+            "2023": 34.0,
+            "2024": 31.0,
+            "2025e": 20.0
+          },
+          "raw_values": {
+            "2021": "59",
+            "2022": "84",
+            "2023": "34",
+            "2024": "31",
+            "2025e": "20"
+          }
+        },
+        {
+          "label": "Total fluorspar imports",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 451.0,
+            "2022": 532.0,
+            "2023": 412.0,
+            "2024": 403.0,
+            "2025e": 380.0
+          },
+          "raw_values": {
+            "2021": "451",
+            "2022": "532",
+            "2023": "412",
+            "2024": "403",
+            "2025e": "380"
+          }
+        },
+        {
+          "label": "Hydrofluoric acid",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 103.0,
+            "2022": 99.0,
+            "2023": 87.0,
+            "2024": 69.0,
+            "2025e": 76.0
+          },
+          "raw_values": {
+            "2021": "103",
+            "2022": "99",
+            "2023": "87",
+            "2024": "69",
+            "2025e": "76"
+          }
+        },
+        {
+          "label": "Aluminum fluoride",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 28.0,
+            "2022": 21.0,
+            "2023": 25.0,
+            "2024": 22.0,
+            "2025e": 20.0
+          },
+          "raw_values": {
+            "2021": "28",
+            "2022": "21",
+            "2023": "25",
+            "2024": "22",
+            "2025e": "20"
+          }
+        },
+        {
+          "label": "Cryolite",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 42.0,
+            "2022": 28.0,
+            "2023": 32.0,
+            "2024": 22.0,
+            "2025e": 21.0
+          },
+          "raw_values": {
+            "2021": "42",
+            "2022": "28",
+            "2023": "32",
+            "2024": "22",
+            "2025e": "21"
+          }
+        },
+        {
+          "label": "Exports, fluorspar, all grades",
+          "footnote": "1",
+          "section": "Exports, fluorspar, all grades",
+          "subsection": null,
+          "values": {
+            "2021": 15.0,
+            "2022": 24.0,
+            "2023": 20.0,
+            "2024": 14.0,
+            "2025e": 7.0
+          },
+          "raw_values": {
+            "2021": "15",
+            "2022": "24",
+            "2023": "20",
+            "2024": "14",
+            "2025e": "7"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 436.0,
+            "2022": 508.0,
+            "2023": 392.0,
+            "2024": 390.0,
+            "2025e": 370.0
+          },
+          "raw_values": {
+            "2021": "436",
+            "2022": "508",
+            "2023": "392",
+            "2024": "390",
+            "2025e": "370"
+          }
+        },
+        {
+          "label": "Acid grade",
+          "footnote": null,
+          "section": "Price, average unit value of imports, cost, insurance, and freight,",
+          "subsection": "dollars per metric ton",
+          "values": {
+            "2021": 322.0,
+            "2022": 387.0,
+            "2023": 428.0,
+            "2024": 464.0,
+            "2025e": 470.0
+          },
+          "raw_values": {
+            "2021": "322",
+            "2022": "387",
+            "2023": "428",
+            "2024": "464",
+            "2025e": "470"
+          }
+        },
+        {
+          "label": "Metallurgical grade",
+          "footnote": null,
+          "section": "Price, average unit value of imports, cost, insurance, and freight,",
+          "subsection": "dollars per metric ton",
+          "values": {
+            "2021": 151.0,
+            "2022": 206.0,
+            "2023": 338.0,
+            "2024": 336.0,
+            "2025e": 400.0
+          },
+          "raw_values": {
+            "2021": "151",
+            "2022": "206",
+            "2023": "338",
+            "2024": "336",
+            "2025e": "400"
+          }
+        },
+        {
+          "label": "Employment, mine, number",
+          "footnote": null,
+          "section": "Employment, mine, number",
+          "subsection": null,
+          "values": {
+            "2021": 17.0,
+            "2022": 15.0,
+            "2023": 16.0,
+            "2024": 15.0,
+            "2025e": 15.0
+          },
+          "raw_values": {
+            "2021": "17",
+            "2022": "15",
+            "2023": "16",
+            "2024": "15",
+            "2025e": "15"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 100.0,
+            "2022": 100.0,
+            "2023": 100.0,
+            "2024": 100.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": "100",
+            "2022": "100",
+            "2023": "100",
+            "2024": "100",
+            "2025e": "100"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Acid grade",
+          "unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+          "values": {
+            "2021": 322.0,
+            "2022": 387.0,
+            "2023": 428.0,
+            "2024": 464.0,
+            "2025e": 470.0
+          },
+          "raw_values": {
+            "2021": "322",
+            "2022": "387",
+            "2023": "428",
+            "2024": "464",
+            "2025e": "470"
+          }
+        },
+        {
+          "form": "Metallurgical grade",
+          "unit_note": "Price, average unit value of imports, cost, insurance, and freight,",
+          "values": {
+            "2021": 151.0,
+            "2022": 206.0,
+            "2023": 338.0,
+            "2024": 336.0,
+            "2025e": 400.0
+          },
+          "raw_values": {
+            "2021": "151",
+            "2022": "206",
+            "2023": "338",
+            "2024": "336",
+            "2025e": "400"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 877.0,
+      "exports_total_latest": 7.0,
+      "apparent_consumption_latest": 370.0,
+      "price_usd_per_pound_latest": 470.0,
+      "net_import_reliance_pct_latest": 100.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [
+        {
+          "country": "Mexico",
+          "share_pct": 64.0
+        },
+        {
+          "country": "Vietnam",
+          "share_pct": 12.0
+        },
+        {
+          "country": "China",
+          "share_pct": 10.0
+        },
+        {
+          "country": "South Africa",
+          "share_pct": 9.0
+        },
+        {
+          "country": "other",
+          "share_pct": 5.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "Mexico",
+              "share_pct": 64.0
+            },
+            {
+              "country": "Vietnam",
+              "share_pct": 12.0
+            },
+            {
+              "country": "China",
+              "share_pct": 10.0
+            },
+            {
+              "country": "South Africa",
+              "share_pct": 9.0
+            },
+            {
+              "country": "other",
+              "share_pct": 5.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": null,
+          "production_latest_year": null,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "NA",
+          "production_latest_raw": "NA",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Brazil",
+          "production_prev_year": 85.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": 2500.0,
+          "production_prev_raw": "85",
+          "production_latest_raw": "100",
+          "reserves_raw": "2500",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 6000.0,
+          "production_latest_year": 6000.0,
+          "capacity": null,
+          "reserves": 110000.0,
+          "production_prev_raw": "6000",
+          "production_latest_raw": "6000",
+          "reserves_raw": "110000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Germany",
+          "production_prev_year": 35.0,
+          "production_latest_year": 35.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "35",
+          "production_latest_raw": "35",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Iran",
+          "production_prev_year": 53.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": 7600.0,
+          "production_prev_raw": "53",
+          "production_latest_raw": "70",
+          "reserves_raw": "7600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mexico",
+          "production_prev_year": 1510.0,
+          "production_latest_year": 1500.0,
+          "capacity": null,
+          "reserves": 68000.0,
+          "production_prev_raw": "1510",
+          "production_latest_raw": "1500",
+          "reserves_raw": "68000",
+          "note": "footnote 6",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mongolia",
+          "production_prev_year": 1430.0,
+          "production_latest_year": 1500.0,
+          "capacity": null,
+          "reserves": 34000.0,
+          "production_prev_raw": "1430",
+          "production_latest_raw": "1500",
+          "reserves_raw": "34000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Pakistan",
+          "production_prev_year": 60.0,
+          "production_latest_year": 50.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "60",
+          "production_latest_raw": "50",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 447.0,
+          "production_latest_year": 410.0,
+          "capacity": null,
+          "reserves": 41000.0,
+          "production_prev_raw": "447",
+          "production_latest_raw": "410",
+          "reserves_raw": "41000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Spain",
+          "production_prev_year": 138.0,
+          "production_latest_year": 140.0,
+          "capacity": null,
+          "reserves": 15000.0,
+          "production_prev_raw": "138",
+          "production_latest_raw": "140",
+          "reserves_raw": "15000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Tajikistan",
+          "production_prev_year": 15.0,
+          "production_latest_year": 15.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "15",
+          "production_latest_raw": "15",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Thailand",
+          "production_prev_year": 75.0,
+          "production_latest_year": 55.0,
+          "capacity": null,
+          "reserves": 3600.0,
+          "production_prev_raw": "75",
+          "production_latest_raw": "55",
+          "reserves_raw": "3600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Vietnam",
+          "production_prev_year": 146.0,
+          "production_latest_year": 160.0,
+          "capacity": null,
+          "reserves": 16000.0,
+          "production_prev_raw": "146",
+          "production_latest_raw": "160",
+          "reserves_raw": "16000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 316.0,
+          "production_latest_year": 200.0,
+          "capacity": null,
+          "reserves": 32000.0,
+          "production_prev_raw": "316",
+          "production_latest_raw": "200",
+          "reserves_raw": "32000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 10300.0,
+          "production_latest_year": 10000.0,
+          "capacity": null,
+          "reserves": 330000.0,
+          "production_prev_raw": "10300",
+          "production_latest_raw": "10000",
+          "reserves_raw": "330000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available.",
+        "1": "Includes data for the following Schedule B numbers: 2529.21.0000 and 2529.22.0000.",
+        "2": "Defined as total fluorspar imports – exports.",
+        "3": "Includes data for the following Harmonized Tariff Schedule of the United States codes: 2529.21.0000 and 2529.22.0000.",
+        "4": "Includes Hong Kong.",
+        "5": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "6": "Reported.",
+        "7": "Measured as 100% CaF."
       }
     },
     {
@@ -7324,6 +9654,472 @@
       }
     },
     {
+      "slug": "lead",
+      "name": "Lead",
+      "symbol": "Pb",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-lead.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "7abd4936108c47b9f240e7282579a917a052c72624b3ddf62ac8746926c2c46c",
+      "pdf_page_count": 2,
+      "units_note": "(Data in thousand metric tons, lead content, unless otherwise specified)",
+      "price_unit_note": "Price, average, North American, cents per pound",
+      "price_footnote_text": "Source: S&P Global Platts Metals Week.",
+      "domestic_use_summary": "Lead was produced domestically by five lead mines in Missouri plus as a byproduct at two zinc mines in Alaska and two silver mines in Idaho. The value of recoverable lead from ore mined in 2025 was an estimated $650 million, 8% less than that in 2024. Nearly all lead concentrate production has been exported since the last primary lead refinery closed in 2013. The value of the secondary lead produced in 2025 was $2.4 billion, a 4% decrease from that in 2024. The lead-acid battery industry accounted for an estimated 67% of U.S. apparent consumption of lead during 2025. Lead-acid batteries were primarily used as starting-lighting-ignition (SLI) batteries for automobiles, as industrial-type batteries for standby power for computer and telecommunications networks, and for motive power.",
+      "events_trends_summary": "During the first 10 months of 2025, the average North American price for lead was 106 cents per pound, 3% less than the annual average price of 108.8 cents per pound in 2024. Global stocks of lead in LME-approved warehouses were 217,000 tons at the end of October, 10% less than those at yearend 2024. In 2025, domestic mine production of recoverable lead decreased by 9% from that in 2024 owing to several lead- producing mines reducing production. Estimated U.S. apparent consumption of refined lead increased by 8% from that in 2024, and the net import reliance increased to 33% from 27%. In the first 8 months of 2025, 23 million spent SLI lead-acid batteries were exported, a 23% increase from 19 million batteries exported in the same period in 2024. According to the International Lead and Zinc Study Group, global refined lead production in 2025 was forecast to increase slightly to 13.3 million tons and refined lead consumption to increase slightly to 13.25 million tons. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+      "world_resources_summary": "Identified world lead resources total more than 2 billion tons. In recent years, significant lead resources have been identified in association with zinc and (or) silver or copper deposits in Australia, China, Ireland, Mexico, Peru, Portugal, Russia, and the United States (Alaska).",
+      "substitutes_summary": "Substitution by plastics has reduced the use of lead in cable covering and cans. Tin has replaced lead in solder for potable water systems. The electronics industry has moved toward lead-free solders and flat-panel displays that do not require lead shielding. Steel and zinc are common substitutes for lead in wheel weights.",
+      "recycling_summary": "In 2025, an estimated 1 million tons of secondary lead was produced, an amount equivalent to 70% of apparent domestic consumption. Nearly all secondary lead was recovered from old scrap, mostly lead-acid batteries.",
+      "salient_stats": [
+        {
+          "label": "Mine, lead in concentrates",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 294.0,
+            "2022": 273.0,
+            "2023": 270.0,
+            "2024": 304.0,
+            "2025e": 280.0
+          },
+          "raw_values": {
+            "2021": "294",
+            "2022": "273",
+            "2023": "270",
+            "2024": "304",
+            "2025e": "280"
+          }
+        },
+        {
+          "label": "Mine, recoverable lead",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 286.0,
+            "2022": 264.0,
+            "2023": 263.0,
+            "2024": 296.0,
+            "2025e": 270.0
+          },
+          "raw_values": {
+            "2021": "286",
+            "2022": "264",
+            "2023": "263",
+            "2024": "296",
+            "2025e": "270"
+          }
+        },
+        {
+          "label": "Primary refinery",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 0.0,
+            "2022": 0.0,
+            "2023": 0.0,
+            "2024": 0.0,
+            "2025e": 0.0
+          },
+          "raw_values": {
+            "2021": "—",
+            "2022": "—",
+            "2023": "—",
+            "2024": "—",
+            "2025e": "—"
+          }
+        },
+        {
+          "label": "Secondary refinery, old scrap",
+          "footnote": null,
+          "section": "Production",
+          "subsection": null,
+          "values": {
+            "2021": 1050.0,
+            "2022": 1010.0,
+            "2023": 1010.0,
+            "2024": 1030.0,
+            "2025e": 1000.0
+          },
+          "raw_values": {
+            "2021": "1050",
+            "2022": "1010",
+            "2023": "1010",
+            "2024": "1030",
+            "2025e": "1000"
+          }
+        },
+        {
+          "label": "() Refined metal, unwrought",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": "()",
+          "values": {
+            "2021": 614.0,
+            "2022": 652.0,
+            "2023": 519.0,
+            "2024": 410.0,
+            "2025e": 520.0
+          },
+          "raw_values": {
+            "2021": "614",
+            "2022": "652",
+            "2023": "519",
+            "2024": "410",
+            "2025e": "520"
+          }
+        },
+        {
+          "label": "Lead in concentrates",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 262.0,
+            "2022": 255.0,
+            "2023": 246.0,
+            "2024": 260.0,
+            "2025e": 220.0
+          },
+          "raw_values": {
+            "2021": "262",
+            "2022": "255",
+            "2023": "246",
+            "2024": "260",
+            "2025e": "220"
+          }
+        },
+        {
+          "label": "Refined metal, unwrought (gross weight)",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 22.0,
+            "2022": 26.0,
+            "2023": 23.0,
+            "2024": 37.0,
+            "2025e": 22.0
+          },
+          "raw_values": {
+            "2021": "22",
+            "2022": "26",
+            "2023": "23",
+            "2024": "37",
+            "2025e": "22"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "2",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 1640.0,
+            "2022": 1630.0,
+            "2023": 1500.0,
+            "2024": 1410.0,
+            "2025e": 1500.0
+          },
+          "raw_values": {
+            "2021": "1640",
+            "2022": "1630",
+            "2023": "1500",
+            "2024": "1410",
+            "2025e": "1500"
+          }
+        },
+        {
+          "label": "Price, average, North American, cents per pound",
+          "footnote": "3",
+          "section": "Price, average, North American, cents per pound",
+          "subsection": null,
+          "values": {
+            "2021": 113.0,
+            "2022": 116.5,
+            "2023": 114.1,
+            "2024": 108.8,
+            "2025e": 106.0
+          },
+          "raw_values": {
+            "2021": "113.0",
+            "2022": "116.5",
+            "2023": "114.1",
+            "2024": "108.8",
+            "2025e": "106"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption, refined metal",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption, refined metal",
+          "subsection": null,
+          "values": {
+            "2021": 36.0,
+            "2022": 38.0,
+            "2023": 33.0,
+            "2024": 27.0,
+            "2025e": 33.0
+          },
+          "raw_values": {
+            "2021": "36",
+            "2022": "38",
+            "2023": "33",
+            "2024": "27",
+            "2025e": "33"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, average, North American, cents per pound",
+          "unit_note": "Price, average, North American, cents per pound",
+          "values": {
+            "2021": 113.0,
+            "2022": 116.5,
+            "2023": 114.1,
+            "2024": 108.8,
+            "2025e": 106.0
+          },
+          "raw_values": {
+            "2021": "113.0",
+            "2022": "116.5",
+            "2023": "114.1",
+            "2024": "108.8",
+            "2025e": "106"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": 280.0,
+      "primary_smelting_latest": 0.0,
+      "secondary_smelting_latest": 1000.0,
+      "imports_total_latest": 520.0,
+      "exports_total_latest": 242.0,
+      "apparent_consumption_latest": 1500.0,
+      "price_usd_per_pound_latest": 106.0,
+      "net_import_reliance_pct_latest": 33.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [
+        {
+          "category": "Refined metal",
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 31.0
+            },
+            {
+              "country": "Republic of Korea",
+              "share_pct": 16.0
+            },
+            {
+              "country": "Mexico",
+              "share_pct": 15.0
+            },
+            {
+              "country": "Australia",
+              "share_pct": 13.0
+            },
+            {
+              "country": "other",
+              "share_pct": 25.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 304.0,
+          "production_latest_year": 280.0,
+          "capacity": null,
+          "reserves": 4600.0,
+          "production_prev_raw": "304",
+          "production_latest_raw": "280",
+          "reserves_raw": "4600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 481.0,
+          "production_latest_year": 480.0,
+          "capacity": null,
+          "reserves": 34000.0,
+          "production_prev_raw": "481",
+          "production_latest_raw": "480",
+          "reserves_raw": "34000",
+          "note": "footnote 7",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Bolivia",
+          "production_prev_year": 110.0,
+          "production_latest_year": 100.0,
+          "capacity": null,
+          "reserves": 1600.0,
+          "production_prev_raw": "110",
+          "production_latest_raw": "100",
+          "reserves_raw": "1600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 1940.0,
+          "production_latest_year": 1900.0,
+          "capacity": null,
+          "reserves": 22000.0,
+          "production_prev_raw": "1940",
+          "production_latest_raw": "1900",
+          "reserves_raw": "22000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "India",
+          "production_prev_year": 226.0,
+          "production_latest_year": 220.0,
+          "capacity": null,
+          "reserves": 1900.0,
+          "production_prev_raw": "226",
+          "production_latest_raw": "220",
+          "reserves_raw": "1900",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Iran",
+          "production_prev_year": 70.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": 2000.0,
+          "production_prev_raw": "70",
+          "production_latest_raw": "70",
+          "reserves_raw": "2000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mexico",
+          "production_prev_year": 240.0,
+          "production_latest_year": 200.0,
+          "capacity": null,
+          "reserves": 5600.0,
+          "production_prev_raw": "240",
+          "production_latest_raw": "200",
+          "reserves_raw": "5600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Peru",
+          "production_prev_year": 291.0,
+          "production_latest_year": 290.0,
+          "capacity": null,
+          "reserves": 5000.0,
+          "production_prev_raw": "291",
+          "production_latest_raw": "290",
+          "reserves_raw": "5000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 260.0,
+          "production_latest_year": 260.0,
+          "capacity": null,
+          "reserves": 8900.0,
+          "production_prev_raw": "260",
+          "production_latest_raw": "260",
+          "reserves_raw": "8900",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Sweden",
+          "production_prev_year": 75.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": 1700.0,
+          "production_prev_raw": "75",
+          "production_latest_raw": "70",
+          "reserves_raw": "1700",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Tajikistan",
+          "production_prev_year": 39.0,
+          "production_latest_year": 40.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "39",
+          "production_latest_raw": "40",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Turkey",
+          "production_prev_year": 66.0,
+          "production_latest_year": 70.0,
+          "capacity": null,
+          "reserves": 1600.0,
+          "production_prev_raw": "66",
+          "production_latest_raw": "70",
+          "reserves_raw": "1600",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 498.0,
+          "production_latest_year": 500.0,
+          "capacity": null,
+          "reserves": 5900.0,
+          "production_prev_raw": "498",
+          "production_latest_raw": "500",
+          "reserves_raw": "5900",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 4600.0,
+          "production_latest_year": 4500.0,
+          "capacity": null,
+          "reserves": 95000.0,
+          "production_prev_raw": "4600",
+          "production_latest_raw": "4500",
+          "reserves_raw": "95000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available. — Zero.",
+        "1": "Less than ½ unit.",
+        "2": "Defined as secondary refined production from old scrap + refined imports – refined exports.",
+        "3": "Source: S&P Global Platts Metals Week.",
+        "4": "Defined as refined imports – refined exports.",
+        "5": "Source: International Lead and Zinc Study Group, 2025, ILZSG session/forecasts: Lisbon, Portugal, International Lead and Zinc Study Group press release, October 13, [4] p.",
+        "6": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "7": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 10 million tons."
+      }
+    },
+    {
       "slug": "lithium",
       "name": "Lithium",
       "symbol": "Li",
@@ -8703,6 +11499,10 @@
             {
               "country": "Mexico",
               "share_pct": 12.0
+            },
+            {
+              "country": "other",
+              "share_pct": 1.0
             }
           ]
         },
@@ -10478,6 +13278,564 @@
       }
     },
     {
+      "slug": "phosphate",
+      "name": "Phosphate rock",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-phosphate.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "6aec496668eb9d9e5483a2ce23caa28f94a1201b64b75453965c35879200a4fc",
+      "pdf_page_count": 2,
+      "units_note": "(Data in thousand metric tons, marketable phosphate rock, unless otherwise specified)",
+      "price_unit_note": "Price, average value, f.o.b. mine, dollars per metric ton",
+      "price_footnote_text": null,
+      "domestic_use_summary": "In 2025, phosphate rock ore was mined by five companies at 10 mines in four States and processed into an estimated 20 million tons of marketable product, valued at $1.9 billion, free on board (f.o.b.) mine. Phosphate rock was produced in Florida, Idaho, North Carolina, and Utah. Marketable product refers to beneficiated phosphate rock with phosphorus pentoxide (PO) content suitable for phosphoric acid or elemental phosphorus production. More than 95% of the phosphate rock mined in the United States was used to manufacture wet-process phosphoric acid and superphosphoric acid, which were used as intermediate feedstocks in the manufacture of granular and liquid ammonium phosphate fertilizers and animal feed supplements. About 25% of the wet-process phosphoric acid produced was exported in the form of upgraded granular diammonium phosphate (DAP), monoammonium phosphate (MAP) fertilizer, merchant-grade phosphoric acid, and other phosphate fertilizer products. The balance of phosphate rock mined was for the manufacture of elemental phosphorus, which was used to produce phosphorus compounds for industrial applications, primarily glyphosate herbicide.",
+      "events_trends_summary": "U.S. apparent consumption of phosphate rock in 2025 was estimated to be 7% lower than that in 2024, owing to a decrease in the production of phosphoric acid. Phosphate rock production has been about 20 million tons over the past several years as producers in Florida contend with decreasing reserves and lower PO content. This has resulted in an increase in imports over the same period. Global production of phosphate rock was estimated to be 5% higher than that in 2024, with China, Morocco, the United States, and Russia, in descending order of production, remaining the leading producers. World consumption of PO contained in fertilizers was estimated to have been 47.8 million tons in 2025 compared with 47.1 million tons in 2024. World consumption of PO in fertilizers was projected to increase to 51.5 million tons by 2029. The leading regions for growth were expected to be Asia and South America. In October 2025, the U.S. Bureau of Land Management approved a new phosphate rock mine in Caribou County, ID. The new mine will replace an existing mine when that mine is depleted within the next decade. Global phosphate production capacity, in terms of POcontent, was projected to increase to 71.7 million tons by 2029 compared with 63.7 million tons in 2025. Capacity expansions to phosphate rock production that were expected to be completed by 2028 were ongoing in Brazil, Kazakhstan, Mexico, Morocco, and Russia. Significant new mining projects that were planned to be completed after 2028 were under development in Canada, Congo (Brazzaville), Guinea-Bissau, and Senegal. PHOSPHATE ROCK U.S. Geological Survey, Mineral Commodity Summaries, February 2026 On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+      "world_resources_summary": "Some world reserves were reported only in terms of ore tonnage and grade. Phosphate rock resources occur principally as sedimentary marine phosphorites. The largest sedimentary deposits are found in northern Africa, the Middle East, China, and the United States. Significant igneous occurrences are found in Brazil, Canada, Finland, Russia, and South Africa. Large phosphate resources have been identified on the continental shelves and on seamounts in the Atlantic Ocean and the Pacific Ocean. World resources of phosphate rock are more than 300 billion tons. There are no imminent shortages of phosphate rock.",
+      "substitutes_summary": "There are no substitutes for phosphorus in agriculture.",
+      "recycling_summary": "None.",
+      "salient_stats": [
+        {
+          "label": "Production, marketable",
+          "footnote": null,
+          "section": "Production, marketable",
+          "subsection": null,
+          "values": {
+            "2021": 21600.0,
+            "2022": 19800.0,
+            "2023": 19600.0,
+            "2024": 19400.0,
+            "2025e": 20000.0
+          },
+          "raw_values": {
+            "2021": "21600",
+            "2022": "19800",
+            "2023": "19600",
+            "2024": "19400",
+            "2025e": "20000"
+          }
+        },
+        {
+          "label": "Sold or used by producers",
+          "footnote": null,
+          "section": "Production, marketable",
+          "subsection": null,
+          "values": {
+            "2021": 21900.0,
+            "2022": 19800.0,
+            "2023": 20000.0,
+            "2024": 19100.0,
+            "2025e": 18000.0
+          },
+          "raw_values": {
+            "2021": "21900",
+            "2022": "19800",
+            "2023": "20000",
+            "2024": "19100",
+            "2025e": "18000"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 2460.0,
+            "2022": 2500.0,
+            "2023": 2590.0,
+            "2024": 3390.0,
+            "2025e": 3400.0
+          },
+          "raw_values": {
+            "2021": "2460",
+            "2022": "2500",
+            "2023": "2590",
+            "2024": "3390",
+            "2025e": "3400"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": "1",
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 24400.0,
+            "2022": 22300.0,
+            "2023": 22600.0,
+            "2024": 22500.0,
+            "2025e": 21000.0
+          },
+          "raw_values": {
+            "2021": "24400",
+            "2022": "22300",
+            "2023": "22600",
+            "2024": "22500",
+            "2025e": "21000"
+          }
+        },
+        {
+          "label": "Price, average value, f.o.b. mine, dollars per metric ton",
+          "footnote": null,
+          "section": "Price, average value, f.o.b. mine, dollars per metric ton",
+          "subsection": null,
+          "values": {
+            "2021": 83.0,
+            "2022": 99.0,
+            "2023": 101.0,
+            "2024": 96.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": "83",
+            "2022": "99",
+            "2023": "101",
+            "2024": "96",
+            "2025e": "100"
+          }
+        },
+        {
+          "label": "Stocks, producer, yearend",
+          "footnote": null,
+          "section": "Stocks, producer, yearend",
+          "subsection": null,
+          "values": {
+            "2021": 10700.0,
+            "2022": 10600.0,
+            "2023": 9550.0,
+            "2024": 8740.0,
+            "2025e": 8400.0
+          },
+          "raw_values": {
+            "2021": "10700",
+            "2022": "10600",
+            "2023": "9550",
+            "2024": "8740",
+            "2025e": "8400"
+          }
+        },
+        {
+          "label": "Employment, mine and beneficiation plant, number",
+          "footnote": null,
+          "section": "Employment, mine and beneficiation plant, number",
+          "subsection": null,
+          "values": {
+            "2021": 2000.0,
+            "2022": 1900.0,
+            "2023": 2000.0,
+            "2024": 2000.0,
+            "2025e": 1900.0
+          },
+          "raw_values": {
+            "2021": "2000",
+            "2022": "1900",
+            "2023": "2000",
+            "2024": "2000",
+            "2025e": "1900"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 11.0,
+            "2022": 12.0,
+            "2023": 16.0,
+            "2024": 18.0,
+            "2025e": 16.0
+          },
+          "raw_values": {
+            "2021": "11",
+            "2022": "12",
+            "2023": "16",
+            "2024": "18",
+            "2025e": "16"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "Price, average value, f.o.b. mine, dollars per metric ton",
+          "unit_note": "Price, average value, f.o.b. mine, dollars per metric ton",
+          "values": {
+            "2021": 83.0,
+            "2022": 99.0,
+            "2023": 101.0,
+            "2024": 96.0,
+            "2025e": 100.0
+          },
+          "raw_values": {
+            "2021": "83",
+            "2022": "99",
+            "2023": "101",
+            "2024": "96",
+            "2025e": "100"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 3400.0,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": 21000.0,
+      "price_usd_per_pound_latest": 100.0,
+      "net_import_reliance_pct_latest": 16.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [
+        {
+          "country": "Peru",
+          "share_pct": 99.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "Peru",
+              "share_pct": 99.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 19400.0,
+          "production_latest_year": 20000.0,
+          "capacity": null,
+          "reserves": 1000000.0,
+          "production_prev_raw": "19400",
+          "production_latest_raw": "20000",
+          "reserves_raw": "1000000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Algeria",
+          "production_prev_year": 2000.0,
+          "production_latest_year": 2000.0,
+          "capacity": null,
+          "reserves": 2200000.0,
+          "production_prev_raw": "2000",
+          "production_latest_raw": "2000",
+          "reserves_raw": "2200000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Australia",
+          "production_prev_year": 2500.0,
+          "production_latest_year": 2500.0,
+          "capacity": null,
+          "reserves": 800000.0,
+          "production_prev_raw": "2500",
+          "production_latest_raw": "2500",
+          "reserves_raw": "800000",
+          "note": "footnote 5",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Brazil",
+          "production_prev_year": 5300.0,
+          "production_latest_year": 5000.0,
+          "capacity": null,
+          "reserves": 1600000.0,
+          "production_prev_raw": "5300",
+          "production_latest_raw": "5000",
+          "reserves_raw": "1600000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 105000.0,
+          "production_latest_year": 110000.0,
+          "capacity": null,
+          "reserves": 3400000.0,
+          "production_prev_raw": "105000",
+          "production_latest_raw": "110000",
+          "reserves_raw": "3400000",
+          "note": "footnote 6",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Egypt",
+          "production_prev_year": 5300.0,
+          "production_latest_year": 5500.0,
+          "capacity": null,
+          "reserves": 2800000.0,
+          "production_prev_raw": "5300",
+          "production_latest_raw": "5500",
+          "reserves_raw": "2800000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Finland",
+          "production_prev_year": 974.0,
+          "production_latest_year": 980.0,
+          "capacity": null,
+          "reserves": 1000000.0,
+          "production_prev_raw": "974",
+          "production_latest_raw": "980",
+          "reserves_raw": "1000000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "India",
+          "production_prev_year": 1700.0,
+          "production_latest_year": 1500.0,
+          "capacity": null,
+          "reserves": 31000.0,
+          "production_prev_raw": "1700",
+          "production_latest_raw": "1500",
+          "reserves_raw": "31000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Israel",
+          "production_prev_year": 2380.0,
+          "production_latest_year": 2400.0,
+          "capacity": null,
+          "reserves": 60000.0,
+          "production_prev_raw": "2380",
+          "production_latest_raw": "2400",
+          "reserves_raw": "60000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Jordan",
+          "production_prev_year": 11500.0,
+          "production_latest_year": 12000.0,
+          "capacity": null,
+          "reserves": 820000.0,
+          "production_prev_raw": "11500",
+          "production_latest_raw": "12000",
+          "reserves_raw": "820000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Kazakhstan",
+          "production_prev_year": 1700.0,
+          "production_latest_year": 1900.0,
+          "capacity": null,
+          "reserves": 260000.0,
+          "production_prev_raw": "1700",
+          "production_latest_raw": "1900",
+          "reserves_raw": "260000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Mexico",
+          "production_prev_year": 365.0,
+          "production_latest_year": 450.0,
+          "capacity": null,
+          "reserves": 30000.0,
+          "production_prev_raw": "365",
+          "production_latest_raw": "450",
+          "reserves_raw": "30000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Morocco",
+          "production_prev_year": 35300.0,
+          "production_latest_year": 36000.0,
+          "capacity": null,
+          "reserves": 50000000.0,
+          "production_prev_raw": "35300",
+          "production_latest_raw": "36000",
+          "reserves_raw": "50000000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Peru",
+          "production_prev_year": 4800.0,
+          "production_latest_year": 4800.0,
+          "capacity": null,
+          "reserves": 210000.0,
+          "production_prev_raw": "4800",
+          "production_latest_raw": "4800",
+          "reserves_raw": "210000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 14400.0,
+          "production_latest_year": 14000.0,
+          "capacity": null,
+          "reserves": 2400000.0,
+          "production_prev_raw": "14400",
+          "production_latest_raw": "14000",
+          "reserves_raw": "2400000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Saudi Arabia",
+          "production_prev_year": 10000.0,
+          "production_latest_year": 10000.0,
+          "capacity": null,
+          "reserves": 1000000.0,
+          "production_prev_raw": "10000",
+          "production_latest_raw": "10000",
+          "reserves_raw": "1000000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Senegal",
+          "production_prev_year": 2800.0,
+          "production_latest_year": 2800.0,
+          "capacity": null,
+          "reserves": 50000.0,
+          "production_prev_raw": "2800",
+          "production_latest_raw": "2800",
+          "reserves_raw": "50000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "South Africa",
+          "production_prev_year": 2220.0,
+          "production_latest_year": 2200.0,
+          "capacity": null,
+          "reserves": 1500000.0,
+          "production_prev_raw": "2220",
+          "production_latest_raw": "2200",
+          "reserves_raw": "1500000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Syria",
+          "production_prev_year": 800.0,
+          "production_latest_year": 800.0,
+          "capacity": null,
+          "reserves": 250000.0,
+          "production_prev_raw": "800",
+          "production_latest_raw": "800",
+          "reserves_raw": "250000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Togo",
+          "production_prev_year": 1560.0,
+          "production_latest_year": 1600.0,
+          "capacity": null,
+          "reserves": 30000.0,
+          "production_prev_raw": "1560",
+          "production_latest_raw": "1600",
+          "reserves_raw": "30000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Tunisia",
+          "production_prev_year": 3280.0,
+          "production_latest_year": 3300.0,
+          "capacity": null,
+          "reserves": 2500000.0,
+          "production_prev_raw": "3280",
+          "production_latest_raw": "3300",
+          "reserves_raw": "2500000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Turkey",
+          "production_prev_year": 1220.0,
+          "production_latest_year": 1200.0,
+          "capacity": null,
+          "reserves": 71000.0,
+          "production_prev_raw": "1220",
+          "production_latest_raw": "1200",
+          "reserves_raw": "71000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Uzbekistan",
+          "production_prev_year": 950.0,
+          "production_latest_year": 950.0,
+          "capacity": null,
+          "reserves": 100000.0,
+          "production_prev_raw": "950",
+          "production_latest_raw": "950",
+          "reserves_raw": "100000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Vietnam",
+          "production_prev_year": 3000.0,
+          "production_latest_year": 3000.0,
+          "capacity": null,
+          "reserves": 30000.0,
+          "production_prev_raw": "3000",
+          "production_latest_raw": "3000",
+          "reserves_raw": "30000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 769.0,
+          "production_latest_year": 770.0,
+          "capacity": null,
+          "reserves": 800000.0,
+          "production_prev_raw": "769",
+          "production_latest_raw": "770",
+          "reserves_raw": "800000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 239000.0,
+          "production_latest_year": 250000.0,
+          "capacity": null,
+          "reserves": 73000000.0,
+          "production_prev_raw": "239000",
+          "production_latest_raw": "250000",
+          "reserves_raw": "73000000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated.",
+        "1": "Defined as phosphate rock sold or used by producers + imports. U.S. producers stopped exporting phosphate rock in 2003.",
+        "2": "Marketable phosphate rock, weighted value, all grades.",
+        "3": "Defined as imports ± adjustments for industry stock changes.",
+        "4": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "5": "For Australia, Joint Ore Reserves Committee-compliant or equivalent reserves were 120 million tons.",
+        "6": "Production data for large mines only, as reported by the National Bureau of Statistics of China."
+      }
+    },
+    {
       "slug": "platinum-group-metals",
       "name": "Platinum-group metals (grouped)",
       "symbol": null,
@@ -11258,6 +14616,482 @@
         "8": "See Appendix B for definitions. For fiscal year 2026, the Annual Materials Plan was not released.",
         "9": "See Appendix C for resource and reserve definitions and information concerning data sources.",
         "10": "Reserves for Russia are based on the State Committee of Reserves of the Russian Federation (GKZ) classification system A+B+C1+C2, where C2 are reserves in deposits that are indicated but not being developed or prepared for development. C2 reserves were excluded here."
+      }
+    },
+    {
+      "slug": "potash",
+      "name": "Potash",
+      "symbol": null,
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-potash.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "c2e6605e30ef764f50d400f609e6424da7e46f5d8751f6bf8b62ab58d5ad809b",
+      "pdf_page_count": 2,
+      "units_note": "[Data in thousand metric tons, potassium oxide (KO) equivalent, unless otherwise specified]",
+      "price_unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+      "price_footnote_text": null,
+      "domestic_use_summary": "In 2025, the estimated sales value of marketable potash, free on board (f.o.b.) mine, was $550 million, which was 13% higher than that in 2024. The majority of U.S. production was from southeastern New Mexico, where two companies operated two underground mines and one deep-well solution mine. Sylvinite and langbeinite ores in New Mexico were beneficiated by flotation, dissolution-recrystallization, heavy-media separation, solar evaporation, and (or) combinations of these processes. In Utah, two companies operated three facilities. One company extracted underground sylvinite ore by deep-well solution mining. Solar evaporation crystallized the sylvinite ore from the brine solution, and a flotation process separated the muriate of potash (MOP) from byproduct sodium chloride. The firm also processed subsurface brines by solar evaporation and flotation to produce MOP at its other facility. Another company processed brine from the Great Salt Lake by solar evaporation to produce potassium sulfate or sulfate of potash (SOP) and other byproducts. Potash denotes a variety of mined and manufactured salts that contain the element potassium in water-soluble form. In agriculture, the term potash refers to potassic fertilizers, which are potassium chloride (KCl), SOP, and potassium magnesium sulfate (SOPM) or langbeinite. MOP is an agriculturally acceptable mix of KCl (95% pure or greater) and sodium chloride for fertilizer use. The fertilizer industry used about 85% of U.S. potash sales, and the remainder was used for chemical and industrial applications. More than 60% of the potash produced was SOPM and SOP, which are required to fertilize certain chloride-sensitive crops. The remainder of production was MOP and was used for agricultural and chemical applications.",
+      "events_trends_summary": "In 2025, domestic production, sales, and exports were estimated to have increased compared with those in 2024. Apparent consumption and imports were both lower than those in 2024. World consumption of potash in fertilizer was estimated to be 41.6 million tons of KO, compared with 40.6 million tons in 2024. Asia and South America were the regions with the highest growth in consumption. World consumption was projected to increase to 45.3 million tons in 2029. POTASH U.S. Geological Survey, Mineral Commodity Summaries, February 2026 In January 2025, a Michigan-based company received a conditional commitment from the U.S. Department of Energy for a $1.26 billion loan to help finance the development of a new potash and salt mine in Osceola County, MI. The company is required to meet certain environmental, financial, legal, and technical conditions within 1 year before the loan can be approved. The new mine was planned to have an initial annual production capacity of 800,000 tons of MOP and 1 million tons of salt. World annual potash production capacity was 66.1 million tons of KO in 2025 and projected to increase to 77.4 million tons of KO by 2029. Most of the increase would be MOP from new mines and expansion projects in Laos and Russia. New MOP mines in Belarus, Brazil, Canada, Ethiopia, Morocco, and Spain were planned to begin operation beyond 2029. On November 7, 2025, the U.S. Final 2025 List of Critical Minerals was published in the Federal Register (90 FR 50494). The changes in the 2025 list from the prior list published in 2022 (87 FR 10381) were the addition of copper, lead, potash, rhenium, silicon, and silver, based on the U.S. Geological Survey updated methodology for the 2025 list. As required by the Energy Act, public comment and interagency input were requested in response to the draft U.S. list of critical minerals published in the Federal Register (90 FR 41591). Based on that input, boron, metallurgical coal, phosphate rock, and uranium were also added.",
+      "world_resources_summary": "Estimated domestic potash resources total about 7 billion tons. Most of these lie at depths between 1,800 and 3,100 meters in a 3,110-square-kilometer area of Montana and North Dakota as an extension of the Williston Basin deposits in Manitoba and Saskatchewan, Canada. The Paradox Basin in Utah contains resources of about 2 billion tons, mostly at depths of more than 1,200 meters. The Holbrook Basin of Arizona contains resources of about 0.7 billion to 2.5 billion tons. A large potash resource lies about 2,100 meters under central Michigan and contains more than 75 million tons. Estimated world resources total about 250 billion tons.",
+      "substitutes_summary": "No substitutes exist for potassium as an essential plant nutrient and as an essential nutritional requirement for animals and humans. Manure and glauconite (greensand) are low-potassium-content materials that can be profitably transported only short distances to crop fields. Glauconite is used as a potassium source for organic farming.",
+      "recycling_summary": "None.",
+      "salient_stats": [
+        {
+          "label": "Production, marketable",
+          "footnote": "1",
+          "section": "Production, marketable",
+          "subsection": null,
+          "values": {
+            "2021": 480.0,
+            "2022": 430.0,
+            "2023": 390.0,
+            "2024": 410.0,
+            "2025e": 500.0
+          },
+          "raw_values": {
+            "2021": "480",
+            "2022": "430",
+            "2023": "390",
+            "2024": "410",
+            "2025e": "500"
+          }
+        },
+        {
+          "label": "Sales by producers, marketable",
+          "footnote": "1",
+          "section": "Production, marketable",
+          "subsection": null,
+          "values": {
+            "2021": 490.0,
+            "2022": 400.0,
+            "2023": 400.0,
+            "2024": 420.0,
+            "2025e": 460.0
+          },
+          "raw_values": {
+            "2021": "490",
+            "2022": "400",
+            "2023": "400",
+            "2024": "420",
+            "2025e": "460"
+          }
+        },
+        {
+          "label": "Imports for consumption",
+          "footnote": null,
+          "section": "Imports for consumption",
+          "subsection": null,
+          "values": {
+            "2021": 6480.0,
+            "2022": 4940.0,
+            "2023": 5620.0,
+            "2024": 5970.0,
+            "2025e": 5600.0
+          },
+          "raw_values": {
+            "2021": "6480",
+            "2022": "4940",
+            "2023": "5620",
+            "2024": "5970",
+            "2025e": "5600"
+          }
+        },
+        {
+          "label": "Exports",
+          "footnote": null,
+          "section": "Exports",
+          "subsection": null,
+          "values": {
+            "2021": 112.0,
+            "2022": 267.0,
+            "2023": 157.0,
+            "2024": 150.0,
+            "2025e": 170.0
+          },
+          "raw_values": {
+            "2021": "112",
+            "2022": "267",
+            "2023": "157",
+            "2024": "150",
+            "2025e": "170"
+          }
+        },
+        {
+          "label": "Consumption, apparent",
+          "footnote": null,
+          "section": "Consumption, apparent",
+          "subsection": null,
+          "values": {
+            "2021": 6900.0,
+            "2022": 5100.0,
+            "2023": 5900.0,
+            "2024": 6200.0,
+            "2025e": 5900.0
+          },
+          "raw_values": {
+            "2021": "6900",
+            "2022": "5100",
+            "2023": "5900",
+            "2024": "6200",
+            "2025e": "5900"
+          }
+        },
+        {
+          "label": "All products",
+          "footnote": "3",
+          "section": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+          "subsection": "equivalent",
+          "values": {
+            "2021": 1120.0,
+            "2022": 1790.0,
+            "2023": 1250.0,
+            "2024": 1150.0,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1120",
+            "2022": "1790",
+            "2023": "1250",
+            "2024": "1150",
+            "2025e": "1200"
+          }
+        },
+        {
+          "label": "MOP",
+          "footnote": null,
+          "section": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+          "subsection": "equivalent",
+          "values": {
+            "2021": 650.0,
+            "2022": 980.0,
+            "2023": 620.0,
+            "2024": 690.0,
+            "2025e": 600.0
+          },
+          "raw_values": {
+            "2021": "650",
+            "2022": "980",
+            "2023": "620",
+            "2024": "690",
+            "2025e": "600"
+          }
+        },
+        {
+          "label": "Employment, mine and mill, number",
+          "footnote": null,
+          "section": "Employment, mine and mill, number",
+          "subsection": null,
+          "values": {
+            "2021": 900.0,
+            "2022": 900.0,
+            "2023": 900.0,
+            "2024": 900.0,
+            "2025e": 900.0
+          },
+          "raw_values": {
+            "2021": "900",
+            "2022": "900",
+            "2023": "900",
+            "2024": "900",
+            "2025e": "900"
+          }
+        },
+        {
+          "label": "Net import reliance as a percentage of apparent consumption",
+          "footnote": null,
+          "section": "Net import reliance as a percentage of apparent consumption",
+          "subsection": null,
+          "values": {
+            "2021": 93.0,
+            "2022": 92.0,
+            "2023": 93.0,
+            "2024": 94.0,
+            "2025e": 92.0
+          },
+          "raw_values": {
+            "2021": "93",
+            "2022": "92",
+            "2023": "93",
+            "2024": "94",
+            "2025e": "92"
+          }
+        }
+      ],
+      "price_quotes": [
+        {
+          "form": "All products",
+          "unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+          "values": {
+            "2021": 1120.0,
+            "2022": 1790.0,
+            "2023": 1250.0,
+            "2024": 1150.0,
+            "2025e": 1200.0
+          },
+          "raw_values": {
+            "2021": "1120",
+            "2022": "1790",
+            "2023": "1250",
+            "2024": "1150",
+            "2025e": "1200"
+          }
+        },
+        {
+          "form": "MOP",
+          "unit_note": "Price, average, f.o.b. mine, dollars per metric ton of KO",
+          "values": {
+            "2021": 650.0,
+            "2022": 980.0,
+            "2023": 620.0,
+            "2024": 690.0,
+            "2025e": 600.0
+          },
+          "raw_values": {
+            "2021": "650",
+            "2022": "980",
+            "2023": "620",
+            "2024": "690",
+            "2025e": "600"
+          }
+        }
+      ],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": 5600.0,
+      "exports_total_latest": 170.0,
+      "apparent_consumption_latest": 5900.0,
+      "price_usd_per_pound_latest": 1200.0,
+      "net_import_reliance_pct_latest": 92.0,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [
+        {
+          "country": "Canada",
+          "share_pct": 79.0
+        },
+        {
+          "country": "Russia",
+          "share_pct": 12.0
+        },
+        {
+          "country": "Israel",
+          "share_pct": 3.0
+        },
+        {
+          "country": "other",
+          "share_pct": 6.0
+        }
+      ],
+      "import_sources_by_category": [
+        {
+          "category": null,
+          "countries": [
+            {
+              "country": "Canada",
+              "share_pct": 79.0
+            },
+            {
+              "country": "Russia",
+              "share_pct": 12.0
+            },
+            {
+              "country": "Israel",
+              "share_pct": 3.0
+            },
+            {
+              "country": "other",
+              "share_pct": 6.0
+            }
+          ]
+        }
+      ],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": "2024",
+      "world_production_year_latest": "2025",
+      "world_production": [
+        {
+          "country": "United States",
+          "production_prev_year": 410.0,
+          "production_latest_year": 500.0,
+          "capacity": null,
+          "reserves": 970000.0,
+          "production_prev_raw": "410",
+          "production_latest_raw": "500",
+          "reserves_raw": "970000",
+          "note": "footnote 1",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Belarus",
+          "production_prev_year": 5000.0,
+          "production_latest_year": 6000.0,
+          "capacity": null,
+          "reserves": 3300000.0,
+          "production_prev_raw": "5000",
+          "production_latest_raw": "6000",
+          "reserves_raw": "3300000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Brazil",
+          "production_prev_year": 331.0,
+          "production_latest_year": 300.0,
+          "capacity": null,
+          "reserves": 10000.0,
+          "production_prev_raw": "331",
+          "production_latest_raw": "300",
+          "reserves_raw": "10000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Canada",
+          "production_prev_year": 14400.0,
+          "production_latest_year": 15000.0,
+          "capacity": null,
+          "reserves": 4500000.0,
+          "production_prev_raw": "14400",
+          "production_latest_raw": "15000",
+          "reserves_raw": "4500000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Chile",
+          "production_prev_year": 564.0,
+          "production_latest_year": 600.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "564",
+          "production_latest_raw": "600",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "China",
+          "production_prev_year": 6300.0,
+          "production_latest_year": 6300.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "6300",
+          "production_latest_raw": "6300",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Germany",
+          "production_prev_year": 2500.0,
+          "production_latest_year": 3000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2500",
+          "production_latest_raw": "3000",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Israel",
+          "production_prev_year": 2260.0,
+          "production_latest_year": 2000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2260",
+          "production_latest_raw": "2000",
+          "reserves_raw": "NA",
+          "note": "footnote 6",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Jordan",
+          "production_prev_year": 1730.0,
+          "production_latest_year": 1800.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "1730",
+          "production_latest_raw": "1800",
+          "reserves_raw": "NA",
+          "note": "footnote 6",
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Laos",
+          "production_prev_year": 2400.0,
+          "production_latest_year": 2400.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "2400",
+          "production_latest_raw": "2400",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Russia",
+          "production_prev_year": 10000.0,
+          "production_latest_year": 10000.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "10000",
+          "production_latest_raw": "10000",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Spain",
+          "production_prev_year": 489.0,
+          "production_latest_year": 450.0,
+          "capacity": null,
+          "reserves": null,
+          "production_prev_raw": "489",
+          "production_latest_raw": "450",
+          "reserves_raw": "NA",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "Other countries",
+          "production_prev_year": 350.0,
+          "production_latest_year": 350.0,
+          "capacity": null,
+          "reserves": 1500000.0,
+          "production_prev_raw": "350",
+          "production_latest_raw": "350",
+          "reserves_raw": "1500000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        },
+        {
+          "country": "World total (rounded)",
+          "production_prev_year": 46700.0,
+          "production_latest_year": 49000.0,
+          "capacity": null,
+          "reserves": 10000000.0,
+          "production_prev_raw": "46700",
+          "production_latest_raw": "49000",
+          "reserves_raw": ">10,000,000",
+          "note": null,
+          "sub_metal_production_latest": {}
+        }
+      ],
+      "footnotes": {
+        "e": "Estimated. NA Not available.",
+        "1": "Data are rounded to no more than two significant digits to avoid disclosing company proprietary data.",
+        "2": "Defined as sales + imports – exports.",
+        "3": "Includes MOP, SOP, and SOPM. Does not include other chemical compounds that contain potassium.",
+        "4": "Defined as imports – exports.",
+        "5": "See Appendix C for resource and reserve definitions and information concerning data sources.",
+        "6": "Israel and Jordan recover potash from the Dead Sea, which contains nearly 2 billion tons of potassium chloride."
       }
     },
     {
@@ -12594,6 +16428,50 @@
         "7": "Estimated amount of rhenium recovered in association with copper and molybdenum production. Secondary rhenium production not included.",
         "8": "See Appendix C for resource and reserve definitions and information concerning data sources.",
         "9": "Estimated rhenium recovered from roaster residues from Belgium, Chile, Mexico, and Peru."
+      }
+    },
+    {
+      "slug": "rubidium",
+      "name": "Rubidium",
+      "symbol": "Rb",
+      "kind": "primary",
+      "parent_slug": null,
+      "source_url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-rubidium.pdf",
+      "edition": "MCS 2026",
+      "edition_date": "2026-02",
+      "captured_at": "2026-06-02",
+      "pdf_sha256": "8934a0109d0a7d4b5261fc953cb8ef4243a520ab544aaf27ef23174cf965c681",
+      "pdf_page_count": 2,
+      "units_note": "(Data in metric tons, rubidium oxide, unless otherwise specified)",
+      "price_unit_note": null,
+      "price_footnote_text": null,
+      "domestic_use_summary": "In 2025, no rubidium was mined in the United States; however, occurrences of rubidium-bearing minerals are known in Alaska, Arizona, Idaho, Maine, South Dakota, and Utah. Rubidium is also associated with some evaporate mineral occurrences in other States. Rubidium is not a major constituent of any mineral. Rubidium concentrate is produced as a byproduct of pollucite (cesium) and lepidolite (lithium) mining and is imported from other countries for processing in the United States. Applications for rubidium and its compounds include biomedical research, electronics, pyrotechnics, and specialty glass. Specialty glasses are the leading market for rubidium; rubidium carbonate may be used to reduce electrical conductivity, which improves stability and durability in fiber-optic telecommunications networks. Biomedical applications may include rubidium salts used in antishock agents and the treatment of epilepsy and thyroid disorder; rubidium-82, a radioactive isotope, may be used as a blood-flow tracer in positron emission tomographic imaging; and rubidium chloride may be used as an antidepressant. Rubidium’s photoemissive properties make it useful for electrical-signal generators in magnetometers, motion-sensor devices, night-vision devices, photoelectric cells (solar panels), photomultiplier tubes, and spectrometers. For industrial uses, rubidium is widely used as a catalyst in ammonia synthesis, hydrogenation, oxidation and polymerization reactions, and sulfuric acid synthesis. Rubidium may be used as an atomic resonance-frequency- reference oscillator for telecommunications network synchronization, playing a vital role in global positioning systems. Rubidium-rich feldspars may be used in ceramic applications for spark plugs and electrical insulators because of their high dielectric constant. Rubidium hydroxide may be used in fireworks to oxidize mixtures of other elements and produce violet hues. The U.S. military frequency standard, the United States Naval Observatory (USNO) timescale, is based on a network of weighted atomic clocks, including six USNO rubidium fountain clocks. Rubidium atoms are used in academic research, including the development of quantum-mechanics-based computing devices, a future application with potential for relatively high consumption of rubidium. Quantum computing, which uses ultracold rubidium atoms in a variety of applications in research, would perform more complex computational tasks than traditional computers by calculating in two quantum states simultaneously. Research suggests that rubidium may be used in chemical storage within hydrogen batteries, ion propulsion engines, magnetohydrodynamic power generation, and thermionic power conversion.",
+      "events_trends_summary": "Domestic rubidium occurrences will remain subeconomic unless market conditions change, such as the development of new end uses or increased consumption for existing end uses, which in turn could lead to increased prices. No known human health issues are associated with exposure to naturally occurring rubidium, and its use has minimal environmental impact. During 2025, no rubidium production was reported globally. Known production of rubidium ore from all countries ceased within the past two decades. Mining of rubidium in Namibia ceased in the early 2000s. The Bikita Mine in Zimbabwe was depleted of pollucite ore reserves in 2018. The Sinclair Mine in Australia completed the mining and shipments of all economically recoverable pollucite ore in 2019. Reports indicated that with current processing rates, the world’s commercial stockpiles of rubidium ore may be depleted in the near future without additional future mineral extraction. Refined rubidium compounds were believed to be processed in China and Germany from existing stockpiles. Throughout 2025, multiple projects that could produce rubidium as a byproduct of lepidolite, pollucite, spodumene, or zinnwaldite mining, focused primarily on lithium or cesium extraction, were in the exploration and feasibility stages. One company that was developing a lepidolite mine and processing facility in Namibia brought in an independent administrator owing to the lack of project financing at the end of 2024. Another company was in the process of securing financing to take ownership of the project as of September 2025. Based on historical information, the Namibia project contained a Joint Ore Reserves Committee (JORC)-compliant measured and indicated mineral resource estimate totaling 23,000 tons of rubidium. In Australia, one company announced that initial testing of a rubidium extraction technology at the Mount Edon project in Western Australia yielded a 97% rubidium recovery rate. The Mount Edon project had an initial JORC-compliant inferred mineral resource estimate totaling 3.6 million tons, which contained an estimated 7,900 tons of rubidium oxide, and planned to secure funding to scale up the pilot plant in 2026 pending additional testing of the extraction technology.",
+      "world_resources_summary": "Significant rubidium-bearing pegmatite occurrences have been identified in Afghanistan, Australia, Canada, China, Denmark, Germany, Japan, Kazakhstan, Namibia, Peru, Russia, the United Kingdom, the United States, and Zambia. Minor quantities of rubidium are reported in brines in northern Chile and China and in evaporites in the United States (New Mexico and Utah), France, and Germany.",
+      "substitutes_summary": "Rubidium and cesium can be used interchangeably in many applications because they have similar physical properties and atomic radii. Cesium, however, is more electropositive than rubidium, making it a preferred material for some applications.",
+      "recycling_summary": "None.",
+      "salient_stats": [],
+      "price_quotes": [],
+      "latest_year": "2025e",
+      "mined_production_latest": null,
+      "primary_smelting_latest": null,
+      "secondary_smelting_latest": null,
+      "imports_total_latest": null,
+      "exports_total_latest": null,
+      "apparent_consumption_latest": null,
+      "price_usd_per_pound_latest": null,
+      "net_import_reliance_pct_latest": null,
+      "latest_year_sentinels": {},
+      "stockpile_fy2025_potential_acquisitions": null,
+      "import_sources_flat": [],
+      "import_sources_by_category": [],
+      "import_sources_range": "2021-24",
+      "world_production_label": "World Mine Production and Reserves",
+      "world_production_year_prev": null,
+      "world_production_year_latest": null,
+      "world_production": [],
+      "footnotes": {
+        "1": "See Appendix C for resource and reserve definitions and information concerning data sources."
       }
     },
     {

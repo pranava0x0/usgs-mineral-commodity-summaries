@@ -9,14 +9,19 @@
 > Live viewer: <https://pranava0x0.github.io/usgs-mineral-commodity-summaries/>
 > (deployed by [.github/workflows/deploy-pages.yml](.github/workflows/deploy-pages.yml))
 
-Currently covered (MCS 2026 edition):
+Currently covered (MCS 2026 edition; commodity scope tracks the **2025 USGS
+Critical Minerals List** — see [BACKLOG.md](BACKLOG.md) §"New ideas"):
 
 - **Primary sheets (`kind="primary"`)** — own MCS PDF: Abrasives (manufactured),
-  Aluminum, Antimony, Bismuth, Chromium, Cobalt, Copper, Diamond (industrial),
-  Gallium, Germanium, Graphite (natural), Indium, Lithium, Magnesium, Manganese,
-  Molybdenum, Nickel, Niobium, Platinum-group metals (grouped), Rare Earths
-  (grouped), Rhenium, Scandium, Silicon, Silver, Tantalum, Tellurium, Tin,
-  Titanium, Tungsten, Vanadium, Zinc, Zirconium-and-hafnium (grouped).
+  Aluminum, Antimony, Arsenic, Barite, Beryllium, Bismuth, Boron, Cesium,
+  Chromium, Cobalt, Copper, Diamond (industrial), Fluorspar, Gallium, Germanium,
+  Graphite (natural), Indium, Lead, Lithium, Magnesium, Manganese, Molybdenum,
+  Nickel, Niobium, Phosphate rock, Platinum-group metals (grouped), Potash, Rare
+  Earths (grouped), Rhenium, Rubidium, Scandium, Silicon, Silver, Tantalum,
+  Tellurium, Tin, Titanium, Tungsten, Vanadium, Zinc, Zirconium-and-hafnium
+  (grouped). Boron, Lead, Phosphate rock, and Potash are new on the 2025 list;
+  Cesium and Rubidium are qualitative sheets (prose + price only — USGS reports
+  no salient-stats or world-production table, like Scandium).
 - **Rare-earth aliases (`kind="rare_earth"`)** — derived from the rare-earths
   grouped sheet: Cerium, Lanthanum, Neodymium, Praseodymium, Samarium,
   Europium, Gadolinium (each matched to its oxide price quote). Heavy REEs

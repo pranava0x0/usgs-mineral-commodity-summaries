@@ -46,7 +46,13 @@ def configure_logging(verbose: bool) -> None:
     )
 
 
-def _process_primary(slug: str, *, refresh: bool, do_audit: bool) -> ElementRecord:
+def _process_primary(
+    slug: str,
+    *,
+    refresh: bool,
+    do_audit: bool,
+    prior_dates: dict[str, tuple[str, str]] | None = None,
+) -> ElementRecord:
     el = config.ELEMENTS[slug]
     if refresh:
         cached = config.RAW_DIR / Path(el.mcs_url).name
@@ -55,6 +61,13 @@ def _process_primary(slug: str, *, refresh: bool, do_audit: bool) -> ElementReco
             log.info("removed cache: %s", cached.name)
     record = parser.parse_element_pdf(slug)
     _postprocess_record(record)
+    # Freeze captured_at to its first-seen date when the PDF is unchanged, BEFORE
+    # the audit snapshot renders (it embeds captured_at). Aliases inherit this
+    # via _make_alias. (CLAUDE.md §Data — capture dates over "current" framing.)
+    if prior_dates is not None:
+        prior = prior_dates.get(slug)
+        if prior and prior[0] == record.pdf_sha256:
+            record.captured_at = prior[1]
     if do_audit:
         audit.audit_element(record)
     return record
@@ -686,6 +699,29 @@ def _write_bundle(records: list[ElementRecord]) -> tuple[Path, Path]:
     return out_json, out_csv
 
 
+def _load_prior_capture_map() -> dict[str, tuple[str, str]]:
+    """Map slug -> (pdf_sha256, captured_at) from the committed bundle.
+
+    Used to freeze `captured_at` for a record whose source PDF is byte-identical
+    to last time: captured_at means "when did we first capture these exact
+    bytes", not "when did we last re-parse". Reads the on-disk elements.json; a
+    missing/unreadable file yields an empty map (every record keeps today).
+    """
+    path = config.PROCESSED_DIR / "elements.json"
+    if not path.exists():
+        return {}
+    try:
+        prior = json.loads(path.read_text(encoding="utf-8"))
+    except (ValueError, OSError) as exc:
+        log.warning("could not read prior bundle for capture-date provenance: %s", exc)
+        return {}
+    return {
+        e["slug"]: (e["pdf_sha256"], e["captured_at"])
+        for e in prior.get("elements", [])
+        if e.get("slug") and e.get("captured_at") and e.get("pdf_sha256")
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(description="Parse USGS MCS PDFs into structured data.")
     ap.add_argument("elements", nargs="*", help="Element slugs to parse. Default: all registered.")
@@ -727,9 +763,12 @@ def main(argv: list[str] | None = None) -> int:
             if not args.no_aliases:
                 pass  # alias will be made in the second pass
 
+    prior_dates = _load_prior_capture_map()
     for slug in needed_primaries:
         try:
-            primary_records[slug] = _process_primary(slug, refresh=args.refresh, do_audit=args.audit)
+            primary_records[slug] = _process_primary(
+                slug, refresh=args.refresh, do_audit=args.audit, prior_dates=prior_dates
+            )
         except Exception as exc:
             log.exception("FAILED on %s", slug)
             failures.append((slug, str(exc)))

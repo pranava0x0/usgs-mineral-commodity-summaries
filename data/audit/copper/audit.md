@@ -57,6 +57,10 @@ _`2025e` = 2025 USGS estimate (preliminary); 2021–2024 are reported actuals._
 - Spain: 6%
 - other: 9%
 
+**Copper content of ore and concentrate**
+- Canada: 99%
+- other: 1%
+
 **Copper content of scrap**
 - Canada: 45%
 - Mexico: 43%

@@ -1,10 +1,10 @@
 # USGS Mineral Commodity Summaries — Critical Minerals & Rare Earths
 
-> Structured extraction of the USGS *Mineral Commodity Summaries 2026* (MCS 2026) for ~50 commodities relevant to U.S. critical-mineral policy. Every value is traceable to the original USGS PDF; missing values surface as "N/A" and USGS-specific sentinels (W / E / >N / <N / NA) appear verbatim alongside numeric data. The dataset is rebuilt locally from cached PDFs and shipped as JSON + CSV; no derived or interpolated values.
+> Structured extraction of the USGS *Mineral Commodity Summaries 2026* (MCS 2026) for ~60 commodities spanning the **2025 USGS Critical Minerals List** (60 minerals; the 50 from the 2022 list plus boron, copper, lead, phosphate, potash, rhenium, silicon, silver — uranium and metallurgical coal are outside MCS and not covered). Every value is traceable to the original USGS PDF; missing values surface as "N/A" and USGS-specific sentinels (W / E / XX / >N / <N / NA) appear verbatim alongside numeric data. The dataset is rebuilt locally from cached PDFs and shipped as JSON + CSV; no derived or interpolated values.
 
 ## Data
 
-- [Bundle JSON](data.json): canonical machine-readable form. One `ElementRecord` per commodity (and per rare-earth-element / per-PGM alias). Includes `salient_stats` (5-year US table), `import_sources_by_category`, `world_production` (per-country mine production + reserves), prose blocks, and footnotes. Latest-year sentinels (W = withheld, E = net exporter, >N = "more than N", NA = USGS-reported not-available) appear in both `raw_values` and `latest_year_sentinels`.
+- [Bundle JSON](data.json): canonical machine-readable form. One `ElementRecord` per commodity (and per rare-earth-element / per-PGM alias). Includes `salient_stats` (5-year US table), `import_sources_by_category`, `world_production` (per-country mine production + reserves), prose blocks, and footnotes. Latest-year sentinels (W = withheld, E = net exporter, XX = not applicable, >N = "more than N", NA = USGS-reported not-available) appear in both `raw_values` and `latest_year_sentinels`.
 - [Flat CSV](data.csv): one row per (element/alias, import-source category or form). Fixed ~487-column public schema: 8 identity + 9 latest-year summary (USGS 2025 mined / primary / secondary production, imports for consumption, exports, apparent consumption, price, net import reliance %, government stockpile) + 5 per-country blocks (import-source share, mine production, refinery production, capacity, reserves) over a 94-country canonical axis. Multi-form sheets (antimony) and multi-mineral group sheets (abrasives, zirconium-and-hafnium) emit a bare parent/total row plus one row per form/member, each carrying only its own figures. Each numeric column is mixed-type — a number or a USGS sentinel verbatim. Pandas users coerce sentinels to NaN via `pd.to_numeric(col, errors="coerce")`.
 
 ## Source & methodology
@@ -18,7 +18,8 @@
 - **`NA` is null** — USGS-reported "data not available"; renders as `None` in JSON, `N/A` in CSV.
 - **`W` is withheld** — proprietary-data suppression. Numeric field is `None`; CSV cell carries `W`.
 - **`E` is net exporter** — appears only in Net Import Reliance rows.
-- **`>N` / `<N`** — bounded approximation. Numeric field carries `N`; CSV cell carries the inequality verbatim.
+- **`XX` is not applicable** — USGS-reported "not applicable" (distinct from `NA` = not available). Numeric field is `None`; raw cell carries `XX`.
+- **`>N` / `<N`** — bounded approximation. Numeric field carries `N`; CSV cell carries the inequality verbatim. (Import-source *share* cells are the exception — they store the plain number, so `Peru, >99%` reads as `99`.)
 - **Country columns** — the CSV's per-country columns are `<country>__<block>` (e.g. `australia__mine_production`, `china__imports_share_pct`) over a fixed 94-country canonical axis. USGS spellings are mapped to canonical entries (e.g. "Korea, Republic of" → South Korea, "Burma" → Burma (Myanmar), "Congo (Kinshasa)" → Congo (Kinshasa) / DRC); non-country labels ("Other", "World total") are dropped. The full 5-year salient series (2021–2025e) lives in the JSON `salient_stats`, not the CSV.
 
 ## Optional
